@@ -7,5 +7,7 @@ ycm_ep_helper(cereal TYPE GIT
               TAG master
               COMPONENT core
               FOLDER src
-              CMAKE_ARGS -DWITH_WERROR=OFF
+              CMAKE_ARGS
+                -DBUILD_TESTING=${BUILD_TESTING}
+                -DWITH_WERROR=OFF
               DEPENDS bits)

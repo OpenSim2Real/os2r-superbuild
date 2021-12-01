@@ -7,5 +7,5 @@ ycm_ep_helper(mpi_cmake_modules TYPE GIT
               TAG master
               COMPONENT core
               FOLDER src
-              # CMAKE_ARGS -DBUILD_TESTING=OFF
+              CMAKE_ARGS -DBUILD_TESTING=${BUILD_TESTING}
               )
