@@ -16,10 +16,13 @@ if(BAESIANBALANCER_ENABLE_CORE)
   find_or_build_package(signal_handler)
   find_or_build_package(shared_memory)
   find_or_build_package(time_series)
-  # find_or_build_package(monopod_sdk)
 endif()
 
-# Robot Testing
+if(BAESIANBALANCER_ENABLE_MONOPODSDK)
+  find_or_build_package(monopod_sdk)
+endif()
+
+# Robot scenario packages
 if(BAESIANBALANCER_ENABLE_SCENARIO)
   if(BAESIANBALANCER_USES_IGNITION)
     find_or_build_package(gym-ignition)

@@ -12,6 +12,7 @@ option(BAESIANBALANCER_USES_PYTHON "Enable compilation of software that depend o
 
 # Enable/disable different profiles
 option(BAESIANBALANCER_ENABLE_CORE "Enable compilation of core software libraries." TRUE)
+option(BAESIANBALANCER_ENABLE_MONOPODSDK "Enable compilation of monopod_sdk." FALSE)
 option(BAESIANBALANCER_ENABLE_SCENARIO "Enable compilation of scenario." FALSE)
 
 # Mark as advanced all the profiles that do not have a mantainer... for example
