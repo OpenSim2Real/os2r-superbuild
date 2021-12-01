@@ -1,11 +1,12 @@
+
 include(YCMEPHelper)
 include(FindOrBuildPackage)
 
-ycm_ep_helper(cereal TYPE GIT
+ycm_ep_helper(GTest TYPE GIT
               STYLE GITHUB
-              REPOSITORY USCiLab/cereal
+              REPOSITORY google/googletest
               TAG master
               COMPONENT core
               FOLDER src
-              CMAKE_ARGS -DWITH_WERROR=OFF
-              DEPENDS bits)
+              # CMAKE_ARGS -DPYBIND11_TEST=OFF
+              )

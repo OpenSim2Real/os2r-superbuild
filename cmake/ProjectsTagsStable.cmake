@@ -15,6 +15,7 @@ set_tag(signal_handler_TAG master)
 set_tag(Eigen3_TAG master) #3.4.0
 set_tag(pybind11_TAG master) #v2.8.1
 set_tag(cereal_TAG master)
+set_tag(GTest_TAG main)
 # Robotology projects
 set_tag(gym-ignition_TAG master) #v1.3.1
 

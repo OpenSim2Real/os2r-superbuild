@@ -6,6 +6,7 @@ find_or_build_package(pybind11 QUIET)
 find_or_build_package(Eigen3 QUIET)
 find_or_build_package(mpi_cmake_modules QUIET)
 find_or_build_package(cereal QUIET)
+find_or_build_package(GTest QUIET)
 
 ycm_ep_helper(shared_memory TYPE GIT
               STYLE GITHUB
