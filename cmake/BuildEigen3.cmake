@@ -7,5 +7,5 @@ ycm_ep_helper(Eigen3 TYPE GIT
               TAG master
               COMPONENT core
               CMAKE_ARGS
-                -DBUILD_TESTING=${BUILD_TESTING}
+                -DBUILD_TESTING:BOOL=${BUILD_TESTING}
               FOLDER src)

@@ -8,6 +8,6 @@ ycm_ep_helper(cereal TYPE GIT
               COMPONENT core
               FOLDER src
               CMAKE_ARGS
-                -DBUILD_TESTING=${BUILD_TESTING}
+                -DBUILD_TESTING:BOOL=${BUILD_TESTING}
                 -DWITH_WERROR=OFF
               DEPENDS bits)

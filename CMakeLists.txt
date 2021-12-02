@@ -51,39 +51,11 @@ include(YCMEPHelper)
 # depending on which profiles are enabled
 include(BaesianBalancerSuperbuildLogic)
 
-
-# if(WIN32)
-#     set(SHLIB_ENV_VAR "PATH")
-# elseif(APPLE)
-#     set(SHLIB_ENV_VAR "DYLD_LIBRARY_PATH")
-# else()
-#     set(SHLIB_ENV_VAR "LD_LIBRARY_PATH")
-# endif()
-
 if(WIN32 AND APPLE)
     message(FATAL_ERROR "Windows and mac OS are currently not supported for this project. Please build using a linux based system.")
 else()
     set(SHLIB_ENV_VAR "LD_LIBRARY_PATH")
 endif()
-
-# if(WIN32)
-#   # On Git Bash on Windows, C: is rendered as /c
-#   string(REGEX MATCH "^([A-Z])" PROJECT_SOURCE_DIR_DRIVE ${PROJECT_SOURCE_DIR})
-#   string(TOLOWER ${PROJECT_SOURCE_DIR_DRIVE} PROJECT_SOURCE_DIR_DRIVE_LOWER)
-#   string(REGEX REPLACE "^([A-Z]:)" "/${PROJECT_SOURCE_DIR_DRIVE_LOWER}" PROJECT_SOURCE_DIR_SETUP_SH ${PROJECT_SOURCE_DIR})
-#   string(REGEX MATCH "^([A-Z])" YCM_EP_INSTALL_DIR_DRIVE ${YCM_EP_INSTALL_DIR})
-#   string(TOLOWER ${YCM_EP_INSTALL_DIR_DRIVE} YCM_EP_INSTALL_DIR_DRIVE_LOWER)
-#   string(REGEX REPLACE "^([A-Z]:)" "/${YCM_EP_INSTALL_DIR_DRIVE_LOWER}" YCM_EP_INSTALL_DIR_SETUP_SH ${YCM_EP_INSTALL_DIR})
-#   if(BAESIANBALANCER_USES_PYTHON)
-#     string(REPLACE "\\" "/" BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH ${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR})
-#   endif()
-# else()
-#   set(PROJECT_SOURCE_DIR_SETUP_SH ${PROJECT_SOURCE_DIR})
-#   set(YCM_EP_INSTALL_DIR_SETUP_SH ${YCM_EP_INSTALL_DIR})
-#   if(BAESIANBALANCER_USES_PYTHON)
-#     set(BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH ${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR})
-#   endif()
-# endif()
 
 set(PROJECT_SOURCE_DIR_SETUP_SH ${PROJECT_SOURCE_DIR})
 set(YCM_EP_INSTALL_DIR_SETUP_SH ${YCM_EP_INSTALL_DIR})
@@ -95,16 +67,6 @@ message(STATUS "BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH: ${BAESIA
 
 include(ConfigureFileWithCMakeIf)
 configure_file_with_cmakeif(${CMAKE_CURRENT_SOURCE_DIR}/cmake/template/setup.sh.in ${YCM_EP_INSTALL_DIR}/share/${PROJECT_NAME}/setup.sh @ONLY)
-
-# if(WIN32)
-#   file(TO_NATIVE_PATH ${PROJECT_SOURCE_DIR} PROJECT_SOURCE_DIR_NATIVE_PATH)
-#   file(TO_NATIVE_PATH ${YCM_EP_INSTALL_DIR} YCM_EP_INSTALL_DIR_NATIVE_PATH)
-#   configure_file_with_cmakeif(${CMAKE_CURRENT_SOURCE_DIR}/cmake/template/setup.bat.in ${YCM_EP_INSTALL_DIR}/share/${PROJECT_NAME}/setup.bat @ONLY)
-#   configure_file_with_cmakeif(${CMAKE_CURRENT_SOURCE_DIR}/cmake/template/addPathsToUserEnvVariables.ps1.in
-#                               ${YCM_EP_INSTALL_DIR}/share/${PROJECT_NAME}/addPathsToUserEnvVariables.ps1 @ONLY)
-#   configure_file_with_cmakeif(${CMAKE_CURRENT_SOURCE_DIR}/cmake/template/removePathsFromUserEnvVariables.ps1.in
-#                               ${YCM_EP_INSTALL_DIR}/share/${PROJECT_NAME}/removePathsFromUserEnvVariables.ps1 @ONLY)
-# endif()
 
 ycm_write_dot_file(${CMAKE_CURRENT_BINARY_DIR}/bb-superbuild.dot)
 

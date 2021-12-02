@@ -16,7 +16,7 @@ ycm_ep_helper(time_series TYPE GIT
               TAG main
               COMPONENT core
               FOLDER src
-              CMAKE_ARGS -DBUILD_TESTING=${BUILD_TESTING}
+              CMAKE_ARGS -DBUILD_TESTING:BOOL=${BUILD_TESTING}
               DEPENDS shared_memory
                       Eigen3
                       mpi_cmake_modules
