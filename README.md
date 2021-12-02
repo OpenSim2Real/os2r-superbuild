@@ -35,8 +35,8 @@ pip3 install breathe
 ```
 
 <!-- For shared_memory -->
+<!-- Second one replaces the first? -->
 ```
 sudo apt install libcereal-dev
 sudo apt-get install gcc-multilib g++-multilib
 ```
-<!-- Second one replaces the first? -->
