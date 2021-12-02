@@ -19,6 +19,7 @@ You can read more about the superbuild concept in [YCM documentation](http://rob
 sudo apt-get install freeglut3-dev
 sudo apt-get install libedit-dev
 sudo apt-get install -y libxmu-dev
+sudo apt-get install libncurses-dev
 ```
 
 <!-- doxygen and sphinx -->
@@ -38,5 +39,11 @@ pip3 install breathe
 <!-- Second one replaces the first? -->
 ```
 sudo apt install libcereal-dev
-sudo apt-get install gcc-multilib g++-multilib
 ```
+
+
+<!-- Maybe stuff -->
+<!-- ```
+<!-- sudo apt-get install gcc-multilib g++-multilib -->
+<!-- sudo apt-get install build-essential flex libelf-dev libc6-dev-amd64 binutils-dev libdwarf-dev -->
+``` -->

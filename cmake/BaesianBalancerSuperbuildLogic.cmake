@@ -8,7 +8,6 @@
 
 # Core
 if(BAESIANBALANCER_ENABLE_CORE)
-  find_or_build_package(cereal)
   find_or_build_package(pybind11)
   find_or_build_package(Eigen3)
   find_or_build_package(mpi_cmake_modules)
