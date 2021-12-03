@@ -14,41 +14,59 @@ You can read more about the superbuild concept in [YCM documentation](http://rob
 
 
 
-<!-- Cmake deps -->
+# Dependencies
+
 ```
 sudo apt-get install freeglut3-dev
 sudo apt-get install libedit-dev
 sudo apt-get install -y libxmu-dev
 sudo apt-get install libncurses-dev
-```
+sudo apt install libcereal-dev
 
-<!-- doxygen and sphinx -->
-```
 sudo apt-add-repository universe
 sudo apt-get update
 sudo apt-get install doxygen
 sudo apt-get install python3-sphinx
 ```
-
-<!-- extra doc dep -->
 ```
 pip3 install breathe
 ```
 
-<!-- For shared_memory -->
-<!-- Second one replaces the first? -->
-```
-sudo apt install libcereal-dev
-```
+### iDyntree Depends. Needed for scenario build option
 
-<!-- For iDynTree -->
 ```
 sudo apt-get install build-essential libeigen3-dev libxml2-dev coinor-libipopt-dev libassimp-dev libirrlicht-dev
 ```
 
+# Installation
 
-<!-- Maybe stuff -->
-<!-- ```
-<!-- sudo apt-get install gcc-multilib g++-multilib -->
-<!-- sudo apt-get install build-essential flex libelf-dev libc6-dev-amd64 binutils-dev libdwarf-dev -->
-``` -->
+```
+cd <repo location>
+git clone git@github.com:Baesian-Balancer/bb-superbuild.git
+cd bb-superbuild
+cmake -S . -B build <CMAKE_ARGS>
+cmake --build build
+```
+
+`<CMAKE_ARGS>` can define the options you want for the build. Available options
+```
+option(BAESIANBALANCER_ENABLE_CORE "Enable compilation of core software libraries." TRUE)
+option(BAESIANBALANCER_ENABLE_MONOPODSDK "Enable compilation of monopod_sdk." FALSE)
+option(BAESIANBALANCER_ENABLE_SCENARIO "Enable compilation of scenario." FALSE)
+```
+By default CORE is always installed. To set the other options to install as well replace `<CMAKE_ARGS>` with
+```
+cmake -S . -B build -DBAESIANBALANCER_ENABLE_MONOPODSDK:BOOL=TRUE -DBAESIANBALANCER_ENABLE_SCENARIO:BOOL=TRUE
+```
+Include which ever options you want.
+
+## Required for gym-ignition. Allowing pip to link python packages installed in super build.
+
+Navigate to the `<repo location>/bb-superbuild/src ` folder. Run the following commands in order. **Do not worry about red error text :) it is only linking cached packages**
+
+```
+pip install --user -e iDyntree
+pip install --user -e gym-ignition/scenario
+```
+
+Now that pip knows about the packages you can install the nightly version of `gym-ignition` with `pip install --pre gym-ignition`.
