@@ -22,11 +22,7 @@ sudo apt-get install libedit-dev
 sudo apt-get install -y libxmu-dev
 sudo apt-get install libncurses-dev
 sudo apt install libcereal-dev
-```
 
-# doxygen and sphinx
-
-```
 sudo apt-add-repository universe
 sudo apt-get update
 sudo apt-get install doxygen
