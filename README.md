@@ -41,6 +41,11 @@ pip3 install breathe
 sudo apt install libcereal-dev
 ```
 
+<!-- For iDynTree -->
+```
+sudo apt-get install build-essential libeigen3-dev libxml2-dev coinor-libipopt-dev libassimp-dev libirrlicht-dev
+```
+
 
 <!-- Maybe stuff -->
 <!-- ```

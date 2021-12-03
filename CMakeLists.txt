@@ -27,27 +27,53 @@ endmacro()
 # Load options
 include(BaesianBalancerSuperbuildOptions)
 
-# Python-related logic
-if(BAESIANBALANCER_USES_PYTHON)
-  find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
-  execute_process(COMMAND ${Python3_EXECUTABLE} -c "from distutils import sysconfig; print(sysconfig.get_python_lib(1,0,prefix=''))"
-     OUTPUT_VARIABLE _PYTHON_INSTDIR)
-  string(STRIP ${_PYTHON_INSTDIR} BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR)
-  file(TO_CMAKE_PATH "${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR}" BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR)
-  set(BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH ${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR})
-  message(STATUS "BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH: ${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH}")
-endif()
-
 # Bootstrap YCM
 set(YCM_FOLDER src)
 set(YCM_COMPONENT core)
 set(YCM_MINIMUM_VERSION 0.11.1)
 
-
 include(YCMBootstrap)
 
 include(FindOrBuildPackage)
 include(YCMEPHelper)
+
+# Python-related logic
+if(BAESIANBALANCER_USES_PYTHON)
+  # For iDynTree linking
+  find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
+  execute_process(COMMAND ${Python3_EXECUTABLE} -c "from distutils import sysconfig; print(sysconfig.get_python_lib(1,0,prefix=''))"
+     OUTPUT_VARIABLE _PYTHON_INSTDIR)
+  string(STRIP ${_PYTHON_INSTDIR} IDYNTREE_PYTHON_INSTALL_DIR)
+  file(TO_CMAKE_PATH "${IDYNTREE_PYTHON_INSTALL_DIR}" IDYNTREE_PYTHON_INSTALL_DIR)
+  set(IDYNTREE_PYTHON_INSTALL_DIR_SETUP_SH ${IDYNTREE_PYTHON_INSTALL_DIR})
+  message(STATUS "IDYNTREE_PYTHON_INSTALL_DIR_SETUP_SH: ${IDYNTREE_PYTHON_INSTALL_DIR_SETUP_SH}")
+  
+  # For other packages installation
+  set(_python_code
+    "from distutils.sysconfig import get_python_lib"
+    "import os"
+    "install_path = '${YCM_EP_INSTALL_DIR}'"
+    "python_lib = get_python_lib(prefix=install_path)"
+    "rel_path = os.path.relpath(python_lib, start=install_path)"
+    "print(rel_path.replace(os.sep, '/'))")
+  execute_process(
+    COMMAND "${Python3_EXECUTABLE}" "-c" "${_python_code}"
+    OUTPUT_VARIABLE _output
+    RESULT_VARIABLE _result
+    OUTPUT_STRIP_TRAILING_WHITESPACE)
+  if(NOT _result EQUAL 0)
+    message(
+      FATAL_ERROR
+        "execute_process(${Python_EXECUTABLE} -c '${_python_code}') returned "
+        "error code ${_result}")
+  endif()
+  string(STRIP ${_output} BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR)
+  file(TO_CMAKE_PATH "${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR}" BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR)
+  set(BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH ${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR})
+  message(STATUS "BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH: ${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH}")
+endif()
+
+
 
 # Include the logic of which packages should be built
 # depending on which profiles are enabled

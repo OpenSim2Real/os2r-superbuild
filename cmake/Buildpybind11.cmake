@@ -8,5 +8,5 @@ ycm_ep_helper(pybind11 TYPE GIT
               TAG master
               COMPONENT core
               FOLDER src
-              # CMAKE_ARGS -DPYBIND11_TEST=OFF
+              CMAKE_ARGS -DPYBIND11_TEST=OFF
               )

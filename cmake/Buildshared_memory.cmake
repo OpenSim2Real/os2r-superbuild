@@ -16,4 +16,5 @@ ycm_ep_helper(shared_memory TYPE GIT
               CMAKE_ARGS -DBUILD_TESTING:BOOL=${BUILD_TESTING}
               DEPENDS pybind11
                       Eigen3
-                      mpi_cmake_modules)
+                      mpi_cmake_modules
+                      GTest)
