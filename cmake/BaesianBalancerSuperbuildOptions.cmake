@@ -3,7 +3,7 @@ set(YCM_USE_CMAKE_PROPOSED TRUE CACHE BOOL "Use files including unmerged cmake p
 # YCM options
 option(YCM_DISABLE_SYSTEM_PACKAGES "Disable use of all the system installed packages" ON)
 
-option(BAESIANBALANCER_USES_PYTHON "Enable compilation of software that depend on Python" FALSE)
+option(BAESIANBALANCER_USES_PYTHON "Enable compilation of software that depend on Python" TRUE)
 
 # TODO: Maybe include this
 # ## Enable packages that depend on the Ignition Gazebo simulator

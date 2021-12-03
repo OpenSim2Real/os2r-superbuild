@@ -8,7 +8,6 @@
 
 # Core
 if(BAESIANBALANCER_ENABLE_CORE)
-  find_or_build_package(cereal)
   find_or_build_package(pybind11)
   find_or_build_package(Eigen3)
   find_or_build_package(mpi_cmake_modules)
@@ -24,8 +23,6 @@ endif()
 
 # Robot scenario packages
 if(BAESIANBALANCER_ENABLE_SCENARIO)
-  if(BAESIANBALANCER_USES_IGNITION)
-    find_or_build_package(gym-ignition)
-  endif()
+  find_or_build_package(gym-ignition)
   find_or_build_package(SIM)
 endif()
