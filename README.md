@@ -52,13 +52,13 @@ cmake -S . -B build <CMAKE_ARGS>
 cmake --build build
 ```
 
-<CMAKE_ARGS> can define the options you want for the build. Available options
+`<CMAKE_ARGS>` can define the options you want for the build. Available options
 ```
 option(BAESIANBALANCER_ENABLE_CORE "Enable compilation of core software libraries." TRUE)
 option(BAESIANBALANCER_ENABLE_MONOPODSDK "Enable compilation of monopod_sdk." FALSE)
 option(BAESIANBALANCER_ENABLE_SCENARIO "Enable compilation of scenario." FALSE)
 ```
-By default CORE is always installed. To set the other options to install as well replace <CMAKE_ARGS> with
+By default CORE is always installed. To set the other options to install as well replace `<CMAKE_ARGS>` with
 ```
 cmake -S . -B build -DBAESIANBALANCER_ENABLE_MONOPODSDK:BOOL=TRUE -DBAESIANBALANCER_ENABLE_SCENARIO:BOOL=TRUE
 ```
