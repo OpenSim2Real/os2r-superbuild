@@ -14,7 +14,7 @@ You can read more about the superbuild concept in [YCM documentation](http://rob
 
 
 
-# Misc Depends
+# Dependencies
 
 ```
 sudo apt-get install freeglut3-dev
@@ -32,7 +32,7 @@ sudo apt-get install python3-sphinx
 pip3 install breathe
 ```
 
-# iDyntree Depends. Needed for scenario build option
+### iDyntree Depends. Needed for scenario build option
 
 ```
 sudo apt-get install build-essential libeigen3-dev libxml2-dev coinor-libipopt-dev libassimp-dev libirrlicht-dev
@@ -60,7 +60,7 @@ cmake -S . -B build -DBAESIANBALANCER_ENABLE_MONOPODSDK:BOOL=TRUE -DBAESIANBALAN
 ```
 Include which ever options you want.
 
-# For allowing pip to link python packages installed in super build
+## Required for gym-ignition. Allowing pip to link python packages installed in super build.
 
 Navigate to the `<repo location>/bb-superbuild/src ` folder. Run the following commands in order. **Do not worry about red error text :) it is only linking cached packages**
 
