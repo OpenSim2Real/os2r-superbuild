@@ -5,20 +5,35 @@
 include(YCMEPHelper)
 include(FindOrBuildPackage)
 
-find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
+# Make sure Scenario is uninstalled before Runinng
+
 execute_process(
     COMMAND "${Python3_EXECUTABLE}" -c "import scenario; print(scenario.__path__[0])"
     OUTPUT_VARIABLE Scenario_OUT_PATH
     OUTPUT_STRIP_TRAILING_WHITESPACE
 )
-message(STATUS "found scenario root path: ${Scenario_OUT_PATH}")
-
 if (NOT "${Scenario_OUT_PATH}" STREQUAL "")
   message(FATAL_ERROR
   "
-  unexpected: Found scenario python package already installed. Please uninstall and try again.
+  unexpected: Found scenario python package already installed at ${Scenario_OUT_PATH}. Please uninstall and try again.
   ")
 endif()
+
+
+# Make sure gym-ignition is uninstalled before running
+
+execute_process(
+    COMMAND "${Python3_EXECUTABLE}" -c "import gym_ignition; print(gym_ignition.__path__[0])"
+    OUTPUT_VARIABLE gym_ignition_OUT_PATH
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+if (NOT "${gym_ignition_OUT_PATH}" STREQUAL "")
+  message(FATAL_ERROR
+  "
+  unexpected: Found gym-ignition python package already installed at ${gym_ignition_OUT_PATH}. Please uninstall and try again.
+  ")
+endif()
+
 find_or_build_package(iDynTree QUIET)
 ycm_ep_helper(gym-ignition TYPE GIT
               STYLE GITHUB

@@ -13,19 +13,19 @@ ycm_ep_helper(SIM TYPE GIT
                          -DBINDINGS_INSTALL_PREFIX:PATH=${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR}
               DEPENDS gym-ignition)
 
-
-set(EASY_INSTALL_PATH
+set(EGG_BASE_PATH
     "${YCM_EP_INSTALL_DIR}/${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH}")
-message(STATUS "${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EASY_INSTALL_PATH}")
+
+message(STATUS "Using \'${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EGG_BASE_PATH}\' To create each egg info for python modules.")
 
 add_custom_command(TARGET SIM POST_BUILD
-    COMMAND ${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EASY_INSTALL_PATH}
+    COMMAND ${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EGG_BASE_PATH}
     WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/src/gym-ignition/scenario
     COMMENT "Installing egg files for scenario..."
 )
 
 add_custom_command(TARGET SIM POST_BUILD
-    COMMAND ${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EASY_INSTALL_PATH}
+    COMMAND ${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EGG_BASE_PATH}
     WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/src/iDynTree
     COMMENT "Installing egg files for idyntree..."
 )

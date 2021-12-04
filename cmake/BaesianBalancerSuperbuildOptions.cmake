@@ -11,7 +11,7 @@ option(BAESIANBALANCER_USES_PYTHON "Enable compilation of software that depend o
 # option(BAESIANBALANCER_USES_IGNITION "Enable compilation of software that depends on Ignition Gazebo" ${BAESIANBALANCER_USES_IGNITION_DEFAULT})
 
 # Enable/disable different profiles
-option(BAESIANBALANCER_ENABLE_CORE "Enable compilation of core software libraries." FALSE)
+option(BAESIANBALANCER_ENABLE_CORE "Enable compilation of core software libraries." TRUE)
 option(BAESIANBALANCER_ENABLE_MONOPODSDK "Enable compilation of monopod_sdk." FALSE)
 option(BAESIANBALANCER_ENABLE_SCENARIO "Enable compilation of scenario." FALSE)
 
