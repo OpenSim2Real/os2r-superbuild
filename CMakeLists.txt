@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(bb_superbuild NONE)
+project(bb-superbuild NONE)
 
 ## we have to enable C because it is currently used
 ## by CMake to describe packages (in Config*.cmake files)
@@ -47,7 +47,7 @@ if(BAESIANBALANCER_USES_PYTHON)
   file(TO_CMAKE_PATH "${IDYNTREE_PYTHON_INSTALL_DIR}" IDYNTREE_PYTHON_INSTALL_DIR)
   set(IDYNTREE_PYTHON_INSTALL_DIR_SETUP_SH ${IDYNTREE_PYTHON_INSTALL_DIR})
   message(STATUS "IDYNTREE_PYTHON_INSTALL_DIR_SETUP_SH: ${IDYNTREE_PYTHON_INSTALL_DIR_SETUP_SH}")
-  
+
   # For other packages installation
   set(_python_code
     "from distutils.sysconfig import get_python_lib"
@@ -71,8 +71,8 @@ if(BAESIANBALANCER_USES_PYTHON)
   file(TO_CMAKE_PATH "${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR}" BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR)
   set(BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH ${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR})
   message(STATUS "BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH: ${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH}")
-endif()
 
+endif()
 
 
 # Include the logic of which packages should be built
@@ -88,6 +88,9 @@ endif()
 set(PROJECT_SOURCE_DIR_SETUP_SH ${PROJECT_SOURCE_DIR})
 set(YCM_EP_INSTALL_DIR_SETUP_SH ${YCM_EP_INSTALL_DIR})
 
+message("PROJECT_SOURCE_DIR_SETUP_SH: ${PROJECT_SOURCE_DIR_SETUP_SH}")
+message("YCM_EP_INSTALL_DIR_SETUP_SH: ${YCM_EP_INSTALL_DIR_SETUP_SH}")
+
 include(ConfigureFileWithCMakeIf)
 configure_file_with_cmakeif(${CMAKE_CURRENT_SOURCE_DIR}/cmake/template/setup.sh.in ${YCM_EP_INSTALL_DIR}/share/${PROJECT_NAME}/setup.sh @ONLY)
 
@@ -97,5 +100,21 @@ set_package_properties(Git PROPERTIES TYPE RUNTIME)
 set_package_properties(Subversion PROPERTIES TYPE RUNTIME)
 set_package_properties(PkgConfig PROPERTIES TYPE RUNTIME)
 set_package_properties(Doxygen PROPERTIES TYPE RUNTIME)
+
+
+# if(BAESIANBALANCER_USES_PYTHON)
+#
+#   set(EASY_INSTALL_PATH
+#       "${YCM_EP_INSTALL_DIR_SETUP_SH}/${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH}")
+#   message(STATUS ${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EASY_INSTALL_PATH})
+#   execute_process(
+#       COMMAND ${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EASY_INSTALL_PATH}
+#       WORKING_DIRECTORY \"${PROJECT_SOURCE_DIR_SETUP_SH}/gym-ignition/scenario\"
+#   )
+#   execute_process(
+#       COMMAND ${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EASY_INSTALL_PATH}
+#       WORKING_DIRECTORY \"${PROJECT_SOURCE_DIR_SETUP_SH}/iDynTree\"
+#   )
+# endif()
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
