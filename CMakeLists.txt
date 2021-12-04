@@ -101,20 +101,4 @@ set_package_properties(Subversion PROPERTIES TYPE RUNTIME)
 set_package_properties(PkgConfig PROPERTIES TYPE RUNTIME)
 set_package_properties(Doxygen PROPERTIES TYPE RUNTIME)
 
-
-# if(BAESIANBALANCER_USES_PYTHON)
-#
-#   set(EASY_INSTALL_PATH
-#       "${YCM_EP_INSTALL_DIR_SETUP_SH}/${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH}")
-#   message(STATUS ${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EASY_INSTALL_PATH})
-#   execute_process(
-#       COMMAND ${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EASY_INSTALL_PATH}
-#       WORKING_DIRECTORY \"${PROJECT_SOURCE_DIR_SETUP_SH}/gym-ignition/scenario\"
-#   )
-#   execute_process(
-#       COMMAND ${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EASY_INSTALL_PATH}
-#       WORKING_DIRECTORY \"${PROJECT_SOURCE_DIR_SETUP_SH}/iDynTree\"
-#   )
-# endif()
-
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
