@@ -11,9 +11,6 @@ If you are familiar with ROS, it is something similar to [catkin](http://wiki.ro
 You can read more about the superbuild concept in [YCM documentation](http://robotology.github.io/ycm/gh-pages/latest/index.html) or in the [related IRC paper](http://lornat75.github.io/papers/2018/domenichelli-irc.pdf). -->
 
 
-
-
-
 # Dependencies
 
 ```
@@ -29,7 +26,8 @@ sudo apt-get install doxygen
 sudo apt-get install python3-sphinx
 ```
 ```
-pip3 install breathe
+pip install breathe
+pip install cmake_build_extension
 ```
 
 ### iDyntree Depends. Needed for scenario build option
@@ -60,17 +58,25 @@ cmake -S . -B build -DBAESIANBALANCER_ENABLE_MONOPODSDK:BOOL=TRUE -DBAESIANBALAN
 ```
 Include which ever options you want.
 
+## Sourcing environment
+
+either source the setup.sh script each time you open a new termnal you want to run this code with,
+```
+source <Install Dir>/bb-superbuild/build/install/share/bb-superbuild/setup.sh
+```
+Or permenatly add to to bashrc with
+```
+echo '<Install Dir>/bb-superbuild/build/install/share/bb-superbuild/setup.sh' >> ~/.bashrc
+```
+
 ## Required for gym-ignition. Allowing pip to link python packages installed in super build.
 
-Navigate to the `<repo location>/bb-superbuild/src ` folder. Run the following commands in order. **Do not worry about red error text :) it is only linking cached packages**
+<!-- Navigate to the `<repo location>/bb-superbuild/src ` folder. Run the following commands in order. **Do not worry about red error text :) it is only linking cached packages**
 
 ```
-pip install -e iDyntree --prefix=~/.local
-pip install -e gym-ignition/scenario --prefix=~/.local
+pip install --user -e iDyntree
+pip install --user -e gym-ignition/scenario
+``` -->
 
-mv iDyntree ../build/install/lib/python3/dist-packages
-mv gym-ignition/scenario ../build/install/lib/python3.8/site-packages
-```
-**Becareful you might want to double check the destination to make sure it is where the package is installed :) you could also instead just copy them to `~/.local/lib/python3.8/site-packages`**
 
 Now that pip knows about the packages you can install the nightly version of `gym-ignition` with `pip install --pre gym-ignition`.
