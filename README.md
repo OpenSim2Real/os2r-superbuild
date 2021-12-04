@@ -29,7 +29,8 @@ sudo apt-get install doxygen
 sudo apt-get install python3-sphinx
 ```
 ```
-pip3 install breathe
+pip install breathe
+pip install cmake_build_extension
 ```
 
 ### iDyntree Depends. Needed for scenario build option
@@ -60,13 +61,25 @@ cmake -S . -B build -DBAESIANBALANCER_ENABLE_MONOPODSDK:BOOL=TRUE -DBAESIANBALAN
 ```
 Include which ever options you want.
 
+## Sourcing environment
+
+either source the setup.sh script each time you open a new termnal you want to run this code with,
+```
+source <Install Dir>/bb-superbuild/build/install/share/bb-superbuild/setup.sh
+```
+Or permenatly add to to bashrc with 
+```
+echo '<Install Dir>/bb-superbuild/build/install/share/bb-superbuild/setup.sh' >> ~/.bashrc
+```
+
 ## Required for gym-ignition. Allowing pip to link python packages installed in super build.
 
-Navigate to the `<repo location>/bb-superbuild/src ` folder. Run the following commands in order. **Do not worry about red error text :) it is only linking cached packages**
+<!-- Navigate to the `<repo location>/bb-superbuild/src ` folder. Run the following commands in order. **Do not worry about red error text :) it is only linking cached packages**
 
 ```
 pip install --user -e iDyntree
 pip install --user -e gym-ignition/scenario
-```
+``` -->
+
 
 Now that pip knows about the packages you can install the nightly version of `gym-ignition` with `pip install --pre gym-ignition`.
