@@ -65,8 +65,12 @@ Include which ever options you want.
 Navigate to the `<repo location>/bb-superbuild/src ` folder. Run the following commands in order. **Do not worry about red error text :) it is only linking cached packages**
 
 ```
-pip install --user -e iDyntree
-pip install --user -e gym-ignition/scenario
+pip install -e iDyntree --prefix=~/.local
+pip install -e gym-ignition/scenario --prefix=~/.local
+
+mv iDyntree ../build/install/lib/python3/dist-packages
+mv gym-ignition/scenario ../build/install/lib/python3.8/site-packages
 ```
+**Becareful you might want to double check the destination to make sure it is where the package is installed :) you could also instead just copy them to `~/.local/lib/python3.8/site-packages`**
 
 Now that pip knows about the packages you can install the nightly version of `gym-ignition` with `pip install --pre gym-ignition`.
