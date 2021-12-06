@@ -34,11 +34,16 @@ sudo apt-get update
 sudo apt-get install doxygen
 sudo apt-get install python3-sphinx
 ```
+
 ```
 pip install breathe
 pip install cmake_build_extension
 ```
 
+```
+sudo apt update
+sudo apt install swig
+```
 
 # Installation
 
@@ -81,5 +86,4 @@ echo '<Install Dir>/bb-superbuild/build/install/share/bb-superbuild/setup.sh' >>
 
 **Stable Installation** - build `gym-ignition` with the stable version `pip install gym-ignition`
 
-**Unstable, Latest Release Installations** build `gym-ignition` with nightly version `pip install --pre gym-ignition` using the most up to date version. 
-
+**Unstable, Latest Release Installations** build `gym-ignition` with nightly version `pip install --pre gym-ignition` using the most up to date version.
