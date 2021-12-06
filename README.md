@@ -61,8 +61,8 @@ By default CORE is always installed. To set the other options to install as well
 cmake -S . -B build -DBAESIANBALANCER_ENABLE_MONOPODSDK:BOOL=TRUE -DBAESIANBALANCER_ENABLE_SCENARIO:BOOL=TRUE
 ```
 #### Other useful cmake args:
-1. -DBAESIANBALANCER_USES_IGNITION:BOOL= ON/OFF (does scenario use ignition gazebo?)
-2. -DBAESIANBALANCER_PROJECT_TAGS="Stable"/"Unstable"/"LatestRelease"/"Custom" ("custom" requires BAESIANBALANCER_PROJECT_TAGS_CUSTOM_FILE to be set)
+1. `-DBAESIANBALANCER_USES_IGNITION:BOOL= ON/OFF (does scenario use ignition gazebo?)`
+2. `-DBAESIANBALANCER_PROJECT_TAGS="Stable"/"Unstable"/"LatestRelease"/"Custom" ("custom" requires BAESIANBALANCER_PROJECT_TAGS_CUSTOM_FILE to be set)`
 
 Include which ever options you want.
 
