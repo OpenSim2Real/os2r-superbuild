@@ -39,6 +39,9 @@ include(YCMEPHelper)
 
 # Python-related logic
 if(BAESIANBALANCER_USES_PYTHON)
+  # check for swig/pybind11 dependency for bindings
+  find_package(SWIG 4.0 REQUIRED)
+  find_package(pybind11 REQUIRED)
   # For iDynTree linking
   find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
   execute_process(COMMAND ${Python3_EXECUTABLE} -c "from distutils import sysconfig; print(sysconfig.get_python_lib(1,0,prefix=''))"
