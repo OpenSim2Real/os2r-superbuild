@@ -13,20 +13,21 @@ You can read more about the superbuild concept in [YCM documentation](http://rob
 
 # Dependencies
 
-
-### iDyntree Depends. Needed for scenario build option
-
 ```
-sudo apt-get install build-essential libxml2-dev coinor-libipopt-dev libassimp-dev libirrlicht-dev
+sudo apt-get install -y  build-essential \
+                         libxml2-dev \
+                         coinor-libipopt-dev \
+                         libassimp-dev \
+                         libirrlicht-dev \
+                         freeglut3-dev \
+                         libedit-dev \
+                         libxmu-dev \
+                         libncurses-dev \
+                         libcereal-dev
 ```
 
 <!-- might need this libeigen3-dev -->
 
-### Misc Dependencies
-
-```
-sudo apt-get install freeglut3-dev libedit-dev libxmu-dev libncurses-dev libcereal-dev
-```
 ```
 sudo apt-add-repository universe
 sudo apt-get update
