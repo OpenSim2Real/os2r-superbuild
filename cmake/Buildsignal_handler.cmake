@@ -11,5 +11,4 @@ ycm_ep_helper(signal_handler TYPE GIT
               TAG master
               COMPONENT core
               FOLDER src
-              DEPENDS pybind11
-                      mpi_cmake_modules)
+              DEPENDS mpi_cmake_modules)

@@ -2,7 +2,7 @@ include(YCMEPHelper)
 include(FindOrBuildPackage)
 
 find_or_build_package(OsqpEigen QUIET)
-find_or_build_package(Eigen3 QUIET)
+# find_or_build_package(Eigen3 QUIET)
 
 set(iDynTree_DEPENDS "")
 list(APPEND iDynTree_DEPENDS OsqpEigen Eigen3)
