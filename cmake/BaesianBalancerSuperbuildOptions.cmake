@@ -22,11 +22,11 @@ option(BAESIANBALANCER_ENABLE_SCENARIO "Enable compilation of scenario." FALSE)
 #set default build type to "Release" in single-config generators
 if(NOT CMAKE_CONFIGURATION_TYPES)
     if(NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE "Release" CACHE STRING
-    "Choose the type of build, recommended options are: Debug or Release" FORCE)
+      set(CMAKE_BUILD_TYPE "Release" CACHE STRING
+      "Choose the type of build, recommended options are: Debug or Release" FORCE)
     endif()
-    set(BAESIANBALANCER_BUILD_TYPES "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
-    set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS ${BAESIANBALANCER_BUILD_TYPES})
+      set(BAESIANBALANCER_BUILD_TYPES "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
+      set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS ${BAESIANBALANCER_BUILD_TYPES})
 endif()
 
 set(BAESIANBALANCER_PROJECT_TAGS "Stable" CACHE STRING "The tags to be used for the BAESIANBALANCER projects: Stable, Unstable, LatestRelease or Custom. This can be changed only before the first configuration.")
@@ -53,6 +53,3 @@ elseif(BAESIANBALANCER_PROJECT_TAGS STREQUAL "Custom")
 else()
     message(FATAL_ERROR "The BAESIANBALANCER_PROJECT_TAGS variable can be Stable, Unstable or Custom. ${BAESIANBALANCER_PROJECT_TAGS} value is not supported.")
 endif()
-
-# option(BAESIANBALANCER_GENERATE_CONDA_RECIPES "If enabled, generate conda recipes instead of building the superbuild. This should not be used by end users." OFF)
-# mark_as_advanced(BAESIANBALANCER_GENERATE_CONDA_RECIPES)
