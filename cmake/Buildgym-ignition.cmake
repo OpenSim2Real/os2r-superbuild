@@ -8,9 +8,11 @@ include(FindOrBuildPackage)
 # Make sure Scenario is uninstalled before Runinng
 
 execute_process(
+    COMMAND "export PYTHONPATH=\"\""
     COMMAND "${Python3_EXECUTABLE}" -c "import scenario; print(scenario.__path__[0])"
     OUTPUT_VARIABLE Scenario_OUT_PATH
     OUTPUT_STRIP_TRAILING_WHITESPACE
+    ERROR_QUIET
 )
 if (NOT "${Scenario_OUT_PATH}" STREQUAL "")
   message(FATAL_ERROR
@@ -23,9 +25,11 @@ endif()
 # Make sure gym-ignition is uninstalled before running
 
 execute_process(
+    COMMAND "export PYTHONPATH=\"\""
     COMMAND "${Python3_EXECUTABLE}" -c "import gym_ignition; print(gym_ignition.__path__[0])"
     OUTPUT_VARIABLE gym_ignition_OUT_PATH
     OUTPUT_STRIP_TRAILING_WHITESPACE
+    ERROR_QUIET
 )
 if (NOT "${gym_ignition_OUT_PATH}" STREQUAL "")
   message(FATAL_ERROR

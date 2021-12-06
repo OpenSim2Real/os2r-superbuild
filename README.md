@@ -13,13 +13,21 @@ You can read more about the superbuild concept in [YCM documentation](http://rob
 
 # Dependencies
 
-```
-sudo apt-get install freeglut3-dev
-sudo apt-get install libedit-dev
-sudo apt-get install -y libxmu-dev
-sudo apt-get install libncurses-dev
-sudo apt install libcereal-dev
 
+### iDyntree Depends. Needed for scenario build option
+
+```
+sudo apt-get install build-essential libxml2-dev coinor-libipopt-dev libassimp-dev libirrlicht-dev
+```
+
+<!-- might need this libeigen3-dev -->
+
+### Misc Dependencies
+
+```
+sudo apt-get install freeglut3-dev libedit-dev libxmu-dev libncurses-dev libcereal-dev
+```
+```
 sudo apt-add-repository universe
 sudo apt-get update
 sudo apt-get install doxygen
@@ -30,11 +38,6 @@ pip install breathe
 pip install cmake_build_extension
 ```
 
-### iDyntree Depends. Needed for scenario build option
-
-```
-sudo apt-get install build-essential libeigen3-dev libxml2-dev coinor-libipopt-dev libassimp-dev libirrlicht-dev
-```
 
 # Installation
 
