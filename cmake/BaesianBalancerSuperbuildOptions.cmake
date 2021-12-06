@@ -5,10 +5,10 @@ option(YCM_DISABLE_SYSTEM_PACKAGES "Disable use of all the system installed pack
 
 option(BAESIANBALANCER_USES_PYTHON "Enable compilation of software that depend on Python" TRUE)
 
-# TODO: Maybe include this
-# ## Enable packages that depend on the Ignition Gazebo simulator
-# set(BAESIANBALANCER_USES_IGNITION_DEFAULT FALSE)
-# option(BAESIANBALANCER_USES_IGNITION "Enable compilation of software that depends on Ignition Gazebo" ${BAESIANBALANCER_USES_IGNITION_DEFAULT})
+## Enable packages that depend on the Ignition Gazebo simulator
+set(BAESIANBALANCER_USES_IGNITION_DEFAULT TRUE)
+option(BAESIANBALANCER_USES_IGNITION "Enable compilation of software that depends on Ignition Gazebo" ${BAESIANBALANCER_USES_IGNITION_DEFAULT})
+
 
 # Enable/disable different profiles
 option(BAESIANBALANCER_ENABLE_CORE "Enable compilation of core software libraries." TRUE)

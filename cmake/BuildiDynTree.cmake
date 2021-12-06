@@ -2,9 +2,10 @@ include(YCMEPHelper)
 include(FindOrBuildPackage)
 
 find_or_build_package(OsqpEigen QUIET)
+find_or_build_package(Eigen3 QUIET)
 
 set(iDynTree_DEPENDS "")
-list(APPEND iDynTree_DEPENDS OsqpEigen)
+list(APPEND iDynTree_DEPENDS OsqpEigen Eigen3)
 
 ycm_ep_helper(iDynTree TYPE GIT
               STYLE GITHUB
