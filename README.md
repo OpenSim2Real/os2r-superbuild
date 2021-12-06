@@ -60,6 +60,10 @@ By default CORE is always installed. To set the other options to install as well
 ```
 cmake -S . -B build -DBAESIANBALANCER_ENABLE_MONOPODSDK:BOOL=TRUE -DBAESIANBALANCER_ENABLE_SCENARIO:BOOL=TRUE
 ```
+#### Other useful cmake args:
+1. -DBAESIANBALANCER_USES_IGNITION:BOOL= ON/OFF (does scenario use ignition gazebo?)
+2. -DBAESIANBALANCER_PROJECT_TAGS="Stable"/"Unstable"/"LatestRelease"/"Custom" ("custom" requires BAESIANBALANCER_PROJECT_TAGS_CUSTOM_FILE to be set)
+
 Include which ever options you want.
 
 ## Sourcing environment
@@ -68,19 +72,14 @@ either source the setup.sh script each time you open a new termnal you want to r
 ```
 source <Install Dir>/bb-superbuild/build/install/share/bb-superbuild/setup.sh
 ```
-Or permenatly add to to bashrc with
+
 ```
 echo '<Install Dir>/bb-superbuild/build/install/share/bb-superbuild/setup.sh' >> ~/.bashrc
 ```
 
 ## Required for gym-ignition. Allowing pip to link python packages installed in super build.
 
-<!-- Navigate to the `<repo location>/bb-superbuild/src ` folder. Run the following commands in order. **Do not worry about red error text :) it is only linking cached packages**
+**Stable Installation** - build `gym-ignition` with the stable version `pip install gym-ignition`
 
-```
-pip install --user -e iDyntree
-pip install --user -e gym-ignition/scenario
-``` -->
+**Unstable, Latest Release Installations** build `gym-ignition` with nightly version `pip install --pre gym-ignition` using the most up to date version. 
 
-
-Now that pip knows about the packages you can install the nightly version of `gym-ignition` with `pip install --pre gym-ignition`.
