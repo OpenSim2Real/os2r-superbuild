@@ -22,5 +22,5 @@ endif()
 # Robot scenario packages
 if(BAESIANBALANCER_ENABLE_SCENARIO)
   find_or_build_package(gym-ignition)
-  find_or_build_package(SIM)
+  # find_or_build_package(scenario_monopod)
 endif()
