@@ -44,7 +44,8 @@ if(BAESIANBALANCER_USES_PYTHON)
   find_package(pybind11 REQUIRED)
   # For iDynTree linking
   find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
-  execute_process(COMMAND ${Python3_EXECUTABLE} -c "from distutils import sysconfig; print(sysconfig.get_python_lib(1,0,prefix=''))"
+  execute_process(COMMAND ${Python3_EXECUTABLE} -c "from distutils import sysconfig; \
+     print(sysconfig.get_python_lib(1,0,prefix=''))"
      OUTPUT_VARIABLE _PYTHON_INSTDIR)
   string(STRIP ${_PYTHON_INSTDIR} IDYNTREE_PYTHON_INSTALL_DIR)
   file(TO_CMAKE_PATH "${IDYNTREE_PYTHON_INSTALL_DIR}" IDYNTREE_PYTHON_INSTALL_DIR)

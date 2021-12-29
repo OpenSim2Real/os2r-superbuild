@@ -3,8 +3,6 @@ set(YCM_USE_CMAKE_PROPOSED TRUE CACHE BOOL "Use files including unmerged cmake p
 # YCM options
 option(YCM_DISABLE_SYSTEM_PACKAGES "Disable use of all the system installed packages" ON)
 
-option(BAESIANBALANCER_USES_PYTHON "Enable compilation of software that depend on Python" TRUE)
-
 ## Enable packages that depend on the Ignition Gazebo simulator
 set(BAESIANBALANCER_USES_IGNITION_DEFAULT TRUE)
 option(BAESIANBALANCER_USES_IGNITION "Enable compilation of software that depends on Ignition Gazebo" ${BAESIANBALANCER_USES_IGNITION_DEFAULT})
@@ -15,6 +13,7 @@ option(BAESIANBALANCER_ENABLE_CORE "Enable compilation of core software librarie
 option(BAESIANBALANCER_ENABLE_MONOPODSDK "Enable compilation of monopod_sdk." FALSE)
 option(BAESIANBALANCER_ENABLE_SCENARIO "Enable compilation of scenario." FALSE)
 
+option(BAESIANBALANCER_USES_PYTHON "Enable compilation of software that depend on Python" TRUE)
 
 # Mark as advanced all the profiles that do not have a mantainer... for example
 # option(BAESIANBALANCER_ENABLE_GRASPING "Enable compilation of software for grasping." FALSE)
