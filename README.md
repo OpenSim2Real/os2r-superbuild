@@ -42,7 +42,7 @@ sudo apt-get install python3-sphinx
 
 ```
 pip3 install breathe
-pip3 install cmake_build_extension
+pip3 install cmake_build_extension gym gym_ignition_models lxml numpy scipy
 ```
 
 If you have ubuntu 20.04 you can install swig with apt

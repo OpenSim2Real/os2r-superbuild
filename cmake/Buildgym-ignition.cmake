@@ -5,38 +5,6 @@
 include(YCMEPHelper)
 include(FindOrBuildPackage)
 
-# Make sure Scenario is uninstalled before Runinng
-
-execute_process(
-    COMMAND "export PYTHONPATH=\"\""
-    COMMAND "${Python3_EXECUTABLE}" -c "import scenario; print(scenario.__path__[0])"
-    OUTPUT_VARIABLE Scenario_OUT_PATH
-    OUTPUT_STRIP_TRAILING_WHITESPACE
-    ERROR_QUIET
-)
-if (NOT "${Scenario_OUT_PATH}" STREQUAL "")
-  message(FATAL_ERROR
-  "
-  unexpected: Found scenario python package already installed at ${Scenario_OUT_PATH}. Please uninstall and try again.
-  ")
-endif()
-
-
-# Make sure gym-ignition is uninstalled before running
-
-execute_process(
-    COMMAND "export PYTHONPATH=\"\""
-    COMMAND "${Python3_EXECUTABLE}" -c "import gym_ignition; print(gym_ignition.__path__[0])"
-    OUTPUT_VARIABLE gym_ignition_OUT_PATH
-    OUTPUT_STRIP_TRAILING_WHITESPACE
-    ERROR_QUIET
-)
-if (NOT "${gym_ignition_OUT_PATH}" STREQUAL "")
-  message(FATAL_ERROR
-  "
-  unexpected: Found gym-ignition python package already installed at ${gym_ignition_OUT_PATH}. Please uninstall and try again.
-  ")
-endif()
 
 find_or_build_package(iDynTree QUIET)
 ycm_ep_helper(gym-ignition TYPE GIT
@@ -52,14 +20,26 @@ ycm_ep_helper(gym-ignition TYPE GIT
 
 if(BAESIANBALANCER_USES_PYTHON)
   # Status message
-  message(STATUS "Using \'${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EGG_BASE_PATH}\' To create each egg info for python modules.")
 
   # Install the egg-info files
   set(EGG_BASE_PATH_SCENARIO "${YCM_EP_INSTALL_DIR}/${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH}")
+  message(STATUS "Using \'${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EGG_BASE_PATH_SCENARIO}\' To create each egg info for python modules sceanrio and gym-ignition.")
   add_custom_command(TARGET gym-ignition POST_BUILD
       COMMAND ${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EGG_BASE_PATH_SCENARIO}
       WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/src/gym-ignition/scenario
       COMMENT "Installing egg files for scenario..."
+  )
+
+  add_custom_command(TARGET gym-ignition POST_BUILD
+                     COMMAND ${CMAKE_COMMAND} -E copy_directory
+                     ${PROJECT_SOURCE_DIR}/src/gym-ignition ${EGG_BASE_PATH_SCENARIO}/gym_ignition
+                     COMMENT "Moving gym-ignition into build python directory ${EGG_BASE_PATH_SCENARIO}...")
+
+  add_custom_command(TARGET gym-ignition POST_BUILD
+    COMMAND ${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EGG_BASE_PATH_SCENARIO}
+    # COMMAND ${Python3_EXECUTABLE} -m pip install -e .
+    WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/src/gym-ignition
+    COMMENT "Installing egg files for gym-ignition..."
   )
 
 endif()

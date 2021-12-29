@@ -15,6 +15,7 @@ option(BAESIANBALANCER_ENABLE_CORE "Enable compilation of core software librarie
 option(BAESIANBALANCER_ENABLE_MONOPODSDK "Enable compilation of monopod_sdk." FALSE)
 option(BAESIANBALANCER_ENABLE_SCENARIO "Enable compilation of scenario." FALSE)
 
+
 # Mark as advanced all the profiles that do not have a mantainer... for example
 # option(BAESIANBALANCER_ENABLE_GRASPING "Enable compilation of software for grasping." FALSE)
 # mark_as_advanced(BAESIANBALANCER_ENABLE_GRASPING)
