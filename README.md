@@ -114,8 +114,3 @@ source <Install Dir>/bb-superbuild/build/install/share/bb-superbuild/setup.sh
 echo '<Install Dir>/bb-superbuild/build/install/share/bb-superbuild/setup.sh' >> ~/.bashrc
 ```
 
-## Installing gym-ignition using superbuild.
-
-**Stable Installation** - build `gym-ignition` with the stable version `pip install gym-ignition`
-
-**Unstable, Latest Release Installations** build `gym-ignition` with nightly version `pip install --pre gym-ignition` using the most up to date version.
