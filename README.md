@@ -1,4 +1,4 @@
-# bb-superbuild
+# Open Sim2Real superbuild for the monopod platform
 
 This is a meta repository (so-called "superbuild") that uses [CMake](https://cmake.org/) and [YCM](https://github.com/robotology/ycm) to automatically
 download and compile software developed in the OpenSim2Real GitHub organization. This superbuild is based on the [robotology-superbuild](https://github.com/robotology/robotology-superbuild)
