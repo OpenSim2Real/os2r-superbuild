@@ -111,6 +111,5 @@ source <Install Dir>/os2r-superbuild/build/install/share/os2r-superbuild/setup.s
 ```
 
 ```
-echo '<Install Dir>/os2r-superbuild/build/install/share/os2r-superbuild/setup.sh' >> ~/.bashrc
+echo 'source <Install Dir>/os2r-superbuild/build/install/share/os2r-superbuild/setup.sh' >> ~/.bashrc
 ```
-
