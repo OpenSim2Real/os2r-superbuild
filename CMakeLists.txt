@@ -44,7 +44,8 @@ if(BAESIANBALANCER_USES_PYTHON)
   find_package(pybind11 REQUIRED)
   # For iDynTree linking
   find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
-  execute_process(COMMAND ${Python3_EXECUTABLE} -c "from distutils import sysconfig; print(sysconfig.get_python_lib(1,0,prefix=''))"
+  execute_process(COMMAND ${Python3_EXECUTABLE} -c "from distutils import sysconfig; \
+     print(sysconfig.get_python_lib(1,0,prefix=''))"
      OUTPUT_VARIABLE _PYTHON_INSTDIR)
   string(STRIP ${_PYTHON_INSTDIR} IDYNTREE_PYTHON_INSTALL_DIR)
   file(TO_CMAKE_PATH "${IDYNTREE_PYTHON_INSTALL_DIR}" IDYNTREE_PYTHON_INSTALL_DIR)
@@ -77,13 +78,66 @@ if(BAESIANBALANCER_USES_PYTHON)
 
 endif()
 
+# If scenario is enabled. make sure gym ignition and scenario are uninstalled
+IF(BAESIANBALANCER_USES_PYTHON)
+    # Make sure gym-ignition and scenario is uninstalled before running
+    execute_process(
+        COMMAND "${Python3_EXECUTABLE}" -c "import sys; import os; import importlib; \
+        sys.path = [p for p in sys.path if p not in [os.path.abspath(x) for x in os.environ['PYTHONPATH'].split(':')]]; \
+        print(importlib.util.find_spec('idyntree'))"
+        OUTPUT_VARIABLE idyntree_OUT_PATH
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+        ERROR_QUIET
+    )
+    if (NOT "${idyntree_OUT_PATH}" STREQUAL "None" )
+      message(FATAL_ERROR
+      "
+      unexpected: Found idyntree python package already installed at ${idyntree_OUT_PATH} \
+      despite having Scenario enabled. Please uninstall and try again.
+      ")
+    endif()
+    # Make sure Scenario is uninstalled before Runinng
+    execute_process(
+        COMMAND "${Python3_EXECUTABLE}" -c "import sys; import os; import importlib; \
+        sys.path = [p for p in sys.path if p not in [os.path.abspath(x) for x in os.environ['PYTHONPATH'].split(':')]]; \
+        print(importlib.util.find_spec('scenario'))"
+        OUTPUT_VARIABLE Scenario_OUT_PATH
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+        ERROR_QUIET
+    )
+    if (NOT "${Scenario_OUT_PATH}" STREQUAL "None" )
+      message(FATAL_ERROR
+      "
+      unexpected: Found scenario python package already installed at ${Scenario_OUT_PATH} \
+      despite having Scenario enabled. Please uninstall and try again.
+      ")
+    endif()
+    # Make sure gym-ignition and scenario is uninstalled before running
+    execute_process(
+        COMMAND "${Python3_EXECUTABLE}" -c "import sys; import os; import importlib; \
+        sys.path = [p for p in sys.path if p not in [os.path.abspath(x) for x in os.environ['PYTHONPATH'].split(':')]]; \
+        print(importlib.util.find_spec('gym_ignition'))"
+        OUTPUT_VARIABLE gym_ignition_OUT_PATH
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+        ERROR_QUIET
+    )
+    message(STATUS "Output from gym-ignition find: ${gym_ignition_OUT_PATH}")
+    if (NOT "${gym_ignition_OUT_PATH}" STREQUAL "None" )
+      message(FATAL_ERROR
+      "
+      unexpected: Found gym-ignition python package already installed at ${gym_ignition_OUT_PATH} \
+      despite having Scenario enabled. Please uninstall and try again.
+      ")
+    endif()
+ENDIF()
 
 # Include the logic of which packages should be built
 # depending on which profiles are enabled
 include(BaesianBalancerSuperbuildLogic)
 
 if(WIN32 AND APPLE)
-    message(FATAL_ERROR "Windows and mac OS are currently not supported for this project. Please build using a linux based system.")
+    message(FATAL_ERROR "Windows and mac OS are currently not supported for this project. \
+    Please build using a linux based system.")
 else()
     set(SHLIB_ENV_VAR "LD_LIBRARY_PATH")
 endif()

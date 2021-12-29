@@ -11,3 +11,5 @@ CTestTestfile.cmake
 build
 src
 *.log
+*.tags
+*.tags1
