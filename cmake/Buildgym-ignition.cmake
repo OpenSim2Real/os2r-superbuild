@@ -25,8 +25,9 @@ if(OPENSIM2REAL_USES_PYTHON)
   set(EGG_BASE_PATH_SCENARIO "${YCM_EP_INSTALL_DIR}/${OPENSIM2REAL_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH}")
   message(STATUS "Using \'${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EGG_BASE_PATH_SCENARIO}\' To create each egg info for python modules sceanrio and gym-ignition.")
   add_custom_command(TARGET gym-ignition POST_BUILD
-      COMMAND ${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EGG_BASE_PATH_SCENARIO}
+      COMMAND  ${CMAKE_COMMAND} -E env PYTHONPATH=${PYTHONPATHS} ${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EGG_BASE_PATH_SCENARIO}
       WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/src/gym-ignition/scenario
+      DEPENDS iDynTree
       COMMENT "Installing egg files for scenario..."
   )
 
@@ -45,11 +46,14 @@ if(OPENSIM2REAL_USES_PYTHON)
   set(gym_ignition_install_dir ${EGG_BASE_PATH_SCENARIO}/gym_ignition)
   add_custom_command(TARGET gym-ignition POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory ${PROJECT_SOURCE_DIR}/src/gym-ignition ${gym_ignition_install_dir}
+    DEPENDS iDynTree
     COMMENT "Moving gym-ignition into build python directory ${gym_ignition_install_dir}...")
 
   add_custom_command(TARGET gym-ignition POST_BUILD
-    VERBATIM COMMAND ${Python3_EXECUTABLE} -c "import setuptools;import site;import sys;site.ENABLE_USER_SITE = 1;sys.argv[1:]=[\"develop\",\"--user\"];setuptools.setup()"
+    VERBATIM COMMAND ${CMAKE_COMMAND} -E env PYTHONPATH=${PYTHONPATHS} ${Python3_EXECUTABLE} -c "import setuptools; \
+    import site;import sys;site.ENABLE_USER_SITE = 1;sys.argv[1:]=[\"develop\",\"--user\"];setuptools.setup()"
     WORKING_DIRECTORY ${gym_ignition_install_dir}
+    DEPENDS iDynTree
     COMMENT "Installing egg files link for gym-ignition..."
   )
 

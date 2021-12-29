@@ -77,12 +77,15 @@ if(OPENSIM2REAL_USES_PYTHON)
   message(STATUS "OPENSIM2REAL_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH: ${OPENSIM2REAL_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH}")
 
 endif()
+set(PYTHONPATHS "${YCM_EP_INSTALL_DIR}/${OPENSIM2REAL_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH}:\
+${YCM_EP_INSTALL_DIR}/${IDYNTREE_PYTHON_INSTALL_DIR_SETUP_SH}")
 
 # If scenario is enabled. make sure gym ignition and scenario are uninstalled
 IF(OPENSIM2REAL_USES_PYTHON)
     # Make sure gym-ignition and scenario is uninstalled before running
     execute_process(
-        COMMAND "${Python3_EXECUTABLE}"  -c "import sys; from contextlib import suppress; import os; import importlib; \
+        COMMAND ${CMAKE_COMMAND} -E env PYTHONPATH=${PYTHONPATHS} "${Python3_EXECUTABLE}" -c "import sys; \
+        from contextlib import suppress; import os; import importlib; \
         PYPATHS = [] if 'PYTHONPATH' not in os.environ else os.environ['PYTHONPATH'].split(':'); \
         sys.path = [p for p in sys.path if p not in [os.path.abspath(x) for x in PYPATHS]]; \
         print(importlib.util.find_spec('idyntree'))"
@@ -99,7 +102,8 @@ IF(OPENSIM2REAL_USES_PYTHON)
     endif()
     # Make sure Scenario is uninstalled before Runinng
     execute_process(
-        COMMAND "${Python3_EXECUTABLE}" -c "import sys; from contextlib import suppress; import os; import importlib; \
+        COMMAND ${CMAKE_COMMAND} -E env PYTHONPATH=${PYTHONPATHS} "${Python3_EXECUTABLE}" -c "import sys; \
+        from contextlib import suppress; import os; import importlib; \
         PYPATHS = [] if 'PYTHONPATH' not in os.environ else os.environ['PYTHONPATH'].split(':'); \
         sys.path = [p for p in sys.path if p not in [os.path.abspath(x) for x in PYPATHS]]; \
         print(importlib.util.find_spec('scenario'))"
@@ -116,7 +120,8 @@ IF(OPENSIM2REAL_USES_PYTHON)
     endif()
     # Make sure gym-ignition and scenario is uninstalled before running
     execute_process(
-        COMMAND "${Python3_EXECUTABLE}" -c "import sys; from contextlib import suppress; import os; import importlib; \
+        COMMAND ${CMAKE_COMMAND} -E env PYTHONPATH=${PYTHONPATHS} "${Python3_EXECUTABLE}" -c "import sys; \
+        from contextlib import suppress; import os; import importlib; \
         PYPATHS = [] if 'PYTHONPATH' not in os.environ else os.environ['PYTHONPATH'].split(':'); \
         sys.path = [p for p in sys.path if p not in [os.path.abspath(x) for x in PYPATHS]]; \
         print(importlib.util.find_spec('gym_ignition'))"

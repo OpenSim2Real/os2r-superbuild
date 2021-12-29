@@ -25,9 +25,9 @@ ycm_ep_helper(iDynTree TYPE GIT
 
 if(OPENSIM2REAL_USES_PYTHON)
     # Status message
-    message(STATUS "Using \'${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EGG_BASE_PATH}\' To create each egg info for idyntree python modules.")
-
     set(EGG_BASE_PATH_IDYNTREE "${YCM_EP_INSTALL_DIR}/${IDYNTREE_PYTHON_INSTALL_DIR_SETUP_SH}")
+    message(STATUS "Using \'${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EGG_BASE_PATH_IDYNTREE}\' To create each egg info for idyntree python modules.")
+
     add_custom_command(TARGET iDynTree POST_BUILD
         COMMAND ${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EGG_BASE_PATH_IDYNTREE}
         WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/src/iDynTree

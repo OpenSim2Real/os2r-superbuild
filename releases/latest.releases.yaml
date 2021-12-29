@@ -1,5 +1,5 @@
-repositories:
-  pybind11:
-    type: git
-    url: https://github.com/pybind/pybind11.git
-    version: master
+# repositories:
+#   pybind11:
+#     type: git
+#     url: https://github.com/pybind/pybind11.git
+#     version: master

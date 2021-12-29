@@ -21,6 +21,7 @@ endif()
 
 # Robot scenario packages
 if(OPENSIM2REAL_ENABLE_SCENARIO)
+  find_or_build_package(iDynTree)
   find_or_build_package(gym-ignition)
   # find_or_build_package(scenario_monopod)
 endif()
