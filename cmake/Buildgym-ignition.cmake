@@ -14,15 +14,15 @@ ycm_ep_helper(gym-ignition TYPE GIT
               COMPONENT scenario
               FOLDER src
               CMAKE_ARGS -DSCENARIO_USE_IGNITION:BOOL=ON
-                         -DSCENARIO_ENABLE_BINDINGS:BOOL=${BAESIANBALANCER_USES_PYTHON}
-                         -DBINDINGS_INSTALL_PREFIX:PATH=${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR}
+                         -DSCENARIO_ENABLE_BINDINGS:BOOL=${OPENSIM2REAL_USES_PYTHON}
+                         -DBINDINGS_INSTALL_PREFIX:PATH=${OPENSIM2REAL_SUPERBUILD_PYTHON_INSTALL_DIR}
               DEPENDS iDynTree)
 
-if(BAESIANBALANCER_USES_PYTHON)
+if(OPENSIM2REAL_USES_PYTHON)
   # Status message
 
   # Install the egg-info files
-  set(EGG_BASE_PATH_SCENARIO "${YCM_EP_INSTALL_DIR}/${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH}")
+  set(EGG_BASE_PATH_SCENARIO "${YCM_EP_INSTALL_DIR}/${OPENSIM2REAL_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH}")
   message(STATUS "Using \'${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EGG_BASE_PATH_SCENARIO}\' To create each egg info for python modules sceanrio and gym-ignition.")
   add_custom_command(TARGET gym-ignition POST_BUILD
       COMMAND ${Python3_EXECUTABLE} setup.py egg_info --egg-base=${EGG_BASE_PATH_SCENARIO}

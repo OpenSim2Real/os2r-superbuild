@@ -5,10 +5,10 @@ find_or_build_package(gym-ignition QUIET)
 
 ycm_ep_helper(scenario_monopod TYPE GIT
               STYLE GITHUB
-              REPOSITORY Baesian-Balancer/scenario_monopod
+              REPOSITORY OpenSim2Real/scenario_monopod
               TAG master
               COMPONENT scenario
               FOLDER src
-              CMAKE_ARGS -DSCENARIO_ENABLE_BINDINGS:BOOL=${BAESIANBALANCER_USES_PYTHON}
-                         -DBINDINGS_INSTALL_PREFIX:PATH=${BAESIANBALANCER_SUPERBUILD_PYTHON_INSTALL_DIR}
+              CMAKE_ARGS -DSCENARIO_ENABLE_BINDINGS:BOOL=${OPENSIM2REAL_USES_PYTHON}
+                         -DBINDINGS_INSTALL_PREFIX:PATH=${OPENSIM2REAL_SUPERBUILD_PYTHON_INSTALL_DIR}
               DEPENDS gym-ignition)

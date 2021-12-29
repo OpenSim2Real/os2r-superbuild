@@ -5,7 +5,7 @@ find_or_build_package(real_time_tools QUIET)
 
 ycm_ep_helper(monopod_sdk TYPE GIT
               STYLE GITHUB
-              REPOSITORY Baesian-Balancer/monopod_sdk
+              REPOSITORY OpenSim2Real/monopod_sdk
               TAG dawson/dev
               COMPONENT monopod_sdk
               FOLDER src
