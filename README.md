@@ -28,7 +28,9 @@ sudo apt-get install -y  build-essential \
                          python3-dev \
                          python3-numpy \
                          python3-pybind11 \
-                         pybind11-dev
+                         pybind11-dev \ 
+                         libboost-all-dev \
+                         cmake
 ```
 
 <!-- might need this libeigen3-dev -->
@@ -38,6 +40,7 @@ sudo apt-add-repository universe
 sudo apt-get update
 sudo apt-get install doxygen
 sudo apt-get install python3-sphinx
+sudo apt-get install python3-breathe
 ```
 
 ```
@@ -71,6 +74,12 @@ make install
 ```
 
 Note you must then append the path to the swig library onto the `CMAKE_PREFIX_PATH` environment variable so cmake can find swig.
+
+## Update and upgrade
+```
+sudo apt update
+sudo apt upgrade --fix-missing
+```
 
 # Installation
 

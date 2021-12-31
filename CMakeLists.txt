@@ -81,7 +81,7 @@ set(PYTHONPATHS "${YCM_EP_INSTALL_DIR}/${OPENSIM2REAL_SUPERBUILD_PYTHON_INSTALL_
 ${YCM_EP_INSTALL_DIR}/${IDYNTREE_PYTHON_INSTALL_DIR_SETUP_SH}")
 
 # If scenario is enabled. make sure gym ignition and scenario are uninstalled
-IF(OPENSIM2REAL_USES_PYTHON)
+IF(OPENSIM2REAL_USES_PYTHON AND OPENSIM2REAL_ENABLE_SCENARIO)
     # Make sure gym-ignition and scenario is uninstalled before running
     execute_process(
         COMMAND ${CMAKE_COMMAND} -E env PYTHONPATH=${PYTHONPATHS} "${Python3_EXECUTABLE}" -c "import sys; \
