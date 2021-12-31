@@ -103,7 +103,7 @@ option(OPENSIM2REAL_ENABLE_SCENARIO "Enable compilation of scenario." FALSE)
 #### Other useful cmake args:
 
 1. `-DOPENSIM2REAL_USES_IGNITION:BOOL= ON/OFF (does scenario use ignition gazebo?)`
-2. `-DOPENSIM2REAL_PROJECT_TAGS="Stable"/"Unstable"/"LatestRelease"/"Custom" ("custom" requires BAESIANBALANCER_PROJECT_TAGS_CUSTOM_FILE to be set)`
+2. `-DOPENSIM2REAL_PROJECT_TAGS="Stable"/"Unstable"/"LatestRelease"/"Custom" ("custom" requires OPENSIM2REAL_PROJECT_TAGS_CUSTOM_FILE to be set)`
 
 By default CORE is always installed. To set the other options to install as well replace `<CMAKE_ARGS>` with
 ```
