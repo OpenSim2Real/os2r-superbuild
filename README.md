@@ -14,6 +14,13 @@ Currently ubuntu 20.04 is the only tested version. To use ubuntu < 20.04 make su
 
 # Dependencies
 
+## Dependencies for Core
+
+```
+sudo apt update
+sudo apt upgrade
+```
+
 ```
 sudo apt-get install -y  build-essential \
                          libxml2-dev \
@@ -48,6 +55,13 @@ pip3 install breathe
 pip3 install cmake_build_extension gym gym_ignition_models lxml numpy scipy
 ```
 
+```
+sudo apt update
+sudo apt upgrade
+```
+
+## Dependencies for scenario and gym ignition
+
 If you have ubuntu 20.04 you can install swig with apt
 ```
 sudo apt update
@@ -75,11 +89,33 @@ make install
 
 Note you must then append the path to the swig library onto the `CMAKE_PREFIX_PATH` environment variable so cmake can find swig.
 
-## Update and upgrade
 ```
-sudo apt update
-sudo apt upgrade --fix-missing
+sudo apt-get update
+sudo apt-get install lsb-release wget gnupg
 ```
+
+```
+sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
+sudo apt-get update
+sudo apt-get install ignition-fortress
+```
+
+**add this to your bashrc**
+
+```
+echo 'export IGN_GAZEBO_PHYSICS_ENGINE_PATH=${IGN_GAZEBO_PHYSICS_ENGINE_PATH}:/usr/lib/x86_64-linux-gnu/ign-physics-5/engine-plugins/' >> ~/.bashrc
+```
+
+[!NOTE]
+If you had an old version of ignition installed you might need to remove the config folder so that Ignition creates a new one the next time it starts
+mv $HOME/.ignition $HOME/.ignition_bak
+
+If there are still folder errors, try to create the folder yourself
+mkdir -p $HOME/.ignition/gazebo/6
+
+[!WARNING]
+You might need to restart your computer before continuing. If you are having issues with dependencies and building try installing ignition even if you are only using superbuild core.
 
 # Installation
 
