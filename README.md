@@ -9,85 +9,35 @@ If you are familiar with ROS, it is something similar to [catkin](http://wiki.ro
 
 <!-- Furthermore, the `robotology-superbuild` also contains some infrastructure to build **binaries** of the contained projects for some platforms.
 You can read more about the superbuild concept in [YCM documentation](http://robotology.github.io/ycm/gh-pages/latest/index.html) or in the [related IRC paper](http://lornat75.github.io/papers/2018/domenichelli-irc.pdf). -->
-# Supported
-Currently ubuntu 20.04 is the only tested version. To use ubuntu < 20.04 make sure python is >=3.8 and swig>=4.0
+# Support
+Currently ubuntu 20.04 is the only tested version.
 
 # Dependencies
 
-## Dependencies for Core
-
-```
-sudo apt update
-sudo apt upgrade
-```
-
-```
-sudo apt-get install -y  build-essential \
-                         libxml2-dev \
-                         coinor-libipopt-dev \
-                         libassimp-dev \
-                         libirrlicht-dev \
-                         freeglut3-dev \
-                         libedit-dev \
-                         libxmu-dev \
-                         libncurses-dev \
-                         libcereal-dev \
-                         python3-dev \
-                         python3-numpy \
-                         python3-pybind11 \
-                         pybind11-dev \ 
-                         libboost-all-dev \
-                         cmake
-```
-
-<!-- might need this libeigen3-dev -->
+## Dependencies for Core and Monopod Sdk
 
 ```
 sudo apt-add-repository universe
-sudo apt-get update
-sudo apt-get install doxygen
-sudo apt-get install python3-sphinx
-sudo apt-get install python3-breathe
-```
-
-```
-pip3 install breathe
-pip3 install cmake_build_extension gym gym_ignition_models lxml numpy scipy
-```
-
-```
 sudo apt update
 sudo apt upgrade
 ```
 
-## Dependencies for scenario and gym ignition
-
-If you have ubuntu 20.04 you can install swig with apt
 ```
-sudo apt update
-sudo apt install swig
-```
-
-Otherwise you must do the following to install swig 4.0
-1. Download swig from [here](https://sourceforge.net/projects/swig/files/swigwin/swigwin-4.0.2/swigwin-4.0.2.zip/download?use_mirror=newcontinuum) or follow the links from the swig web page [here](http://www.swig.org/download.html)
-2. Extract swig where ever
-3. Install following the below methods,
-
-Install in /usr/local/
-```
-./configure
-make
-make install
+sudo apt-get install -y build-essential \
+                        cmake \
+                        python3-sphinx \
+                        doxygen \
+                        python3-breathe \
+                        python3-pybind11 \
+                        libboost-all-dev \
+                        freeglut3-dev \
+                        libedit-dev \
+                        libxmu-dev \
+                        libncurses-dev \
+                        libcereal-dev \
 ```
 
-Install at different location
-```
-./configure --prefix=/home/yourname/projects
-make
-make install
-```
-
-Note you must then append the path to the swig library onto the `CMAKE_PREFIX_PATH` environment variable so cmake can find swig.
+## Dependencies for Sim2Real
 
 ```
 sudo apt-get update
@@ -107,15 +57,51 @@ sudo apt-get install ignition-fortress
 echo 'export IGN_GAZEBO_PHYSICS_ENGINE_PATH=${IGN_GAZEBO_PHYSICS_ENGINE_PATH}:/usr/lib/x86_64-linux-gnu/ign-physics-5/engine-plugins/' >> ~/.bashrc
 ```
 
-:warning: **If you had an old version of ignition installed you might need to remove the config folder**: so that Ignition creates a new one the next time it starts
+:warning: **If you had an old version of ignition installed prior you might need to remove the config folder**: Ignition creates a new one the next time it starts
 ```
 mv $HOME/.ignition $HOME/.ignition_bak
 ```
-
 If there are still folder errors, try to create the folder yourself
 ```
 mkdir -p $HOME/.ignition/gazebo/6
 ```
+
+```
+sudo apt-get install -y  coinor-libipopt-dev \
+                         libirrlicht-dev \
+                         libassimp-dev
+```
+
+```
+sudo apt install python3-pip
+pip3 install cmake_build_extension gym gym_ignition_models
+```
+
+If you have ubuntu 20.04 you can install swig with apt
+```
+sudo apt update
+sudo apt install swig
+```
+
+Otherwise you must do the following to install `swig 4.0`
+1. Download swig from [here](https://sourceforge.net/projects/swig/files/swigwin/swigwin-4.0.2/swigwin-4.0.2.zip/download?use_mirror=newcontinuum) or follow the links from the swig web page [here](http://www.swig.org/download.html)
+2. Extract swig where ever
+3. Install following the below methods,
+
+Install in `/usr/local/`
+```
+./configure
+make
+make install
+```
+
+Install at different location
+```
+./configure --prefix=/home/yourname/projects
+make
+make install
+```
+Note you must then append the path to the swig library onto the `CMAKE_PREFIX_PATH` environment variable so cmake can find swig.
 
 :warning: **You might need to restart your computer before continuing**: If you are having issues with dependencies and building try installing ignition even if you are only using superbuild core.
 
@@ -134,13 +120,16 @@ cmake --build build
 #### Build types:
 
 ```
-option(OPENSIM2REAL_ENABLE_CORE "Enable compilation of core software libraries." TRUE)
 option(OPENSIM2REAL_ENABLE_MONOPODSDK "Enable compilation of monopod_sdk." FALSE)
 option(OPENSIM2REAL_ENABLE_SCENARIO "Enable compilation of scenario." FALSE)
+option(OPENSIM2REAL_ENABLE_GYMIGNITION "Install gym_ignition python module if scenario is enabled. Requires python to be enabled." TRUE)
+option(OPENSIM2REAL_ENABLE_ALL "Enable compilation of scenario." FALSE)
+
+option(OPENSIM2REAL_USES_PYTHON "Enable compilation of software that depend on Python" TRUE)
 ```
 #### Other useful cmake args:
 
-1. `-DOPENSIM2REAL_USES_IGNITION:BOOL= ON/OFF (does scenario use ignition gazebo?)`
+1. `-DOPENSIM2REAL_USES_SCENARIO:BOOL= ON/OFF (does build compile scenario with ?)`
 2. `-DOPENSIM2REAL_PROJECT_TAGS="Stable"/"Unstable"/"LatestRelease"/"Custom" ("custom" requires OPENSIM2REAL_PROJECT_TAGS_CUSTOM_FILE to be set)`
 
 By default CORE is always installed. To set the other options to install as well replace `<CMAKE_ARGS>` with

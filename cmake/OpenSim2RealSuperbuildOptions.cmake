@@ -9,15 +9,12 @@ option(OPENSIM2REAL_USES_IGNITION "Enable compilation of software that depends o
 
 
 # Enable/disable different profiles
-option(OPENSIM2REAL_ENABLE_CORE "Enable compilation of core software libraries." TRUE)
 option(OPENSIM2REAL_ENABLE_MONOPODSDK "Enable compilation of monopod_sdk." FALSE)
 option(OPENSIM2REAL_ENABLE_SCENARIO "Enable compilation of scenario." FALSE)
+option(OPENSIM2REAL_ENABLE_GYMIGNITION "Install gym_ignition python module if scenario is enabled. Requires python to be enabled." TRUE)
+option(OPENSIM2REAL_ENABLE_ALL "Enable compilation of scenario." FALSE)
 
 option(OPENSIM2REAL_USES_PYTHON "Enable compilation of software that depend on Python" TRUE)
-
-# Mark as advanced all the profiles that do not have a mantainer... for example
-# option(OPENSIM2REAL_ENABLE_GRASPING "Enable compilation of software for grasping." FALSE)
-# mark_as_advanced(OPENSIM2REAL_ENABLE_GRASPING)
 
 #set default build type to "Release" in single-config generators
 if(NOT CMAKE_CONFIGURATION_TYPES)
