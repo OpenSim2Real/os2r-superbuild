@@ -107,15 +107,17 @@ sudo apt-get install ignition-fortress
 echo 'export IGN_GAZEBO_PHYSICS_ENGINE_PATH=${IGN_GAZEBO_PHYSICS_ENGINE_PATH}:/usr/lib/x86_64-linux-gnu/ign-physics-5/engine-plugins/' >> ~/.bashrc
 ```
 
-[!NOTE]
-If you had an old version of ignition installed you might need to remove the config folder so that Ignition creates a new one the next time it starts
+:warning: **If you had an old version of ignition installed you might need to remove the config folder**: so that Ignition creates a new one the next time it starts
+```
 mv $HOME/.ignition $HOME/.ignition_bak
+```
 
 If there are still folder errors, try to create the folder yourself
+```
 mkdir -p $HOME/.ignition/gazebo/6
+```
 
-[!WARNING]
-You might need to restart your computer before continuing. If you are having issues with dependencies and building try installing ignition even if you are only using superbuild core.
+:warning: **You might need to restart your computer before continuing**: If you are having issues with dependencies and building try installing ignition even if you are only using superbuild core.
 
 # Installation
 
