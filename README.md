@@ -74,7 +74,7 @@ sudo apt-get install -y  coinor-libipopt-dev \
 
 ```
 sudo apt install python3-pip
-pip3 install cmake_build_extension gym gym_ignition_models
+pip3 install cmake_build_extension gym gym_ignition_models scipy numpy
 ```
 
 If you have ubuntu 20.04 you can install swig with apt
@@ -129,8 +129,7 @@ option(OPENSIM2REAL_USES_PYTHON "Enable compilation of software that depend on P
 ```
 #### Other useful cmake args:
 
-1. `-DOPENSIM2REAL_USES_SCENARIO:BOOL= ON/OFF (does build compile scenario with ?)`
-2. `-DOPENSIM2REAL_PROJECT_TAGS="Stable"/"Unstable"/"LatestRelease"/"Custom" ("custom" requires OPENSIM2REAL_PROJECT_TAGS_CUSTOM_FILE to be set)`
+1. `-DOPENSIM2REAL_PROJECT_TAGS="Stable"/"Unstable"/"LatestRelease"/"Custom" ("custom" requires OPENSIM2REAL_PROJECT_TAGS_CUSTOM_FILE to be set)`
 
 By default CORE is always installed. To set the other options to install as well replace `<CMAKE_ARGS>` with
 ```
@@ -148,4 +147,17 @@ source <Install Dir>/os2r-superbuild/build/install/share/os2r-superbuild/setup.s
 
 ```
 echo 'source <Install Dir>/os2r-superbuild/build/install/share/os2r-superbuild/setup.sh' >> ~/.bashrc
+```
+
+
+# Dependencies required to compile docs
+
+```
+pip install sphinx-multiversion
+pip install sphinx_autodoc_typehints
+pip install sphinx_fontawesome
+pip install -U breathe
+pip install sphinx_tabs
+pip install sphinx_book_theme
+pip install lxml
 ```
