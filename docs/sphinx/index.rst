@@ -4,9 +4,13 @@
 Open Sim2Real
 *************
 
-.. include:: monopod_sdk_docs/index.rst
+Monopod SDK
+===========
+.. include:: monopod_sdk_index.rst
 
-.. include:: scenario_monopod_docs/index.rst
+Scenario Monopod
+================
+.. include:: scenario_monopod_index.rst
 
 .. toctree::
    :hidden:
