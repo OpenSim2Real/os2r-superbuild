@@ -1,7 +1,5 @@
 .. _scenario_monopod:
 
-Scenario Monopod
-================
 
 .. toctree::
    :hidden:
