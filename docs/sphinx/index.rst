@@ -4,7 +4,7 @@
 Open Sim2Real
 *************
 
-.. include:: ./monopod_sdk/index.rst
+:ref:`_monopod_sdk`.
 
 .. toctree::
    :hidden:
