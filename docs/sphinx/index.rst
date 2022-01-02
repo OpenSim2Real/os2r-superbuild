@@ -3,3 +3,5 @@
 *************
 Open Sim2Real
 *************
+
+/tmp/monopod_sdk/index

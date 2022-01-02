@@ -13,16 +13,21 @@ set(SPHINX_CMD export PYTHONPATH="${PYTHONPATHS}:$ENV{PYTHONPATH}" &&)
 set(SPHINX_BUILD ${CMAKE_BINARY_DIR}/html)
 set(SPHINX_SOURCE ${CMAKE_CURRENT_SOURCE_DIR})
 
-set(SCENARIO_MONOPOD_SPHINX "${SPHINX_SOURCE}/scenario_monopod")
-set(MONOPOD_SDK_SPHINX "${SPHINX_SOURCE}/monopod_sdk")
+set(SCENARIO_MONOPOD_SPHINX "${SPHINX_SOURCE}/tmp/scenario_monopod")
+set(MONOPOD_SDK_SPHINX "${SPHINX_SOURCE}/tmp/monopod_sdk")
 
 # Copy over each projects doc source
-execute_process(COMMAND ${CMAKE_COMMAND} -E copy_directory
-"${SUB_PROJECTS_BUILD_DIR}/scenario_monopod/html/sphinx_build" SCENARIO_MONOPOD_SPHINX)
 
-execute_process(COMMAND ${CMAKE_COMMAND} -E copy_directory
-"${SUB_PROJECTS_BUILD_DIR}/monopod_sdk/html/sphinx_build" MONOPOD_SDK_SPHINX)
 
+add_custom_target(monopod_sdk_sphinx ALL
+    DEPENDS monopod_sdk
+    COMMAND ${CMAKE_COMMAND} -E copy_directory "${SUB_PROJECTS_BUILD_DIR}/src/monopod_sdk/html/sphinx_build" ${MONOPOD_SDK_SPHINX}
+    COMMENT "Copying monopod_sdk sphinx build")
+
+add_custom_target(scenario_monopod_sphinx ALL
+    DEPENDS scenario_monopod
+    COMMAND ${CMAKE_COMMAND} -E copy_directory "${SUB_PROJECTS_BUILD_DIR}/src/scenario_monopod/html/sphinx_build" ${SCENARIO_MONOPOD_SPHINX}
+    COMMENT "Copying scenario_monopod sphinx build")
 
 # Sphinx build command
 list(APPEND SPHINX_CMD
@@ -34,7 +39,7 @@ list(APPEND SPHINX_CMD
 
 # Generate the website
 add_custom_target(sphinx ALL
-    DEPENDS gym-ignition scenario_monopod monopod_sdk
+    DEPENDS gym-ignition monopod_sdk_sphinx scenario_monopod_sphinx
     COMMAND ${SPHINX_CMD}
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     COMMENT "Generating documentation with Sphinx")
@@ -50,3 +55,8 @@ add_custom_command(
     TARGET sphinx POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_SOURCE_DIR}/index.html" "${SPHINX_BUILD}"
     COMMENT "Copying html redirect to html folder")
+
+add_custom_command(
+    TARGET sphinx POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E remove_directory "${SUB_PROJECTS_BUILD_DIR}/src/monopod_sdk/html/sphinx_build" "${SPHINX_SOURCE}/tmp"
+    COMMENT "Deleting tmp sphinx build")
