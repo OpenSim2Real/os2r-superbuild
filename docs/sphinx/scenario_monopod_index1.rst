@@ -8,7 +8,6 @@ ScenarIO C++ API
 ++++++++++++++++
 
 .. toctree::
-   :hidden:
    :maxdepth: 2
    :caption: ScenarIO C++ API:
 
@@ -18,7 +17,6 @@ Python Packages
 +++++++++++++++
 
 .. toctree::
-   :hidden:
    :maxdepth: 2
    :caption: Python Packages
 
