@@ -9,4 +9,4 @@ Open Sim2Real
    :maxdepth: 2
    :caption: Monopod Sdk:
 
-   monopod_sdk/index
+   ./monopod_sdk/index

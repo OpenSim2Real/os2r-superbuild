@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classmonopod__drivers_1_1Leg" kind="class" language="C++" prot="public">
+    <compoundname>monopod_drivers::Leg</compoundname>
+    <basecompoundref refid="classmonopod__drivers_1_1LegInterface" prot="public" virt="non-virtual">monopod_drivers::LegInterface</basecompoundref>
+    <includes refid="leg_8hpp" local="no">leg.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Leg_1a33f02259d43fe35a0e0e534d6659c484" prot="public" static="no" mutable="no">
+        <type>std::array&lt; std::shared_ptr&lt; <ref refid="classblmc__drivers_1_1SafeMotor" kindref="compound">blmc_drivers::SafeMotor</ref> &gt;, 2 &gt;</type>
+        <definition>std::array&lt;std::shared_ptr&lt;blmc_drivers::SafeMotor&gt;, 2&gt; monopod_drivers::Leg::motors_</definition>
+        <argsstring></argsstring>
+        <name>motors_</name>
+        <briefdescription>
+<para>======================================================================== </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This list contains pointers to two motors. This motors are respectively the hip and the knee of the leg. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" line="211" column="16" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1a55f8a83fa177de4b2ea822b944266c33" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>monopod_drivers::Leg::Leg</definition>
+        <argsstring>(std::shared_ptr&lt; blmc_drivers::SafeMotor &gt; hip_motor, std::shared_ptr&lt; blmc_drivers::SafeMotor &gt; knee_motor)</argsstring>
+        <name>Leg</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classblmc__drivers_1_1SafeMotor" kindref="compound">blmc_drivers::SafeMotor</ref> &gt;</type>
+          <declname>hip_motor</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classblmc__drivers_1_1SafeMotor" kindref="compound">blmc_drivers::SafeMotor</ref> &gt;</type>
+          <declname>knee_motor</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classmonopod__drivers_1_1Leg" kindref="compound">Leg</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hip_motor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the pointer to the hip motor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>knee_motor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the pointer to the knee motor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" line="149" column="5" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="149" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1ad23bba917d977d2e94004ffdd3c89254" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual monopod_drivers::Leg::~Leg</definition>
+        <argsstring>()</argsstring>
+        <name>~Leg</name>
+        <briefdescription>
+<para>Destroy the <ref refid="classmonopod__drivers_1_1Leg" kindref="compound">Leg</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" line="159" column="13" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="159" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1a7d03ca429b2a741a89d88bf0f6273ed6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classmonopod__drivers_1_1LegInterface_1a36fa908a00559c94cbdb4aa4abf7540a" kindref="member">Ptr</ref>&lt; const <ref refid="classmonopod__drivers_1_1LegInterface_1ad76d8561b5b0a7e1c08221031d8ace98" kindref="member">ScalarTimeseries</ref> &gt;</type>
+        <definition>virtual Ptr&lt;const ScalarTimeseries&gt; monopod_drivers::Leg::get_measurement</definition>
+        <argsstring>(const int &amp;motor_index, const int &amp;measurement_index) const</argsstring>
+        <name>get_measurement</name>
+        <reimplements refid="classmonopod__drivers_1_1LegInterface_1ac4ae99c81c39af715a7428c64323a04e">get_measurement</reimplements>
+        <param>
+          <type>const int &amp;</type>
+          <declname>motor_index</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>measurement_index</declname>
+        </param>
+        <briefdescription>
+<para>Get the motor measurements. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Getters <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>motor_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>measurement_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ptr&lt;const ScalarTimeseries&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" line="174" column="17" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="174" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1adf6548bfc1450ab0237fe467fe35c4e0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classmonopod__drivers_1_1LegInterface_1a36fa908a00559c94cbdb4aa4abf7540a" kindref="member">Ptr</ref>&lt; const <ref refid="classmonopod__drivers_1_1LegInterface_1ad76d8561b5b0a7e1c08221031d8ace98" kindref="member">ScalarTimeseries</ref> &gt;</type>
+        <definition>virtual Ptr&lt;const ScalarTimeseries&gt; monopod_drivers::Leg::get_current_target</definition>
+        <argsstring>(const int &amp;motor_index) const</argsstring>
+        <name>get_current_target</name>
+        <reimplements refid="classmonopod__drivers_1_1LegInterface_1a95051490d3ee07fcc9234e1811e1cca3">get_current_target</reimplements>
+        <param>
+          <type>const int &amp;</type>
+          <declname>motor_index</declname>
+        </param>
+        <briefdescription>
+<para>Get the actual target current. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">motor_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>designate the motor from which we want the data from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ptr&lt;const ScalarTimeseries&gt; is the list of the lasts time stamped acquiered. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" line="181" column="17" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="181" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1ab4a79dc1c5e7f1f6379b318e646993bb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classmonopod__drivers_1_1LegInterface_1a36fa908a00559c94cbdb4aa4abf7540a" kindref="member">Ptr</ref>&lt; const <ref refid="classmonopod__drivers_1_1LegInterface_1ad76d8561b5b0a7e1c08221031d8ace98" kindref="member">ScalarTimeseries</ref> &gt;</type>
+        <definition>virtual Ptr&lt;const ScalarTimeseries&gt; monopod_drivers::Leg::get_sent_current_target</definition>
+        <argsstring>(const int &amp;motor_index) const</argsstring>
+        <name>get_sent_current_target</name>
+        <reimplements refid="classmonopod__drivers_1_1LegInterface_1a81929f53cf334b2cdd13837b4426a79c">get_sent_current_target</reimplements>
+        <param>
+          <type>const int &amp;</type>
+          <declname>motor_index</declname>
+        </param>
+        <briefdescription>
+<para>Get the last sent target current. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">motor_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>designate the motor from which we want the data from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ptr&lt;const ScalarTimeseries&gt; is the list of the lasts time stamped acquiered. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" line="186" column="17" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="186" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1a1a9538f618cb160ce35b64b90e7d2d11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::Leg::set_current_target</definition>
+        <argsstring>(const double &amp;current_target, const int &amp;motor_index)</argsstring>
+        <name>set_current_target</name>
+        <reimplements refid="classmonopod__drivers_1_1LegInterface_1aad16328d72584df2a1199fa494180c58">set_current_target</reimplements>
+        <param>
+          <type>const double &amp;</type>
+          <declname>current_target</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>motor_index</declname>
+        </param>
+        <briefdescription>
+<para>setters ================================================================ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" line="193" column="18" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="193" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1a37a24b9951626e9970e5666435b86fa8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::Leg::send_if_input_changed</definition>
+        <argsstring>()</argsstring>
+        <name>send_if_input_changed</name>
+        <reimplements refid="classmonopod__drivers_1_1LegInterface_1ae8bec5d889370df3cbe89c8e9a843ae3">send_if_input_changed</reimplements>
+        <briefdescription>
+<para>sender ================================================================= </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" line="200" column="18" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="200" bodyend="204"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The leg class is the implementation of the <ref refid="classmonopod__drivers_1_1LegInterface" kindref="compound">LegInterface</ref>. This is the decalartion and the definition of the class as it is very simple. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>monopod_drivers::Leg</label>
+        <link refid="classmonopod__drivers_1_1Leg"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>monopod_drivers::LegInterface</label>
+        <link refid="classmonopod__drivers_1_1LegInterface"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>std::array&lt; std::shared_ptr&lt; blmc_drivers::SafeMotor &gt;, 2 &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>monopod_drivers::Leg</label>
+        <link refid="classmonopod__drivers_1_1Leg"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>motors_</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>blmc_drivers::Motor</label>
+        <link refid="classblmc__drivers_1_1Motor"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>blmc_drivers::DeviceInterface</label>
+        <link refid="classblmc__drivers_1_1DeviceInterface"/>
+      </node>
+      <node id="2">
+        <label>monopod_drivers::LegInterface</label>
+        <link refid="classmonopod__drivers_1_1LegInterface"/>
+      </node>
+      <node id="4">
+        <label>std::shared_ptr&lt; blmc_drivers::SafeMotor &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>blmc_drivers::MotorInterface</label>
+        <link refid="classblmc__drivers_1_1MotorInterface"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>blmc_drivers::SafeMotor</label>
+        <link refid="classblmc__drivers_1_1SafeMotor"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" line="141" column="1" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="140" bodyend="213"/>
+    <listofallmembers>
+      <member refid="classmonopod__drivers_1_1LegInterface_1ac2c4718f8cb3e383bcee3c78596a60e2a173269c7ebde2147b5be454d38354015" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>current</name></member>
+      <member refid="classmonopod__drivers_1_1LegInterface_1ac2c4718f8cb3e383bcee3c78596a60e2abcbeeee4878b62e001da92003209323f" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>encoder_index</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1adf6548bfc1450ab0237fe467fe35c4e0" prot="public" virt="virtual"><scope>monopod_drivers::Leg</scope><name>get_current_target</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1a7d03ca429b2a741a89d88bf0f6273ed6" prot="public" virt="virtual"><scope>monopod_drivers::Leg</scope><name>get_measurement</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1ab4a79dc1c5e7f1f6379b318e646993bb" prot="public" virt="virtual"><scope>monopod_drivers::Leg</scope><name>get_sent_current_target</name></member>
+      <member refid="classmonopod__drivers_1_1LegInterface_1a4946ce264b48b90ee2425e42393bbaeea138c8ed1d01925c5a81279ceeb53ed2d" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>hip</name></member>
+      <member refid="classmonopod__drivers_1_1LegInterface_1a4946ce264b48b90ee2425e42393bbaeeaac53a06c36f9e6cc9f9826e3fe5d4fdf" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>knee</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1a55f8a83fa177de4b2ea822b944266c33" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>Leg</name></member>
+      <member refid="classmonopod__drivers_1_1LegInterface_1a4946ce264b48b90ee2425e42393bbaeeaff6f2b266ddd96ff87c26b89111208bc" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>motor_count</name></member>
+      <member refid="classmonopod__drivers_1_1LegInterface_1ac2c4718f8cb3e383bcee3c78596a60e2abd6052e31bb187f1cdc3ae4bed402f34" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>motor_measurement_count</name></member>
+      <member refid="classmonopod__drivers_1_1LegInterface_1a4946ce264b48b90ee2425e42393bbaee" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>MotorIndexing</name></member>
+      <member refid="classmonopod__drivers_1_1LegInterface_1ac2c4718f8cb3e383bcee3c78596a60e2" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>MotorMeasurementIndexing</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1a33f02259d43fe35a0e0e534d6659c484" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>motors_</name></member>
+      <member refid="classmonopod__drivers_1_1LegInterface_1ac2c4718f8cb3e383bcee3c78596a60e2ac5f21992a674d3f6eea2891b8d82ca4e" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>position</name></member>
+      <member refid="classmonopod__drivers_1_1LegInterface_1a36fa908a00559c94cbdb4aa4abf7540a" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>Ptr</name></member>
+      <member refid="classmonopod__drivers_1_1LegInterface_1ad76d8561b5b0a7e1c08221031d8ace98" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>ScalarTimeseries</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1a37a24b9951626e9970e5666435b86fa8" prot="public" virt="virtual"><scope>monopod_drivers::Leg</scope><name>send_if_input_changed</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1a1a9538f618cb160ce35b64b90e7d2d11" prot="public" virt="virtual"><scope>monopod_drivers::Leg</scope><name>set_current_target</name></member>
+      <member refid="classmonopod__drivers_1_1LegInterface_1ac2c4718f8cb3e383bcee3c78596a60e2acf092fb3d87afb2c3ea44904f1e59461" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>velocity</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1ad23bba917d977d2e94004ffdd3c89254" prot="public" virt="virtual"><scope>monopod_drivers::Leg</scope><name>~Leg</name></member>
+      <member refid="classmonopod__drivers_1_1LegInterface_1a48453c5c0bff275dcdb3e19e2b94e4d4" prot="public" virt="virtual"><scope>monopod_drivers::Leg</scope><name>~LegInterface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

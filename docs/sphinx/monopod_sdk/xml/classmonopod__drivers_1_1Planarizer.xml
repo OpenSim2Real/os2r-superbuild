@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classmonopod__drivers_1_1Planarizer" kind="class" language="C++" prot="public">
+    <compoundname>monopod_drivers::Planarizer</compoundname>
+    <innerclass refid="structmonopod__drivers_1_1Planarizer_1_1ReturnValueStatus" prot="public">monopod_drivers::Planarizer::ReturnValueStatus</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classmonopod__drivers_1_1Planarizer_1a8152edbb0f7466d783a517c406a1b79b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>PlanarizerIndexing</name>
+        <enumvalue id="classmonopod__drivers_1_1Planarizer_1a8152edbb0f7466d783a517c406a1b79ba1df514fbb1f4cc55ebe35a7e01aadc16" prot="public">
+          <name>boom_connector</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1Planarizer_1a8152edbb0f7466d783a517c406a1b79ba1fb3c12948342087e4d4319698800965" prot="public">
+          <name>boom_yaw</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1Planarizer_1a8152edbb0f7466d783a517c406a1b79ba4683634968e2aaf3a6581b41126548b1" prot="public">
+          <name>boom_pitch</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/planarizer.hpp" line="33" column="1" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/planarizer.hpp" bodystart="32" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classmonopod__drivers_1_1Planarizer_1a5a4dbb2d9e02b77aa5be823fe71a9134" prot="public" static="no">
+        <type>time_series::TimeSeries&lt; double &gt;</type>
+        <definition>typedef time_series::TimeSeries&lt;double&gt; monopod_drivers::Planarizer::ScalarTimeseries</definition>
+        <argsstring></argsstring>
+        <name>ScalarTimeseries</name>
+        <briefdescription>
+<para>ScalarTimeseries is a simple shortcut for more intelligible code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/planarizer.hpp" line="15" column="41" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/planarizer.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classmonopod__drivers_1_1Planarizer_1a80dad3b62d61c9123b4e216cac00bc53" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; Type &gt;</type>
+        <definition>using monopod_drivers::Planarizer::Ptr =  std::shared_ptr&lt;Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>Ptr</name>
+        <briefdescription>
+<para>This is a shortcut for creating shared pointer in a simpler writing expression. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the template parameter of the shared pointer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/planarizer.hpp" line="24" column="9" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/planarizer.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Planarizer_1a2f6fdebe8a1d36999b09949d81b7334e" prot="private" static="no" mutable="no">
+        <type>std::array&lt; std::shared_ptr&lt; <ref refid="classmonopod__drivers_1_1EncoderInterface" kindref="compound">EncoderInterface</ref> &gt;, 3 &gt;</type>
+        <definition>std::array&lt;std::shared_ptr&lt;EncoderInterface&gt;, 3&gt; monopod_drivers::Planarizer::encoders_</definition>
+        <argsstring></argsstring>
+        <name>encoders_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/planarizer.hpp" line="61" column="20" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/planarizer.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1Planarizer_1a1ab339d10b9155d3aa9ec77bc0189744" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>monopod_drivers::Planarizer::Planarizer</definition>
+        <argsstring>(std::shared_ptr&lt; EncoderInterface &gt; encoder_bc, std::shared_ptr&lt; EncoderInterface &gt; encoder_by, std::shared_ptr&lt; EncoderInterface &gt; encoder_bp)</argsstring>
+        <name>Planarizer</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classmonopod__drivers_1_1EncoderInterface" kindref="compound">EncoderInterface</ref> &gt;</type>
+          <declname>encoder_bc</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classmonopod__drivers_1_1EncoderInterface" kindref="compound">EncoderInterface</ref> &gt;</type>
+          <declname>encoder_by</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classmonopod__drivers_1_1EncoderInterface" kindref="compound">EncoderInterface</ref> &gt;</type>
+          <declname>encoder_bp</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classmonopod__drivers_1_1Planarizer" kindref="compound">Planarizer</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>encoder_bc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boom connector encoder </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encoder_by</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boom yaw encoder </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encoder_bp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boom pitch encoder </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/planarizer.hpp" line="46" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Planarizer_1a0e947acfbba52248467d2f6a8da4200d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>monopod_drivers::Planarizer::~Planarizer</definition>
+        <argsstring>()</argsstring>
+        <name>~Planarizer</name>
+        <briefdescription>
+<para>Destroy the <ref refid="classmonopod__drivers_1_1Planarizer" kindref="compound">Planarizer</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/planarizer.hpp" line="53" column="9" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/planarizer.hpp" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Planarizer_1afcb46764d344bdbd683f040c34e8bda6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmonopod__drivers_1_1Planarizer_1a80dad3b62d61c9123b4e216cac00bc53" kindref="member">Ptr</ref>&lt; const <ref refid="classmonopod__drivers_1_1Planarizer_1a5a4dbb2d9e02b77aa5be823fe71a9134" kindref="member">ScalarTimeseries</ref> &gt;</type>
+        <definition>Ptr&lt;const ScalarTimeseries&gt; monopod_drivers::Planarizer::get_measurement</definition>
+        <argsstring>(const int &amp;joint_index, const int &amp;measurement_index) const</argsstring>
+        <name>get_measurement</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>joint_index</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>measurement_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Getter </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/planarizer.hpp" line="58" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/planarizer.hpp" line="10" column="1" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/planarizer.hpp" bodystart="9" bodyend="64"/>
+    <listofallmembers>
+      <member refid="classmonopod__drivers_1_1Planarizer_1a8152edbb0f7466d783a517c406a1b79ba1df514fbb1f4cc55ebe35a7e01aadc16" prot="public" virt="non-virtual"><scope>monopod_drivers::Planarizer</scope><name>boom_connector</name></member>
+      <member refid="classmonopod__drivers_1_1Planarizer_1a8152edbb0f7466d783a517c406a1b79ba4683634968e2aaf3a6581b41126548b1" prot="public" virt="non-virtual"><scope>monopod_drivers::Planarizer</scope><name>boom_pitch</name></member>
+      <member refid="classmonopod__drivers_1_1Planarizer_1a8152edbb0f7466d783a517c406a1b79ba1fb3c12948342087e4d4319698800965" prot="public" virt="non-virtual"><scope>monopod_drivers::Planarizer</scope><name>boom_yaw</name></member>
+      <member refid="classmonopod__drivers_1_1Planarizer_1a2f6fdebe8a1d36999b09949d81b7334e" prot="private" virt="non-virtual"><scope>monopod_drivers::Planarizer</scope><name>encoders_</name></member>
+      <member refid="classmonopod__drivers_1_1Planarizer_1afcb46764d344bdbd683f040c34e8bda6" prot="public" virt="non-virtual"><scope>monopod_drivers::Planarizer</scope><name>get_measurement</name></member>
+      <member refid="classmonopod__drivers_1_1Planarizer_1a1ab339d10b9155d3aa9ec77bc0189744" prot="public" virt="non-virtual"><scope>monopod_drivers::Planarizer</scope><name>Planarizer</name></member>
+      <member refid="classmonopod__drivers_1_1Planarizer_1a8152edbb0f7466d783a517c406a1b79b" prot="public" virt="non-virtual"><scope>monopod_drivers::Planarizer</scope><name>PlanarizerIndexing</name></member>
+      <member refid="classmonopod__drivers_1_1Planarizer_1a80dad3b62d61c9123b4e216cac00bc53" prot="public" virt="non-virtual"><scope>monopod_drivers::Planarizer</scope><name>Ptr</name></member>
+      <member refid="classmonopod__drivers_1_1Planarizer_1a5a4dbb2d9e02b77aa5be823fe71a9134" prot="public" virt="non-virtual"><scope>monopod_drivers::Planarizer</scope><name>ScalarTimeseries</name></member>
+      <member refid="classmonopod__drivers_1_1Planarizer_1a0e947acfbba52248467d2f6a8da4200d" prot="public" virt="non-virtual"><scope>monopod_drivers::Planarizer</scope><name>~Planarizer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
