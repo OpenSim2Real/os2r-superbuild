@@ -4,4 +4,9 @@
 Open Sim2Real
 *************
 
-/tmp/monopod_sdk/index
+.. toctree::
+   :hidden:
+   :maxdepth: 2
+   :caption: Monopod Sdk:
+
+   tmp/monopod_sdk/index
