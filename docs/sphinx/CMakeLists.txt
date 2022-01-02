@@ -57,5 +57,9 @@ add_custom_command(
     COMMENT "Copying html redirect to html folder")
 
 add_custom_command(TARGET sphinx POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E remove_directory "${SUB_PROJECTS_BUILD_DIR}/src/monopod_sdk/html/sphinx_build" ${MONOPOD_SDK_SPHINX}
+    COMMAND ${CMAKE_COMMAND} -E remove_directory  ${MONOPOD_SDK_SPHINX}
     COMMENT "Deleting monopod_sdk sphinx build")
+
+add_custom_command(TARGET sphinx POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E remove_directory ${SCENARIO_MONOPOD_SPHINX}
+    COMMENT "Deleting scenario_monopod sphinx build")
