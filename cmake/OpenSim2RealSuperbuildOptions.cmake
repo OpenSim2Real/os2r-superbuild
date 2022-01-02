@@ -7,6 +7,7 @@ option(YCM_DISABLE_SYSTEM_PACKAGES "Disable use of all the system installed pack
 option(OPENSIM2REAL_ENABLE_MONOPODSDK "Enable compilation of monopod_sdk." FALSE)
 option(OPENSIM2REAL_ENABLE_SCENARIO "Enable compilation of scenario." FALSE)
 option(OPENSIM2REAL_ENABLE_GYMIGNITION "Install gym_ignition python module if scenario is enabled. Requires python to be enabled." TRUE)
+option(OPENSIM2REAL_ENABLE_GYMOS2R "Install gym_os2r python module if scenario/gym-ignition is enabled. Requires python to be enabled." FALSE)
 option(OPENSIM2REAL_ENABLE_ALL "Enable compilation of scenario." FALSE)
 
 option(OPENSIM2REAL_USES_PYTHON "Enable compilation of software that depend on Python" TRUE)

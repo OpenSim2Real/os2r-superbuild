@@ -13,11 +13,11 @@ Open Sim2Real
    :maxdepth: 4
    :caption: Monopod Sdk
 
-   monopod_sdk_docs/index0
+   monopod_sdk_index
 
 .. toctree::
   :hidden:
   :maxdepth: 4
   :caption: Scenario Monopod
 
-  scenario_monopod_docs/index0
+  scenario_monopod_index

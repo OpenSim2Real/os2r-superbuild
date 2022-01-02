@@ -19,12 +19,12 @@ set(MONOPOD_SDK_SPHINX "${SPHINX_SOURCE}/monopod_sdk_docs")
 # Copy over each projects doc source
 add_custom_target(monopod_sdk_sphinx ALL
     DEPENDS monopod_sdk
-    COMMAND ${CMAKE_COMMAND} -E copy_directory "${SUB_PROJECTS_BUILD_DIR}/src/monopod_sdk/html/sphinx_build" ${MONOPOD_SDK_SPHINX}
+    COMMAND ${CMAKE_COMMAND} -E copy_directory "${SUB_PROJECTS_BUILD_DIR}/src/monopod_sdk/html/sphinx_build" ${SPHINX_SOURCE}
     COMMENT "Copying monopod_sdk sphinx build")
 
 add_custom_target(scenario_monopod_sphinx ALL
     DEPENDS scenario_monopod
-    COMMAND ${CMAKE_COMMAND} -E copy_directory "${SUB_PROJECTS_BUILD_DIR}/src/scenario_monopod/html/sphinx_build" ${SCENARIO_MONOPOD_SPHINX}
+    COMMAND ${CMAKE_COMMAND} -E copy_directory "${SUB_PROJECTS_BUILD_DIR}/src/scenario_monopod/html/sphinx_build" ${SPHINX_SOURCE}
     COMMENT "Copying scenario_monopod sphinx build")
 
 # Sphinx build command
