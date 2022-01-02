@@ -23,6 +23,6 @@ Monopod Sdk
   :maxdepth: 2
   :caption: Blmc Drivers:
 
-   blmc_drivers_docs/intro
-   blmc_drivers_docs/homing
-   blmc_drivers_docs/blmc_drivers
+  blmc_drivers_docs/intro
+  blmc_drivers_docs/homing
+  blmc_drivers_docs/blmc_drivers
