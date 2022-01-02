@@ -109,7 +109,7 @@ if(OPENSIM2REAL_ENABLE_SCENARIO OR OPENSIM2REAL_ENABLE_ALL)
   endif()
   find_or_build_package(iDynTree)
   find_or_build_package(gym-ignition)
-  # find_or_build_package(scenario_monopod)
+  find_or_build_package(scenario_monopod)
   if(OPENSIM2REAL_USES_PYTHON)
     # Install the egg-info files
     # iDynTree
