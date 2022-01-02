@@ -13,12 +13,24 @@ set(SPHINX_CMD export PYTHONPATH="${PYTHONPATHS}:$ENV{PYTHONPATH}" &&)
 set(SPHINX_BUILD ${CMAKE_BINARY_DIR}/html)
 set(SPHINX_SOURCE ${CMAKE_CURRENT_SOURCE_DIR})
 
+set(SCENARIO_MONOPOD_SPHINX "${SPHINX_SOURCE}/scenario_monopod")
+set(MONOPOD_SDK_SPHINX "${SPHINX_SOURCE}/monopod_sdk")
+
+# Copy over each projects doc source
+execute_process(COMMAND ${CMAKE_COMMAND} -E copy_directory
+"${SUB_PROJECTS_BUILD_DIR}/scenario_monopod/html/sphinx_build" SCENARIO_MONOPOD_SPHINX)
+
+execute_process(COMMAND ${CMAKE_COMMAND} -E copy_directory
+"${SUB_PROJECTS_BUILD_DIR}/monopod_sdk/html/sphinx_build" MONOPOD_SDK_SPHINX)
+
+
 # Sphinx build command
 list(APPEND SPHINX_CMD
     ${SPHINX_MULTIVERSION_EXECUTABLE}
     ${SPHINX_SOURCE} ${SPHINX_BUILD}
-    -D breathe_projects.scenario="${SUB_PROJECTS_BUILD_DIR}/scenario_monopod/html/sphinx_build/xml"
-    -D breathe_projects.monopod_sdk="${SUB_PROJECTS_BUILD_DIR}/monopod_sdk/html/sphinx_build/xml")
+    -D breathe_projects.scenario="${SCENARIO_MONOPOD_SPHINX}/xml"
+    -D breathe_projects.monopod_sdk="${MONOPOD_SDK_SPHINX}/xml"
+)
 
 # Generate the website
 add_custom_target(sphinx ALL

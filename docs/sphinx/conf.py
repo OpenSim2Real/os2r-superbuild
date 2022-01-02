@@ -17,7 +17,7 @@
 # -- Project information -----------------------------------------------------
 from datetime import datetime
 
-project = "scenario"
+project = "overlord_docs"
 copyright = f"{datetime.now().year}, University of British Columbia"
 author = "Dawson Horvath"
 
@@ -96,7 +96,7 @@ todo_include_todos = True
 
 # -- Options for breathe extension ----------------------------------------------
 
-breathe_default_project = "scenario"
+breathe_default_project = "overlord_docs"
 
 # -- Options for sphinx_multiversion extension ----------------------------------
 
@@ -105,8 +105,8 @@ smv_prefer_remote_refs = False
 # smv_remote_whitelist = r"^(origin|upstream)$"
 smv_remote_whitelist = None
 smv_tag_whitelist = r"^dummy"
-smv_branch_whitelist = r"^(docs/.*)$"
-# smv_branch_whitelist = r"^(main|devel|docs/.*)$"
+# smv_branch_whitelist = r"^(main|devel|docs)$"
+smv_branch_whitelist = r"^(docs)$"
 smv_released_pattern = r"^tags/.*$"
 smv_outputdir_format = "{ref.name}"
 
