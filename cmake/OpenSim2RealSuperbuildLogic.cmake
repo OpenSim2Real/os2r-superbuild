@@ -150,13 +150,8 @@ if(OPENSIM2REAL_ENABLE_SCENARIO OR OPENSIM2REAL_ENABLE_ALL)
     if(OPENSIM2REAL_ENABLE_GYMOS2R OR OPENSIM2REAL_ENABLE_ALL)
       # gym_ignition
       find_or_build_package(gym-os2r)
-      add_custom_command(TARGET gym-os2r POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_directory
-        ${PROJECT_SOURCE_DIR}/src/gym-os2r/gym_os2r ${EGG_BASE_PATH_SCENARIO}/gym_os2r
-        COMMENT "Moving gym-os2r into build python directory ${EGG_BASE_PATH_SCENARIO}..."
-      )
 
-      add_custom_command(TARGET gym-os2r POST_BUILD
+      add_custom_command(TARGET gym-os2r PRE_BUILD
         COMMAND ${CMAKE_COMMAND} -E env PYTHONPATH=${PYTHONPATHS} ${Python3_EXECUTABLE}
         setup.py egg_info --egg-base=${EGG_BASE_PATH_SCENARIO}
         WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/src/gym-os2r

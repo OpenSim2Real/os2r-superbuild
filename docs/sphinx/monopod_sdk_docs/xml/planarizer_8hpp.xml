@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="planarizer_8hpp" kind="file" language="C++">
+    <compoundname>planarizer.hpp</compoundname>
+    <includes local="no">time_series/time_series.hpp</includes>
+    <includes refid="encoder_8hpp" local="yes">monopod_sdk/monopod_drivers/encoder.hpp</includes>
+    <includedby refid="monopod_8hpp" local="yes">/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>time_series/time_series.hpp</label>
+      </node>
+      <node id="20">
+        <label>net/if.h</label>
+      </node>
+      <node id="6">
+        <label>real_time_tools/timer.hpp</label>
+      </node>
+      <node id="15">
+        <label>stdint.h</label>
+      </node>
+      <node id="31">
+        <label>sys/mman.h</label>
+      </node>
+      <node id="17">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/planarizer.hpp</label>
+        <link refid="planarizer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>real_time_tools/thread.hpp</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="25">
+        <label>linux/can/raw.h</label>
+      </node>
+      <node id="3">
+        <label>monopod_sdk/monopod_drivers/encoder.hpp</label>
+        <link refid="encoder_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>sys/ioctl.h</label>
+      </node>
+      <node id="24">
+        <label>linux/can.h</label>
+      </node>
+      <node id="7">
+        <label>monopod_sdk/blmc_drivers/devices/device_interface.hpp</label>
+        <link refid="device__interface_8hpp"/>
+      </node>
+      <node id="13">
+        <label>real_time_tools/threadsafe/threadsafe_object.hpp</label>
+      </node>
+      <node id="26">
+        <label>limits.h</label>
+      </node>
+      <node id="12">
+        <label>real_time_tools/spinner.hpp</label>
+      </node>
+      <node id="11">
+        <label>real_time_tools/iostream.hpp</label>
+      </node>
+      <node id="28">
+        <label>condition_variable</label>
+      </node>
+      <node id="23">
+        <label>sys/types.h</label>
+      </node>
+      <node id="18">
+        <label>string.h</label>
+      </node>
+      <node id="19">
+        <label>unistd.h</label>
+      </node>
+      <node id="8">
+        <label>monopod_sdk/blmc_drivers/devices/motor_board.hpp</label>
+        <link refid="motor__board_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>sstream</label>
+      </node>
+      <node id="27">
+        <label>iostream</label>
+      </node>
+      <node id="29">
+        <label>mutex</label>
+      </node>
+      <node id="22">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="10">
+        <label>monopod_sdk/blmc_drivers/devices/can_bus.hpp</label>
+        <link refid="can__bus_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>monopod_sdk/blmc_drivers/utils/os_interface.hpp</label>
+        <link refid="os__interface_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/planarizer.hpp</label>
+        <link refid="planarizer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp</label>
+        <link refid="monopod_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classmonopod__drivers_1_1Planarizer" prot="public">monopod_drivers::Planarizer</innerclass>
+    <innerclass refid="structmonopod__drivers_1_1Planarizer_1_1ReturnValueStatus" prot="public">monopod_drivers::Planarizer::ReturnValueStatus</innerclass>
+    <innernamespace refid="namespacemonopod__drivers">monopod_drivers</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time_series/time_series.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;monopod_sdk/monopod_drivers/encoder.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">monopod_drivers</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9" refid="classmonopod__drivers_1_1Planarizer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmonopod__drivers_1_1Planarizer" kindref="compound">Planarizer</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15" refid="classmonopod__drivers_1_1Planarizer_1a5a4dbb2d9e02b77aa5be823fe71a9134" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>time_series::TimeSeries&lt;double&gt;<sp/><ref refid="classmonopod__drivers_1_1Planarizer_1a5a4dbb2d9e02b77aa5be823fe71a9134" kindref="member">ScalarTimeseries</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="24" refid="classmonopod__drivers_1_1Planarizer_1a80dad3b62d61c9123b4e216cac00bc53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1Planarizer_1a80dad3b62d61c9123b4e216cac00bc53" kindref="member">Ptr</ref><sp/>=<sp/>std::shared_ptr&lt;Type&gt;;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="structmonopod__drivers_1_1Planarizer_1_1ReturnValueStatus" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmonopod__drivers_1_1Planarizer_1_1ReturnValueStatus" kindref="compound">ReturnValueStatus</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>valid;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmonopod__drivers_1_1Planarizer_1a80dad3b62d61c9123b4e216cac00bc53" kindref="member">Ptr&lt;ScalarTimeseries&gt;</ref><sp/>value_series;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>PlanarizerIndexing</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boom_connector<sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boom_yaw<sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boom_pitch<sp/>=<sp/>4</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmonopod__drivers_1_1Planarizer_1a1ab339d10b9155d3aa9ec77bc0189744" kindref="member">Planarizer</ref>(std::shared_ptr&lt;EncoderInterface&gt;<sp/>encoder_bc,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;EncoderInterface&gt;<sp/>encoder_by,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;EncoderInterface&gt;<sp/>encoder_bp);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classmonopod__drivers_1_1Planarizer_1a0e947acfbba52248467d2f6a8da4200d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmonopod__drivers_1_1Planarizer_1a0e947acfbba52248467d2f6a8da4200d" kindref="member">~Planarizer</ref>(){};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ptr&lt;const<sp/>ScalarTimeseries&gt;<sp/><ref refid="classmonopod__drivers_1_1Planarizer_1afcb46764d344bdbd683f040c34e8bda6" kindref="member">get_measurement</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;joint_index,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;measurement_index)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::array&lt;std::shared_ptr&lt;EncoderInterface&gt;,<sp/>3&gt;<sp/>encoders_;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>monopod_drivers<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/planarizer.hpp"/>
+  </compounddef>
+</doxygen>

@@ -10,5 +10,5 @@ ycm_ep_helper(gym-os2r TYPE GIT
               COMPONENT gym_os2r
               FOLDER src
               DEPENDS gym-ignition
-              INSTALL_COMMAND ""
+              CMAKE_ARGS -DPYTHON_INSTALL_PREFIX:PATH=${OPENSIM2REAL_SUPERBUILD_PYTHON_INSTALL_DIR}
             )
