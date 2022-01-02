@@ -7,3 +7,17 @@ Open Sim2Real
 .. include:: monopod_sdk_docs/index.rst
 
 .. include:: scenario_monopod_docs/index.rst
+
+.. toctree::
+   :hidden:
+   :maxdepth: 4
+   :caption: Scenario Monopod
+
+   monopod_sdk_docs/index0
+
+.. toctree::
+  :hidden:
+  :maxdepth: 4
+  :caption: Monopod Sdk
+
+  scenario_monopod_docs/index0
