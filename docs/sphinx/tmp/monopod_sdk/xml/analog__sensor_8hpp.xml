@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="analog__sensor_8hpp" kind="file" language="C++">
+    <compoundname>analog_sensor.hpp</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">time_series/time_series.hpp</includes>
+    <includes local="yes">real_time_tools/timer.hpp</includes>
+    <includes refid="device__interface_8hpp" local="yes">monopod_sdk/blmc_drivers/devices/device_interface.hpp</includes>
+    <includes refid="motor__board_8hpp" local="yes">monopod_sdk/blmc_drivers/devices/motor_board.hpp</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>time_series/time_series.hpp</label>
+      </node>
+      <node id="19">
+        <label>net/if.h</label>
+      </node>
+      <node id="5">
+        <label>real_time_tools/timer.hpp</label>
+      </node>
+      <node id="14">
+        <label>stdint.h</label>
+      </node>
+      <node id="30">
+        <label>sys/mman.h</label>
+      </node>
+      <node id="16">
+        <label>stdlib.h</label>
+      </node>
+      <node id="8">
+        <label>real_time_tools/thread.hpp</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="24">
+        <label>linux/can/raw.h</label>
+      </node>
+      <node id="20">
+        <label>sys/ioctl.h</label>
+      </node>
+      <node id="23">
+        <label>linux/can.h</label>
+      </node>
+      <node id="1">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/devices/analog_sensor.hpp</label>
+        <link refid="analog__sensor_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>monopod_sdk/blmc_drivers/devices/device_interface.hpp</label>
+        <link refid="device__interface_8hpp"/>
+      </node>
+      <node id="12">
+        <label>real_time_tools/threadsafe/threadsafe_object.hpp</label>
+      </node>
+      <node id="25">
+        <label>limits.h</label>
+      </node>
+      <node id="11">
+        <label>real_time_tools/spinner.hpp</label>
+      </node>
+      <node id="10">
+        <label>real_time_tools/iostream.hpp</label>
+      </node>
+      <node id="27">
+        <label>condition_variable</label>
+      </node>
+      <node id="22">
+        <label>sys/types.h</label>
+      </node>
+      <node id="17">
+        <label>string.h</label>
+      </node>
+      <node id="18">
+        <label>unistd.h</label>
+      </node>
+      <node id="7">
+        <label>monopod_sdk/blmc_drivers/devices/motor_board.hpp</label>
+        <link refid="motor__board_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>sstream</label>
+      </node>
+      <node id="26">
+        <label>iostream</label>
+      </node>
+      <node id="28">
+        <label>mutex</label>
+      </node>
+      <node id="21">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="9">
+        <label>monopod_sdk/blmc_drivers/devices/can_bus.hpp</label>
+        <link refid="can__bus_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>monopod_sdk/blmc_drivers/utils/os_interface.hpp</label>
+        <link refid="os__interface_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>stdio.h</label>
+      </node>
+      <node id="2">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classblmc__drivers_1_1AnalogSensorInterface" prot="public">blmc_drivers::AnalogSensorInterface</innerclass>
+    <innerclass refid="classblmc__drivers_1_1AnalogSensor" prot="public">blmc_drivers::AnalogSensor</innerclass>
+    <innernamespace refid="namespaceblmc__drivers">blmc_drivers</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>@license License BSD-3-Clause <simplesect kind="copyright"><para>Copyright (c) 2019, New York University and Max Planck Gesellschaft. </para>
+</simplesect>
+<simplesect kind="date"><para>2019-07-11 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time_series/time_series.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;real_time_tools/timer.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="device__interface_8hpp" kindref="compound">monopod_sdk/blmc_drivers/devices/device_interface.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="motor__board_8hpp" kindref="compound">monopod_sdk/blmc_drivers/devices/motor_board.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceblmc__drivers" kindref="compound">blmc_drivers</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26" refid="classblmc__drivers_1_1AnalogSensorInterface" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classblmc__drivers_1_1AnalogSensorInterface" kindref="compound">AnalogSensorInterface</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classblmc__drivers_1_1DeviceInterface" kindref="compound">DeviceInterface</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32" refid="classblmc__drivers_1_1AnalogSensorInterface_1a7aa03d5366b697a69b03d9d1f7aa3a11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>time_series::TimeSeries&lt;double&gt;<sp/><ref refid="classblmc__drivers_1_1AnalogSensorInterface_1a7aa03d5366b697a69b03d9d1f7aa3a11" kindref="member">ScalarTimeseries</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;const<sp/>ScalarTimeseries&gt;<sp/><ref refid="classblmc__drivers_1_1AnalogSensorInterface_1afd694f79c9fec5a35984d468f59f315c" kindref="member">get_measurement</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classblmc__drivers_1_1AnalogSensorInterface_1a809cd9b86ae1cb9119a2ad025163afa9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classblmc__drivers_1_1AnalogSensorInterface_1a809cd9b86ae1cb9119a2ad025163afa9" kindref="member">~AnalogSensorInterface</ref>()</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classblmc__drivers_1_1AnalogSensor" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classblmc__drivers_1_1AnalogSensor" kindref="compound">AnalogSensor</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classblmc__drivers_1_1AnalogSensorInterface" kindref="compound">AnalogSensorInterface</ref></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classblmc__drivers_1_1AnalogSensor_1a3107ba6bba78d46e126ffc74c88f5a69" kindref="member">AnalogSensor</ref>(std::shared_ptr&lt;MotorBoardInterface&gt;<sp/>board,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sensor_id);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;const<sp/>ScalarTimeseries&gt;<sp/><ref refid="classblmc__drivers_1_1AnalogSensor_1a76e51987b9992e2b8e5ac5a074f1ae5a" kindref="member">get_measurement</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;MotorBoardInterface&gt;<sp/>board_;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sensor_id_;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>blmc_drivers</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/devices/analog_sensor.hpp"/>
+  </compounddef>
+</doxygen>

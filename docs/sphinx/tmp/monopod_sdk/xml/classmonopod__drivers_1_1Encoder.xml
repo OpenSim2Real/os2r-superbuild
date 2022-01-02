@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classmonopod__drivers_1_1Encoder" kind="class" language="C++" prot="public">
+    <compoundname>monopod_drivers::Encoder</compoundname>
+    <basecompoundref refid="classmonopod__drivers_1_1EncoderInterface" prot="public" virt="non-virtual">monopod_drivers::EncoderInterface</basecompoundref>
+    <includes refid="encoder_8hpp" local="no">encoder.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Encoder_1a752000ea750811f2529173215c1e386f" prot="protected" static="no" mutable="no">
+        <type><ref refid="classmonopod__drivers_1_1EncoderInterface_1aeb239f3ea52a3f9a9f42d5ead4b6e681" kindref="member">Ptr</ref>&lt; <ref refid="classblmc__drivers_1_1MotorBoardInterface" kindref="compound">blmc_drivers::MotorBoardInterface</ref> &gt;</type>
+        <definition>Ptr&lt;blmc_drivers::MotorBoardInterface&gt; monopod_drivers::Encoder::board_</definition>
+        <argsstring></argsstring>
+        <name>board_</name>
+        <briefdescription>
+<para>The MotorBoard to be used for the communication. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/encoder.hpp" line="117" column="9" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/encoder.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Encoder_1ad646ced8ac82b9ed16a87535f1def2a9" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Encoder::encoder_id_</definition>
+        <argsstring></argsstring>
+        <name>encoder_id_</name>
+        <briefdescription>
+<para>The id of the encoder on the MotorBoard. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/encoder.hpp" line="122" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/encoder.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1Encoder_1a8ca8d10708e358b42129b9ee72969650" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>monopod_drivers::Encoder::Encoder</definition>
+        <argsstring>(Ptr&lt; blmc_drivers::MotorBoardInterface &gt; board, bool encoder_id)</argsstring>
+        <name>Encoder</name>
+        <param>
+          <type><ref refid="classmonopod__drivers_1_1EncoderInterface_1aeb239f3ea52a3f9a9f42d5ead4b6e681" kindref="member">Ptr</ref>&lt; <ref refid="classblmc__drivers_1_1MotorBoardInterface" kindref="compound">blmc_drivers::MotorBoardInterface</ref> &gt;</type>
+          <declname>board</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>encoder_id</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classmonopod__drivers_1_1Encoder" kindref="compound">Encoder</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the MotorBoard to be used. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encoder_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the id of the encoder on the on-board card </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/encoder.hpp" line="89" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Encoder_1ad96f381abf6c705e10d05c855b6f4087" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual monopod_drivers::Encoder::~Encoder</definition>
+        <argsstring>()</argsstring>
+        <name>~Encoder</name>
+        <briefdescription>
+<para>Destroy the Motor object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/encoder.hpp" line="95" column="13" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/encoder.hpp" bodystart="95" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Encoder_1a8ec74bb921d5e12a34bb73b35adfe4e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classmonopod__drivers_1_1EncoderInterface_1aeb239f3ea52a3f9a9f42d5ead4b6e681" kindref="member">Ptr</ref>&lt; const <ref refid="classmonopod__drivers_1_1EncoderInterface_1aac47c9c2c5a218c091d37c76baf3accd" kindref="member">ScalarTimeseries</ref> &gt;</type>
+        <definition>virtual Ptr&lt;const ScalarTimeseries&gt; monopod_drivers::Encoder::get_measurement</definition>
+        <argsstring>(const int &amp;index=0) const</argsstring>
+        <name>get_measurement</name>
+        <reimplements refid="classmonopod__drivers_1_1EncoderInterface_1a02e0739432d039fe2851f12de704436d">get_measurement</reimplements>
+        <param>
+          <type>const int &amp;</type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Get the measurements. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the kind of measurement we are instersted in. see MotorInterface::MeasurementIndex. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ptr&lt;const ScalarTimeseries&gt; The history of the measurement </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/encoder.hpp" line="106" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Encoder_1ac1962689c4db7a3977544d3130610638" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::Encoder::print</definition>
+        <argsstring>() const</argsstring>
+        <name>print</name>
+        <briefdescription>
+<para>Print the status and state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/encoder.hpp" line="111" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class implements the MotorInterface. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>monopod_drivers::EncoderInterface</label>
+        <link refid="classmonopod__drivers_1_1EncoderInterface"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>blmc_drivers::DeviceInterface</label>
+        <link refid="classblmc__drivers_1_1DeviceInterface"/>
+      </node>
+      <node id="1">
+        <label>monopod_drivers::Encoder</label>
+        <link refid="classmonopod__drivers_1_1Encoder"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>monopod_drivers::EncoderInterface</label>
+        <link refid="classmonopod__drivers_1_1EncoderInterface"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>blmc_drivers::DeviceInterface</label>
+        <link refid="classblmc__drivers_1_1DeviceInterface"/>
+      </node>
+      <node id="1">
+        <label>monopod_drivers::Encoder</label>
+        <link refid="classmonopod__drivers_1_1Encoder"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/encoder.hpp" line="81" column="1" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/encoder.hpp" bodystart="80" bodyend="123"/>
+    <listofallmembers>
+      <member refid="classmonopod__drivers_1_1Encoder_1a752000ea750811f2529173215c1e386f" prot="protected" virt="non-virtual"><scope>monopod_drivers::Encoder</scope><name>board_</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderInterface_1a39359993191eb34f0d96f8521bc72f26a70a404afe3d9a44bbfcaf463f782cd18" prot="public" virt="non-virtual"><scope>monopod_drivers::Encoder</scope><name>current</name></member>
+      <member refid="classmonopod__drivers_1_1Encoder_1a8ca8d10708e358b42129b9ee72969650" prot="public" virt="non-virtual"><scope>monopod_drivers::Encoder</scope><name>Encoder</name></member>
+      <member refid="classmonopod__drivers_1_1Encoder_1ad646ced8ac82b9ed16a87535f1def2a9" prot="protected" virt="non-virtual"><scope>monopod_drivers::Encoder</scope><name>encoder_id_</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderInterface_1a39359993191eb34f0d96f8521bc72f26ad995f4c8d12f30aa87578ee0605f959a" prot="public" virt="non-virtual"><scope>monopod_drivers::Encoder</scope><name>encoder_index</name></member>
+      <member refid="classmonopod__drivers_1_1Encoder_1a8ec74bb921d5e12a34bb73b35adfe4e9" prot="public" virt="virtual"><scope>monopod_drivers::Encoder</scope><name>get_measurement</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderInterface_1a39359993191eb34f0d96f8521bc72f26a8daba71ad0f36d692837ce845c7f99a8" prot="public" virt="non-virtual"><scope>monopod_drivers::Encoder</scope><name>measurement_count</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderInterface_1a39359993191eb34f0d96f8521bc72f26" prot="public" virt="non-virtual"><scope>monopod_drivers::Encoder</scope><name>MeasurementIndex</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderInterface_1a39359993191eb34f0d96f8521bc72f26a116d5a648be0afb37dc88a3182c60f9a" prot="public" virt="non-virtual"><scope>monopod_drivers::Encoder</scope><name>position</name></member>
+      <member refid="classmonopod__drivers_1_1Encoder_1ac1962689c4db7a3977544d3130610638" prot="public" virt="virtual"><scope>monopod_drivers::Encoder</scope><name>print</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderInterface_1aeb239f3ea52a3f9a9f42d5ead4b6e681" prot="public" virt="non-virtual"><scope>monopod_drivers::Encoder</scope><name>Ptr</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderInterface_1aac47c9c2c5a218c091d37c76baf3accd" prot="public" virt="non-virtual"><scope>monopod_drivers::Encoder</scope><name>ScalarTimeseries</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderInterface_1a39359993191eb34f0d96f8521bc72f26aa99ad43d6db1e0d9d72c4e2b7e5143dc" prot="public" virt="non-virtual"><scope>monopod_drivers::Encoder</scope><name>velocity</name></member>
+      <member refid="classmonopod__drivers_1_1Encoder_1ad96f381abf6c705e10d05c855b6f4087" prot="public" virt="virtual"><scope>monopod_drivers::Encoder</scope><name>~Encoder</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderInterface_1a17e64972b030e597d92f2a8163ec50cf" prot="public" virt="virtual"><scope>monopod_drivers::Encoder</scope><name>~EncoderInterface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

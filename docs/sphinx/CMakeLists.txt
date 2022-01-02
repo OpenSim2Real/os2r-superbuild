@@ -13,8 +13,8 @@ set(SPHINX_CMD export PYTHONPATH="${PYTHONPATHS}:$ENV{PYTHONPATH}" &&)
 set(SPHINX_BUILD ${CMAKE_BINARY_DIR}/html)
 set(SPHINX_SOURCE ${CMAKE_CURRENT_SOURCE_DIR})
 
-set(SCENARIO_MONOPOD_SPHINX "${SPHINX_SOURCE}/tmp/scenario_monopod")
-set(MONOPOD_SDK_SPHINX "${SPHINX_SOURCE}/tmp/monopod_sdk")
+set(SCENARIO_MONOPOD_SPHINX "${SPHINX_SOURCE}/scenario_monopod")
+set(MONOPOD_SDK_SPHINX "${SPHINX_SOURCE}/monopod_sdk")
 
 # Copy over each projects doc source
 
@@ -56,7 +56,6 @@ add_custom_command(
     COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_SOURCE_DIR}/index.html" "${SPHINX_BUILD}"
     COMMENT "Copying html redirect to html folder")
 
-# add_custom_command(
-#     TARGET sphinx POST_BUILD
-#     COMMAND ${CMAKE_COMMAND} -E remove_directory "${SUB_PROJECTS_BUILD_DIR}/src/monopod_sdk/html/sphinx_build" "${SPHINX_SOURCE}/tmp"
-#     COMMENT "Deleting tmp sphinx build")
+add_custom_command(TARGET sphinx POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E remove_directory "${SUB_PROJECTS_BUILD_DIR}/src/monopod_sdk/html/sphinx_build" ${MONOPOD_SDK_SPHINX}
+    COMMENT "Deleting monopod_sdk sphinx build")
