@@ -28,6 +28,7 @@ if(OPENSIM2REAL_USES_PYTHON)
   message(STATUS "OPENSIM2REAL_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH: ${OPENSIM2REAL_SUPERBUILD_PYTHON_INSTALL_DIR_SETUP_SH}")
 
 endif()
+
 find_or_build_package(mpi_cmake_modules)
 find_or_build_package(real_time_tools)
 find_or_build_package(signal_handler)
@@ -136,27 +137,28 @@ if(OPENSIM2REAL_ENABLE_SCENARIO OR OPENSIM2REAL_ENABLE_ALL)
       add_custom_target(gym-ignition_move ALL DEPENDS gym-ignition
         COMMAND ${CMAKE_COMMAND} -E copy_directory
         ${PROJECT_SOURCE_DIR}/src/gym-ignition/python/gym_ignition ${EGG_BASE_PATH_SCENARIO}/gym_ignition
-        COMMENT "Moving gym-ignition into build python directory ${EGG_BASE_PATH_SCENARIO}...")
+        COMMENT "Moving gym-ignition into build python directory ${EGG_BASE_PATH_SCENARIO}..."
+      )
 
       add_custom_command(TARGET gym-ignition POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E env PYTHONPATH=${PYTHONPATHS} ${Python3_EXECUTABLE}
         setup.py egg_info --egg-base=${EGG_BASE_PATH_SCENARIO}
-        # COMMAND ${Python3_EXECUTABLE} -m pip install -e .
         WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/src/gym-ignition
         COMMENT "Installing egg files for gym-ignition..."
       )
+
     endif()
 
     if(OPENSIM2REAL_ENABLE_GYMOS2R OR OPENSIM2REAL_ENABLE_ALL)
-      # gym_ignition
-      find_or_build_package(gym-os2r)
-
-      add_custom_command(TARGET gym-os2r POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E env PYTHONPATH=${PYTHONPATHS} ${Python3_EXECUTABLE}
-        setup.py egg_info --egg-base=${EGG_BASE_PATH_SCENARIO}
-        WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/src/gym-os2r
-        COMMENT "Installing egg files for gym-os2r..."
-      )
+      # # gym_ignition
+      # find_or_build_package(gym-os2r)
+      #
+      # add_custom_command(TARGET gym-os2r POST_BUILD
+      #   COMMAND ${CMAKE_COMMAND} -E env PYTHONPATH=${PYTHONPATHS} ${Python3_EXECUTABLE}
+      #   setup.py egg_info --egg-base=${EGG_BASE_PATH_SCENARIO}
+      #   WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/src/gym-os2r
+      #   COMMENT "Installing egg files for gym-os2r..."
+      # )
     endif()
   endif()
 endif()
