@@ -4,6 +4,8 @@
 Open Sim2Real
 *************
 
+.. include:: ./monopod_sdk/index
+
 .. toctree::
    :hidden:
    :maxdepth: 2
