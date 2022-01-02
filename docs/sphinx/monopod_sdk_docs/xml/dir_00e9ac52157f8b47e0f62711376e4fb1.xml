@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_00e9ac52157f8b47e0f62711376e4fb1" kind="dir">
+    <compoundname>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers</compoundname>
+    <innerdir refid="dir_2ac94ae005b32fb86a69b3d452a71b89">/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/devices</innerdir>
+    <innerdir refid="dir_6851bcda45acfc2e72afed48180266f9">/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/utils</innerdir>
+    <innerfile refid="blmc__joint__module_8hpp">blmc_joint_module.hpp</innerfile>
+    <innerfile refid="serial__reader_8hpp">serial_reader.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/"/>
+  </compounddef>
+</doxygen>

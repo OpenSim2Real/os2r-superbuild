@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceblmc__drivers" kind="namespace" language="C++">
+    <compoundname>blmc_drivers</compoundname>
+    <innerclass refid="classblmc__drivers_1_1AnalogSensor" prot="public">blmc_drivers::AnalogSensor</innerclass>
+    <innerclass refid="classblmc__drivers_1_1AnalogSensorInterface" prot="public">blmc_drivers::AnalogSensorInterface</innerclass>
+    <innerclass refid="classblmc__drivers_1_1BlmcJointModule" prot="public">blmc_drivers::BlmcJointModule</innerclass>
+    <innerclass refid="classblmc__drivers_1_1BlmcJointModules" prot="public">blmc_drivers::BlmcJointModules</innerclass>
+    <innerclass refid="classblmc__drivers_1_1CanBus" prot="public">blmc_drivers::CanBus</innerclass>
+    <innerclass refid="classblmc__drivers_1_1CanBusConnection" prot="public">blmc_drivers::CanBusConnection</innerclass>
+    <innerclass refid="classblmc__drivers_1_1CanBusFrame" prot="public">blmc_drivers::CanBusFrame</innerclass>
+    <innerclass refid="classblmc__drivers_1_1CanBusInterface" prot="public">blmc_drivers::CanBusInterface</innerclass>
+    <innerclass refid="classblmc__drivers_1_1CanBusMotorBoard" prot="public">blmc_drivers::CanBusMotorBoard</innerclass>
+    <innerclass refid="classblmc__drivers_1_1DeviceInterface" prot="public">blmc_drivers::DeviceInterface</innerclass>
+    <innerclass refid="structblmc__drivers_1_1HomingState" prot="public">blmc_drivers::HomingState</innerclass>
+    <innerclass refid="classblmc__drivers_1_1Motor" prot="public">blmc_drivers::Motor</innerclass>
+    <innerclass refid="classblmc__drivers_1_1MotorBoardCommand" prot="public">blmc_drivers::MotorBoardCommand</innerclass>
+    <innerclass refid="classblmc__drivers_1_1MotorBoardInterface" prot="public">blmc_drivers::MotorBoardInterface</innerclass>
+    <innerclass refid="classblmc__drivers_1_1MotorBoardStatus" prot="public">blmc_drivers::MotorBoardStatus</innerclass>
+    <innerclass refid="classblmc__drivers_1_1MotorInterface" prot="public">blmc_drivers::MotorInterface</innerclass>
+    <innerclass refid="classblmc__drivers_1_1Polynome" prot="public">blmc_drivers::Polynome</innerclass>
+    <innerclass refid="classblmc__drivers_1_1SafeMotor" prot="public">blmc_drivers::SafeMotor</innerclass>
+    <innerclass refid="classblmc__drivers_1_1SerialReader" prot="public">blmc_drivers::SerialReader</innerclass>
+    <innerclass refid="classblmc__drivers_1_1TimePolynome" prot="public">blmc_drivers::TimePolynome</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceblmc__drivers_1a11758ee4f3b1c7ddaac64308b143346b" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>HomingReturnCode</name>
+        <enumvalue id="namespaceblmc__drivers_1a11758ee4f3b1c7ddaac64308b143346ba02de9649e258d1dd94056e676061e969" prot="public">
+          <name>NOT_INITIALIZED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Homing was not initialized and can therefore not be performed. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceblmc__drivers_1a11758ee4f3b1c7ddaac64308b143346ba43491564ebcfd38568918efbd6e840fd" prot="public">
+          <name>RUNNING</name>
+          <briefdescription>
+<para>Homing is currently running. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceblmc__drivers_1a11758ee4f3b1c7ddaac64308b143346bafd9f6519d3f45276829fe74eb2c4bb85" prot="public">
+          <name>SUCCEEDED</name>
+          <briefdescription>
+<para>Homing is succeeded. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceblmc__drivers_1a11758ee4f3b1c7ddaac64308b143346bab9e14d9b2886bcff408b85aefa780419" prot="public">
+          <name>FAILED</name>
+          <briefdescription>
+<para>Homing failed. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Possible return values of the homing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="32" column="1" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="31" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceblmc__drivers_1a38568fb9695f9b7dd36a3d57b01adc24" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>GoToReturnCode</name>
+        <enumvalue id="namespaceblmc__drivers_1a38568fb9695f9b7dd36a3d57b01adc24a43491564ebcfd38568918efbd6e840fd" prot="public">
+          <name>RUNNING</name>
+          <briefdescription>
+<para>GoTo is currently running. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceblmc__drivers_1a38568fb9695f9b7dd36a3d57b01adc24afd9f6519d3f45276829fe74eb2c4bb85" prot="public">
+          <name>SUCCEEDED</name>
+          <briefdescription>
+<para>Position has been reached succeeded. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceblmc__drivers_1a38568fb9695f9b7dd36a3d57b01adc24ab9e14d9b2886bcff408b85aefa780419" prot="public">
+          <name>FAILED</name>
+          <briefdescription>
+<para>Robot is stuck(hit an obstacle) before reaching its final position. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Possible return values of the go_to. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="47" column="1" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="46" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceblmc__drivers_1a2b12ded3c170597eb7c4d2d232f650a6" prot="public" static="no">
+        <type><ref refid="classblmc__drivers_1_1MotorInterface_1a35c1217dd295078c67bacc2cba08ab33" kindref="member">blmc_drivers::MotorInterface::MeasurementIndex</ref></type>
+        <definition>typedef blmc_drivers::MotorInterface::MeasurementIndex blmc_drivers::mi</definition>
+        <argsstring></argsstring>
+        <name>mi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="24" column="56" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceblmc__drivers_1ac53e35d4ccbd21de67f13e28ddf58bd5" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classblmc__drivers_1_1BlmcJointModule" kindref="compound">BlmcJointModule</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;BlmcJointModule&gt; blmc_drivers::BlmcJointModule_ptr</definition>
+        <argsstring></argsstring>
+        <name>BlmcJointModule_ptr</name>
+        <briefdescription>
+<para>BlmcJointModule_ptr shortcut for the shared pointer <ref refid="classblmc__drivers_1_1BlmcJointModule" kindref="compound">BlmcJointModule</ref> type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="378" column="25" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceblmc__drivers_1add73ea2a43509013ad00665753f175e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; std::shared_ptr&lt; Type &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;Type&gt; &gt; blmc_drivers::create_vector_of_pointers</definition>
+        <argsstring>(const size_t &amp;size, const size_t &amp;length)</argsstring>
+        <name>create_vector_of_pointers</name>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Create a vector of pointers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of the data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is number of pointers to be created. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the dimension of the data arrays. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector&lt;Ptr&lt;Type&gt;&gt; which is the a list of list of data of type Type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/devices/motor_board.hpp" line="400" column="13" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/devices/motor_board.hpp" bodystart="400" bodyend="410"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This namespace is the standard namespace of the package. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="23" column="1"/>
+  </compounddef>
+</doxygen>

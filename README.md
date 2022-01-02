@@ -153,13 +153,8 @@ echo 'source <Install Dir>/os2r-superbuild/build/install/share/os2r-superbuild/s
 # Dependencies required to compile docs
 
 ```
-pip install sphinx-multiversion
-pip install sphinx_autodoc_typehints
-pip install sphinx_fontawesome
+pip install sphinx-multiversion sphinx_autodoc_typehints sphinx_fontawesome sphinx_book_theme sphinx_tabs lxml
 pip install -U breathe
-pip install sphinx_tabs
-pip install sphinx_book_theme
-pip install lxml
 ```
 
 # Can update the repos using the below commands
