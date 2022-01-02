@@ -6,9 +6,6 @@ find_package(SphinxApidoc REQUIRED)
 find_package(Sphinx REQUIRED)
 find_package(SphinxMultiVersion REQUIRED)
 
-# Extend the Python path including before generating the website
-set(SPHINX_CMD export PYTHONPATH="${PYTHONPATHS}:$ENV{PYTHONPATH}" &&)
-# set(SPHINX_CMD ${CMAKE_COMMAND} -E env PYTHONPATH="${PYTHONPATHS}:$ENV{PYTHONPATH}")
 
 set(SPHINX_BUILD ${CMAKE_BINARY_DIR}/html)
 set(SPHINX_SOURCE ${CMAKE_CURRENT_SOURCE_DIR})
@@ -29,12 +26,16 @@ add_custom_target(scenario_monopod_sphinx ALL
     COMMENT "Copying scenario_monopod sphinx build"
   )
 
-# add_custom_target(gym-os2r_sphinx ALL
-#     DEPENDS scenario_monopod
-#     COMMAND ${CMAKE_COMMAND} -E copy_directory "${SUB_PROJECTS_BUILD_DIR}/src/gym-os2r/html/sphinx_build" ${SPHINX_SOURCE}
-#     COMMENT "Copying gym_os2r sphinx build"
-#   )
+add_custom_target(gym-os2r_sphinx ALL
+    DEPENDS scenario_monopod
+    COMMAND ${CMAKE_COMMAND} -E copy_directory "${SUB_PROJECTS_BUILD_DIR}/src/gym-os2r/html/sphinx_build" ${SPHINX_SOURCE}
+    COMMENT "Copying gym_os2r sphinx build"
+  )
 
+
+# Extend the Python path including before generating the website
+# set(SPHINX_CMD export PYTHONPATH="${PYTHONPATHS}:$ENV{PYTHONPATH}" &&)
+set(SPHINX_CMD ${CMAKE_COMMAND} -E env PYTHONPATH="${PYTHONPATHS}:$ENV{PYTHONPATH}")
 # Sphinx build command
 list(APPEND SPHINX_CMD
     ${SPHINX_MULTIVERSION_EXECUTABLE}
