@@ -161,3 +161,11 @@ pip install sphinx_tabs
 pip install sphinx_book_theme
 pip install lxml
 ```
+
+# Can update the repos using the below commands
+
+To do this, make sure to be in the build directory of the OpenSim2Real-superbuild and run:
+```
+make update-all
+make
+```

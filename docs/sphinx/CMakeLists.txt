@@ -13,12 +13,10 @@ set(SPHINX_CMD export PYTHONPATH="${PYTHONPATHS}:$ENV{PYTHONPATH}" &&)
 set(SPHINX_BUILD ${CMAKE_BINARY_DIR}/html)
 set(SPHINX_SOURCE ${CMAKE_CURRENT_SOURCE_DIR})
 
-set(SCENARIO_MONOPOD_SPHINX "${SPHINX_SOURCE}/scenario_monopod")
-set(MONOPOD_SDK_SPHINX "${SPHINX_SOURCE}/monopod_sdk")
+set(SCENARIO_MONOPOD_SPHINX "${SPHINX_SOURCE}/scenario_monopod_docs")
+set(MONOPOD_SDK_SPHINX "${SPHINX_SOURCE}/monopod_sdk_docs")
 
 # Copy over each projects doc source
-
-
 add_custom_target(monopod_sdk_sphinx ALL
     DEPENDS monopod_sdk
     COMMAND ${CMAKE_COMMAND} -E copy_directory "${SUB_PROJECTS_BUILD_DIR}/src/monopod_sdk/html/sphinx_build" ${MONOPOD_SDK_SPHINX}
