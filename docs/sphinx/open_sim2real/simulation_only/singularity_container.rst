@@ -1,2 +1,2 @@
-Simulation Container
-====================
+Singularity Container
+=====================

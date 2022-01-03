@@ -12,6 +12,7 @@ Open Sim2Real
 .. toctree::
   :caption: Simulation Only
 
+  open_sim2real/simulation_only/intro
   open_sim2real/simulation_only/support_policy
   open_sim2real/simulation_only/install
   open_sim2real/simulation_only/getting_started

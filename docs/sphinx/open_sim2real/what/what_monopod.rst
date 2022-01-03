@@ -1,2 +1,2 @@
-What's our monopod?
+What's our monopod
 ===================

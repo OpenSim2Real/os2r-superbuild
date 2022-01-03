@@ -1,2 +1,2 @@
-What's Open Sim2Real
+Why Open Sim2Real
 =======================
