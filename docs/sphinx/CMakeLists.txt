@@ -27,7 +27,7 @@ add_custom_target(scenario_monopod_sphinx ALL
   )
 
 add_custom_target(gym-os2r_sphinx ALL
-    DEPENDS scenario_monopod
+    DEPENDS gym-os2r
     COMMAND ${CMAKE_COMMAND} -E copy_directory "${SUB_PROJECTS_BUILD_DIR}/src/gym-os2r/html/sphinx_build" ${SPHINX_SOURCE}
     COMMENT "Copying gym_os2r sphinx build"
   )
@@ -46,7 +46,7 @@ list(APPEND SPHINX_CMD
 
 # Generate the website
 add_custom_target(sphinx ALL
-    DEPENDS gym-ignition monopod_sdk_sphinx scenario_monopod_sphinx
+    DEPENDS gym-os2r_sphinx monopod_sdk_sphinx scenario_monopod_sphinx
     COMMAND ${SPHINX_CMD}
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     COMMENT "Generating documentation with Sphinx"
