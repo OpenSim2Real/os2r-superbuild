@@ -10,11 +10,17 @@ Open Sim2Real
   open_sim2real/why/index
 
 .. toctree::
-  :caption: How
+  :caption: Simulation Only
 
-  open_sim2real/how/getting_started
-  open_sim2real/how/software/index
-  open_sim2real/how/hardware/index
+  open_sim2real/simulation_only/install
+  open_sim2real/simulation_only/getting_started
+
+.. toctree::
+  :caption: Build Your Own
+
+  open_sim2real/build_your_own/getting_started
+  open_sim2real/build_your_own/software/index
+  open_sim2real/build_your_own/hardware/index
 
 .. toctree::
   :maxdepth: 5
