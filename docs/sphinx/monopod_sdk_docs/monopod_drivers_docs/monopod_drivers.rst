@@ -1,8 +1,20 @@
-.. _monopod_sdk_core:
+.. _monopod_sdk_api:
 
-monopod_drivers::Monopod API
-============================
+monopod_drivers:: API
+=====================
+
+
+monopod_drivers::Monopod
+------------------------
 
 .. doxygenclass:: monopod_drivers::Monopod
-   :project: monopod_sdk
-   :members:
+  :project: monopod_sdk
+  :members:
+
+
+monopod_drivers::Leg
+------------------------
+
+.. doxygenclass:: monopod_drivers::Leg
+  :project: monopod_sdk
+  :members:

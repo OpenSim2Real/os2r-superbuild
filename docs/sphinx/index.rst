@@ -1,23 +1,15 @@
 .. _overlord_docs:
 
-*************
 Open Sim2Real
-*************
+=============
 
 .. include:: monopod_sdk_index.rst
 
+.. include:: scenario_monopod_index.rst
+
 .. toctree::
   :maxdepth: 4
-  :caption: Monopod Sdk
+  :caption: Open Sim2Real Packages
 
   monopod_sdk_index
-
-
-
-.. include:: scenario_monopod_index1.rst
-
-.. toctree::
-  :maxdepth: 4
-  :caption: Scenario Monopod
-
-  scenario_monopod_index1
+  scenario_monopod_index

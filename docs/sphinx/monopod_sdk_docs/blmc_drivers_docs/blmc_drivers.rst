@@ -1,4 +1,4 @@
-.. _blmc_drivers:
+.. _blmc_drivers_api:
 
 blmc_drivers:: API
 ==================

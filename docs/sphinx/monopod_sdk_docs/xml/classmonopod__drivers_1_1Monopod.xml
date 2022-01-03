@@ -1246,7 +1246,7 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Drivers for open sim2real monopod. Interfaces with the monopod TI motors using <computeroutput>blmc_drivers::blmc_joint_module</computeroutput>. This class creates a real time control thread which reads and writes from a buffer exposed to the public api. </para>
+<para>Drivers for open sim2real monopod. Interfaces with the monopod TI motors using <ref refid="classblmc__drivers_1_1BlmcJointModule" kindref="compound">blmc_drivers::BlmcJointModule</ref>. This class creates a real time control thread which reads and writes from a buffer exposed to the public api. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
