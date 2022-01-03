@@ -21,8 +21,8 @@ Open Sim2Real
   :caption: Build Your Own
 
   open_sim2real/build_your_own/getting_started
-  open_sim2real/build_your_own/software/index
-  open_sim2real/build_your_own/hardware/index
+  open_sim2real/build_your_own/superbuild/index
+  open_sim2real/build_your_own/robot/index
 
 .. toctree::
   :maxdepth: 5
