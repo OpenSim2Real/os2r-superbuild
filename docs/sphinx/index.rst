@@ -4,12 +4,14 @@ Open Sim2Real
 =============
 
 .. toctree::
+  :hidden:
   :caption: Motivation
 
   open_sim2real/what/index
   open_sim2real/why/index
 
 .. toctree::
+  :hidden:
   :caption: Simulation Only
 
   open_sim2real/simulation_only/intro
@@ -18,6 +20,7 @@ Open Sim2Real
   open_sim2real/simulation_only/singularity_container
 
 .. toctree::
+  :hidden:
   :caption: Build Your Own
 
   open_sim2real/build_your_own/intro
@@ -26,6 +29,7 @@ Open Sim2Real
   open_sim2real/build_your_own/getting_started
 
 .. toctree::
+  :hidden:
   :maxdepth: 5
   :caption: Open Sim2Real Packages
 
