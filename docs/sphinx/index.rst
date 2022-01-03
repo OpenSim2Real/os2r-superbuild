@@ -20,9 +20,10 @@ Open Sim2Real
 .. toctree::
   :caption: Build Your Own
 
-  open_sim2real/build_your_own/getting_started
+  open_sim2real/build_your_own/intro
   open_sim2real/build_your_own/superbuild/index
   open_sim2real/build_your_own/robot/index
+  open_sim2real/build_your_own/getting_started
 
 .. toctree::
   :maxdepth: 5
