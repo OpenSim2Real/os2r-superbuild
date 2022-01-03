@@ -12,10 +12,10 @@ Open Sim2Real
 .. toctree::
   :caption: Simulation Only
 
-    open_sim2real/simulation_only/support_policy
-    open_sim2real/simulation_only/install
-    open_sim2real/simulation_only/getting_started
-    open_sim2real/simulation_only/singularity_container
+  open_sim2real/simulation_only/support_policy
+  open_sim2real/simulation_only/install
+  open_sim2real/simulation_only/getting_started
+  open_sim2real/simulation_only/singularity_container
 
 .. toctree::
   :caption: Build Your Own
