@@ -13,3 +13,4 @@ Open Sim2Real
 
   monopod_sdk_index
   scenario_monopod_index
+  gym-os2r_index
