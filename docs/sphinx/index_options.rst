@@ -4,7 +4,7 @@ Open Sim2Real
 =============
 
 .. toctree::
-  :maxdepth: 5
+  :maxdepth: 4
   :caption: Open Sim2Real Packages
 
   monopod_sdk_index
