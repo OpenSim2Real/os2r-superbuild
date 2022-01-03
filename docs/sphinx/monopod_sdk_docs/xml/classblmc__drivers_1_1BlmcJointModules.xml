@@ -1,0 +1,661 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classblmc__drivers_1_1BlmcJointModules" kind="class" language="C++" prot="public">
+    <compoundname>blmc_drivers::BlmcJointModules</compoundname>
+    <includes refid="blmc__joint__module_8hpp" local="no">blmc_joint_module.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>int</type>
+        <declname>COUNT</declname>
+        <defname>COUNT</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" prot="public" static="no">
+        <type>Eigen::Matrix&lt; double, COUNT, 1 &gt;</type>
+        <definition>typedef Eigen::Matrix&lt;double, COUNT, 1&gt; blmc_drivers::BlmcJointModules&lt; COUNT &gt;::Vector</definition>
+        <argsstring></argsstring>
+        <name>Vector</name>
+        <briefdescription>
+<para>Defines a static Eigen vector type in order to define the interface. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="394" column="27" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="394" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classblmc__drivers_1_1BlmcJointModules_1a7eccf5d6b29116705004f4acdfe239d7" prot="private" static="no" mutable="no">
+        <type>std::array&lt; std::shared_ptr&lt; <ref refid="classblmc__drivers_1_1BlmcJointModule" kindref="compound">BlmcJointModule</ref> &gt;, COUNT &gt;</type>
+        <definition>std::array&lt;std::shared_ptr&lt;BlmcJointModule&gt;, COUNT&gt; blmc_drivers::BlmcJointModules&lt; COUNT &gt;::modules_</definition>
+        <argsstring></argsstring>
+        <name>modules_</name>
+        <briefdescription>
+<para>These are the BLMCJointModule objects corresponding to a robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="818" column="16" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="818" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1ae38aac5c9e3e2edbf4c1a4b3920c41ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>blmc_drivers::BlmcJointModules&lt; COUNT &gt;::BlmcJointModules</definition>
+        <argsstring>(const std::array&lt; std::shared_ptr&lt; blmc_drivers::MotorInterface &gt;, COUNT &gt; &amp;motors, const Vector &amp;motor_constants, const Vector &amp;gear_ratios, const Vector &amp;zero_angles, const Vector &amp;max_currents)</argsstring>
+        <name>BlmcJointModules</name>
+        <param>
+          <type>const std::array&lt; std::shared_ptr&lt; <ref refid="classblmc__drivers_1_1MotorInterface" kindref="compound">blmc_drivers::MotorInterface</ref> &gt;, COUNT &gt; &amp;</type>
+          <declname>motors</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref> &amp;</type>
+          <declname>motor_constants</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref> &amp;</type>
+          <declname>gear_ratios</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref> &amp;</type>
+          <declname>zero_angles</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref> &amp;</type>
+          <declname>max_currents</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classblmc__drivers_1_1BlmcJointModules" kindref="compound">BlmcJointModules</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>motors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>motor_constants</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gear_ratios</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zero_angles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="404" column="5" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="404" bodyend="414"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1a9ef0b556b9b6d0793140e192baa40d1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>blmc_drivers::BlmcJointModules&lt; COUNT &gt;::BlmcJointModules</definition>
+        <argsstring>()</argsstring>
+        <name>BlmcJointModules</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classblmc__drivers_1_1BlmcJointModules" kindref="compound">BlmcJointModules</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="418" column="5" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="418" bodyend="420"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1a6fe82c0b73d317b3fb1dbe8aa05b3cdc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void blmc_drivers::BlmcJointModules&lt; COUNT &gt;::set_motor_array</definition>
+        <argsstring>(const std::array&lt; std::shared_ptr&lt; blmc_drivers::MotorInterface &gt;, COUNT &gt; &amp;motors, const Vector &amp;motor_constants, const Vector &amp;gear_ratios, const Vector &amp;zero_angles, const Vector &amp;max_currents)</argsstring>
+        <name>set_motor_array</name>
+        <param>
+          <type>const std::array&lt; std::shared_ptr&lt; <ref refid="classblmc__drivers_1_1MotorInterface" kindref="compound">blmc_drivers::MotorInterface</ref> &gt;, COUNT &gt; &amp;</type>
+          <declname>motors</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref> &amp;</type>
+          <declname>motor_constants</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref> &amp;</type>
+          <declname>gear_ratios</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref> &amp;</type>
+          <declname>zero_angles</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref> &amp;</type>
+          <declname>max_currents</declname>
+        </param>
+        <briefdescription>
+<para>Set the motor array, by creating the corresponding modules. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>motors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>motor_constants</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gear_ratios</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zero_angles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="429" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="429" bodyend="446"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1a8fae73bff7207e7ac5e04025cf6a6b2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void blmc_drivers::BlmcJointModules&lt; COUNT &gt;::send_torques</definition>
+        <argsstring>()</argsstring>
+        <name>send_torques</name>
+        <briefdescription>
+<para>Send the registered torques to all modules. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="450" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="450" bodyend="456"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1a77658f9d46b579f4500f9944b1ab1b47" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void blmc_drivers::BlmcJointModules&lt; COUNT &gt;::set_joint_polarities</definition>
+        <argsstring>(std::array&lt; bool, COUNT &gt; reverse_polarities)</argsstring>
+        <name>set_joint_polarities</name>
+        <param>
+          <type>std::array&lt; bool, COUNT &gt;</type>
+          <declname>reverse_polarities</declname>
+        </param>
+        <briefdescription>
+<para>Set the polarities of the joints (see <ref refid="classblmc__drivers_1_1BlmcJointModule_1af1706cdd77a126e948a3c24c0dfd498f" kindref="member">BlmcJointModule::set_joint_polarity</ref>) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reverse_polarity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="464" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="464" bodyend="470"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1ab526cdcc0b84678fb1ac3d77d16a816a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void blmc_drivers::BlmcJointModules&lt; COUNT &gt;::set_torques</definition>
+        <argsstring>(const Vector &amp;desired_torques)</argsstring>
+        <name>set_torques</name>
+        <param>
+          <type>const <ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref> &amp;</type>
+          <declname>desired_torques</declname>
+        </param>
+        <briefdescription>
+<para>Register the joint torques to be sent for all modules. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>desired_torques</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Nm) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="476" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="476" bodyend="482"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1a9599e4babb95a6b73c376f09afec187b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref></type>
+        <definition>Vector blmc_drivers::BlmcJointModules&lt; COUNT &gt;::get_max_torques</definition>
+        <argsstring>()</argsstring>
+        <name>get_max_torques</name>
+        <briefdescription>
+<para>Get the maximum admissible joint torque that can be applied. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Vector (N/m) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="489" column="12" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="489" bodyend="497"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1a2361cbf4b9a6b06d1a3444c7e51a012f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref></type>
+        <definition>Vector blmc_drivers::BlmcJointModules&lt; COUNT &gt;::get_sent_torques</definition>
+        <argsstring>() const</argsstring>
+        <name>get_sent_torques</name>
+        <briefdescription>
+<para>Get the previously sent torques. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Vector (Nm) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="504" column="12" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="504" bodyend="513"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1a3540b2e22b8d14db20c21584d6ff8db5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref></type>
+        <definition>Vector blmc_drivers::BlmcJointModules&lt; COUNT &gt;::get_measured_torques</definition>
+        <argsstring>() const</argsstring>
+        <name>get_measured_torques</name>
+        <briefdescription>
+<para>Get the measured joint torques. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Vector (Nm) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="520" column="12" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="520" bodyend="529"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1ae4fe37107f7a82bc29df67b3d3ae2b69" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref></type>
+        <definition>Vector blmc_drivers::BlmcJointModules&lt; COUNT &gt;::get_measured_angles</definition>
+        <argsstring>() const</argsstring>
+        <name>get_measured_angles</name>
+        <briefdescription>
+<para>Get the measured joint angles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Vector (rad) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="536" column="12" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="536" bodyend="545"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1a2cbc553df4e723d536559530ed751f72" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref></type>
+        <definition>Vector blmc_drivers::BlmcJointModules&lt; COUNT &gt;::get_measured_velocities</definition>
+        <argsstring>() const</argsstring>
+        <name>get_measured_velocities</name>
+        <briefdescription>
+<para>Get the measured joint velocities. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Vector (rad/s) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="552" column="12" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="552" bodyend="561"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1ad732e3f08b492d12fe44ac7d1a13a74f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void blmc_drivers::BlmcJointModules&lt; COUNT &gt;::set_zero_angles</definition>
+        <argsstring>(const Vector &amp;zero_angles)</argsstring>
+        <name>set_zero_angles</name>
+        <param>
+          <type>const <ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref> &amp;</type>
+          <declname>zero_angles</declname>
+        </param>
+        <briefdescription>
+<para>Set the zero_angles. These are the joint angles between the starting pose and the zero theoretical pose of the urdf. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>zero_angles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(rad) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="569" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="569" bodyend="575"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1a6574fd75eb5bb4a0ae5e0107ba6a78bf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref></type>
+        <definition>Vector blmc_drivers::BlmcJointModules&lt; COUNT &gt;::get_zero_angles</definition>
+        <argsstring>() const</argsstring>
+        <name>get_zero_angles</name>
+        <briefdescription>
+<para>Get the zero_angles. These are the joint angles between the starting pose and the zero theoretical pose of the urdf. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Vector (rad) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="582" column="12" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="582" bodyend="591"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1a3073f2223fddba20da024b0a5fd1e719" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref></type>
+        <definition>Vector blmc_drivers::BlmcJointModules&lt; COUNT &gt;::get_measured_index_angles</definition>
+        <argsstring>() const</argsstring>
+        <name>get_measured_index_angles</name>
+        <briefdescription>
+<para>Get the index_angles. There is one index per motor rotation so there are gear_ratio indexes per joint rotation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Vector (rad) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="598" column="12" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="598" bodyend="607"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1aaccc0bb93b2abfbf6fcc1d750b310d37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void blmc_drivers::BlmcJointModules&lt; COUNT &gt;::set_position_control_gains</definition>
+        <argsstring>(size_t joint_id, double kp, double kd)</argsstring>
+        <name>set_position_control_gains</name>
+        <param>
+          <type>size_t</type>
+          <declname>joint_id</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>kp</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>kd</declname>
+        </param>
+        <briefdescription>
+<para>Set position control gains for the specified joint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>joint_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the joint (in range <computeroutput>[0, COUNT)</computeroutput>). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>P gain. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>D gain. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="616" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="616" bodyend="619"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1aff87038dc4459dfb512e662b92dd066c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void blmc_drivers::BlmcJointModules&lt; COUNT &gt;::set_position_control_gains</definition>
+        <argsstring>(Vector kp, Vector kd)</argsstring>
+        <name>set_position_control_gains</name>
+        <param>
+          <type><ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref></type>
+          <declname>kp</declname>
+        </param>
+        <param>
+          <type><ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref></type>
+          <declname>kd</declname>
+        </param>
+        <briefdescription>
+<para>Set position control gains for all joints. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>P gains. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>D gains. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="627" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="627" bodyend="633"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1aa1349998ba59ec6dff4a4bfd6925c6de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceblmc__drivers_1a11758ee4f3b1c7ddaac64308b143346b" kindref="member">HomingReturnCode</ref></type>
+        <definition>HomingReturnCode blmc_drivers::BlmcJointModules&lt; COUNT &gt;::execute_homing_at_current_position</definition>
+        <argsstring>(Vector home_offset_rad)</argsstring>
+        <name>execute_homing_at_current_position</name>
+        <param>
+          <type><ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref></type>
+          <declname>home_offset_rad</declname>
+        </param>
+        <briefdescription>
+<para>Perform homing for all joints at endstops. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classblmc__drivers_1_1BlmcJointModule_1a650be4887bf846da84262a253ca3e2cc" kindref="member">BlmcJointModule::homing_at_current_position</ref> for description of the arguments.</para>
+<para><simplesect kind="return"><para>Final status of the homing procedure (since homing happens at current,position, procedure always returns success). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="644" column="22" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="644" bodyend="653"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1acc97d558cf20cdc36a0fe86c5874881f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceblmc__drivers_1a11758ee4f3b1c7ddaac64308b143346b" kindref="member">HomingReturnCode</ref></type>
+        <definition>HomingReturnCode blmc_drivers::BlmcJointModules&lt; COUNT &gt;::execute_homing</definition>
+        <argsstring>(double search_distance_limit_rad, Vector home_offset_rad, Vector profile_step_size_rad=Vector::Constant(0.001))</argsstring>
+        <name>execute_homing</name>
+        <param>
+          <type>double</type>
+          <declname>search_distance_limit_rad</declname>
+        </param>
+        <param>
+          <type><ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref></type>
+          <declname>home_offset_rad</declname>
+        </param>
+        <param>
+          <type><ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref></type>
+          <declname>profile_step_size_rad</declname>
+          <defval>Vector::Constant(0.001)</defval>
+        </param>
+        <briefdescription>
+<para>Perform homing for all joints. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If one of the joints fails, the complete homing fails. Otherwise it loops until all joints finished. If a joint is finished while others are still running, it is held at the home position.</para>
+<para>See <ref refid="classblmc__drivers_1_1BlmcJointModule_1acd1076d5271fe4a5aa49d654b6ed49ef" kindref="member">BlmcJointModule::update_homing</ref> for details on the homing procedure.</para>
+<para>See <ref refid="classblmc__drivers_1_1BlmcJointModule_1a4444801197ecf14f2563fcec51eca3f7" kindref="member">BlmcJointModule::init_homing</ref> for description of the arguments.</para>
+<para><simplesect kind="return"><para>Final status of the homing procedure (either SUCCESS if all joints succeeded or the return code of the first joint that failed). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="670" column="22" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="670" bodyend="724"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1a06b79f704b5a635ef330c7d725888d84" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref></type>
+        <definition>Vector blmc_drivers::BlmcJointModules&lt; COUNT &gt;::get_distance_travelled_during_homing</definition>
+        <argsstring>() const</argsstring>
+        <name>get_distance_travelled_during_homing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classblmc__drivers_1_1BlmcJointModule_1abb87b92035dbb4e9a08a5e177ae86fbc" kindref="member">BlmcJointModule::get_distance_travelled_during_homing</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="727" column="12" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="727" bodyend="735"/>
+      </memberdef>
+      <memberdef kind="function" id="classblmc__drivers_1_1BlmcJointModules_1af1d65cc4e5b0485c7aeeec661e525774" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceblmc__drivers_1a38568fb9695f9b7dd36a3d57b01adc24" kindref="member">GoToReturnCode</ref></type>
+        <definition>GoToReturnCode blmc_drivers::BlmcJointModules&lt; COUNT &gt;::go_to</definition>
+        <argsstring>(Vector angle_to_reach_rad, double average_speed_rad_per_sec=1.0)</argsstring>
+        <name>go_to</name>
+        <param>
+          <type><ref refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kindref="member">Vector</ref></type>
+          <declname>angle_to_reach_rad</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>average_speed_rad_per_sec</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Allow the robot to go to a desired pose. Once the control done 0 torques is sent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle_to_reach_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(rad) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>average_speed_rad_per_sec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(rad/sec) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>GoToReturnCode </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="745" column="20" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="745" bodyend="812"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class defines an interface to a collection of BLMC joints. It creates a BLMCJointModule for every blmc_driver::MotorInterface provided. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>COUNT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" line="388" column="1" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/blmc_joint_module.hpp" bodystart="387" bodyend="819"/>
+    <listofallmembers>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1ae38aac5c9e3e2edbf4c1a4b3920c41ce" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>BlmcJointModules</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1a9ef0b556b9b6d0793140e192baa40d1f" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>BlmcJointModules</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1acc97d558cf20cdc36a0fe86c5874881f" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>execute_homing</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1aa1349998ba59ec6dff4a4bfd6925c6de" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>execute_homing_at_current_position</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1a06b79f704b5a635ef330c7d725888d84" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>get_distance_travelled_during_homing</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1a9599e4babb95a6b73c376f09afec187b" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>get_max_torques</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1ae4fe37107f7a82bc29df67b3d3ae2b69" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>get_measured_angles</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1a3073f2223fddba20da024b0a5fd1e719" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>get_measured_index_angles</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1a3540b2e22b8d14db20c21584d6ff8db5" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>get_measured_torques</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1a2cbc553df4e723d536559530ed751f72" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>get_measured_velocities</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1a2361cbf4b9a6b06d1a3444c7e51a012f" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>get_sent_torques</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1a6574fd75eb5bb4a0ae5e0107ba6a78bf" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>get_zero_angles</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1af1d65cc4e5b0485c7aeeec661e525774" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>go_to</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1a7eccf5d6b29116705004f4acdfe239d7" prot="private" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>modules_</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1a8fae73bff7207e7ac5e04025cf6a6b2e" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>send_torques</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1a77658f9d46b579f4500f9944b1ab1b47" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>set_joint_polarities</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1a6fe82c0b73d317b3fb1dbe8aa05b3cdc" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>set_motor_array</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1aaccc0bb93b2abfbf6fcc1d750b310d37" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>set_position_control_gains</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1aff87038dc4459dfb512e662b92dd066c" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>set_position_control_gains</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1ab526cdcc0b84678fb1ac3d77d16a816a" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>set_torques</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1ad732e3f08b492d12fe44ac7d1a13a74f" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>set_zero_angles</name></member>
+      <member refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" prot="public" virt="non-virtual"><scope>blmc_drivers::BlmcJointModules</scope><name>Vector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

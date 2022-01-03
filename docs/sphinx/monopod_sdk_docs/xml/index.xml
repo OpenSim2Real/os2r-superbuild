@@ -1,0 +1,610 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="classblmc__drivers_1_1AnalogSensor" kind="class"><name>blmc_drivers::AnalogSensor</name>
+    <member refid="classblmc__drivers_1_1AnalogSensor_1aba119f9ef91766777134c6df9f687b7c" kind="variable"><name>board_</name></member>
+    <member refid="classblmc__drivers_1_1AnalogSensor_1aaa093ae58c295f8da66bc23d1f241095" kind="variable"><name>sensor_id_</name></member>
+    <member refid="classblmc__drivers_1_1AnalogSensor_1a3107ba6bba78d46e126ffc74c88f5a69" kind="function"><name>AnalogSensor</name></member>
+    <member refid="classblmc__drivers_1_1AnalogSensor_1a76e51987b9992e2b8e5ac5a074f1ae5a" kind="function"><name>get_measurement</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1AnalogSensorInterface" kind="class"><name>blmc_drivers::AnalogSensorInterface</name>
+    <member refid="classblmc__drivers_1_1AnalogSensorInterface_1a7aa03d5366b697a69b03d9d1f7aa3a11" kind="typedef"><name>ScalarTimeseries</name></member>
+    <member refid="classblmc__drivers_1_1AnalogSensorInterface_1afd694f79c9fec5a35984d468f59f315c" kind="function"><name>get_measurement</name></member>
+    <member refid="classblmc__drivers_1_1AnalogSensorInterface_1a809cd9b86ae1cb9119a2ad025163afa9" kind="function"><name>~AnalogSensorInterface</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1BlmcJointModule" kind="class"><name>blmc_drivers::BlmcJointModule</name>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a0c62df08134fe9d8c1d86f84a400f870" kind="variable"><name>motor_</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a327419b1c4771e8900f29b61d048d503" kind="variable"><name>motor_constant_</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a56f0af1607cfa8023dc9b8597652746e" kind="variable"><name>gear_ratio_</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1af5debded979abf537265a7fc2e39e3e9" kind="variable"><name>zero_angle_</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a77d4c12f8c848d57042019ce41d9af69" kind="variable"><name>polarity_</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1ae6d0c264e43765a22ac3e892e903c141" kind="variable"><name>max_current_</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1afabccf626367324474fd3ef872f15073" kind="variable"><name>position_control_gain_p_</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a166cb037d85877c76b0e5d17dab7130c" kind="variable"><name>position_control_gain_d_</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a5740fbf8a23688e5af97aa8d364775f6" kind="variable"><name>homing_state_</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a9c3d970e4cef984495dbf832827ebfe8" kind="function"><name>BlmcJointModule</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a84aceafec2c5bda150fc7f8d86c72d27" kind="function"><name>set_torque</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a93942b427a71524b6c6402227c88d4bd" kind="function"><name>set_zero_angle</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1af1706cdd77a126e948a3c24c0dfd498f" kind="function"><name>set_joint_polarity</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1aa5dedb7e0a7d8cdd126b62766e79b182" kind="function"><name>send_torque</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a3a63cd4aab78b522e653a67ded56a17b" kind="function"><name>get_max_torque</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1af85e667f58b199af39d0e5ecfc7bcfaf" kind="function"><name>get_sent_torque</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1aed5ffae4ff77084010d33e141ed3d136" kind="function"><name>get_measured_torque</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1ac8b4e28468d0190b8d86043297ca1a40" kind="function"><name>get_measured_angle</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a07dd79e4326202ccce0fccddb26cdcfb" kind="function"><name>get_measured_velocity</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a36a8344a02698ceafdbf1429a1482d2b" kind="function"><name>get_measured_index_angle</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a9fdc1cf8ef0ac4a848e9f28e6163c0e0" kind="function"><name>get_zero_angle</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a983e064ddf45c215b496f96d415a4c4f" kind="function"><name>set_position_control_gains</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1ab35efaebbe717fedb6d1403f609b9430" kind="function"><name>execute_position_controller</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a8e1603103be50ff624d2ec785e048948" kind="function"><name>calibrate</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a650be4887bf846da84262a253ca3e2cc" kind="function"><name>homing_at_current_position</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a4444801197ecf14f2563fcec51eca3f7" kind="function"><name>init_homing</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1acd1076d5271fe4a5aa49d654b6ed49ef" kind="function"><name>update_homing</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1abb87b92035dbb4e9a08a5e177ae86fbc" kind="function"><name>get_distance_travelled_during_homing</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a1d465e04afbe676f670a8ba0c06e72c6" kind="function"><name>joint_torque_to_motor_current</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1aef33958d29878a2d13ab2d43960fa28e" kind="function"><name>motor_current_to_joint_torque</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a98035c75109c0bace057784eae2bfe12" kind="function"><name>get_motor_measurement</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModule_1a09f1e829280c3bcff4a2133386701132" kind="function"><name>get_motor_measurement_index</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1BlmcJointModules" kind="class"><name>blmc_drivers::BlmcJointModules</name>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1af11ec69bfb9eb4793d76ff2128343d8f" kind="typedef"><name>Vector</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1a7eccf5d6b29116705004f4acdfe239d7" kind="variable"><name>modules_</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1ae38aac5c9e3e2edbf4c1a4b3920c41ce" kind="function"><name>BlmcJointModules</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1a9ef0b556b9b6d0793140e192baa40d1f" kind="function"><name>BlmcJointModules</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1a6fe82c0b73d317b3fb1dbe8aa05b3cdc" kind="function"><name>set_motor_array</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1a8fae73bff7207e7ac5e04025cf6a6b2e" kind="function"><name>send_torques</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1a77658f9d46b579f4500f9944b1ab1b47" kind="function"><name>set_joint_polarities</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1ab526cdcc0b84678fb1ac3d77d16a816a" kind="function"><name>set_torques</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1a9599e4babb95a6b73c376f09afec187b" kind="function"><name>get_max_torques</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1a2361cbf4b9a6b06d1a3444c7e51a012f" kind="function"><name>get_sent_torques</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1a3540b2e22b8d14db20c21584d6ff8db5" kind="function"><name>get_measured_torques</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1ae4fe37107f7a82bc29df67b3d3ae2b69" kind="function"><name>get_measured_angles</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1a2cbc553df4e723d536559530ed751f72" kind="function"><name>get_measured_velocities</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1ad732e3f08b492d12fe44ac7d1a13a74f" kind="function"><name>set_zero_angles</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1a6574fd75eb5bb4a0ae5e0107ba6a78bf" kind="function"><name>get_zero_angles</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1a3073f2223fddba20da024b0a5fd1e719" kind="function"><name>get_measured_index_angles</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1aaccc0bb93b2abfbf6fcc1d750b310d37" kind="function"><name>set_position_control_gains</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1aff87038dc4459dfb512e662b92dd066c" kind="function"><name>set_position_control_gains</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1aa1349998ba59ec6dff4a4bfd6925c6de" kind="function"><name>execute_homing_at_current_position</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1acc97d558cf20cdc36a0fe86c5874881f" kind="function"><name>execute_homing</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1a06b79f704b5a635ef330c7d725888d84" kind="function"><name>get_distance_travelled_during_homing</name></member>
+    <member refid="classblmc__drivers_1_1BlmcJointModules_1af1d65cc4e5b0485c7aeeec661e525774" kind="function"><name>go_to</name></member>
+  </compound>
+  <compound refid="structmonopod__drivers_1_1Monopod_1_1Buffers" kind="struct"><name>monopod_drivers::Monopod::Buffers</name>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1a30078fa401545db25bced646328795e8" kind="typedef"><name>JointWriteState</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1aaf2a25823df4ad868f1399a736a65547" kind="variable"><name>write_door</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1a09e8a3d1e38df7cd46aa7e1d8be57203" kind="variable"><name>write</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1aed664cebe2849695fb01328206508909" kind="variable"><name>read_door</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1aa7d6ff359577eccb495a7c2439d9ebf2" kind="variable"><name>read</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1a1935fe0be186bf86366200dc419dc34c" kind="variable"><name>settings_door</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1a36dc4a0bd50a7f15ac17e4a542d8c0b0" kind="variable"><name>settings</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1a5a5f2446278af88b634897b08df14e20" kind="variable"><name>pid_door</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1ad2673d398e2ab8004362490728bf598a" kind="variable"><name>pid_modified</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1a4e98fd7b0c8728cd0f20c1fb5942f7d2" kind="variable"><name>pid</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1CanBus" kind="class"><name>blmc_drivers::CanBus</name>
+    <member refid="classblmc__drivers_1_1CanBus_1a996c9b1bc46071b2d002de38d6e9f781" kind="variable"><name>can_connection_</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1a54eec53b62dd15aefaf60e25e87a3bce" kind="variable"><name>input_</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1a06b85fae810fb9e62c1119c2409589dd" kind="variable"><name>sent_input_</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1a43aa988435cc5df62f23315d7ccf2031" kind="variable"><name>output_</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1a85c9d5d9c6413c6871d48a247660ac20" kind="variable"><name>is_loop_active_</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1a906baf827eff3c2850728478764a4759" kind="variable"><name>rt_thread_</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1aef341b0b36d3f02087047b5234ccbf79" kind="variable"><name>log_dir_</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1aa726bd0d63a783d2a3cc02e2ef9c929b" kind="variable"><name>name_</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1a7d376f1ebd6dd8bc3299f6fc9f3d42c6" kind="function"><name>CanBus</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1ac123aae328f20dc67b4df892edebb020" kind="function"><name>~CanBus</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1a449fa3c1b73a9282193ce85b56e9a729" kind="function"><name>get_output_frame</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1a5b9282bc65bff196e6d6b393fbdc5891" kind="function"><name>get_input_frame</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1a862e9898a6607ac2e00e712c30e7f348" kind="function"><name>get_sent_input_frame</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1ae4887644960c0a92fc82f8bdffbe9c48" kind="function"><name>set_input_frame</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1a6966089658d9a633ed482a09af40eac6" kind="function"><name>send_if_input_changed</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1ab39625e5a1fea7d25d0967b4a48de0b4" kind="function"><name>loop</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1a65042f6d32e30c7c367d7e5780856a60" kind="function"><name>loop</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1ae445662e791d0b6149289d9df39e1ea0" kind="function"><name>send_frame</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1ada25ff1dcd774666f423b23d4de664ea" kind="function"><name>receive_frame</name></member>
+    <member refid="classblmc__drivers_1_1CanBus_1a86826b4acc0833e041e6ea02824f8d48" kind="function"><name>setup_can</name></member>
+  </compound>
+  <compound refid="structmonopod__drivers_1_1Monopod_1_1CanBus" kind="struct"><name>monopod_drivers::Monopod::CanBus</name>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1CanBus_1a92f3670a69230b3c13f37bce69cc9605" kind="variable"><name>leg</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1CanBus_1a850806f0dc89ca024f951127437e267a" kind="variable"><name>planarizer1</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1CanBus_1aa3b25408700263a5d7f97a20470cdf72" kind="variable"><name>planarizer2</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1CanBusConnection" kind="class"><name>blmc_drivers::CanBusConnection</name>
+    <member refid="classblmc__drivers_1_1CanBusConnection_1a9f9e0f2d59955798cfd66ed295b76797" kind="variable"><name>send_addr</name></member>
+    <member refid="classblmc__drivers_1_1CanBusConnection_1a864cc55d83145a1a54310ef5271f67ea" kind="variable"><name>socket</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1CanBusFrame" kind="class"><name>blmc_drivers::CanBusFrame</name>
+    <member refid="classblmc__drivers_1_1CanBusFrame_1a1a4cd54d31de4361b003e39dfdfa4cfe" kind="variable"><name>data</name></member>
+    <member refid="classblmc__drivers_1_1CanBusFrame_1ab5c88f0e6fa037ace23a059a3e75b30b" kind="variable"><name>dlc</name></member>
+    <member refid="classblmc__drivers_1_1CanBusFrame_1a5d204dce9fded6502c7d51f3aabbad61" kind="variable"><name>id</name></member>
+    <member refid="classblmc__drivers_1_1CanBusFrame_1a10d2fee2bce365dd585ae9ec813b484c" kind="function"><name>print</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1CanBusInterface" kind="class"><name>blmc_drivers::CanBusInterface</name>
+    <member refid="classblmc__drivers_1_1CanBusInterface_1a2f269b64bbde0d7dece904b59e0d6aac" kind="typedef"><name>CanframeTimeseries</name></member>
+    <member refid="classblmc__drivers_1_1CanBusInterface_1ac2c6e3ff3b49b04ad5f9f698eadc8690" kind="function"><name>~CanBusInterface</name></member>
+    <member refid="classblmc__drivers_1_1CanBusInterface_1ac169b1c119b707d2946a999b81fb5a46" kind="function"><name>get_output_frame</name></member>
+    <member refid="classblmc__drivers_1_1CanBusInterface_1a40b62805094dc0a454695a988ab0d403" kind="function"><name>get_input_frame</name></member>
+    <member refid="classblmc__drivers_1_1CanBusInterface_1aca7e703983284a09c497c8182c0684d5" kind="function"><name>get_sent_input_frame</name></member>
+    <member refid="classblmc__drivers_1_1CanBusInterface_1acf9305b548421e837950a0988172d57a" kind="function"><name>set_input_frame</name></member>
+    <member refid="classblmc__drivers_1_1CanBusInterface_1aa97ce2a204aa8354b8ea62af5f3820a2" kind="function"><name>send_if_input_changed</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1CanBusMotorBoard" kind="class"><name>blmc_drivers::CanBusMotorBoard</name>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1addbf32fe0b6fa57134546c1f6ec5eb80" kind="enum"><name>CanframeIDs</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1addbf32fe0b6fa57134546c1f6ec5eb80abf1a55c2af5e372b8509f160469e1b6a" kind="enumvalue"><name>COMMAND_ID</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1addbf32fe0b6fa57134546c1f6ec5eb80ad1e74b4d6968b2b8e92d6606a71fa1e8" kind="enumvalue"><name>IqRef</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1addbf32fe0b6fa57134546c1f6ec5eb80a4380d3738c99a963f48fd22dfa8bfa2f" kind="enumvalue"><name>STATUSMSG</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1addbf32fe0b6fa57134546c1f6ec5eb80a9ccf5bf9572c09450b35c2cc06299a5d" kind="enumvalue"><name>Iq</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1addbf32fe0b6fa57134546c1f6ec5eb80a4b7c19cd1fa6d91f68229da2c08da3f8" kind="enumvalue"><name>POS</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1addbf32fe0b6fa57134546c1f6ec5eb80a0f89b07e3f8e9c151665b2c7f07ca3fd" kind="enumvalue"><name>SPEED</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1addbf32fe0b6fa57134546c1f6ec5eb80a50d4e798de72aa70d94313fbba110e05" kind="enumvalue"><name>ADC6</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1addbf32fe0b6fa57134546c1f6ec5eb80a08c7d897240dc0f7527ebf660fd6a00b" kind="enumvalue"><name>ENC_INDEX</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1ab58dc93d9117503950fbe4d7a7c70914" kind="variable"><name>can_bus_</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1abbba6ad698905e56101c516baa795b29" kind="variable"><name>measurement_</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a5725ff23bb4f8407c5608cabfa49c692" kind="variable"><name>status_</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a65cfba005239247df1ea26795ff14a3f" kind="variable"><name>control_</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a720c6300bf07245a739713a209799c02" kind="variable"><name>command_</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1ab5296d55684d48b538844c3b96df6594" kind="variable"><name>sent_control_</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a27712df32104357ac31b97179f1e9211" kind="variable"><name>sent_command_</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1ae25808cc09839c2574d134a36b5b4d5d" kind="variable"><name>is_loop_active_</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1abdca3f76908ca197c4f12af814313a56" kind="variable"><name>motors_are_paused_</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a4f9605b0a147ecd1dde41a0fb7b45d47" kind="variable"><name>control_timeout_ms_</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a040b0b2f6c2691a54d82404f7a1badd6" kind="variable"><name>rt_thread_</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a43674811685fce4dbc3a9996e08454c9" kind="function"><name>CanBusMotorBoard</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a4099ee10765570b2bfb1f91a0670b11b" kind="function"><name>~CanBusMotorBoard</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a0fac258ce65f51074bdb6c64ce8ebded" kind="function"><name>get_measurement</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a7e62dd5126422cfbf587f9c265374fdc" kind="function"><name>get_status</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a2a1b44b08e57cd112957a33ceb97ebb4" kind="function"><name>get_control</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1ac7adb4e5074229bb38e1c288702321e4" kind="function"><name>get_command</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1aa71ed313381440d9c2af00c5a13d6faa" kind="function"><name>get_sent_control</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a5025602eac7b8c4ca1b2f5602e1a6640" kind="function"><name>get_sent_command</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a8dbd787fcfc25d68d5443e2f0bf21f64" kind="function"><name>set_control</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a4bb9c1f7f59507feed145111ccffc625" kind="function"><name>set_command</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a5f2152512eea497d7eb72eb25934f705" kind="function"><name>send_if_input_changed</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a3c496f045d3ef68c02fe6dd5abbdc4eb" kind="function"><name>wait_until_ready</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1aecd2ba0d3d1f40ffd38a0fd47b8da55d" kind="function"><name>is_ready</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a19ffd7d9ef9a441299164485e85ec6fd" kind="function"><name>pause_motors</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a846382d2ad74d2087f5557ecd90937e3" kind="function"><name>disable_can_recv_timeout</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1ae320518f2cf2c8af0e50220f11556b85" kind="function"><name>bytes_to_int32</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a05db7868ff7034289358cdb774b59720" kind="function"><name>q24_to_float</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1ad6d91ccf867e9a3996492cce33270426" kind="function"><name>float_to_q24</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1ad2cee731d455d64d71014c9821219410" kind="function"><name>qbytes_to_float</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a5ec842674fd543a8c834265433740387" kind="function"><name>send_newest_controls</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a9f74868318daf4a97a5266e4d8d6f556" kind="function"><name>send_newest_command</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a542f8df35ff34348976ed1d55797a15a" kind="function"><name>loop</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1a43b773d56156d4855e6b3b7b7b00b350" kind="function"><name>print_status</name></member>
+    <member refid="classblmc__drivers_1_1CanBusMotorBoard_1af6d242ea933e9ad23c37167ba848f017" kind="function"><name>loop</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1DeviceInterface" kind="class"><name>blmc_drivers::DeviceInterface</name>
+  </compound>
+  <compound refid="classmonopod__drivers_1_1Encoder" kind="class"><name>monopod_drivers::Encoder</name>
+    <member refid="classmonopod__drivers_1_1Encoder_1a752000ea750811f2529173215c1e386f" kind="variable"><name>board_</name></member>
+    <member refid="classmonopod__drivers_1_1Encoder_1ad646ced8ac82b9ed16a87535f1def2a9" kind="variable"><name>encoder_id_</name></member>
+    <member refid="classmonopod__drivers_1_1Encoder_1a8ca8d10708e358b42129b9ee72969650" kind="function"><name>Encoder</name></member>
+    <member refid="classmonopod__drivers_1_1Encoder_1ad96f381abf6c705e10d05c855b6f4087" kind="function"><name>~Encoder</name></member>
+    <member refid="classmonopod__drivers_1_1Encoder_1a8ec74bb921d5e12a34bb73b35adfe4e9" kind="function"><name>get_measurement</name></member>
+    <member refid="classmonopod__drivers_1_1Encoder_1ac1962689c4db7a3977544d3130610638" kind="function"><name>print</name></member>
+  </compound>
+  <compound refid="classmonopod__drivers_1_1EncoderInterface" kind="class"><name>monopod_drivers::EncoderInterface</name>
+    <member refid="classmonopod__drivers_1_1EncoderInterface_1a39359993191eb34f0d96f8521bc72f26" kind="enum"><name>MeasurementIndex</name></member>
+    <member refid="classmonopod__drivers_1_1EncoderInterface_1a39359993191eb34f0d96f8521bc72f26a70a404afe3d9a44bbfcaf463f782cd18" kind="enumvalue"><name>current</name></member>
+    <member refid="classmonopod__drivers_1_1EncoderInterface_1a39359993191eb34f0d96f8521bc72f26a116d5a648be0afb37dc88a3182c60f9a" kind="enumvalue"><name>position</name></member>
+    <member refid="classmonopod__drivers_1_1EncoderInterface_1a39359993191eb34f0d96f8521bc72f26aa99ad43d6db1e0d9d72c4e2b7e5143dc" kind="enumvalue"><name>velocity</name></member>
+    <member refid="classmonopod__drivers_1_1EncoderInterface_1a39359993191eb34f0d96f8521bc72f26ad995f4c8d12f30aa87578ee0605f959a" kind="enumvalue"><name>encoder_index</name></member>
+    <member refid="classmonopod__drivers_1_1EncoderInterface_1a39359993191eb34f0d96f8521bc72f26a8daba71ad0f36d692837ce845c7f99a8" kind="enumvalue"><name>measurement_count</name></member>
+    <member refid="classmonopod__drivers_1_1EncoderInterface_1aac47c9c2c5a218c091d37c76baf3accd" kind="typedef"><name>ScalarTimeseries</name></member>
+    <member refid="classmonopod__drivers_1_1EncoderInterface_1aeb239f3ea52a3f9a9f42d5ead4b6e681" kind="typedef"><name>Ptr</name></member>
+    <member refid="classmonopod__drivers_1_1EncoderInterface_1a17e64972b030e597d92f2a8163ec50cf" kind="function"><name>~EncoderInterface</name></member>
+    <member refid="classmonopod__drivers_1_1EncoderInterface_1a02e0739432d039fe2851f12de704436d" kind="function"><name>get_measurement</name></member>
+  </compound>
+  <compound refid="structblmc__drivers_1_1HomingState" kind="struct"><name>blmc_drivers::HomingState</name>
+    <member refid="structblmc__drivers_1_1HomingState_1a906217f9eab41daf3aad280541fe5ed5" kind="variable"><name>joint_id</name></member>
+    <member refid="structblmc__drivers_1_1HomingState_1a2cded10b88a1ed20f2b46f050f8c51f2" kind="variable"><name>search_distance_limit_rad</name></member>
+    <member refid="structblmc__drivers_1_1HomingState_1aae867647ec9ab23991c9102cb19d9c1e" kind="variable"><name>home_offset_rad</name></member>
+    <member refid="structblmc__drivers_1_1HomingState_1a497269dc93f478bbd9deb410ae6912c8" kind="variable"><name>profile_step_size_rad</name></member>
+    <member refid="structblmc__drivers_1_1HomingState_1a11d595647c3e1d215262c05e0bca5559" kind="variable"><name>last_encoder_index_time_index</name></member>
+    <member refid="structblmc__drivers_1_1HomingState_1a1570fdb1108fb9973a5cac65d1db900c" kind="variable"><name>step_count</name></member>
+    <member refid="structblmc__drivers_1_1HomingState_1a4960301934b44a2f750405660cf70332" kind="variable"><name>target_position_rad</name></member>
+    <member refid="structblmc__drivers_1_1HomingState_1abbe4ce4bc37f6086c905e9e4c543f42a" kind="variable"><name>status</name></member>
+    <member refid="structblmc__drivers_1_1HomingState_1ab64f9072e93386a30472fa67b6e8a524" kind="variable"><name>start_position</name></member>
+    <member refid="structblmc__drivers_1_1HomingState_1a73f80293fe66c737bae4a478ee440162" kind="variable"><name>end_position</name></member>
+  </compound>
+  <compound refid="structmonopod__drivers_1_1Monopod_1_1JointLimit" kind="struct"><name>monopod_drivers::Monopod::JointLimit</name>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1JointLimit_1afc5de5359984fd705b5f6e7fff061fa9" kind="variable"><name>min</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1JointLimit_1a7b86053e523496cccf0b93114a1b2a39" kind="variable"><name>max</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1JointLimit_1a50e9002e1d0de7a3cd59023737acc360" kind="function"><name>JointLimit</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1JointLimit_1acf39207f2949d408819de032f89250df" kind="function"><name>JointLimit</name></member>
+  </compound>
+  <compound refid="structmonopod__drivers_1_1Monopod_1_1JointReadState" kind="struct"><name>monopod_drivers::Monopod::JointReadState</name>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1JointReadState_1a344a708826a58a00a1cf87f58c12922b" kind="variable"><name>pos</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1JointReadState_1a0a45ad1f93629f3811a44762b56596c9" kind="variable"><name>vel</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1JointReadState_1a368608dfb79096d02f9046caa389d620" kind="variable"><name>acc</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1JointReadState_1a41f472487ed6742b9ea1adfa05c3a5be" kind="function"><name>JointReadState</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1JointReadState_1a437d70888bec6a920738713aff2d1004" kind="function"><name>JointReadState</name></member>
+  </compound>
+  <compound refid="structmonopod__drivers_1_1Monopod_1_1JointSettingState" kind="struct"><name>monopod_drivers::Monopod::JointSettingState</name>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1JointSettingState_1a8711bc22544246bbcd4b7a360b09ee5a" kind="variable"><name>position_limit</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1JointSettingState_1a4e6fe3402bbf9cb097caf464e70a50bd" kind="variable"><name>velocity_limit</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1JointSettingState_1aaff480519b90c52266765af620697419" kind="variable"><name>acceleration_limit</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1JointSettingState_1a74fa65eec93fd505898190adf66144a4" kind="variable"><name>max_torque_target</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1JointSettingState_1a7d956809556b155705bea94fd6e0ad3f" kind="function"><name>JointSettingState</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1JointSettingState_1a03378b42ded52f6cb309af6f2158f215" kind="function"><name>JointSettingState</name></member>
+  </compound>
+  <compound refid="classmonopod__drivers_1_1Leg" kind="class"><name>monopod_drivers::Leg</name>
+    <member refid="classmonopod__drivers_1_1Leg_1a33f02259d43fe35a0e0e534d6659c484" kind="variable"><name>motors_</name></member>
+    <member refid="classmonopod__drivers_1_1Leg_1a55f8a83fa177de4b2ea822b944266c33" kind="function"><name>Leg</name></member>
+    <member refid="classmonopod__drivers_1_1Leg_1ad23bba917d977d2e94004ffdd3c89254" kind="function"><name>~Leg</name></member>
+    <member refid="classmonopod__drivers_1_1Leg_1a7d03ca429b2a741a89d88bf0f6273ed6" kind="function"><name>get_measurement</name></member>
+    <member refid="classmonopod__drivers_1_1Leg_1adf6548bfc1450ab0237fe467fe35c4e0" kind="function"><name>get_current_target</name></member>
+    <member refid="classmonopod__drivers_1_1Leg_1ab4a79dc1c5e7f1f6379b318e646993bb" kind="function"><name>get_sent_current_target</name></member>
+    <member refid="classmonopod__drivers_1_1Leg_1a1a9538f618cb160ce35b64b90e7d2d11" kind="function"><name>set_current_target</name></member>
+    <member refid="classmonopod__drivers_1_1Leg_1a37a24b9951626e9970e5666435b86fa8" kind="function"><name>send_if_input_changed</name></member>
+  </compound>
+  <compound refid="classmonopod__drivers_1_1LegInterface" kind="class"><name>monopod_drivers::LegInterface</name>
+    <member refid="classmonopod__drivers_1_1LegInterface_1ac2c4718f8cb3e383bcee3c78596a60e2" kind="enum"><name>MotorMeasurementIndexing</name></member>
+    <member refid="classmonopod__drivers_1_1LegInterface_1ac2c4718f8cb3e383bcee3c78596a60e2a173269c7ebde2147b5be454d38354015" kind="enumvalue"><name>current</name></member>
+    <member refid="classmonopod__drivers_1_1LegInterface_1ac2c4718f8cb3e383bcee3c78596a60e2ac5f21992a674d3f6eea2891b8d82ca4e" kind="enumvalue"><name>position</name></member>
+    <member refid="classmonopod__drivers_1_1LegInterface_1ac2c4718f8cb3e383bcee3c78596a60e2acf092fb3d87afb2c3ea44904f1e59461" kind="enumvalue"><name>velocity</name></member>
+    <member refid="classmonopod__drivers_1_1LegInterface_1ac2c4718f8cb3e383bcee3c78596a60e2abcbeeee4878b62e001da92003209323f" kind="enumvalue"><name>encoder_index</name></member>
+    <member refid="classmonopod__drivers_1_1LegInterface_1ac2c4718f8cb3e383bcee3c78596a60e2abd6052e31bb187f1cdc3ae4bed402f34" kind="enumvalue"><name>motor_measurement_count</name></member>
+    <member refid="classmonopod__drivers_1_1LegInterface_1a4946ce264b48b90ee2425e42393bbaee" kind="enum"><name>MotorIndexing</name></member>
+    <member refid="classmonopod__drivers_1_1LegInterface_1a4946ce264b48b90ee2425e42393bbaeea138c8ed1d01925c5a81279ceeb53ed2d" kind="enumvalue"><name>hip</name></member>
+    <member refid="classmonopod__drivers_1_1LegInterface_1a4946ce264b48b90ee2425e42393bbaeeaac53a06c36f9e6cc9f9826e3fe5d4fdf" kind="enumvalue"><name>knee</name></member>
+    <member refid="classmonopod__drivers_1_1LegInterface_1a4946ce264b48b90ee2425e42393bbaeeaff6f2b266ddd96ff87c26b89111208bc" kind="enumvalue"><name>motor_count</name></member>
+    <member refid="classmonopod__drivers_1_1LegInterface_1ad76d8561b5b0a7e1c08221031d8ace98" kind="typedef"><name>ScalarTimeseries</name></member>
+    <member refid="classmonopod__drivers_1_1LegInterface_1a36fa908a00559c94cbdb4aa4abf7540a" kind="typedef"><name>Ptr</name></member>
+    <member refid="classmonopod__drivers_1_1LegInterface_1a48453c5c0bff275dcdb3e19e2b94e4d4" kind="function"><name>~LegInterface</name></member>
+    <member refid="classmonopod__drivers_1_1LegInterface_1ac4ae99c81c39af715a7428c64323a04e" kind="function"><name>get_measurement</name></member>
+    <member refid="classmonopod__drivers_1_1LegInterface_1a95051490d3ee07fcc9234e1811e1cca3" kind="function"><name>get_current_target</name></member>
+    <member refid="classmonopod__drivers_1_1LegInterface_1a81929f53cf334b2cdd13837b4426a79c" kind="function"><name>get_sent_current_target</name></member>
+    <member refid="classmonopod__drivers_1_1LegInterface_1aad16328d72584df2a1199fa494180c58" kind="function"><name>set_current_target</name></member>
+    <member refid="classmonopod__drivers_1_1LegInterface_1ae8bec5d889370df3cbe89c8e9a843ae3" kind="function"><name>send_if_input_changed</name></member>
+  </compound>
+  <compound refid="classmonopod__drivers_1_1Monopod" kind="class"><name>monopod_drivers::Monopod</name>
+    <member refid="classmonopod__drivers_1_1Monopod_1ab90d43c590449e2ad6e9e4e8370a6bcb" kind="enum"><name>MotorMeasurementIndexing</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ab90d43c590449e2ad6e9e4e8370a6bcba60ecff7d9b48b37abb16b5420ae77a27" kind="enumvalue"><name>current</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ab90d43c590449e2ad6e9e4e8370a6bcbac84eb9f453583b4c6b8ff726382dc996" kind="enumvalue"><name>position</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ab90d43c590449e2ad6e9e4e8370a6bcba712ca37851a533d992f73e95fa776df3" kind="enumvalue"><name>velocity</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ab90d43c590449e2ad6e9e4e8370a6bcba8b23c869a1dccf6667f06ffa52e3ce61" kind="enumvalue"><name>encoder_index</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ab90d43c590449e2ad6e9e4e8370a6bcbab94555e7f028aee31b3522d4fff187b9" kind="enumvalue"><name>motor_measurement_count</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1afd829e71523c00d8430d73e725c40f99" kind="enum"><name>JointNameIndexing</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1afd829e71523c00d8430d73e725c40f99a4711584ab81fbca168bd7c8981d7a3e0" kind="enumvalue"><name>hip_joint</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1afd829e71523c00d8430d73e725c40f99a7b8018b7ff74a44fb3baaedca53f1486" kind="enumvalue"><name>knee_joint</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1afd829e71523c00d8430d73e725c40f99ae57f6fc599cdb052e5a1a9f9eacbc1bb" kind="enumvalue"><name>boom_connector_joint</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1afd829e71523c00d8430d73e725c40f99aace486a8075e43c9491a98250c148ca1" kind="enumvalue"><name>planarizer_yaw_joint</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1afd829e71523c00d8430d73e725c40f99a90637c981a734b0ccca41e881c9b8bbe" kind="enumvalue"><name>planarizer_pitch_joint</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a16549890996092c7649389d643a68eab" kind="variable"><name>joint_names</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a0632e002e62cfa6273659449dbf2e600" kind="variable"><name>rt_thread_</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ac394ab54f5078062b1b55b8fb78e1373" kind="variable"><name>canbus_</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a4c351e15fbf8b1115a792bce59c05c7b" kind="variable"><name>planarizer_</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ab038286a12c8d2775d7b563580fd8c98" kind="variable"><name>leg_</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a7013bfa7198f2982cd6d8dd430507229" kind="variable"><name>stop_loop</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a50e842d324700c43df579280baa1c3b5" kind="variable"><name>is_initialized</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a7cbfafb7c7206e90564f38c7b4773b0c" kind="variable"><name>motor_joint_indexing</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1aa6384118d7316a123b097d6c51552f3d" kind="variable"><name>encoder_joint_indexing</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ad25953b1b9f60b1bc31132ffcef2ee4c" kind="variable"><name>buffers</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ae3a7af8441f2c1b4f7b2e826c3e89080" kind="function"><name>Monopod</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a5869ce3529ca5f3e37ce494c52b6206f" kind="function"><name>~Monopod</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a7cba1ddfde1ff619563fe58b4d28741d" kind="function"><name>initialize</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a5893584bb926a578836423b08bddbdf6" kind="function"><name>initialized</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a4b4d1cc4820071f34ecfadba93e5c4d1" kind="function"><name>start_loop</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a922ef7e908264a38d0681b6fa2025525" kind="function"><name>get_model_name</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a62d5bdeed940ca4d6fa6cfe9191dfc34" kind="function"><name>get_joint_names</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a17c88e9356b121343809992ccb9c7e92" kind="function"><name>is_joint_controllable</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a0635083d9ddab66a3fdb038a9970203d" kind="function"><name>set_torque_target</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ac725cb8087c6094a58d773435991a580" kind="function"><name>set_torque_targets</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a02da22787b60c7be31f9469df8858a14" kind="function"><name>set_pid</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a08c44b34232d34bdf46bf5c322ddc12f" kind="function"><name>set_joint_position_limit</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a0251e350f4819530e7e56c8659c3eae9" kind="function"><name>set_joint_velocity_limit</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ada84a2393fb17dd2cfa108abca457f8c" kind="function"><name>set_joint_acceleration_limit</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ab9dadd3075bfe2bcd88ac4834883d1bc" kind="function"><name>set_max_torque_target</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a233fc815073c8c17c2e9b5b4be3fb468" kind="function"><name>get_pid</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ad62ee75137e2621112245780ecd1daeb" kind="function"><name>get_joint_position_limit</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a2f8ed1649e0262ca18f361d451aa3475" kind="function"><name>get_joint_velocity_limit</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ada6d6c36a9789f3597b8e05f9552d672" kind="function"><name>get_joint_acceleration_limit</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a80b5106e7fd08bc2fdccfa0ed5cf7ea5" kind="function"><name>get_max_torque_target</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a4ecb63d5d563c4c28d95bc4dd6bf5240" kind="function"><name>get_torque_target</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ac0c87320a9d3b321d586761ed5c972aa" kind="function"><name>get_torque_targets</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1aacfc1801b2b91bc7cb35bfae4e6520b5" kind="function"><name>get_position</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a34dc138784422485eeea8b804a2d6aa6" kind="function"><name>get_velocity</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a1808000567433bcf5edc8813ad09ef46" kind="function"><name>get_acceleration</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1aa8eb7ffa35c3bb02e27161b9a4b8c0ca" kind="function"><name>get_positions</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ac46aaaaa0eb10756642ab0304666c1ea" kind="function"><name>get_velocities</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a0f2fb2f8d1a05ba34523b2321691d1db" kind="function"><name>get_accelerations</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a2a1cecec1a9b3e1c942ef573a9400a43" kind="function"><name>Contains</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ac8ea62945c2ceffd2d5af874ec5cedd5" kind="function"><name>loop</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a328990aaa70d52871c2f5be21f53fda2" kind="function"><name>loop</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1a56adba6f63eb61ce096f171b72b66eec" kind="function"><name>getJointDataSerialized</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ad0cef4d4c212c4682bc6d8ea04640e37" kind="function"><name>sgn</name></member>
+    <member refid="classmonopod__drivers_1_1Monopod_1ac7cdbde974fbd609db2f8eb852b9fb10" kind="function"><name>in_range</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1Motor" kind="class"><name>blmc_drivers::Motor</name>
+    <member refid="classblmc__drivers_1_1Motor_1a779365c022edb7d4beb4060dcdb7dd72" kind="variable"><name>board_</name></member>
+    <member refid="classblmc__drivers_1_1Motor_1a614903579bd6001169d11b72bc17042b" kind="variable"><name>motor_id_</name></member>
+    <member refid="classblmc__drivers_1_1Motor_1a923be3c8e5027cdead1006f3878b6ec3" kind="function"><name>Motor</name></member>
+    <member refid="classblmc__drivers_1_1Motor_1ad93b64d54b40ff12df7081e009c71239" kind="function"><name>~Motor</name></member>
+    <member refid="classblmc__drivers_1_1Motor_1acf7389e09918c1955986a641efd4f032" kind="function"><name>send_if_input_changed</name></member>
+    <member refid="classblmc__drivers_1_1Motor_1aca98b86b7528afd4347e616e33b7291e" kind="function"><name>get_measurement</name></member>
+    <member refid="classblmc__drivers_1_1Motor_1ab7b21b856a36643bdee54d077d14ca0a" kind="function"><name>get_current_target</name></member>
+    <member refid="classblmc__drivers_1_1Motor_1aa1200f232c149979a8e3b637c57e4301" kind="function"><name>get_sent_current_target</name></member>
+    <member refid="classblmc__drivers_1_1Motor_1a4b9c9239775a8cfafbbec674db8116d0" kind="function"><name>set_current_target</name></member>
+    <member refid="classblmc__drivers_1_1Motor_1a4af56df5466d011fc2a567dd815a6c1b" kind="function"><name>set_command</name></member>
+    <member refid="classblmc__drivers_1_1Motor_1a97002df11de329f995ce8cb74950d27f" kind="function"><name>print</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1MotorBoardCommand" kind="class"><name>blmc_drivers::MotorBoardCommand</name>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1abdbd6eb70164938ea91ae02000ccf7b2" kind="enum"><name>IDs</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1abdbd6eb70164938ea91ae02000ccf7b2a9c6e49f919a8c46f4c432a662ffba0cd" kind="enumvalue"><name>ENABLE_SYS</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1abdbd6eb70164938ea91ae02000ccf7b2a60d38e47b7ed3122564e41be3d4bb0ed" kind="enumvalue"><name>ENABLE_MTR1</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1abdbd6eb70164938ea91ae02000ccf7b2a263a36e3da9b8447fb1aece845d49251" kind="enumvalue"><name>ENABLE_MTR2</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1abdbd6eb70164938ea91ae02000ccf7b2a5c8816f537e3dddc473cc642b9a9d80a" kind="enumvalue"><name>ENABLE_VSPRING1</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1abdbd6eb70164938ea91ae02000ccf7b2a79d27749708a26ac921163d8f65f39e0" kind="enumvalue"><name>ENABLE_VSPRING2</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1abdbd6eb70164938ea91ae02000ccf7b2ae26c6b2546bc018dad904f204bf9094c" kind="enumvalue"><name>SEND_CURRENT</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1abdbd6eb70164938ea91ae02000ccf7b2adf0d7831f2da167a00b0c611d85b8304" kind="enumvalue"><name>SEND_POSITION</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1abdbd6eb70164938ea91ae02000ccf7b2a141edb86f74d370515a6bc6ec55761d2" kind="enumvalue"><name>SEND_VELOCITY</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1abdbd6eb70164938ea91ae02000ccf7b2a0da120e92bda06af36a2454da0cf62a2" kind="enumvalue"><name>SEND_ADC6</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1abdbd6eb70164938ea91ae02000ccf7b2a31cc9425a84a2aedc3cf5ecda9afd911" kind="enumvalue"><name>SEND_ENC_INDEX</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1abdbd6eb70164938ea91ae02000ccf7b2ab41344ab62bef1e68baa46808cf43d6b" kind="enumvalue"><name>SEND_ALL</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1abdbd6eb70164938ea91ae02000ccf7b2a25a210228bd214363b5c27c81f7a75c9" kind="enumvalue"><name>SET_CAN_RECV_TIMEOUT</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1abdbd6eb70164938ea91ae02000ccf7b2ab824ff5a7e82c88394b7902a73f72a45" kind="enumvalue"><name>ENABLE_POS_ROLLOVER_ERROR</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1ad61acf8dcb8f6fcb382fc5cbc1e44615" kind="enum"><name>Contents</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1ad61acf8dcb8f6fcb382fc5cbc1e44615ad3f0f7574977f99dff943279f7733d93" kind="enumvalue"><name>ENABLE</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1ad61acf8dcb8f6fcb382fc5cbc1e44615a75c7abec0078383ce7be247cfaf43148" kind="enumvalue"><name>DISABLE</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1a31bfcc3cb1b2c35cbd5349123d884af4" kind="variable"><name>id_</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1ac417b63a8cc8801a6757f4dce3b0810c" kind="variable"><name>content_</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1ad5ac32071cbf2854135fee7bb89acf4e" kind="function"><name>MotorBoardCommand</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1ae7cf695d2600d84929729befc3cb29f9" kind="function"><name>MotorBoardCommand</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardCommand_1a1e594584bb059b92e416c7738551ccaa" kind="function"><name>print</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1MotorBoardInterface" kind="class"><name>blmc_drivers::MotorBoardInterface</name>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a8e869cbdb9fcc872ba5a33813e0dfafb" kind="enum"><name>MeasurementIndex</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a8e869cbdb9fcc872ba5a33813e0dfafba3a7016c860809f0398f58cbb49c13773" kind="enumvalue"><name>current_0</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a8e869cbdb9fcc872ba5a33813e0dfafba063eeeff31565ec122b6ac7e686c0b7d" kind="enumvalue"><name>current_1</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a8e869cbdb9fcc872ba5a33813e0dfafba21da354c17fbe69438209b3f021e30ef" kind="enumvalue"><name>position_0</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a8e869cbdb9fcc872ba5a33813e0dfafba088cf02c867acd573d6fb0f4a450f781" kind="enumvalue"><name>position_1</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a8e869cbdb9fcc872ba5a33813e0dfafba92b90796c7e002902bfed9a4811a66c2" kind="enumvalue"><name>velocity_0</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a8e869cbdb9fcc872ba5a33813e0dfafba1884d733defabdbdb150c38eefc499a6" kind="enumvalue"><name>velocity_1</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a8e869cbdb9fcc872ba5a33813e0dfafba8d4c4df803687c9e24ee277ae6abf38e" kind="enumvalue"><name>analog_0</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a8e869cbdb9fcc872ba5a33813e0dfafba34d7aeb549f4c6e5e9f6e9f9d584ebb6" kind="enumvalue"><name>analog_1</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a8e869cbdb9fcc872ba5a33813e0dfafbaa9d352ff89787dce3b8359e2687a12ec" kind="enumvalue"><name>encoder_index_0</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a8e869cbdb9fcc872ba5a33813e0dfafba8f832d4e58f7c60915018e3df5473d35" kind="enumvalue"><name>encoder_index_1</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a8e869cbdb9fcc872ba5a33813e0dfafbae093f0705e01ef8c5e09964daeb225de" kind="enumvalue"><name>measurement_count</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a82ed4d0fa527521707281396095a88ca" kind="enum"><name>ControlIndex</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a82ed4d0fa527521707281396095a88caa51e106e07073a2488985f016b8a25006" kind="enumvalue"><name>current_target_0</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a82ed4d0fa527521707281396095a88caaddd8c44f283091cde84249668af74928" kind="enumvalue"><name>current_target_1</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a82ed4d0fa527521707281396095a88caa22aa2ad714a3d21d3599340e5a735d03" kind="enumvalue"><name>control_count</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1af22e946cb71756c632d774b32f0639bf" kind="typedef"><name>ScalarTimeseries</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a29d3811c530d898166ce5ea487ebdd1e" kind="typedef"><name>Index</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1ac593d8d163dad37116e4da689b296a18" kind="typedef"><name>IndexTimeseries</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1ab75dd9b87545f977453175003f4b406b" kind="typedef"><name>StatusTimeseries</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a313f903ae3155ed8e91bdbf6f0305466" kind="typedef"><name>CommandTimeseries</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a6a733b7ed7a3a96f6b0712b6bb5307f8" kind="typedef"><name>Ptr</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1abeb474bef6d85dffcd5227e5ea965cc5" kind="typedef"><name>Vector</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1aecd23682c4a8c0df8e57b4c752e1d9ee" kind="function"><name>~MotorBoardInterface</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a34828a0375a3bd1fede4deb4fc74c04d" kind="function"><name>get_measurement</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a13b1ffa7d10c1c753d76eaf5368714e3" kind="function"><name>get_status</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1aa5eeed12c851993f2e2c93f5479df9de" kind="function"><name>get_control</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a4913308c1eacc98475aeb8647447c997" kind="function"><name>get_command</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a8dc6222e915fc96d89b13cbb0fcb0cda" kind="function"><name>get_sent_control</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1afd3de58f7a900347154b8d323f1c1d94" kind="function"><name>get_sent_command</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a3ace57ba3e09b9b3120d09303ff39a61" kind="function"><name>set_control</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a86b4ff810ca652d6761090ceaff65621" kind="function"><name>set_command</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardInterface_1a79afd172c736718868f4d269125f2581" kind="function"><name>send_if_input_changed</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1MotorBoardStatus" kind="class"><name>blmc_drivers::MotorBoardStatus</name>
+    <member refid="classblmc__drivers_1_1MotorBoardStatus_1a9fd931e24550f5e5877d7a6cf499f6cf" kind="enum"><name>ErrorCodes</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardStatus_1a9fd931e24550f5e5877d7a6cf499f6cfa99d623b3894cfb91a0626b56d0583f84" kind="enumvalue"><name>NONE</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardStatus_1a9fd931e24550f5e5877d7a6cf499f6cfab3a0b4c22659f24593503e41fce561d0" kind="enumvalue"><name>ENCODER</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardStatus_1a9fd931e24550f5e5877d7a6cf499f6cfa25dd0ce676d69449a6fe0a02fa6e6a5d" kind="enumvalue"><name>CAN_RECV_TIMEOUT</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardStatus_1a9fd931e24550f5e5877d7a6cf499f6cfa43b0778d39a1aa2c193e2b511f2fe511" kind="enumvalue"><name>CRIT_TEMP</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardStatus_1a9fd931e24550f5e5877d7a6cf499f6cfa3134cc4a15dfbbeccd1305ad7f0e56cf" kind="enumvalue"><name>POSCONV</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardStatus_1a9fd931e24550f5e5877d7a6cf499f6cfa87717db1d2ce92549a0bd95890c45f63" kind="enumvalue"><name>POS_ROLLOVER</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardStatus_1a9fd931e24550f5e5877d7a6cf499f6cfa2b6b3fa06a4bf24105805b604aff7280" kind="enumvalue"><name>OTHER</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardStatus_1a9984f10f289f1a853dd4e34544be2c9d" kind="variable"><name>system_enabled</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardStatus_1ae571da09a338790e07847efb068168af" kind="variable"><name>motor1_enabled</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardStatus_1a223efb9b461331c2e80b922ec29458cf" kind="variable"><name>motor1_ready</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardStatus_1a3f21330096dc12e6ef6fa2cd2d628c06" kind="variable"><name>motor2_enabled</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardStatus_1a4f0191a042a1968c8938177ad13fb760" kind="variable"><name>motor2_ready</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardStatus_1ad1a5cb78d86e76a60750c0e3e6b34b7e" kind="variable"><name>error_code</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardStatus_1abae870151b4e76163d2e3ef6a209e555" kind="function"><name>print</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardStatus_1a1864165a46127e51af8e88f6cb93ac9b" kind="function"><name>is_ready</name></member>
+    <member refid="classblmc__drivers_1_1MotorBoardStatus_1a8b0a1accc0b4a315c05239a826429439" kind="function"><name>get_error_description</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1MotorInterface" kind="class"><name>blmc_drivers::MotorInterface</name>
+    <member refid="classblmc__drivers_1_1MotorInterface_1a35c1217dd295078c67bacc2cba08ab33" kind="enum"><name>MeasurementIndex</name></member>
+    <member refid="classblmc__drivers_1_1MotorInterface_1a35c1217dd295078c67bacc2cba08ab33a781e5fac9a7a2eafeea329774b61f9ce" kind="enumvalue"><name>current</name></member>
+    <member refid="classblmc__drivers_1_1MotorInterface_1a35c1217dd295078c67bacc2cba08ab33ab088fb75ffc5bb9a890ab8713914fb82" kind="enumvalue"><name>position</name></member>
+    <member refid="classblmc__drivers_1_1MotorInterface_1a35c1217dd295078c67bacc2cba08ab33ad0fda361d547805e453c069e2b53613e" kind="enumvalue"><name>velocity</name></member>
+    <member refid="classblmc__drivers_1_1MotorInterface_1a35c1217dd295078c67bacc2cba08ab33aa6e7aa183d7fc6ab546494580dbb60b8" kind="enumvalue"><name>encoder_index</name></member>
+    <member refid="classblmc__drivers_1_1MotorInterface_1a35c1217dd295078c67bacc2cba08ab33ad9b4b38e780d8eb8b345fb0854788bf7" kind="enumvalue"><name>measurement_count</name></member>
+    <member refid="classblmc__drivers_1_1MotorInterface_1a3001cc97aca9099cba428c4d556d8a4c" kind="typedef"><name>ScalarTimeseries</name></member>
+    <member refid="classblmc__drivers_1_1MotorInterface_1ae31f230b9da3674a05543023c90b124c" kind="typedef"><name>Ptr</name></member>
+    <member refid="classblmc__drivers_1_1MotorInterface_1a1f535a7de62ae8246f44541216254da5" kind="function"><name>~MotorInterface</name></member>
+    <member refid="classblmc__drivers_1_1MotorInterface_1a7ac16ddd18d76781612714a485dcb6bd" kind="function"><name>send_if_input_changed</name></member>
+    <member refid="classblmc__drivers_1_1MotorInterface_1a7f6afed670f078518ccb46e1e3b44892" kind="function"><name>get_measurement</name></member>
+    <member refid="classblmc__drivers_1_1MotorInterface_1a167ffe5df0412b9abcac9a93861e58d2" kind="function"><name>get_current_target</name></member>
+    <member refid="classblmc__drivers_1_1MotorInterface_1a709804e11aa22fbb3107e781c9799bdb" kind="function"><name>get_sent_current_target</name></member>
+    <member refid="classblmc__drivers_1_1MotorInterface_1a76b49a1228ad549fa407a54c8da14d13" kind="function"><name>set_current_target</name></member>
+    <member refid="classblmc__drivers_1_1MotorInterface_1a723a772b2be5beb0f07097a5b3e00a89" kind="function"><name>set_command</name></member>
+  </compound>
+  <compound refid="structmonopod__drivers_1_1Monopod_1_1PID" kind="struct"><name>monopod_drivers::Monopod::PID</name>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1PID_1ad95bdc8b37d2e53c8953021e82912fdd" kind="variable"><name>p</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1PID_1ab5deae9e3171e436d6d2912dd20c15b0" kind="variable"><name>i</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1PID_1a8d34467feda59b288daa4dedc0b328fd" kind="variable"><name>d</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1PID_1a67583a91df52df575e91a8690b2c4009" kind="function"><name>PID</name></member>
+    <member refid="structmonopod__drivers_1_1Monopod_1_1PID_1a71f1e726009c7013b9272340411eb62b" kind="function"><name>PID</name></member>
+  </compound>
+  <compound refid="classmonopod__drivers_1_1Planarizer" kind="class"><name>monopod_drivers::Planarizer</name>
+    <member refid="classmonopod__drivers_1_1Planarizer_1a8152edbb0f7466d783a517c406a1b79b" kind="enum"><name>PlanarizerIndexing</name></member>
+    <member refid="classmonopod__drivers_1_1Planarizer_1a8152edbb0f7466d783a517c406a1b79ba1df514fbb1f4cc55ebe35a7e01aadc16" kind="enumvalue"><name>boom_connector</name></member>
+    <member refid="classmonopod__drivers_1_1Planarizer_1a8152edbb0f7466d783a517c406a1b79ba1fb3c12948342087e4d4319698800965" kind="enumvalue"><name>boom_yaw</name></member>
+    <member refid="classmonopod__drivers_1_1Planarizer_1a8152edbb0f7466d783a517c406a1b79ba4683634968e2aaf3a6581b41126548b1" kind="enumvalue"><name>boom_pitch</name></member>
+    <member refid="classmonopod__drivers_1_1Planarizer_1a5a4dbb2d9e02b77aa5be823fe71a9134" kind="typedef"><name>ScalarTimeseries</name></member>
+    <member refid="classmonopod__drivers_1_1Planarizer_1a80dad3b62d61c9123b4e216cac00bc53" kind="typedef"><name>Ptr</name></member>
+    <member refid="classmonopod__drivers_1_1Planarizer_1a2f6fdebe8a1d36999b09949d81b7334e" kind="variable"><name>encoders_</name></member>
+    <member refid="classmonopod__drivers_1_1Planarizer_1a1ab339d10b9155d3aa9ec77bc0189744" kind="function"><name>Planarizer</name></member>
+    <member refid="classmonopod__drivers_1_1Planarizer_1a0e947acfbba52248467d2f6a8da4200d" kind="function"><name>~Planarizer</name></member>
+    <member refid="classmonopod__drivers_1_1Planarizer_1afcb46764d344bdbd683f040c34e8bda6" kind="function"><name>get_measurement</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1Polynome" kind="class"><name>blmc_drivers::Polynome</name>
+    <member refid="classblmc__drivers_1_1Polynome_1afce851219c03b158529f8a23f524cfb4" kind="typedef"><name>Coefficients</name></member>
+    <member refid="classblmc__drivers_1_1Polynome_1a40d284d04126171bcf2078f425467cd6" kind="variable"><name>coefficients_</name></member>
+    <member refid="classblmc__drivers_1_1Polynome_1a9fb3a4fe045b92ccca64e00d903dde90" kind="function"><name>Polynome</name></member>
+    <member refid="classblmc__drivers_1_1Polynome_1a305b8ca697bb5a3b49571662c7bc054e" kind="function"><name>~Polynome</name></member>
+    <member refid="classblmc__drivers_1_1Polynome_1a5f75bcadab1331250254f0d1cf4d52d1" kind="function"><name>compute</name></member>
+    <member refid="classblmc__drivers_1_1Polynome_1a4d62b816a893a6b299e7e950127470a8" kind="function"><name>compute_derivative</name></member>
+    <member refid="classblmc__drivers_1_1Polynome_1ac13e8454c6ce1a7e787f610228d44b1c" kind="function"><name>compute_sec_derivative</name></member>
+    <member refid="classblmc__drivers_1_1Polynome_1a218cf137062caff407d6aa07b38cc92e" kind="function"><name>get_coefficients</name></member>
+    <member refid="classblmc__drivers_1_1Polynome_1a119279049322294df3e2ccc0069d45e5" kind="function"><name>set_coefficients</name></member>
+    <member refid="classblmc__drivers_1_1Polynome_1ad50c25978571916f1c164c579f207092" kind="function"><name>degree</name></member>
+    <member refid="classblmc__drivers_1_1Polynome_1a4a82341b9b433e2baae7e407ff794978" kind="function"><name>print</name></member>
+  </compound>
+  <compound refid="structmonopod__drivers_1_1Planarizer_1_1ReturnValueStatus" kind="struct"><name>monopod_drivers::Planarizer::ReturnValueStatus</name>
+    <member refid="structmonopod__drivers_1_1Planarizer_1_1ReturnValueStatus_1a167fe3160bd11fdf49ad8bc75ad22c91" kind="variable"><name>valid</name></member>
+    <member refid="structmonopod__drivers_1_1Planarizer_1_1ReturnValueStatus_1a972f9394b4b795b7206f337ad6d05c6e" kind="variable"><name>value_series</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1SafeMotor" kind="class"><name>blmc_drivers::SafeMotor</name>
+    <member refid="classblmc__drivers_1_1SafeMotor_1ae58230855ac502d9c702304d785eb833" kind="variable"><name>max_current_target_</name></member>
+    <member refid="classblmc__drivers_1_1SafeMotor_1a1885b2a1c298765cae0a7ccda75d5f3f" kind="variable"><name>max_velocity_</name></member>
+    <member refid="classblmc__drivers_1_1SafeMotor_1af79e6910868177f18a498ea83b350e3f" kind="variable"><name>current_target_</name></member>
+    <member refid="classblmc__drivers_1_1SafeMotor_1a6e9cda054c161d28f062955d97e73f82" kind="function"><name>SafeMotor</name></member>
+    <member refid="classblmc__drivers_1_1SafeMotor_1ae40e4c51272c46f037ea0ba393b2033e" kind="function"><name>get_current_target</name></member>
+    <member refid="classblmc__drivers_1_1SafeMotor_1aa3c4e1f8c49da3bdd05b925992f153c7" kind="function"><name>set_current_target</name></member>
+    <member refid="classblmc__drivers_1_1SafeMotor_1ad4f4bb531e2a9e7f965b319afb53d43c" kind="function"><name>set_max_current</name></member>
+    <member refid="classblmc__drivers_1_1SafeMotor_1aaa0083a39d815d7b3cd38c680bfea48a" kind="function"><name>set_max_velocity</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1SerialReader" kind="class"><name>blmc_drivers::SerialReader</name>
+    <member refid="classblmc__drivers_1_1SerialReader_1a37e1129c27b41cd9f5b4317081b217d8" kind="variable"><name>is_loop_active_</name></member>
+    <member refid="classblmc__drivers_1_1SerialReader_1a89a2a93d8a9e59738f41d8b69cb112d0" kind="variable"><name>rt_thread_</name></member>
+    <member refid="classblmc__drivers_1_1SerialReader_1abf30ca34b8f61706a763a431dff68e94" kind="variable"><name>fd_</name></member>
+    <member refid="classblmc__drivers_1_1SerialReader_1abb0700e8e752917876798db18a0421db" kind="variable"><name>has_error_</name></member>
+    <member refid="classblmc__drivers_1_1SerialReader_1abf6fd962e185be25e6c61c63f8eb0cc9" kind="variable"><name>is_active_</name></member>
+    <member refid="classblmc__drivers_1_1SerialReader_1a862829c3e7f3c59b1e3be49b61e6cfb5" kind="variable"><name>new_data_counter_</name></member>
+    <member refid="classblmc__drivers_1_1SerialReader_1a516bbec3112f46bb6442858d2d9446bf" kind="variable"><name>missed_data_counter_</name></member>
+    <member refid="classblmc__drivers_1_1SerialReader_1ac6f46fc37c9ce41908ad76b012d2160b" kind="variable"><name>latest_values_</name></member>
+    <member refid="classblmc__drivers_1_1SerialReader_1a38d2ba095d199db4ae9858b888ef20de" kind="variable"><name>mutex_</name></member>
+    <member refid="classblmc__drivers_1_1SerialReader_1a894216b6799b0ea9945f8a1cf98f9801" kind="function"><name>SerialReader</name></member>
+    <member refid="classblmc__drivers_1_1SerialReader_1ad380cab063a9bfe81f39b1a3bfb8065e" kind="function"><name>~SerialReader</name></member>
+    <member refid="classblmc__drivers_1_1SerialReader_1aa590c82f97cfa6d9222bc3d19952f166" kind="function"><name>fill_vector</name></member>
+    <member refid="classblmc__drivers_1_1SerialReader_1aaa18311d9c274b0ac8a8bd86a311d3fc" kind="function"><name>loop</name></member>
+    <member refid="classblmc__drivers_1_1SerialReader_1a24a8f28fa8e56934baa1d0b9fef7a045" kind="function"><name>loop</name></member>
+  </compound>
+  <compound refid="classblmc__drivers_1_1TimePolynome" kind="class"><name>blmc_drivers::TimePolynome</name>
+    <member refid="classblmc__drivers_1_1TimePolynome_1a6586c2ac22f95258e42617cc9c8078ee" kind="variable"><name>final_time_</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1a30e58e7fd16f687808bd83b2d5139a49" kind="variable"><name>init_pose_</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1af93a7bd6dd475ce687d708e190211bce" kind="variable"><name>init_speed_</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1aa43ec29e0edcdac2bc8f3cbcf16d8c2f" kind="variable"><name>init_acc_</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1a9528f22f5181b02a7bf90b5ae8dbbd69" kind="variable"><name>final_pose_</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1a551d18ccd041e19a51161480dd53d8d8" kind="variable"><name>final_speed_</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1ad41bb609025f9a0d10ed2931f7f29112" kind="variable"><name>final_acc_</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1a82ab9fbfff93c560df872a2179326212" kind="function"><name>TimePolynome</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1af49d96499fc76d5a31fd2ccc50c4f706" kind="function"><name>~TimePolynome</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1a187e8bc91566353df7260c8dd89daeb7" kind="function"><name>compute</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1ab80cfbdad8aef42abd123ba6559f8031" kind="function"><name>compute_derivative</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1a9e9609e2790ade5a1f4011ef712f0987" kind="function"><name>compute_sec_derivative</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1ac805f0f1686da7767eecfe21fbef4dda" kind="function"><name>get_final_time</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1a0f0b6f0b5076e851f938985ef8ab7c27" kind="function"><name>get_init_pose</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1ab40106f4e279d19d216cd9af35e05ec6" kind="function"><name>get_init_speed</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1afc818e65468cdc982cc5a6a5be858567" kind="function"><name>get_init_acc</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1a6442edf403c3f35a011840191daae82d" kind="function"><name>get_final_pose</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1a20a8f530176e6f048b50402b17701144" kind="function"><name>get_final_speed</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1ae67fa60ccecff41b536ba67fe586db81" kind="function"><name>get_final_acc</name></member>
+    <member refid="classblmc__drivers_1_1TimePolynome_1ab28c7aa6af79ce2c8c900d1be977b985" kind="function"><name>set_parameters</name></member>
+  </compound>
+  <compound refid="namespaceblmc__drivers" kind="namespace"><name>blmc_drivers</name>
+    <member refid="namespaceblmc__drivers_1a11758ee4f3b1c7ddaac64308b143346b" kind="enum"><name>HomingReturnCode</name></member>
+    <member refid="namespaceblmc__drivers_1a11758ee4f3b1c7ddaac64308b143346ba02de9649e258d1dd94056e676061e969" kind="enumvalue"><name>NOT_INITIALIZED</name></member>
+    <member refid="namespaceblmc__drivers_1a11758ee4f3b1c7ddaac64308b143346ba43491564ebcfd38568918efbd6e840fd" kind="enumvalue"><name>RUNNING</name></member>
+    <member refid="namespaceblmc__drivers_1a11758ee4f3b1c7ddaac64308b143346bafd9f6519d3f45276829fe74eb2c4bb85" kind="enumvalue"><name>SUCCEEDED</name></member>
+    <member refid="namespaceblmc__drivers_1a11758ee4f3b1c7ddaac64308b143346bab9e14d9b2886bcff408b85aefa780419" kind="enumvalue"><name>FAILED</name></member>
+    <member refid="namespaceblmc__drivers_1a38568fb9695f9b7dd36a3d57b01adc24" kind="enum"><name>GoToReturnCode</name></member>
+    <member refid="namespaceblmc__drivers_1a38568fb9695f9b7dd36a3d57b01adc24a43491564ebcfd38568918efbd6e840fd" kind="enumvalue"><name>RUNNING</name></member>
+    <member refid="namespaceblmc__drivers_1a38568fb9695f9b7dd36a3d57b01adc24afd9f6519d3f45276829fe74eb2c4bb85" kind="enumvalue"><name>SUCCEEDED</name></member>
+    <member refid="namespaceblmc__drivers_1a38568fb9695f9b7dd36a3d57b01adc24ab9e14d9b2886bcff408b85aefa780419" kind="enumvalue"><name>FAILED</name></member>
+    <member refid="namespaceblmc__drivers_1a2b12ded3c170597eb7c4d2d232f650a6" kind="typedef"><name>mi</name></member>
+    <member refid="namespaceblmc__drivers_1ac53e35d4ccbd21de67f13e28ddf58bd5" kind="typedef"><name>BlmcJointModule_ptr</name></member>
+    <member refid="namespaceblmc__drivers_1add73ea2a43509013ad00665753f175e1" kind="function"><name>create_vector_of_pointers</name></member>
+  </compound>
+  <compound refid="namespacemonopod__drivers" kind="namespace"><name>monopod_drivers</name>
+  </compound>
+  <compound refid="namespaceosi" kind="namespace"><name>osi</name>
+    <member refid="namespaceosi_1ac3d484da0f89f06e329d4b84d7459d9b" kind="typedef"><name>Mutex</name></member>
+    <member refid="namespaceosi_1a31b1ce104b168554e4832b5d3b684073" kind="typedef"><name>ConditionVariable</name></member>
+    <member refid="namespaceosi_1a001686caee0f34611f14ab94c7303254" kind="function"><name>send_to_can_device</name></member>
+    <member refid="namespaceosi_1a92dc20de3b4933a10f24c98cecf2568b" kind="function"><name>close_can_device</name></member>
+    <member refid="namespaceosi_1a244466c0afc9ae9fe059cee665fb0603" kind="function"><name>receive_message_from_can_device</name></member>
+    <member refid="namespaceosi_1a48e36c862c77befc86f53140722c3f43" kind="function"><name>initialize_realtime_printing</name></member>
+    <member refid="namespaceosi_1a499cdf6336a907d1327044b0f595f3a9" kind="function"><name>sleep_ms</name></member>
+    <member refid="namespaceosi_1a2409ab591c4f78d9a8bcfbbe38df9429" kind="function"><name>get_current_time_ms</name></member>
+    <member refid="namespaceosi_1af6772d4aea95e99bc2bd0aabc557a20e" kind="function"><name>make_this_thread_realtime</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="blmc__joint__module_8hpp" kind="file"><name>blmc_joint_module.hpp</name>
+  </compound>
+  <compound refid="analog__sensor_8hpp" kind="file"><name>analog_sensor.hpp</name>
+  </compound>
+  <compound refid="can__bus_8hpp" kind="file"><name>can_bus.hpp</name>
+  </compound>
+  <compound refid="device__interface_8hpp" kind="file"><name>device_interface.hpp</name>
+  </compound>
+  <compound refid="motor_8hpp" kind="file"><name>motor.hpp</name>
+  </compound>
+  <compound refid="motor__board_8hpp" kind="file"><name>motor_board.hpp</name>
+  </compound>
+  <compound refid="serial__reader_8hpp" kind="file"><name>serial_reader.hpp</name>
+  </compound>
+  <compound refid="os__interface_8hpp" kind="file"><name>os_interface.hpp</name>
+    <member refid="os__interface_8hpp_1a25df6b00e3fd8b8740896ecc5c337fdc" kind="define"><name>rt_fprintf</name></member>
+    <member refid="os__interface_8hpp_1a1acf1ce04ab7fe3a5972c0618adcbbac" kind="define"><name>rt_printf</name></member>
+    <member refid="os__interface_8hpp_1ac420926cbb955a79a41eba7cec1bc1c8" kind="define"><name>rt_dev_socket</name></member>
+    <member refid="os__interface_8hpp_1a81e55d2bdf351cd53218a3085ba56955" kind="define"><name>rt_dev_ioctl</name></member>
+    <member refid="os__interface_8hpp_1a7be59cefa5f5e5da067c04078f504aa6" kind="define"><name>rt_dev_close</name></member>
+    <member refid="os__interface_8hpp_1a80d28afb04b8db1e0192593ebcb4d07b" kind="define"><name>rt_dev_setsockopt</name></member>
+    <member refid="os__interface_8hpp_1a68219f584f63b92f4d23bd708140056d" kind="define"><name>rt_dev_bind</name></member>
+    <member refid="os__interface_8hpp_1ab599460d70a4af2e3bcb07b395f13ad4" kind="define"><name>rt_dev_recvmsg</name></member>
+    <member refid="os__interface_8hpp_1ad9b081422ea995f98485f5545e20211d" kind="define"><name>rt_dev_sendto</name></member>
+    <member refid="os__interface_8hpp_1a8bc67ce447b2fa424a45f3e01162035f" kind="typedef"><name>can_frame_t</name></member>
+    <member refid="os__interface_8hpp_1ab9491ad99890aa9ecf1785d1edd23d64" kind="typedef"><name>can_id_t</name></member>
+    <member refid="os__interface_8hpp_1ad3b24c25feabadba465f8797d8c7fe27" kind="typedef"><name>nanosecs_abs_t</name></member>
+  </compound>
+  <compound refid="polynome_8hpp" kind="file"><name>polynome.hpp</name>
+  </compound>
+  <compound refid="monopod_8hpp" kind="file"><name>monopod.hpp</name>
+  </compound>
+  <compound refid="encoder_8hpp" kind="file"><name>encoder.hpp</name>
+  </compound>
+  <compound refid="leg_8hpp" kind="file"><name>leg.hpp</name>
+  </compound>
+  <compound refid="planarizer_8hpp" kind="file"><name>planarizer.hpp</name>
+  </compound>
+  <compound refid="todo" kind="page"><name>todo</name>
+  </compound>
+  <compound refid="deprecated" kind="page"><name>deprecated</name>
+  </compound>
+  <compound refid="dir_e9e7563bc244c528b70f65290971864a" kind="dir"><name>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers</name>
+  </compound>
+  <compound refid="dir_00e9ac52157f8b47e0f62711376e4fb1" kind="dir"><name>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers</name>
+  </compound>
+  <compound refid="dir_aebb8dcc11953d78e620bbef0b9e2183" kind="dir"><name>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core</name>
+  </compound>
+  <compound refid="dir_2ac94ae005b32fb86a69b3d452a71b89" kind="dir"><name>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/devices</name>
+  </compound>
+  <compound refid="dir_8f49dd062eda24395df599c5385a3cb1" kind="dir"><name>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include</name>
+  </compound>
+  <compound refid="dir_7d380fef97ae856075aed8812cfa53ca" kind="dir"><name>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include</name>
+  </compound>
+  <compound refid="dir_a6d8ebd260b9f3d50a2ebb4cf36d0c53" kind="dir"><name>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include</name>
+  </compound>
+  <compound refid="dir_1ac08f5593942ae8d8b9ea3ccfffccc9" kind="dir"><name>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers</name>
+  </compound>
+  <compound refid="dir_786cc21328ac71e18262753f28c7c6b6" kind="dir"><name>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers</name>
+  </compound>
+  <compound refid="dir_b30d693e3184df559304c75f75f6ac7e" kind="dir"><name>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk</name>
+  </compound>
+  <compound refid="dir_adb3ea257a5bf6c2cfb05b4ce6f17b5f" kind="dir"><name>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk</name>
+  </compound>
+  <compound refid="dir_03d823ee877bf4048935fabb675d239d" kind="dir"><name>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src</name>
+  </compound>
+  <compound refid="dir_6851bcda45acfc2e72afed48180266f9" kind="dir"><name>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers/include/monopod_sdk/blmc_drivers/utils</name>
+  </compound>
+</doxygenindex>

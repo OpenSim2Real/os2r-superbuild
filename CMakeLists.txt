@@ -50,9 +50,11 @@ endif()
 
 set(PROJECT_SOURCE_DIR_SETUP_SH ${PROJECT_SOURCE_DIR})
 set(YCM_EP_INSTALL_DIR_SETUP_SH ${YCM_EP_INSTALL_DIR})
+set(SUB_PROJECTS_BUILD_DIR ${PROJECT_BINARY_DIR})
 
-message("PROJECT_SOURCE_DIR_SETUP_SH: ${PROJECT_SOURCE_DIR_SETUP_SH}")
-message("YCM_EP_INSTALL_DIR_SETUP_SH: ${YCM_EP_INSTALL_DIR_SETUP_SH}")
+message(STATUS "PROJECT_SOURCE_DIR_SETUP_SH: ${PROJECT_SOURCE_DIR_SETUP_SH}")
+message(STATUS "YCM_EP_INSTALL_DIR_SETUP_SH: ${YCM_EP_INSTALL_DIR_SETUP_SH}")
+message(STATUS "SUB_PROJECTS_BUILD_DIR: ${SUB_PROJECTS_BUILD_DIR}")
 
 include(ConfigureFileWithCMakeIf)
 configure_file_with_cmakeif(${CMAKE_CURRENT_SOURCE_DIR}/cmake/template/setup.sh.in ${YCM_EP_INSTALL_DIR}/share/${PROJECT_NAME}/setup.sh @ONLY)
@@ -63,5 +65,12 @@ set_package_properties(Git PROPERTIES TYPE RUNTIME)
 set_package_properties(Subversion PROPERTIES TYPE RUNTIME)
 set_package_properties(PkgConfig PROPERTIES TYPE RUNTIME)
 set_package_properties(Doxygen PROPERTIES TYPE RUNTIME)
+
+if(OPENSIM2REAL_ENABLE_DOC_COMPILATION)
+    IF(NOT OPENSIM2REAL_ENABLE_ALL)
+      message(FATAL_ERROR "Need to enable compilation of all components to build documentation.")
+    ENDIF()
+    add_subdirectory(docs)
+endif()
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

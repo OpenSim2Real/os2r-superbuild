@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="leg_8hpp" kind="file" language="C++">
+    <compoundname>leg.hpp</compoundname>
+    <includes local="no">map</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">time_series/time_series.hpp</includes>
+    <includes refid="device__interface_8hpp" local="no">monopod_sdk/blmc_drivers/devices/device_interface.hpp</includes>
+    <includes refid="motor_8hpp" local="no">monopod_sdk/blmc_drivers/devices/motor.hpp</includes>
+    <includedby refid="monopod_8hpp" local="yes">/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>time_series/time_series.hpp</label>
+      </node>
+      <node id="21">
+        <label>net/if.h</label>
+      </node>
+      <node id="8">
+        <label>real_time_tools/timer.hpp</label>
+      </node>
+      <node id="16">
+        <label>stdint.h</label>
+      </node>
+      <node id="32">
+        <label>sys/mman.h</label>
+      </node>
+      <node id="18">
+        <label>stdlib.h</label>
+      </node>
+      <node id="10">
+        <label>real_time_tools/thread.hpp</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="26">
+        <label>linux/can/raw.h</label>
+      </node>
+      <node id="2">
+        <label>map</label>
+      </node>
+      <node id="22">
+        <label>sys/ioctl.h</label>
+      </node>
+      <node id="25">
+        <label>linux/can.h</label>
+      </node>
+      <node id="6">
+        <label>monopod_sdk/blmc_drivers/devices/device_interface.hpp</label>
+        <link refid="device__interface_8hpp"/>
+      </node>
+      <node id="14">
+        <label>real_time_tools/threadsafe/threadsafe_object.hpp</label>
+      </node>
+      <node id="1">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp</label>
+        <link refid="leg_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>limits.h</label>
+      </node>
+      <node id="13">
+        <label>real_time_tools/spinner.hpp</label>
+      </node>
+      <node id="12">
+        <label>real_time_tools/iostream.hpp</label>
+      </node>
+      <node id="29">
+        <label>condition_variable</label>
+      </node>
+      <node id="24">
+        <label>sys/types.h</label>
+      </node>
+      <node id="19">
+        <label>string.h</label>
+      </node>
+      <node id="20">
+        <label>unistd.h</label>
+      </node>
+      <node id="9">
+        <label>monopod_sdk/blmc_drivers/devices/motor_board.hpp</label>
+        <link refid="motor__board_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>sstream</label>
+      </node>
+      <node id="28">
+        <label>iostream</label>
+      </node>
+      <node id="30">
+        <label>mutex</label>
+      </node>
+      <node id="23">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="11">
+        <label>monopod_sdk/blmc_drivers/devices/can_bus.hpp</label>
+        <link refid="can__bus_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>monopod_sdk/blmc_drivers/utils/os_interface.hpp</label>
+        <link refid="os__interface_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>stdio.h</label>
+      </node>
+      <node id="7">
+        <label>monopod_sdk/blmc_drivers/devices/motor.hpp</label>
+        <link refid="motor_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp</label>
+        <link refid="leg_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp</label>
+        <link refid="monopod_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classmonopod__drivers_1_1LegInterface" prot="public">monopod_drivers::LegInterface</innerclass>
+    <innerclass refid="classmonopod__drivers_1_1Leg" prot="public">monopod_drivers::Leg</innerclass>
+    <innernamespace refid="namespacemonopod__drivers">monopod_drivers</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>@license License BSD-3-Clause <simplesect kind="copyright"><para>Copyright (c) 2019, New York University and Max Planck Gesellschaft. </para>
+</simplesect>
+<simplesect kind="date"><para>2019-07-11 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time_series/time_series.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="device__interface_8hpp" kindref="compound">monopod_sdk/blmc_drivers/devices/device_interface.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="motor_8hpp" kindref="compound">monopod_sdk/blmc_drivers/devices/motor.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">monopod_drivers</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26" refid="classmonopod__drivers_1_1LegInterface" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmonopod__drivers_1_1LegInterface" kindref="compound">LegInterface</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32" refid="classmonopod__drivers_1_1LegInterface_1ad76d8561b5b0a7e1c08221031d8ace98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>time_series::TimeSeries&lt;double&gt;<sp/><ref refid="classmonopod__drivers_1_1LegInterface_1ad76d8561b5b0a7e1c08221031d8ace98" kindref="member">ScalarTimeseries</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="41" refid="classmonopod__drivers_1_1LegInterface_1a36fa908a00559c94cbdb4aa4abf7540a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1LegInterface_1a36fa908a00559c94cbdb4aa4abf7540a" kindref="member">Ptr</ref><sp/>=<sp/>std::shared_ptr&lt;Type&gt;;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classmonopod__drivers_1_1LegInterface_1ac2c4718f8cb3e383bcee3c78596a60e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1LegInterface_1ac2c4718f8cb3e383bcee3c78596a60e2" kindref="member">MotorMeasurementIndexing</ref></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>velocity,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>encoder_index,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>motor_measurement_count</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classmonopod__drivers_1_1LegInterface_1a4946ce264b48b90ee2425e42393bbaee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1LegInterface_1a4946ce264b48b90ee2425e42393bbaee" kindref="member">MotorIndexing</ref></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hip,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>knee,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>motor_count</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classmonopod__drivers_1_1LegInterface_1a48453c5c0bff275dcdb3e19e2b94e4d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1LegInterface_1a48453c5c0bff275dcdb3e19e2b94e4d4" kindref="member">~LegInterface</ref>()</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>Ptr&lt;const<sp/>ScalarTimeseries&gt;<sp/><ref refid="classmonopod__drivers_1_1LegInterface_1ac4ae99c81c39af715a7428c64323a04e" kindref="member">get_measurement</ref>(</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>motor_index,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>measurement_index)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>Ptr&lt;const<sp/>ScalarTimeseries&gt;<sp/><ref refid="classmonopod__drivers_1_1LegInterface_1a95051490d3ee07fcc9234e1811e1cca3" kindref="member">get_current_target</ref>(</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>motor_index)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>Ptr&lt;const<sp/>ScalarTimeseries&gt;<sp/><ref refid="classmonopod__drivers_1_1LegInterface_1a81929f53cf334b2cdd13837b4426a79c" kindref="member">get_sent_current_target</ref>(</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>motor_index)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1LegInterface_1aad16328d72584df2a1199fa494180c58" kindref="member">set_current_target</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>current_target,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>motor_index)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1LegInterface_1ae8bec5d889370df3cbe89c8e9a843ae3" kindref="member">send_if_input_changed</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="classmonopod__drivers_1_1Leg" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmonopod__drivers_1_1Leg" kindref="compound">Leg</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1LegInterface" kindref="compound">LegInterface</ref></highlight></codeline>
+<codeline lineno="141"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="149" refid="classmonopod__drivers_1_1Leg_1a55f8a83fa177de4b2ea822b944266c33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmonopod__drivers_1_1Leg_1a55f8a83fa177de4b2ea822b944266c33" kindref="member">Leg</ref>(std::shared_ptr&lt;blmc_drivers::SafeMotor&gt;<sp/>hip_motor,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;blmc_drivers::SafeMotor&gt;<sp/>knee_motor)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmonopod__drivers_1_1Leg_1a33f02259d43fe35a0e0e534d6659c484" kindref="member">motors_</ref>[hip]<sp/>=<sp/>hip_motor;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmonopod__drivers_1_1Leg_1a33f02259d43fe35a0e0e534d6659c484" kindref="member">motors_</ref>[knee]<sp/>=<sp/>knee_motor;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="classmonopod__drivers_1_1Leg_1ad23bba917d977d2e94004ffdd3c89254" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1Leg_1ad23bba917d977d2e94004ffdd3c89254" kindref="member">~Leg</ref>()</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="classmonopod__drivers_1_1Leg_1a7d03ca429b2a741a89d88bf0f6273ed6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1LegInterface_1a36fa908a00559c94cbdb4aa4abf7540a" kindref="member">Ptr&lt;const ScalarTimeseries&gt;</ref><sp/><ref refid="classmonopod__drivers_1_1Leg_1a7d03ca429b2a741a89d88bf0f6273ed6" kindref="member">get_measurement</ref>(</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>motor_index,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>measurement_index)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="176"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1Leg_1a33f02259d43fe35a0e0e534d6659c484" kindref="member">motors_</ref>[motor_index]-&gt;get_measurement(measurement_index);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>input<sp/>logs<sp/>--------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="classmonopod__drivers_1_1Leg_1adf6548bfc1450ab0237fe467fe35c4e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1LegInterface_1a36fa908a00559c94cbdb4aa4abf7540a" kindref="member">Ptr&lt;const ScalarTimeseries&gt;</ref><sp/><ref refid="classmonopod__drivers_1_1Leg_1adf6548bfc1450ab0237fe467fe35c4e0" kindref="member">get_current_target</ref>(</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>motor_index)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="183"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1Leg_1a33f02259d43fe35a0e0e534d6659c484" kindref="member">motors_</ref>[motor_index]-&gt;get_current_target();</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186" refid="classmonopod__drivers_1_1Leg_1ab4a79dc1c5e7f1f6379b318e646993bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1LegInterface_1a36fa908a00559c94cbdb4aa4abf7540a" kindref="member">Ptr&lt;const ScalarTimeseries&gt;</ref><sp/><ref refid="classmonopod__drivers_1_1Leg_1ab4a79dc1c5e7f1f6379b318e646993bb" kindref="member">get_sent_current_target</ref>(</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>motor_index)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="188"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1Leg_1a33f02259d43fe35a0e0e534d6659c484" kindref="member">motors_</ref>[motor_index]-&gt;get_sent_current_target();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="classmonopod__drivers_1_1Leg_1a1a9538f618cb160ce35b64b90e7d2d11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1Leg_1a1a9538f618cb160ce35b64b90e7d2d11" kindref="member">set_current_target</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>current_target,</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>motor_index)</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmonopod__drivers_1_1Leg_1a33f02259d43fe35a0e0e534d6659c484" kindref="member">motors_</ref>[motor_index]-&gt;set_current_target(current_target);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="classmonopod__drivers_1_1Leg_1a37a24b9951626e9970e5666435b86fa8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1Leg_1a37a24b9951626e9970e5666435b86fa8" kindref="member">send_if_input_changed</ref>()</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classmonopod__drivers_1_1Leg_1a33f02259d43fe35a0e0e534d6659c484" kindref="member">motors_</ref>.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmonopod__drivers_1_1Leg_1a33f02259d43fe35a0e0e534d6659c484" kindref="member">motors_</ref>[i]-&gt;<ref refid="classmonopod__drivers_1_1Leg_1a37a24b9951626e9970e5666435b86fa8" kindref="member">send_if_input_changed</ref>();</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"></codeline>
+<codeline lineno="211" refid="classmonopod__drivers_1_1Leg_1a33f02259d43fe35a0e0e534d6659c484" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::array&lt;std::shared_ptr&lt;blmc_drivers::SafeMotor&gt;,<sp/>2&gt;<sp/><ref refid="classmonopod__drivers_1_1Leg_1a33f02259d43fe35a0e0e534d6659c484" kindref="member">motors_</ref>;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>blmc_drivers</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers/include/monopod_sdk/monopod_drivers/leg.hpp"/>
+  </compounddef>
+</doxygen>

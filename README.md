@@ -123,6 +123,7 @@ cmake --build build
 option(OPENSIM2REAL_ENABLE_MONOPODSDK "Enable compilation of monopod_sdk." FALSE)
 option(OPENSIM2REAL_ENABLE_SCENARIO "Enable compilation of scenario." FALSE)
 option(OPENSIM2REAL_ENABLE_GYMIGNITION "Install gym_ignition python module if scenario is enabled. Requires python to be enabled." TRUE)
+option(OPENSIM2REAL_ENABLE_GYMOS2R "Install gym_os2r python module if scenario/gym-ignition is enabled. Requires python to be enabled." FALSE)
 option(OPENSIM2REAL_ENABLE_ALL "Enable compilation of scenario." FALSE)
 
 option(OPENSIM2REAL_USES_PYTHON "Enable compilation of software that depend on Python" TRUE)
@@ -153,11 +154,30 @@ echo 'source <Install Dir>/os2r-superbuild/build/install/share/os2r-superbuild/s
 # Dependencies required to compile docs
 
 ```
-pip install sphinx-multiversion
-pip install sphinx_autodoc_typehints
-pip install sphinx_fontawesome
+pip install sphinx-multiversion sphinx_autodoc_typehints sphinx_fontawesome sphinx_book_theme sphinx_tabs lxml
 pip install -U breathe
-pip install sphinx_tabs
-pip install sphinx_book_theme
-pip install lxml
+```
+
+To compile the docs run the below commands during the build,
+
+```
+cmake -S . -B build -DOPENSIM2REAL_ENABLE_ALL:BOOL=TRUE -DOPENSIM2REAL_ENABLE_DOC_COMPILATION:BOOL=TRUE
+cmake --build build
+```
+
+Finally to update the docs use the below sequence,
+
+```
+git checkout gh-pages
+git rm -r -f .
+mv  -v ./build/html/* ./
+```
+Now just manually remove the `build` and `src` directory before commiting and pushing to gh-pages.
+
+# Can update the repos using the below commands
+
+To do this, make sure to be in the build directory of the OpenSim2Real-superbuild and run:
+```
+make update-all
+make
 ```
