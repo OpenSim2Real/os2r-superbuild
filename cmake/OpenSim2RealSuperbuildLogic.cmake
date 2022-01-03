@@ -117,7 +117,7 @@ if(OPENSIM2REAL_ENABLE_SCENARIO OR OPENSIM2REAL_ENABLE_ALL OR OPENSIM2REAL_ENABL
   # If no fatal error during check for pre installed versions build gym-ignition/scenario
   find_or_build_package(gym-ignition)
 
-  IF(NOT OPENSIM2REAL_ENABLE_SIMULATION_ONLY)
+  IF(NOT OPENSIM2REAL_ENABLE_SIMULATION_ONLY AND OPENSIM2REAL_ENABLE_SCENARIO_MONOPOD)
     # Simulation only mode does not use scenario_monopod
     find_or_build_package(scenario_monopod)
   ENDIF()
@@ -159,7 +159,7 @@ if(OPENSIM2REAL_ENABLE_SCENARIO OR OPENSIM2REAL_ENABLE_ALL OR OPENSIM2REAL_ENABL
         )
     endif()
 
-    if(OPENSIM2REAL_ENABLE_GYMOS2R OR OPENSIM2REAL_ENABLE_ALL OR OPENSIM2REAL_ENABLE_SIMULATION_ONLY)
+    if(OPENSIM2REAL_ENABLE_GYMOS2R OR (OPENSIM2REAL_ENABLE_ALL AND NOT OPENSIM2REAL_ENABLE_SIMULATION_ONLY))
         # Build gym-os2r if enabled for if simulation only is selected.
         find_or_build_package(gym-os2r)
 

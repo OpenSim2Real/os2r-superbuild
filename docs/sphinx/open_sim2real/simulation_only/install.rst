@@ -1,9 +1,9 @@
-Install Simulation
-==================
+Installation
+============
 
-Source Installation
--------------------
+.. toctree::
+  :caption: Installation
 
-
-Superbuild Installation
------------------------
+  support_policy
+  developer_install
+  user_install
