@@ -1,0 +1,975 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scenario::monopod &#8212; overlord_docs  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Python Bindings" href="../python/index.html" />
+    <link rel="prev" title="scenario::monopod API" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Open Sim2Real
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Monopod Sdk Package:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../monopod_sdk_docs/introduction/index.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../monopod_sdk_docs/introduction/intro.html">
+     Package Structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../monopod_sdk_docs/introduction/install.html">
+     Installation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../monopod_sdk_docs/monopod_drivers_docs/index.html">
+   Monopod Drivers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../monopod_sdk_docs/monopod_drivers_docs/intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../monopod_sdk_docs/monopod_drivers_docs/monopod_drivers.html">
+     monopod_drivers:: API
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../monopod_sdk_docs/blmc_drivers_docs/index.html">
+   Blmc Drivers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../monopod_sdk_docs/blmc_drivers_docs/intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../monopod_sdk_docs/blmc_drivers_docs/homing.html">
+     Homing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../monopod_sdk_docs/blmc_drivers_docs/blmc_drivers.html">
+     blmc_drivers:: API
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ScenarIO Monopod Package:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../introduction/index.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/intro.html">
+     Package Structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/install.html">
+     Installation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   scenario::monopod API
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     scenario::monopod
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../python/index.html">
+   Python Bindings
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/scenario/scenario.bindings.html">
+     scenario.bindings
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Gym Open Sim2Real Package
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../gym-os2r_docs/introduction/index.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gym-os2r_docs/introduction/intro.html">
+     Package Structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gym-os2r_docs/introduction/install.html">
+     Installation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.html">
+   gym_os2r
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.common.html">
+     gym_os2r.common
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.common.vec_env.html">
+       gym_os2r.common.vec_env
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.models.html">
+     gym_os2r.models
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.models.config.html">
+       gym_os2r.models.config
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.models.models.html">
+       gym_os2r.models.models
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.randomizers.html">
+     gym_os2r.randomizers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.rewards.html">
+     gym_os2r.rewards
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.runtime.html">
+     gym_os2r.runtime
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.tasks.html">
+     gym_os2r.tasks
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav>
+<nav id="bd-docs-nav" class="bd-links" aria-label="Versions navigation">
+  <div class="bd-toc-item active">
+    <p class="caption">
+      <span class="caption-text">Doc Versions</span>
+    </p>
+    <ul class="nav bd-sidenav">
+      <li class="toctree-l1"><a class="reference internal" href="scenario_monopod_cpp.html">doc-option1</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="../../../doc-option2/scenario_monopod_docs/cpp/scenario_monopod_cpp.html">doc-option2</a></li>
+    </ul>
+  </div>
+</nav>
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/OpenSim2Real/scenario_monopod"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/OpenSim2Real/scenario_monopod/issues/new?title=Issue%20on%20page%20%2Fscenario_monopod_docs/cpp/scenario_monopod_cpp.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/OpenSim2Real/scenario_monopod/edit/master/docs/sphinx/scenario_monopod_docs/cpp/scenario_monopod_cpp.rst"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="scenario-monopod">
+<span id="scenario-monopod-cpp"></span><h1>scenario::monopod<a class="headerlink" href="#scenario-monopod" title="Permalink to this headline">¶</a></h1>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N8scenario7monopodE">
+<span id="_CPPv3N8scenario7monopodE"></span><span id="_CPPv2N8scenario7monopodE"></span><span id="scenario::monopod"></span><span class="target" id="namespacescenario_1_1monopod"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">scenario</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">monopod</span></span></span><a class="headerlink" href="#_CPPv4N8scenario7monopodE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8scenario7monopod5JointE">
+<span id="_CPPv3N8scenario7monopod5JointE"></span><span id="_CPPv2N8scenario7monopod5JointE"></span><span id="scenario::monopod::Joint"></span><span class="target" id="classscenario_1_1monopod_1_1Joint"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Joint</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8scenario7monopod5JointE" title="scenario::monopod::Joint"><span class="n"><span class="pre">Joint</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">enable_shared_from_this</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">scenario</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8scenario7monopodE" title="scenario::monopod"><span class="n"><span class="pre">monopod</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8scenario7monopod5JointE" title="scenario::monopod::Joint"><span class="n"><span class="pre">Joint</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N8scenario7monopod5JointE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Joint5validEv">
+<span id="_CPPv3NK8scenario7monopod5Joint5validEv"></span><span id="_CPPv2NK8scenario7monopod5Joint5validEv"></span><span id="scenario::monopod::Joint::validC"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a1e17751be3fbd3c18cc37dba97c5b857"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">valid</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Joint5validEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if the joint is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if the model is valid, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Joint4dofsEv">
+<span id="_CPPv3NK8scenario7monopod5Joint4dofsEv"></span><span id="_CPPv2NK8scenario7monopod5Joint4dofsEv"></span><span id="scenario::monopod::Joint::dofsC"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a489c67a5543f2583b3c4876ebfcffff7"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dofs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Joint4dofsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the number of degrees of freedom of the joint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The number of DOFs of the joint. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Joint4nameEKb">
+<span id="_CPPv3NK8scenario7monopod5Joint4nameEKb"></span><span id="_CPPv2NK8scenario7monopod5Joint4nameEKb"></span><span id="scenario::monopod::Joint::name__bCC"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a01c5277914855e6c0195f6ec8cf0934e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">scoped</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Joint4nameEKb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the name of the joint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>scoped</strong> – If true, the scoped name of the joint is returned. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The name of the joint. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Joint4typeEv">
+<span id="_CPPv3NK8scenario7monopod5Joint4typeEv"></span><span id="_CPPv2NK8scenario7monopod5Joint4typeEv"></span><span id="scenario::monopod::Joint::typeC"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a1728e8f4c797c1636fd4e5ffb2d4582a"></span><span class="n"><span class="pre">core</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">JointType</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">type</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Joint4typeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the type of the joint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The type of the joint. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8scenario7monopod5Joint14setControlModeEKN4core16JointControlModeE">
+<span id="_CPPv3N8scenario7monopod5Joint14setControlModeEKN4core16JointControlModeE"></span><span id="_CPPv2N8scenario7monopod5Joint14setControlModeEKN4core16JointControlModeE"></span><span id="scenario::monopod::Joint::setControlMode__core::JointControlModeC"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a7183ad36924aa58523aa8129d07639ff"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setControlMode</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">core</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">JointControlMode</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N8scenario7monopod5Joint14setControlModeEKN4core16JointControlModeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the joint control mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mode</strong> – The desired control mode. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True for success, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Joint11controlModeEv">
+<span id="_CPPv3NK8scenario7monopod5Joint11controlModeEv"></span><span id="_CPPv2NK8scenario7monopod5Joint11controlModeEv"></span><span id="scenario::monopod::Joint::controlModeC"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a5dee6108c6f6695a5893c8d754cc3601"></span><span class="n"><span class="pre">core</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">JointControlMode</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">controlMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Joint11controlModeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get the joint control mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the joint control mode </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Joint3pidEv">
+<span id="_CPPv3NK8scenario7monopod5Joint3pidEv"></span><span id="_CPPv2NK8scenario7monopod5Joint3pidEv"></span><span id="scenario::monopod::Joint::pidC"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1abc50ad0c63902883faedd047461c5e19"></span><span class="n"><span class="pre">core</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PID</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pid</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Joint3pidEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the PID parameters of the joint.</p>
+<p>If no PID parameters have been set, the default parameters are returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The joint PID parameters. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8scenario7monopod5Joint6setPIDERKN4core3PIDE">
+<span id="_CPPv3N8scenario7monopod5Joint6setPIDERKN4core3PIDE"></span><span id="_CPPv2N8scenario7monopod5Joint6setPIDERKN4core3PIDE"></span><span id="scenario::monopod::Joint::setPID__core::PIDCR"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a8c419123353c60e67c464de5faa55a3d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPID</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">core</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PID</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pid</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N8scenario7monopod5Joint6setPIDERKN4core3PIDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the PID parameters of the joint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pid</strong> – The desired PID parameters. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True for success, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Joint24jointMaxGeneralizedForceEv">
+<span id="_CPPv3NK8scenario7monopod5Joint24jointMaxGeneralizedForceEv"></span><span id="_CPPv2NK8scenario7monopod5Joint24jointMaxGeneralizedForceEv"></span><span id="scenario::monopod::Joint::jointMaxGeneralizedForceC"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a9efa13be15a49e2e5f79545633a12458"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">jointMaxGeneralizedForce</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Joint24jointMaxGeneralizedForceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the maximum generalized force that could be applied to the joint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The maximum generalized force of the joint. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8scenario7monopod5Joint27setJointMaxGeneralizedForceERKNSt6vectorIdEE">
+<span id="_CPPv3N8scenario7monopod5Joint27setJointMaxGeneralizedForceERKNSt6vectorIdEE"></span><span id="_CPPv2N8scenario7monopod5Joint27setJointMaxGeneralizedForceERKNSt6vectorIdEE"></span><span id="scenario::monopod::Joint::setJointMaxGeneralizedForce__std::vector:double:CR"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a59aa00e25269e63edd267d57d3277289"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointMaxGeneralizedForce</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">maxForce</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N8scenario7monopod5Joint27setJointMaxGeneralizedForceERKNSt6vectorIdEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the maximum generalized force that can be applied to the joint.</p>
+<p>This limit can be used to clip the force applied by joint controllers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>maxForce</strong> – A vector with the maximum generalized forces of the joint DOFs. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True for success, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Joint13jointPositionEv">
+<span id="_CPPv3NK8scenario7monopod5Joint13jointPositionEv"></span><span id="_CPPv2NK8scenario7monopod5Joint13jointPositionEv"></span><span id="scenario::monopod::Joint::jointPositionC"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a616f285026a9f3975855b82df0bd4245"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">jointPosition</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Joint13jointPositionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the position of the joint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The position of the joint. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Joint13jointVelocityEv">
+<span id="_CPPv3NK8scenario7monopod5Joint13jointVelocityEv"></span><span id="_CPPv2NK8scenario7monopod5Joint13jointVelocityEv"></span><span id="scenario::monopod::Joint::jointVelocityC"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a48b54cec295bab5b94532a436893e05d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">jointVelocity</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Joint13jointVelocityEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the velocity of the joint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The velocity of the joint. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Joint17jointAccelerationEv">
+<span id="_CPPv3NK8scenario7monopod5Joint17jointAccelerationEv"></span><span id="_CPPv2NK8scenario7monopod5Joint17jointAccelerationEv"></span><span id="scenario::monopod::Joint::jointAccelerationC"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a69af712a47be815e3b887e65c7bb3f12"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">jointAcceleration</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Joint17jointAccelerationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the acceleration of the joint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The acceleration of the joint. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8scenario7monopod5Joint30setJointGeneralizedForceTargetERKNSt6vectorIdEE">
+<span id="_CPPv3N8scenario7monopod5Joint30setJointGeneralizedForceTargetERKNSt6vectorIdEE"></span><span id="_CPPv2N8scenario7monopod5Joint30setJointGeneralizedForceTargetERKNSt6vectorIdEE"></span><span id="scenario::monopod::Joint::setJointGeneralizedForceTarget__std::vector:double:CR"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a54afcbab26f505d63c732a9249c2b04b"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointGeneralizedForceTarget</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">force</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N8scenario7monopod5Joint30setJointGeneralizedForceTargetERKNSt6vectorIdEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the generalized force target of the joint.</p>
+<p>Note that if there’s friction or other loss components, the real joint force will differ.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>force</strong> – A vector with the generalized force targets of the joint DOFs. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True for success, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Joint27jointGeneralizedForceTargetEv">
+<span id="_CPPv3NK8scenario7monopod5Joint27jointGeneralizedForceTargetEv"></span><span id="_CPPv2NK8scenario7monopod5Joint27jointGeneralizedForceTargetEv"></span><span id="scenario::monopod::Joint::jointGeneralizedForceTargetC"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a83008ca629758c5516fe74b7573d2cf5"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">jointGeneralizedForceTarget</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Joint27jointGeneralizedForceTargetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the active generalized force target.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The generalized force target of the joint. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Joint18jointPositionLimitEv">
+<span id="_CPPv3NK8scenario7monopod5Joint18jointPositionLimitEv"></span><span id="_CPPv2NK8scenario7monopod5Joint18jointPositionLimitEv"></span><span id="scenario::monopod::Joint::jointPositionLimitC"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1adbbe8c79447c5ee37b7a04c4e169e10e"></span><span class="n"><span class="pre">core</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">JointLimit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">jointPositionLimit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Joint18jointPositionLimitEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the position limits of the joint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The position limits of the joint. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Joint18jointVelocityLimitEv">
+<span id="_CPPv3NK8scenario7monopod5Joint18jointVelocityLimitEv"></span><span id="_CPPv2NK8scenario7monopod5Joint18jointVelocityLimitEv"></span><span id="scenario::monopod::Joint::jointVelocityLimitC"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a36ceb75b26518d27eeabd4269622f18c"></span><span class="n"><span class="pre">core</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">JointLimit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">jointVelocityLimit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Joint18jointVelocityLimitEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the velocity limits of the joint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The velocity limits of the joint. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Joint22jointAccelerationLimitEv">
+<span id="_CPPv3NK8scenario7monopod5Joint22jointAccelerationLimitEv"></span><span id="_CPPv2NK8scenario7monopod5Joint22jointAccelerationLimitEv"></span><span id="scenario::monopod::Joint::jointAccelerationLimitC"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a2e1d3788a57aeced7f6671d91067605e"></span><span class="n"><span class="pre">core</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">JointLimit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">jointAccelerationLimit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Joint22jointAccelerationLimitEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the acceleration limits of the joint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The acceleration limits of the joint. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8scenario7monopod5Joint21setJointPositionLimitERKdRKd">
+<span id="_CPPv3N8scenario7monopod5Joint21setJointPositionLimitERKdRKd"></span><span id="_CPPv2N8scenario7monopod5Joint21setJointPositionLimitERKdRKd"></span><span id="scenario::monopod::Joint::setJointPositionLimit__doubleCR.doubleCR"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a0eda9d60fe02b6c9db9e905bd7edbc8b"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointPositionLimit</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">maxPosition</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">minPosition</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8scenario7monopod5Joint21setJointPositionLimitERKdRKd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the maximum position of the joint.</p>
+<p>This limit can be used to set safety limits on the joint position. when violated the Robot will enter into a safe mode. disabling the robot until it is reset or restart.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>maxPosition</strong> – maximum position of the joint DOFs. </p></li>
+<li><p><strong>minPosition</strong> – minimum position of the joint DOFs. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True for success, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8scenario7monopod5Joint21setJointVelocityLimitERKdRKd">
+<span id="_CPPv3N8scenario7monopod5Joint21setJointVelocityLimitERKdRKd"></span><span id="_CPPv2N8scenario7monopod5Joint21setJointVelocityLimitERKdRKd"></span><span id="scenario::monopod::Joint::setJointVelocityLimit__doubleCR.doubleCR"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1a54d56287d3078d69119538de62e8fcac"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointVelocityLimit</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">maxVelocity</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">minVelocity</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8scenario7monopod5Joint21setJointVelocityLimitERKdRKd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the maximum velocity of the joint.</p>
+<p>This limit can be used to set safety limits on the joint velocity. when violated the Robot will enter into a safe mode. disabling the robot until it is reset or restart.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>maxVelocity</strong> – maximum velocity of the joint DOFs. </p></li>
+<li><p><strong>minVelocity</strong> – minimum position of the joint DOFs. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True for success, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8scenario7monopod5Joint25setJointAccelerationLimitERKdRKd">
+<span id="_CPPv3N8scenario7monopod5Joint25setJointAccelerationLimitERKdRKd"></span><span id="_CPPv2N8scenario7monopod5Joint25setJointAccelerationLimitERKdRKd"></span><span id="scenario::monopod::Joint::setJointAccelerationLimit__doubleCR.doubleCR"></span><span class="target" id="classscenario_1_1monopod_1_1Joint_1aba9dc560c71629eb73436742f494eca0"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointAccelerationLimit</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">maxAcceleration</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">minAcceleration</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8scenario7monopod5Joint25setJointAccelerationLimitERKdRKd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the maximum acceleration of the joint.</p>
+<p>This limit can be used to set safety limits on the joint acceleration. when violated the Robot will enter into a safe mode. disabling the robot until it is reset or restart.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>maxAcceleration</strong> – maximum acceleration of the joint DOFs. </p></li>
+<li><p><strong>minAcceleration</strong> – minimum acceleration of the joint DOFs. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True for success, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8scenario7monopod5ModelE">
+<span id="_CPPv3N8scenario7monopod5ModelE"></span><span id="_CPPv2N8scenario7monopod5ModelE"></span><span id="scenario::monopod::Model"></span><span class="target" id="classscenario_1_1monopod_1_1Model"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Model</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8scenario7monopod5ModelE" title="scenario::monopod::Model"><span class="n"><span class="pre">Model</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">enable_shared_from_this</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">scenario</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8scenario7monopodE" title="scenario::monopod"><span class="n"><span class="pre">monopod</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8scenario7monopod5ModelE" title="scenario::monopod::Model"><span class="n"><span class="pre">Model</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N8scenario7monopod5ModelE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Model5validEv">
+<span id="_CPPv3NK8scenario7monopod5Model5validEv"></span><span id="_CPPv2NK8scenario7monopod5Model5validEv"></span><span id="scenario::monopod::Model::validC"></span><span class="target" id="classscenario_1_1monopod_1_1Model_1a476a890db9885fea21e4353adbb9ee5a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">valid</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Model5validEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if the model is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if the model is valid, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Model4nameEv">
+<span id="_CPPv3NK8scenario7monopod5Model4nameEv"></span><span id="_CPPv2NK8scenario7monopod5Model4nameEv"></span><span id="scenario::monopod::Model::nameC"></span><span class="target" id="classscenario_1_1monopod_1_1Model_1a25f971ff6e1f7c7a675b1cefa0ababf6"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Model4nameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the name of the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The name of the model. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Model4dofsERKNSt6vectorINSt6stringEEE">
+<span id="_CPPv3NK8scenario7monopod5Model4dofsERKNSt6vectorINSt6stringEEE"></span><span id="_CPPv2NK8scenario7monopod5Model4dofsERKNSt6vectorINSt6stringEEE"></span><span id="scenario::monopod::Model::dofs__std::vector:ss:CRC"></span><span class="target" id="classscenario_1_1monopod_1_1Model_1ac8c22a9276f4050b01cf91d0861b2a93"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dofs</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointNames</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Model4dofsERKNSt6vectorINSt6stringEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the joints DOF</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>jointNames</strong> – Optional vector of considered joints that also defines the joint serialization. By default, <code class="docutils literal notranslate"><a class="reference internal" href="#classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301"><span class="std std-ref"><span class="pre">Model::jointNames</span></span></a></code> is used. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The sum of serialization of joint DOFs. The sum is the number of DoFs of all the considered joints. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Model8getJointERKNSt6stringE">
+<span id="_CPPv3NK8scenario7monopod5Model8getJointERKNSt6stringE"></span><span id="_CPPv2NK8scenario7monopod5Model8getJointERKNSt6stringE"></span><span id="scenario::monopod::Model::getJoint__ssCRC"></span><span class="target" id="classscenario_1_1monopod_1_1Model_1a55ba29491f198cfb892c9d9f8f4b9228"></span><span class="n"><span class="pre">core</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">JointPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getJoint</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointName</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Model8getJointERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get a joint belonging to the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>jointName</strong> – The name of the joint. </p>
+</dd>
+<dt class="field-even">Throws</dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – if the joint does not exist. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The desired joint. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Model10jointNamesEKb">
+<span id="_CPPv3NK8scenario7monopod5Model10jointNamesEKb"></span><span id="_CPPv2NK8scenario7monopod5Model10jointNamesEKb"></span><span id="scenario::monopod::Model::jointNames__bCC"></span><span class="target" id="classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">jointNames</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">scoped</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Model10jointNamesEKb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the name of all the model’s joints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>scoped</strong> – Scope the joint names with the model name, (e.g. <code class="docutils literal notranslate"><span class="pre">mymodel::joint1</span></code>). </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The list of joint names. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Model14jointPositionsERKNSt6vectorINSt6stringEEE">
+<span id="_CPPv3NK8scenario7monopod5Model14jointPositionsERKNSt6vectorINSt6stringEEE"></span><span id="_CPPv2NK8scenario7monopod5Model14jointPositionsERKNSt6vectorINSt6stringEEE"></span><span id="scenario::monopod::Model::jointPositions__std::vector:ss:CRC"></span><span class="target" id="classscenario_1_1monopod_1_1Model_1a28ed3b3ca18e3c1f578cf8a371bac2b1"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">jointPositions</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointNames</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Model14jointPositionsERKNSt6vectorINSt6stringEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the joint positions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>jointNames</strong> – Optional vector of considered joints that also defines the joint serialization. By default, <code class="docutils literal notranslate"><a class="reference internal" href="#classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301"><span class="std std-ref"><span class="pre">Model::jointNames</span></span></a></code> is used. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The serialization of joint positions. The vector has as many elements as DoFs of the considered joints. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Model15jointVelocitiesERKNSt6vectorINSt6stringEEE">
+<span id="_CPPv3NK8scenario7monopod5Model15jointVelocitiesERKNSt6vectorINSt6stringEEE"></span><span id="_CPPv2NK8scenario7monopod5Model15jointVelocitiesERKNSt6vectorINSt6stringEEE"></span><span id="scenario::monopod::Model::jointVelocities__std::vector:ss:CRC"></span><span class="target" id="classscenario_1_1monopod_1_1Model_1ac32b6413929c086fd942a3e7facdf63a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">jointVelocities</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointNames</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Model15jointVelocitiesERKNSt6vectorINSt6stringEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the joint velocities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>jointNames</strong> – Optional vector of considered joints that also defines the joint serialization. By default, <code class="docutils literal notranslate"><a class="reference internal" href="#classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301"><span class="std std-ref"><span class="pre">Model::jointNames</span></span></a></code> is used. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The serialization of joint velocities. The vector has as many elements as DoFs of the considered joints. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Model18jointAccelerationsERKNSt6vectorINSt6stringEEE">
+<span id="_CPPv3NK8scenario7monopod5Model18jointAccelerationsERKNSt6vectorINSt6stringEEE"></span><span id="_CPPv2NK8scenario7monopod5Model18jointAccelerationsERKNSt6vectorINSt6stringEEE"></span><span id="scenario::monopod::Model::jointAccelerations__std::vector:ss:CRC"></span><span class="target" id="classscenario_1_1monopod_1_1Model_1a5d607527596cab0fa2cce76265f7a2be"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">jointAccelerations</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointNames</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Model18jointAccelerationsERKNSt6vectorINSt6stringEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the joint accelerations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>jointNames</strong> – Optional vector of considered joints that also defines the joint serialization. By default, <code class="docutils literal notranslate"><a class="reference internal" href="#classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301"><span class="std std-ref"><span class="pre">Model::jointNames</span></span></a></code> is used. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The serialization of joint accelerations. The vector has as many elements as DoFs of the considered joints. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8scenario7monopod5Model19setJointControlModeEKN4core16JointControlModeERKNSt6vectorINSt6stringEEE">
+<span id="_CPPv3N8scenario7monopod5Model19setJointControlModeEKN4core16JointControlModeERKNSt6vectorINSt6stringEEE"></span><span id="_CPPv2N8scenario7monopod5Model19setJointControlModeEKN4core16JointControlModeERKNSt6vectorINSt6stringEEE"></span><span id="scenario::monopod::Model::setJointControlMode__core::JointControlModeC.std::vector:ss:CR"></span><span class="target" id="classscenario_1_1monopod_1_1Model_1aaec5495c07a9186128679ec08bb43809"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointControlMode</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">core</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">JointControlMode</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointNames</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N8scenario7monopod5Model19setJointControlModeEKN4core16JointControlModeERKNSt6vectorINSt6stringEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the control mode of model joints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mode</strong> – The desired joint control mode. </p></li>
+<li><p><strong>jointNames</strong> – Optional vector of considered joints that also defines the joint serialization. By default, <code class="docutils literal notranslate"><a class="reference internal" href="#classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301"><span class="std std-ref"><span class="pre">Model::jointNames</span></span></a></code> is used. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True for success, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Model6jointsERKNSt6vectorINSt6stringEEE">
+<span id="_CPPv3NK8scenario7monopod5Model6jointsERKNSt6vectorINSt6stringEEE"></span><span id="_CPPv2NK8scenario7monopod5Model6jointsERKNSt6vectorINSt6stringEEE"></span><span id="scenario::monopod::Model::joints__std::vector:ss:CRC"></span><span class="target" id="classscenario_1_1monopod_1_1Model_1ab508a143d6009d25a8033fbf5192ebf7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">core</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">JointPtr</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">joints</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointNames</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Model6jointsERKNSt6vectorINSt6stringEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the joints of the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>jointNames</strong> – Optional vector of considered joints. By default, <code class="docutils literal notranslate"><a class="reference internal" href="#classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301"><span class="std std-ref"><span class="pre">Model::jointNames</span></span></a></code> is used. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A vector of pointers to the joint objects. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8scenario7monopod5Model31setJointGeneralizedForceTargetsERKNSt6vectorIdEERKNSt6vectorINSt6stringEEE">
+<span id="_CPPv3N8scenario7monopod5Model31setJointGeneralizedForceTargetsERKNSt6vectorIdEERKNSt6vectorINSt6stringEEE"></span><span id="_CPPv2N8scenario7monopod5Model31setJointGeneralizedForceTargetsERKNSt6vectorIdEERKNSt6vectorINSt6stringEEE"></span><span id="scenario::monopod::Model::setJointGeneralizedForceTargets__std::vector:double:CR.std::vector:ss:CR"></span><span class="target" id="classscenario_1_1monopod_1_1Model_1a5c1a870ade04afb374bbf1ca171662fa"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointGeneralizedForceTargets</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">forces</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointNames</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N8scenario7monopod5Model31setJointGeneralizedForceTargetsERKNSt6vectorIdEERKNSt6vectorINSt6stringEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the generalized force targets of the joints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>forces</strong> – The vector with the joint generalized force targets. It must have as many elements as the considered joint DoFs. </p></li>
+<li><p><strong>jointNames</strong> – Optional vector of considered joints. By default, <code class="docutils literal notranslate"><a class="reference internal" href="#classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301"><span class="std std-ref"><span class="pre">Model::jointNames</span></span></a></code> is used. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True for success, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5Model28jointGeneralizedForceTargetsERKNSt6vectorINSt6stringEEE">
+<span id="_CPPv3NK8scenario7monopod5Model28jointGeneralizedForceTargetsERKNSt6vectorINSt6stringEEE"></span><span id="_CPPv2NK8scenario7monopod5Model28jointGeneralizedForceTargetsERKNSt6vectorINSt6stringEEE"></span><span id="scenario::monopod::Model::jointGeneralizedForceTargets__std::vector:ss:CRC"></span><span class="target" id="classscenario_1_1monopod_1_1Model_1a442e36ae228f61e786b5668a411a440e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">jointGeneralizedForceTargets</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">jointNames</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5Model28jointGeneralizedForceTargetsERKNSt6vectorINSt6stringEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the generalized force targets of the joints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>jointNames</strong> – Optional vector of considered joints. By default, <code class="docutils literal notranslate"><a class="reference internal" href="#classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301"><span class="std std-ref"><span class="pre">Model::jointNames</span></span></a></code> is used. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The generalized force targets of the joints. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8scenario7monopod5WorldE">
+<span id="_CPPv3N8scenario7monopod5WorldE"></span><span id="_CPPv2N8scenario7monopod5WorldE"></span><span id="scenario::monopod::World"></span><span class="target" id="classscenario_1_1monopod_1_1World"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">World</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8scenario7monopod5WorldE" title="scenario::monopod::World"><span class="n"><span class="pre">World</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">enable_shared_from_this</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">scenario</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8scenario7monopodE" title="scenario::monopod"><span class="n"><span class="pre">monopod</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8scenario7monopod5WorldE" title="scenario::monopod::World"><span class="n"><span class="pre">World</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N8scenario7monopod5WorldE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5World5validEv">
+<span id="_CPPv3NK8scenario7monopod5World5validEv"></span><span id="_CPPv2NK8scenario7monopod5World5validEv"></span><span id="scenario::monopod::World::validC"></span><span class="target" id="classscenario_1_1monopod_1_1World_1ae1891d84bcbb6e61518593d373348282"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">valid</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5World5validEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if the world is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if the world is valid, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5World4nameEv">
+<span id="_CPPv3NK8scenario7monopod5World4nameEv"></span><span id="_CPPv2NK8scenario7monopod5World4nameEv"></span><span id="scenario::monopod::World::nameC"></span><span class="target" id="classscenario_1_1monopod_1_1World_1adf92116664d9f7b61a3c00cf6b601160"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5World4nameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the name of the world.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The name of the world. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5World10modelNamesEv">
+<span id="_CPPv3NK8scenario7monopod5World10modelNamesEv"></span><span id="_CPPv2NK8scenario7monopod5World10modelNamesEv"></span><span id="scenario::monopod::World::modelNamesC"></span><span class="target" id="classscenario_1_1monopod_1_1World_1a04d7ef45bd6ef6a5beac062842b3d766"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">modelNames</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5World10modelNamesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the name of the models that are part of the world.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The list of model names. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5World8getModelERKNSt6stringE">
+<span id="_CPPv3NK8scenario7monopod5World8getModelERKNSt6stringE"></span><span id="_CPPv2NK8scenario7monopod5World8getModelERKNSt6stringE"></span><span id="scenario::monopod::World::getModel__ssCRC"></span><span class="target" id="classscenario_1_1monopod_1_1World_1ae5ae9757ac965d035e9183d7bcd48250"></span><span class="n"><span class="pre">scenario</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">core</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ModelPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getModel</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">modelName</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5World8getModelERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get a model part of the world.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>modelName</strong> – The name of the model to get. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The model if it is part of the world, <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8scenario7monopod5World6modelsERKNSt6vectorINSt6stringEEE">
+<span id="_CPPv3NK8scenario7monopod5World6modelsERKNSt6vectorINSt6stringEEE"></span><span id="_CPPv2NK8scenario7monopod5World6modelsERKNSt6vectorINSt6stringEEE"></span><span id="scenario::monopod::World::models__std::vector:ss:CRC"></span><span class="target" id="classscenario_1_1monopod_1_1World_1a6067f0f6cdb1048ee876bb67b977461b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">scenario</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">core</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ModelPtr</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">models</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">modelNames</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8scenario7monopod5World6modelsERKNSt6vectorINSt6stringEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the models of the world.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>modelNames</strong> – Optional vector of considered models. By default, <code class="docutils literal notranslate"><a class="reference internal" href="#classscenario_1_1monopod_1_1World_1a04d7ef45bd6ef6a5beac062842b3d766"><span class="std std-ref"><span class="pre">World::modelNames</span></span></a></code> is used. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A vector of pointers to the model objects. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">scenario::monopod API</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../python/index.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Python Bindings</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Dawson Horvath<br/>
+        
+            &copy; Copyright 2022, University of British Columbia.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
