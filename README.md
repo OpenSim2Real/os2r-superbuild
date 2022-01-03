@@ -158,6 +158,22 @@ pip install sphinx-multiversion sphinx_autodoc_typehints sphinx_fontawesome sphi
 pip install -U breathe
 ```
 
+To compile the docs run the below commands during the build,
+
+```
+cmake -S . -B build -DOPENSIM2REAL_ENABLE_ALL:BOOL=TRUE -DOPENSIM2REAL_ENABLE_DOC_COMPILATION:BOOL=TRUE
+cmake --build build
+```
+
+Finally to update the docs use the below sequence,
+
+```
+git checkout gh-pages
+git rm -r -f .
+mv  -v ./build/html/* ./
+```
+Now just manually remove the `build` and `src` directory before commiting and pushing to gh-pages.
+
 # Can update the repos using the below commands
 
 To do this, make sure to be in the build directory of the OpenSim2Real-superbuild and run:
