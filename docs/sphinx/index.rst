@@ -7,6 +7,8 @@ Open Sim2Real
 
 .. include:: scenario_monopod_index.rst
 
+.. include:: gym-os2r_index.rst
+
 .. toctree::
   :maxdepth: 4
   :caption: Open Sim2Real Packages
