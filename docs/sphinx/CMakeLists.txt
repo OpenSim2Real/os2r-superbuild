@@ -12,6 +12,7 @@ set(SPHINX_SOURCE ${CMAKE_CURRENT_SOURCE_DIR})
 
 set(SCENARIO_MONOPOD_SPHINX "${SPHINX_SOURCE}/scenario_monopod_docs")
 set(MONOPOD_SDK_SPHINX "${SPHINX_SOURCE}/monopod_sdk_docs")
+set(GYM-OS2R_SPHINX "${SPHINX_SOURCE}/gym-os2r_docs")
 
 # Copy over each projects doc source
 add_custom_target(monopod_sdk_sphinx ALL
@@ -68,8 +69,15 @@ add_custom_command(
 
 # add_custom_command(TARGET sphinx POST_BUILD
 #     COMMAND ${CMAKE_COMMAND} -E remove_directory  ${MONOPOD_SDK_SPHINX}
-#     COMMENT "Deleting monopod_sdk sphinx build")
+#     COMMENT "Deleting monopod_sdk sphinx build"
+#   )
 #
 # add_custom_command(TARGET sphinx POST_BUILD
 #     COMMAND ${CMAKE_COMMAND} -E remove_directory ${SCENARIO_MONOPOD_SPHINX}
-#     COMMENT "Deleting scenario_monopod sphinx build")
+#     COMMENT "Deleting scenario_monopod sphinx build"
+#   )
+#
+# add_custom_command(TARGET sphinx POST_BUILD
+#     COMMAND ${CMAKE_COMMAND} -E remove_directory ${GYM-OS2R_SPHINX}
+#     COMMENT "Deleting gym-os2r sphinx build"
+#   )

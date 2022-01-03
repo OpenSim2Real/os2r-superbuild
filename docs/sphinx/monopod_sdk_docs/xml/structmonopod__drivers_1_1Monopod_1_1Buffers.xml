@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmonopod__drivers_1_1Monopod_1_1Buffers" kind="struct" language="C++" prot="private">
+    <compoundname>monopod_drivers::Monopod::Buffers</compoundname>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structmonopod__drivers_1_1Monopod_1_1Buffers_1a30078fa401545db25bced646328795e8" prot="public" static="no">
+        <type>double</type>
+        <definition>using monopod_drivers::Monopod::Buffers::JointWriteState =  double</definition>
+        <argsstring></argsstring>
+        <name>JointWriteState</name>
+        <briefdescription>
+<para>Write Buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" line="533" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" bodystart="533" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmonopod__drivers_1_1Monopod_1_1Buffers_1aaf2a25823df4ad868f1399a736a65547" prot="public" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex monopod_drivers::Monopod::Buffers::write_door</definition>
+        <argsstring></argsstring>
+        <name>write_door</name>
+        <briefdescription>
+<para>Mutex lock for write buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" line="528" column="19" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" bodystart="528" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1Monopod_1_1Buffers_1a09e8a3d1e38df7cd46aa7e1d8be57203" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; JointNameIndexing, JointWriteState &gt;</type>
+        <definition>std::unordered_map&lt;JointNameIndexing, JointWriteState&gt; monopod_drivers::Monopod::Buffers::write</definition>
+        <argsstring></argsstring>
+        <name>write</name>
+        <initializer>= {
+           {hip_joint, 0.0},
+           {knee_joint, 0.0}
+       }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" line="534" column="27" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" bodystart="534" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1Monopod_1_1Buffers_1aed664cebe2849695fb01328206508909" prot="public" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex monopod_drivers::Monopod::Buffers::read_door</definition>
+        <argsstring></argsstring>
+        <name>read_door</name>
+        <briefdescription>
+<para>Mutex lock for read buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" line="542" column="19" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" bodystart="542" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1Monopod_1_1Buffers_1aa7d6ff359577eccb495a7c2439d9ebf2" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; JointNameIndexing, JointReadState &gt;</type>
+        <definition>std::unordered_map&lt;JointNameIndexing, JointReadState&gt; monopod_drivers::Monopod::Buffers::read</definition>
+        <argsstring></argsstring>
+        <name>read</name>
+        <initializer>= {
+           {planarizer_pitch_joint, {}},
+           {planarizer_yaw_joint, {}},
+           {boom_connector_joint, {}},
+           {hip_joint, {}},
+           {knee_joint, {}}
+       }</initializer>
+        <briefdescription>
+<para>Read Buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" line="547" column="27" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" bodystart="547" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1Monopod_1_1Buffers_1a1935fe0be186bf86366200dc419dc34c" prot="public" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex monopod_drivers::Monopod::Buffers::settings_door</definition>
+        <argsstring></argsstring>
+        <name>settings_door</name>
+        <briefdescription>
+<para>Mutex lock for Setting buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" line="558" column="18" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" bodystart="558" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1Monopod_1_1Buffers_1a36dc4a0bd50a7f15ac17e4a542d8c0b0" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; JointNameIndexing, JointSettingState &gt;</type>
+        <definition>std::unordered_map&lt;JointNameIndexing, JointSettingState&gt; monopod_drivers::Monopod::Buffers::settings</definition>
+        <argsstring></argsstring>
+        <name>settings</name>
+        <initializer>= {
+          {planarizer_pitch_joint, {}},
+          {planarizer_yaw_joint, {}},
+          {boom_connector_joint, {}},
+          {hip_joint, {}},
+          {knee_joint, {}}
+      }</initializer>
+        <briefdescription>
+<para>Setting Write Buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" line="563" column="26" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" bodystart="563" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1Monopod_1_1Buffers_1a5a5f2446278af88b634897b08df14e20" prot="public" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex monopod_drivers::Monopod::Buffers::pid_door</definition>
+        <argsstring></argsstring>
+        <name>pid_door</name>
+        <briefdescription>
+<para>Mutex lock for <ref refid="structmonopod__drivers_1_1Monopod_1_1PID" kindref="compound">PID</ref> buffer. <ref refid="structmonopod__drivers_1_1Monopod_1_1PID" kindref="compound">PID</ref> is seperate because it is rarely changed and requires us to send commands to device. this means it is. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" line="575" column="18" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" bodystart="575" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1Monopod_1_1Buffers_1ad2673d398e2ab8004362490728bf598a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::Buffers::pid_modified</definition>
+        <argsstring></argsstring>
+        <name>pid_modified</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Bool indicator whether Setting buffer was modified. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" line="580" column="12" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" bodystart="580" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1Monopod_1_1Buffers_1a4e98fd7b0c8728cd0f20c1fb5942f7d2" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; JointNameIndexing, <ref refid="structmonopod__drivers_1_1Monopod_1_1PID" kindref="compound">PID</ref> &gt;</type>
+        <definition>std::unordered_map&lt;JointNameIndexing, PID&gt; monopod_drivers::Monopod::Buffers::pid</definition>
+        <argsstring></argsstring>
+        <name>pid</name>
+        <initializer>= {
+          {planarizer_pitch_joint, {}},
+          {planarizer_yaw_joint, {}},
+          {boom_connector_joint, {}},
+          {hip_joint, {}},
+          {knee_joint, {}}
+      }</initializer>
+        <briefdescription>
+<para>Setting Write Buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" line="585" column="26" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" bodystart="585" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Read/Write buffer. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>monopod_drivers::Monopod::JointLimit</label>
+        <link refid="structmonopod__drivers_1_1Monopod_1_1JointLimit"/>
+      </node>
+      <node id="8">
+        <label>std::unordered_map&lt; JointNameIndexing, JointWriteState &gt;</label>
+      </node>
+      <node id="9">
+        <label>std::unordered_map&lt; JointNameIndexing, monopod_drivers::Monopod::PID &gt;</label>
+        <childnode refid="10" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::unordered_map&lt; JointNameIndexing, JointReadState &gt;</label>
+        <childnode refid="7" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>monopod_drivers::Monopod::JointReadState</label>
+      </node>
+      <node id="5">
+        <label>std::mutex</label>
+      </node>
+      <node id="2">
+        <label>std::unordered_map&lt; JointNameIndexing, JointSettingState &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>monopod_drivers::Monopod::Buffers</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>settings_door</edgelabel>
+          <edgelabel>pid_door</edgelabel>
+          <edgelabel>write_door</edgelabel>
+          <edgelabel>read_door</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>read</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>write</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>pid</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>monopod_drivers::Monopod::JointSettingState</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>acceleration_limit</edgelabel>
+          <edgelabel>position_limit</edgelabel>
+          <edgelabel>velocity_limit</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>monopod_drivers::Monopod::PID</label>
+        <link refid="structmonopod__drivers_1_1Monopod_1_1PID"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" line="524" column="1" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/monopod.hpp" bodystart="523" bodyend="592"/>
+    <listofallmembers>
+      <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1a30078fa401545db25bced646328795e8" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod::Buffers</scope><name>JointWriteState</name></member>
+      <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1a4e98fd7b0c8728cd0f20c1fb5942f7d2" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod::Buffers</scope><name>pid</name></member>
+      <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1a5a5f2446278af88b634897b08df14e20" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod::Buffers</scope><name>pid_door</name></member>
+      <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1ad2673d398e2ab8004362490728bf598a" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod::Buffers</scope><name>pid_modified</name></member>
+      <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1aa7d6ff359577eccb495a7c2439d9ebf2" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod::Buffers</scope><name>read</name></member>
+      <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1aed664cebe2849695fb01328206508909" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod::Buffers</scope><name>read_door</name></member>
+      <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1a36dc4a0bd50a7f15ac17e4a542d8c0b0" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod::Buffers</scope><name>settings</name></member>
+      <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1a1935fe0be186bf86366200dc419dc34c" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod::Buffers</scope><name>settings_door</name></member>
+      <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1a09e8a3d1e38df7cd46aa7e1d8be57203" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod::Buffers</scope><name>write</name></member>
+      <member refid="structmonopod__drivers_1_1Monopod_1_1Buffers_1aaf2a25823df4ad868f1399a736a65547" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod::Buffers</scope><name>write_door</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
