@@ -13,9 +13,11 @@ Ignition Gazebo
 Install ignition version found in the :ref:`support_policy_sim_only`.
 
 .. note::
+
   It maybe be necessary to add the following to your bashrc
 
   .. code-block:: bash
+
     export IGN_GAZEBO_PHYSICS_ENGINE_PATH=${IGN_GAZEBO_PHYSICS_ENGINE_PATH}:/usr/lib/x86_64-linux-gnu/ign-physics-5/engine-plugins/
 
 Pip Installation
@@ -30,6 +32,7 @@ Installation
 ^^^^^^^^^^^^
 
 .. code-block:: bash
+
   cd location/you/want/repo
   git clone git@github.com:OpenSim2Real/gym-os2r.git
   cd gym-os2r

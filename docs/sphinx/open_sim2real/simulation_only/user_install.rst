@@ -18,6 +18,7 @@ Install ignition version found in the :ref:`support_policy_sim_only`.
   It maybe be necessary to add the following to your bashrc
 
   .. code-block:: bash
+  
     export IGN_GAZEBO_PHYSICS_ENGINE_PATH=${IGN_GAZEBO_PHYSICS_ENGINE_PATH}:/usr/lib/x86_64-linux-gnu/ign-physics-5/engine-plugins/
 
 
@@ -25,6 +26,7 @@ pip Installation
 -------------------
 
 .. code-block:: bash
+
   pip install git+https://github.com/OpenSim2Real/gym-os2r.git
 
 .. _os2r-superbuild_sim_only:
@@ -41,4 +43,5 @@ Dependencies
 ^^^^^^^^^^^^
 
 .. code-block:: bash
+
   sudo apt install swig
