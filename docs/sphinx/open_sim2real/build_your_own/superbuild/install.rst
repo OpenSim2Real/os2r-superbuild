@@ -247,9 +247,12 @@ sequence,
    git checkout gh-pages
    git rm -r -f .
    mv  -v ./build/html/* ./
+   rm -f -r build src
+   echo '' >> .nojekyll
+   git add .
+   git commit -m "publish new docs"
+   git push
 
-Now just manually remove the ``build`` and ``src`` directory before
-commiting and pushing to gh-pages.
 
 .. _ignition_installation_superbuild:
 
