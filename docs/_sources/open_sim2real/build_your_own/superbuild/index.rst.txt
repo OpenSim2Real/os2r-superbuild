@@ -1,5 +1,5 @@
 Superbuild
-==========
+==============
 
 .. toctree::
   :caption: Superbuild

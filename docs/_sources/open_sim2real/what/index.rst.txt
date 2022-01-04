@@ -1,5 +1,5 @@
 What
-====
+========
 
 .. toctree::
   :caption: What

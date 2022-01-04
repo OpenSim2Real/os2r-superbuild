@@ -1,6 +1,6 @@
 .. _monopod_sdk:
 
-Monopod Sdk
+monopod_sdk
 ===========
 
 .. toctree::
