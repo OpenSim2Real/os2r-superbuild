@@ -1,7 +1,8 @@
-What
-========
+What's Open Sim2Real
+====================
 
 .. toctree::
+  :hidden:
   :caption: What
 
   what_open_sim2real

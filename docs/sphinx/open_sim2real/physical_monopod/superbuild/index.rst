@@ -2,7 +2,8 @@ Superbuild
 ==============
 
 .. toctree::
+  :hidden:
   :caption: Superbuild
 
   support_policy
-  install
+  superbuild_installation

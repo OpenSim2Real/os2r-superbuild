@@ -67,7 +67,7 @@ html_theme = "sphinx_book_theme"
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    "repository_url": "https://github.com/OpenSim2Real/scenario_monopod",
+    "repository_url": "https://github.com/OpenSim2Real",
     "use_repository_button": True,
     "use_issues_button": True,
     "use_edit_page_button": True,

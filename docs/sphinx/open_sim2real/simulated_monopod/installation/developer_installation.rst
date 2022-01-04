@@ -1,5 +1,5 @@
 Developer Installation
-==========================
+======================
 
 We encourage anyone to contribute to this project. There are currently two ways
 to install :ref:`gym-os2r` which allow the user to develop.
@@ -7,10 +7,10 @@ to install :ref:`gym-os2r` which allow the user to develop.
 1. Editable pip installation
 2. Superbuild installation
 
-.. include:: ../general_includes/ignition_gazebo.rst
+.. include:: ../../shared/ignition_gazebo.rst
 
-**Pip Installation**
----------------------
+Pip Installation
+----------------
 
 .. code-block:: bash
 
@@ -20,8 +20,8 @@ to install :ref:`gym-os2r` which allow the user to develop.
   pip install -e .
 
 
-**Superbuild Installation**
----------------------------
+Superbuild Installation
+-----------------------
 
 The super build is a convenient way to build all required packages for different
 build types from source. The superbuild provides a bash script which is then

@@ -1,7 +1,7 @@
 .. _support_policy_super_build:
 
 Support Policy
-==================
+==============
 
 +-----------------+--------+----------------------+----------+------------+---------+
 |       C++       | Python |      Ignition        |  Ubuntu  |    macOS   | Windows |

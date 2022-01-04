@@ -1,5 +1,5 @@
-**Ignition Gazebo Installation**
---------------------------------
+Ignition Gazebo Installation
+----------------------------
 
 Required ignition gazebo version can be found in the :ref:`support_policy_sim_only`.
 Please install ignition gazebo following binary installation instructions on the

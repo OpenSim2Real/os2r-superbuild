@@ -5,33 +5,38 @@ Open Sim2Real
 
 .. toctree::
   :hidden:
-  :caption: Motivation
+  :caption: Getting Started
 
-  open_sim2real/what/index
-  open_sim2real/why/index
-
-.. toctree::
-  :hidden:
-  :caption: Simulation Only
-
-  open_sim2real/simulation_only/intro
-  open_sim2real/simulation_only/install
-  open_sim2real/simulation_only/getting_started
-  open_sim2real/simulation_only/singularity_container
+  open_sim2real/getting_started/what/index
+  open_sim2real/getting_started/why/index
+  open_sim2real/getting_started/highlevel_architecture/index
+  open_sim2real/getting_started/copyright_and_license
+  open_sim2real/getting_started/how_to_cite
 
 .. toctree::
   :hidden:
-  :caption: Build Your Own
+  :caption: Simulated Monopod
 
-  open_sim2real/build_your_own/intro
-  open_sim2real/build_your_own/superbuild/index
-  open_sim2real/build_your_own/robot/index
-  open_sim2real/build_your_own/getting_started
+  open_sim2real/simulated_monopod/introduction
+  open_sim2real/simulated_monopod/installation/index
+  open_sim2real/simulated_monopod/singularity_container
+  open_sim2real/simulated_monopod/quick_start
+  open_sim2real/simulated_monopod/next_steps
+
+.. toctree::
+  :hidden:
+  :caption: Physical Monopod
+
+  open_sim2real/physical_monopod/introduction
+  open_sim2real/physical_monopod/superbuild/index
+  open_sim2real/physical_monopod/monopod/index
+  open_sim2real/physical_monopod/quick_start
+  open_sim2real/physical_monopod/next_steps
 
 .. toctree::
   :hidden:
   :maxdepth: 5
-  :caption: Open Sim2Real Packages
+  :caption: Open Sim2Real Apidocs
 
   monopod_sdk_index
   scenario_monopod_index

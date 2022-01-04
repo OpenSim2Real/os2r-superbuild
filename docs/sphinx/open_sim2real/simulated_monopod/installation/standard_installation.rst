@@ -1,5 +1,5 @@
-Regular Installation
-========================
+Standard Installation
+=====================
 
 This project may not be perfectly stable at this moment and may require modifications
 to get the installation to work. Hopefully in the near future we will create a stable
@@ -10,12 +10,12 @@ ways to install :ref:`gym-os2r` for reinforcement learning.
 2. :ref:`singularity_container`.
 3. :ref:`os2r-superbuild_sim_only`.
 
-.. include:: ../general_includes/ignition_gazebo.rst
+.. include:: ../../shared/ignition_gazebo.rst
 
 .. _pip_install_sim_only:
 
-**Pip Installation**
---------------------
+Pip Installation
+----------------
 
 .. code-block:: bash
 
@@ -23,8 +23,8 @@ ways to install :ref:`gym-os2r` for reinforcement learning.
 
 .. _os2r-superbuild_sim_only:
 
-**Superbuild Installation**
----------------------------
+Superbuild Installation
+-----------------------
 
 The super build is a convenient way to build all required packages from source. The
 superbuild provides a bash script which is then sourced to access all the components

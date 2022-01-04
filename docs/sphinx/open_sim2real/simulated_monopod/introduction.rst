@@ -1,5 +1,5 @@
 Introduction
-================
+============
 
 This section contains all the information required to set up the gym simulation environment
 for our monopod platform. This section assumes that the full :ref:`superbuild <os2r-superbuild>` will
