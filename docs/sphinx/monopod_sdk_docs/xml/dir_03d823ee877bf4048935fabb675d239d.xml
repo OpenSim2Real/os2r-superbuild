@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_03d823ee877bf4048935fabb675d239d" kind="dir">
+    <compoundname>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk</compoundname>
+    <innerfile refid="monopod_8hpp">monopod.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core/include/monopod_sdk/"/>
+  </compounddef>
+</doxygen>

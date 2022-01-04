@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src</compoundname>
+    <innerdir refid="dir_e9e7563bc244c528b70f65290971864a">/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/blmc_drivers</innerdir>
+    <innerdir refid="dir_aebb8dcc11953d78e620bbef0b9e2183">/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/core</innerdir>
+    <innerdir refid="dir_1ac08f5593942ae8d8b9ea3ccfffccc9">/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/monopod_drivers</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/src/"/>
+  </compounddef>
+</doxygen>
