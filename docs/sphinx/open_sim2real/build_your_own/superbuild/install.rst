@@ -254,7 +254,7 @@ Dependencies required to build the superbuild options: ``OPENSIM2REAL_ENABLE_SIM
 
 .. _enable_doc_compilation:
 
-**DOC_COMPILATION**
+**Documentation Compilation**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Dependencies required to build the superbuild options:
