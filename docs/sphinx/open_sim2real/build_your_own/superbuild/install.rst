@@ -88,7 +88,7 @@ directory of the os2r-superbuild and run:
    make update-all
    make
 
-.. note::
+.. tip::
 
   To update the superbuild (change the build option or update the repos) it
   might be necessary to remove the ``os2r-superbuild/build`` and ``os2r-superbuild/src``
@@ -99,12 +99,12 @@ directory of the os2r-superbuild and run:
   **Before building any option that requires python please make sure the following
   pip/python packages are uninstalled:** ``gym-ignition``, ``scenario``, and ``idyntree``.
 
-.. warning::
+.. attention::
 
   **You might need to restart your computer after installing the dependencies
   before building the superbuild.**
 
-.. warning::
+.. attention::
 
   **If you are having issues with dependencies and building try installing ignition
   even if you are only using hardware build options.**
