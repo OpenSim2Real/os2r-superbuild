@@ -1,6 +1,7 @@
 .. _support_policy_sim_only:
+
 Support Policy
-==============
+==================
 
 +-----------------+--------+----------------------+----------+------------+---------+
 |       C++       | Python |      Ignition        |  Ubuntu  |    macOS   | Windows |

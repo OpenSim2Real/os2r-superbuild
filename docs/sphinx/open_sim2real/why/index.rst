@@ -1,5 +1,5 @@
 Why
-===
+=======
 
 .. toctree::
   :caption: Why
