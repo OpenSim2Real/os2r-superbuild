@@ -1,5 +1,5 @@
-Homing
-======
+Homing Implementation
+=====================
 
 Joint Position Calibration
 

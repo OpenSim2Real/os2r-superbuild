@@ -1,8 +1,7 @@
 .. _monopod_sdk_api:
 
-monopod_drivers:: API
-=====================
-
+monopod_drivers C++ API
+=======================
 
 monopod_drivers::Monopod
 ------------------------
@@ -16,5 +15,13 @@ monopod_drivers::Leg
 ------------------------
 
 .. doxygenclass:: monopod_drivers::Leg
+  :project: monopod_sdk
+  :members:
+
+
+monopod_drivers::Planarizer
+---------------------------
+
+.. doxygenclass:: monopod_drivers::Planarizer
   :project: monopod_sdk
   :members:

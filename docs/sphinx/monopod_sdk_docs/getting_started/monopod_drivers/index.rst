@@ -1,9 +1,9 @@
-
 Monopod Drivers
 ===============
 
 .. toctree::
+  :hidden:
   :caption: Monopod Drivers:
 
-  intro
-  monopod_drivers
+  introduction
+  quick_start
