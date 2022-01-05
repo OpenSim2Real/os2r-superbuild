@@ -1,3 +1,5 @@
+.. _what_is_sim2real:
+
 What's Sim2Real
 ===================
 
