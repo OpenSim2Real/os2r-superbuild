@@ -2,3 +2,10 @@
 
 What's our Real
 ===================
+
+
+what's a monopod
+-----------------
+
+what's planarized
+-----------------

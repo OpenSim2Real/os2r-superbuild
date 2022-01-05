@@ -9,4 +9,3 @@ What's Open Sim2Real
   what_sim2real
   what_sim
   what_real
-  what_monopod

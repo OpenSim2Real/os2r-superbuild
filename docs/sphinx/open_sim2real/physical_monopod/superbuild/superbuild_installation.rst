@@ -229,21 +229,13 @@ Dependencies required to build the superbuild options: ``OPENSIM2REAL_ENABLE_SIM
    sudo apt upgrade
    sudo apt-get install -y build-essential \
                            cmake \
-                           python3-sphinx \
-                           doxygen \
-                           python3-breathe \
-                           python3-pybind11 \
+                           libxml2-dev \
                            libboost-all-dev \
-                           freeglut3-dev \
-                           libedit-dev \
-                           libxmu-dev \
-                           libncurses-dev \
-                           libcereal-dev \
+                           libeigen3-dev \
                            coinor-libipopt-dev \
                            libirrlicht-dev \
                            libassimp-dev \
                            swig
-
 3. Further Dependencies
 
 .. code-block:: bash
