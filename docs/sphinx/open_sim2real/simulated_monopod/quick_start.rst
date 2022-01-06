@@ -77,6 +77,7 @@ performs random actions.
 Example of the simulation.
 
 .. image:: media/random_action.gif
+   :align: center
 
 The ``gym-os2r`` package provides multiple ``*kwargs`` for ease of customizing the
 environment. The available ``*kwargs`` are listed in the attributes of the
