@@ -236,7 +236,7 @@ Dependencies required to build the superbuild options: ``OPENSIM2REAL_ENABLE_SIM
                            libirrlicht-dev \
                            libassimp-dev \
                            swig
-                           
+
 3. Further Dependencies
 
 .. code-block:: bash
@@ -257,7 +257,7 @@ are required alongside the additional dependencies below.
 
 .. code-block:: bash
 
-   pip install sphinx-multiversion sphinx_autodoc_typehints sphinx_fontawesome sphinx_book_theme sphinx_tabs lxml
+   pip install sphinx-multiversion sphinx_autodoc_typehints sphinx_fontawesome sphinx_book_theme sphinx_tabs lxml sphinx-copybutton
    pip install -U breathe
 
 To update the published docs to the new built docs use the below
