@@ -35,7 +35,7 @@
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Next Steps" href="next_steps.html" />
+    <link rel="next" title="Training on cloud" href="training_on_cloud.html" />
     <link rel="prev" title="Singularity Container" href="singularity_container.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -98,11 +98,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../getting_started/what/what_real.html">
      What’s our Real
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../getting_started/what/what_monopod.html">
-     What’s our monopod
     </a>
    </li>
   </ul>
@@ -221,6 +216,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="training_on_cloud.html">
+   Training on cloud
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="next_steps.html">
    Next Steps
   </a>
@@ -282,6 +282,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../physical_monopod/monopod/build_instructions.html">
      Building Instructions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../physical_monopod/monopod/how_to_test.html">
+     How to Test
     </a>
    </li>
   </ul>
@@ -661,6 +666,117 @@
                 
   <div class="section" id="quick-start">
 <h1>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
+<p>This sections gives simple boilerplate code using <a class="reference internal" href="../../gym-os2r_index.html#gym-os2r"><span class="std std-ref">gym-os2r</span></a> to perform a simulation
+of the physical monopod. This simulation provides an environment that parallels the physical
+properties of the <a class="reference internal" href="../getting_started/what/what_real.html#what-is-our-real"><span class="std std-ref">real monopod</span></a> for reinforcement learning
+research compatible with OpenAI Gym.</p>
+<p>Following the structure of <a class="reference external" href="https://robotology.github.io/gym-ignition">gym-ignition</a> we provide
+the following classes to train a model for the monopod:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.runtime.html#module-gym_os2r.runtime" title="gym_os2r.runtime"><code class="xref py py-class docutils literal notranslate"><span class="pre">runtime</span></code></a>: Provides the code that deals with real-time execution for
+environments running on the real robot. The implementation for the physical platform is
+<code class="xref py py-class docutils literal notranslate"><span class="pre">RealtimeRuntime</span></code>.</p></li>
+<li><p><a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.tasks.html#module-gym_os2r.tasks.monopod" title="gym_os2r.tasks.monopod"><code class="xref py py-class docutils literal notranslate"><span class="pre">monopod</span></code></a>: Provides the structure of the decision-making logic
+for the monopod. The code of the task is independent from the runtime, and only the core
+ScenarIO APIs should be used. The active runtime will then execute the task on either
+simulated or real worlds by selecting the scenario implementation.</p></li>
+<li><p><a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.randomizers.html#module-gym_os2r.randomizers" title="gym_os2r.randomizers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gym_os2r.randomizers</span></code></a>: Randomizer acts as a <code class="docutils literal notranslate"><span class="pre">gym.Wrapper</span></code> class that randomizes
+the simulated environment every rollout. The two randomizes provided are <a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.randomizers.html#module-gym_os2r.randomizers.monopod" title="gym_os2r.randomizers.monopod"><code class="xref py py-class docutils literal notranslate"><span class="pre">gym_os2r.randomizers.monopod</span></code></a>
+and <a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.randomizers.html#module-gym_os2r.randomizers.monopod_no_rand" title="gym_os2r.randomizers.monopod_no_rand"><code class="xref py py-class docutils literal notranslate"><span class="pre">gym_os2r.randomizers.monopod_no_rand</span></code></a>.</p></li>
+<li><p><a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.rewards.html#gym_os2r.rewards.RewardBase" title="gym_os2r.rewards.RewardBase"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gym_os2r.rewards.RewardBase</span></code></a>: Abstract base class that provides a simple interface to implement
+new rewards functions. This class can be passed into the <a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.tasks.html#module-gym_os2r.tasks.monopod" title="gym_os2r.tasks.monopod"><code class="xref py py-class docutils literal notranslate"><span class="pre">monopod</span></code></a> <code class="docutils literal notranslate"><span class="pre">*kwargs</span></code>.</p></li>
+</ul>
+<p>A minimal example for <code class="docutils literal notranslate"><span class="pre">gym-os2r</span></code>. This example creates a monopod environment then
+performs random actions.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">from</span> <span class="nn">gym_ignition.utils</span> <span class="kn">import</span> <span class="n">logger</span>
+
+<span class="kn">from</span> <span class="nn">gym_os2r</span> <span class="kn">import</span> <span class="n">randomizers</span>
+<span class="kn">from</span> <span class="nn">gym_os2r.common</span> <span class="kn">import</span> <span class="n">make_env_from_id</span>
+<span class="kn">from</span> <span class="nn">gym_os2r.rewards</span> <span class="kn">import</span> <span class="n">BalancingV2</span>
+
+<span class="c1"># Set verbosity</span>
+<span class="c1"># logger.set_level(gym.logger.ERROR)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">set_level</span><span class="p">(</span><span class="n">gym</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+
+<span class="n">env_id</span> <span class="o">=</span> <span class="s2">&quot;Monopod-stand-v1&quot;</span>
+
+<span class="n">kwargs</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="n">make_env</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">make_env_from_id</span><span class="p">,</span> <span class="n">env_id</span><span class="o">=</span><span class="n">env_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="c1"># env = randomizers.monopod.MonopodEnvRandomizer(env=make_env)</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">randomizers</span><span class="o">.</span><span class="n">monopod_no_rand</span><span class="o">.</span><span class="n">MonopodEnvNoRandomizer</span><span class="p">(</span><span class="n">env</span><span class="o">=</span><span class="n">make_env</span><span class="p">)</span>
+
+<span class="c1"># Enable the rendering</span>
+<span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;human&#39;</span><span class="p">)</span>
+
+<span class="c1"># Initialize the seed</span>
+<span class="n">env</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+
+    <span class="c1"># Reset the environment</span>
+    <span class="n">observation</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+    <span class="c1"># Initialize returned values</span>
+    <span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+        <span class="c1"># Execute a random action</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span>
+        <span class="n">observation</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+
+<span class="n">env</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example of the simulation.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../_images/random_action.gif" class="align-center" src="../../_images/random_action.gif" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">gym-os2r</span></code> package provides multiple <code class="docutils literal notranslate"><span class="pre">*kwargs</span></code> for ease of customizing the
+environment. The available <code class="docutils literal notranslate"><span class="pre">*kwargs</span></code> are listed in the attributes of the
+<a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.tasks.html#module-gym_os2r.tasks.monopod" title="gym_os2r.tasks.monopod"><code class="xref py py-class docutils literal notranslate"><span class="pre">monopod</span></code></a> class. The following table concisely lists all the
+different options:</p>
+<table class="table">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 14%" />
+<col style="width: 43%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Required <code class="docutils literal notranslate"><span class="pre">*kwarg</span></code></p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Available Options</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>task_mode</p></td>
+<td><p>str</p></td>
+<td><p>Defines the configured mode of the monopod i.e. how many actuated joints and how many observed joints.</p></td>
+<td><p>‘free_hip’, ‘fixed_hip’, ‘fixed’, Deprecated Options (‘old-free_hip’, ‘old-fixed_hip’, ‘old-fixed’).</p></td>
+</tr>
+<tr class="row-odd"><td><p>reward_class</p></td>
+<td><p><a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.rewards.html#gym_os2r.rewards.RewardBase" title="gym_os2r.rewards.RewardBase"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gym_os2r.rewards.RewardBase</span></code></a></p></td>
+<td><p>Defines the reward function for the task. The reward class has access to the previous action and the current observation.</p></td>
+<td><p>Provided reward functions: BalancingV1, BalancingV2, StandingV1, WalkingV1.</p></td>
+</tr>
+<tr class="row-even"><td><p>reset_position</p></td>
+<td><p>[str]</p></td>
+<td><p>Array of allowed positions for the monopod to be reset into. This will be randomly chosen during each reset.</p></td>
+<td><p>‘stand’, ‘half_stand’, ‘ground’, ‘lay’, ‘float’</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 
 
@@ -676,10 +792,10 @@
             <p class="prev-next-title">Singularity Container</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="next_steps.html" title="next page">
+    <a class='right-next' id="next-link" href="training_on_cloud.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Next Steps</p>
+        <p class="prev-next-title">Training on cloud</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

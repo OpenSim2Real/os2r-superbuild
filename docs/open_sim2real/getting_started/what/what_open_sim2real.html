@@ -100,11 +100,6 @@
      What’s our Real
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="what_monopod.html">
-     What’s our monopod
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -221,6 +216,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../simulated_monopod/training_on_cloud.html">
+   Training on cloud
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../simulated_monopod/next_steps.html">
    Next Steps
   </a>
@@ -282,6 +282,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../physical_monopod/monopod/build_instructions.html">
      Building Instructions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../physical_monopod/monopod/how_to_test.html">
+     How to Test
     </a>
    </li>
   </ul>
@@ -661,6 +666,18 @@
                 
   <div class="section" id="what-s-open-sim2real">
 <h1>What’s Open Sim2Real<a class="headerlink" href="#what-s-open-sim2real" title="Permalink to this headline">¶</a></h1>
+<p>Open Sim2Real is a open source project striving to develop a simple cheap
+platform for <a class="reference internal" href="what_sim2real.html#what-is-sim2real"><span class="std std-ref">Sim2Real</span></a> research.</p>
+<p>The platform consists of a cheap <a class="reference internal" href="what_real.html#what-is-our-real"><span class="std std-ref">single leg robot</span></a> constrained
+to an approximate plane, and the corresponding simulation. Both the sim and real
+components support training within the gym framework (limited by real-time constraints
+on physical robot). In other words this project provides an open source, simple foundation
+for future Sim2Real platforms to build on top of.</p>
+<p>There are well documented <cite>build instructions &lt;building_the_robot&gt;</cite> for
+the physical monopod, additionally instructions on how to install the software stack, set up
+<a class="reference internal" href="../../simulated_monopod/training_on_cloud.html#training-on-cloud"><span class="std std-ref">training on cloud</span></a> (with container or source), basic tasks and
+reward functions, and much more. The project builds on top of many tools researchers are already
+familiar with making the transition into real natural (those dang simulations need to touch grass).</p>
 </div>
 
 
