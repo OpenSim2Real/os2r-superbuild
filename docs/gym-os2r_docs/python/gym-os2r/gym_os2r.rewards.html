@@ -683,7 +683,7 @@
 <dt class="sig sig-object py" id="gym_os2r.rewards.BalancingV1">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gym_os2r.rewards.</span></span><span class="sig-name descname"><span class="pre">BalancingV1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observation_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.rewards.BalancingV1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#gym_os2r.rewards.RewardBase" title="gym_os2r.rewards.RewardBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">gym_os2r.rewards.RewardBase</span></code></a></p>
-<p>Standing reward. Start from standing and stay standing.</p>
+<p>Balancing reward. Start from standing positions and stay standing.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="gym_os2r.rewards.BalancingV1.calculate_reward">
 <span class="sig-name descname"><span class="pre">calculate_reward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.rewards.BalancingV1.calculate_reward" title="Permalink to this definition">¶</a></dt>
@@ -713,7 +713,8 @@ as action space.</p></li>
 <dt class="sig sig-object py" id="gym_os2r.rewards.BalancingV2">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gym_os2r.rewards.</span></span><span class="sig-name descname"><span class="pre">BalancingV2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observation_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.rewards.BalancingV2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#gym_os2r.rewards.RewardBase" title="gym_os2r.rewards.RewardBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">gym_os2r.rewards.RewardBase</span></code></a></p>
-<p>Standing reward. Start from standing and stay standing.</p>
+<p>Balancing reward. Start from standing positions and stay standing. Smaller
+control signals are favoured.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="gym_os2r.rewards.BalancingV2.calculate_reward">
 <span class="sig-name descname"><span class="pre">calculate_reward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.rewards.BalancingV2.calculate_reward" title="Permalink to this definition">¶</a></dt>
@@ -837,7 +838,8 @@ as action space.</p></li>
 <dt class="sig sig-object py" id="gym_os2r.rewards.WalkingV1">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gym_os2r.rewards.</span></span><span class="sig-name descname"><span class="pre">WalkingV1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observation_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.rewards.WalkingV1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#gym_os2r.rewards.RewardBase" title="gym_os2r.rewards.RewardBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">gym_os2r.rewards.RewardBase</span></code></a></p>
-<p>Standing reward. Start from ground and stand up.</p>
+<p>Walking reward. Start from standing position and attempt to move
+forward while maintaining the standing height and position.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="gym_os2r.rewards.WalkingV1.calculate_reward">
 <span class="sig-name descname"><span class="pre">calculate_reward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.rewards.WalkingV1.calculate_reward" title="Permalink to this definition">¶</a></dt>
