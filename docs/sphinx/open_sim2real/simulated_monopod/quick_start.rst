@@ -41,7 +41,6 @@ Minimal Example
 
   from gym_os2r import randomizers
   from gym_os2r.common import make_env_from_id
-  from gym_os2r.rewards import BalancingV2
 
   # Set verbosity
   # logger.set_level(gym.logger.ERROR)
@@ -91,13 +90,13 @@ Minimal Example
 Kwarg Options
 -------------
 
-The ``gym-os2r`` package provides multiple ``*kwargs`` for ease of customizing the
-environment. The available ``*kwargs`` are listed in the attributes of the
+The ``gym-os2r`` package provides multiple ``kwargs`` for ease of customizing the
+environment. The available ``kwargs`` are listed in the attributes of the
 :py:class:`~gym_os2r.tasks.monopod` class. The following table concisely lists all the
 different options:
 
 +----------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Required ``*kwarg``  | Type                                   | Description                                                                                                                | Available Options                                                                                                                                                                                                                               |
+| Required ``kwarg``   | Type                                   | Description                                                                                                                | Available Options                                                                                                                                                                                                                               |
 +======================+========================================+============================================================================================================================+=================================================================================================================================================================================================================================================+
 | ``task_mode``        | str                                    | Defines the configured mode of the monopod i.e. how many actuated joints and how many observed joints.                     | ``‘free_hip’``, ``‘fixed_hip’``, ``‘fixed’``, Deprecated Options (``‘old-free_hip’``, ``‘old-fixed_hip’``, ``‘old-fixed’``).                                                                                                                    |
 +----------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -107,6 +106,26 @@ different options:
 +----------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 |
+
+Example of how to specify the ``kwargs`` in the env. Replace the ``kwargs`` with the
+ones that are desired. 
+
+.. code-block:: python
+
+  from gym_os2r import randomizers
+  from gym_os2r.common import make_env_from_id
+  from gym_os2r.rewards import BalancingV1
+
+  env_id = "Monopod-stand-v1"
+  kwargs = {
+    'task_mode': 'free_hip',
+    'reward_class': BalancingV1,
+    'reset_positions': ['float', 'lay', 'stand']
+  }
+
+  make_env = functools.partial(make_env_from_id, env_id=env_id, **kwargs)
+  env = randomizers.monopod_no_rand.MonopodEnvNoRandomizer(env=make_env)
+
 
 Default Reset Positions
 -----------------------
