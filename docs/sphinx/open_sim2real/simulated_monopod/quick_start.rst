@@ -89,6 +89,8 @@ Minimal Example
   Example of the simulation. The minimal example performs random actions until it
   reaches the maximum time steps.
 
+|
+
 Kwarg Options
 -------------
 
@@ -109,5 +111,34 @@ different options:
 
 |
 
-Default Reset Positions:
-------------------------
+Default Reset Positions
+-----------------------
+
+The reset positions shipped with the environment are all shown below. You can
+choose any number of these positions to train with.
+
+.. list-table::
+
+ * - .. figure:: media/reset_positions/ground.gif
+
+        Ground
+
+   - .. figure:: media/reset_positions/half_stand.gif
+
+        Half Stand
+
+   - .. figure:: media/reset_positions/stand.gif
+
+        Stand
+
+.. list-table::
+
+   * - .. figure:: media/reset_positions/float.gif
+
+          Float
+
+     - .. figure:: media/reset_positions/lay.gif
+
+          Lay
+
+     -
