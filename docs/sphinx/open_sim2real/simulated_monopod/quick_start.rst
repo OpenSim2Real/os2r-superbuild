@@ -18,7 +18,7 @@ the following classes to train a model for the monopod:
   ScenarIO APIs should be used. The active runtime will then execute the task on either
   simulated or real worlds by selecting the scenario implementation.
 
-- :py:mod:`gym_os2r.randomizers`: Randomizer acts as a ``gym.Wrapper`` class that randomizes
+- :py:mod:`gym_os2r.randomizers`: Randomizer acts as a ``gym.Wrapper`` class that randomizes the domain of
   the simulated environment every rollout. The two randomizes provided are :py:class:`gym_os2r.randomizers.monopod`
   and :py:class:`gym_os2r.randomizers.monopod_no_rand`.
 
@@ -27,9 +27,6 @@ the following classes to train a model for the monopod:
 
 A minimal example for ``gym-os2r``. This example creates a monopod environment then
 performs random actions.
-
-
-
 
 Minimal Example
 ---------------
@@ -121,24 +118,27 @@ choose any number of these positions to train with.
 
  * - .. figure:: media/reset_positions/ground.gif
 
-        Ground
+        ``ground`` reset position
 
    - .. figure:: media/reset_positions/half_stand.gif
 
-        Half Stand
+        ``half_stand`` reset position
 
    - .. figure:: media/reset_positions/stand.gif
 
-        Stand
+        ``stand`` reset position
 
 .. list-table::
 
    * - .. figure:: media/reset_positions/float.gif
 
-          Float
+          ``float`` reset position
 
      - .. figure:: media/reset_positions/lay.gif
 
-          Lay
+          ``lay`` reset position
 
      -
+
+Default Randomizer Features
+---------------------------
