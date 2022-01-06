@@ -3,7 +3,7 @@ Quick Start
 
 This sections gives simple boilerplate code using :ref:`gym-os2r` to perform a simulation
 of the physical monopod. This simulation provides an environment that parallels the physical
-properties of the :ref:`real monopod <_what_is_our_real>` for reinforcement learning
+properties of the :ref:`real monopod <what_is_our_real>` for reinforcement learning
 research compatible with OpenAI Gym.
 
 Following the structure of `gym-ignition <https://robotology.github.io/gym-ignition>`_ we provide
@@ -82,3 +82,13 @@ The ``gym-os2r`` package provides multiple ``*kwargs`` for ease of customizing t
 environment. The available ``*kwargs`` are listed in the attributes of the
 :py:class:`~gym_os2r.tasks.monopod` class. The following table concisely lists all the
 different options:
+
++----------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+| Required ``*kwarg``  | Type                                   | Description                                                                                                                | Available Options                                                                                     |
++======================+========================================+============================================================================================================================+=======================================================================================================+
+| task_mode            | str                                    | Defines the configured mode of the monopod i.e. how many actuated joints and how many observed joints.                     | ‘free_hip’, ‘fixed_hip’, ‘fixed’, Deprecated Options (‘old-free_hip’, ‘old-fixed_hip’, ‘old-fixed’).  |
++----------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+| reward_class         | :py:mod:`gym_os2r.rewards.RewardBase`  | Defines the reward function for the task. The reward class has access to the previous action and the current observation.  | Provided reward functions: BalancingV1, BalancingV2, StandingV1, WalkingV1.                           |
++----------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+| reset_position       | [str]                                  | Array of allowed positions for the monopod to be reset into. This will be randomly chosen during each reset.               | ‘stand’, ‘half_stand’, ‘ground’, ‘lay’, ‘float’                                                       |
++----------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+

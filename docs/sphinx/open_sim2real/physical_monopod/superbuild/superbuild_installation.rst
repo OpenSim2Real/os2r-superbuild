@@ -236,6 +236,7 @@ Dependencies required to build the superbuild options: ``OPENSIM2REAL_ENABLE_SIM
                            libirrlicht-dev \
                            libassimp-dev \
                            swig
+                           
 3. Further Dependencies
 
 .. code-block:: bash

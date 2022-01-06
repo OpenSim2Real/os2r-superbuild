@@ -14,3 +14,4 @@ The packages we provide that are built around ORDI are: :ref:`monopod_sdk`, and 
   build_requirements
   bom
   build_instructions
+  how_to_test
