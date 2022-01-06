@@ -18,7 +18,7 @@ the following classes to train a model for the monopod:
   ScenarIO APIs should be used. The active runtime will then execute the task on either
   simulated or real worlds by selecting the scenario implementation.
 
-- :py:mod:`gym_os2r.randomizers`: Randomizer acts as a ``gym.Wrapper`` class that randomizes
+- :py:mod:`gym_os2r.randomizers`: Randomizer acts as a ``gym.Wrapper`` class that randomizes the domain of
   the simulated environment every rollout. The two randomizes provided are :py:class:`gym_os2r.randomizers.monopod`
   and :py:class:`gym_os2r.randomizers.monopod_no_rand`.
 
@@ -27,9 +27,6 @@ the following classes to train a model for the monopod:
 
 A minimal example for ``gym-os2r``. This example creates a monopod environment then
 performs random actions.
-
-
-
 
 Minimal Example
 ---------------
@@ -44,7 +41,6 @@ Minimal Example
 
   from gym_os2r import randomizers
   from gym_os2r.common import make_env_from_id
-  from gym_os2r.rewards import BalancingV2
 
   # Set verbosity
   # logger.set_level(gym.logger.ERROR)
@@ -94,13 +90,13 @@ Minimal Example
 Kwarg Options
 -------------
 
-The ``gym-os2r`` package provides multiple ``*kwargs`` for ease of customizing the
-environment. The available ``*kwargs`` are listed in the attributes of the
+The ``gym-os2r`` package provides multiple ``kwargs`` for ease of customizing the
+environment. The available ``kwargs`` are listed in the attributes of the
 :py:class:`~gym_os2r.tasks.monopod` class. The following table concisely lists all the
 different options:
 
 +----------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Required ``*kwarg``  | Type                                   | Description                                                                                                                | Available Options                                                                                                                                                                                                                               |
+| Required ``kwarg``   | Type                                   | Description                                                                                                                | Available Options                                                                                                                                                                                                                               |
 +======================+========================================+============================================================================================================================+=================================================================================================================================================================================================================================================+
 | ``task_mode``        | str                                    | Defines the configured mode of the monopod i.e. how many actuated joints and how many observed joints.                     | ``‘free_hip’``, ``‘fixed_hip’``, ``‘fixed’``, Deprecated Options (``‘old-free_hip’``, ``‘old-fixed_hip’``, ``‘old-fixed’``).                                                                                                                    |
 +----------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -111,6 +107,26 @@ different options:
 
 |
 
+Example of how to specify the ``kwargs`` in the env. Replace the ``kwargs`` with the
+ones that are desired.
+
+.. code-block:: python
+
+  from gym_os2r import randomizers
+  from gym_os2r.common import make_env_from_id
+  from gym_os2r.rewards import BalancingV1
+
+  env_id = "Monopod-stand-v1"
+  kwargs = {
+    'task_mode': 'free_hip',
+    'reward_class': BalancingV1,
+    'reset_positions': ['float', 'lay', 'stand']
+  }
+
+  make_env = functools.partial(make_env_from_id, env_id=env_id, **kwargs)
+  env = randomizers.monopod_no_rand.MonopodEnvNoRandomizer(env=make_env)
+
+
 Default Reset Positions
 -----------------------
 
@@ -119,26 +135,43 @@ choose any number of these positions to train with.
 
 .. list-table::
 
- * - .. figure:: media/reset_positions/ground.gif
+  * - .. figure:: media/reset_positions/ground.gif
 
-        Ground
+        ``ground`` reset position
 
-   - .. figure:: media/reset_positions/half_stand.gif
+    - .. figure:: media/reset_positions/half_stand.gif
 
-        Half Stand
+        ``half_stand`` reset position
 
-   - .. figure:: media/reset_positions/stand.gif
+    - .. figure:: media/reset_positions/stand.gif
 
-        Stand
+        ``stand`` reset position
 
 .. list-table::
 
-   * - .. figure:: media/reset_positions/float.gif
+  * - .. figure:: media/reset_positions/float.gif
 
-          Float
+        ``float`` reset position
 
-     - .. figure:: media/reset_positions/lay.gif
+    - .. figure:: media/reset_positions/lay.gif
 
-          Lay
+        ``lay`` reset position
 
-     -
+    -
+
+Default Randomizer Features
+---------------------------
+
++----------------------+-----------+---------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Randomized Property  | Method    | Distribution                          | Note                                                                                                                                                                                                                                               |
++======================+===========+=======================================+====================================================================================================================================================================================================================================================+
+| ``link mass``        | Scale     | ``UniformParams(low=0.8, high=1.2)``  | Mass of each link in the robot is scaled between 80% and 120% of the default value. The scaling is sampled from a uniform distribution.                                                                                                            |
++----------------------+-----------+---------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``joint friction``   | Absolute  | ``UniformParams(low=0.01, high=0.1)`` | Joint frictions are sampled from a uniform distribution between 0.01 and 0.1.                                                                                                                                                                      |
++----------------------+-----------+---------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``joint damping``    | Scale     | ``UniformParams(low=0.8, high=1.2)``  | Dampening of each link in the robot is scaled between 80% and 120% of the default value. The scaling is sampled from a uniform distribution.                                                                                                       |
++----------------------+-----------+---------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``surface friction`` | Absolute  | ``UniformParams(low=0.8, high=1.2)``  | Ground planes surface frictions is sampled from a uniform distribution between 0.8 and 1.2.                                                                                                                                                        |
++----------------------+-----------+---------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``link inertia``     | --        | --                                    | Link inertia needs to satisfy the triangle inequality. This means the the link inertia can only have scaling trivially. Will add better randomization in future. Track feature `here <https://github.com/robotology/gym-ignition/issues/218>`_\ .  |
++----------------------+-----------+---------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
