@@ -28,6 +28,13 @@ the following classes to train a model for the monopod:
 A minimal example for ``gym-os2r``. This example creates a monopod environment then
 performs random actions.
 
+
+
+
+Minimal Example
+---------------
+
+
 .. code-block:: python
 
   import gym
@@ -74,24 +81,33 @@ performs random actions.
   env.close()
   time.sleep(5)
 
-Example of the simulation.
+.. figure:: media/random_action.gif
+  :figclass: margin
+  :alt: Minimal Example
+  :name: fig:minimal_example
 
-|
-.. image:: media/random_action.gif
-   :align: center
-|
+  Example of the simulation. The minimal example performs random actions until it
+  reaches the maximum time steps.
+
+Kwarg Options
+-------------
 
 The ``gym-os2r`` package provides multiple ``*kwargs`` for ease of customizing the
 environment. The available ``*kwargs`` are listed in the attributes of the
 :py:class:`~gym_os2r.tasks.monopod` class. The following table concisely lists all the
 different options:
 
-+----------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
-| Required ``*kwarg``  | Type                                   | Description                                                                                                                | Available Options                                                                                     |
-+======================+========================================+============================================================================================================================+=======================================================================================================+
-| task_mode            | str                                    | Defines the configured mode of the monopod i.e. how many actuated joints and how many observed joints.                     | ‘free_hip’, ‘fixed_hip’, ‘fixed’, Deprecated Options (‘old-free_hip’, ‘old-fixed_hip’, ‘old-fixed’).  |
-+----------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
-| reward_class         | :py:mod:`gym_os2r.rewards.RewardBase`  | Defines the reward function for the task. The reward class has access to the previous action and the current observation.  | Provided reward functions: BalancingV1, BalancingV2, StandingV1, WalkingV1.                           |
-+----------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
-| reset_position       | [str]                                  | Array of allowed positions for the monopod to be reset into. This will be randomly chosen during each reset.               | ‘stand’, ‘half_stand’, ‘ground’, ‘lay’, ‘float’                                                       |
-+----------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
++----------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Required ``*kwarg``  | Type                                   | Description                                                                                                                | Available Options                                                                                                                                                                                                                               |
++======================+========================================+============================================================================================================================+=================================================================================================================================================================================================================================================+
+| ``task_mode``        | str                                    | Defines the configured mode of the monopod i.e. how many actuated joints and how many observed joints.                     | ``‘free_hip’``, ``‘fixed_hip’``, ``‘fixed’``, Deprecated Options (``‘old-free_hip’``, ``‘old-fixed_hip’``, ``‘old-fixed’``).                                                                                                                    |
++----------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``reward_class``     | :py:mod:`gym_os2r.rewards.RewardBase`  | Defines the reward function for the task. The reward class has access to the previous action and the current observation.  | Provided reward functions: :py:mod:`BalancingV1 <gym_os2r.rewards.BalancingV1>`, :py:mod:`BalancingV2 <gym_os2r.rewards.BalancingV2>`, :py:mod:`StandingV1 <gym_os2r.rewards.StandingV1>`, :py:mod:`WalkingV1 <gym_os2r.rewards.WalkingV1>`.    |
++----------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``reset_position``   | [str]                                  | Array of allowed positions for the monopod to be reset into. This will be randomly chosen during each reset.               | ``‘stand’``, ``‘half_stand’``, ``‘ground’``, ``‘lay’``, ``‘float’``                                                                                                                                                                             |
++----------------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+|
+
+Default Reset Positions:
+------------------------
