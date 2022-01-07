@@ -31,7 +31,6 @@ performs random actions.
 Minimal Example
 ---------------
 
-
 .. code-block:: python
 
   import gym
@@ -89,6 +88,18 @@ Minimal Example
 
 Environment Ids
 ---------------
+
+The provided environment ids with their corresponding ``kwargs`` are listed in the table below.
+
++-------------------------+-----------------+-------------------------------------------------------+------------------+
+| Environment Id          | task_mode       | reward_class                                          | reset_positions  |
++=========================+=================+=======================================================+==================+
+| ``Monopod-stand-v1``    | ``'free_hip'``  | :py:mod:`StandingV1 <gym_os2r.rewards.StandingV1>`    | ``['ground']``   |
++-------------------------+-----------------+-------------------------------------------------------+------------------+
+| ``Monopod-balance-v1``  | ``'free_hip'``  | :py:mod:`BalancingV1 <gym_os2r.rewards.BalancingV1>`  | ``['stand']``    |
++-------------------------+-----------------+-------------------------------------------------------+------------------+
+| ``Monopod-walk-v1``     | ``'free_hip'``  | :py:mod:`WalkingV1 <gym_os2r.rewards.WalkingV1>`      | ``['stand']``    |
++-------------------------+-----------------+-------------------------------------------------------+------------------+
 
 |
 
