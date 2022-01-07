@@ -1,4 +1,4 @@
 .. _training_on_cloud:
 
-Training on cloud
+Training on Cloud
 =================

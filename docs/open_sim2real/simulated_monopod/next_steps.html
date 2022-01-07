@@ -39,7 +39,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Introduction" href="../physical_monopod/introduction.html" />
-    <link rel="prev" title="Training on cloud" href="training_on_cloud.html" />
+    <link rel="prev" title="Training on Cloud" href="training_on_cloud.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -220,7 +220,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="training_on_cloud.html">
-   Training on cloud
+   Training on Cloud
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -675,6 +675,11 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-on-custom-model-configs">
+   More on Custom Model Configs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sac-training-example">
    Sac Training Example
   </a>
@@ -692,15 +697,104 @@
                 
   <div class="section" id="next-steps">
 <h1>Next Steps<a class="headerlink" href="#next-steps" title="Permalink to this headline">¶</a></h1>
+<p>Next steps explains how to work with some of the more advanced features <code class="docutils literal notranslate"><span class="pre">gym-os2r</span></code>
+has to offer. Many of these features have minimal testing and would appreciate any
+feedback on errors encountered. Additionally there is a small example on how to
+implement SAC using gym-os2r.</p>
 <div class="section" id="custom-reward-class">
 <h2>Custom Reward Class<a class="headerlink" href="#custom-reward-class" title="Permalink to this headline">¶</a></h2>
-<p>Explain observation_index</p>
+<p>Example of creating a custom reward function for training some task. This reward will
+simply read the angle of the boom relative to the ground and check if it is between some bounds
+if it is between the bounds the reward equals one, otherwise zero. This reward function can then be
+injected into a training environment using the <code class="docutils literal notranslate"><span class="pre">kwargs</span></code>. This provides an abstracted approach to
+reward functions making development of new control algorithms for the monopod faster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gym_os2r.rewards</span> <span class="kn">import</span> <span class="n">RewardBase</span>
+<span class="kn">from</span> <span class="nn">gym_os2r.reward.rewards_utils</span> <span class="kn">import</span> <span class="n">tolerance</span>
+
+<span class="c1"># Example custom Reward</span>
+<span class="k">class</span> <span class="nc">CustomReward</span><span class="p">(</span><span class="n">RewardBase</span><span class="p">):</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Custom example reward.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">observation_index</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">observation_index</span><span class="p">)</span>
+
+        <span class="c1"># Set the &#39;task_mode&#39; that are supported y the reward as a safety check.</span>
+        <span class="c1"># in the form self.supported_task_modes = [&#39;free_hip&#39;, &#39;fixed_hip&#39;, &#39;fixed&#39;, ... ]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">supported_task_modes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_all_task_modes</span>
+
+    <span class="k">def</span> <span class="nf">calculate_reward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obs</span><span class="p">:</span> <span class="n">Observation</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">Action</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Reward</span><span class="p">:</span>
+        <span class="n">_LOW</span> <span class="o">=</span> <span class="mf">0.2</span>
+        <span class="n">_HIGH</span> <span class="o">=</span> <span class="mf">0.4</span>
+
+        <span class="c1"># Observation array can be indexed using the name of the observation you wish to</span>
+        <span class="c1"># index. This is done using the observation_index dictionary which has indexes in</span>
+        <span class="c1"># the format &#39;&lt;jointname&gt;_pos&#39;, and &#39;&lt;jointname&gt;_vel&#39;. The example below gets</span>
+        <span class="c1"># the position of the planarizer_pitch_joint.</span>
+        <span class="n">cur_pitch_pos</span> <span class="o">=</span> <span class="n">obs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">observation_index</span><span class="p">[</span><span class="s1">&#39;planarizer_pitch_joint_pos&#39;</span><span class="p">]]</span>
+
+        <span class="c1"># tolerance is a helper function to scale and bound the observation.</span>
+        <span class="k">return</span> <span class="n">tolerance</span><span class="p">(</span><span class="n">cur_pitch_pos</span><span class="p">,</span> <span class="p">(</span><span class="n">_LOW</span><span class="p">,</span> <span class="n">_HIGH</span><span class="p">))</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="custom-reset-position">
 <h2>Custom Reset Position<a class="headerlink" href="#custom-reset-position" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gym_os2r</span> <span class="kn">import</span> <span class="n">randomizers</span>
+<span class="kn">from</span> <span class="nn">gym_os2r.common</span> <span class="kn">import</span> <span class="n">make_env_from_id</span>
+<span class="kn">from</span> <span class="nn">gym_os2r.models.config</span> <span class="kn">import</span> <span class="n">SettingsConfig</span>
+
+<span class="n">reset_position</span> <span class="o">=</span> <span class="s1">&#39;name_reset&#39;</span>
+
+<span class="n">cfg</span> <span class="o">=</span> <span class="n">SettingsConfig</span><span class="p">()</span>
+<span class="n">xpath</span> <span class="o">=</span> <span class="s1">&#39;resets/&#39;</span> <span class="o">+</span> <span class="n">reset_position</span>
+
+<span class="n">new_pitch</span> <span class="o">=</span> <span class="mf">0.4</span>
+<span class="n">laying_down</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="n">cfg</span><span class="o">.</span><span class="n">set_config</span><span class="p">(</span><span class="n">laying_down</span><span class="p">,</span> <span class="n">xpath</span> <span class="o">+</span> <span class="s1">&#39;/laying_down&#39;</span><span class="p">)</span>
+<span class="n">cfg</span><span class="o">.</span><span class="n">set_config</span><span class="p">(</span><span class="n">new_pitch</span><span class="p">,</span> <span class="n">xpath</span> <span class="o">+</span> <span class="s1">&#39;/planarizer_pitch_joint_pos&#39;</span><span class="p">)</span>
+
+
+<span class="n">env_id</span> <span class="o">=</span> <span class="s2">&quot;Monopod-stand-v1&quot;</span>
+<span class="n">kwargs</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;reset_positions&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;name_reset&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">make_env</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">make_env_from_id</span><span class="p">,</span> <span class="n">env_id</span><span class="o">=</span><span class="n">env_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">randomizers</span><span class="o">.</span><span class="n">monopod_no_rand</span><span class="o">.</span><span class="n">MonopodEnvNoRandomizer</span><span class="p">(</span><span class="n">env</span><span class="o">=</span><span class="n">make_env</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The form of each reset position is below. The xpath above sets the following variables.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">resets</span><span class="p">:</span>
+  <span class="nt">name_reset</span><span class="p">:</span>
+    <span class="nt">laying_down</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+    <span class="nt">planarizer_pitch_joint</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.4</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="more-on-custom-model-configs">
+<h2>More on Custom Model Configs<a class="headerlink" href="#more-on-custom-model-configs" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I do not recommend changing the model config file much. This is a
+fairly fragile component in this project. If there was a better way to encode
+the model joint information and reset information I would gladly attempt to
+implement it instead.</p>
+</div>
+<p>If you still desire to update the model config here is a short explanation on
+what to expect. Firstly It is recommended to be have <code class="docutils literal notranslate"><span class="pre">gym-os2r</span></code> installed as a
+developer. The config implementation can be found <a class="reference internal" href="../../gym-os2r_docs/python/gym-os2r/gym_os2r.models.config.html#module-gym_os2r.models.config" title="gym_os2r.models.config"><code class="xref py py-mod docutils literal notranslate"><span class="pre">here</span></code></a>.</p>
 </div>
 <div class="section" id="sac-training-example">
 <h2>Sac Training Example<a class="headerlink" href="#sac-training-example" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sac will not be suitable to train on real without modification. The update steps
+done at each time step means that it is unable to handle real-time. This issue does
+not affect simulation. There is a few creative work arounds I am sure you can think of.</p>
+</div>
 </div>
 </div>
 
@@ -714,7 +808,7 @@
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Training on cloud</p>
+            <p class="prev-next-title">Training on Cloud</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../physical_monopod/introduction.html" title="next page">
