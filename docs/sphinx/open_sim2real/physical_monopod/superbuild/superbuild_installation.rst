@@ -78,7 +78,7 @@ For example to install all components and compile the documentation the command 
 
 .. code-block:: bash
 
-  cmake -S . -B build -DOPENSIM2REAL_ENABLE_ALL:BOOL=TRUE -DOPENSIM2REAL_ENABLE_DOC_COMPILATION:BOOL=TRUE
+  cmake -S . -B build -DOPENSIM2REAL_ENABLE_ALL:BOOL=TRUE -DOPENSIM2REAL_ENABLE_BUILDDOCS:BOOL=TRUE
 
 To update the repos in the superbuild make sure you are in the build
 directory of the os2r-superbuild and run:
@@ -251,7 +251,7 @@ Documentation Compilation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Dependencies required to build the superbuild options:
-``OPENSIM2REAL_ENABLE_DOC_COMPILATION`` Requires ``OPENSIM2REAL_ENABLE_ALL``
+``OPENSIM2REAL_ENABLE_BUILDDOCS`` Requires ``OPENSIM2REAL_ENABLE_ALL``
 to also be enabled. To compile the docs all dependencies of ``OPENSIM2REAL_ENABLE_ALL``
 are required alongside the additional dependencies below.
 
