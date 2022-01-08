@@ -15,7 +15,7 @@ components support training within the gym framework (limited by real-time const
 on physical robot). In other words this project provides an open source, simple foundation
 for future Sim2Real platforms to build on top of.
 
-There are well documented `build instructions <building_the_robot>` for
+There are well documented :ref:`build instructions <building_the_robot>` for
 the physical monopod, additionally instructions on how to install the software stack, set up
 :ref:`training on cloud <training_on_cloud>` (with container or source), basic tasks and
 reward functions, and much more. The project builds on top of many tools researchers are already
@@ -33,7 +33,6 @@ between robotics and machine learning.
 By providing an open source complete platform for Sim2Real research that is relatively inexpensive we believe
 it will open doors for research groups otherwise limited to simulation.
 
-|
 |
 
 This project provides three main features:
