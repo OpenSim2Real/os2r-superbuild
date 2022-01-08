@@ -23,7 +23,17 @@ include(FeatureSummary)
 # Disable YCM-created install/INSTALL target (see https://github.com/robotology/robotology-superbuild/issues/356)
 macro(install)
 endmacro()
-
+if (NOT MSVC)
+    # lots of warnings and all warnings as errors
+    # This is to clean up the build output :) especially idyntree :(
+    add_compile_options(
+      -Wno-unused-parameter
+      -Wno-missing-field-initializers
+      -Wno-unused-result
+      -Wno-maybe-uninitialized
+      -Wno-deprecated-copy
+    )
+endif()
 # Load options
 include(OpenSim2RealSuperbuildOptions)
 
@@ -66,7 +76,7 @@ set_package_properties(Subversion PROPERTIES TYPE RUNTIME)
 set_package_properties(PkgConfig PROPERTIES TYPE RUNTIME)
 set_package_properties(Doxygen PROPERTIES TYPE RUNTIME)
 
-if(OPENSIM2REAL_ENABLE_DOC_COMPILATION)
+if(OPENSIM2REAL_ENABLE_BUILDDOCS)
     IF(NOT OPENSIM2REAL_ENABLE_ALL)
       message(FATAL_ERROR "Need to enable compilation of all components to build documentation.")
     ENDIF()
