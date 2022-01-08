@@ -83,11 +83,6 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="open_sim2real/getting_started/what/what_open_sim2real.html">
-     What’s Open Sim2Real
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="open_sim2real/getting_started/what/what_sim2real.html">
      What’s Sim2Real
     </a>
@@ -114,11 +109,6 @@
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="open_sim2real/getting_started/why/why_open_sim2real.html">
-     Why Open Sim2Real
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="open_sim2real/getting_started/why/why_sim2real.html">
      Why Sim2Real
@@ -2271,6 +2261,8 @@
 </li>
       <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers3LegE">monopod_drivers::Leg (C++ class)</a>
 </li>
+      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers3Leg9calibrateERK7LVector">monopod_drivers::Leg::calibrate (C++ function)</a>
+</li>
       <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers3Leg8get_dataEv">monopod_drivers::Leg::get_data (C++ function)</a>
 </li>
       <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4NK15monopod_drivers3Leg16get_measurementsERKi">monopod_drivers::Leg::get_measurements (C++ function)</a>
@@ -2279,11 +2271,15 @@
 </li>
       <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4NK15monopod_drivers3Leg23get_sent_torque_targetsEv">monopod_drivers::Leg::get_sent_torque_targets (C++ function)</a>
 </li>
-      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers3Leg3LegEN12blmc_drivers16BlmcJointModulesIXL2EEEERK6VectorRK6Vector">monopod_drivers::Leg::Leg (C++ function)</a>
+      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4NK15monopod_drivers3Leg29joint_torque_to_motor_currentE7LVector">monopod_drivers::Leg::joint_torque_to_motor_current (C++ function)</a>
 </li>
-      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4NK15monopod_drivers3Leg29motor_current_to_joint_torqueE6Vector">monopod_drivers::Leg::motor_current_to_joint_torque (C++ function)</a>
+      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers3Leg3LegEN12blmc_drivers16BlmcJointModulesIXL2EEEERK7LVectorRK7LVector">monopod_drivers::Leg::Leg (C++ function)</a>
 </li>
-      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers3Leg18set_target_torquesERK6Vector">monopod_drivers::Leg::set_target_torques (C++ function)</a>
+      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4NK15monopod_drivers3Leg29motor_current_to_joint_torqueE7LVector">monopod_drivers::Leg::motor_current_to_joint_torque (C++ function)</a>
+</li>
+      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers3Leg19send_target_torquesEv">monopod_drivers::Leg::send_target_torques (C++ function)</a>
+</li>
+      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers3Leg18set_target_torquesERK7LVector">monopod_drivers::Leg::set_target_torques (C++ function)</a>
 </li>
       <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers3LegD0Ev">monopod_drivers::Leg::~Leg (C++ function)</a>
 </li>
@@ -2365,15 +2361,23 @@
 </li>
       <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4NK15monopod_drivers10Planarizer16get_measurementsERKi">monopod_drivers::Planarizer::get_measurements (C++ function)</a>
 </li>
-      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers10Planarizer6MatrixE">monopod_drivers::Planarizer::Matrix (C++ type)</a>
+      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers10Planarizer19MeasurementIndexingE">monopod_drivers::Planarizer::MeasurementIndexing (C++ enum)</a>
 </li>
-      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers10Planarizer10PlanarizerENSt10shared_ptrI16EncoderInterfaceEENSt10shared_ptrI16EncoderInterfaceEE">monopod_drivers::Planarizer::Planarizer (C++ function)</a>, <a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers10Planarizer10PlanarizerENSt10shared_ptrI16EncoderInterfaceEENSt10shared_ptrI16EncoderInterfaceEENSt10shared_ptrI16EncoderInterfaceEE">[1]</a>
+      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers10Planarizer19MeasurementIndexing8positionE">monopod_drivers::Planarizer::MeasurementIndexing::position (C++ enumerator)</a>
 </li>
-      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4I0EN15monopod_drivers10Planarizer3PtrE">monopod_drivers::Planarizer::Ptr (C++ type)</a>
+      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers10Planarizer19MeasurementIndexing8velocityE">monopod_drivers::Planarizer::MeasurementIndexing::velocity (C++ enumerator)</a>
 </li>
-      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers10Planarizer16ScalarTimeseriesE">monopod_drivers::Planarizer::ScalarTimeseries (C++ type)</a>
+      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers10Planarizer10PlanarizerE3PtrI16EncoderInterfaceE3PtrI16EncoderInterfaceE">monopod_drivers::Planarizer::Planarizer (C++ function)</a>, <a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers10Planarizer10PlanarizerE3PtrI16EncoderInterfaceE3PtrI16EncoderInterfaceE3PtrI16EncoderInterfaceE">[1]</a>
 </li>
-      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers10Planarizer6VectorE">monopod_drivers::Planarizer::Vector (C++ type)</a>
+      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers10Planarizer18PlanarizerIndexingE">monopod_drivers::Planarizer::PlanarizerIndexing (C++ enum)</a>
+</li>
+      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers10Planarizer18PlanarizerIndexing14boom_connectorE">monopod_drivers::Planarizer::PlanarizerIndexing::boom_connector (C++ enumerator)</a>
+</li>
+      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers10Planarizer18PlanarizerIndexing10boom_pitchE">monopod_drivers::Planarizer::PlanarizerIndexing::boom_pitch (C++ enumerator)</a>
+</li>
+      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers10Planarizer18PlanarizerIndexing8boom_yawE">monopod_drivers::Planarizer::PlanarizerIndexing::boom_yaw (C++ enumerator)</a>
+</li>
+      <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers10Planarizer18PlanarizerIndexing6PI_endE">monopod_drivers::Planarizer::PlanarizerIndexing::PI_end (C++ enumerator)</a>
 </li>
       <li><a href="monopod_sdk_docs/monopod_drivers.html#_CPPv4N15monopod_drivers10PlanarizerD0Ev">monopod_drivers::Planarizer::~Planarizer (C++ function)</a>
 </li>

@@ -1,3 +1,5 @@
+.. _why:
+
 Why Open Sim2Real
 =================
 
@@ -5,6 +7,5 @@ Why Open Sim2Real
   :hidden:
   :caption: Why
 
-  why_open_sim2real
   why_sim2real
   why_monopod

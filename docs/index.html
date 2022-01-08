@@ -83,11 +83,6 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="open_sim2real/getting_started/what/what_open_sim2real.html">
-     What’s Open Sim2Real
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="open_sim2real/getting_started/what/what_sim2real.html">
      What’s Sim2Real
     </a>
@@ -114,11 +109,6 @@
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="open_sim2real/getting_started/why/why_open_sim2real.html">
-     Why Open Sim2Real
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="open_sim2real/getting_started/why/why_sim2real.html">
      Why Sim2Real
@@ -658,6 +648,31 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-s-open-sim2real">
+   What’s Open Sim2Real?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-open-sim2real">
+   Why Open Sim2Real?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Open Sim2Real
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -668,6 +683,45 @@
                 
   <div class="section" id="open-sim2real">
 <span id="overlord-docs"></span><h1>Open Sim2Real<a class="headerlink" href="#open-sim2real" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-s-open-sim2real">
+<h2>What’s Open Sim2Real?<a class="headerlink" href="#what-s-open-sim2real" title="Permalink to this headline">¶</a></h2>
+<p>Open Sim2Real is a open source project striving to develop a simple cheap
+platform for <a class="reference internal" href="open_sim2real/getting_started/what/what_sim2real.html#what-is-sim2real"><span class="std std-ref">Sim2Real</span></a> research.</p>
+<p>The platform consists of a cheap <a class="reference internal" href="open_sim2real/getting_started/what/what_real.html#what-is-our-real"><span class="std std-ref">single leg robot</span></a> constrained
+to an approximate plane, and the corresponding simulation. Both the sim and real
+components support training within the gym framework (limited by real-time constraints
+on physical robot). In other words this project provides an open source, simple foundation
+for future Sim2Real platforms to build on top of.</p>
+<p>There are well documented <a class="reference internal" href="open_sim2real/physical_monopod/monopod/index.html#building-the-robot"><span class="std std-ref">build instructions</span></a> for
+the physical monopod, additionally instructions on how to install the software stack, set up
+<a class="reference internal" href="open_sim2real/simulated_monopod/training_on_cloud.html#training-on-cloud"><span class="std std-ref">training on cloud</span></a> (with container or source), basic tasks and
+reward functions, and much more. The project builds on top of many tools researchers are already
+familiar with making the transition into real natural (those dang simulations need to touch grass).</p>
+</div>
+<div class="section" id="why-open-sim2real">
+<h2>Why Open Sim2Real?<a class="headerlink" href="#why-open-sim2real" title="Permalink to this headline">¶</a></h2>
+<p>The ability to do Sim2Real research is currently heavily limited by the lack of cheap,
+low barrier of entry physical platforms. Currently most modern <a class="reference internal" href="open_sim2real/getting_started/what/what_sim2real.html#what-is-sim2real"><span class="std std-ref">Sim2Real</span></a>
+involves expensive, large robots that are custom made by the research group. For most RL groups
+manufacturing a custom robot is either too cumbersome or expensive, or limited by the knowledge gap
+between robotics and machine learning.</p>
+<p>By providing an open source complete platform for Sim2Real research that is relatively inexpensive we believe
+it will open doors for research groups otherwise limited to simulation.</p>
+</div>
+<div class="section" id="id1">
+<h2>Open Sim2Real<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>This project provides three main features:</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="open_sim2real/physical_monopod/introduction.html#physical-monopod-introduction"><span class="std std-ref">Physical Robot</span></a> with corresponding <a class="reference internal" href="monopod_sdk_index.html#monopod-sdk"><span class="std std-ref">monopod_sdk</span></a></p></li>
+<li><p>Simulation of the robot using ignition gazebo with corresponding openAI gym environment, <a class="reference internal" href="gym-os2r_index.html#gym-os2r"><span class="std std-ref">gym-os2r</span></a>.</p></li>
+<li><p>Real-time link, <a class="reference internal" href="scenario_monopod_index.html#scenario-monopod"><span class="std std-ref">scenario_monopod</span></a>, between simulation and real components with the ability to train in real.</p></li>
+</ol>
+<p>Check the sections <a class="reference internal" href="open_sim2real/getting_started/what/index.html#what"><span class="std std-ref">What is open Sim2Real</span></a>, <a class="reference internal" href="open_sim2real/getting_started/why/index.html#why"><span class="std std-ref">why open Sim2Real</span></a>, and
+<a class="reference internal" href="open_sim2real/getting_started/highlevel_architecture/index.html#high-level-architecture"><span class="std std-ref">high level architecture</span></a> for a more detailed look into the
+motivation, and structure of the project.</p>
+<p>For a practical introduction into our platform, visit the <a class="reference internal" href="open_sim2real/simulated_monopod/introduction.html#simulated-monopod-introduction"><span class="std std-ref">simulated monopod</span></a>
+and <a class="reference internal" href="open_sim2real/physical_monopod/introduction.html#physical-monopod-introduction"><span class="std std-ref">physical monopod</span></a> sections.</p>
+<p>If you use this project for your research, please check <a class="reference internal" href="open_sim2real/getting_started/how_to_cite.html#how-to-cite"><span class="std std-ref">how to cite</span></a>.</p>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -675,6 +729,7 @@
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 

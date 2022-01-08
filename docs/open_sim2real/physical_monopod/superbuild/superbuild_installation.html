@@ -84,11 +84,6 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../getting_started/what/what_open_sim2real.html">
-     What’s Open Sim2Real
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../../getting_started/what/what_sim2real.html">
      What’s Sim2Real
     </a>
@@ -115,11 +110,6 @@
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../getting_started/why/why_open_sim2real.html">
-     Why Open Sim2Real
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../getting_started/why/why_sim2real.html">
      Why Sim2Real
@@ -775,7 +765,7 @@ customizing the build via CMake options.</p>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">OPENSIM2REAL_ENABLE_SCENARIO_MONOPOD</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">TRUE</span></code></p></td>
 <td><p><a class="reference internal" href="#enable-all"><span class="std std-ref">deps</span></a></p></td>
-<td><p><a class="reference internal" href="../../../scenario_monopod_index.html#scenario-monopod"><span class="std std-ref">scenario_monopod</span></a> real-time backend plugin for scenario. this plugin provides a real-time backend for the monopod platform. Enabled unless the user specifies <a class="reference internal" href="#enable-simulation-only"><span class="std std-ref">simulation only</span></a> compilation. This option should never be manually specified unless developing <a class="reference internal" href="../../../scenario_monopod_index.html#scenario-monopod"><span class="std std-ref">scenario_monopod</span></a>.</p></td>
+<td><p><a class="reference internal" href="../../../scenario_monopod_index.html#scenario-monopod"><span class="std std-ref">scenario_monopod</span></a> real-time backend plugin for scenario. this plugin provides a real-time backend for the monopod platform. Enabled unless the user specifies <a class="reference internal" href="#enable-simulation-only"><span class="std std-ref">simulation only</span></a> compilation. This option should never be manually specified unless developing <a class="reference internal" href="../../../scenario_monopod_index.html#scenario-monopod"><span class="std std-ref">scenario_monopod</span></a>. <a class="reference internal" href="../../../monopod_sdk_index.html#monopod-sdk"><span class="std std-ref">monopod_sdk</span></a> is a dependencies.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">OPENSIM2REAL_ENABLE_GYMIGNITION</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">TRUE</span></code></p></td>
@@ -792,9 +782,9 @@ customizing the build via CMake options.</p>
 <td><p><a class="reference internal" href="#enable-simulation-only"><span class="std std-ref">deps</span></a></p></td>
 <td><p>Compiles only the components necessary to use the gym environments in simulation. Will only read <code class="docutils literal notranslate"><span class="pre">OPENSIM2REAL_ENABLE_GYMOS2R</span></code> option when enabled, all other options will be ignored.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">OPENSIM2REAL_ENABLE_DOC_COMPILATION</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">OPENSIM2REAL_ENABLE_BUILDDOCS</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">FALSE</span></code></p></td>
-<td><p><a class="reference internal" href="#enable-doc-compilation"><span class="std std-ref">deps</span></a></p></td>
+<td><p><a class="reference internal" href="#enable-builddocs"><span class="std std-ref">deps</span></a></p></td>
 <td><p>Allows developers to rebuild the projects documentation webpage.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">OPENSIM2REAL_USES_PYTHON</span></code></p></td>
@@ -823,7 +813,7 @@ cmake --build build
 <li><p>Multiple args: <code class="docutils literal notranslate"><span class="pre">-D&lt;CMAKE_ARG1&gt;:BOOL=TRUE/FALSE</span> <span class="pre">-D&lt;CMAKE_ARG2&gt;:BOOL=TRUE/FALSE</span> <span class="pre">...</span></code></p></li>
 </ol>
 <p>For example to install all components and compile the documentation the command will become.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake -S . -B build -DOPENSIM2REAL_ENABLE_ALL:BOOL<span class="o">=</span>TRUE -DOPENSIM2REAL_ENABLE_DOC_COMPILATION:BOOL<span class="o">=</span>TRUE
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake -S . -B build -DOPENSIM2REAL_ENABLE_ALL:BOOL<span class="o">=</span>TRUE -DOPENSIM2REAL_ENABLE_BUILDDOCS:BOOL<span class="o">=</span>TRUE
 </pre></div>
 </div>
 <p>To update the repos in the superbuild make sure you are in the build
@@ -973,9 +963,9 @@ pip3 install cmake_build_extension gym gym_ignition_models scipy numpy
 </div>
 </div>
 <div class="section" id="documentation-compilation">
-<span id="enable-doc-compilation"></span><h3>Documentation Compilation<a class="headerlink" href="#documentation-compilation" title="Permalink to this headline">¶</a></h3>
+<span id="enable-builddocs"></span><h3>Documentation Compilation<a class="headerlink" href="#documentation-compilation" title="Permalink to this headline">¶</a></h3>
 <p>Dependencies required to build the superbuild options:
-<code class="docutils literal notranslate"><span class="pre">OPENSIM2REAL_ENABLE_DOC_COMPILATION</span></code> Requires <code class="docutils literal notranslate"><span class="pre">OPENSIM2REAL_ENABLE_ALL</span></code>
+<code class="docutils literal notranslate"><span class="pre">OPENSIM2REAL_ENABLE_BUILDDOCS</span></code> Requires <code class="docutils literal notranslate"><span class="pre">OPENSIM2REAL_ENABLE_ALL</span></code>
 to also be enabled. To compile the docs all dependencies of <code class="docutils literal notranslate"><span class="pre">OPENSIM2REAL_ENABLE_ALL</span></code>
 are required alongside the additional dependencies below.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install sphinx-multiversion sphinx_autodoc_typehints sphinx_fontawesome sphinx_book_theme sphinx_tabs lxml sphinx-copybutton
