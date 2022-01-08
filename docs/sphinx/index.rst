@@ -3,15 +3,41 @@
 Open Sim2Real
 =============
 
-.. include:: monopod_sdk_index.rst
+.. toctree::
+  :hidden:
+  :caption: Getting Started
 
-.. include:: scenario_monopod_index.rst
-
-.. include:: gym-os2r_index.rst
+  open_sim2real/getting_started/what/index
+  open_sim2real/getting_started/why/index
+  open_sim2real/getting_started/highlevel_architecture/index
+  open_sim2real/getting_started/copyright_and_license
+  open_sim2real/getting_started/how_to_cite
 
 .. toctree::
-  :maxdepth: 4
-  :caption: Open Sim2Real Packages
+  :hidden:
+  :caption: Simulated Monopod
+
+  open_sim2real/simulated_monopod/introduction
+  open_sim2real/simulated_monopod/installation/index
+  open_sim2real/simulated_monopod/singularity_container
+  open_sim2real/simulated_monopod/quick_start
+  open_sim2real/simulated_monopod/training_on_cloud
+  open_sim2real/simulated_monopod/next_steps
+
+.. toctree::
+  :hidden:
+  :caption: Physical Monopod
+
+  open_sim2real/physical_monopod/introduction
+  open_sim2real/physical_monopod/superbuild/index
+  open_sim2real/physical_monopod/monopod/index
+  open_sim2real/physical_monopod/quick_start
+  open_sim2real/physical_monopod/next_steps
+
+.. toctree::
+  :hidden:
+  :maxdepth: 5
+  :caption: Open Sim2Real Apidocs
 
   monopod_sdk_index
   scenario_monopod_index

@@ -6,12 +6,19 @@ option(YCM_DISABLE_SYSTEM_PACKAGES "Disable use of all the system installed pack
 # Enable/disable different profiles
 option(OPENSIM2REAL_ENABLE_MONOPODSDK "Enable compilation of monopod_sdk." FALSE)
 option(OPENSIM2REAL_ENABLE_SCENARIO "Enable compilation of scenario." FALSE)
+option(OPENSIM2REAL_ENABLE_SCENARIO_MONOPOD "Enable compilation of scenario_monopod. True by default unless only simulation compilation is enabled." TRUE)
 option(OPENSIM2REAL_ENABLE_GYMIGNITION "Install gym_ignition python module if scenario is enabled. Requires python to be enabled." TRUE)
-option(OPENSIM2REAL_ENABLE_GYMOS2R "Install gym_os2r python module if scenario/gym-ignition is enabled. Requires python to be enabled." FALSE)
+option(OPENSIM2REAL_ENABLE_GYMOS2R "Install gym_os2r python module if scenario/gym-ignition options are enabled. Requires python to be enabled." FALSE)
 option(OPENSIM2REAL_ENABLE_ALL "Enable compilation of scenario." FALSE)
+
+option(OPENSIM2REAL_ENABLE_SIMULATION_ONLY "Enable compilation off the components necessary for simulation only. Will only read OPENSIM2REAL_ENABLE_GYMOS2R option when enabled" FALSE)
 
 option(OPENSIM2REAL_USES_PYTHON "Enable compilation of software that depend on Python" TRUE)
 option(OPENSIM2REAL_ENABLE_DOC_COMPILATION "Compile entire projects docs. Requires `OPENSIM2REAL_ENABLE_ALL=TRUE`." FALSE)
+
+IF(OPENSIM2REAL_ENABLE_SIMULATION_ONLY AND NOT OPENSIM2REAL_USES_PYTHON)
+  message(FATAL_ERROR "In simulation only mode super requires `OPENSIM2REAL_USES_PYTHON=TRUE`.")
+ENDIF()
 
 #set default build type to "Release" in single-config generators
 if(NOT CMAKE_CONFIGURATION_TYPES)
