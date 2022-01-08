@@ -33,7 +33,8 @@ between robotics and machine learning.
 By providing an open source complete platform for Sim2Real research that is relatively inexpensive we believe
 it will open doors for research groups otherwise limited to simulation.
 
-|
+Open Sim2Real
+-------------
 
 This project provides three main features:
 
