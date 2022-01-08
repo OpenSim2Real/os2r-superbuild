@@ -66,7 +66,7 @@ set_package_properties(Subversion PROPERTIES TYPE RUNTIME)
 set_package_properties(PkgConfig PROPERTIES TYPE RUNTIME)
 set_package_properties(Doxygen PROPERTIES TYPE RUNTIME)
 
-if(OPENSIM2REAL_ENABLE_DOC_COMPILATION)
+if(OPENSIM2REAL_ENABLE_BUILDDOCS)
     IF(NOT OPENSIM2REAL_ENABLE_ALL)
       message(FATAL_ERROR "Need to enable compilation of all components to build documentation.")
     ENDIF()

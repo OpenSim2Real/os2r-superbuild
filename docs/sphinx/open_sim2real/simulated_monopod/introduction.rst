@@ -1,3 +1,5 @@
+.. _simulated_monopod_introduction:
+
 Introduction
 ============
 

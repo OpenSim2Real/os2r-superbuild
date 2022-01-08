@@ -14,7 +14,7 @@ option(OPENSIM2REAL_ENABLE_ALL "Enable compilation of scenario." FALSE)
 option(OPENSIM2REAL_ENABLE_SIMULATION_ONLY "Enable compilation off the components necessary for simulation only. Will only read OPENSIM2REAL_ENABLE_GYMOS2R option when enabled" FALSE)
 
 option(OPENSIM2REAL_USES_PYTHON "Enable compilation of software that depend on Python" TRUE)
-option(OPENSIM2REAL_ENABLE_DOC_COMPILATION "Compile entire projects docs. Requires `OPENSIM2REAL_ENABLE_ALL=TRUE`." FALSE)
+option(OPENSIM2REAL_ENABLE_BUILDDOCS "Compile entire projects docs. Requires `OPENSIM2REAL_ENABLE_ALL=TRUE`." FALSE)
 
 IF(OPENSIM2REAL_ENABLE_SIMULATION_ONLY AND NOT OPENSIM2REAL_USES_PYTHON)
   message(FATAL_ERROR "In simulation only mode super requires `OPENSIM2REAL_USES_PYTHON=TRUE`.")

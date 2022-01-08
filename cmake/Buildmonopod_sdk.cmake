@@ -10,6 +10,6 @@ ycm_ep_helper(monopod_sdk TYPE GIT
               TAG main
               COMPONENT monopod_sdk
               FOLDER src
-              CMAKE_ARGS -DBUILD_DOCS:BOOL=${OPENSIM2REAL_ENABLE_DOC_COMPILATION}
-                         -DBUILD_DOCS_SUPERBUILD:BOOL=${OPENSIM2REAL_ENABLE_DOC_COMPILATION}
+              CMAKE_ARGS -DBUILD_DOCS:BOOL=${OPENSIM2REAL_ENABLE_BUILDDOCS}
+                         -DBUILD_DOCS_SUPERBUILD:BOOL=${OPENSIM2REAL_ENABLE_BUILDDOCS}
               DEPENDS real_time_tools)

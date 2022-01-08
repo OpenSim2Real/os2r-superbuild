@@ -1,3 +1,5 @@
+.. _physical_monopod_introduction:
+
 Introduction
 ============
 
