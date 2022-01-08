@@ -33,6 +33,26 @@ between robotics and machine learning.
 By providing an open source complete platform for Sim2Real research that is relatively inexpensive we believe
 it will open doors for research groups otherwise limited to simulation.
 
+|
+|
+
+This project provides three main features:
+
+1. :ref:`Physical Robot <physical_monopod_introduction>` with corresponding :ref:`monopod_sdk`
+
+2. Simulation of the robot using ignition gazebo with corresponding openAI gym environment, :ref:`gym-os2r`.
+
+3. Real-time link, :ref:`scenario_monopod`, between simulation and real components with the ability to train in real.
+
+Check the sections :ref:`What is open Sim2Real <what>`, :ref:`why open Sim2Real <why>`, and
+:ref:`high level architecture <high_level_architecture>` for a more detailed look into the
+motivation, and structure of the project.
+
+For a practical introduction into our platform, visit the :ref:`simulated monopod <simulated_monopod_introduction>`
+and :ref:`physical monopod <physical_monopod_introduction>` sections.
+
+If you use this project for your research, please check :ref:`how to cite <how_to_cite>`.
+
 .. toctree::
   :hidden:
   :caption: Getting Started

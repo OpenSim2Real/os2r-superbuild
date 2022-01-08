@@ -1,3 +1,5 @@
+.. _what:
+
 What's Open Sim2Real
 ====================
 

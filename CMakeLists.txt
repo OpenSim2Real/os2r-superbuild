@@ -23,17 +23,7 @@ include(FeatureSummary)
 # Disable YCM-created install/INSTALL target (see https://github.com/robotology/robotology-superbuild/issues/356)
 macro(install)
 endmacro()
-if (NOT MSVC)
-    # lots of warnings and all warnings as errors
-    # This is to clean up the build output :) especially idyntree :(
-    add_compile_options(
-      -Wno-unused-parameter
-      -Wno-missing-field-initializers
-      -Wno-unused-result
-      -Wno-maybe-uninitialized
-      -Wno-deprecated-copy
-    )
-endif()
+
 # Load options
 include(OpenSim2RealSuperbuildOptions)
 

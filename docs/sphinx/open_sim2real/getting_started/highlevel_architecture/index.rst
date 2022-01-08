@@ -1,3 +1,5 @@
+.. _high_level_architecture:
+
 High-level Architecture
 =======================
 
