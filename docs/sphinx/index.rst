@@ -1,4 +1,4 @@
-.. _overlord_docs:
+.. _open_sim2real:
 
 Open Sim2Real
 =============
