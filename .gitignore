@@ -13,3 +13,6 @@ src
 *.log
 *.tags
 *.tags1
+
+.ccls-cache
+.cache
