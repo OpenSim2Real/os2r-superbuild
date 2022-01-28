@@ -1,4 +1,4 @@
-.. _overlord_docs:
+.. _open_sim2real:
 
 Open Sim2Real
 =============
@@ -6,10 +6,10 @@ Open Sim2Real
 What's Open Sim2Real?
 ---------------------
 
-Open Sim2Real is a open source project striving to develop a simple cheap
+Open Sim2Real is a open source project striving to develop a simple inexpensive
 platform for :ref:`Sim2Real <what_is_sim2real>` research.
 
-The platform consists of a cheap :ref:`single leg robot <what_is_our_real>` constrained
+The platform consists of a inexpensive :ref:`single leg robot <what_is_our_real>` constrained
 to an approximate plane, and the corresponding simulation. Both the sim and real
 components support training within the gym framework (limited by real-time constraints
 on physical robot). In other words this project provides an open source, simple foundation
@@ -24,7 +24,7 @@ familiar with making the transition into real natural (those dang simulations ne
 Why Open Sim2Real?
 ------------------
 
-The ability to do Sim2Real research is currently heavily limited by the lack of cheap,
+The ability to do Sim2Real research is currently heavily limited by the lack of inexpensive,
 low barrier of entry physical platforms. Currently most modern :ref:`Sim2Real <what_is_sim2real>`
 involves expensive, large robots that are custom made by the research group. For most RL groups
 manufacturing a custom robot is either too cumbersome or expensive, or limited by the knowledge gap
