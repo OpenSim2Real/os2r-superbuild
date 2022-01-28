@@ -27,7 +27,7 @@ even if the robot is turned off between runs.
 How is the Homing Implemented for the BLMC Robots?
 --------------------------------------------------
 
-In the ``BlmcJointModule[s]`` class, the following procedure is
+In the ``MotorJointModule[s]`` class, the following procedure is
 implemented:
 
 1. From the current position move slowly in one direction (depending on
