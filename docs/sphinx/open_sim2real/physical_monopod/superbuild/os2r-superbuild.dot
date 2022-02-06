@@ -1,0 +1,129 @@
+digraph os2r__superbuild {
+  graph [ranksep="1.5", nodesep="0.1" rankdir="BT"];
+
+  subgraph cluster_system {
+    label="system";
+    labelloc="b";
+    fontname="monospace:bold";
+    style="dashed";
+    color="dimgray";
+    bgcolor="gray94";
+    node [shape="pentagon", color="dimgray", fontsize="10"];
+
+    Eigen3
+    gym__ignition_move
+    PythonInterp
+    PythonLibsNew
+    Python3
+    SWIG
+    Git
+  }
+
+  subgraph cluster_found_on_system {
+    label="found";
+    labelloc="b";
+    fontname="monospace:bold";
+    style="dashed";
+    color="orangered1";
+    bgcolor="oldlace";
+    node [shape="note", color="orangered3"];
+
+    pybind11 [shape="note"]
+  }
+
+  subgraph cluster_external {
+    label="external";
+    labelloc="b";
+    fontname="monospace:bold";
+    style="dashed";
+    color="green";
+    bgcolor="mintcream";
+    node [shape="note", color="darkgreen", fontsize="10"];
+
+    osqp [label="osqp"]
+  }
+
+  subgraph cluster_core {
+    label="core";
+    labelloc="b";
+    fontname="monospace:bold";
+    color="dodgerblue1";
+    bgcolor = "aliceblue";
+    node [style="bold", shape="note", color="dodgerblue3"];
+
+    YCM [label="YCM"]
+    mpi_cmake_modules [label="mpi_cmake_modules"]
+    GTest [label="GTest"]
+    real_time_tools [label="real_time_tools"]
+    signal_handler [label="signal_handler"]
+    shared_memory [label="shared_memory"]
+    time_series [label="time_series"]
+  }
+
+  subgraph cluster_monopod_sdk {
+    label="monopod_sdk";
+    labelloc="b";
+    fontname="monospace:bold";
+    color="dodgerblue1";
+    bgcolor = "aliceblue";
+    node [style="bold", shape="note", color="dodgerblue3"];
+
+    monopod_sdk [label="monopod_sdk"]
+  }
+
+  subgraph cluster_dynamics {
+    label="dynamics";
+    labelloc="b";
+    fontname="monospace:bold";
+    color="dodgerblue1";
+    bgcolor = "aliceblue";
+    node [style="bold", shape="note", color="dodgerblue3"];
+
+    OsqpEigen [label="OsqpEigen"]
+    iDynTree [label="iDynTree"]
+  }
+
+  subgraph cluster_scenario {
+    label="scenario";
+    labelloc="b";
+    fontname="monospace:bold";
+    color="dodgerblue1";
+    bgcolor = "aliceblue";
+    node [style="bold", shape="note", color="dodgerblue3"];
+
+    gym__ignition [label="gym-ignition"]
+    scenario_monopod [label="scenario_monopod"]
+  }
+
+  subgraph cluster_gym_os2r {
+    label="gym_os2r";
+    labelloc="b";
+    fontname="monospace:bold";
+    color="dodgerblue1";
+    bgcolor = "aliceblue";
+    node [style="bold", shape="note", color="dodgerblue3"];
+
+    gym__os2r [label="gym-os2r"]
+  }
+
+
+  real_time_tools -> mpi_cmake_modules;
+  real_time_tools -> GTest;
+  signal_handler -> mpi_cmake_modules;
+  shared_memory -> mpi_cmake_modules;
+  shared_memory -> GTest;
+  time_series -> shared_memory;
+  time_series -> mpi_cmake_modules;
+  time_series -> signal_handler;
+  time_series -> real_time_tools;
+  time_series -> GTest;
+  monopod_sdk -> real_time_tools;
+  OsqpEigen -> osqp [color="gray", style="dashed"];
+  iDynTree -> OsqpEigen;
+  iDynTree -> Eigen3 [color="gray" style="dashed"];
+  gym__ignition -> iDynTree;
+  scenario_monopod -> gym__ignition;
+  scenario_monopod -> monopod_sdk;
+  gym__os2r -> gym__ignition;
+  gym__os2r -> gym__ignition_move [color="gray" style="dashed"];
+}
