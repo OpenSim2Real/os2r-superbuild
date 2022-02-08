@@ -7,7 +7,7 @@ find_or_build_package(monopod_sdk QUIET)
 ycm_ep_helper(scenario_monopod TYPE GIT
               STYLE GITHUB
               REPOSITORY OpenSim2Real/scenario_monopod
-              TAG master
+              TAG main
               COMPONENT scenario
               FOLDER src
               CMAKE_ARGS -DSCENARIO_ENABLE_BINDINGS:BOOL=${OPENSIM2REAL_USES_PYTHON}
