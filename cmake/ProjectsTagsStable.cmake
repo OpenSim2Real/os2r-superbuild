@@ -22,3 +22,4 @@ set_tag(gym-ignition_TAG master) #v1.3.1
 # Baesian Balancer Projects
 set_tag(scenario_monopod_TAG main)
 set_tag(monopod_sdk_TAG main)
+set_tag(gym-os2r_TAG main)
