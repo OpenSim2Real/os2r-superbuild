@@ -170,5 +170,17 @@ if(OPENSIM2REAL_ENABLE_SCENARIO OR OPENSIM2REAL_ENABLE_ALL OR OPENSIM2REAL_ENABL
           COMMENT "Installing egg files for gym-os2r..."
         )
     endif()
+
+    if(OPENSIM2REAL_ENABLE_ALL OR (OPENSIM2REAL_ENABLE_GYMOS2R AND OPENSIM2REAL_ENABLE_SCENARIO_MONOPOD))
+        # Build gym-os2r if enabled for if simulation only is selected.
+        find_or_build_package(gym-os2r-real)
+
+        add_custom_command(TARGET gym-os2r-real POST_BUILD
+          COMMAND ${CMAKE_COMMAND} -E env PYTHONPATH=${PYTHONPATHS} ${Python3_EXECUTABLE}
+          setup.py egg_info --egg-base=${EGG_BASE_PATH_SCENARIO}
+          WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/src/gym-os2r
+          COMMENT "Installing egg files for gym-os2r..."
+        )
+    endif()
   endif()
 endif()

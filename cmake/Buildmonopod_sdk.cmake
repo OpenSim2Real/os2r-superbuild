@@ -9,7 +9,7 @@ ycm_ep_helper(monopod_sdk TYPE GIT
               STYLE GITHUB
               REPOSITORY OpenSim2Real/monopod_sdk
               TAG main
-              COMPONENT monopod_sdk
+              COMPONENT dynamics
               FOLDER src
               CMAKE_ARGS -DBUILD_DOCS:BOOL=${OPENSIM2REAL_ENABLE_BUILDDOCS}
                          -DBUILD_DOCS_SUPERBUILD:BOOL=${OPENSIM2REAL_ENABLE_BUILDDOCS}
