@@ -1,7 +1,6 @@
 .. _what:
 
-What's Open Sim2Real
-====================
+.. include what_is_opensim2real
 
 .. toctree::
   :hidden:

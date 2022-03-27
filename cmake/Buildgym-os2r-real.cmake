@@ -7,9 +7,9 @@ ycm_ep_helper(gym-os2r-real TYPE GIT
               STYLE GITHUB
               REPOSITORY OpenSim2Real/gym-os2r-real
               TAG main
-              COMPONENT scenario
+              COMPONENT real
               FOLDER src
-              DEPENDS gym-os2r
+              DEPENDS gym-os2r scenario_monopod
               CMAKE_ARGS -DPYTHON_INSTALL_PREFIX:PATH=${OPENSIM2REAL_SUPERBUILD_PYTHON_INSTALL_DIR}
                          -DBUILD_DOCS:BOOL=${OPENSIM2REAL_ENABLE_BUILDDOCS}
                          -DBUILD_DOCS_SUPERBUILD:BOOL=${OPENSIM2REAL_ENABLE_BUILDDOCS}

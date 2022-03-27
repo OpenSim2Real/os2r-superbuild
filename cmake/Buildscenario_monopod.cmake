@@ -8,7 +8,7 @@ ycm_ep_helper(scenario_monopod TYPE GIT
               STYLE GITHUB
               REPOSITORY OpenSim2Real/scenario_monopod
               TAG main
-              COMPONENT scenario
+              COMPONENT real
               FOLDER src
               CMAKE_ARGS -DSCENARIO_ENABLE_BINDINGS:BOOL=${OPENSIM2REAL_USES_PYTHON}
                          -DBINDINGS_INSTALL_PREFIX:PATH=${OPENSIM2REAL_SUPERBUILD_PYTHON_INSTALL_DIR}

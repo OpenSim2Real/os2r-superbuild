@@ -5,13 +5,13 @@ find_or_build_package(OsqpEigen QUIET)
 # find_or_build_package(Eigen3 QUIET)
 
 set(iDynTree_DEPENDS "")
-list(APPEND iDynTree_DEPENDS OsqpEigen Eigen3)
+list(APPEND iDynTree_DEPENDS OsqpEigen)
 
 ycm_ep_helper(iDynTree TYPE GIT
               STYLE GITHUB
               REPOSITORY robotology/idyntree.git
               TAG master
-              COMPONENT dynamics
+              COMPONENT core
               FOLDER src
               CMAKE_ARGS -DIDYNTREE_USES_IPOPT:BOOL=ON
                          -DIDYNTREE_USES_OSQPEIGEN:BOOL=ON

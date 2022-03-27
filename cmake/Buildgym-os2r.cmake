@@ -9,7 +9,7 @@ ycm_ep_helper(gym-os2r TYPE GIT
               TAG main
               COMPONENT scenario
               FOLDER src
-              DEPENDS gym-ignition gym-ignition_move
+              DEPENDS gym-ignition
               CMAKE_ARGS -DPYTHON_INSTALL_PREFIX:PATH=${OPENSIM2REAL_SUPERBUILD_PYTHON_INSTALL_DIR}
                          -DBUILD_DOCS:BOOL=${OPENSIM2REAL_ENABLE_BUILDDOCS}
                          -DBUILD_DOCS_SUPERBUILD:BOOL=${OPENSIM2REAL_ENABLE_BUILDDOCS}
