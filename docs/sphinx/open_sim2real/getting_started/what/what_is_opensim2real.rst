@@ -2,7 +2,7 @@ What's Open Sim2Real
 ====================
 
 Open Sim2Real is a open source project striving to develop a simple inexpensive
-platform for :ref:`Sim2Real <what_is_sim2real>` research.
+platform for :ref:`Sim2Real <sim2real>` research.
 
 The platform consists of a inexpensive :ref:`single leg robot <what_is_our_real>` constrained
 to an approximate plane, and the corresponding simulation. Both the sim and real
