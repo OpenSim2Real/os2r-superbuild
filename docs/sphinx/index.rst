@@ -4,6 +4,7 @@
 .. include:: open_sim2real/getting_started/why/why_opensim2real.rst
 
 .. toctree::
+  :hidden:
   :caption: Getting Started
 
   open_sim2real/getting_started/sim2real
@@ -14,6 +15,7 @@
   open_sim2real/getting_started/how_to_cite
 
 .. toctree::
+  :hidden:
   :caption: Simulated Monopod
 
   open_sim2real/simulated_monopod/introduction
@@ -24,6 +26,7 @@
   open_sim2real/simulated_monopod/next_steps
 
 .. toctree::
+  :hidden:
   :caption: Physical Monopod
 
   open_sim2real/physical_monopod/introduction
