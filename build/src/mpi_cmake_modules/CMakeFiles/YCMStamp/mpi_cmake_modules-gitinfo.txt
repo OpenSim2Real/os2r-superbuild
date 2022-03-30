@@ -1,3 +1,0 @@
-repository='https://github.com/machines-in-motion/mpi_cmake_modules.git'
-module=''
-tag='origin'

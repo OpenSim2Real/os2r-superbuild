@@ -1,3 +1,0 @@
-repository='https://github.com/OpenSim2Real/scenario_monopod'
-module=''
-tag='origin'

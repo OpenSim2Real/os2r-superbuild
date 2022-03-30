@@ -1,8 +1,0 @@
-# Target labels
- OsqpEigen
-# Source files and their labels
-/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/OsqpEigen-update
-/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/OsqpEigen-update.rule
-/home/dawson/Documents/Repos/os2r-superbuild/build/src/OsqpEigen/CMakeFiles/YCMStamp/OsqpEigen-update.rule
-/home/dawson/Documents/Repos/os2r-superbuild/build/src/OsqpEigen/CMakeFiles/YCMStamp/OsqpEigen-download.rule
-/home/dawson/Documents/Repos/os2r-superbuild/build/src/OsqpEigen/CMakeFiles/YCMStamp/OsqpEigen-mkdir.rule

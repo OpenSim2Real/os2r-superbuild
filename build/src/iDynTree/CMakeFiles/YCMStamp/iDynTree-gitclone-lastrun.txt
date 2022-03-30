@@ -1,3 +1,0 @@
-repository='https://github.com/robotology/idyntree.git'
-module=''
-tag='origin'

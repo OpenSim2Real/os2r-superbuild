@@ -1,8 +1,0 @@
-# Target labels
- osqp
-# Source files and their labels
-/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/osqp-update
-/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/osqp-update.rule
-/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/CMakeFiles/YCMStamp/osqp-update.rule
-/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/CMakeFiles/YCMStamp/osqp-download.rule
-/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/CMakeFiles/YCMStamp/osqp-mkdir.rule

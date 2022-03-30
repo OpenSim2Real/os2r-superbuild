@@ -1,3 +1,0 @@
-repository='https://github.com/robotology/ycm.git'
-module=''
-tag='origin'

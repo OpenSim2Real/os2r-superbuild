@@ -1,8 +1,0 @@
-# Target labels
- YCM
-# Source files and their labels
-/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/YCM-update
-/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/YCM-update.rule
-/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/CMakeFiles/YCMStamp/YCM-update.rule
-/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/CMakeFiles/YCMStamp/YCM-download.rule
-/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/CMakeFiles/YCMStamp/YCM-mkdir.rule

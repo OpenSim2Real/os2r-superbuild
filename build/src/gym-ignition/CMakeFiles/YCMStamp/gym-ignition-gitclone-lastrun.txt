@@ -1,3 +1,0 @@
-repository='https://github.com/robotology/gym-ignition.git'
-module=''
-tag='origin'

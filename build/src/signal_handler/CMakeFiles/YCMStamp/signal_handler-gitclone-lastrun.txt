@@ -1,3 +1,0 @@
-repository='https://github.com/MPI-IS/signal_handler.git'
-module=''
-tag='origin'
