@@ -1,3 +1,5 @@
+.. _sim_next_steps:
+
 Next Steps
 ==========
 Next steps explains how to work with some of the more advanced features ``gym-os2r``

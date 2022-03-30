@@ -257,8 +257,9 @@ are required alongside the additional dependencies below.
 
 .. code-block:: bash
 
-   pip install sphinx-multiversion sphinx_autodoc_typehints sphinx_fontawesome sphinx_book_theme sphinx_tabs lxml sphinx-copybutton
+   pip install sphinx-multiversion sphinx_autodoc_typehints sphinx_fontawesome sphinx_book_theme sphinx_tabs lxml sphinx-copybutton pydot
    pip install -U breathe
+   sudo apt install -y graphviz
 
 To update the published docs to the new built docs use the below
 commands,

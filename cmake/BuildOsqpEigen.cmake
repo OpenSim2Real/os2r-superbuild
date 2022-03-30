@@ -7,7 +7,7 @@ ycm_ep_helper(OsqpEigen TYPE GIT
               STYLE GITHUB
               REPOSITORY robotology/osqp-eigen.git
               TAG master
-              COMPONENT dynamics
+              COMPONENT core
               FOLDER src
               CMAKE_ARGS -DBUILD_TESTING:BOOL=OFF
               DEPENDS osqp)
