@@ -48,6 +48,7 @@ To setup the instance with current release of :ref:`gym-os2r` follow the procedu
 recommended miscellaneous installations for reinforcement learning training.
 
 .. code-block:: bash
+
   # pip install torch
   pip install torch torchvision torchaudio
 
