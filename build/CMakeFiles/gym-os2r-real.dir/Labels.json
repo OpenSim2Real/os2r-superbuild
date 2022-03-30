@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/gym-os2r-real"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/gym-os2r-real.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/gym-os2r-real-complete.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/gym-os2r-real/CMakeFiles/YCMStamp/gym-os2r-real-build.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/gym-os2r-real/CMakeFiles/YCMStamp/gym-os2r-real-configure.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/gym-os2r-real/CMakeFiles/YCMStamp/gym-os2r-real-download.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/gym-os2r-real/CMakeFiles/YCMStamp/gym-os2r-real-install.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/gym-os2r-real/CMakeFiles/YCMStamp/gym-os2r-real-mkdir.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/gym-os2r-real/CMakeFiles/YCMStamp/gym-os2r-real-patch.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/gym-os2r-real/CMakeFiles/YCMStamp/gym-os2r-real-skip-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"gym-os2r-real"
+		],
+		"name" : "gym-os2r-real"
+	}
+}

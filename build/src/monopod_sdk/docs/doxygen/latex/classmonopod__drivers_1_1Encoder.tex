@@ -1,0 +1,147 @@
+\hypertarget{classmonopod__drivers_1_1Encoder}{}\doxysection{monopod\+\_\+drivers\+::Encoder Class Reference}
+\label{classmonopod__drivers_1_1Encoder}\index{monopod\_drivers::Encoder@{monopod\_drivers::Encoder}}
+
+
+This class implements the \mbox{\hyperlink{classmonopod__drivers_1_1EncoderInterface}{Encoder\+Interface}}.  
+
+
+
+
+{\ttfamily \#include $<$encoder.\+hpp$>$}
+
+
+
+Inheritance diagram for monopod\+\_\+drivers\+::Encoder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{classmonopod__drivers_1_1Encoder__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for monopod\+\_\+drivers\+::Encoder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{classmonopod__drivers_1_1Encoder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmonopod__drivers_1_1Encoder_a77a02c33177087e7e61064f61f6a3c88}{Encoder}} (\mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$ \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsInterface}{Control\+Boards\+Interface}} $>$ board, \mbox{\hyperlink{namespacemonopod__drivers_a292411dcb88919df4d05216355c248d0}{Joint\+Names\+Index}} encoder\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmonopod__drivers_1_1Encoder}{Encoder}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classmonopod__drivers_1_1Encoder_ad96f381abf6c705e10d05c855b6f4087}{$\sim$\+Encoder}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmonopod__drivers_1_1Encoder}{Encoder}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$ const \mbox{\hyperlink{namespacemonopod__drivers_adc25f08a0ddbc18d40994c90f10968c2}{Scalar\+Timeseries}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Encoder_a034a88d4008251384e54d742db9a1591}{get\+\_\+measurement}} (const \mbox{\hyperlink{namespacemonopod__drivers_a85eecf8d086233e0a317729c3763f15e}{Measurements}} \&index) const
+\begin{DoxyCompactList}\small\item\em Get the measurements. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$ const \mbox{\hyperlink{classmonopod__drivers_1_1EncoderInterface_a404dd1f941b4052b9c7a1c6096692f90}{Status\+Timeseries}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Encoder_a32cb832956fc6dc69193fb5f281240a1}{get\+\_\+status}} () const
+\begin{DoxyCompactList}\small\item\em Get the status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1Encoder_ac1962689c4db7a3977544d3130610638}\label{classmonopod__drivers_1_1Encoder_ac1962689c4db7a3977544d3130610638}} 
+virtual void \mbox{\hyperlink{classmonopod__drivers_1_1Encoder_ac1962689c4db7a3977544d3130610638}{print}} () const
+\begin{DoxyCompactList}\small\item\em Print the motor status and state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1Encoder_a051479d3056e1f55b26436054186c67c}\label{classmonopod__drivers_1_1Encoder_a051479d3056e1f55b26436054186c67c}} 
+void \mbox{\hyperlink{classmonopod__drivers_1_1Encoder_a051479d3056e1f55b26436054186c67c}{set\+\_\+board\+\_\+active}} () const
+\begin{DoxyCompactList}\small\item\em This sets the board that relates to the specified encoder\+\_\+id to be active in the \mbox{\hyperlink{classmonopod__drivers_1_1CanBusControlBoards}{Can\+Bus\+Control\+Boards}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1Encoder_a33bc1dfe058cc3faaceed5f6eb438de7}\label{classmonopod__drivers_1_1Encoder_a33bc1dfe058cc3faaceed5f6eb438de7}} 
+\mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$ \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsInterface}{Control\+Boards\+Interface}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Encoder_a33bc1dfe058cc3faaceed5f6eb438de7}{board\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The Encoder\+Board to be used for the communication. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1Encoder_a9963131ae03165fc35737b97c49adfac}\label{classmonopod__drivers_1_1Encoder_a9963131ae03165fc35737b97c49adfac}} 
+\mbox{\hyperlink{namespacemonopod__drivers_a292411dcb88919df4d05216355c248d0}{Joint\+Names\+Index}} \mbox{\hyperlink{classmonopod__drivers_1_1Encoder_a9963131ae03165fc35737b97c49adfac}{encoder\+\_\+id\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The id of the motor on the Encoder\+Board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class implements the \mbox{\hyperlink{classmonopod__drivers_1_1EncoderInterface}{Encoder\+Interface}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Encoder_a77a02c33177087e7e61064f61f6a3c88}\label{classmonopod__drivers_1_1Encoder_a77a02c33177087e7e61064f61f6a3c88}} 
+\index{monopod\_drivers::Encoder@{monopod\_drivers::Encoder}!Encoder@{Encoder}}
+\index{Encoder@{Encoder}!monopod\_drivers::Encoder@{monopod\_drivers::Encoder}}
+\doxysubsubsection{\texorpdfstring{Encoder()}{Encoder()}}
+{\footnotesize\ttfamily monopod\+\_\+drivers\+::\+Encoder\+::\+Encoder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$ \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsInterface}{Control\+Boards\+Interface}} $>$}]{board,  }\item[{\mbox{\hyperlink{namespacemonopod__drivers_a292411dcb88919df4d05216355c248d0}{Joint\+Names\+Index}}}]{encoder\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classmonopod__drivers_1_1Encoder}{Encoder}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & is the Encoder\+Board to be used. \\
+\hline
+{\em encoder\+\_\+id} & is the id of the motor on the on-\/board card \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Encoder_ad96f381abf6c705e10d05c855b6f4087}\label{classmonopod__drivers_1_1Encoder_ad96f381abf6c705e10d05c855b6f4087}} 
+\index{monopod\_drivers::Encoder@{monopod\_drivers::Encoder}!````~Encoder@{$\sim$Encoder}}
+\index{````~Encoder@{$\sim$Encoder}!monopod\_drivers::Encoder@{monopod\_drivers::Encoder}}
+\doxysubsubsection{\texorpdfstring{$\sim$Encoder()}{~Encoder()}}
+{\footnotesize\ttfamily virtual monopod\+\_\+drivers\+::\+Encoder\+::$\sim$\+Encoder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{classmonopod__drivers_1_1Encoder}{Encoder}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Encoder_a034a88d4008251384e54d742db9a1591}\label{classmonopod__drivers_1_1Encoder_a034a88d4008251384e54d742db9a1591}} 
+\index{monopod\_drivers::Encoder@{monopod\_drivers::Encoder}!get\_measurement@{get\_measurement}}
+\index{get\_measurement@{get\_measurement}!monopod\_drivers::Encoder@{monopod\_drivers::Encoder}}
+\doxysubsubsection{\texorpdfstring{get\_measurement()}{get\_measurement()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$const \mbox{\hyperlink{namespacemonopod__drivers_adc25f08a0ddbc18d40994c90f10968c2}{Scalar\+Timeseries}}$>$ monopod\+\_\+drivers\+::\+Encoder\+::get\+\_\+measurement (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemonopod__drivers_a85eecf8d086233e0a317729c3763f15e}{Measurements}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the measurements. 
+
+Getters 
+\begin{DoxyParams}{Parameters}
+{\em index} & is the kind of measurement we are instersted in. see Measurements. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ptr$<$const Scalar\+Timeseries$>$ The history of the measurement 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmonopod__drivers_1_1EncoderInterface_a233b32d7796ed3e43906aecc97eb801a}{monopod\+\_\+drivers\+::\+Encoder\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classmonopod__drivers_1_1Motor_afdf4fe4db363f14155ed7658197ec570}{monopod\+\_\+drivers\+::\+Motor}}.
+
+\mbox{\Hypertarget{classmonopod__drivers_1_1Encoder_a32cb832956fc6dc69193fb5f281240a1}\label{classmonopod__drivers_1_1Encoder_a32cb832956fc6dc69193fb5f281240a1}} 
+\index{monopod\_drivers::Encoder@{monopod\_drivers::Encoder}!get\_status@{get\_status}}
+\index{get\_status@{get\_status}!monopod\_drivers::Encoder@{monopod\_drivers::Encoder}}
+\doxysubsubsection{\texorpdfstring{get\_status()}{get\_status()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$const \mbox{\hyperlink{classmonopod__drivers_1_1EncoderInterface_a404dd1f941b4052b9c7a1c6096692f90}{Status\+Timeseries}}$>$ monopod\+\_\+drivers\+::\+Encoder\+::get\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the status. 
+
+\begin{DoxyReturn}{Returns}
+Ptr$<$const Status\+Timeseries$>$ the pointer to the desired status history. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmonopod__drivers_1_1EncoderInterface_a5b160b8f18d22080716b24c1e7b5ce87}{monopod\+\_\+drivers\+::\+Encoder\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classmonopod__drivers_1_1Motor_a54c75132527b50a63bab81105e4abacc}{monopod\+\_\+drivers\+::\+Motor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/dawson/\+Documents/\+Repos/os2r-\/superbuild/src/monopod\+\_\+sdk/include/monopod\+\_\+sdk/monopod\+\_\+drivers/devices/encoder.\+hpp\end{DoxyCompactItemize}

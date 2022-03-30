@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
     
   <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
@@ -38,7 +39,7 @@
     <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="prev" title="gym_os2r.runtime" href="gym_os2r.runtime.html" />
+    <link rel="prev" title="gym_os2r.runtimes" href="gym_os2r.runtimes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -62,7 +63,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../../index.html">
-   Open Sim2Real
+   What’s Open Sim2Real
   </a>
  </li>
 </ul>
@@ -72,81 +73,25 @@
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../open_sim2real/getting_started/what/index.html">
-   What’s Open Sim2Real
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../open_sim2real/getting_started/sim2real.html">
+   Sim2Real
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../open_sim2real/getting_started/what/what_sim2real.html">
-     What’s Sim2Real
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../open_sim2real/getting_started/what/what_sim.html">
-     What’s our Sim
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../open_sim2real/getting_started/what/what_real.html">
-     What’s our Real
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../open_sim2real/getting_started/why/index.html">
-   Why Open Sim2Real
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../open_sim2real/getting_started/opensim2real.html">
+   Open Sim2Real
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../open_sim2real/getting_started/why/why_sim2real.html">
-     Why Sim2Real
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../open_sim2real/getting_started/why/why_monopod.html">
-     Why our monopod
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../open_sim2real/getting_started/highlevel_architecture/index.html">
-   High-level Architecture
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../open_sim2real/getting_started/platform.html">
+   The Platform
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../open_sim2real/getting_started/highlevel_architecture/sld.html">
-     System Level Diagram
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../open_sim2real/getting_started/highlevel_architecture/design_details.html">
-     Design Details
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../open_sim2real/getting_started/highlevel_architecture/hardware.html">
-     Hardware
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../open_sim2real/getting_started/sld.html">
+   System Level Diagram
+  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../../open_sim2real/getting_started/copyright_and_license.html">
@@ -174,8 +119,8 @@
   <a class="reference internal" href="../../../open_sim2real/simulated_monopod/installation/index.html">
    Installation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -233,8 +178,8 @@
   <a class="reference internal" href="../../../open_sim2real/physical_monopod/superbuild/index.html">
    Superbuild
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -242,6 +187,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../../open_sim2real/physical_monopod/superbuild/support_policy.html">
      Support Policy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../open_sim2real/physical_monopod/superbuild/superbuild_structure.html">
+     Superbuild Structure
     </a>
    </li>
    <li class="toctree-l2">
@@ -255,8 +205,8 @@
   <a class="reference internal" href="../../../open_sim2real/physical_monopod/monopod/index.html">
    Building The Monopod
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -304,8 +254,8 @@
   <a class="reference internal" href="../../../monopod_sdk_index.html">
    monopod_sdk
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -314,8 +264,8 @@
     <a class="reference internal" href="../../../monopod_sdk_docs/getting_started/index.html">
      Getting Started
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -334,8 +284,8 @@
       <a class="reference internal" href="../../../monopod_sdk_docs/getting_started/monopod_drivers/index.html">
        Monopod Drivers
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-      <label for="toctree-checkbox-9">
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -375,8 +325,8 @@
   <a class="reference internal" href="../../../scenario_monopod_index.html">
    scenario_monopod
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -385,8 +335,8 @@
     <a class="reference internal" href="../../../scenario_monopod_docs/getting_started/index.html">
      Getting Started
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -429,8 +379,8 @@
   <a class="reference internal" href="../../../gym-os2r_index.html">
    gym-os2r
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -439,8 +389,8 @@
     <a class="reference internal" href="../../getting_started/index.html">
      Getting Started
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -471,8 +421,8 @@
     <a class="reference internal" href="gym_os2r.html">
      gym_os2r
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -481,8 +431,8 @@
       <a class="reference internal" href="gym_os2r.common.html">
        gym_os2r.common
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-      <label for="toctree-checkbox-15">
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <label for="toctree-checkbox-12">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -498,8 +448,8 @@
       <a class="reference internal" href="gym_os2r.models.html">
        gym_os2r.models
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-      <label for="toctree-checkbox-16">
+      <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+      <label for="toctree-checkbox-13">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -527,8 +477,8 @@
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="gym_os2r.runtime.html">
-       gym_os2r.runtime
+      <a class="reference internal" href="gym_os2r.runtimes.html">
+       gym_os2r.runtimes
       </a>
      </li>
      <li class="toctree-l3 current active">
@@ -628,6 +578,11 @@
    gym_os2r.tasks.monopod
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-gym_os2r.tasks.monopod_no_norm">
+   gym_os2r.tasks.monopod_no_norm
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -722,7 +677,8 @@ calculated in a provided reward class defined in the tasks kwargs.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>obs</strong> (<em>np.array</em>) – numpy array with the same size task dimensions as
 observation space.</p></li>
-<li><p><strong>action</strong> (<em>np.array</em>) – numpy array with the same size task dimensions
+<li><p><strong>Deque</strong><strong>[</strong><strong>np.array</strong><strong>]</strong> (<em>actions</em>) – Deque of actions taken by the environment
+numpy array with the same size task dimensions
 as action space.</p></li>
 </ul>
 </dd>
@@ -749,6 +705,14 @@ definition is defined in <cite>../config/default/settings.yaml …</cite></p>
 <dd class="field-even"><p>(ndarray)</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gym_os2r.tasks.monopod.MonopodTask.get_info">
+<span class="sig-name descname"><span class="pre">get_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.tasks.monopod.MonopodTask.get_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the info dictionary.
+:rtype: <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>
+:returns: A <code class="docutils literal notranslate"><span class="pre">dict</span></code> with extra information of the task.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -781,14 +745,15 @@ definition is defined in <cite>../config/default/settings.yaml …</cite></p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="gym_os2r.tasks.monopod.MonopodTask.get_state_info">
-<span class="sig-name descname"><span class="pre">get_state_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.tasks.monopod.MonopodTask.get_state_info" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_state_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.tasks.monopod.MonopodTask.get_state_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the reward and is_done for some observation and action space.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>obs</strong> (<em>np.array</em>) – numpy array with the same size task dimensions as
 observation space.</p></li>
-<li><p><strong>action</strong> (<em>np.array</em>) – numpy array with the same size task dimensions
+<li><p><strong>Deque</strong><strong>[</strong><strong>np.array</strong><strong>]</strong> (<em>actions</em>) – Deque of actions taken by the environment
+numpy array with the same size task dimensions
 as action space.</p></li>
 </ul>
 </dd>
@@ -832,18 +797,252 @@ Sets the max generalized force for eachcontrolled joint.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="gym_os2r.tasks.monopod.MonopodTask.set_action">
-<span class="sig-name descname"><span class="pre">set_action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.tasks.monopod.MonopodTask.set_action" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">set_action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store_action</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.tasks.monopod.MonopodTask.set_action" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set generalized force target for each controlled joint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>action</strong> (<em>ndrray</em>) – Generalized force target for each
-controlled joint.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>action</strong> (<em>ndrray</em>) – Generalized force target for each
+controlled joint.</p></li>
+<li><p><strong>store_action</strong> (<em>bool</em>) – True to store action taken in action history
+otherwise false to ignore.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if success otherwise false.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(bool)</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>(</strong><strong>RuntimeError</strong><strong>)</strong> – Failed to set joints torque target.</p>
 </dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-gym_os2r.tasks.monopod_no_norm">
+<span id="gym-os2r-tasks-monopod-no-norm"></span><h2>gym_os2r.tasks.monopod_no_norm<a class="headerlink" href="#module-gym_os2r.tasks.monopod_no_norm" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="gym_os2r.tasks.monopod_no_norm.MonopodTask">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gym_os2r.tasks.monopod_no_norm.</span></span><span class="sig-name descname"><span class="pre">MonopodTask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent_rate</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.tasks.monopod_no_norm.MonopodTask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">gym_ignition.base.task.Task</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Monopod task defines the main task functionality for the monopod
+environment. Task must be wrapped in a runtime or randomizer class to use
+with igntion or the real robot.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Required</span> <span class="pre">*kwargs</span></span></dt>
+<dd><p>Task requires the kwargs; ‘task_mode’,
+‘reward_class’, ‘reset_positions’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gym_os2r.tasks.monopod_no_norm.MonopodTask.task_mode">
+<span class="sig-name descname"><span class="pre">task_mode</span></span><a class="headerlink" href="#gym_os2r.tasks.monopod_no_norm.MonopodTask.task_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The defined monopod task. current default tasks,
+‘free_hip’, ‘fixed_hip’, ‘fixed’, ‘old-free_hip’, ‘old-fixed_hip’,
+‘old-fixed’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gym_os2r.tasks.monopod_no_norm.MonopodTask.reward_class">
+<span class="sig-name descname"><span class="pre">reward_class</span></span><a class="headerlink" href="#gym_os2r.tasks.monopod_no_norm.MonopodTask.reward_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class defining the reward. Must have same
+functions as RewardBase.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="gym_os2r.rewards.html#gym_os2r.rewards.RewardBase" title="gym_os2r.rewards.RewardBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">gym_os2r.rewards.RewardBase</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gym_os2r.tasks.monopod_no_norm.MonopodTask.reset_positions">
+<span class="sig-name descname"><span class="pre">reset_positions</span></span><a class="headerlink" href="#gym_os2r.tasks.monopod_no_norm.MonopodTask.reset_positions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset locations of the task. currently supports,
+‘stand’, ‘half_stand’, ‘ground’, ‘lay’, ‘float’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gym_os2r.tasks.monopod_no_norm.MonopodTask.observation_index">
+<span class="sig-name descname"><span class="pre">observation_index</span></span><a class="headerlink" href="#gym_os2r.tasks.monopod_no_norm.MonopodTask.observation_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>dictionry with the joint_name_pos and
+joint_name_vel as keys with values corresponding to its index in
+the observation space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gym_os2r.tasks.monopod_no_norm.MonopodTask.calculate_reward">
+<span class="sig-name descname"><span class="pre">calculate_reward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.tasks.monopod_no_norm.MonopodTask.calculate_reward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the reward given observation and action. The reward is
+calculated in a provided reward class defined in the tasks kwargs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obs</strong> (<em>np.array</em>) – numpy array with the same size task dimensions as
+observation space.</p></li>
+<li><p><strong>Deque</strong><strong>[</strong><strong>np.array</strong><strong>]</strong> (<em>actions</em>) – Deque of actions taken by the environment
+numpy array with the same size task dimensions
+as action space.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True for done, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(bool)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gym_os2r.tasks.monopod_no_norm.MonopodTask.create_spaces">
+<span class="sig-name descname"><span class="pre">create_spaces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.tasks.monopod_no_norm.MonopodTask.create_spaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs observtion and action spaces for monopod task. Spaces
+definition is defined in <cite>../config/default/settings.yaml …</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>action space.
+(ndarray): observation space.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>(ndarray)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gym_os2r.tasks.monopod_no_norm.MonopodTask.get_info">
+<span class="sig-name descname"><span class="pre">get_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.tasks.monopod_no_norm.MonopodTask.get_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the info dictionary.
+:rtype: <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>
+:returns: A <code class="docutils literal notranslate"><span class="pre">dict</span></code> with extra information of the task.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gym_os2r.tasks.monopod_no_norm.MonopodTask.get_observation">
+<span class="sig-name descname"><span class="pre">get_observation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.tasks.monopod_no_norm.MonopodTask.get_observation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current observation state of the monopod.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Array of joint positions and velocities.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>(ndarray)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gym_os2r.tasks.monopod_no_norm.MonopodTask.get_reward">
+<span class="sig-name descname"><span class="pre">get_reward</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.tasks.monopod_no_norm.MonopodTask.get_reward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the reward for the current monopod state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True for done, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>(bool)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gym_os2r.tasks.monopod_no_norm.MonopodTask.get_state_info">
+<span class="sig-name descname"><span class="pre">get_state_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.tasks.monopod_no_norm.MonopodTask.get_state_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the reward and is_done for some observation and action space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obs</strong> (<em>np.array</em>) – numpy array with the same size task dimensions as
+observation space.</p></li>
+<li><p><strong>Deque</strong><strong>[</strong><strong>np.array</strong><strong>]</strong> (<em>actions</em>) – Deque of actions taken by the environment
+numpy array with the same size task dimensions
+as action space.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Rewrd given the state.
+(bool): True for done, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Reward)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gym_os2r.tasks.monopod_no_norm.MonopodTask.is_done">
+<span class="sig-name descname"><span class="pre">is_done</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.tasks.monopod_no_norm.MonopodTask.is_done" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the current state of the robot is outside of the reset_space.
+logs the reason for the reset as a debug message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True for done, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>(bool)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gym_os2r.tasks.monopod_no_norm.MonopodTask.reset_task">
+<span class="sig-name descname"><span class="pre">reset_task</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.tasks.monopod_no_norm.MonopodTask.reset_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the environment into default state.
+sets the scenario backend into force controller mode
+Sets the max generalized force for eachcontrolled joint.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gym_os2r.tasks.monopod_no_norm.MonopodTask.set_action">
+<span class="sig-name descname"><span class="pre">set_action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store_action</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gym_os2r.tasks.monopod_no_norm.MonopodTask.set_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set generalized force target for each controlled joint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>action</strong> (<em>ndrray</em>) – Generalized force target for each
+controlled joint.</p></li>
+<li><p><strong>store_action</strong> (<em>bool</em>) – True to store action taken in action history
+otherwise false to ignore.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if success otherwise false.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(bool)</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>(</strong><strong>RuntimeError</strong><strong>)</strong> – Failed to set joints torque target.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -859,11 +1058,11 @@ controlled joint.</p>
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="gym_os2r.runtime.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="gym_os2r.runtimes.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">gym_os2r.runtime</p>
+            <p class="prev-next-title">gym_os2r.runtimes</p>
         </div>
     </a>
 </div>

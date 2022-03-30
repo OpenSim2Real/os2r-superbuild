@@ -1,0 +1,87 @@
+\hypertarget{classmonopod__drivers_1_1ControlBoardsCommand}{}\doxysection{monopod\+\_\+drivers\+::Control\+Boards\+Command Class Reference}
+\label{classmonopod__drivers_1_1ControlBoardsCommand}\index{monopod\_drivers::ControlBoardsCommand@{monopod\_drivers::ControlBoardsCommand}}
+
+
+This \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsCommand}{Control\+Boards\+Command}} class is a data structurs that defines a command to the \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsInterface_ab1d667a531570d2c5782f0faf451e5a4}{monopod\+\_\+drivers\+::\+Control\+Boards\+Interface\+::\+Board\+Index}} boards.  
+
+
+
+
+{\ttfamily \#include $<$boards.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1ControlBoardsCommand_a43ca7dad8d70cceb881933b80c42b37d}\label{classmonopod__drivers_1_1ControlBoardsCommand_a43ca7dad8d70cceb881933b80c42b37d}} 
+enum \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsCommand_a43ca7dad8d70cceb881933b80c42b37d}{I\+Ds}} \{ \newline
+{\bfseries E\+N\+A\+B\+L\+E\+\_\+\+S\+YS} = 1, 
+{\bfseries E\+N\+A\+B\+L\+E\+\_\+\+M\+T\+R1} = 2, 
+{\bfseries E\+N\+A\+B\+L\+E\+\_\+\+M\+T\+R2} = 3, 
+{\bfseries E\+N\+A\+B\+L\+E\+\_\+\+V\+S\+P\+R\+I\+N\+G1} = 4, 
+\newline
+{\bfseries E\+N\+A\+B\+L\+E\+\_\+\+V\+S\+P\+R\+I\+N\+G2} = 5, 
+{\bfseries S\+E\+N\+D\+\_\+\+C\+U\+R\+R\+E\+NT} = 12, 
+{\bfseries S\+E\+N\+D\+\_\+\+P\+O\+S\+I\+T\+I\+ON} = 13, 
+{\bfseries S\+E\+N\+D\+\_\+\+V\+E\+L\+O\+C\+I\+TY} = 14, 
+\newline
+{\bfseries S\+E\+N\+D\+\_\+\+A\+D\+C6} = 15, 
+{\bfseries S\+E\+N\+D\+\_\+\+E\+N\+C\+\_\+\+I\+N\+D\+EX} = 16, 
+{\bfseries S\+E\+N\+D\+\_\+\+A\+LL} = 20, 
+{\bfseries S\+E\+T\+\_\+\+C\+A\+N\+\_\+\+R\+E\+C\+V\+\_\+\+T\+I\+M\+E\+O\+UT} = 30, 
+\newline
+{\bfseries E\+N\+A\+B\+L\+E\+\_\+\+P\+O\+S\+\_\+\+R\+O\+L\+L\+O\+V\+E\+R\+\_\+\+E\+R\+R\+OR} = 31
+ \}
+\begin{DoxyCompactList}\small\item\em I\+Ds are the different implemented commands that one can send to the Control\+Boards. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1ControlBoardsCommand_a24d911a0ca42fb8db9cfa1f5ccbc2cda}\label{classmonopod__drivers_1_1ControlBoardsCommand_a24d911a0ca42fb8db9cfa1f5ccbc2cda}} 
+enum \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsCommand_a24d911a0ca42fb8db9cfa1f5ccbc2cda}{Contents}} \{ {\bfseries E\+N\+A\+B\+LE} = 1, 
+{\bfseries D\+I\+S\+A\+B\+LE} = 0
+ \}
+\begin{DoxyCompactList}\small\item\em Is the different command status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1ControlBoardsCommand_a44b2024d55f9f9e8a1c67d60abebb78c}\label{classmonopod__drivers_1_1ControlBoardsCommand_a44b2024d55f9f9e8a1c67d60abebb78c}} 
+\mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsCommand_a44b2024d55f9f9e8a1c67d60abebb78c}{Control\+Boards\+Command}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsCommand}{Control\+Boards\+Command}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsCommand_a33be89891bdc9a4bc0a46e644378cdd6}{Control\+Boards\+Command}} (uint32\+\_\+t id, int32\+\_\+t content)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsCommand}{Control\+Boards\+Command}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1ControlBoardsCommand_a93d220cbd9afcc427949ee5c23842915}\label{classmonopod__drivers_1_1ControlBoardsCommand_a93d220cbd9afcc427949ee5c23842915}} 
+void \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsCommand_a93d220cbd9afcc427949ee5c23842915}{print}} () const
+\begin{DoxyCompactList}\small\item\em Display on a terminal the status of the message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1ControlBoardsCommand_aa9b56726f335bff3c910c0ac3a3dc2d7}\label{classmonopod__drivers_1_1ControlBoardsCommand_aa9b56726f335bff3c910c0ac3a3dc2d7}} 
+uint32\+\_\+t \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsCommand_aa9b56726f335bff3c910c0ac3a3dc2d7}{id\+\_\+}}
+\begin{DoxyCompactList}\small\item\em id\+\_\+ is the command to be modifies on the card. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1ControlBoardsCommand_a2801bb6b7df2c420d6c141f7d17ff98c}\label{classmonopod__drivers_1_1ControlBoardsCommand_a2801bb6b7df2c420d6c141f7d17ff98c}} 
+int32\+\_\+t \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsCommand_a2801bb6b7df2c420d6c141f7d17ff98c}{content\+\_\+}}
+\begin{DoxyCompactList}\small\item\em content\+\_\+ is the value of teh command to be sent to the cards. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsCommand}{Control\+Boards\+Command}} class is a data structurs that defines a command to the \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsInterface_ab1d667a531570d2c5782f0faf451e5a4}{monopod\+\_\+drivers\+::\+Control\+Boards\+Interface\+::\+Board\+Index}} boards. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmonopod__drivers_1_1ControlBoardsCommand_a33be89891bdc9a4bc0a46e644378cdd6}\label{classmonopod__drivers_1_1ControlBoardsCommand_a33be89891bdc9a4bc0a46e644378cdd6}} 
+\index{monopod\_drivers::ControlBoardsCommand@{monopod\_drivers::ControlBoardsCommand}!ControlBoardsCommand@{ControlBoardsCommand}}
+\index{ControlBoardsCommand@{ControlBoardsCommand}!monopod\_drivers::ControlBoardsCommand@{monopod\_drivers::ControlBoardsCommand}}
+\doxysubsubsection{\texorpdfstring{ControlBoardsCommand()}{ControlBoardsCommand()}}
+{\footnotesize\ttfamily monopod\+\_\+drivers\+::\+Control\+Boards\+Command\+::\+Control\+Boards\+Command (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{int32\+\_\+t}]{content }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsCommand}{Control\+Boards\+Command}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & defines the command to apply. \\
+\hline
+{\em content} & defines of the command is enabled or disabled. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/dawson/\+Documents/\+Repos/os2r-\/superbuild/src/monopod\+\_\+sdk/include/monopod\+\_\+sdk/monopod\+\_\+drivers/devices/boards.\+hpp\end{DoxyCompactItemize}

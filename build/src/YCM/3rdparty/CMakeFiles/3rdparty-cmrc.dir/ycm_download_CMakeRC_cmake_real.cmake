@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.22.1)
+if(EXISTS "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-cmrc.dir/downloads/CMakeRC.cmake")
+    file(SHA1 "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-cmrc.dir/downloads/CMakeRC.cmake" _sha1)
+    if("${_sha1}" STREQUAL "15109e38dddefce15028a0d0563557b2dc72446a")
+        message(STATUS "Using file CMakeRC.cmake previously downloaded from CMakeRC (A Standalone CMake-Based C++ Resource Compiler) git repository (ref f26f6e35a859b0ba28818dbcc0ed9b3880881cf4)")
+        return()
+    endif()
+endif()
+file(DOWNLOAD "https://raw.githubusercontent.com/vector-of-bool/cmrc/f26f6e35a859b0ba28818dbcc0ed9b3880881cf4/CMakeRC.cmake" "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-cmrc.dir/downloads/CMakeRC.cmake"
+     EXPECTED_HASH SHA1=15109e38dddefce15028a0d0563557b2dc72446a 
+     STATUS _status)
+list(GET _status 0 _status_0)
+if(NOT _status EQUAL 0)
+    file(REMOVE "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-cmrc.dir/downloads/CMakeRC.cmake")
+    list(GET _status 1 _status_1)
+    message(FATAL_ERROR "Downloading https://raw.githubusercontent.com/vector-of-bool/cmrc/f26f6e35a859b0ba28818dbcc0ed9b3880881cf4/CMakeRC.cmake - ERROR ${_status_0}: ${_status_1}")
+endif()

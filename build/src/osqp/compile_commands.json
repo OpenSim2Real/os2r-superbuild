@@ -1,0 +1,232 @@
+[
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqpstatic.dir/src/auxil.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/auxil.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/auxil.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqpstatic.dir/src/error.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/error.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/error.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqpstatic.dir/src/lin_alg.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/lin_alg.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/lin_alg.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqpstatic.dir/src/osqp.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/osqp.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/osqp.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqpstatic.dir/src/proj.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/proj.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/proj.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqpstatic.dir/src/scaling.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/scaling.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/scaling.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqpstatic.dir/src/util.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/util.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/util.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqpstatic.dir/src/kkt.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/kkt.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/kkt.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqpstatic.dir/src/cs.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/cs.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/cs.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqpstatic.dir/src/polish.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/polish.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/polish.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqpstatic.dir/src/lin_sys.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/lin_sys.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/lin_sys.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqpstatic.dir/src/ctrlc.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/ctrlc.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/ctrlc.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqpstatic.dir/lin_sys/lib_handler.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/lib_handler.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/lib_handler.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc -Dosqp_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqp.dir/src/auxil.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/auxil.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/auxil.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc -Dosqp_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqp.dir/src/error.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/error.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/error.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc -Dosqp_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqp.dir/src/lin_alg.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/lin_alg.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/lin_alg.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc -Dosqp_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqp.dir/src/osqp.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/osqp.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/osqp.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc -Dosqp_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqp.dir/src/proj.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/proj.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/proj.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc -Dosqp_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqp.dir/src/scaling.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/scaling.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/scaling.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc -Dosqp_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqp.dir/src/util.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/util.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/util.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc -Dosqp_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqp.dir/src/kkt.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/kkt.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/kkt.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc -Dosqp_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqp.dir/src/cs.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/cs.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/cs.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc -Dosqp_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqp.dir/src/polish.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/polish.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/polish.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc -Dosqp_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqp.dir/src/lin_sys.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/lin_sys.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/lin_sys.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc -Dosqp_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqp.dir/src/ctrlc.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/ctrlc.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/src/ctrlc.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc -Dosqp_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/osqp.dir/lin_sys/lib_handler.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/lib_handler.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/lib_handler.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIE -o CMakeFiles/osqp_demo.dir/examples/osqp_demo.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/examples/osqp_demo.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/examples/osqp_demo.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/linsys_pardiso.dir/pardiso/pardiso_interface.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso/pardiso_interface.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso/pardiso_interface.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/linsys_pardiso.dir/pardiso/pardiso_loader.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso/pardiso_loader.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/pardiso/pardiso_loader.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_1.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_1.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_1.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_2.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_2.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_2.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_aat.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_aat.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_aat.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_control.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_control.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_control.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_defaults.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_defaults.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_defaults.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_info.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_info.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_info.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_order.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_order.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_order.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_post_tree.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_post_tree.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_post_tree.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_postorder.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_postorder.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_postorder.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_preprocess.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_preprocess.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_preprocess.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_valid.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_valid.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/amd_valid.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/linsys_qdldl.dir/amd/src/SuiteSparse_config.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/SuiteSparse_config.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/src/SuiteSparse_config.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/amd/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/include  -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/linsys_qdldl.dir/qdldl_interface.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_interface.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_interface.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct/qdldl/qdldl_sources",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include  -O3 -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/qdldlobject.dir/src/qdldl.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/src/qdldl.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/src/qdldl.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct/qdldl/qdldl_sources",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include  -O3 -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/qdldlstatic.dir/src/qdldl.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/src/qdldl.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/src/qdldl.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct/qdldl/qdldl_sources",
+  "command": "/usr/bin/cc -Dqdldl_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include  -O3 -O3 -O3 -DNDEBUG -fPIC -o CMakeFiles/qdldl.dir/src/qdldl.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/src/qdldl.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/src/qdldl.c"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/osqp/lin_sys/direct/qdldl/qdldl_sources",
+  "command": "/usr/bin/cc  -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys -I/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/include  -O3 -O3 -O3 -DNDEBUG -fPIE -o CMakeFiles/qdldl_example.dir/examples/example.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/examples/example.c",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/osqp/lin_sys/direct/qdldl/qdldl_sources/examples/example.c"
+}
+]

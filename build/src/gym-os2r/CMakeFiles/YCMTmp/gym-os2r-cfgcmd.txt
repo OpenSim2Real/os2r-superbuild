@@ -1,0 +1,1 @@
+cmd='/home/dawson/.local/lib/python3.8/site-packages/cmake/data/bin/cmake;--no-warn-unused-cli;-DCMAKE_PREFIX_PATH:PATH=/home/dawson/Documents/Repos/os2r-superbuild/build/install;-DPYTHON_INSTALL_PREFIX:PATH=lib/python3.8/site-packages;-DBUILD_DOCS:BOOL=TRUE;-DBUILD_DOCS_SUPERBUILD:BOOL=TRUE;-C<TMP_DIR>/gym-os2r-cache-$<CONFIG>.cmake;-GUnix Makefiles;<SOURCE_DIR><SOURCE_SUBDIR>'

@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.22.1)
+if(EXISTS "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-eigen.dir/downloads/cmake/FindEigen3.cmake")
+    file(SHA1 "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-eigen.dir/downloads/cmake/FindEigen3.cmake" _sha1)
+    if("${_sha1}" STREQUAL "5ad2b8e1ddbd9f0468b21e9d5343d05eda6b9dd1")
+        message(STATUS "Using file cmake/FindEigen3.cmake previously downloaded from Eigen GitLab repository (ref a12b8a8c75ebef312509da643424951725519348)")
+        return()
+    endif()
+endif()
+file(DOWNLOAD "https://gitlab.com/libeigen/eigen/raw/a12b8a8c75ebef312509da643424951725519348/cmake/FindEigen3.cmake" "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-eigen.dir/downloads/cmake/FindEigen3.cmake"
+     EXPECTED_HASH SHA1=5ad2b8e1ddbd9f0468b21e9d5343d05eda6b9dd1 
+     STATUS _status)
+list(GET _status 0 _status_0)
+if(NOT _status EQUAL 0)
+    file(REMOVE "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-eigen.dir/downloads/cmake/FindEigen3.cmake")
+    list(GET _status 1 _status_1)
+    message(FATAL_ERROR "Downloading https://gitlab.com/libeigen/eigen/raw/a12b8a8c75ebef312509da643424951725519348/cmake/FindEigen3.cmake - ERROR ${_status_0}: ${_status_1}")
+endif()

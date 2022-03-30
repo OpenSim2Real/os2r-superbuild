@@ -1,0 +1,1513 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classmonopod__drivers_1_1Monopod" kind="class" language="C++" prot="public">
+    <compoundname>monopod_drivers::Monopod</compoundname>
+    <includes refid="monopod_8hpp" local="no">monopod.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classmonopod__drivers_1_1Monopod_1acb77f721d3a0f2ad9015683390c6cf6c" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>MonopodState</name>
+        <enumvalue id="classmonopod__drivers_1_1Monopod_1acb77f721d3a0f2ad9015683390c6cf6ca02de9649e258d1dd94056e676061e969" prot="private">
+          <name>NOT_INITIALIZED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>not initialized. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1Monopod_1acb77f721d3a0f2ad9015683390c6cf6ca43491564ebcfd38568918efbd6e840fd" prot="private">
+          <name>RUNNING</name>
+          <briefdescription>
+<para>Running, safety loop is started in background. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1Monopod_1acb77f721d3a0f2ad9015683390c6cf6cac24fea1a954cdb80cfa777b3675c665a" prot="private">
+          <name>HOLDING</name>
+          <briefdescription>
+<para>Holding static location. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1Monopod_1acb77f721d3a0f2ad9015683390c6cf6ca47c7e7cb36a953a8c47e02000036bb44" prot="private">
+          <name>READ_ONLY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Read only mode. Can only read position and set values of observation limits. </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Possible monopod states. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="355" column="26" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="355" bodyend="365"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Monopod_1ad8804124d243e804e3c731f5acfa9954" prot="private" static="no" mutable="no">
+        <type>enum monopod_drivers::Monopod::MonopodState</type>
+        <definition>enum monopod_drivers::Monopod::MonopodState monopod_drivers::Monopod::current_state_</definition>
+        <argsstring></argsstring>
+        <name>current_state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="365" column="18"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Monopod_1a359093434993e898a5d1616b660cae47" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacemonopod__drivers_1a6252798d64d8c41a638ddf9ec67d318f" kindref="member">Mode</ref></type>
+        <definition>Mode monopod_drivers::Monopod::monopod_mode_</definition>
+        <argsstring></argsstring>
+        <name>monopod_mode_</name>
+        <briefdescription>
+<para>The task mode of the monopod. Either predefined or custom. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="458" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="458" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Monopod_1a50e842d324700c43df579280baa1c3b5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::is_initialized</definition>
+        <argsstring></argsstring>
+        <name>is_initialized</name>
+        <briefdescription>
+<para>boolen defining if sdk is initialized. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="463" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="463" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Monopod_1a33406aae9f88e4ad2970c21dd5d65d8d" prot="private" static="no" mutable="no">
+        <type>real_time_tools::RealTimeThread</type>
+        <definition>real_time_tools::RealTimeThread monopod_drivers::Monopod::rt_thread_safety_</definition>
+        <argsstring></argsstring>
+        <name>rt_thread_safety_</name>
+        <briefdescription>
+<para>the realt time thread object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="468" column="35" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="468" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Monopod_1a2266d61daa7162c3a10ff3d923731a65" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::safety_loop_running</definition>
+        <argsstring></argsstring>
+        <name>safety_loop_running</name>
+        <briefdescription>
+<para>controls execution of safety_loop which checks limits of joints. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="473" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="473" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Monopod_1a42e87c6b98ef1c6338c92ff0d3917052" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::pause_safety_loop</definition>
+        <argsstring></argsstring>
+        <name>pause_safety_loop</name>
+        <briefdescription>
+<para>controls execution of safety_loop which checks limits of joints. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="478" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="478" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Monopod_1a66679a9117c0b384ef977bf5f88e7a2d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::dummy_mode_</definition>
+        <argsstring></argsstring>
+        <name>dummy_mode_</name>
+        <briefdescription>
+<para>Determines if the joint is in dummy mode. (no connection to real robot) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="484" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="484" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Monopod_1a8321e1abab348697b90ea074f9992676" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; <ref refid="classmonopod__drivers_1_1CanBus" kindref="compound">monopod_drivers::CanBus</ref> &gt;</type>
+        <definition>Ptr&lt;monopod_drivers::CanBus&gt; monopod_drivers::Monopod::can_bus_</definition>
+        <argsstring></argsstring>
+        <name>can_bus_</name>
+        <briefdescription>
+<para>Canbus connection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="489" column="7" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="489" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Monopod_1aaecce02c1386eec1551047fc117799df" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; <ref refid="classmonopod__drivers_1_1ControlBoardsInterface" kindref="compound">monopod_drivers::ControlBoardsInterface</ref> &gt;</type>
+        <definition>Ptr&lt;monopod_drivers::ControlBoardsInterface&gt; monopod_drivers::Monopod::board_</definition>
+        <argsstring></argsstring>
+        <name>board_</name>
+        <briefdescription>
+<para>Canbus ControlBoards. This maintains connection with the canbus and holds meassurement and write buffers. This could also be a dummy controlboard. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="496" column="7" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="496" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Monopod_1a4a34339bf33ee345cbf2d555581b5b20" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; int, <ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; <ref refid="classmonopod__drivers_1_1EncoderJointModule" kindref="compound">EncoderJointModule</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt;int, Ptr&lt;EncoderJointModule&gt; &gt; monopod_drivers::Monopod::encoders_</definition>
+        <argsstring></argsstring>
+        <name>encoders_</name>
+        <briefdescription>
+<para>Holds encoder joint modules for each active joint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="501" column="22" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="501" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Monopod_1a6decc1b078212aa1eeb33a6f7d6f485d" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; int &gt;</type>
+        <definition>Vector&lt;int&gt; monopod_drivers::Monopod::encoder_joint_indexing</definition>
+        <argsstring></argsstring>
+        <name>encoder_joint_indexing</name>
+        <briefdescription>
+<para>Read Joint names indexed same as enumerator for encoders. All valid joints should be defined here. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="507" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="507" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Monopod_1afe2fd8b03ba91b36ffeb525e6211f909" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; int, <ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; <ref refid="classmonopod__drivers_1_1MotorJointModule" kindref="compound">MotorJointModule</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt;int, Ptr&lt;MotorJointModule&gt; &gt; monopod_drivers::Monopod::motors_</definition>
+        <argsstring></argsstring>
+        <name>motors_</name>
+        <briefdescription>
+<para>Holds motor joint modules for each active controllable joint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="512" column="22" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="512" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Monopod_1af5ad6c84f12dfc2237e6dedeea78d53c" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; int &gt;</type>
+        <definition>Vector&lt;int&gt; monopod_drivers::Monopod::motor_joint_indexing</definition>
+        <argsstring></argsstring>
+        <name>motor_joint_indexing</name>
+        <briefdescription>
+<para>Write Joint names indexed same as enumerator for actuators. All valid controlled joints should be defined here. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="518" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="518" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Monopod_1ab038286a12c8d2775d7b563580fd8c98" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classmonopod__drivers_1_1Leg" kindref="compound">monopod_drivers::Leg</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;monopod_drivers::Leg&gt; monopod_drivers::Monopod::leg_</definition>
+        <argsstring></argsstring>
+        <name>leg_</name>
+        <briefdescription>
+<para>robot <ref refid="classmonopod__drivers_1_1Leg" kindref="compound">Leg</ref> interface object. This is used for calibration and coupled actions like goto position. I m not sure if this is how we should handle it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="525" column="19" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="525" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Monopod_1a16549890996092c7649389d643a68eab" prot="public" static="no" mutable="no">
+        <type>const std::unordered_map&lt; std::string, int &gt;</type>
+        <definition>const std::unordered_map&lt;std::string, int&gt; monopod_drivers::Monopod::joint_names</definition>
+        <argsstring></argsstring>
+        <name>joint_names</name>
+        <initializer>= {
+      {&quot;hip_joint&quot;, hip_joint},
+      {&quot;knee_joint&quot;, knee_joint},
+      {&quot;boom_connector_joint&quot;, boom_connector_joint},
+      {&quot;planarizer_yaw_joint&quot;, planarizer_yaw_joint},
+      {&quot;planarizer_pitch_joint&quot;, planarizer_pitch_joint}}</initializer>
+        <briefdescription>
+<para>Joint names indexed same as enumerator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="447" column="28" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="447" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1ae3a7af8441f2c1b4f7b2e826c3e89080" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>monopod_drivers::Monopod::Monopod</definition>
+        <argsstring>()</argsstring>
+        <name>Monopod</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classmonopod__drivers_1_1Monopod" kindref="compound">Monopod</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="33" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a5869ce3529ca5f3e37ce494c52b6206f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>monopod_drivers::Monopod::~Monopod</definition>
+        <argsstring>()</argsstring>
+        <name>~Monopod</name>
+        <briefdescription>
+<para>Destroy the <ref refid="classmonopod__drivers_1_1Monopod" kindref="compound">Monopod</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="38" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1aa2cedd7155944822adc9e67dfbe5923a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::initialize</definition>
+        <argsstring>(Mode monopod_mode, bool dummy_mode=false)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type><ref refid="namespacemonopod__drivers_1a6252798d64d8c41a638ddf9ec67d318f" kindref="member">Mode</ref></type>
+          <declname>monopod_mode</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>dummy_mode</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Initialize can_bus connections to encoder board and motor board. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>monopod_mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>defines the task mode of the monopod. Can also specify individual boards. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="46" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1ad286cc55bacfba5d33d860ce98172b5f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::initialized</definition>
+        <argsstring>() const</argsstring>
+        <name>initialized</name>
+        <briefdescription>
+<para>is the monopod sdk Initialized?. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="51" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a6e1871cdfac4b63cba90344d66bcfd71" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::Monopod::print</definition>
+        <argsstring>(const Vector&lt; int &gt; &amp;joint_indexes={}) const</argsstring>
+        <name>print</name>
+        <param>
+          <type>const <ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; int &gt; &amp;</type>
+          <declname>joint_indexes</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Print the motor status and state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="54" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1abeaeb23d666d0e64218faee57dc3f6a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::Monopod::start_safety_loop</definition>
+        <argsstring>()</argsstring>
+        <name>start_safety_loop</name>
+        <briefdescription>
+<para>This method is a helper to start the thread safety_loop. Requires the class to be initialized before the safety_loop can be started. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="60" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a59c89f6ce93773a7dde8b3ae9542ccb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::Monopod::goto_position</definition>
+        <argsstring>(const double &amp;hip_home_position=0, const double &amp;knee_home_position=0)</argsstring>
+        <name>goto_position</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>hip_home_position</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>knee_home_position</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>This method is a helper class to goto some position for the leg. This requires the board to be initialized in any mode which has active motors. Additionally this function will pause the limit checks and will reset the board before executing the position control. This is to allow homing from outside the limits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="69" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a156557c8c964854deed4b9da0d040845" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::Monopod::hold_position</definition>
+        <argsstring>()</argsstring>
+        <name>hold_position</name>
+        <briefdescription>
+<para>This method is a helper class to hold the position the leg was in when the function was called. This function will only change the state if the motor board is active. otherwise nothing will happen. When holding the monopod wll be a read only state until the holding is killed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="78" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1aefdbbb084a3e757fd52855793ddb3a11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::is_hold_position</definition>
+        <argsstring>()</argsstring>
+        <name>is_hold_position</name>
+        <briefdescription>
+<para>Is the monopod holding the current leg position? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="83" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a333022bb8e61efda4002ce057967bfd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::Monopod::stop_hold_position</definition>
+        <argsstring>()</argsstring>
+        <name>stop_hold_position</name>
+        <briefdescription>
+<para>Stops robot from holding. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="88" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a2d9814cee7c6ea053523a0af52e72c1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::Monopod::calibrate</definition>
+        <argsstring>(const double &amp;hip_home_offset_rad=0, const double &amp;knee_home_offset_rad=0)</argsstring>
+        <name>calibrate</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>hip_home_offset_rad</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>knee_home_offset_rad</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Calibrate the Encoders. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hip_home_offset_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hip offset from found encoder index 0 (rad) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>knee_home_offset_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>knee offset from found encoder index 0 (rad) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="97" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a922ef7e908264a38d0681b6fa2025525" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string monopod_drivers::Monopod::get_model_name</definition>
+        <argsstring>() const</argsstring>
+        <name>get_model_name</name>
+        <briefdescription>
+<para>Get model name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String of model name </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="105" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a62d5bdeed940ca4d6fa6cfe9191dfc34" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unordered_map&lt; std::string, int &gt;</type>
+        <definition>std::unordered_map&lt;std::string, int&gt; monopod_drivers::Monopod::get_joint_names</definition>
+        <argsstring>() const</argsstring>
+        <name>get_joint_names</name>
+        <briefdescription>
+<para>Get a map of &apos;active&apos; joint strings indexing their enumerator index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Unordered map of joint name strings as key and index as value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="112" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a17c88e9356b121343809992ccb9c7e92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::is_joint_controllable</definition>
+        <argsstring>(const int joint_index)</argsstring>
+        <name>is_joint_controllable</name>
+        <param>
+          <type>const int</type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+<para>check if the joint is a controllable joint (has a motor) or only a observation joint (encoder only). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>joint_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the joint we want to access </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool whether joint is controllable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="121" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1ae002f5a1870bdf056484bec3d7603729" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::valid</definition>
+        <argsstring>()</argsstring>
+        <name>valid</name>
+        <briefdescription>
+<para>Is the robot in a valid state? HOLDING state and safemode is considered invalid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>bool, true if valid otherwise false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="129" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1ac4566615f9ce91d7ef9b08624f1f0c6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::Monopod::reset</definition>
+        <argsstring>(const bool &amp;move_to_zero=true)</argsstring>
+        <name>reset</name>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>move_to_zero</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>If the joint module is not valid (safemode after limit reached) the joint will be reset into a valid state (The joint must be set back into the valid state first otherwise it will trigger the limits again). Additionally by default the reset function will attempt to control the robot leg to ther zero pose. Regardless of status of the zero pose movement the robot reset will pause the motors to avoid a timeout. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>move_to_zero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if you want the monopod to move into zero position, otherwise false. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="142" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a0635083d9ddab66a3fdb038a9970203d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::set_torque_target</definition>
+        <argsstring>(const double &amp;torque_target, const int joint_index)</argsstring>
+        <name>set_torque_target</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>torque_target</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+<para>Set the torque target for some joint index. Return a bool whether successful. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>torque_target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the desired torque target for indexed joint </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>joint_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the joint we want to access </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool whether setting the value was successfull </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="156" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1ad29fa8555ee25529f5658ad1a8b8c3ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::set_torque_targets</definition>
+        <argsstring>(const Vector&lt; double &gt; &amp;torque_targets, const Vector&lt; int &gt; &amp;joint_indexes={})</argsstring>
+        <name>set_torque_targets</name>
+        <param>
+          <type>const <ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; double &gt; &amp;</type>
+          <declname>torque_targets</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; int &gt; &amp;</type>
+          <declname>joint_indexes</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Set the torque targets for all joint indexes. Return a bool whether successful. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Note: if it fails the behaviour is undefined. For example if first 3 joints are right but one bad index it will updatethe good ones the fail on the bad one.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>torque_targets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of desired torque targets for indexed joints </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>joint_indexes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>names of the joints we want to access </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool whether setting the value was successfull </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="170" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a02da22787b60c7be31f9469df8858a14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::set_pid</definition>
+        <argsstring>(const int &amp;p, const int &amp;i, const int &amp;d, const int &amp;joint_index)</argsstring>
+        <name>set_pid</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the <ref refid="structmonopod__drivers_1_1PID" kindref="compound">PID</ref> parameters of the joint.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired <ref refid="structmonopod__drivers_1_1PID" kindref="compound">PID</ref> parameters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True for success, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="179" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a08c44b34232d34bdf46bf5c322ddc12f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::set_joint_position_limit</definition>
+        <argsstring>(const double &amp;max, const double &amp;min, const int &amp;joint_index)</argsstring>
+        <name>set_joint_position_limit</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the maximum Position of the joint.</para>
+<para>This limit when reached will kill the robot for safety</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A double with the maximum position of the joint. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A double with the minimum position of the joint. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>joint_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the joint we want to access </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True for success, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="192" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a0251e350f4819530e7e56c8659c3eae9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::set_joint_velocity_limit</definition>
+        <argsstring>(const double &amp;max, const double &amp;min, const int &amp;joint_index)</argsstring>
+        <name>set_joint_velocity_limit</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the maximum velocity of the joint.</para>
+<para>This limit when reached will kill the robot for safety</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A double with the maximum velocity of the joint. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A double with the minimum velocity of the joint. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>joint_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the joint we want to access </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True for success, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="205" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1ada84a2393fb17dd2cfa108abca457f8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::set_joint_acceleration_limit</definition>
+        <argsstring>(const double &amp;max, const double &amp;min, const int &amp;joint_index)</argsstring>
+        <name>set_joint_acceleration_limit</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the maximum acceleration of the joint.</para>
+<para>This limit when reached will kill the robot for safety</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A double with the maximum acceleration of the joint. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A double with the minimum acceleration of the joint. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>joint_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the joint we want to access </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True for success, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="218" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1ab9dadd3075bfe2bcd88ac4834883d1bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::set_max_torque_target</definition>
+        <argsstring>(const double &amp;max_torque_target, const int &amp;joint_index)</argsstring>
+        <name>set_max_torque_target</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>max_torque_target</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the maximum torque target of the joint.</para>
+<para>This limit when reached will kill the robot for safety</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>max_torque_target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A double with the maximum torque of the joint. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>joint_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the joint we want to access </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True for success, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="230" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a36f3a1db7e02912c423170d874ef79b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; <ref refid="structmonopod__drivers_1_1PID" kindref="compound">PID</ref> &gt;</type>
+        <definition>std::optional&lt;PID&gt; monopod_drivers::Monopod::get_pid</definition>
+        <argsstring>(const int &amp;joint_index) const</argsstring>
+        <name>get_pid</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <ref refid="structmonopod__drivers_1_1PID" kindref="compound">PID</ref> parameters of the joint.</para>
+<para>If no <ref refid="structmonopod__drivers_1_1PID" kindref="compound">PID</ref> parameters have been set, the default parameters are returned.</para>
+<para><simplesect kind="return"><para>The joint <ref refid="structmonopod__drivers_1_1PID" kindref="compound">PID</ref> parameters. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="245" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a79bf84ecfd56483b8e249fa146a33194" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; <ref refid="structmonopod__drivers_1_1JointLimit" kindref="compound">JointLimit</ref> &gt;</type>
+        <definition>std::optional&lt;JointLimit&gt; monopod_drivers::Monopod::get_joint_position_limit</definition>
+        <argsstring>(const int &amp;joint_index) const</argsstring>
+        <name>get_joint_position_limit</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the position limits of the joint.</para>
+<para><simplesect kind="return"><para>The position limits of the joint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="253" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a96f7e3fec5faa61b0caf48d9fe845806" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; <ref refid="structmonopod__drivers_1_1JointLimit" kindref="compound">JointLimit</ref> &gt;</type>
+        <definition>std::optional&lt;JointLimit&gt; monopod_drivers::Monopod::get_joint_velocity_limit</definition>
+        <argsstring>(const int &amp;joint_index) const</argsstring>
+        <name>get_joint_velocity_limit</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the velocity limits of the joint.</para>
+<para><simplesect kind="return"><para>The velocity limits of the joint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="261" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a5ef40576f30a69e9c8430be16a42f3dd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; <ref refid="structmonopod__drivers_1_1JointLimit" kindref="compound">JointLimit</ref> &gt;</type>
+        <definition>std::optional&lt;JointLimit&gt; monopod_drivers::Monopod::get_joint_acceleration_limit</definition>
+        <argsstring>(const int &amp;joint_index) const</argsstring>
+        <name>get_joint_acceleration_limit</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the velocity limits of the joint.</para>
+<para><simplesect kind="return"><para>The velocity limits of the joint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="269" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a66cab6f73563ec92ceab4f3528e90632" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; double &gt;</type>
+        <definition>std::optional&lt;double&gt; monopod_drivers::Monopod::get_max_torque_target</definition>
+        <argsstring>(const int &amp;joint_index) const</argsstring>
+        <name>get_max_torque_target</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+<para>Get the max torque. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>joint_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::optional&lt;double&gt; containing the max torque if success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="277" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a1e4716dc5eb9eeffa4cf5f8b979eff16" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; double &gt;</type>
+        <definition>std::optional&lt;double&gt; monopod_drivers::Monopod::get_torque_target</definition>
+        <argsstring>(const int &amp;joint_index) const</argsstring>
+        <name>get_torque_target</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+<para>Get the torque. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>joint_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::optional&lt;double&gt; containing the torque if success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="285" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a8da9a204e6c5ee6b399f0a7e629ae34f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; <ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; double &gt; &gt;</type>
+        <definition>std::optional&lt;Vector&lt;double&gt; &gt; monopod_drivers::Monopod::get_torque_targets</definition>
+        <argsstring>(const Vector&lt; int &gt; &amp;joint_indexes={}) const</argsstring>
+        <name>get_torque_targets</name>
+        <param>
+          <type>const <ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; int &gt; &amp;</type>
+          <declname>joint_indexes</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Get the torques of indexed joints. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>joint_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::optional&lt;double&gt; containing the torque if success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="294" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a1e3c4daa4f44ce649e683b058416f77f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; double &gt;</type>
+        <definition>std::optional&lt;double&gt; monopod_drivers::Monopod::get_position</definition>
+        <argsstring>(const int &amp;joint_index) const</argsstring>
+        <name>get_position</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+<para>Get the position of joint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>joint_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the joint we want to access </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::optional&lt;double&gt; containing the position if success value of the position (NULL if not valid) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="303" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1ad90fc6401d0a2cc13612172129c1496c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; double &gt;</type>
+        <definition>std::optional&lt;double&gt; monopod_drivers::Monopod::get_velocity</definition>
+        <argsstring>(const int &amp;joint_index) const</argsstring>
+        <name>get_velocity</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+<para>Get the velocity of the joint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>joint_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the joint we want to access </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::optional&lt;double&gt; containing the velocity if success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="311" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1ae7c605906794ad608bfd77007e9cac14" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; double &gt;</type>
+        <definition>std::optional&lt;double&gt; monopod_drivers::Monopod::get_acceleration</definition>
+        <argsstring>(const int &amp;joint_index) const</argsstring>
+        <name>get_acceleration</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+<para>Get the acceleration of the joint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>joint_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the joint we want to access </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::optional&lt;double&gt; containing the acceleration if success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="319" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1aacb2c707f5b93a26ae66437fccb10b42" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; <ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; double &gt; &gt;</type>
+        <definition>std::optional&lt;Vector&lt;double&gt; &gt; monopod_drivers::Monopod::get_positions</definition>
+        <argsstring>(const Vector&lt; int &gt; &amp;joint_indexes={}) const</argsstring>
+        <name>get_positions</name>
+        <param>
+          <type>const <ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; int &gt; &amp;</type>
+          <declname>joint_indexes</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Get the position of the joint indexes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>joint_indexes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>names of the joints we want to access </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::optional&lt;vector&lt;double&gt;&gt; containing vector of positions if success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="329" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1aba6130103537e4690d5e0a160586b70e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; <ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; double &gt; &gt;</type>
+        <definition>std::optional&lt;Vector&lt;double&gt; &gt; monopod_drivers::Monopod::get_velocities</definition>
+        <argsstring>(const Vector&lt; int &gt; &amp;joint_indexes={}) const</argsstring>
+        <name>get_velocities</name>
+        <param>
+          <type>const <ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; int &gt; &amp;</type>
+          <declname>joint_indexes</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Get the velocity of the joint indexes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>joint_indexes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>names of the joints we want to access </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::optional&lt;Vector&lt;double&gt;&gt; containing vector of velocities if success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="339" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a4b26503fcc4dc56a56157a8ddf4215d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; <ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; double &gt; &gt;</type>
+        <definition>std::optional&lt;Vector&lt;double&gt; &gt; monopod_drivers::Monopod::get_accelerations</definition>
+        <argsstring>(const Vector&lt; int &gt; &amp;joint_indexes={}) const</argsstring>
+        <name>get_accelerations</name>
+        <param>
+          <type>const <ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; int &gt; &amp;</type>
+          <declname>joint_indexes</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Get the acceleration of the joint indexes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>joint_indexes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>names of the joints we want to access </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::optional&lt;Vector&lt;double&gt;&gt; containing vector of accelerations if success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="349" column="3"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1acb47baabbc52a7f670e677db672204c7" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>THREAD_FUNCTION_RETURN_TYPE</type>
+        <definition>static THREAD_FUNCTION_RETURN_TYPE monopod_drivers::Monopod::safety_loop</definition>
+        <argsstring>(void *instance_pointer)</argsstring>
+        <name>safety_loop</name>
+        <param>
+          <type>void *</type>
+          <declname>instance_pointer</declname>
+        </param>
+        <briefdescription>
+<para>this function is just a wrapper around the actual safety_loop function, such that it can be spawned as a posix thread. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="371" column="38" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="371" bodyend="374"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1acdc1b2dbe4600b99ad13f18caca5ba95" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::Monopod::safety_loop</definition>
+        <argsstring>()</argsstring>
+        <name>safety_loop</name>
+        <briefdescription>
+<para>this is a simple control safety_loop which runs at a kilohertz. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>it reads the measurement from the analog sensor, in this case the slider. then it scales it and sends it as the current target to the motor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="383" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a694c65bfb080bee6b49985642e5809ac" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::optional&lt; <ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; double &gt; &gt;</type>
+        <definition>std::optional&lt;Vector&lt;double&gt; &gt; monopod_drivers::Monopod::getJointDataSerialized</definition>
+        <argsstring>(const Monopod *monopod, const Vector&lt; int &gt; &amp;joint_indexes, std::function&lt; double(int)&gt; getJointData) const</argsstring>
+        <name>getJointDataSerialized</name>
+        <param>
+          <type>const <ref refid="classmonopod__drivers_1_1Monopod" kindref="compound">Monopod</ref> *</type>
+          <declname>monopod</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; int &gt; &amp;</type>
+          <declname>joint_indexes</declname>
+        </param>
+        <param>
+          <type>std::function&lt; double(int)&gt;</type>
+          <declname>getJointData</declname>
+        </param>
+        <briefdescription>
+<para>Simple helper method to serialized getting of data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets indees on joint index enum </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="391" column="3" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="391" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a448517f959c3fa551b1ed2784aafcc31" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; <ref refid="classmonopod__drivers_1_1EncoderJointModule" kindref="compound">EncoderJointModule</ref> &gt;</type>
+        <definition>Ptr&lt;EncoderJointModule&gt; monopod_drivers::Monopod::create_encoder_module</definition>
+        <argsstring>(JointNamesIndex joint_index)</argsstring>
+        <name>create_encoder_module</name>
+        <param>
+          <type><ref refid="namespacemonopod__drivers_1a292411dcb88919df4d05216355c248d0" kindref="member">JointNamesIndex</ref></type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+<para>Helper to create a <ref refid="classmonopod__drivers_1_1EncoderJointModule" kindref="compound">EncoderJointModule</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="413" column="7" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="413" bodyend="420"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1a26e59dd14f014b19ca9ffbba38445f01" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; <ref refid="classmonopod__drivers_1_1MotorJointModule" kindref="compound">MotorJointModule</ref> &gt;</type>
+        <definition>Ptr&lt;MotorJointModule&gt; monopod_drivers::Monopod::create_motor_module</definition>
+        <argsstring>(JointNamesIndex joint_index)</argsstring>
+        <name>create_motor_module</name>
+        <param>
+          <type><ref refid="namespacemonopod__drivers_1a292411dcb88919df4d05216355c248d0" kindref="member">JointNamesIndex</ref></type>
+          <declname>joint_index</declname>
+        </param>
+        <briefdescription>
+<para>Helper to create a <ref refid="classmonopod__drivers_1_1MotorJointModule" kindref="compound">MotorJointModule</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="425" column="7" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="425" bodyend="431"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Monopod_1afa87f62759b180db18dadfa1069a7202" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool monopod_drivers::Monopod::Contains</definition>
+        <argsstring>(const Vector&lt; T &gt; &amp;Vec, const T &amp;Element) const</argsstring>
+        <name>Contains</name>
+        <param>
+          <type>const <ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; T &gt; &amp;</type>
+          <declname>Vec</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>Element</declname>
+        </param>
+        <briefdescription>
+<para>Template helper checking if vector contains an element. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="437" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="437" bodyend="441"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Drivers for open sim2real monopod. Interfaces with the monopod TI motors using monopod_drivers::BlmcJointModule. This class creates a real time control thread which reads and writes from a buffer exposed to the public api. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::unordered_map&lt; std::string, int &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>keys</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>monopod_drivers::Monopod</label>
+        <link refid="classmonopod__drivers_1_1Monopod"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>joint_names</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="3">
+        <label>std::string</label>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" line="26" column="14" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp" bodystart="26" bodyend="527"/>
+    <listofallmembers>
+      <member refid="classmonopod__drivers_1_1Monopod_1aaecce02c1386eec1551047fc117799df" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>board_</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a2d9814cee7c6ea053523a0af52e72c1f" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>calibrate</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a8321e1abab348697b90ea074f9992676" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>can_bus_</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1afa87f62759b180db18dadfa1069a7202" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>Contains</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a448517f959c3fa551b1ed2784aafcc31" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>create_encoder_module</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a26e59dd14f014b19ca9ffbba38445f01" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>create_motor_module</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1ad8804124d243e804e3c731f5acfa9954" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>current_state_</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a66679a9117c0b384ef977bf5f88e7a2d" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>dummy_mode_</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a6decc1b078212aa1eeb33a6f7d6f485d" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>encoder_joint_indexing</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a4a34339bf33ee345cbf2d555581b5b20" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>encoders_</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1ae7c605906794ad608bfd77007e9cac14" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>get_acceleration</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a4b26503fcc4dc56a56157a8ddf4215d9" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>get_accelerations</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a5ef40576f30a69e9c8430be16a42f3dd" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>get_joint_acceleration_limit</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a62d5bdeed940ca4d6fa6cfe9191dfc34" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>get_joint_names</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a79bf84ecfd56483b8e249fa146a33194" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>get_joint_position_limit</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a96f7e3fec5faa61b0caf48d9fe845806" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>get_joint_velocity_limit</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a66cab6f73563ec92ceab4f3528e90632" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>get_max_torque_target</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a922ef7e908264a38d0681b6fa2025525" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>get_model_name</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a36f3a1db7e02912c423170d874ef79b4" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>get_pid</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a1e3c4daa4f44ce649e683b058416f77f" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>get_position</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1aacb2c707f5b93a26ae66437fccb10b42" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>get_positions</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a1e4716dc5eb9eeffa4cf5f8b979eff16" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>get_torque_target</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a8da9a204e6c5ee6b399f0a7e629ae34f" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>get_torque_targets</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1aba6130103537e4690d5e0a160586b70e" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>get_velocities</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1ad90fc6401d0a2cc13612172129c1496c" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>get_velocity</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a694c65bfb080bee6b49985642e5809ac" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>getJointDataSerialized</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a59c89f6ce93773a7dde8b3ae9542ccb8" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>goto_position</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a156557c8c964854deed4b9da0d040845" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>hold_position</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1aa2cedd7155944822adc9e67dfbe5923a" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>initialize</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1ad286cc55bacfba5d33d860ce98172b5f" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>initialized</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1aefdbbb084a3e757fd52855793ddb3a11" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>is_hold_position</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a50e842d324700c43df579280baa1c3b5" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>is_initialized</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a17c88e9356b121343809992ccb9c7e92" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>is_joint_controllable</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a16549890996092c7649389d643a68eab" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>joint_names</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1ab038286a12c8d2775d7b563580fd8c98" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>leg_</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1ae3a7af8441f2c1b4f7b2e826c3e89080" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>Monopod</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a359093434993e898a5d1616b660cae47" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>monopod_mode_</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1acb77f721d3a0f2ad9015683390c6cf6c" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>MonopodState</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1af5ad6c84f12dfc2237e6dedeea78d53c" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>motor_joint_indexing</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1afe2fd8b03ba91b36ffeb525e6211f909" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>motors_</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a42e87c6b98ef1c6338c92ff0d3917052" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>pause_safety_loop</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a6e1871cdfac4b63cba90344d66bcfd71" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>print</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1ac4566615f9ce91d7ef9b08624f1f0c6b" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>reset</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a33406aae9f88e4ad2970c21dd5d65d8d" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>rt_thread_safety_</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1acb47baabbc52a7f670e677db672204c7" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>safety_loop</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1acdc1b2dbe4600b99ad13f18caca5ba95" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>safety_loop</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a2266d61daa7162c3a10ff3d923731a65" prot="private" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>safety_loop_running</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1ada84a2393fb17dd2cfa108abca457f8c" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>set_joint_acceleration_limit</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a08c44b34232d34bdf46bf5c322ddc12f" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>set_joint_position_limit</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a0251e350f4819530e7e56c8659c3eae9" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>set_joint_velocity_limit</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1ab9dadd3075bfe2bcd88ac4834883d1bc" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>set_max_torque_target</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a02da22787b60c7be31f9469df8858a14" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>set_pid</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a0635083d9ddab66a3fdb038a9970203d" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>set_torque_target</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1ad29fa8555ee25529f5658ad1a8b8c3ab" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>set_torque_targets</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1abeaeb23d666d0e64218faee57dc3f6a1" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>start_safety_loop</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a333022bb8e61efda4002ce057967bfd1" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>stop_hold_position</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1ae002f5a1870bdf056484bec3d7603729" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>valid</name></member>
+      <member refid="classmonopod__drivers_1_1Monopod_1a5869ce3529ca5f3e37ce494c52b6206f" prot="public" virt="non-virtual"><scope>monopod_drivers::Monopod</scope><name>~Monopod</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.22.1)
+if(EXISTS "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-qt-gstreamer.dir/downloads/cmake/modules/FindGStreamerPluginsBase.cmake")
+    file(SHA1 "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-qt-gstreamer.dir/downloads/cmake/modules/FindGStreamerPluginsBase.cmake" _sha1)
+    if("${_sha1}" STREQUAL "75d8fbd4e20afdd624e538d935f3ebabb10c2778")
+        message(STATUS "Using file cmake/modules/FindGStreamerPluginsBase.cmake previously downloaded from qt-gstreamer git repository (ref a0e95b202a72b6d9e48bd1949ab6811c0f3c91c3)")
+        return()
+    endif()
+endif()
+file(DOWNLOAD "https://raw.githubusercontent.com/GStreamer/qt-gstreamer/a0e95b202a72b6d9e48bd1949ab6811c0f3c91c3/cmake/modules/FindGStreamerPluginsBase.cmake" "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-qt-gstreamer.dir/downloads/cmake/modules/FindGStreamerPluginsBase.cmake"
+     EXPECTED_HASH SHA1=75d8fbd4e20afdd624e538d935f3ebabb10c2778 
+     STATUS _status)
+list(GET _status 0 _status_0)
+if(NOT _status EQUAL 0)
+    file(REMOVE "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-qt-gstreamer.dir/downloads/cmake/modules/FindGStreamerPluginsBase.cmake")
+    list(GET _status 1 _status_1)
+    message(FATAL_ERROR "Downloading https://raw.githubusercontent.com/GStreamer/qt-gstreamer/a0e95b202a72b6d9e48bd1949ab6811c0f3c91c3/cmake/modules/FindGStreamerPluginsBase.cmake - ERROR ${_status_0}: ${_status_1}")
+endif()

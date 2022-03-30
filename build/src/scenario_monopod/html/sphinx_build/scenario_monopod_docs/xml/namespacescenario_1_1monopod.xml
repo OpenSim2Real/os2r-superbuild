@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacescenario_1_1monopod" kind="namespace" language="C++">
+    <compoundname>scenario::monopod</compoundname>
+    <innerclass refid="classscenario_1_1monopod_1_1Joint" prot="public">scenario::monopod::Joint</innerclass>
+    <innerclass refid="classscenario_1_1monopod_1_1Model" prot="public">scenario::monopod::Model</innerclass>
+    <innerclass refid="classscenario_1_1monopod_1_1World" prot="public">scenario::monopod::World</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="13" column="27"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../lib/libControllersFactory.a CMakeFiles/ControllersFactory.dir/ControllersFactory.cpp.o
+/usr/bin/ranlib ../../../../lib/libControllersFactory.a

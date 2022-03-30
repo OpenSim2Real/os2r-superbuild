@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classmonopod__drivers_1_1Polynome" kind="class" language="C++" prot="public">
+    <compoundname>monopod_drivers::Polynome</compoundname>
+    <derivedcompoundref refid="classmonopod__drivers_1_1TimePolynome" prot="public" virt="non-virtual">monopod_drivers::TimePolynome&lt; ORDER &gt;</derivedcompoundref>
+    <includes refid="polynome_8hpp" local="no">polynome.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>int</type>
+        <declname>ORDER</declname>
+        <defname>ORDER</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classmonopod__drivers_1_1Polynome_1a495e446c65fbb378a1dd33a1d2d81310" prot="private" static="no">
+        <type>std::array&lt; double, ORDER &gt;</type>
+        <definition>typedef std::array&lt;double, ORDER&gt; monopod_drivers::Polynome&lt; ORDER &gt;::Coefficients</definition>
+        <argsstring></argsstring>
+        <name>Coefficients</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type of the container for the poynome coefficients </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp" line="25" column="22" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Polynome_1ad452876a630d5ba0276720fbc7b6cf18" prot="protected" static="no" mutable="no">
+        <type>std::array&lt; double, ORDER+1 &gt;</type>
+        <definition>std::array&lt;double, ORDER + 1&gt; monopod_drivers::Polynome&lt; ORDER &gt;::coefficients_</definition>
+        <argsstring></argsstring>
+        <name>coefficients_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Vector of coefficients. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp" line="56" column="14" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1Polynome_1ac25129bbcfd913a299d255df37cc5785" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>monopod_drivers::Polynome&lt; ORDER &gt;::Polynome</definition>
+        <argsstring>()</argsstring>
+        <name>Polynome</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp" line="29" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Polynome_1aa7345c16df263bc3111086d6623a0bb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>monopod_drivers::Polynome&lt; ORDER &gt;::~Polynome</definition>
+        <argsstring>()</argsstring>
+        <name>~Polynome</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp" line="32" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Polynome_1ae9b63379887e242edd679515b1c33a4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double monopod_drivers::Polynome&lt; ORDER &gt;::compute</definition>
+        <argsstring>(double x)</argsstring>
+        <name>compute</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp" line="35" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Polynome_1a1893883112123be92639bfd58adf8177" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double monopod_drivers::Polynome&lt; ORDER &gt;::compute_derivative</definition>
+        <argsstring>(double x)</argsstring>
+        <name>compute_derivative</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the value of the derivative. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp" line="38" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Polynome_1a7912663244b4b857df78955ed9f66820" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double monopod_drivers::Polynome&lt; ORDER &gt;::compute_sec_derivative</definition>
+        <argsstring>(double x)</argsstring>
+        <name>compute_sec_derivative</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the value of the second derivative. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp" line="41" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Polynome_1a22f6f43cdfeba8c02ae612fee6c2cb02" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::Polynome&lt; ORDER &gt;::get_coefficients</definition>
+        <argsstring>(Coefficients &amp;coefficients) const</argsstring>
+        <name>get_coefficients</name>
+        <param>
+          <type>Coefficients &amp;</type>
+          <declname>coefficients</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the coefficients. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp" line="44" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Polynome_1ab2237099f2bd1381fac5ae2df28e997f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::Polynome&lt; ORDER &gt;::set_coefficients</definition>
+        <argsstring>(const Coefficients &amp;coefficients)</argsstring>
+        <name>set_coefficients</name>
+        <param>
+          <type>const Coefficients &amp;</type>
+          <declname>coefficients</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the coefficients. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp" line="47" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Polynome_1a6336a156a1a9c39716dee53651eb25bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int monopod_drivers::Polynome&lt; ORDER &gt;::degree</definition>
+        <argsstring>()</argsstring>
+        <name>degree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp" line="49" column="14" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Polynome_1a0baa203ffd3776df53c9873e74b56aca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::Polynome&lt; ORDER &gt;::print</definition>
+        <argsstring>() const</argsstring>
+        <name>print</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print the coefficient. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp" line="52" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Simple class that defines <formula id="4">$ P(x) $</formula> a polynome of order ORDER. It provide simple methods to compute <formula id="4">$ P(x) $</formula>, <formula id="5">$ \frac{dP}{dx}(x) $</formula>, and <formula id="6">$ \frac{dP^2}{dx^2}(x) $</formula>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>ORDER</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the order of the polynome </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>monopod_drivers::TimePolynome&lt; ORDER &gt;</label>
+        <link refid="classmonopod__drivers_1_1TimePolynome"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>monopod_drivers::Polynome&lt; ORDER &gt;</label>
+        <link refid="classmonopod__drivers_1_1Polynome"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::array&lt; double, ORDER+1 &gt;</label>
+      </node>
+      <node id="1">
+        <label>monopod_drivers::Polynome&lt; ORDER &gt;</label>
+        <link refid="classmonopod__drivers_1_1Polynome"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>coefficients_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp" line="23" column="27" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp" bodystart="23" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classmonopod__drivers_1_1Polynome_1a495e446c65fbb378a1dd33a1d2d81310" prot="private" virt="non-virtual"><scope>monopod_drivers::Polynome</scope><name>Coefficients</name></member>
+      <member refid="classmonopod__drivers_1_1Polynome_1ad452876a630d5ba0276720fbc7b6cf18" prot="protected" virt="non-virtual"><scope>monopod_drivers::Polynome</scope><name>coefficients_</name></member>
+      <member refid="classmonopod__drivers_1_1Polynome_1ae9b63379887e242edd679515b1c33a4b" prot="public" virt="non-virtual"><scope>monopod_drivers::Polynome</scope><name>compute</name></member>
+      <member refid="classmonopod__drivers_1_1Polynome_1a1893883112123be92639bfd58adf8177" prot="public" virt="non-virtual"><scope>monopod_drivers::Polynome</scope><name>compute_derivative</name></member>
+      <member refid="classmonopod__drivers_1_1Polynome_1a7912663244b4b857df78955ed9f66820" prot="public" virt="non-virtual"><scope>monopod_drivers::Polynome</scope><name>compute_sec_derivative</name></member>
+      <member refid="classmonopod__drivers_1_1Polynome_1a6336a156a1a9c39716dee53651eb25bc" prot="public" virt="non-virtual"><scope>monopod_drivers::Polynome</scope><name>degree</name></member>
+      <member refid="classmonopod__drivers_1_1Polynome_1a22f6f43cdfeba8c02ae612fee6c2cb02" prot="public" virt="non-virtual"><scope>monopod_drivers::Polynome</scope><name>get_coefficients</name></member>
+      <member refid="classmonopod__drivers_1_1Polynome_1ac25129bbcfd913a299d255df37cc5785" prot="public" virt="non-virtual"><scope>monopod_drivers::Polynome</scope><name>Polynome</name></member>
+      <member refid="classmonopod__drivers_1_1Polynome_1a0baa203ffd3776df53c9873e74b56aca" prot="public" virt="non-virtual"><scope>monopod_drivers::Polynome</scope><name>print</name></member>
+      <member refid="classmonopod__drivers_1_1Polynome_1ab2237099f2bd1381fac5ae2df28e997f" prot="public" virt="non-virtual"><scope>monopod_drivers::Polynome</scope><name>set_coefficients</name></member>
+      <member refid="classmonopod__drivers_1_1Polynome_1aa7345c16df263bc3111086d6623a0bb2" prot="public" virt="non-virtual"><scope>monopod_drivers::Polynome</scope><name>~Polynome</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

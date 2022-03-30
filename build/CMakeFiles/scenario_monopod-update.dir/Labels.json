@@ -1,0 +1,28 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/scenario_monopod-update"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/scenario_monopod-update.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/CMakeFiles/YCMStamp/scenario_monopod-update.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/CMakeFiles/YCMStamp/scenario_monopod-download.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/CMakeFiles/YCMStamp/scenario_monopod-mkdir.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"scenario_monopod"
+		],
+		"name" : "scenario_monopod-update"
+	}
+}

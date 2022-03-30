@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
     
   <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
@@ -243,6 +244,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../physical_monopod/superbuild/support_policy.html">
      Support Policy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../physical_monopod/superbuild/superbuild_structure.html">
+     Superbuild Structure
     </a>
    </li>
    <li class="toctree-l2">
@@ -528,8 +534,8 @@
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../gym-os2r_docs/python/gym-os2r/gym_os2r.runtime.html">
-       gym_os2r.runtime
+      <a class="reference internal" href="../../../gym-os2r_docs/python/gym-os2r/gym_os2r.runtimes.html">
+       gym_os2r.runtimes
       </a>
      </li>
      <li class="toctree-l3">
@@ -629,6 +635,25 @@
                 
   <div class="section" id="why-open-sim2real">
 <span id="why"></span><h1>Why Open Sim2Real<a class="headerlink" href="#why-open-sim2real" title="Permalink to this headline">¶</a></h1>
+<p>The ability to do Sim2Real research is currently heavily limited by the lack of inexpensive,
+low barrier of entry physical platforms. Currently most modern <a class="reference internal" href="../what/what_sim2real.html#what-is-sim2real"><span class="std std-ref">Sim2Real</span></a>
+involves expensive, large robots that are custom made by the research group. For most RL groups
+manufacturing a custom robot is either too cumbersome or expensive, or limited by the knowledge gap
+between robotics and machine learning.</p>
+<p>By providing an open source complete platform for Sim2Real research that is relatively inexpensive we believe
+it will open doors for research groups otherwise limited to simulation.</p>
+<p>This project provides three main features:</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="../../physical_monopod/introduction.html#physical-monopod-introduction"><span class="std std-ref">Physical Robot</span></a> with corresponding <a class="reference internal" href="../../../monopod_sdk_index.html#monopod-sdk"><span class="std std-ref">monopod_sdk</span></a></p></li>
+<li><p>Simulation of the robot using ignition gazebo with corresponding openAI gym environment, <a class="reference internal" href="../../../gym-os2r_index.html#gym-os2r"><span class="std std-ref">gym-os2r</span></a>.</p></li>
+<li><p>Real-time link, <a class="reference internal" href="../../../scenario_monopod_index.html#scenario-monopod"><span class="std std-ref">scenario_monopod</span></a>, between simulation and real components with the ability to train in real.</p></li>
+</ol>
+<p>Check the sections <a class="reference internal" href="../what/index.html#what"><span class="std std-ref">What is open Sim2Real</span></a>, <a class="reference internal" href="#why"><span class="std std-ref">why open Sim2Real</span></a>, and
+<a class="reference internal" href="../highlevel_architecture/index.html#high-level-architecture"><span class="std std-ref">high level architecture</span></a> for a more detailed look into the
+motivation, and structure of the project.</p>
+<p>For a practical introduction into our platform, visit the <a class="reference internal" href="../../simulated_monopod/introduction.html#simulated-monopod-introduction"><span class="std std-ref">simulated monopod</span></a>
+and <a class="reference internal" href="../../physical_monopod/introduction.html#physical-monopod-introduction"><span class="std std-ref">physical monopod</span></a> sections.</p>
+<p>If you use this project for your research, please check <a class="reference internal" href="../how_to_cite.html#how-to-cite"><span class="std std-ref">how to cite</span></a>.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>

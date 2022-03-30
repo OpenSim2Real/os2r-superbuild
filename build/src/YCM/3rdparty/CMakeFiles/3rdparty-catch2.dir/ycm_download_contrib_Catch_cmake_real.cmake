@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.22.1)
+if(EXISTS "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-catch2.dir/downloads/contrib/Catch.cmake")
+    file(SHA1 "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-catch2.dir/downloads/contrib/Catch.cmake" _sha1)
+    if("${_sha1}" STREQUAL "8889da7f7aecd616e1101ec1e204171e015d321b")
+        message(STATUS "Using file contrib/Catch.cmake previously downloaded from Catch2 (C++ Automated Test Cases in a Header) git repository (ref v2.13.4)")
+        return()
+    endif()
+endif()
+file(DOWNLOAD "https://raw.githubusercontent.com/catchorg/Catch2/v2.13.4/contrib/Catch.cmake" "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-catch2.dir/downloads/contrib/Catch.cmake"
+     EXPECTED_HASH SHA1=8889da7f7aecd616e1101ec1e204171e015d321b 
+     STATUS _status)
+list(GET _status 0 _status_0)
+if(NOT _status EQUAL 0)
+    file(REMOVE "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-catch2.dir/downloads/contrib/Catch.cmake")
+    list(GET _status 1 _status_1)
+    message(FATAL_ERROR "Downloading https://raw.githubusercontent.com/catchorg/Catch2/v2.13.4/contrib/Catch.cmake - ERROR ${_status_0}: ${_status_1}")
+endif()

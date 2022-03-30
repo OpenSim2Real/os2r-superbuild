@@ -1,0 +1,64 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_784c0/fast && make[3]: Entering directory '/home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_784c0.dir/build.make CMakeFiles/cmTC_784c0.dir/build
+make[4]: Entering directory '/home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_784c0.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_784c0.dir/src.c.o -c /home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_784c0
+/home/dawson/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_784c0.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_784c0.dir/src.c.o -o cmTC_784c0 
+/usr/bin/ld: CMakeFiles/cmTC_784c0.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_784c0.dir/build.make:99: cmTC_784c0] Error 1
+make[4]: Leaving directory '/home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:127: cmTC_784c0/fast] Error 2
+make[3]: Leaving directory '/home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_7a62c/fast && make[3]: Entering directory '/home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_7a62c.dir/build.make CMakeFiles/cmTC_7a62c.dir/build
+make[4]: Entering directory '/home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7a62c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -std=gnu99 -o CMakeFiles/cmTC_7a62c.dir/CheckFunctionExists.c.o -c /home/dawson/.local/lib/python3.8/site-packages/cmake/data/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7a62c
+/home/dawson/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a62c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_7a62c.dir/CheckFunctionExists.c.o -o cmTC_7a62c  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_7a62c.dir/build.make:99: cmTC_7a62c] Error 1
+make[4]: Leaving directory '/home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:127: cmTC_7a62c/fast] Error 2
+make[3]: Leaving directory '/home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/CMakeTmp'
+
+
+

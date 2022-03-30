@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.22.1)
+if(EXISTS "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-ecm.dir/downloads/find-modules/FindUDev.cmake")
+    file(SHA1 "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-ecm.dir/downloads/find-modules/FindUDev.cmake" _sha1)
+    if("${_sha1}" STREQUAL "10bfe244e8f2c4d85338563a0057656093fb0d08")
+        message(STATUS "Using file find-modules/FindUDev.cmake previously downloaded from KDE Extra CMake Modules git repository (ref v5.79.0)")
+        return()
+    endif()
+endif()
+file(DOWNLOAD "https://invent.kde.org/frameworks/extra-cmake-modules/-/raw/v5.79.0/find-modules/FindUDev.cmake" "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-ecm.dir/downloads/find-modules/FindUDev.cmake"
+     EXPECTED_HASH SHA1=10bfe244e8f2c4d85338563a0057656093fb0d08 
+     STATUS _status)
+list(GET _status 0 _status_0)
+if(NOT _status EQUAL 0)
+    file(REMOVE "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-ecm.dir/downloads/find-modules/FindUDev.cmake")
+    list(GET _status 1 _status_1)
+    message(FATAL_ERROR "Downloading https://invent.kde.org/frameworks/extra-cmake-modules/-/raw/v5.79.0/find-modules/FindUDev.cmake - ERROR ${_status_0}: ${_status_1}")
+endif()

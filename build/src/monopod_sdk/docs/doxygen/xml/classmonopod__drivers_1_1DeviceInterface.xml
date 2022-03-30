@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classmonopod__drivers_1_1DeviceInterface" kind="class" language="C++" prot="public">
+    <compoundname>monopod_drivers::DeviceInterface</compoundname>
+    <derivedcompoundref refid="classmonopod__drivers_1_1CanBusInterface" prot="public" virt="non-virtual">monopod_drivers::CanBusInterface</derivedcompoundref>
+    <derivedcompoundref refid="classmonopod__drivers_1_1ControlBoardsInterface" prot="public" virt="non-virtual">monopod_drivers::ControlBoardsInterface</derivedcompoundref>
+    <derivedcompoundref refid="classmonopod__drivers_1_1EncoderInterface" prot="public" virt="non-virtual">monopod_drivers::EncoderInterface</derivedcompoundref>
+    <includes refid="device__interface_8hpp" local="no">device_interface.hpp</includes>
+    <briefdescription>
+<para>this class exists purely for logical reasons, it does not in itself implement anything. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>the purpose of this class is to provide guidelines how a device should be implemented. any device has a number of inputs and outputs, see the following diagram for an example with two inputs and outputs. <image type="html" name="device_class_diagram.svg"></image>
+ generally, we expect the following functions to be implemented:<itemizedlist>
+<listitem><para>a set function for each input (several inputs may share a set function which takes an index argument).</para>
+</listitem><listitem><para>a send_if_input_changed() function which will send the inputs to the device if any of them have changed.</para>
+</listitem><listitem><para>functions to access the current inputs and outputs, as well as the inputs which have been sent to the device. Rather than just returning the latest elements, these function should return a time series of these objects, such that the user can synchronize (e.g. wait for the next element or step through them one by one such that none of them is missed) </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>monopod_drivers::CanBusControlBoards</label>
+        <link refid="classmonopod__drivers_1_1CanBusControlBoards"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>monopod_drivers::DummyControlBoards</label>
+        <link refid="classmonopod__drivers_1_1DummyControlBoards"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>monopod_drivers::MotorInterface</label>
+        <link refid="classmonopod__drivers_1_1MotorInterface"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>monopod_drivers::CanBus</label>
+        <link refid="classmonopod__drivers_1_1CanBus"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>monopod_drivers::EncoderInterface</label>
+        <link refid="classmonopod__drivers_1_1EncoderInterface"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>monopod_drivers::Motor</label>
+        <link refid="classmonopod__drivers_1_1Motor"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>monopod_drivers::Encoder</label>
+        <link refid="classmonopod__drivers_1_1Encoder"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>monopod_drivers::ControlBoardsInterface</label>
+        <link refid="classmonopod__drivers_1_1ControlBoardsInterface"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>monopod_drivers::CanBusInterface</label>
+        <link refid="classmonopod__drivers_1_1CanBusInterface"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>monopod_drivers::DeviceInterface</label>
+        <link refid="classmonopod__drivers_1_1DeviceInterface"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/device_interface.hpp" line="27" column="22" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/device_interface.hpp" bodystart="27" bodyend="27"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

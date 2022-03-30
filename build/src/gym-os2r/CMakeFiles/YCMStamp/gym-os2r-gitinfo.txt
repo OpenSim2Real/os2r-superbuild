@@ -1,0 +1,3 @@
+repository='https://github.com/OpenSim2Real/gym-os2r'
+module=''
+tag='origin'

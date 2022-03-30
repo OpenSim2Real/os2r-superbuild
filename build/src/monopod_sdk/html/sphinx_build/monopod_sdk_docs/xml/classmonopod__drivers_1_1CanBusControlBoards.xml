@@ -1,0 +1,1193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classmonopod__drivers_1_1CanBusControlBoards" kind="class" language="C++" prot="public">
+    <compoundname>monopod_drivers::CanBusControlBoards</compoundname>
+    <basecompoundref refid="classmonopod__drivers_1_1ControlBoardsInterface" prot="public" virt="non-virtual">monopod_drivers::ControlBoardsInterface</basecompoundref>
+    <includes refid="boards_8hpp" local="no">boards.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7" prot="private" static="no" strong="no">
+        <type></type>
+        <name>CanframeIDs</name>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7af3f5cce2b439ec2693e984507a15b14e" prot="private">
+          <name>COMMAND_ID</name>
+          <initializer>= 0x00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a47609ba7127e6824d0fc5a724a1a1672" prot="private">
+          <name>IqRef</name>
+          <initializer>= 0x05</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7ae4adb5a80a2bea100f7cf11d49301170" prot="private">
+          <name>BOARD1_STATUSMSG</name>
+          <initializer>= 0x10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a3fca63275662769a67b9812e734a7955" prot="private">
+          <name>BOARD2_STATUSMSG</name>
+          <initializer>= 0x11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7abd93d457ed6027d32f203ff500d876f1" prot="private">
+          <name>BOARD3_STATUSMSG</name>
+          <initializer>= 0x12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a76cf778624b24db6ff07171a95eef337" prot="private">
+          <name>Iq</name>
+          <initializer>= 0x20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a4392218b8ded86d787d00a96ea78bd95" prot="private">
+          <name>BOARD1_POS</name>
+          <initializer>= 0x30</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a2b6bd8196a03bed058999afdac06dbff" prot="private">
+          <name>BOARD2_POS</name>
+          <initializer>= 0x31</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a96b68a925b5c9f92eb5670245dbcbe81" prot="private">
+          <name>BOARD3_POS</name>
+          <initializer>= 0x32</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a0a284eeb57831ef3eeb20858872b42ff" prot="private">
+          <name>BOARD1_VEL</name>
+          <initializer>= 0x40</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a1bcc4929546a830b2fee83f6c9fd2943" prot="private">
+          <name>BOARD2_VEL</name>
+          <initializer>= 0x41</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a1732d8984c2320735e1190d334f9e83f" prot="private">
+          <name>BOARD3_VEL</name>
+          <initializer>= 0x42</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a0a86b3ff8e9d3d8d1528d1a9d39a5da3" prot="private">
+          <name>ADC6</name>
+          <initializer>= 0x50</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a1d05b3d8671cdc62123ddfdd9b5f80ff" prot="private">
+          <name>BOARD1_ENC_INDEX</name>
+          <initializer>= 0x60</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7afab309c183830de8d12de986419da010" prot="private">
+          <name>BOARD2_ENC_INDEX</name>
+          <initializer>= 0x61</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a90c2dde97a155253d79efda2b1b6fd21" prot="private">
+          <name>BOARD3_ENC_INDEX</name>
+          <initializer>= 0x62</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7ae43d34d7121e7d770dab573441acc37e" prot="private">
+          <name>BOARD1_ACC</name>
+          <initializer>= 0x70</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a7dc2f0c154793a09fad9b84d0d556c72" prot="private">
+          <name>BOARD2_ACC</name>
+          <initializer>= 0x71</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a52ae86eeaa88fd427dde6f3a98b8702d" prot="private">
+          <name>BOARD3_ACC</name>
+          <initializer>= 0x72</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>These are the frame IDs that define the kind of data we acquiere from the CAN bus. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="725" column="19" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="725" bodyend="751"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmonopod__drivers_1_1CanBusControlBoards_1a7d7ce6a9dcf168e29e479a5e06312e1d" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classmonopod__drivers_1_1CanBusInterface" kindref="compound">CanBusInterface</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;CanBusInterface&gt; monopod_drivers::CanBusControlBoards::can_bus_</definition>
+        <argsstring></argsstring>
+        <name>can_bus_</name>
+        <briefdescription>
+<para>This is the pointer to the can bus to communicate with. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="719" column="19" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="719" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1CanBusControlBoards_1accd685e43e347f06df266169f9769a48" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; int &gt;</type>
+        <definition>Vector&lt;int&gt; monopod_drivers::CanBusControlBoards::active_boards_</definition>
+        <argsstring></argsstring>
+        <name>active_boards_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>State Info </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="755" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="755" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1CanBusControlBoards_1adbfe514c917622e183a62dc68e915a4b" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; <ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; <ref refid="namespacemonopod__drivers_1adc25f08a0ddbc18d40994c90f10968c2" kindref="member">ScalarTimeseries</ref> &gt; &gt;</type>
+        <definition>Vector&lt;Ptr&lt;ScalarTimeseries&gt; &gt; monopod_drivers::CanBusControlBoards::measurement_</definition>
+        <argsstring></argsstring>
+        <name>measurement_</name>
+        <briefdescription>
+<para>measurement_ contains all the measurements acquiered from the CAN board. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Outputs </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="765" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="765" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1CanBusControlBoards_1a180a805ae366e13cc457e32915c1373c" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; <ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; <ref refid="classmonopod__drivers_1_1ControlBoardsInterface_1a306b7503ef7e6444ef27f7a07b76d289" kindref="member">StatusTimeseries</ref> &gt; &gt;</type>
+        <definition>Vector&lt;Ptr&lt;StatusTimeseries&gt; &gt; monopod_drivers::CanBusControlBoards::status_</definition>
+        <argsstring></argsstring>
+        <name>status_</name>
+        <briefdescription>
+<para>This is the status history of the CAN board. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="770" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="770" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1CanBusControlBoards_1a158b61637db736d515aa31cbae86460a" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; <ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; <ref refid="namespacemonopod__drivers_1adc25f08a0ddbc18d40994c90f10968c2" kindref="member">ScalarTimeseries</ref> &gt; &gt;</type>
+        <definition>Vector&lt;Ptr&lt;ScalarTimeseries&gt; &gt; monopod_drivers::CanBusControlBoards::control_</definition>
+        <argsstring></argsstring>
+        <name>control_</name>
+        <briefdescription>
+<para>This is the buffer of the controls to be sent to card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Inputs </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="779" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="779" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1CanBusControlBoards_1a07def89af5fe94f51ba42e1df2c87d21" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; <ref refid="classmonopod__drivers_1_1ControlBoardsInterface_1a719a988a8f6af442d064befd8a070704" kindref="member">CommandTimeseries</ref> &gt;</type>
+        <definition>Ptr&lt;CommandTimeseries&gt; monopod_drivers::CanBusControlBoards::command_</definition>
+        <argsstring></argsstring>
+        <name>command_</name>
+        <briefdescription>
+<para>This is the buffer of the commands to be sent to the card. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="784" column="7" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="784" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1CanBusControlBoards_1a7ea82eb79b54c8e915fe9b45fbc6a431" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref>&lt; <ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; <ref refid="namespacemonopod__drivers_1adc25f08a0ddbc18d40994c90f10968c2" kindref="member">ScalarTimeseries</ref> &gt; &gt;</type>
+        <definition>Vector&lt;Ptr&lt;ScalarTimeseries&gt; &gt; monopod_drivers::CanBusControlBoards::sent_control_</definition>
+        <argsstring></argsstring>
+        <name>sent_control_</name>
+        <briefdescription>
+<para>This is the history of the already sent controls. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Log </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="793" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="793" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1CanBusControlBoards_1afa4a2184bfeefda0b549595d41deb829" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; <ref refid="classmonopod__drivers_1_1ControlBoardsInterface_1a719a988a8f6af442d064befd8a070704" kindref="member">CommandTimeseries</ref> &gt;</type>
+        <definition>Ptr&lt;CommandTimeseries&gt; monopod_drivers::CanBusControlBoards::sent_command_</definition>
+        <argsstring></argsstring>
+        <name>sent_command_</name>
+        <briefdescription>
+<para>This is the history of the already sent commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="798" column="7" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="798" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1CanBusControlBoards_1a54c0ce9544f5074838db01a66abca6ea" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool monopod_drivers::CanBusControlBoards::is_loop_active_</definition>
+        <argsstring></argsstring>
+        <name>is_loop_active_</name>
+        <briefdescription>
+<para>This boolean makes sure that the loop is stopped upon destruction of this object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Loop management </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="808" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="808" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1CanBusControlBoards_1a3e445c57fbee790a5fa08f9505c298cb" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool monopod_drivers::CanBusControlBoards::motors_are_paused_</definition>
+        <argsstring></argsstring>
+        <name>motors_are_paused_</name>
+        <briefdescription>
+<para>This variables if true means two things: Are motor in idle mode = 0 torques?, and is the timeout duration for a control signal zero on the TI board? When a new control is sent the motors will enter into their normal state where they are active with the proper timeout duration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="816" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="816" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1CanBusControlBoards_1a140276159fbc85a76382098016691d00" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool monopod_drivers::CanBusControlBoards::is_safemode_</definition>
+        <argsstring></argsstring>
+        <name>is_safemode_</name>
+        <briefdescription>
+<para>Is the system in safemode? This implies the motors were killed and now being held constant at 0 control magnitude. This is maintained until reset. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="823" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="823" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1CanBusControlBoards_1afeb20b9dde046ff9f31530c0e9f565ae" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int monopod_drivers::CanBusControlBoards::control_timeout_ms_</definition>
+        <argsstring></argsstring>
+        <name>control_timeout_ms_</name>
+        <briefdescription>
+<para>If no control is sent for more than control_timeout_ms_ the board will shut down. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="829" column="7" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="829" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1CanBusControlBoards_1a479faeebfbca002b3a6a90d43e0fafbb" prot="private" static="no" mutable="no">
+        <type>real_time_tools::RealTimeThread</type>
+        <definition>real_time_tools::RealTimeThread monopod_drivers::CanBusControlBoards::rt_thread_</definition>
+        <argsstring></argsstring>
+        <name>rt_thread_</name>
+        <briefdescription>
+<para>This is the thread object that allow to spwan a real-time thread or not dependening on the current OS. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="835" column="35" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="835" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1a9b73df55a834d90fe9368e03ce64f278" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>monopod_drivers::CanBusControlBoards::CanBusControlBoards</definition>
+        <argsstring>(std::shared_ptr&lt; CanBusInterface &gt; can_bus, const size_t &amp;history_length=1000, const int &amp;control_timeout_ms=100)</argsstring>
+        <name>CanBusControlBoards</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classmonopod__drivers_1_1CanBusInterface" kindref="compound">CanBusInterface</ref> &gt;</type>
+          <declname>can_bus</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>history_length</declname>
+          <defval>1000</defval>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>control_timeout_ms</declname>
+          <defval>100</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classmonopod__drivers_1_1CanBusControlBoards" kindref="compound">CanBusControlBoards</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>can_bus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>history_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="479" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1a9f339bbaf91bb365a9504b6a0c895621" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>monopod_drivers::CanBusControlBoards::~CanBusControlBoards</definition>
+        <argsstring>()</argsstring>
+        <name>~CanBusControlBoards</name>
+        <briefdescription>
+<para>Destroy the <ref refid="classmonopod__drivers_1_1CanBusControlBoards" kindref="compound">CanBusControlBoards</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="486" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1a72ccfde1ea0cefe3ca9548d2e153433f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; const <ref refid="namespacemonopod__drivers_1adc25f08a0ddbc18d40994c90f10968c2" kindref="member">ScalarTimeseries</ref> &gt;</type>
+        <definition>virtual Ptr&lt;const ScalarTimeseries&gt; monopod_drivers::CanBusControlBoards::get_measurement</definition>
+        <argsstring>(const int &amp;index) const</argsstring>
+        <name>get_measurement</name>
+        <reimplements refid="classmonopod__drivers_1_1ControlBoardsInterface_1ae29757cd32d64f4e63932a9e261a3a16">get_measurement</reimplements>
+        <param>
+          <type>const int &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the measurement data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Getters <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the kind of measurement we are insterested in. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ptr&lt;const ScalarTimeseries&gt; is the list of the last measurements acquiered from the CAN card. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="499" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="499" bodyend="501"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1aa91cd656707ddd8a2e1a3e9327611b39" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; const <ref refid="classmonopod__drivers_1_1ControlBoardsInterface_1a306b7503ef7e6444ef27f7a07b76d289" kindref="member">StatusTimeseries</ref> &gt;</type>
+        <definition>virtual Ptr&lt;const StatusTimeseries&gt; monopod_drivers::CanBusControlBoards::get_status</definition>
+        <argsstring>(const int &amp;index) const</argsstring>
+        <name>get_status</name>
+        <reimplements refid="classmonopod__drivers_1_1ControlBoardsInterface_1a430c08bb8a6a2d0b4386977649dbd09d">get_status</reimplements>
+        <param>
+          <type>const int &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the status of the CAN card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the kind of status we are interested in. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ptr&lt;const StatusTimeseries&gt; is the list of last acquiered status. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="509" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="509" bodyend="511"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1a07bb26d94156f924faf1f7663f335e28" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; const <ref refid="namespacemonopod__drivers_1adc25f08a0ddbc18d40994c90f10968c2" kindref="member">ScalarTimeseries</ref> &gt;</type>
+        <definition>virtual Ptr&lt;const ScalarTimeseries&gt; monopod_drivers::CanBusControlBoards::get_control</definition>
+        <argsstring>(const int &amp;index) const</argsstring>
+        <name>get_control</name>
+        <reimplements refid="classmonopod__drivers_1_1ControlBoardsInterface_1ac9e7d40e6208b5872a68039b8cec23e1">get_control</reimplements>
+        <param>
+          <type>const int &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the controls to be sent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the kind of control we are interested in. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ptr&lt;const ScalarTimeseries&gt; is the list of the control to be sent. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="520" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="520" bodyend="522"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1ae4b59b4d4990d92187144b40464053b8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; const <ref refid="classmonopod__drivers_1_1ControlBoardsInterface_1a719a988a8f6af442d064befd8a070704" kindref="member">CommandTimeseries</ref> &gt;</type>
+        <definition>virtual Ptr&lt;const CommandTimeseries&gt; monopod_drivers::CanBusControlBoards::get_command</definition>
+        <argsstring>() const</argsstring>
+        <name>get_command</name>
+        <reimplements refid="classmonopod__drivers_1_1ControlBoardsInterface_1a0cf458f41d19343062c2067659bf1ec7">get_command</reimplements>
+        <briefdescription>
+<para>Get the commands to be sent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ptr&lt;const CommandTimeseries&gt; is the list of the command to be sent. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="530" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="530" bodyend="530"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1a9f78f8055c5dd8ef1ef9ff01d65395ae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; const <ref refid="namespacemonopod__drivers_1adc25f08a0ddbc18d40994c90f10968c2" kindref="member">ScalarTimeseries</ref> &gt;</type>
+        <definition>virtual Ptr&lt;const ScalarTimeseries&gt; monopod_drivers::CanBusControlBoards::get_sent_control</definition>
+        <argsstring>(const int &amp;index) const</argsstring>
+        <name>get_sent_control</name>
+        <reimplements refid="classmonopod__drivers_1_1ControlBoardsInterface_1ad98a1e2b915ad7ff27d26a7ad3a6651a">get_sent_control</reimplements>
+        <param>
+          <type>const int &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the already sent controls. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the kind of control we are interested in. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ptr&lt;const ScalarTimeseries&gt; is the list of the sent cotnrols. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="538" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="538" bodyend="540"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1aad3e9afb0cac98b5b7d5bd56ba8ab84b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; const <ref refid="classmonopod__drivers_1_1ControlBoardsInterface_1a719a988a8f6af442d064befd8a070704" kindref="member">CommandTimeseries</ref> &gt;</type>
+        <definition>virtual Ptr&lt;const CommandTimeseries&gt; monopod_drivers::CanBusControlBoards::get_sent_command</definition>
+        <argsstring>() const</argsstring>
+        <name>get_sent_command</name>
+        <reimplements refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6c877cbdfda23ddb495007b565b6030a">get_sent_command</reimplements>
+        <briefdescription>
+<para>Get the already sent commands. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ptr&lt;const CommandTimeseries&gt; is the list of the sent cotnrols. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="547" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="547" bodyend="549"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1a3ab9f88059f9fa78ab29d90ce8c4bf49" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::CanBusControlBoards::set_active_board</definition>
+        <argsstring>(const int &amp;index)</argsstring>
+        <name>set_active_board</name>
+        <reimplements refid="classmonopod__drivers_1_1ControlBoardsInterface_1a1126efe350d1d90df7da3de70e2ec4d0">set_active_board</reimplements>
+        <param>
+          <type>const int &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Set a board to an active state if it is not already active. This means the board will now have its status checked for is_ready and if the board is the motor_board we must send enable the motors etc. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Setters <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="562" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1a24490f2b5d84ccb6924d7cfc64747ffe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::CanBusControlBoards::set_control</definition>
+        <argsstring>(const double &amp;control, const int &amp;index)</argsstring>
+        <name>set_control</name>
+        <reimplements refid="classmonopod__drivers_1_1ControlBoardsInterface_1a673664487a4b6ef7a73c2fb85c7f0e4e">set_control</reimplements>
+        <param>
+          <type>const double &amp;</type>
+          <declname>control</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Set the controls, see <ref refid="classmonopod__drivers_1_1ControlBoardsInterface_1a673664487a4b6ef7a73c2fb85c7f0e4e" kindref="member">ControlBoardsInterface::set_control</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>control</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="570" column="16" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="570" bodyend="572"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1a61948bfce690715601b275a0cf2af495" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::CanBusControlBoards::set_command</definition>
+        <argsstring>(const ControlBoardsCommand &amp;command)</argsstring>
+        <name>set_command</name>
+        <reimplements refid="classmonopod__drivers_1_1ControlBoardsInterface_1a5c4e791e143188badf2190d0bfd59609">set_command</reimplements>
+        <param>
+          <type>const <ref refid="classmonopod__drivers_1_1ControlBoardsCommand" kindref="compound">ControlBoardsCommand</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Set the commands, see <ref refid="classmonopod__drivers_1_1ControlBoardsInterface_1a5c4e791e143188badf2190d0bfd59609" kindref="member">ControlBoardsInterface::set_command</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="579" column="16" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="579" bodyend="581"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1a9e988a740a78e5c1e4c14221a9adce3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::CanBusControlBoards::send_if_input_changed</definition>
+        <argsstring>()</argsstring>
+        <name>send_if_input_changed</name>
+        <reimplements refid="classmonopod__drivers_1_1ControlBoardsInterface_1a81f28b962cb95e6027e1f57fa3137f2f">send_if_input_changed</reimplements>
+        <briefdescription>
+<para>Send the actual command and controls. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="586" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1ac2810d5be5e0226874fbbb6d9f739918" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::CanBusControlBoards::wait_until_ready</definition>
+        <argsstring>()</argsstring>
+        <name>wait_until_ready</name>
+        <reimplements refid="classmonopod__drivers_1_1ControlBoardsInterface_1a3c06c96be86f78d47332511f176326f5">wait_until_ready</reimplements>
+        <briefdescription>
+<para>returns only once board and motors are ready. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="591" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1af3e24b936edbb42f08bde67710578eb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::CanBusControlBoards::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <reimplements refid="classmonopod__drivers_1_1ControlBoardsInterface_1a3feb48c23000ac7d00206b28abb1a0a8">reset</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This will cause the control to reset the &quot;safemode&quot; if the control is currently in safemode. Additionally the motors will be paused and The control boards will be reset such that any timed out connection will be reestablished. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="599" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1ae168a578bab5590972c03dded4ce3e66" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::CanBusControlBoards::enter_safemode</definition>
+        <argsstring>()</argsstring>
+        <name>enter_safemode</name>
+        <reimplements refid="classmonopod__drivers_1_1ControlBoardsInterface_1a9a4c51ec2ff9bad37db49a4cc7b0872f">enter_safemode</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This will cause the control to be forced into a &quot;safemode&quot; where the control is set to zero then held constant until reset. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="605" column="16" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="605" bodyend="611"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1af78f685aeb38c67d7bc564d7bfd9ac56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool monopod_drivers::CanBusControlBoards::is_safemode</definition>
+        <argsstring>()</argsstring>
+        <name>is_safemode</name>
+        <reimplements refid="classmonopod__drivers_1_1ControlBoardsInterface_1a2488efa7cce091e72088ea91dcffecb0">is_safemode</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This will return if the control is in &quot;safemode&quot;. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="616" column="16" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="616" bodyend="616"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1afc5fffd0e7b8f32f85e7db79fa3dd7a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool monopod_drivers::CanBusControlBoards::is_ready</definition>
+        <argsstring>()</argsstring>
+        <name>is_ready</name>
+        <briefdescription>
+<para>True if all active boards have established at least one status message from the board that does not include any error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="622" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1a80ec849669549ae78f5964cb10d85962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::CanBusControlBoards::pause_motors</definition>
+        <argsstring>()</argsstring>
+        <name>pause_motors</name>
+        <briefdescription>
+<para>Sets motors to Idle and sets the canbus control recieve timeout on board to none until next action is sent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="628" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1a683b9bf7c6dc7c5bce437e4e1ef79edf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::CanBusControlBoards::disable_can_recv_timeout</definition>
+        <argsstring>()</argsstring>
+        <name>disable_can_recv_timeout</name>
+        <briefdescription>
+<para>Disable the can reciever timeout. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="633" column="8"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1ae5fc0cc3b6f9184c7fd335c96280f4e7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>int32_t</type>
+        <definition>int32_t monopod_drivers::CanBusControlBoards::bytes_to_int32</definition>
+        <argsstring>(T bytes)</argsstring>
+        <name>bytes_to_int32</name>
+        <param>
+          <type>T</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+<para>private methods ======================================================== </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Useful converters</para>
+<para>Converts from bytes to int32.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the type of the bytes convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bytes value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int32_t the output integer in int32. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="648" column="23" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="648" bodyend="651"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1a7277524b585adbc87e73d04317781988" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float monopod_drivers::CanBusControlBoards::q24_to_float</definition>
+        <argsstring>(int32_t qval)</argsstring>
+        <name>q24_to_float</name>
+        <param>
+          <type>int32_t</type>
+          <declname>qval</declname>
+        </param>
+        <briefdescription>
+<para>Convert from 24-bit normalized fixed-point to float. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>qval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the floating base point. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float is the converted value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="659" column="9" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="659" bodyend="659"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1ade5b677b7e8c4c188f0aa07f48f7e403" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t monopod_drivers::CanBusControlBoards::float_to_q24</definition>
+        <argsstring>(float fval)</argsstring>
+        <name>float_to_q24</name>
+        <param>
+          <type>float</type>
+          <declname>fval</declname>
+        </param>
+        <briefdescription>
+<para>Converts from float to 24-bit normalized fixed-point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int32_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="667" column="11" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="667" bodyend="667"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1ad6d05fab0879f56bdc42baf48c6aa50e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>float</type>
+        <definition>float monopod_drivers::CanBusControlBoards::qbytes_to_float</definition>
+        <argsstring>(T qbytes)</argsstring>
+        <name>qbytes_to_float</name>
+        <param>
+          <type>T</type>
+          <declname>qbytes</declname>
+        </param>
+        <briefdescription>
+<para>Converts from qbytes to float. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of byte to manage </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>qbytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the input value in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float the output value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="676" column="21" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="676" bodyend="678"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1acd63f65c93758dc9c0877f5b7b5969ee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::CanBusControlBoards::send_newest_controls</definition>
+        <argsstring>()</argsstring>
+        <name>send_newest_controls</name>
+        <briefdescription>
+<para>send the controls to the cards. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>controls</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>are the controls to be sent. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="685" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1a66c07f80e8e46a4d2fe17d7cefc4f063" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::CanBusControlBoards::send_newest_command</definition>
+        <argsstring>()</argsstring>
+        <name>send_newest_command</name>
+        <briefdescription>
+<para>send the latest commands to the cards. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="691" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1ae264e2cddfa7d48a7fc62e501aaa533a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::CanBusControlBoards::loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+<para>Is the loop that constently communicate with the network. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="708" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1a34bbfa8c840b18d137b3416cd76bc253" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::CanBusControlBoards::print_status</definition>
+        <argsstring>()</argsstring>
+        <name>print_status</name>
+        <briefdescription>
+<para>Display details of this object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="713" column="8"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1CanBusControlBoards_1aa73ebab2acecec42d683911741ae43a1" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>THREAD_FUNCTION_RETURN_TYPE</type>
+        <definition>static THREAD_FUNCTION_RETURN_TYPE monopod_drivers::CanBusControlBoards::loop</definition>
+        <argsstring>(void *instance_pointer)</argsstring>
+        <name>loop</name>
+        <param>
+          <type>void *</type>
+          <declname>instance_pointer</declname>
+        </param>
+        <briefdescription>
+<para>This is the helper function used for spawning the real time thread. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>instance_pointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the current object in this case. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>THREAD_FUNCTION_RETURN_TYPE depends on the current OS. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="700" column="38" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="700" bodyend="703"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class <ref refid="classmonopod__drivers_1_1CanBusControlBoards" kindref="compound">CanBusControlBoards</ref> implements a <ref refid="classmonopod__drivers_1_1ControlBoardsInterface" kindref="compound">ControlBoardsInterface</ref> specific to CAN networks. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>monopod_drivers::CanBusControlBoards</label>
+        <link refid="classmonopod__drivers_1_1CanBusControlBoards"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>monopod_drivers::ControlBoardsInterface</label>
+        <link refid="classmonopod__drivers_1_1ControlBoardsInterface"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>monopod_drivers::DeviceInterface</label>
+        <link refid="classmonopod__drivers_1_1DeviceInterface"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>monopod_drivers::CanBusControlBoards</label>
+        <link refid="classmonopod__drivers_1_1CanBusControlBoards"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>monopod_drivers::ControlBoardsInterface</label>
+        <link refid="classmonopod__drivers_1_1ControlBoardsInterface"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>monopod_drivers::DeviceInterface</label>
+        <link refid="classmonopod__drivers_1_1DeviceInterface"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" line="471" column="56" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp" bodystart="471" bodyend="836"/>
+    <listofallmembers>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aa8263f8947ccb920eddcee7521c46bf59" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>acceleration_0</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aa182b9a65c1f43ef2e776097758eb69b6" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>acceleration_1</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aaa7fe8dea43f26637c84627ca927341ef" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>acceleration_2</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aaa9611df8935359221466577714229d91" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>acceleration_3</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aa07fda932a3768b24a06c8082a846f100" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>acceleration_4</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1accd685e43e347f06df266169f9769a48" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>active_boards_</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a0a86b3ff8e9d3d8d1528d1a9d39a5da3" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>ADC6</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aa08313f0dac70ae299c49efeccc1d3dab" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>analog_0</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aaef61b6ad6d644f4349030db3e35a10e6" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>analog_1</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7ae43d34d7121e7d770dab573441acc37e" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>BOARD1_ACC</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a1d05b3d8671cdc62123ddfdd9b5f80ff" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>BOARD1_ENC_INDEX</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a4392218b8ded86d787d00a96ea78bd95" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>BOARD1_POS</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7ae4adb5a80a2bea100f7cf11d49301170" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>BOARD1_STATUSMSG</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a0a284eeb57831ef3eeb20858872b42ff" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>BOARD1_VEL</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a7dc2f0c154793a09fad9b84d0d556c72" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>BOARD2_ACC</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7afab309c183830de8d12de986419da010" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>BOARD2_ENC_INDEX</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a2b6bd8196a03bed058999afdac06dbff" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>BOARD2_POS</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a3fca63275662769a67b9812e734a7955" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>BOARD2_STATUSMSG</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a1bcc4929546a830b2fee83f6c9fd2943" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>BOARD2_VEL</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a52ae86eeaa88fd427dde6f3a98b8702d" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>BOARD3_ACC</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a90c2dde97a155253d79efda2b1b6fd21" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>BOARD3_ENC_INDEX</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a96b68a925b5c9f92eb5670245dbcbe81" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>BOARD3_POS</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7abd93d457ed6027d32f203ff500d876f1" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>BOARD3_STATUSMSG</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a1732d8984c2320735e1190d334f9e83f" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>BOARD3_VEL</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1ab1d667a531570d2c5782f0faf451e5a4acf1d013906caa4024de39f2ec96e99f2" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>board_count</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1ab1d667a531570d2c5782f0faf451e5a4" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>BoardIndex</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1ae5fc0cc3b6f9184c7fd335c96280f4e7" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>bytes_to_int32</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a7d7ce6a9dcf168e29e479a5e06312e1d" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>can_bus_</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a9b73df55a834d90fe9368e03ce64f278" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>CanBusControlBoards</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>CanframeIDs</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a07def89af5fe94f51ba42e1df2c87d21" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>command_</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7af3f5cce2b439ec2693e984507a15b14e" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>COMMAND_ID</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a719a988a8f6af442d064befd8a070704" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>CommandTimeseries</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a158b61637db736d515aa31cbae86460a" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>control_</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1ac66bfc854128525e4656c942ca311121aa7f234763543427cc20291e230db7ee0" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>control_count</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1afeb20b9dde046ff9f31530c0e9f565ae" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>control_timeout_ms_</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1ac66bfc854128525e4656c942ca311121" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>ControlIndex</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aa5183d283618ff7d3aaf2b4c740b23707" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>current_0</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aa4484ec4af6219bfa1e09cc1e9c009a4c" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>current_1</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1ac66bfc854128525e4656c942ca311121a427e63bd99a617d304d8065e8db15485" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>current_target_0</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1ac66bfc854128525e4656c942ca311121a1a4bfecc43f6af72aabe7b8b2cd600a8" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>current_target_1</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a683b9bf7c6dc7c5bce437e4e1ef79edf" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>disable_can_recv_timeout</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1ab1d667a531570d2c5782f0faf451e5a4a8b076ac17602e833d76d4f9f0eacdbbe" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>encoder_board1</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1ab1d667a531570d2c5782f0faf451e5a4ae2980fbfd594c575c086daa3f61a94ba" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>encoder_board2</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aa6048dc77e69af928c1e88969fcde311c" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>encoder_index_0</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aa57949724e26a316ce5867f3fed68ffe8" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>encoder_index_1</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aa4927e925f852e79feaa77be07e59003d" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>encoder_index_2</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aaf07770773472d46f7196c1ff404b1a82" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>encoder_index_3</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aa3ad070b24eed0cea66873331e3f8f51a" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>encoder_index_4</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1ae168a578bab5590972c03dded4ce3e66" prot="public" virt="virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>enter_safemode</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1ade5b677b7e8c4c188f0aa07f48f7e403" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>float_to_q24</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1ae4b59b4d4990d92187144b40464053b8" prot="public" virt="virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>get_command</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a07bb26d94156f924faf1f7663f335e28" prot="public" virt="virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>get_control</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a72ccfde1ea0cefe3ca9548d2e153433f" prot="public" virt="virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>get_measurement</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1aad3e9afb0cac98b5b7d5bd56ba8ab84b" prot="public" virt="virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>get_sent_command</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a9f78f8055c5dd8ef1ef9ff01d65395ae" prot="public" virt="virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>get_sent_control</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1aa91cd656707ddd8a2e1a3e9327611b39" prot="public" virt="virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>get_status</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a76cf778624b24db6ff07171a95eef337" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>Iq</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a29c6f544599c4aaf6ab496af41e4ada7a47609ba7127e6824d0fc5a724a1a1672" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>IqRef</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a54c0ce9544f5074838db01a66abca6ea" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>is_loop_active_</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1afc5fffd0e7b8f32f85e7db79fa3dd7a5" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>is_ready</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1af78f685aeb38c67d7bc564d7bfd9ac56" prot="public" virt="virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>is_safemode</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a140276159fbc85a76382098016691d00" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>is_safemode_</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1aa73ebab2acecec42d683911741ae43a1" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>loop</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1ae264e2cddfa7d48a7fc62e501aaa533a" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>loop</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1adbfe514c917622e183a62dc68e915a4b" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>measurement_</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aa5a7645cc2221597132146b8d37d67a4c" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>measurement_count</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292a" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>MeasurementIndex</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1ab1d667a531570d2c5782f0faf451e5a4a9a6bc4d08a7149c855cf490bf2350612" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>motor_board</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a3e445c57fbee790a5fa08f9505c298cb" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>motors_are_paused_</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a80ec849669549ae78f5964cb10d85962" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>pause_motors</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aa1d68c05d29c7a373c93142de453bf4e0" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>position_0</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aaade322b14c967f05bb1c6d1dbe6779f0" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>position_1</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aa4a33e707c8aa32dc21751fb3aa59a8ea" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>position_2</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aaad70c3bb8447679b6059b01673058a3b" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>position_3</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aab6c84727e2a24f14f38ab46facee5058" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>position_4</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a34bbfa8c840b18d137b3416cd76bc253" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>print_status</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a7277524b585adbc87e73d04317781988" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>q24_to_float</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1ad6d05fab0879f56bdc42baf48c6aa50e" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>qbytes_to_float</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1af3e24b936edbb42f08bde67710578eb8" prot="public" virt="virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>reset</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a479faeebfbca002b3a6a90d43e0fafbb" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>rt_thread_</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a9e988a740a78e5c1e4c14221a9adce3a" prot="public" virt="virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>send_if_input_changed</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a66c07f80e8e46a4d2fe17d7cefc4f063" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>send_newest_command</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1acd63f65c93758dc9c0877f5b7b5969ee" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>send_newest_controls</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1afa4a2184bfeefda0b549595d41deb829" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>sent_command_</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a7ea82eb79b54c8e915fe9b45fbc6a431" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>sent_control_</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a3ab9f88059f9fa78ab29d90ce8c4bf49" prot="public" virt="virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>set_active_board</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a61948bfce690715601b275a0cf2af495" prot="public" virt="virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>set_command</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a24490f2b5d84ccb6924d7cfc64747ffe" prot="public" virt="virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>set_control</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a180a805ae366e13cc457e32915c1373c" prot="private" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>status_</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a306b7503ef7e6444ef27f7a07b76d289" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>StatusTimeseries</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aa4058a925977983b9a8767ab28f7bcefa" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>velocity_0</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aa659aef2f0425c088823c8f8a2ca09a72" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>velocity_1</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aaaa403f302e0209aab960766a3491111d" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>velocity_2</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aa78d55b0fbb7771f35e8e9aca485645b0" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>velocity_3</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a6b9cb85654dfaed9be877633617f292aab7154616b891fcd011bbe13a95afbc8e" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>velocity_4</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1ac2810d5be5e0226874fbbb6d9f739918" prot="public" virt="virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>wait_until_ready</name></member>
+      <member refid="classmonopod__drivers_1_1CanBusControlBoards_1a9f339bbaf91bb365a9504b6a0c895621" prot="public" virt="non-virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>~CanBusControlBoards</name></member>
+      <member refid="classmonopod__drivers_1_1ControlBoardsInterface_1a1027091eb90d5cc22ff800c020e34524" prot="public" virt="virtual"><scope>monopod_drivers::CanBusControlBoards</scope><name>~ControlBoardsInterface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

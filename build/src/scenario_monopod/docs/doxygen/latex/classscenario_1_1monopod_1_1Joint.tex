@@ -1,0 +1,365 @@
+\hypertarget{classscenario_1_1monopod_1_1Joint}{}\doxysection{scenario\+::monopod\+::Joint Class Reference}
+\label{classscenario_1_1monopod_1_1Joint}\index{scenario::monopod::Joint@{scenario::monopod::Joint}}
+
+
+Inheritance diagram for scenario\+::monopod\+::Joint\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classscenario_1_1monopod_1_1Joint__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for scenario\+::monopod\+::Joint\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classscenario_1_1monopod_1_1Joint__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a8eb5b1692bfd841b06a9868a1e004f35}\label{classscenario_1_1monopod_1_1Joint_a8eb5b1692bfd841b06a9868a1e004f35}} 
+bool {\bfseries initialize} (const std\+::pair$<$ std\+::string, int $>$ name\+Index\+Pair, const std\+::shared\+\_\+ptr$<$ monopod\+\_\+drivers\+::\+Monopod $>$ \&monopod\+\_\+sdk)
+\item 
+bool \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a1e17751be3fbd3c18cc37dba97c5b857}{valid}} () const override
+\item 
+size\+\_\+t \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a489c67a5543f2583b3c4876ebfcffff7}{dofs}} () const override
+\item 
+std\+::string \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a01c5277914855e6c0195f6ec8cf0934e}{name}} (const bool scoped=false) const override
+\item 
+core\+::\+Joint\+Type \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a1728e8f4c797c1636fd4e5ffb2d4582a}{type}} () const override
+\item 
+bool \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a7183ad36924aa58523aa8129d07639ff}{set\+Control\+Mode}} (const core\+::\+Joint\+Control\+Mode mode) override
+\item 
+core\+::\+Joint\+Control\+Mode \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a5dee6108c6f6695a5893c8d754cc3601}{control\+Mode}} () const override
+\item 
+core\+::\+P\+ID \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_abc50ad0c63902883faedd047461c5e19}{pid}} () const override
+\item 
+bool \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a8c419123353c60e67c464de5faa55a3d}{set\+P\+ID}} (const core\+::\+P\+ID \&\mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_abc50ad0c63902883faedd047461c5e19}{pid}}) override
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a9efa13be15a49e2e5f79545633a12458}{joint\+Max\+Generalized\+Force}} () const override
+\item 
+bool \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a59aa00e25269e63edd267d57d3277289}{set\+Joint\+Max\+Generalized\+Force}} (const std\+::vector$<$ double $>$ \&max\+Force) override
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a616f285026a9f3975855b82df0bd4245}{joint\+Position}} () const override
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a48b54cec295bab5b94532a436893e05d}{joint\+Velocity}} () const override
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a69af712a47be815e3b887e65c7bb3f12}{joint\+Acceleration}} () const override
+\item 
+bool \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a54afcbab26f505d63c732a9249c2b04b}{set\+Joint\+Generalized\+Force\+Target}} (const std\+::vector$<$ double $>$ \&force) override
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a83008ca629758c5516fe74b7573d2cf5}{joint\+Generalized\+Force\+Target}} () const override
+\item 
+core\+::\+Joint\+Limit \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_adbbe8c79447c5ee37b7a04c4e169e10e}{joint\+Position\+Limit}} () const override
+\item 
+core\+::\+Joint\+Limit \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a36ceb75b26518d27eeabd4269622f18c}{joint\+Velocity\+Limit}} () const override
+\item 
+core\+::\+Joint\+Limit \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a2e1d3788a57aeced7f6671d91067605e}{joint\+Acceleration\+Limit}} () const
+\item 
+bool \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a0eda9d60fe02b6c9db9e905bd7edbc8b}{set\+Joint\+Position\+Limit}} (const double \&max\+Position, const double \&min\+Position)
+\item 
+bool \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_a54d56287d3078d69119538de62e8fcac}{set\+Joint\+Velocity\+Limit}} (const double \&max\+Velocity, const double \&min\+Velocity)
+\item 
+bool \mbox{\hyperlink{classscenario_1_1monopod_1_1Joint_aba9dc560c71629eb73436742f494eca0}{set\+Joint\+Acceleration\+Limit}} (const double \&max\+Acceleration, const double \&min\+Acceleration)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a5dee6108c6f6695a5893c8d754cc3601}\label{classscenario_1_1monopod_1_1Joint_a5dee6108c6f6695a5893c8d754cc3601}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!controlMode@{controlMode}}
+\index{controlMode@{controlMode}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{controlMode()}{controlMode()}}
+{\footnotesize\ttfamily core\+::\+Joint\+Control\+Mode scenario\+::monopod\+::\+Joint\+::control\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+get the joint control mode.
+
+\begin{DoxyReturn}{Returns}
+the joint control mode 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a489c67a5543f2583b3c4876ebfcffff7}\label{classscenario_1_1monopod_1_1Joint_a489c67a5543f2583b3c4876ebfcffff7}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!dofs@{dofs}}
+\index{dofs@{dofs}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{dofs()}{dofs()}}
+{\footnotesize\ttfamily size\+\_\+t scenario\+::monopod\+::\+Joint\+::dofs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get the number of degrees of freedom of the joint.
+
+\begin{DoxyReturn}{Returns}
+The number of D\+O\+Fs of the joint. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a69af712a47be815e3b887e65c7bb3f12}\label{classscenario_1_1monopod_1_1Joint_a69af712a47be815e3b887e65c7bb3f12}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!jointAcceleration@{jointAcceleration}}
+\index{jointAcceleration@{jointAcceleration}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{jointAcceleration()}{jointAcceleration()}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ scenario\+::monopod\+::\+Joint\+::joint\+Acceleration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get the acceleration of the joint.
+
+\begin{DoxyReturn}{Returns}
+The acceleration of the joint. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a2e1d3788a57aeced7f6671d91067605e}\label{classscenario_1_1monopod_1_1Joint_a2e1d3788a57aeced7f6671d91067605e}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!jointAccelerationLimit@{jointAccelerationLimit}}
+\index{jointAccelerationLimit@{jointAccelerationLimit}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{jointAccelerationLimit()}{jointAccelerationLimit()}}
+{\footnotesize\ttfamily core\+::\+Joint\+Limit scenario\+::monopod\+::\+Joint\+::joint\+Acceleration\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the acceleration limits of the joint.
+
+\begin{DoxyReturn}{Returns}
+The acceleration limits of the joint. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a83008ca629758c5516fe74b7573d2cf5}\label{classscenario_1_1monopod_1_1Joint_a83008ca629758c5516fe74b7573d2cf5}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!jointGeneralizedForceTarget@{jointGeneralizedForceTarget}}
+\index{jointGeneralizedForceTarget@{jointGeneralizedForceTarget}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{jointGeneralizedForceTarget()}{jointGeneralizedForceTarget()}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ scenario\+::monopod\+::\+Joint\+::joint\+Generalized\+Force\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get the active generalized force target.
+
+\begin{DoxyReturn}{Returns}
+The generalized force target of the joint. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a9efa13be15a49e2e5f79545633a12458}\label{classscenario_1_1monopod_1_1Joint_a9efa13be15a49e2e5f79545633a12458}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!jointMaxGeneralizedForce@{jointMaxGeneralizedForce}}
+\index{jointMaxGeneralizedForce@{jointMaxGeneralizedForce}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{jointMaxGeneralizedForce()}{jointMaxGeneralizedForce()}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ scenario\+::monopod\+::\+Joint\+::joint\+Max\+Generalized\+Force (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get the maximum generalized force that could be applied to the joint.
+
+\begin{DoxyReturn}{Returns}
+The maximum generalized force of the joint. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a616f285026a9f3975855b82df0bd4245}\label{classscenario_1_1monopod_1_1Joint_a616f285026a9f3975855b82df0bd4245}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!jointPosition@{jointPosition}}
+\index{jointPosition@{jointPosition}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{jointPosition()}{jointPosition()}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ scenario\+::monopod\+::\+Joint\+::joint\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get the position of the joint.
+
+\begin{DoxyReturn}{Returns}
+The position of the joint. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_adbbe8c79447c5ee37b7a04c4e169e10e}\label{classscenario_1_1monopod_1_1Joint_adbbe8c79447c5ee37b7a04c4e169e10e}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!jointPositionLimit@{jointPositionLimit}}
+\index{jointPositionLimit@{jointPositionLimit}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{jointPositionLimit()}{jointPositionLimit()}}
+{\footnotesize\ttfamily core\+::\+Joint\+Limit scenario\+::monopod\+::\+Joint\+::joint\+Position\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get the position limits of the joint.
+
+\begin{DoxyReturn}{Returns}
+The position limits of the joint. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a48b54cec295bab5b94532a436893e05d}\label{classscenario_1_1monopod_1_1Joint_a48b54cec295bab5b94532a436893e05d}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!jointVelocity@{jointVelocity}}
+\index{jointVelocity@{jointVelocity}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{jointVelocity()}{jointVelocity()}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ scenario\+::monopod\+::\+Joint\+::joint\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get the velocity of the joint.
+
+\begin{DoxyReturn}{Returns}
+The velocity of the joint. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a36ceb75b26518d27eeabd4269622f18c}\label{classscenario_1_1monopod_1_1Joint_a36ceb75b26518d27eeabd4269622f18c}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!jointVelocityLimit@{jointVelocityLimit}}
+\index{jointVelocityLimit@{jointVelocityLimit}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{jointVelocityLimit()}{jointVelocityLimit()}}
+{\footnotesize\ttfamily core\+::\+Joint\+Limit scenario\+::monopod\+::\+Joint\+::joint\+Velocity\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get the velocity limits of the joint.
+
+\begin{DoxyReturn}{Returns}
+The velocity limits of the joint. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a01c5277914855e6c0195f6ec8cf0934e}\label{classscenario_1_1monopod_1_1Joint_a01c5277914855e6c0195f6ec8cf0934e}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!name@{name}}
+\index{name@{name}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string scenario\+::monopod\+::\+Joint\+::name (\begin{DoxyParamCaption}\item[{const bool}]{scoped = {\ttfamily false} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get the name of the joint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scoped} & If true, the scoped name of the joint is returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the joint. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_abc50ad0c63902883faedd047461c5e19}\label{classscenario_1_1monopod_1_1Joint_abc50ad0c63902883faedd047461c5e19}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!pid@{pid}}
+\index{pid@{pid}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{pid()}{pid()}}
+{\footnotesize\ttfamily core\+::\+P\+ID scenario\+::monopod\+::\+Joint\+::pid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get the P\+ID parameters of the joint.
+
+If no P\+ID parameters have been set, the default parameters are returned.
+
+\begin{DoxyReturn}{Returns}
+The joint P\+ID parameters. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a7183ad36924aa58523aa8129d07639ff}\label{classscenario_1_1monopod_1_1Joint_a7183ad36924aa58523aa8129d07639ff}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!setControlMode@{setControlMode}}
+\index{setControlMode@{setControlMode}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{setControlMode()}{setControlMode()}}
+{\footnotesize\ttfamily bool scenario\+::monopod\+::\+Joint\+::set\+Control\+Mode (\begin{DoxyParamCaption}\item[{const core\+::\+Joint\+Control\+Mode}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Set the joint control mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The desired control mode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True for success, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_aba9dc560c71629eb73436742f494eca0}\label{classscenario_1_1monopod_1_1Joint_aba9dc560c71629eb73436742f494eca0}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!setJointAccelerationLimit@{setJointAccelerationLimit}}
+\index{setJointAccelerationLimit@{setJointAccelerationLimit}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{setJointAccelerationLimit()}{setJointAccelerationLimit()}}
+{\footnotesize\ttfamily bool scenario\+::monopod\+::\+Joint\+::set\+Joint\+Acceleration\+Limit (\begin{DoxyParamCaption}\item[{const double \&}]{max\+Acceleration,  }\item[{const double \&}]{min\+Acceleration }\end{DoxyParamCaption})}
+
+Set the maximum acceleration of the joint.
+
+This limit can be used to set safety limits on the joint acceleration. when violated the Robot will enter into a safe mode. disabling the robot until it is reset or restart.
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Acceleration} & maximum acceleration of the joint D\+O\+Fs. \\
+\hline
+{\em min\+Acceleration} & minimum acceleration of the joint D\+O\+Fs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True for success, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a54afcbab26f505d63c732a9249c2b04b}\label{classscenario_1_1monopod_1_1Joint_a54afcbab26f505d63c732a9249c2b04b}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!setJointGeneralizedForceTarget@{setJointGeneralizedForceTarget}}
+\index{setJointGeneralizedForceTarget@{setJointGeneralizedForceTarget}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{setJointGeneralizedForceTarget()}{setJointGeneralizedForceTarget()}}
+{\footnotesize\ttfamily bool scenario\+::monopod\+::\+Joint\+::set\+Joint\+Generalized\+Force\+Target (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{force }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Set the generalized force target of the joint.
+
+Note that if there\textquotesingle{}s friction or other loss components, the real joint force will differ.
+
+
+\begin{DoxyParams}{Parameters}
+{\em force} & A vector with the generalized force targets of the joint D\+O\+Fs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True for success, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a59aa00e25269e63edd267d57d3277289}\label{classscenario_1_1monopod_1_1Joint_a59aa00e25269e63edd267d57d3277289}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!setJointMaxGeneralizedForce@{setJointMaxGeneralizedForce}}
+\index{setJointMaxGeneralizedForce@{setJointMaxGeneralizedForce}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{setJointMaxGeneralizedForce()}{setJointMaxGeneralizedForce()}}
+{\footnotesize\ttfamily bool scenario\+::monopod\+::\+Joint\+::set\+Joint\+Max\+Generalized\+Force (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{max\+Force }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Set the maximum generalized force that can be applied to the joint.
+
+This limit can be used to clip the force applied by joint controllers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Force} & A vector with the maximum generalized forces of the joint D\+O\+Fs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True for success, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a0eda9d60fe02b6c9db9e905bd7edbc8b}\label{classscenario_1_1monopod_1_1Joint_a0eda9d60fe02b6c9db9e905bd7edbc8b}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!setJointPositionLimit@{setJointPositionLimit}}
+\index{setJointPositionLimit@{setJointPositionLimit}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{setJointPositionLimit()}{setJointPositionLimit()}}
+{\footnotesize\ttfamily bool scenario\+::monopod\+::\+Joint\+::set\+Joint\+Position\+Limit (\begin{DoxyParamCaption}\item[{const double \&}]{max\+Position,  }\item[{const double \&}]{min\+Position }\end{DoxyParamCaption})}
+
+Set the maximum position of the joint.
+
+This limit can be used to set safety limits on the joint position. when violated the Robot will enter into a safe mode. disabling the robot until it is reset or restart.
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Position} & maximum position of the joint D\+O\+Fs. \\
+\hline
+{\em min\+Position} & minimum position of the joint D\+O\+Fs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True for success, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a54d56287d3078d69119538de62e8fcac}\label{classscenario_1_1monopod_1_1Joint_a54d56287d3078d69119538de62e8fcac}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!setJointVelocityLimit@{setJointVelocityLimit}}
+\index{setJointVelocityLimit@{setJointVelocityLimit}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{setJointVelocityLimit()}{setJointVelocityLimit()}}
+{\footnotesize\ttfamily bool scenario\+::monopod\+::\+Joint\+::set\+Joint\+Velocity\+Limit (\begin{DoxyParamCaption}\item[{const double \&}]{max\+Velocity,  }\item[{const double \&}]{min\+Velocity }\end{DoxyParamCaption})}
+
+Set the maximum velocity of the joint.
+
+This limit can be used to set safety limits on the joint velocity. when violated the Robot will enter into a safe mode. disabling the robot until it is reset or restart.
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Velocity} & maximum velocity of the joint D\+O\+Fs. \\
+\hline
+{\em min\+Velocity} & minimum position of the joint D\+O\+Fs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True for success, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a8c419123353c60e67c464de5faa55a3d}\label{classscenario_1_1monopod_1_1Joint_a8c419123353c60e67c464de5faa55a3d}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!setPID@{setPID}}
+\index{setPID@{setPID}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{setPID()}{setPID()}}
+{\footnotesize\ttfamily bool scenario\+::monopod\+::\+Joint\+::set\+P\+ID (\begin{DoxyParamCaption}\item[{const core\+::\+P\+ID \&}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Set the P\+ID parameters of the joint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The desired P\+ID parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True for success, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a1728e8f4c797c1636fd4e5ffb2d4582a}\label{classscenario_1_1monopod_1_1Joint_a1728e8f4c797c1636fd4e5ffb2d4582a}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!type@{type}}
+\index{type@{type}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily core\+::\+Joint\+Type scenario\+::monopod\+::\+Joint\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get the type of the joint.
+
+\begin{DoxyReturn}{Returns}
+The type of the joint. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1Joint_a1e17751be3fbd3c18cc37dba97c5b857}\label{classscenario_1_1monopod_1_1Joint_a1e17751be3fbd3c18cc37dba97c5b857}} 
+\index{scenario::monopod::Joint@{scenario::monopod::Joint}!valid@{valid}}
+\index{valid@{valid}!scenario::monopod::Joint@{scenario::monopod::Joint}}
+\doxysubsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily bool scenario\+::monopod\+::\+Joint\+::valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Check if the joint is valid.
+
+\begin{DoxyReturn}{Returns}
+True if the model is valid, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/dawson/\+Documents/\+Repos/os2r-\/superbuild/src/scenario\+\_\+monopod/src/monopod/include/scenario/monopod/Joint.\+h\end{DoxyCompactItemize}

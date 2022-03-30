@@ -1,0 +1,146 @@
+\hypertarget{classmonopod__drivers_1_1CanBusInterface}{}\doxysection{monopod\+\_\+drivers\+::Can\+Bus\+Interface Class Reference}
+\label{classmonopod__drivers_1_1CanBusInterface}\index{monopod\_drivers::CanBusInterface@{monopod\_drivers::CanBusInterface}}
+
+
+\mbox{\hyperlink{classmonopod__drivers_1_1CanBusInterface}{Can\+Bus\+Interface}} is an abstract class that defines an A\+PI for the communication via Can bus.  
+
+
+
+
+{\ttfamily \#include $<$can\+\_\+bus.\+hpp$>$}
+
+
+
+Inheritance diagram for monopod\+\_\+drivers\+::Can\+Bus\+Interface\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{classmonopod__drivers_1_1CanBusInterface__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for monopod\+\_\+drivers\+::Can\+Bus\+Interface\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{classmonopod__drivers_1_1CanBusInterface__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1CanBusInterface_a6db592afaf6f8c60b6695206d59eeed0}\label{classmonopod__drivers_1_1CanBusInterface_a6db592afaf6f8c60b6695206d59eeed0}} 
+typedef time\+\_\+series\+::\+Time\+Series$<$ \mbox{\hyperlink{classmonopod__drivers_1_1CanBusFrame}{Can\+Bus\+Frame}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1CanBusInterface_a6db592afaf6f8c60b6695206d59eeed0}{Canframe\+Timeseries}}
+\begin{DoxyCompactList}\small\item\em Canframe\+Timeseries is a simple sohortcut. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1CanBusInterface_aad202644d01e054dbb2a722a728b8dbe}\label{classmonopod__drivers_1_1CanBusInterface_aad202644d01e054dbb2a722a728b8dbe}} 
+virtual \mbox{\hyperlink{classmonopod__drivers_1_1CanBusInterface_aad202644d01e054dbb2a722a728b8dbe}{$\sim$\+Can\+Bus\+Interface}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmonopod__drivers_1_1CanBusInterface}{Can\+Bus\+Interface}} object. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classmonopod__drivers_1_1CanBusInterface_a6db592afaf6f8c60b6695206d59eeed0}{Canframe\+Timeseries}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1CanBusInterface_a52bdee05f129081a6ee55f099e953bd6}{get\+\_\+output\+\_\+frame}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the output frame. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classmonopod__drivers_1_1CanBusInterface_a6db592afaf6f8c60b6695206d59eeed0}{Canframe\+Timeseries}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1CanBusInterface_a423a033bd619167f8a5523df479d232d}{get\+\_\+input\+\_\+frame}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the input frame. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classmonopod__drivers_1_1CanBusInterface_a6db592afaf6f8c60b6695206d59eeed0}{Canframe\+Timeseries}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1CanBusInterface_a1647f95bff113a9d9f137e4b5e0bd5b3}{get\+\_\+sent\+\_\+input\+\_\+frame}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the sent input frame. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmonopod__drivers_1_1CanBusInterface_a909fa1420bb6c1d313b44afa2df43987}{set\+\_\+input\+\_\+frame}} (const \mbox{\hyperlink{classmonopod__drivers_1_1CanBusFrame}{Can\+Bus\+Frame}} \&input\+\_\+frame)=0
+\begin{DoxyCompactList}\small\item\em Set the input frame saves the input frame to be sent in a queue. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmonopod__drivers_1_1CanBusInterface_a5506d7b5e53e0694cdcd322ef8512e55}{send\+\_\+if\+\_\+input\+\_\+changed}} ()=0
+\begin{DoxyCompactList}\small\item\em send all the input frame to the can network \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classmonopod__drivers_1_1CanBusInterface}{Can\+Bus\+Interface}} is an abstract class that defines an A\+PI for the communication via Can bus. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmonopod__drivers_1_1CanBusInterface_a423a033bd619167f8a5523df479d232d}\label{classmonopod__drivers_1_1CanBusInterface_a423a033bd619167f8a5523df479d232d}} 
+\index{monopod\_drivers::CanBusInterface@{monopod\_drivers::CanBusInterface}!get\_input\_frame@{get\_input\_frame}}
+\index{get\_input\_frame@{get\_input\_frame}!monopod\_drivers::CanBusInterface@{monopod\_drivers::CanBusInterface}}
+\doxysubsubsection{\texorpdfstring{get\_input\_frame()}{get\_input\_frame()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classmonopod__drivers_1_1CanBusInterface_a6db592afaf6f8c60b6695206d59eeed0}{Canframe\+Timeseries}}$>$ monopod\+\_\+drivers\+::\+Can\+Bus\+Interface\+::get\+\_\+input\+\_\+frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the input frame. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$const Canframe\+Timeseries$>$ 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmonopod__drivers_1_1CanBus_a7b5c45ccda97ef4c56a40fb1acd47e53}{monopod\+\_\+drivers\+::\+Can\+Bus}}.
+
+\mbox{\Hypertarget{classmonopod__drivers_1_1CanBusInterface_a52bdee05f129081a6ee55f099e953bd6}\label{classmonopod__drivers_1_1CanBusInterface_a52bdee05f129081a6ee55f099e953bd6}} 
+\index{monopod\_drivers::CanBusInterface@{monopod\_drivers::CanBusInterface}!get\_output\_frame@{get\_output\_frame}}
+\index{get\_output\_frame@{get\_output\_frame}!monopod\_drivers::CanBusInterface@{monopod\_drivers::CanBusInterface}}
+\doxysubsubsection{\texorpdfstring{get\_output\_frame()}{get\_output\_frame()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classmonopod__drivers_1_1CanBusInterface_a6db592afaf6f8c60b6695206d59eeed0}{Canframe\+Timeseries}}$>$ monopod\+\_\+drivers\+::\+Can\+Bus\+Interface\+::get\+\_\+output\+\_\+frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the output frame. 
+
+getters \begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$const Canframe\+Timeseries$>$ 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmonopod__drivers_1_1CanBus_a60acbf9cd65a425c33a32b0b254bb67a}{monopod\+\_\+drivers\+::\+Can\+Bus}}.
+
+\mbox{\Hypertarget{classmonopod__drivers_1_1CanBusInterface_a1647f95bff113a9d9f137e4b5e0bd5b3}\label{classmonopod__drivers_1_1CanBusInterface_a1647f95bff113a9d9f137e4b5e0bd5b3}} 
+\index{monopod\_drivers::CanBusInterface@{monopod\_drivers::CanBusInterface}!get\_sent\_input\_frame@{get\_sent\_input\_frame}}
+\index{get\_sent\_input\_frame@{get\_sent\_input\_frame}!monopod\_drivers::CanBusInterface@{monopod\_drivers::CanBusInterface}}
+\doxysubsubsection{\texorpdfstring{get\_sent\_input\_frame()}{get\_sent\_input\_frame()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classmonopod__drivers_1_1CanBusInterface_a6db592afaf6f8c60b6695206d59eeed0}{Canframe\+Timeseries}}$>$ monopod\+\_\+drivers\+::\+Can\+Bus\+Interface\+::get\+\_\+sent\+\_\+input\+\_\+frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the sent input frame. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$const Canframe\+Timeseries$>$ 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmonopod__drivers_1_1CanBus_a325b4f247c5abf42e6397fef1bd980b5}{monopod\+\_\+drivers\+::\+Can\+Bus}}.
+
+\mbox{\Hypertarget{classmonopod__drivers_1_1CanBusInterface_a5506d7b5e53e0694cdcd322ef8512e55}\label{classmonopod__drivers_1_1CanBusInterface_a5506d7b5e53e0694cdcd322ef8512e55}} 
+\index{monopod\_drivers::CanBusInterface@{monopod\_drivers::CanBusInterface}!send\_if\_input\_changed@{send\_if\_input\_changed}}
+\index{send\_if\_input\_changed@{send\_if\_input\_changed}!monopod\_drivers::CanBusInterface@{monopod\_drivers::CanBusInterface}}
+\doxysubsubsection{\texorpdfstring{send\_if\_input\_changed()}{send\_if\_input\_changed()}}
+{\footnotesize\ttfamily virtual void monopod\+\_\+drivers\+::\+Can\+Bus\+Interface\+::send\+\_\+if\+\_\+input\+\_\+changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+send all the input frame to the can network 
+
+Sender 
+
+Implemented in \mbox{\hyperlink{classmonopod__drivers_1_1CanBus_ab72f1744d7accb30e7322cca5389330d}{monopod\+\_\+drivers\+::\+Can\+Bus}}.
+
+\mbox{\Hypertarget{classmonopod__drivers_1_1CanBusInterface_a909fa1420bb6c1d313b44afa2df43987}\label{classmonopod__drivers_1_1CanBusInterface_a909fa1420bb6c1d313b44afa2df43987}} 
+\index{monopod\_drivers::CanBusInterface@{monopod\_drivers::CanBusInterface}!set\_input\_frame@{set\_input\_frame}}
+\index{set\_input\_frame@{set\_input\_frame}!monopod\_drivers::CanBusInterface@{monopod\_drivers::CanBusInterface}}
+\doxysubsubsection{\texorpdfstring{set\_input\_frame()}{set\_input\_frame()}}
+{\footnotesize\ttfamily virtual void monopod\+\_\+drivers\+::\+Can\+Bus\+Interface\+::set\+\_\+input\+\_\+frame (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmonopod__drivers_1_1CanBusFrame}{Can\+Bus\+Frame}} \&}]{input\+\_\+frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the input frame saves the input frame to be sent in a queue. 
+
+setters 
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+frame} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classmonopod__drivers_1_1CanBus_ad278b6d7650b404be8e1ba5621d676ff}{monopod\+\_\+drivers\+::\+Can\+Bus}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/dawson/\+Documents/\+Repos/os2r-\/superbuild/src/monopod\+\_\+sdk/include/monopod\+\_\+sdk/monopod\+\_\+drivers/devices/can\+\_\+bus.\+hpp\end{DoxyCompactItemize}

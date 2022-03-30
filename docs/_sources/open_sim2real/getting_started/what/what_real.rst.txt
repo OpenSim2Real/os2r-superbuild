@@ -3,9 +3,21 @@
 What's our Real
 ===================
 
+The platform is a 'planarized monopod'.
+
+
+.. image:: ../media/monopod.png
+
 
 what's a monopod
 -----------------
 
+
+
 what's planarized
 -----------------
+
+
+
+Why our Real
+============

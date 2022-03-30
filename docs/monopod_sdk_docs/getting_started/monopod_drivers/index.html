@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
     
   <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
@@ -63,7 +64,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../../index.html">
-   Open Sim2Real
+   What’s Open Sim2Real
   </a>
  </li>
 </ul>
@@ -73,81 +74,25 @@
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../open_sim2real/getting_started/what/index.html">
-   What’s Open Sim2Real
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../open_sim2real/getting_started/sim2real.html">
+   Sim2Real
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../open_sim2real/getting_started/what/what_sim2real.html">
-     What’s Sim2Real
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../open_sim2real/getting_started/what/what_sim.html">
-     What’s our Sim
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../open_sim2real/getting_started/what/what_real.html">
-     What’s our Real
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../open_sim2real/getting_started/why/index.html">
-   Why Open Sim2Real
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../open_sim2real/getting_started/opensim2real.html">
+   Open Sim2Real
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../open_sim2real/getting_started/why/why_sim2real.html">
-     Why Sim2Real
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../open_sim2real/getting_started/why/why_monopod.html">
-     Why our monopod
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../open_sim2real/getting_started/highlevel_architecture/index.html">
-   High-level Architecture
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../open_sim2real/getting_started/platform.html">
+   The Platform
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../open_sim2real/getting_started/highlevel_architecture/sld.html">
-     System Level Diagram
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../open_sim2real/getting_started/highlevel_architecture/design_details.html">
-     Design Details
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../open_sim2real/getting_started/highlevel_architecture/hardware.html">
-     Hardware
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../open_sim2real/getting_started/sld.html">
+   System Level Diagram
+  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../../open_sim2real/getting_started/copyright_and_license.html">
@@ -175,8 +120,8 @@
   <a class="reference internal" href="../../../open_sim2real/simulated_monopod/installation/index.html">
    Installation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -234,8 +179,8 @@
   <a class="reference internal" href="../../../open_sim2real/physical_monopod/superbuild/index.html">
    Superbuild
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -243,6 +188,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../../open_sim2real/physical_monopod/superbuild/support_policy.html">
      Support Policy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../open_sim2real/physical_monopod/superbuild/superbuild_structure.html">
+     Superbuild Structure
     </a>
    </li>
    <li class="toctree-l2">
@@ -256,8 +206,8 @@
   <a class="reference internal" href="../../../open_sim2real/physical_monopod/monopod/index.html">
    Building The Monopod
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -305,8 +255,8 @@
   <a class="reference internal" href="../../../monopod_sdk_index.html">
    monopod_sdk
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -315,8 +265,8 @@
     <a class="reference internal" href="../index.html">
      Getting Started
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -335,8 +285,8 @@
       <a class="current reference internal" href="#">
        Monopod Drivers
       </a>
-      <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-      <label for="toctree-checkbox-9">
+      <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -376,8 +326,8 @@
   <a class="reference internal" href="../../../scenario_monopod_index.html">
    scenario_monopod
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -386,8 +336,8 @@
     <a class="reference internal" href="../../../scenario_monopod_docs/getting_started/index.html">
      Getting Started
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -430,8 +380,8 @@
   <a class="reference internal" href="../../../gym-os2r_index.html">
    gym-os2r
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -440,8 +390,8 @@
     <a class="reference internal" href="../../../gym-os2r_docs/getting_started/index.html">
      Getting Started
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -472,8 +422,8 @@
     <a class="reference internal" href="../../../gym-os2r_docs/python/gym-os2r/gym_os2r.html">
      gym_os2r
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -482,8 +432,8 @@
       <a class="reference internal" href="../../../gym-os2r_docs/python/gym-os2r/gym_os2r.common.html">
        gym_os2r.common
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-      <label for="toctree-checkbox-15">
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <label for="toctree-checkbox-12">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -499,8 +449,8 @@
       <a class="reference internal" href="../../../gym-os2r_docs/python/gym-os2r/gym_os2r.models.html">
        gym_os2r.models
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-      <label for="toctree-checkbox-16">
+      <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+      <label for="toctree-checkbox-13">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -528,8 +478,8 @@
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../gym-os2r_docs/python/gym-os2r/gym_os2r.runtime.html">
-       gym_os2r.runtime
+      <a class="reference internal" href="../../../gym-os2r_docs/python/gym-os2r/gym_os2r.runtimes.html">
+       gym_os2r.runtimes
       </a>
      </li>
      <li class="toctree-l3">

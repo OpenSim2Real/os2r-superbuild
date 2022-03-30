@@ -1,7 +1,6 @@
 .. _why:
 
-Why Open Sim2Real
-=================
+.. include:: why_opensim2real.rst
 
 .. toctree::
   :hidden:

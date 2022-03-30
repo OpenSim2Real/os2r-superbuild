@@ -1,0 +1,8 @@
+# Target labels
+ gym-ignition
+# Source files and their labels
+/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/gym-ignition-update
+/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/gym-ignition-update.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/gym-ignition/CMakeFiles/YCMStamp/gym-ignition-update.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/gym-ignition/CMakeFiles/YCMStamp/gym-ignition-download.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/gym-ignition/CMakeFiles/YCMStamp/gym-ignition-mkdir.rule

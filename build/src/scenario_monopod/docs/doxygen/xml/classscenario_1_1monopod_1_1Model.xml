@@ -1,0 +1,1380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classscenario_1_1monopod_1_1Model" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>scenario::monopod::Model</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Model</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; scenario::monopod::Model &gt;</basecompoundref>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classscenario_1_1monopod_1_1Model_1afa0171ffa35b382e7aa09f3ca6cf43ea" prot="public" static="no">
+        <type>monopod_drivers::Mode</type>
+        <definition>typedef monopod_drivers::Mode scenario::monopod::Model::Mode</definition>
+        <argsstring></argsstring>
+        <name>Mode</name>
+        <briefdescription>
+<para>A useful shortcut for using cpp scenario code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="27" column="33" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classscenario_1_1monopod_1_1Model_1ad33907091befd0e58c7cc688c228a29f" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; Impl &gt;</type>
+        <definition>std::unique_ptr&lt;Impl&gt; scenario::monopod::Model::pImpl</definition>
+        <argsstring></argsstring>
+        <name>pImpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="199" column="19" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a9ac4a92e773c7af8f03d92d00b0f1520" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>scenario::monopod::Model::Model</definition>
+        <argsstring>()</argsstring>
+        <name>Model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="21" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a62c2458ee9a80808697aa0c2bc5e23b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual scenario::monopod::Model::~Model</definition>
+        <argsstring>()</argsstring>
+        <name>~Model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="22" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a661b6fb368a2a7eb88cb49a901f0369f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::initialize</definition>
+        <argsstring>(const monopod_drivers::Mode &amp;mode, const bool &amp;dummy_mode) const</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>const monopod_drivers::Mode &amp;</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>dummy_mode</declname>
+        </param>
+        <briefdescription>
+<para>Initialize can_bus connections to encoder board and motor board. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>monopod_mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>defines the task mode of the monopod. Can also specify individual boards. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dummy_mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if false the sdk will try to connect to the canbus connection otherwise it will just create a dummy board class which fakes the real robot. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="38" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a939ff67694c091f5b9d272ba547be0bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void scenario::monopod::Model::calibrate</definition>
+        <argsstring>(const double &amp;hip_home_offset_rad=0, const double &amp;knee_home_offset_rad=0)</argsstring>
+        <name>calibrate</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>hip_home_offset_rad</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>knee_home_offset_rad</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Calibrate the Encoders. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hip_home_offset_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hip offset from found encoder index 0 (rad) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>knee_home_offset_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>knee offset from found encoder index 0 (rad) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="47" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1ad8b4925991bb33c5be8ab1fa6a5430c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void scenario::monopod::Model::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>If the joint module is not valid (safemode after limit reached) the joint will be reset into a valid state. This means the joint must be set back into the valid state first otherwise it will trigger the limits again. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="55" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a2745da5ea5b7f4bfdcc16aaca6886442" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void scenario::monopod::Model::print_status</definition>
+        <argsstring>()</argsstring>
+        <name>print_status</name>
+        <briefdescription>
+<para>print status messages of robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="60" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a476a890db9885fea21e4353adbb9ee5a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::valid</definition>
+        <argsstring>() const override</argsstring>
+        <name>valid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if the model is valid.</para>
+<para><simplesect kind="return"><para>True if the model is valid, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="67" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a25f971ff6e1f7c7a675b1cefa0ababf6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string scenario::monopod::Model::name</definition>
+        <argsstring>() const override</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the name of the model.</para>
+<para><simplesect kind="return"><para>The name of the model. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="74" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1ac8c22a9276f4050b01cf91d0861b2a93" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t scenario::monopod::Model::dofs</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;jointNames={}) const override</argsstring>
+        <name>dofs</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the joints DOF</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional vector of considered joints that also defines the joint serialization. By default, <computeroutput><ref refid="classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301" kindref="member">Model::jointNames</ref></computeroutput> is used. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sum of serialization of joint DOFs. The sum is the number of DoFs of all the considered joints. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="85" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a55ba29491f198cfb892c9d9f8f4b9228" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>core::JointPtr</type>
+        <definition>core::JointPtr scenario::monopod::Model::getJoint</definition>
+        <argsstring>(const std::string &amp;jointName) const override</argsstring>
+        <name>getJoint</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>jointName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a joint belonging to the model.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the joint. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the joint does not exist. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The desired joint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="94" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; scenario::monopod::Model::jointNames</definition>
+        <argsstring>(const bool scoped=false) const override</argsstring>
+        <name>jointNames</name>
+        <param>
+          <type>const bool</type>
+          <declname>scoped</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the name of all the model&apos;s joints.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scoped</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scope the joint names with the model name, (e.g. <computeroutput>mymodel::joint1</computeroutput>). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The list of joint names. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="103" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a28ed3b3ca18e3c1f578cf8a371bac2b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; scenario::monopod::Model::jointPositions</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;jointNames={}) const override</argsstring>
+        <name>jointPositions</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the joint positions.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional vector of considered joints that also defines the joint serialization. By default, <computeroutput><ref refid="classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301" kindref="member">Model::jointNames</ref></computeroutput> is used. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The serialization of joint positions. The vector has as many elements as DoFs of the considered joints. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="118" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1ac32b6413929c086fd942a3e7facdf63a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; scenario::monopod::Model::jointVelocities</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;jointNames={}) const override</argsstring>
+        <name>jointVelocities</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the joint velocities.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional vector of considered joints that also defines the joint serialization. By default, <computeroutput><ref refid="classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301" kindref="member">Model::jointNames</ref></computeroutput> is used. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The serialization of joint velocities. The vector has as many elements as DoFs of the considered joints. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="130" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a5d607527596cab0fa2cce76265f7a2be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; scenario::monopod::Model::jointAccelerations</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;jointNames={}) const override</argsstring>
+        <name>jointAccelerations</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the joint accelerations.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional vector of considered joints that also defines the joint serialization. By default, <computeroutput><ref refid="classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301" kindref="member">Model::jointNames</ref></computeroutput> is used. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The serialization of joint accelerations. The vector has as many elements as DoFs of the considered joints. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="142" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1aaec5495c07a9186128679ec08bb43809" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::setJointControlMode</definition>
+        <argsstring>(const core::JointControlMode mode, const std::vector&lt; std::string &gt; &amp;jointNames={}) override</argsstring>
+        <name>setJointControlMode</name>
+        <param>
+          <type>const core::JointControlMode</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the control mode of model joints.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired joint control mode. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>jointNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional vector of considered joints that also defines the joint serialization. By default, <computeroutput><ref refid="classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301" kindref="member">Model::jointNames</ref></computeroutput> is used. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True for success, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="155" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1ab508a143d6009d25a8033fbf5192ebf7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; core::JointPtr &gt;</type>
+        <definition>std::vector&lt;core::JointPtr&gt; scenario::monopod::Model::joints</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;jointNames={}) const override</argsstring>
+        <name>joints</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the joints of the model.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional vector of considered joints. By default, <computeroutput><ref refid="classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301" kindref="member">Model::jointNames</ref></computeroutput> is used. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of pointers to the joint objects. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="165" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a5c1a870ade04afb374bbf1ca171662fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::setJointGeneralizedForceTargets</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;forces, const std::vector&lt; std::string &gt; &amp;jointNames={}) override</argsstring>
+        <name>setJointGeneralizedForceTargets</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>forces</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the generalized force targets of the joints.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>forces</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector with the joint generalized force targets. It must have as many elements as the considered joint DoFs. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>jointNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional vector of considered joints. By default, <computeroutput><ref refid="classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301" kindref="member">Model::jointNames</ref></computeroutput> is used. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True for success, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="181" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a442e36ae228f61e786b5668a411a440e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; scenario::monopod::Model::jointGeneralizedForceTargets</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;jointNames={}) const override</argsstring>
+        <name>jointGeneralizedForceTargets</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the generalized force targets of the joints.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional vector of considered joints. By default, <computeroutput><ref refid="classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301" kindref="member">Model::jointNames</ref></computeroutput> is used. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The generalized force targets of the joints. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="192" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1ab03f1521e25c2afa45ad09e0f50bffa7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::setControllerPeriod</definition>
+        <argsstring>(const double period) override</argsstring>
+        <name>setControllerPeriod</name>
+        <param>
+          <type>const double</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="195" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="296" bodyend="298"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a350dcab70a29d362f5ec06f87fe4e765" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t scenario::monopod::Model::nrOfLinks</definition>
+        <argsstring>() const override</argsstring>
+        <name>nrOfLinks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="205" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="303" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1ad9cce2ef3310c7b568fff728133955b4" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t scenario::monopod::Model::nrOfJoints</definition>
+        <argsstring>() const override</argsstring>
+        <name>nrOfJoints</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="206" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="304" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a4e03ab9d50cb7771152c7bfcf2bcd0be" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double scenario::monopod::Model::totalMass</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;linkNames={}) const override</argsstring>
+        <name>totalMass</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>linkNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="208" column="3" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="305" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1aad9c1bb3e5a2be944a83272b9b8b64b1" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>core::LinkPtr</type>
+        <definition>scenario::core::LinkPtr scenario::monopod::Model::getLink</definition>
+        <argsstring>(const std::string &amp;linkName) const override</argsstring>
+        <name>getLink</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>linkName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="209" column="17" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="310" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1adf352d7c9fec92115f389183c6c9ecc8" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; scenario::monopod::Model::linkNames</definition>
+        <argsstring>(const bool scoped=false) const override</argsstring>
+        <name>linkNames</name>
+        <param>
+          <type>const bool</type>
+          <declname>scoped</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="210" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="314" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1acd2c25b0d27e1ddeba254e7d2862a1c2" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double scenario::monopod::Model::controllerPeriod</definition>
+        <argsstring>() const override</argsstring>
+        <name>controllerPeriod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="211" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="317" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a3e6c79e81dd868f3f6db0fbfb956ed4c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::enableHistoryOfAppliedJointForces</definition>
+        <argsstring>(const bool enable=true, const size_t maxHistorySizePerJoint=100, const std::vector&lt; std::string &gt; &amp;jointNames={}) override</argsstring>
+        <name>enableHistoryOfAppliedJointForces</name>
+        <param>
+          <type>const bool</type>
+          <declname>enable</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>maxHistorySizePerJoint</declname>
+          <defval>100</defval>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="212" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="318" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1aff9c31d686543974660dfb4bef735cf8" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::historyOfAppliedJointForcesEnabled</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;jointNames={}) const override</argsstring>
+        <name>historyOfAppliedJointForcesEnabled</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="215" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="323" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a66ad78f5ad339c6cdb2e3db958014d34" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; scenario::monopod::Model::historyOfAppliedJointForces</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;jointNames={}) const override</argsstring>
+        <name>historyOfAppliedJointForces</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="217" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="328" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1ac83f4696d1a8b20f073d0bd324d8f2d2" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::contactsEnabled</definition>
+        <argsstring>() const override</argsstring>
+        <name>contactsEnabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="222" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="335" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1ad83ef71c9a7e31912a87704b45d5c92e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::enableContacts</definition>
+        <argsstring>(const bool enable=true) override</argsstring>
+        <name>enableContacts</name>
+        <param>
+          <type>const bool</type>
+          <declname>enable</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="223" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="336" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1ad2bf2c36305d05e312b14e4e1f01378a" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; scenario::monopod::Model::linksInContact</definition>
+        <argsstring>() const override</argsstring>
+        <name>linksInContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="224" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="340" bodyend="342"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a56ace8f9a273eca1a147f03984d7169f" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; core::Contact &gt;</type>
+        <definition>std::vector&lt; scenario::core::Contact &gt; scenario::monopod::Model::contacts</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;linkNames={}) const override</argsstring>
+        <name>contacts</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>linkNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="226" column="3" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="343" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a614f7529f4bf165e9b41fc299ba8bc6f" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; scenario::monopod::Model::jointGeneralizedForces</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;jointNames={}) const override</argsstring>
+        <name>jointGeneralizedForces</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="230" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="350" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a04a7e0701c62102a3b0728a1a08e1d2d" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>core::JointLimit</type>
+        <definition>scenario::core::JointLimit scenario::monopod::Model::jointLimits</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;jointNames={}) const override</argsstring>
+        <name>jointLimits</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="232" column="20" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="354" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a94d7ea901d3eac5182f6f3b37c238f18" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; core::LinkPtr &gt;</type>
+        <definition>std::vector&lt; scenario::core::LinkPtr &gt; scenario::monopod::Model::links</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;linkNames={}) const override</argsstring>
+        <name>links</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>linkNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="234" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="358" bodyend="361"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a6aeb1e66c04eec4725b868e65d4e2fc3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::setJointPositionTargets</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;positions, const std::vector&lt; std::string &gt; &amp;jointNames={}) override</argsstring>
+        <name>setJointPositionTargets</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>positions</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="239" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="365" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1afcf1dc152a3ca1e379984fa1edcc03d1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::setJointVelocityTargets</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;velocities, const std::vector&lt; std::string &gt; &amp;jointNames={}) override</argsstring>
+        <name>setJointVelocityTargets</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>velocities</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="242" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="370" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a9f0b321e6a797e4e8938fa4aa0dda76e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::setJointAccelerationTargets</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;accelerations, const std::vector&lt; std::string &gt; &amp;jointNames={}) override</argsstring>
+        <name>setJointAccelerationTargets</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>accelerations</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="245" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="375" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1abe710fc2f1131a401ef87ef3f203d46a" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; scenario::monopod::Model::jointPositionTargets</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;jointNames={}) const override</argsstring>
+        <name>jointPositionTargets</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="248" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="380" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a0bfe2a7de2564fbb39eecd2ca370ec6b" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; scenario::monopod::Model::jointVelocityTargets</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;jointNames={}) const override</argsstring>
+        <name>jointVelocityTargets</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="250" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="384" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1afd262c74ef0869d0e816cb3570bc4ac7" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; scenario::monopod::Model::jointAccelerationTargets</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;jointNames={}) const override</argsstring>
+        <name>jointAccelerationTargets</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>jointNames</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="252" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="389" bodyend="392"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1abad465cca062fd79992e2218fef2b849" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string scenario::monopod::Model::baseFrame</definition>
+        <argsstring>() const override</argsstring>
+        <name>baseFrame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="257" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="396" bodyend="396"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a167cbad047e320ed2b3acad709bb22b7" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::array&lt; double, 3 &gt;</type>
+        <definition>std::array&lt; double, 3 &gt; scenario::monopod::Model::basePosition</definition>
+        <argsstring>() const override</argsstring>
+        <name>basePosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="258" column="14" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="397" bodyend="399"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a798a9f7e3ec8e415ef39d78f93870ed8" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::array&lt; double, 4 &gt;</type>
+        <definition>std::array&lt; double, 4 &gt; scenario::monopod::Model::baseOrientation</definition>
+        <argsstring>() const override</argsstring>
+        <name>baseOrientation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="259" column="14" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="400" bodyend="402"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a409284d6e6158232d9a1268097099728" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::array&lt; double, 3 &gt;</type>
+        <definition>std::array&lt; double, 3 &gt; scenario::monopod::Model::baseBodyLinearVelocity</definition>
+        <argsstring>() const override</argsstring>
+        <name>baseBodyLinearVelocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="260" column="14" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="404" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a0f2c23eff3a2eb1b98b2a04b8cc894d6" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::array&lt; double, 3 &gt;</type>
+        <definition>std::array&lt; double, 3 &gt; scenario::monopod::Model::baseBodyAngularVelocity</definition>
+        <argsstring>() const override</argsstring>
+        <name>baseBodyAngularVelocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="261" column="14" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="408" bodyend="410"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a832157745663258d8b6a4c6de4b75652" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::array&lt; double, 3 &gt;</type>
+        <definition>std::array&lt; double, 3 &gt; scenario::monopod::Model::baseWorldLinearVelocity</definition>
+        <argsstring>() const override</argsstring>
+        <name>baseWorldLinearVelocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="262" column="14" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="412" bodyend="414"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a336668214daa9441aa64d2eddad3e8c2" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::array&lt; double, 3 &gt;</type>
+        <definition>std::array&lt; double, 3 &gt; scenario::monopod::Model::baseWorldAngularVelocity</definition>
+        <argsstring>() const override</argsstring>
+        <name>baseWorldAngularVelocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="263" column="14" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="416" bodyend="418"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1aab0d838a534fdec1eeb95928a1855d2e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::setBasePoseTarget</definition>
+        <argsstring>(const std::array&lt; double, 3 &gt; &amp;position, const std::array&lt; double, 4 &gt; &amp;orientation) override</argsstring>
+        <name>setBasePoseTarget</name>
+        <param>
+          <type>const std::array&lt; double, 3 &gt; &amp;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>const std::array&lt; double, 4 &gt; &amp;</type>
+          <declname>orientation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="267" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="422" bodyend="426"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a9075d8c0a3f6fb31485488d9463f6a87" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::setBasePositionTarget</definition>
+        <argsstring>(const std::array&lt; double, 3 &gt; &amp;position) override</argsstring>
+        <name>setBasePositionTarget</name>
+        <param>
+          <type>const std::array&lt; double, 3 &gt; &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="270" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="427" bodyend="430"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1ae8e4a12201aa5ce90eb91f65bdc771d0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::setBaseOrientationTarget</definition>
+        <argsstring>(const std::array&lt; double, 4 &gt; &amp;orientation) override</argsstring>
+        <name>setBaseOrientationTarget</name>
+        <param>
+          <type>const std::array&lt; double, 4 &gt; &amp;</type>
+          <declname>orientation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="272" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="431" bodyend="434"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1aa4741573b2d8fed8e36b7272d18304d5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::setBaseWorldVelocityTarget</definition>
+        <argsstring>(const std::array&lt; double, 3 &gt; &amp;linear, const std::array&lt; double, 3 &gt; &amp;angular) override</argsstring>
+        <name>setBaseWorldVelocityTarget</name>
+        <param>
+          <type>const std::array&lt; double, 3 &gt; &amp;</type>
+          <declname>linear</declname>
+        </param>
+        <param>
+          <type>const std::array&lt; double, 3 &gt; &amp;</type>
+          <declname>angular</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="274" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="435" bodyend="438"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a1476225bd51d87bb80b91d855f31d614" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::setBaseWorldLinearVelocityTarget</definition>
+        <argsstring>(const std::array&lt; double, 3 &gt; &amp;linear) override</argsstring>
+        <name>setBaseWorldLinearVelocityTarget</name>
+        <param>
+          <type>const std::array&lt; double, 3 &gt; &amp;</type>
+          <declname>linear</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="277" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="439" bodyend="442"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a74f34d2056c343e0d1d4387d314dbf59" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::setBaseWorldAngularVelocityTarget</definition>
+        <argsstring>(const std::array&lt; double, 3 &gt; &amp;angular) override</argsstring>
+        <name>setBaseWorldAngularVelocityTarget</name>
+        <param>
+          <type>const std::array&lt; double, 3 &gt; &amp;</type>
+          <declname>angular</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="279" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="443" bodyend="446"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1aa6d8cc3eb316729bb47f61291433257c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::setBaseWorldLinearAccelerationTarget</definition>
+        <argsstring>(const std::array&lt; double, 3 &gt; &amp;linear) override</argsstring>
+        <name>setBaseWorldLinearAccelerationTarget</name>
+        <param>
+          <type>const std::array&lt; double, 3 &gt; &amp;</type>
+          <declname>linear</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="281" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="447" bodyend="450"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a365ccb35ff5260bad66b68408b1aaf9c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Model::setBaseWorldAngularAccelerationTarget</definition>
+        <argsstring>(const std::array&lt; double, 3 &gt; &amp;angular) override</argsstring>
+        <name>setBaseWorldAngularAccelerationTarget</name>
+        <param>
+          <type>const std::array&lt; double, 3 &gt; &amp;</type>
+          <declname>angular</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="283" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="451" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a9a321370e4ca0180b2c18d4b3c9805e6" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::array&lt; double, 3 &gt;</type>
+        <definition>std::array&lt; double, 3 &gt; scenario::monopod::Model::basePositionTarget</definition>
+        <argsstring>() const override</argsstring>
+        <name>basePositionTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="285" column="14" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="456" bodyend="458"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1ad12fb36697a76830eee0a8613a76f481" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::array&lt; double, 4 &gt;</type>
+        <definition>std::array&lt; double, 4 &gt; scenario::monopod::Model::baseOrientationTarget</definition>
+        <argsstring>() const override</argsstring>
+        <name>baseOrientationTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="286" column="14" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="460" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1abe35cc8fc720cfde5373b685f893f668" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::array&lt; double, 3 &gt;</type>
+        <definition>std::array&lt; double, 3 &gt; scenario::monopod::Model::baseWorldLinearVelocityTarget</definition>
+        <argsstring>() const override</argsstring>
+        <name>baseWorldLinearVelocityTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="287" column="14" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="464" bodyend="466"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1af5c1a96d8bb8f63cd07498385e2e5a47" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::array&lt; double, 3 &gt;</type>
+        <definition>std::array&lt; double, 3 &gt; scenario::monopod::Model::baseWorldAngularVelocityTarget</definition>
+        <argsstring>() const override</argsstring>
+        <name>baseWorldAngularVelocityTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="288" column="14" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="468" bodyend="470"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a44e099850054c898fe42ac123e3f5412" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::array&lt; double, 3 &gt;</type>
+        <definition>std::array&lt; double, 3 &gt; scenario::monopod::Model::baseWorldLinearAccelerationTarget</definition>
+        <argsstring>() const override</argsstring>
+        <name>baseWorldLinearAccelerationTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="289" column="14" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="472" bodyend="474"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Model_1a17ce88fb52fea96b37516d288f338a74" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::array&lt; double, 3 &gt;</type>
+        <definition>std::array&lt; double, 3 &gt; scenario::monopod::Model::baseWorldAngularAccelerationTarget</definition>
+        <argsstring>() const override</argsstring>
+        <name>baseWorldAngularAccelerationTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="290" column="14" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="476" bodyend="478"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>std::enable_shared_from_this&lt; scenario::monopod::Model &gt;</label>
+      </node>
+      <node id="1">
+        <label>scenario::monopod::Model</label>
+        <link refid="classscenario_1_1monopod_1_1Model"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>scenario::core::Model</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>std::enable_shared_from_this&lt; scenario::monopod::Model &gt;</label>
+      </node>
+      <node id="1">
+        <label>scenario::monopod::Model</label>
+        <link refid="classscenario_1_1monopod_1_1Model"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>scenario::core::Model</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" line="19" column="43" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Model.h" bodystart="17" bodyend="291"/>
+    <listofallmembers>
+      <member refid="classscenario_1_1monopod_1_1Model_1a0f2c23eff3a2eb1b98b2a04b8cc894d6" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>baseBodyAngularVelocity</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a409284d6e6158232d9a1268097099728" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>baseBodyLinearVelocity</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1abad465cca062fd79992e2218fef2b849" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>baseFrame</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a798a9f7e3ec8e415ef39d78f93870ed8" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>baseOrientation</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1ad12fb36697a76830eee0a8613a76f481" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>baseOrientationTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a167cbad047e320ed2b3acad709bb22b7" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>basePosition</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a9a321370e4ca0180b2c18d4b3c9805e6" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>basePositionTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a17ce88fb52fea96b37516d288f338a74" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>baseWorldAngularAccelerationTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a336668214daa9441aa64d2eddad3e8c2" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>baseWorldAngularVelocity</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1af5c1a96d8bb8f63cd07498385e2e5a47" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>baseWorldAngularVelocityTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a44e099850054c898fe42ac123e3f5412" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>baseWorldLinearAccelerationTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a832157745663258d8b6a4c6de4b75652" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>baseWorldLinearVelocity</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1abe35cc8fc720cfde5373b685f893f668" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>baseWorldLinearVelocityTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a939ff67694c091f5b9d272ba547be0bc" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>calibrate</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a56ace8f9a273eca1a147f03984d7169f" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>contacts</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1ac83f4696d1a8b20f073d0bd324d8f2d2" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>contactsEnabled</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1acd2c25b0d27e1ddeba254e7d2862a1c2" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>controllerPeriod</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1ac8c22a9276f4050b01cf91d0861b2a93" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>dofs</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1ad83ef71c9a7e31912a87704b45d5c92e" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>enableContacts</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a3e6c79e81dd868f3f6db0fbfb956ed4c" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>enableHistoryOfAppliedJointForces</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a55ba29491f198cfb892c9d9f8f4b9228" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>getJoint</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1aad9c1bb3e5a2be944a83272b9b8b64b1" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>getLink</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a66ad78f5ad339c6cdb2e3db958014d34" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>historyOfAppliedJointForces</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1aff9c31d686543974660dfb4bef735cf8" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>historyOfAppliedJointForcesEnabled</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a661b6fb368a2a7eb88cb49a901f0369f" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>initialize</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a5d607527596cab0fa2cce76265f7a2be" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>jointAccelerations</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1afd262c74ef0869d0e816cb3570bc4ac7" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>jointAccelerationTargets</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a614f7529f4bf165e9b41fc299ba8bc6f" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>jointGeneralizedForces</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a442e36ae228f61e786b5668a411a440e" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>jointGeneralizedForceTargets</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a04a7e0701c62102a3b0728a1a08e1d2d" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>jointLimits</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1aaa6beb3f3c1e4b862041d312603d8301" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>jointNames</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a28ed3b3ca18e3c1f578cf8a371bac2b1" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>jointPositions</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1abe710fc2f1131a401ef87ef3f203d46a" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>jointPositionTargets</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1ab508a143d6009d25a8033fbf5192ebf7" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>joints</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1ac32b6413929c086fd942a3e7facdf63a" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>jointVelocities</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a0bfe2a7de2564fbb39eecd2ca370ec6b" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>jointVelocityTargets</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1adf352d7c9fec92115f389183c6c9ecc8" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>linkNames</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a94d7ea901d3eac5182f6f3b37c238f18" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>links</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1ad2bf2c36305d05e312b14e4e1f01378a" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>linksInContact</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1afa0171ffa35b382e7aa09f3ca6cf43ea" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>Mode</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a9ac4a92e773c7af8f03d92d00b0f1520" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>Model</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a25f971ff6e1f7c7a675b1cefa0ababf6" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>name</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1ad9cce2ef3310c7b568fff728133955b4" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>nrOfJoints</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a350dcab70a29d362f5ec06f87fe4e765" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>nrOfLinks</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1ad33907091befd0e58c7cc688c228a29f" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>pImpl</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a2745da5ea5b7f4bfdcc16aaca6886442" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>print_status</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1ad8b4925991bb33c5be8ab1fa6a5430c7" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>reset</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1ae8e4a12201aa5ce90eb91f65bdc771d0" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>setBaseOrientationTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1aab0d838a534fdec1eeb95928a1855d2e" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>setBasePoseTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a9075d8c0a3f6fb31485488d9463f6a87" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>setBasePositionTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a365ccb35ff5260bad66b68408b1aaf9c" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>setBaseWorldAngularAccelerationTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a74f34d2056c343e0d1d4387d314dbf59" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>setBaseWorldAngularVelocityTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1aa6d8cc3eb316729bb47f61291433257c" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>setBaseWorldLinearAccelerationTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a1476225bd51d87bb80b91d855f31d614" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>setBaseWorldLinearVelocityTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1aa4741573b2d8fed8e36b7272d18304d5" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>setBaseWorldVelocityTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1ab03f1521e25c2afa45ad09e0f50bffa7" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>setControllerPeriod</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a9f0b321e6a797e4e8938fa4aa0dda76e" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>setJointAccelerationTargets</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1aaec5495c07a9186128679ec08bb43809" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>setJointControlMode</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a5c1a870ade04afb374bbf1ca171662fa" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>setJointGeneralizedForceTargets</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a6aeb1e66c04eec4725b868e65d4e2fc3" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>setJointPositionTargets</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1afcf1dc152a3ca1e379984fa1edcc03d1" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>setJointVelocityTargets</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a4e03ab9d50cb7771152c7bfcf2bcd0be" prot="private" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>totalMass</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a476a890db9885fea21e4353adbb9ee5a" prot="public" virt="non-virtual"><scope>scenario::monopod::Model</scope><name>valid</name></member>
+      <member refid="classscenario_1_1monopod_1_1Model_1a62c2458ee9a80808697aa0c2bc5e23b5" prot="public" virt="virtual"><scope>scenario::monopod::Model</scope><name>~Model</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

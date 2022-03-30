@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.22.1)
+if(EXISTS "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-ovito.dir/downloads/LICENSE.txt")
+    file(SHA1 "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-ovito.dir/downloads/LICENSE.txt" _sha1)
+    if("${_sha1}" STREQUAL "8624bcdae55baeef00cd11d5dfcfa60f68710a02")
+        message(STATUS "Using file LICENSE.txt previously downloaded from OVITO (The Open Visualization Tool) git repository (ref 8689fcb1fdd2e8dc748e76d54d3b77a3f87d384c)")
+        return()
+    endif()
+endif()
+file(DOWNLOAD "https://gitlab.com/stuko/ovito/raw/8689fcb1fdd2e8dc748e76d54d3b77a3f87d384c/LICENSE.txt" "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-ovito.dir/downloads/LICENSE.txt"
+     EXPECTED_HASH SHA1=8624bcdae55baeef00cd11d5dfcfa60f68710a02 
+     STATUS _status)
+list(GET _status 0 _status_0)
+if(NOT _status EQUAL 0)
+    file(REMOVE "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-ovito.dir/downloads/LICENSE.txt")
+    list(GET _status 1 _status_1)
+    message(FATAL_ERROR "Downloading https://gitlab.com/stuko/ovito/raw/8689fcb1fdd2e8dc748e76d54d3b77a3f87d384c/LICENSE.txt - ERROR ${_status_0}: ${_status_1}")
+endif()

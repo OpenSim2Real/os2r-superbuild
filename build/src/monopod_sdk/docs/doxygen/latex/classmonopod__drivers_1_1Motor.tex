@@ -1,0 +1,221 @@
+\hypertarget{classmonopod__drivers_1_1Motor}{}\doxysection{monopod\+\_\+drivers\+::Motor Class Reference}
+\label{classmonopod__drivers_1_1Motor}\index{monopod\_drivers::Motor@{monopod\_drivers::Motor}}
+
+
+This class implements the \mbox{\hyperlink{classmonopod__drivers_1_1MotorInterface}{Motor\+Interface}}.  
+
+
+
+
+{\ttfamily \#include $<$motor.\+hpp$>$}
+
+
+
+Inheritance diagram for monopod\+\_\+drivers\+::Motor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmonopod__drivers_1_1Motor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for monopod\+\_\+drivers\+::Motor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmonopod__drivers_1_1Motor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmonopod__drivers_1_1Motor_af18869d8e25353c3a6c77dc48b4cd55e}{Motor}} (\mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$ \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsInterface}{Control\+Boards\+Interface}} $>$ board, \mbox{\hyperlink{namespacemonopod__drivers_a292411dcb88919df4d05216355c248d0}{Joint\+Names\+Index}} motor\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmonopod__drivers_1_1Motor}{Motor}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classmonopod__drivers_1_1Motor_aa62db7581b5050565c3c2e3f118e2cca}{$\sim$\+Motor}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmonopod__drivers_1_1Motor}{Motor}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1Motor_ac7f8cf5eeb056139c04348815e62bbd5}\label{classmonopod__drivers_1_1Motor_ac7f8cf5eeb056139c04348815e62bbd5}} 
+virtual void \mbox{\hyperlink{classmonopod__drivers_1_1Motor_ac7f8cf5eeb056139c04348815e62bbd5}{send\+\_\+if\+\_\+input\+\_\+changed}} ()
+\begin{DoxyCompactList}\small\item\em Actually send the command and controls via the network, See \mbox{\hyperlink{classmonopod__drivers_1_1MotorInterface}{Motor\+Interface}} for more information. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$ const \mbox{\hyperlink{namespacemonopod__drivers_adc25f08a0ddbc18d40994c90f10968c2}{Scalar\+Timeseries}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Motor_afdf4fe4db363f14155ed7658197ec570}{get\+\_\+measurement}} (const \mbox{\hyperlink{namespacemonopod__drivers_a85eecf8d086233e0a317729c3763f15e}{Measurements}} \&index) const
+\begin{DoxyCompactList}\small\item\em Get the measurements. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$ const \mbox{\hyperlink{classmonopod__drivers_1_1EncoderInterface_a404dd1f941b4052b9c7a1c6096692f90}{Status\+Timeseries}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Motor_a54c75132527b50a63bab81105e4abacc}{get\+\_\+status}} () const
+\begin{DoxyCompactList}\small\item\em Get the status. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$ const \mbox{\hyperlink{namespacemonopod__drivers_adc25f08a0ddbc18d40994c90f10968c2}{Scalar\+Timeseries}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Motor_ae9934e36918ff83a20856fab042dc20e}{get\+\_\+current\+\_\+target}} () const
+\begin{DoxyCompactList}\small\item\em Get the current target to be sent. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$ const \mbox{\hyperlink{namespacemonopod__drivers_adc25f08a0ddbc18d40994c90f10968c2}{Scalar\+Timeseries}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Motor_a56c9e9339694064940c86ec3f22308a8}{get\+\_\+sent\+\_\+current\+\_\+target}} () const
+\begin{DoxyCompactList}\small\item\em Get the already sent current target values. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmonopod__drivers_1_1Motor_a20250219198d46287850cb1482efbd38}{set\+\_\+current\+\_\+target}} (const double \&current\+\_\+target)
+\begin{DoxyCompactList}\small\item\em Set the current (Ampere) target. See \mbox{\hyperlink{classmonopod__drivers_1_1MotorInterface}{Motor\+Interface}} for more information. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmonopod__drivers_1_1Motor_a5629dbffe76253909ffa0421716d25e1}{set\+\_\+command}} (const \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsCommand}{Control\+Boards\+Command}} \&command)
+\begin{DoxyCompactList}\small\item\em Set the command. See \mbox{\hyperlink{classmonopod__drivers_1_1MotorInterface}{Motor\+Interface}} for more information. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1Motor_acef9e9b485eb80071104995a0499bfd3}\label{classmonopod__drivers_1_1Motor_acef9e9b485eb80071104995a0499bfd3}} 
+virtual void \mbox{\hyperlink{classmonopod__drivers_1_1Motor_acef9e9b485eb80071104995a0499bfd3}{print}} () const
+\begin{DoxyCompactList}\small\item\em Print the motor status and state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1Motor_af1d3f1517c36958cd5e174db1f5bc2a6}\label{classmonopod__drivers_1_1Motor_af1d3f1517c36958cd5e174db1f5bc2a6}} 
+\mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$ \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsInterface}{Control\+Boards\+Interface}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Motor_af1d3f1517c36958cd5e174db1f5bc2a6}{board\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The Control\+Boards to be used for the communication. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1Motor_a53333ff2acd00b6c3a5be7f662c0ff26}\label{classmonopod__drivers_1_1Motor_a53333ff2acd00b6c3a5be7f662c0ff26}} 
+\mbox{\hyperlink{namespacemonopod__drivers_a292411dcb88919df4d05216355c248d0}{Joint\+Names\+Index}} \mbox{\hyperlink{classmonopod__drivers_1_1Motor_a53333ff2acd00b6c3a5be7f662c0ff26}{motor\+\_\+id\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The id of the motor on the Control\+Boards. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class implements the \mbox{\hyperlink{classmonopod__drivers_1_1MotorInterface}{Motor\+Interface}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Motor_af18869d8e25353c3a6c77dc48b4cd55e}\label{classmonopod__drivers_1_1Motor_af18869d8e25353c3a6c77dc48b4cd55e}} 
+\index{monopod\_drivers::Motor@{monopod\_drivers::Motor}!Motor@{Motor}}
+\index{Motor@{Motor}!monopod\_drivers::Motor@{monopod\_drivers::Motor}}
+\doxysubsubsection{\texorpdfstring{Motor()}{Motor()}}
+{\footnotesize\ttfamily monopod\+\_\+drivers\+::\+Motor\+::\+Motor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$ \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsInterface}{Control\+Boards\+Interface}} $>$}]{board,  }\item[{\mbox{\hyperlink{namespacemonopod__drivers_a292411dcb88919df4d05216355c248d0}{Joint\+Names\+Index}}}]{motor\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classmonopod__drivers_1_1Motor}{Motor}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & is the Control\+Boards to be used. \\
+\hline
+{\em motor\+\_\+id} & is the id of the motor on the on-\/board card \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Motor_aa62db7581b5050565c3c2e3f118e2cca}\label{classmonopod__drivers_1_1Motor_aa62db7581b5050565c3c2e3f118e2cca}} 
+\index{monopod\_drivers::Motor@{monopod\_drivers::Motor}!````~Motor@{$\sim$Motor}}
+\index{````~Motor@{$\sim$Motor}!monopod\_drivers::Motor@{monopod\_drivers::Motor}}
+\doxysubsubsection{\texorpdfstring{$\sim$Motor()}{~Motor()}}
+{\footnotesize\ttfamily virtual monopod\+\_\+drivers\+::\+Motor\+::$\sim$\+Motor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{classmonopod__drivers_1_1Motor}{Motor}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Motor_ae9934e36918ff83a20856fab042dc20e}\label{classmonopod__drivers_1_1Motor_ae9934e36918ff83a20856fab042dc20e}} 
+\index{monopod\_drivers::Motor@{monopod\_drivers::Motor}!get\_current\_target@{get\_current\_target}}
+\index{get\_current\_target@{get\_current\_target}!monopod\_drivers::Motor@{monopod\_drivers::Motor}}
+\doxysubsubsection{\texorpdfstring{get\_current\_target()}{get\_current\_target()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$const \mbox{\hyperlink{namespacemonopod__drivers_adc25f08a0ddbc18d40994c90f10968c2}{Scalar\+Timeseries}}$>$ monopod\+\_\+drivers\+::\+Motor\+::get\+\_\+current\+\_\+target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the current target to be sent. 
+
+\begin{DoxyReturn}{Returns}
+Ptr$<$const Scalar\+Timeseries$>$ the list of current values to be sent. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmonopod__drivers_1_1MotorInterface_aaa169ec233aa3f066f5e5cecded3e826}{monopod\+\_\+drivers\+::\+Motor\+Interface}}.
+
+\mbox{\Hypertarget{classmonopod__drivers_1_1Motor_afdf4fe4db363f14155ed7658197ec570}\label{classmonopod__drivers_1_1Motor_afdf4fe4db363f14155ed7658197ec570}} 
+\index{monopod\_drivers::Motor@{monopod\_drivers::Motor}!get\_measurement@{get\_measurement}}
+\index{get\_measurement@{get\_measurement}!monopod\_drivers::Motor@{monopod\_drivers::Motor}}
+\doxysubsubsection{\texorpdfstring{get\_measurement()}{get\_measurement()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$const \mbox{\hyperlink{namespacemonopod__drivers_adc25f08a0ddbc18d40994c90f10968c2}{Scalar\+Timeseries}}$>$ monopod\+\_\+drivers\+::\+Motor\+::get\+\_\+measurement (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemonopod__drivers_a85eecf8d086233e0a317729c3763f15e}{Measurements}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the measurements. 
+
+Getters 
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ptr$<$const Scalar\+Timeseries$>$ the pointer to the desired measurement history. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classmonopod__drivers_1_1Encoder_a034a88d4008251384e54d742db9a1591}{monopod\+\_\+drivers\+::\+Encoder}}.
+
+\mbox{\Hypertarget{classmonopod__drivers_1_1Motor_a56c9e9339694064940c86ec3f22308a8}\label{classmonopod__drivers_1_1Motor_a56c9e9339694064940c86ec3f22308a8}} 
+\index{monopod\_drivers::Motor@{monopod\_drivers::Motor}!get\_sent\_current\_target@{get\_sent\_current\_target}}
+\index{get\_sent\_current\_target@{get\_sent\_current\_target}!monopod\_drivers::Motor@{monopod\_drivers::Motor}}
+\doxysubsubsection{\texorpdfstring{get\_sent\_current\_target()}{get\_sent\_current\_target()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$const \mbox{\hyperlink{namespacemonopod__drivers_adc25f08a0ddbc18d40994c90f10968c2}{Scalar\+Timeseries}}$>$ monopod\+\_\+drivers\+::\+Motor\+::get\+\_\+sent\+\_\+current\+\_\+target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the already sent current target values. 
+
+\begin{DoxyReturn}{Returns}
+Ptr$<$const Scalar\+Timeseries$>$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmonopod__drivers_1_1MotorInterface_a4fd7fe60aff9c245db4a93a635611428}{monopod\+\_\+drivers\+::\+Motor\+Interface}}.
+
+\mbox{\Hypertarget{classmonopod__drivers_1_1Motor_a54c75132527b50a63bab81105e4abacc}\label{classmonopod__drivers_1_1Motor_a54c75132527b50a63bab81105e4abacc}} 
+\index{monopod\_drivers::Motor@{monopod\_drivers::Motor}!get\_status@{get\_status}}
+\index{get\_status@{get\_status}!monopod\_drivers::Motor@{monopod\_drivers::Motor}}
+\doxysubsubsection{\texorpdfstring{get\_status()}{get\_status()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacemonopod__drivers_a1fab20a01a473c9509de822b39d6f216}{Ptr}}$<$const \mbox{\hyperlink{classmonopod__drivers_1_1EncoderInterface_a404dd1f941b4052b9c7a1c6096692f90}{Status\+Timeseries}}$>$ monopod\+\_\+drivers\+::\+Motor\+::get\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ptr$<$const Status\+Timeseries$>$ the pointer to the desired status history. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classmonopod__drivers_1_1Encoder_a32cb832956fc6dc69193fb5f281240a1}{monopod\+\_\+drivers\+::\+Encoder}}.
+
+\mbox{\Hypertarget{classmonopod__drivers_1_1Motor_a5629dbffe76253909ffa0421716d25e1}\label{classmonopod__drivers_1_1Motor_a5629dbffe76253909ffa0421716d25e1}} 
+\index{monopod\_drivers::Motor@{monopod\_drivers::Motor}!set\_command@{set\_command}}
+\index{set\_command@{set\_command}!monopod\_drivers::Motor@{monopod\_drivers::Motor}}
+\doxysubsubsection{\texorpdfstring{set\_command()}{set\_command()}}
+{\footnotesize\ttfamily virtual void monopod\+\_\+drivers\+::\+Motor\+::set\+\_\+command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmonopod__drivers_1_1ControlBoardsCommand}{Control\+Boards\+Command}} \&}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the command. See \mbox{\hyperlink{classmonopod__drivers_1_1MotorInterface}{Motor\+Interface}} for more information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmonopod__drivers_1_1MotorInterface_afa381208c1878fc948da545705d19196}{monopod\+\_\+drivers\+::\+Motor\+Interface}}.
+
+\mbox{\Hypertarget{classmonopod__drivers_1_1Motor_a20250219198d46287850cb1482efbd38}\label{classmonopod__drivers_1_1Motor_a20250219198d46287850cb1482efbd38}} 
+\index{monopod\_drivers::Motor@{monopod\_drivers::Motor}!set\_current\_target@{set\_current\_target}}
+\index{set\_current\_target@{set\_current\_target}!monopod\_drivers::Motor@{monopod\_drivers::Motor}}
+\doxysubsubsection{\texorpdfstring{set\_current\_target()}{set\_current\_target()}}
+{\footnotesize\ttfamily virtual void monopod\+\_\+drivers\+::\+Motor\+::set\+\_\+current\+\_\+target (\begin{DoxyParamCaption}\item[{const double \&}]{current\+\_\+target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the current (Ampere) target. See \mbox{\hyperlink{classmonopod__drivers_1_1MotorInterface}{Motor\+Interface}} for more information. 
+
+Setters 
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+target} & in Ampere \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmonopod__drivers_1_1MotorInterface_ab1bf48c3e77d597f5567a0395fe5f7db}{monopod\+\_\+drivers\+::\+Motor\+Interface}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/dawson/\+Documents/\+Repos/os2r-\/superbuild/src/monopod\+\_\+sdk/include/monopod\+\_\+sdk/monopod\+\_\+drivers/devices/motor.\+hpp\end{DoxyCompactItemize}

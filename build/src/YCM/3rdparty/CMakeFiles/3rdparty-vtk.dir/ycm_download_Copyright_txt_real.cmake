@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.22.1)
+if(EXISTS "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-vtk.dir/downloads/Copyright.txt")
+    file(SHA1 "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-vtk.dir/downloads/Copyright.txt" _sha1)
+    if("${_sha1}" STREQUAL "73e1eb91dcdfcedf106ced4e67bc691614f0a3b3")
+        message(STATUS "Using file Copyright.txt previously downloaded from VTK (Visualization Toolkit) git repository (ref v9.0.1)")
+        return()
+    endif()
+endif()
+file(DOWNLOAD "https://gitlab.kitware.com/vtk/vtk/raw/v9.0.1/Copyright.txt" "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-vtk.dir/downloads/Copyright.txt"
+     EXPECTED_HASH SHA1=73e1eb91dcdfcedf106ced4e67bc691614f0a3b3 
+     STATUS _status)
+list(GET _status 0 _status_0)
+if(NOT _status EQUAL 0)
+    file(REMOVE "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-vtk.dir/downloads/Copyright.txt")
+    list(GET _status 1 _status_1)
+    message(FATAL_ERROR "Downloading https://gitlab.kitware.com/vtk/vtk/raw/v9.0.1/Copyright.txt - ERROR ${_status_0}: ${_status_1}")
+endif()

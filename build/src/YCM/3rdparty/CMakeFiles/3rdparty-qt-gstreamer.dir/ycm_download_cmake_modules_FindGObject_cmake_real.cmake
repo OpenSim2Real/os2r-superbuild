@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.22.1)
+if(EXISTS "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-qt-gstreamer.dir/downloads/cmake/modules/FindGObject.cmake")
+    file(SHA1 "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-qt-gstreamer.dir/downloads/cmake/modules/FindGObject.cmake" _sha1)
+    if("${_sha1}" STREQUAL "bdb778ace33b0c5a47150594fc048c69ad02a16a")
+        message(STATUS "Using file cmake/modules/FindGObject.cmake previously downloaded from qt-gstreamer git repository (robotology-dependency fork) (ref 383c41d310b14c328ab6d5d02f478f9cca182bfb)")
+        return()
+    endif()
+endif()
+file(DOWNLOAD "https://raw.githubusercontent.com/robotology-dependencies/qt-gstreamer/383c41d310b14c328ab6d5d02f478f9cca182bfb/cmake/modules/FindGObject.cmake" "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-qt-gstreamer.dir/downloads/cmake/modules/FindGObject.cmake"
+     EXPECTED_HASH SHA1=bdb778ace33b0c5a47150594fc048c69ad02a16a 
+     STATUS _status)
+list(GET _status 0 _status_0)
+if(NOT _status EQUAL 0)
+    file(REMOVE "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/3rdparty/CMakeFiles/3rdparty-qt-gstreamer.dir/downloads/cmake/modules/FindGObject.cmake")
+    list(GET _status 1 _status_1)
+    message(FATAL_ERROR "Downloading https://raw.githubusercontent.com/robotology-dependencies/qt-gstreamer/383c41d310b14c328ab6d5d02f478f9cca182bfb/cmake/modules/FindGObject.cmake - ERROR ${_status_0}: ${_status_1}")
+endif()

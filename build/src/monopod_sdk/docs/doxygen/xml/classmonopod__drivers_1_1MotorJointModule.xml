@@ -1,0 +1,690 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classmonopod__drivers_1_1MotorJointModule" kind="class" language="C++" prot="public">
+    <compoundname>monopod_drivers::MotorJointModule</compoundname>
+    <basecompoundref refid="classmonopod__drivers_1_1EncoderJointModule" prot="public" virt="non-virtual">monopod_drivers::EncoderJointModule</basecompoundref>
+    <includes refid="motor__joint__module_8hpp" local="no">motor_joint_module.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classmonopod__drivers_1_1MotorJointModule_1ad3db6e45d58ceea068f74eeb11ad4361" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classmonopod__drivers_1_1MotorInterface" kindref="compound">monopod_drivers::MotorInterface</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;monopod_drivers::MotorInterface&gt; monopod_drivers::MotorJointModule::motor_</definition>
+        <argsstring></argsstring>
+        <name>motor_</name>
+        <briefdescription>
+<para>This is the pointer to the motor interface. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="266" column="19" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1MotorJointModule_1a9ac1d31d9039e04b4643f310b8b0fa56" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double monopod_drivers::MotorJointModule::motor_constant_</definition>
+        <argsstring></argsstring>
+        <name>motor_constant_</name>
+        <briefdescription>
+<para>This is the torque constant of the motor: <formula id="3">$ \tau_{motor} = k * i_{motor} $</formula>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="272" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1MotorJointModule_1a118a2c3f2d6fd3fc2f14195ac9a2f223" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double monopod_drivers::MotorJointModule::max_current_</definition>
+        <argsstring></argsstring>
+        <name>max_current_</name>
+        <initializer>= MAX_CURRENT * 0.9</initializer>
+        <briefdescription>
+<para>This is the maximum current we can apply during one experiment. The program will clip the current if it goes above this value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="278" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1MotorJointModule_1a001f0cf005e9a3c08ac180b0a8317a24" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double monopod_drivers::MotorJointModule::position_control_gain_p_</definition>
+        <argsstring></argsstring>
+        <name>position_control_gain_p_</name>
+        <briefdescription>
+<para>P gain of the position PD controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="283" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1MotorJointModule_1a410df7c30b3feb47ae58fe0693ea2795" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double monopod_drivers::MotorJointModule::position_control_gain_d_</definition>
+        <argsstring></argsstring>
+        <name>position_control_gain_d_</name>
+        <briefdescription>
+<para>D gain of the position PD controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="288" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1MotorJointModule_1a78e580700bdad2f316741ec28eb12e34" prot="protected" static="no" mutable="no">
+        <type>struct <ref refid="structmonopod__drivers_1_1HomingState" kindref="compound">HomingState</ref></type>
+        <definition>struct HomingState monopod_drivers::MotorJointModule::homing_state_</definition>
+        <argsstring></argsstring>
+        <name>homing_state_</name>
+        <briefdescription>
+<para>Holds the state of homing during the homing sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="288" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1MotorJointModule_1aa492a6baebdcc7cb19ca06fd835f2984" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>monopod_drivers::MotorJointModule::MotorJointModule</definition>
+        <argsstring>(JointNamesIndex joint_id, std::shared_ptr&lt; monopod_drivers::MotorInterface &gt; motor, const double &amp;motor_constant, const double &amp;gear_ratio, const double &amp;zero_angle, const bool &amp;reverse_polarity=false)</argsstring>
+        <name>MotorJointModule</name>
+        <param>
+          <type><ref refid="namespacemonopod__drivers_1a292411dcb88919df4d05216355c248d0" kindref="member">JointNamesIndex</ref></type>
+          <declname>joint_id</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classmonopod__drivers_1_1MotorInterface" kindref="compound">monopod_drivers::MotorInterface</ref> &gt;</type>
+          <declname>motor</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>motor_constant</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>gear_ratio</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>zero_angle</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>reverse_polarity</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classmonopod__drivers_1_1MotorJointModule" kindref="compound">MotorJointModule</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>motor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the C++ object allowing us to send commands and receive sensor data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>motor_constant</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>( <formula id="2">$ k $</formula>) is the torque constant of the motor <formula id="3">$ \tau_{motor} = k * i_{motor} $</formula> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gear_ratio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the gear ratio between the motor and the joint. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zero_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the angle between the closest positive motor index and the zero configuration. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reverse_polarity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_current</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="98" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1MotorJointModule_1a3768ec9ff86188a7af68fae701fc4482" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::MotorJointModule::set_torque</definition>
+        <argsstring>(const double &amp;desired_torque)</argsstring>
+        <name>set_torque</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>desired_torque</declname>
+        </param>
+        <briefdescription>
+<para>Set the joint torque to be sent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>desired_torque</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Nm) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="109" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1MotorJointModule_1aee76c240d03018425ca94082243faf83" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::MotorJointModule::send_torque</definition>
+        <argsstring>()</argsstring>
+        <name>send_torque</name>
+        <briefdescription>
+<para>send the joint torque to the motor. The conversion between joint torque and motor current is done automatically. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="115" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1MotorJointModule_1a5d49568b01f717be33c94a684f8aa310" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::MotorJointModule::set_max_torque</definition>
+        <argsstring>(const double &amp;max_torque)</argsstring>
+        <name>set_max_torque</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>max_torque</declname>
+        </param>
+        <briefdescription>
+<para>Set the maximum admissible joint torque that can be applied. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="122" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1MotorJointModule_1a8468668a37d5434a922768917760acad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>virtual double monopod_drivers::MotorJointModule::get_max_torque</definition>
+        <argsstring>() const</argsstring>
+        <name>get_max_torque</name>
+        <briefdescription>
+<para>Get the maximum admissible joint torque that can be applied. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="129" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1MotorJointModule_1a28b17ad27d3b323d6dc352d0e3e3f2aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>virtual double monopod_drivers::MotorJointModule::get_sent_torque</definition>
+        <argsstring>() const</argsstring>
+        <name>get_sent_torque</name>
+        <briefdescription>
+<para>Get the sent joint torque. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>double (Nm). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="136" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1MotorJointModule_1ac02e66976615c405451a47be99ec9844" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>virtual double monopod_drivers::MotorJointModule::get_measured_torque</definition>
+        <argsstring>() const</argsstring>
+        <name>get_measured_torque</name>
+        <briefdescription>
+<para>Get the measured joint torque. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>double (Nm). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="143" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1MotorJointModule_1ac8a4ce0e2ff88ad9be24b9441b10daca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::MotorJointModule::set_position_control_gains</definition>
+        <argsstring>(double kp, double kd)</argsstring>
+        <name>set_position_control_gains</name>
+        <param>
+          <type>double</type>
+          <declname>kp</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>kd</declname>
+        </param>
+        <briefdescription>
+<para>Set control gains for PD position controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>P gain ( (Nm) / rad ). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>D gain ( (Nm) / (rad/s) ). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="151" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1MotorJointModule_1a26b804df8e041e3e99ab0c58febea24a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double monopod_drivers::MotorJointModule::execute_position_controller</definition>
+        <argsstring>(double target_position_rad) const</argsstring>
+        <name>execute_position_controller</name>
+        <param>
+          <type>double</type>
+          <declname>target_position_rad</declname>
+        </param>
+        <briefdescription>
+<para>Execute one iteration of the position controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target_position_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target position (rad).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Torque command (Nm). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="160" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1MotorJointModule_1a5d9d138117e5a7e81c799b0a4f4ad51e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::MotorJointModule::homing_at_current_position</definition>
+        <argsstring>(double home_offset_rad)</argsstring>
+        <name>homing_at_current_position</name>
+        <param>
+          <type>double</type>
+          <declname>home_offset_rad</declname>
+        </param>
+        <briefdescription>
+<para>Set zero position relative to current position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>home_offset_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset from home position to zero position. Unit: radian. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="168" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1MotorJointModule_1a909f516ba90dc939ba5c9c50358a4186" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::MotorJointModule::init_homing</definition>
+        <argsstring>(double search_distance_limit_rad, double home_offset_rad, double profile_step_size_rad=0.001)</argsstring>
+        <name>init_homing</name>
+        <param>
+          <type>double</type>
+          <declname>search_distance_limit_rad</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>home_offset_rad</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>profile_step_size_rad</declname>
+          <defval>0.001</defval>
+        </param>
+        <briefdescription>
+<para>Initialize the homing procedure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This has to be called before <ref refid="classmonopod__drivers_1_1MotorJointModule_1aec64d1a853e6f70c02c50e342f9994a4" kindref="member">update_homing()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>search_distance_limit_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum distance the motor moves while searching for the encoder index. Unit: radian. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>home_offset_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset from home position to zero position. Unit: radian. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>profile_step_size_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Distance by which the target position of the position profile is changed in each step. Set to a negative value to search for the next encoder index in negative direction. Unit: radian. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="184" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1MotorJointModule_1aec64d1a853e6f70c02c50e342f9994a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacemonopod__drivers_1a4542e42cd32958f48d461a77bbc2e812" kindref="member">HomingReturnCode</ref></type>
+        <definition>HomingReturnCode monopod_drivers::MotorJointModule::update_homing</definition>
+        <argsstring>()</argsstring>
+        <name>update_homing</name>
+        <briefdescription>
+<para>Perform one step of homing on encoder index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Searches for the next encoder index in positive direction and, when found, sets it as home position.</para>
+<para>Only performs one step, so this method needs to be called in a loop. This method only set the control, one <emphasis>MUST</emphasis> send the control for the motor after calling this method.</para>
+<para>The motor is moved with a position profile until either the encoder index is reached or the search distance limit is exceeded. The position is controlled with a simple PD controller.</para>
+<para>If the encoder index is found, its position is used as home position. The zero position is offset from the home position by adding the &quot;home
+offset&quot; to it (i.e. zero = home pos. + home offset). If the search distance limit is reached before the encoder index occurs, the homing fails.</para>
+<para><simplesect kind="return"><para>Status of the homing procedure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="209" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1MotorJointModule_1ac9dff77691ba3a236ac37f18aa547d9c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double monopod_drivers::MotorJointModule::get_distance_travelled_during_homing</definition>
+        <argsstring>() const</argsstring>
+        <name>get_distance_travelled_during_homing</name>
+        <briefdescription>
+<para>Get distance between start and end position of homing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the distance that the joint moved between initialization of homing and reaching the home position.</para>
+<para>This can be used to determine the home offset by first moving the joint to the desired zero position, then executing the homing and finally calling this function which will provide the desired home offset.</para>
+<para><simplesect kind="return"><para>Distance between start and end position of homing. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="223" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1MotorJointModule_1a9a0b1babacb7370705c6c32e7c70a5a5" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double monopod_drivers::MotorJointModule::joint_torque_to_motor_current</definition>
+        <argsstring>(double torque) const</argsstring>
+        <name>joint_torque_to_motor_current</name>
+        <param>
+          <type>double</type>
+          <declname>torque</declname>
+        </param>
+        <briefdescription>
+<para>Convert from joint torque to motor current. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">torque</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the input joint </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double the equivalent motor current. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="232" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1MotorJointModule_1a6bd65ba517bf011a644b33d19243dc25" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double monopod_drivers::MotorJointModule::motor_current_to_joint_torque</definition>
+        <argsstring>(double current) const</argsstring>
+        <name>motor_current_to_joint_torque</name>
+        <param>
+          <type>double</type>
+          <declname>current</declname>
+        </param>
+        <briefdescription>
+<para>Convert from motor current to joint torque. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>current</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the motor current. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double is the equivalent joint torque. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="240" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classmonopod__drivers_1_1MotorJointModule" kindref="compound">MotorJointModule</ref> class is containing the joint information. It is here to help converting the data from the motor side to the joint side. It also allows the calibration of the joint position during initialization. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>monopod_drivers::EncoderJointModule</label>
+        <link refid="classmonopod__drivers_1_1EncoderJointModule"/>
+      </node>
+      <node id="1">
+        <label>monopod_drivers::MotorJointModule</label>
+        <link refid="classmonopod__drivers_1_1MotorJointModule"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9">
+        <label>std::shared_ptr&lt; monopod_drivers::MotorInterface &gt;</label>
+        <childnode refid="10" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::shared_ptr&lt; monopod_drivers::EncoderInterface &gt;</label>
+        <childnode refid="7" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>monopod_drivers::MotorInterface</label>
+        <link refid="classmonopod__drivers_1_1MotorInterface"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>monopod_drivers::EncoderInterface</label>
+        <link refid="classmonopod__drivers_1_1EncoderInterface"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>monopod_drivers::HomingState</label>
+        <link refid="structmonopod__drivers_1_1HomingState"/>
+      </node>
+      <node id="5">
+        <label>std::mutex</label>
+      </node>
+      <node id="2">
+        <label>monopod_drivers::EncoderJointModule</label>
+        <link refid="classmonopod__drivers_1_1EncoderJointModule"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>limits_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>limit_door_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>encoder_</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>monopod_drivers::DeviceInterface</label>
+        <link refid="classmonopod__drivers_1_1DeviceInterface"/>
+      </node>
+      <node id="3">
+        <label>std::unordered_map&lt; Measurements, monopod_drivers::JointLimit &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>monopod_drivers::JointLimit</label>
+        <link refid="structmonopod__drivers_1_1JointLimit"/>
+      </node>
+      <node id="1">
+        <label>monopod_drivers::MotorJointModule</label>
+        <link refid="classmonopod__drivers_1_1MotorJointModule"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>motor_</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>homing_state_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="83" column="49" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="83" bodyend="294"/>
+    <listofallmembers>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1acda3a0ef4e078e61ad9c6da31e461c76" prot="public" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>check_limits</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a3c2c35ba79b90c3b5872225d04c6b214" prot="protected" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>encoder_</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a5349d1cba67f3d062f5585e8f6bc2b3a" prot="public" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>EncoderJointModule</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1a26b804df8e041e3e99ab0c58febea24a" prot="public" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>execute_position_controller</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a6158652b766a3d6215672f9ac44272ea" prot="protected" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>gear_ratio_</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1ac9dff77691ba3a236ac37f18aa547d9c" prot="public" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>get_distance_travelled_during_homing</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1af05a36fbc7c66935c0998c0b7ddc5868" prot="protected" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>get_joint_measurement</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a26d5264f5fd6e121131789edad3acd86" prot="protected" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>get_joint_measurement_index</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a73ad92b3a750a22d28d4727ecd41176a" prot="public" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>get_limit</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1a8468668a37d5434a922768917760acad" prot="public" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>get_max_torque</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1aa497545b9e020e435244e60691c97242" prot="public" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>get_measured_acceleration</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1af6b39a82b2e177a654bb0f06ce1938fb" prot="public" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>get_measured_angle</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1abcf5604397b8836698834e8a1dae97c5" prot="public" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>get_measured_index_angle</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1ac02e66976615c405451a47be99ec9844" prot="public" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>get_measured_torque</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a9be5f1694b10faa29db6f3144872b263" prot="public" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>get_measured_velocity</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1a28b17ad27d3b323d6dc352d0e3e3f2aa" prot="public" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>get_sent_torque</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a6e1fb1e0810cc9ae99c159ada36fde11" prot="public" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>get_zero_angle</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1a5d9d138117e5a7e81c799b0a4f4ad51e" prot="public" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>homing_at_current_position</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1a78e580700bdad2f316741ec28eb12e34" prot="protected" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>homing_state_</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1ad5e10c6191d69ef40bacba9d9ec37c6a" prot="protected" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>in_range</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1a909f516ba90dc939ba5c9c50358a4186" prot="public" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>init_homing</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a73e555042dfb4d8ea732dee96ce88a49" prot="protected" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>joint_id_</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1a9a0b1babacb7370705c6c32e7c70a5a5" prot="protected" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>joint_torque_to_motor_current</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1af2047faf9143a56913fe05925a7e8ab1" prot="protected" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>limit_door_</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a43ddebe1d2fb19433650ab1fdf1112f8" prot="protected" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>limits_</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1a118a2c3f2d6fd3fc2f14195ac9a2f223" prot="protected" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>max_current_</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1ad3db6e45d58ceea068f74eeb11ad4361" prot="protected" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>motor_</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1a9ac1d31d9039e04b4643f310b8b0fa56" prot="protected" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>motor_constant_</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1a6bd65ba517bf011a644b33d19243dc25" prot="protected" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>motor_current_to_joint_torque</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1aa492a6baebdcc7cb19ca06fd835f2984" prot="public" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>MotorJointModule</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a19e0b551472109b8819dd46e936ce3a1" prot="protected" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>polarity_</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1a410df7c30b3feb47ae58fe0693ea2795" prot="protected" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>position_control_gain_d_</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1a001f0cf005e9a3c08ac180b0a8317a24" prot="protected" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>position_control_gain_p_</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1ab557730fb87a25e3de9dde0f07470969" prot="public" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>print</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1aee76c240d03018425ca94082243faf83" prot="public" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>send_torque</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a013bca03bd087e75791b7ccf69a9ff84" prot="public" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>set_joint_polarity</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1abe22400fcb35b8d222c4dc620024d01d" prot="public" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>set_limit</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1a5d49568b01f717be33c94a684f8aa310" prot="public" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>set_max_torque</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1ac8a4ce0e2ff88ad9be24b9441b10daca" prot="public" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>set_position_control_gains</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1a3768ec9ff86188a7af68fae701fc4482" prot="public" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>set_torque</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a68edc32a90f23edfcae83260c06880a5" prot="public" virt="virtual"><scope>monopod_drivers::MotorJointModule</scope><name>set_zero_angle</name></member>
+      <member refid="classmonopod__drivers_1_1MotorJointModule_1aec64d1a853e6f70c02c50e342f9994a4" prot="public" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>update_homing</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1ad40c8219c24c7cc24027dd63ce7f385a" prot="protected" virt="non-virtual"><scope>monopod_drivers::MotorJointModule</scope><name>zero_angle_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

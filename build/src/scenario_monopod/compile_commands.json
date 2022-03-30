@@ -1,0 +1,37 @@
+[
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/src/monopod",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DNON_REAL_TIME -DScenarioMonopod_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include -isystem /home/dawson/Documents/Repos/os2r-superbuild/build/install/include -isystem /usr/include/eigen3  -Wl,--no-as-needed -Wall -Wextra -Wpedantic -Wl,--no-as-needed -Wall -Wextra -Wpedantic -Wl,--no-as-needed -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 -O3 -O3 -fPIC -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -o CMakeFiles/ScenarioMonopod.dir/src/World.cpp.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/src/World.cpp",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/src/World.cpp"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/src/monopod",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DNON_REAL_TIME -DScenarioMonopod_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include -isystem /home/dawson/Documents/Repos/os2r-superbuild/build/install/include -isystem /usr/include/eigen3  -Wl,--no-as-needed -Wall -Wextra -Wpedantic -Wl,--no-as-needed -Wall -Wextra -Wpedantic -Wl,--no-as-needed -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 -O3 -O3 -fPIC -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -o CMakeFiles/ScenarioMonopod.dir/src/Model.cpp.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/src/Model.cpp",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/src/Model.cpp"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/src/monopod",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DNON_REAL_TIME -DScenarioMonopod_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include -isystem /home/dawson/Documents/Repos/os2r-superbuild/build/install/include -isystem /usr/include/eigen3  -Wl,--no-as-needed -Wall -Wextra -Wpedantic -Wl,--no-as-needed -Wall -Wextra -Wpedantic -Wl,--no-as-needed -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 -O3 -O3 -fPIC -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -o CMakeFiles/ScenarioMonopod.dir/src/Joint.cpp.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/src/Joint.cpp",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/src/Joint.cpp"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/src/monopod",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DNON_REAL_TIME -I/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/demos -isystem /home/dawson/Documents/Repos/os2r-superbuild/build/install/include -isystem /usr/include/eigen3  -Wl,--no-as-needed -Wall -Wextra -Wpedantic -Wl,--no-as-needed -Wall -Wextra -Wpedantic -Wl,--no-as-needed -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 -O3 -O3 -fPIE -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -o CMakeFiles/demo_main.dir/demos/demo_main.cpp.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/demos/demo_main.cpp",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/demos/demo_main.cpp"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/src/monopod",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DNON_REAL_TIME -I/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include -I/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/demos -isystem /home/dawson/Documents/Repos/os2r-superbuild/build/install/include -isystem /usr/include/eigen3  -Wl,--no-as-needed -Wall -Wextra -Wpedantic -Wl,--no-as-needed -Wall -Wextra -Wpedantic -Wl,--no-as-needed -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 -O3 -O3 -fPIE -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -o CMakeFiles/demo_loops.dir/demos/demo_loops.cpp.o -c /home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/demos/demo_loops.cpp",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/demos/demo_loops.cpp"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/bindings/core",
+  "command": "/usr/bin/c++ -DNON_REAL_TIME -Dcore_EXPORTS -isystem /home/dawson/Documents/Repos/os2r-superbuild/build/install/include -isystem /usr/include/python3.8  -Wl,--no-as-needed -Wall -Wextra -Wpedantic -Wl,--no-as-needed -Wall -Wextra -Wpedantic -Wl,--no-as-needed -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 -O3 -O3 -fPIC -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -o CMakeFiles/core.dir/__/corePYTHON_wrap.cxx.o -c /home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/bindings/corePYTHON_wrap.cxx",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/bindings/corePYTHON_wrap.cxx"
+},
+{
+  "directory": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/bindings/monopod",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DNDEBUG -DNON_REAL_TIME -Dmonopod_EXPORTS -I/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include -isystem /usr/include/python3.8 -isystem /home/dawson/Documents/Repos/os2r-superbuild/build/install/include -isystem /usr/include/eigen3  -Wl,--no-as-needed -Wall -Wextra -Wpedantic -Wl,--no-as-needed -Wall -Wextra -Wpedantic -Wl,--no-as-needed -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 -O3 -O3 -fPIC -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -o CMakeFiles/monopod.dir/__/monopodPYTHON_wrap.cxx.o -c /home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/bindings/monopodPYTHON_wrap.cxx",
+  "file": "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/bindings/monopodPYTHON_wrap.cxx"
+}
+]

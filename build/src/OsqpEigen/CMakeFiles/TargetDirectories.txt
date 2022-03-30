@@ -1,0 +1,14 @@
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/OsqpEigen/CMakeFiles/OsqpEigen.dir
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/OsqpEigen/CMakeFiles/uninstall.dir
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/OsqpEigen/CMakeFiles/edit_cache.dir
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/OsqpEigen/CMakeFiles/rebuild_cache.dir
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/OsqpEigen/CMakeFiles/list_install_components.dir
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/OsqpEigen/CMakeFiles/install.dir
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/OsqpEigen/CMakeFiles/install/local.dir
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/OsqpEigen/CMakeFiles/install/strip.dir
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/OsqpEigen/tests/CMakeFiles/edit_cache.dir
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/OsqpEigen/tests/CMakeFiles/rebuild_cache.dir
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/OsqpEigen/tests/CMakeFiles/list_install_components.dir
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/OsqpEigen/tests/CMakeFiles/install.dir
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/OsqpEigen/tests/CMakeFiles/install/local.dir
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/OsqpEigen/tests/CMakeFiles/install/strip.dir

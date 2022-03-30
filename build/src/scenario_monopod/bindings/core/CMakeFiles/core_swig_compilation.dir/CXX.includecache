@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/bindings/core/core.i
+scenario/core/Joint.h
+/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/bindings/core/scenario/core/Joint.h
+scenario/core/Link.h
+/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/bindings/core/scenario/core/Link.h
+scenario/core/Model.h
+/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/bindings/core/scenario/core/Model.h
+scenario/core/World.h
+/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/bindings/core/scenario/core/World.h
+scenario/core/utils/utils.h
+/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/bindings/core/scenario/core/utils/utils.h
+exception.i
+/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/bindings/core/exception.i
+stdint.i
+-
+std_pair.i
+-
+std_array.i
+-
+std_string.i
+-
+std_vector.i
+-
+std_shared_ptr.i
+-
+scenario/core/utils/utils.h
+/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/bindings/core/scenario/core/utils/utils.h
+scenario/core/Joint.h
+/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/bindings/core/scenario/core/Joint.h
+scenario/core/Link.h
+/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/bindings/core/scenario/core/Link.h
+scenario/core/Model.h
+/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/bindings/core/scenario/core/Model.h
+scenario/core/World.h
+/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/bindings/core/scenario/core/World.h
+

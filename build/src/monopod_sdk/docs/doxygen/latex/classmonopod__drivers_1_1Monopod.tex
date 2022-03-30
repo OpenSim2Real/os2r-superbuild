@@ -1,0 +1,612 @@
+\hypertarget{classmonopod__drivers_1_1Monopod}{}\doxysection{monopod\+\_\+drivers\+::Monopod Class Reference}
+\label{classmonopod__drivers_1_1Monopod}\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+
+
+Drivers for open sim2real monopod. Interfaces with the monopod TI motors using monopod\+\_\+drivers\+::\+Blmc\+Joint\+Module. This class creates a real time control thread which reads and writes from a buffer exposed to the public api.  
+
+
+
+
+{\ttfamily \#include $<$monopod.\+hpp$>$}
+
+
+
+Collaboration diagram for monopod\+\_\+drivers\+::Monopod\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classmonopod__drivers_1_1Monopod__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmonopod__drivers_1_1Monopod_ae3a7af8441f2c1b4f7b2e826c3e89080}{Monopod}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmonopod__drivers_1_1Monopod}{Monopod}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a5869ce3529ca5f3e37ce494c52b6206f}\label{classmonopod__drivers_1_1Monopod_a5869ce3529ca5f3e37ce494c52b6206f}} 
+\mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a5869ce3529ca5f3e37ce494c52b6206f}{$\sim$\+Monopod}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmonopod__drivers_1_1Monopod}{Monopod}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_aa2cedd7155944822adc9e67dfbe5923a}{initialize}} (\mbox{\hyperlink{namespacemonopod__drivers_a6252798d64d8c41a638ddf9ec67d318f}{Mode}} monopod\+\_\+mode, bool dummy\+\_\+mode=false)
+\begin{DoxyCompactList}\small\item\em Initialize can\+\_\+bus connections to encoder board and motor board. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_ad286cc55bacfba5d33d860ce98172b5f}\label{classmonopod__drivers_1_1Monopod_ad286cc55bacfba5d33d860ce98172b5f}} 
+bool \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_ad286cc55bacfba5d33d860ce98172b5f}{initialized}} () const
+\begin{DoxyCompactList}\small\item\em is the monopod sdk Initialized?. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a6e1871cdfac4b63cba90344d66bcfd71}\label{classmonopod__drivers_1_1Monopod_a6e1871cdfac4b63cba90344d66bcfd71}} 
+void \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a6e1871cdfac4b63cba90344d66bcfd71}{print}} (const \mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$ int $>$ \&joint\+\_\+indexes=\{\}) const
+\begin{DoxyCompactList}\small\item\em Print the motor status and state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_abeaeb23d666d0e64218faee57dc3f6a1}\label{classmonopod__drivers_1_1Monopod_abeaeb23d666d0e64218faee57dc3f6a1}} 
+void \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_abeaeb23d666d0e64218faee57dc3f6a1}{start\+\_\+safety\+\_\+loop}} ()
+\begin{DoxyCompactList}\small\item\em This method is a helper to start the thread safety\+\_\+loop. Requires the class to be initialized before the safety\+\_\+loop can be started. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a59c89f6ce93773a7dde8b3ae9542ccb8}\label{classmonopod__drivers_1_1Monopod_a59c89f6ce93773a7dde8b3ae9542ccb8}} 
+void \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a59c89f6ce93773a7dde8b3ae9542ccb8}{goto\+\_\+position}} (const double \&hip\+\_\+home\+\_\+position=0, const double \&knee\+\_\+home\+\_\+position=0)
+\begin{DoxyCompactList}\small\item\em This method is a helper class to goto some position for the leg. This requires the board to be initialized in any mode which has active motors. Additionally this function will pause the limit checks and will reset the board before executing the position control. This is to allow homing from outside the limits. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a156557c8c964854deed4b9da0d040845}\label{classmonopod__drivers_1_1Monopod_a156557c8c964854deed4b9da0d040845}} 
+void \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a156557c8c964854deed4b9da0d040845}{hold\+\_\+position}} ()
+\begin{DoxyCompactList}\small\item\em This method is a helper class to hold the position the leg was in when the function was called. This function will only change the state if the motor board is active. otherwise nothing will happen. When holding the monopod wll be a read only state until the holding is killed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_aefdbbb084a3e757fd52855793ddb3a11}\label{classmonopod__drivers_1_1Monopod_aefdbbb084a3e757fd52855793ddb3a11}} 
+bool \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_aefdbbb084a3e757fd52855793ddb3a11}{is\+\_\+hold\+\_\+position}} ()
+\begin{DoxyCompactList}\small\item\em Is the monopod holding the current leg position? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a333022bb8e61efda4002ce057967bfd1}\label{classmonopod__drivers_1_1Monopod_a333022bb8e61efda4002ce057967bfd1}} 
+void \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a333022bb8e61efda4002ce057967bfd1}{stop\+\_\+hold\+\_\+position}} ()
+\begin{DoxyCompactList}\small\item\em Stops robot from holding. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a2d9814cee7c6ea053523a0af52e72c1f}{calibrate}} (const double \&hip\+\_\+home\+\_\+offset\+\_\+rad=0, const double \&knee\+\_\+home\+\_\+offset\+\_\+rad=0)
+\begin{DoxyCompactList}\small\item\em Calibrate the Encoders. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a922ef7e908264a38d0681b6fa2025525}{get\+\_\+model\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Get model name. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, int $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a62d5bdeed940ca4d6fa6cfe9191dfc34}{get\+\_\+joint\+\_\+names}} () const
+\begin{DoxyCompactList}\small\item\em Get a map of \textquotesingle{}active\textquotesingle{} joint strings indexing their enumerator index. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a17c88e9356b121343809992ccb9c7e92}{is\+\_\+joint\+\_\+controllable}} (const int joint\+\_\+index)
+\begin{DoxyCompactList}\small\item\em check if the joint is a controllable joint (has a motor) or only a observation joint (encoder only). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_ae002f5a1870bdf056484bec3d7603729}{valid}} ()
+\begin{DoxyCompactList}\small\item\em Is the robot in a valid state? H\+O\+L\+D\+I\+NG state and safemode is considered invalid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_ac4566615f9ce91d7ef9b08624f1f0c6b}{reset}} (const bool \&move\+\_\+to\+\_\+zero=true)
+\begin{DoxyCompactList}\small\item\em If the joint module is not valid (safemode after limit reached) the joint will be reset into a valid state (The joint must be set back into the valid state first otherwise it will trigger the limits again). Additionally by default the reset function will attempt to control the robot leg to ther zero pose. Regardless of status of the zero pose movement the robot reset will pause the motors to avoid a timeout. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a0635083d9ddab66a3fdb038a9970203d}{set\+\_\+torque\+\_\+target}} (const double \&torque\+\_\+target, const int joint\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Set the torque target for some joint index. Return a bool whether successful. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_ad29fa8555ee25529f5658ad1a8b8c3ab}{set\+\_\+torque\+\_\+targets}} (const \mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$ double $>$ \&torque\+\_\+targets, const \mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$ int $>$ \&joint\+\_\+indexes=\{\})
+\begin{DoxyCompactList}\small\item\em Set the torque targets for all joint indexes. Return a bool whether successful. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a02da22787b60c7be31f9469df8858a14}{set\+\_\+pid}} (const int \&p, const int \&i, const int \&d, const int \&joint\+\_\+index)
+\item 
+bool \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a08c44b34232d34bdf46bf5c322ddc12f}{set\+\_\+joint\+\_\+position\+\_\+limit}} (const double \&max, const double \&min, const int \&joint\+\_\+index)
+\item 
+bool \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a0251e350f4819530e7e56c8659c3eae9}{set\+\_\+joint\+\_\+velocity\+\_\+limit}} (const double \&max, const double \&min, const int \&joint\+\_\+index)
+\item 
+bool \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_ada84a2393fb17dd2cfa108abca457f8c}{set\+\_\+joint\+\_\+acceleration\+\_\+limit}} (const double \&max, const double \&min, const int \&joint\+\_\+index)
+\item 
+bool \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_ab9dadd3075bfe2bcd88ac4834883d1bc}{set\+\_\+max\+\_\+torque\+\_\+target}} (const double \&max\+\_\+torque\+\_\+target, const int \&joint\+\_\+index)
+\item 
+std\+::optional$<$ \mbox{\hyperlink{structmonopod__drivers_1_1PID}{P\+ID}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a36f3a1db7e02912c423170d874ef79b4}{get\+\_\+pid}} (const int \&joint\+\_\+index) const
+\item 
+std\+::optional$<$ \mbox{\hyperlink{structmonopod__drivers_1_1JointLimit}{Joint\+Limit}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a79bf84ecfd56483b8e249fa146a33194}{get\+\_\+joint\+\_\+position\+\_\+limit}} (const int \&joint\+\_\+index) const
+\item 
+std\+::optional$<$ \mbox{\hyperlink{structmonopod__drivers_1_1JointLimit}{Joint\+Limit}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a96f7e3fec5faa61b0caf48d9fe845806}{get\+\_\+joint\+\_\+velocity\+\_\+limit}} (const int \&joint\+\_\+index) const
+\item 
+std\+::optional$<$ \mbox{\hyperlink{structmonopod__drivers_1_1JointLimit}{Joint\+Limit}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a5ef40576f30a69e9c8430be16a42f3dd}{get\+\_\+joint\+\_\+acceleration\+\_\+limit}} (const int \&joint\+\_\+index) const
+\item 
+std\+::optional$<$ double $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a66cab6f73563ec92ceab4f3528e90632}{get\+\_\+max\+\_\+torque\+\_\+target}} (const int \&joint\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Get the max torque. \end{DoxyCompactList}\item 
+std\+::optional$<$ double $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a1e4716dc5eb9eeffa4cf5f8b979eff16}{get\+\_\+torque\+\_\+target}} (const int \&joint\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Get the torque. \end{DoxyCompactList}\item 
+std\+::optional$<$ \mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$ double $>$ $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a8da9a204e6c5ee6b399f0a7e629ae34f}{get\+\_\+torque\+\_\+targets}} (const \mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$ int $>$ \&joint\+\_\+indexes=\{\}) const
+\begin{DoxyCompactList}\small\item\em Get the torques of indexed joints. \end{DoxyCompactList}\item 
+std\+::optional$<$ double $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a1e3c4daa4f44ce649e683b058416f77f}{get\+\_\+position}} (const int \&joint\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Get the position of joint. \end{DoxyCompactList}\item 
+std\+::optional$<$ double $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_ad90fc6401d0a2cc13612172129c1496c}{get\+\_\+velocity}} (const int \&joint\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Get the velocity of the joint. \end{DoxyCompactList}\item 
+std\+::optional$<$ double $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_ae7c605906794ad608bfd77007e9cac14}{get\+\_\+acceleration}} (const int \&joint\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Get the acceleration of the joint. \end{DoxyCompactList}\item 
+std\+::optional$<$ \mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$ double $>$ $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_aacb2c707f5b93a26ae66437fccb10b42}{get\+\_\+positions}} (const \mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$ int $>$ \&joint\+\_\+indexes=\{\}) const
+\begin{DoxyCompactList}\small\item\em Get the position of the joint indexes. \end{DoxyCompactList}\item 
+std\+::optional$<$ \mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$ double $>$ $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_aba6130103537e4690d5e0a160586b70e}{get\+\_\+velocities}} (const \mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$ int $>$ \&joint\+\_\+indexes=\{\}) const
+\begin{DoxyCompactList}\small\item\em Get the velocity of the joint indexes. \end{DoxyCompactList}\item 
+std\+::optional$<$ \mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$ double $>$ $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a4b26503fcc4dc56a56157a8ddf4215d9}{get\+\_\+accelerations}} (const \mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$ int $>$ \&joint\+\_\+indexes=\{\}) const
+\begin{DoxyCompactList}\small\item\em Get the acceleration of the joint indexes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::unordered\+\_\+map$<$ std\+::string, int $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Monopod_a16549890996092c7649389d643a68eab}{joint\+\_\+names}}
+\begin{DoxyCompactList}\small\item\em Joint names indexed same as enumerator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Drivers for open sim2real monopod. Interfaces with the monopod TI motors using monopod\+\_\+drivers\+::\+Blmc\+Joint\+Module. This class creates a real time control thread which reads and writes from a buffer exposed to the public api. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_ae3a7af8441f2c1b4f7b2e826c3e89080}\label{classmonopod__drivers_1_1Monopod_ae3a7af8441f2c1b4f7b2e826c3e89080}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!Monopod@{Monopod}}
+\index{Monopod@{Monopod}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{Monopod()}{Monopod()}}
+{\footnotesize\ttfamily monopod\+\_\+drivers\+::\+Monopod\+::\+Monopod (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classmonopod__drivers_1_1Monopod}{Monopod}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a2d9814cee7c6ea053523a0af52e72c1f}\label{classmonopod__drivers_1_1Monopod_a2d9814cee7c6ea053523a0af52e72c1f}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!calibrate@{calibrate}}
+\index{calibrate@{calibrate}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{calibrate()}{calibrate()}}
+{\footnotesize\ttfamily void monopod\+\_\+drivers\+::\+Monopod\+::calibrate (\begin{DoxyParamCaption}\item[{const double \&}]{hip\+\_\+home\+\_\+offset\+\_\+rad = {\ttfamily 0},  }\item[{const double \&}]{knee\+\_\+home\+\_\+offset\+\_\+rad = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Calibrate the Encoders. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hip\+\_\+home\+\_\+offset\+\_\+rad} & hip offset from found encoder index 0 (rad) \\
+\hline
+{\em knee\+\_\+home\+\_\+offset\+\_\+rad} & knee offset from found encoder index 0 (rad) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_ae7c605906794ad608bfd77007e9cac14}\label{classmonopod__drivers_1_1Monopod_ae7c605906794ad608bfd77007e9cac14}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!get\_acceleration@{get\_acceleration}}
+\index{get\_acceleration@{get\_acceleration}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{get\_acceleration()}{get\_acceleration()}}
+{\footnotesize\ttfamily std\+::optional$<$double$>$ monopod\+\_\+drivers\+::\+Monopod\+::get\+\_\+acceleration (\begin{DoxyParamCaption}\item[{const int \&}]{joint\+\_\+index }\end{DoxyParamCaption}) const}
+
+
+
+Get the acceleration of the joint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+index} & name of the joint we want to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::optional$<$double$>$ containing the acceleration if success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a4b26503fcc4dc56a56157a8ddf4215d9}\label{classmonopod__drivers_1_1Monopod_a4b26503fcc4dc56a56157a8ddf4215d9}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!get\_accelerations@{get\_accelerations}}
+\index{get\_accelerations@{get\_accelerations}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{get\_accelerations()}{get\_accelerations()}}
+{\footnotesize\ttfamily std\+::optional$<$\mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$double$>$ $>$ monopod\+\_\+drivers\+::\+Monopod\+::get\+\_\+accelerations (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$ int $>$ \&}]{joint\+\_\+indexes = {\ttfamily \{\}} }\end{DoxyParamCaption}) const}
+
+
+
+Get the acceleration of the joint indexes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+indexes} & names of the joints we want to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::optional$<$Vector$<$double$>$$>$ containing vector of accelerations if success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a5ef40576f30a69e9c8430be16a42f3dd}\label{classmonopod__drivers_1_1Monopod_a5ef40576f30a69e9c8430be16a42f3dd}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!get\_joint\_acceleration\_limit@{get\_joint\_acceleration\_limit}}
+\index{get\_joint\_acceleration\_limit@{get\_joint\_acceleration\_limit}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{get\_joint\_acceleration\_limit()}{get\_joint\_acceleration\_limit()}}
+{\footnotesize\ttfamily std\+::optional$<$\mbox{\hyperlink{structmonopod__drivers_1_1JointLimit}{Joint\+Limit}}$>$ monopod\+\_\+drivers\+::\+Monopod\+::get\+\_\+joint\+\_\+acceleration\+\_\+limit (\begin{DoxyParamCaption}\item[{const int \&}]{joint\+\_\+index }\end{DoxyParamCaption}) const}
+
+Get the velocity limits of the joint.
+
+\begin{DoxyReturn}{Returns}
+The velocity limits of the joint. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a62d5bdeed940ca4d6fa6cfe9191dfc34}\label{classmonopod__drivers_1_1Monopod_a62d5bdeed940ca4d6fa6cfe9191dfc34}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!get\_joint\_names@{get\_joint\_names}}
+\index{get\_joint\_names@{get\_joint\_names}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{get\_joint\_names()}{get\_joint\_names()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, int$>$ monopod\+\_\+drivers\+::\+Monopod\+::get\+\_\+joint\+\_\+names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get a map of \textquotesingle{}active\textquotesingle{} joint strings indexing their enumerator index. 
+
+\begin{DoxyReturn}{Returns}
+Unordered map of joint name strings as key and index as value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a79bf84ecfd56483b8e249fa146a33194}\label{classmonopod__drivers_1_1Monopod_a79bf84ecfd56483b8e249fa146a33194}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!get\_joint\_position\_limit@{get\_joint\_position\_limit}}
+\index{get\_joint\_position\_limit@{get\_joint\_position\_limit}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{get\_joint\_position\_limit()}{get\_joint\_position\_limit()}}
+{\footnotesize\ttfamily std\+::optional$<$\mbox{\hyperlink{structmonopod__drivers_1_1JointLimit}{Joint\+Limit}}$>$ monopod\+\_\+drivers\+::\+Monopod\+::get\+\_\+joint\+\_\+position\+\_\+limit (\begin{DoxyParamCaption}\item[{const int \&}]{joint\+\_\+index }\end{DoxyParamCaption}) const}
+
+Get the position limits of the joint.
+
+\begin{DoxyReturn}{Returns}
+The position limits of the joint. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a96f7e3fec5faa61b0caf48d9fe845806}\label{classmonopod__drivers_1_1Monopod_a96f7e3fec5faa61b0caf48d9fe845806}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!get\_joint\_velocity\_limit@{get\_joint\_velocity\_limit}}
+\index{get\_joint\_velocity\_limit@{get\_joint\_velocity\_limit}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{get\_joint\_velocity\_limit()}{get\_joint\_velocity\_limit()}}
+{\footnotesize\ttfamily std\+::optional$<$\mbox{\hyperlink{structmonopod__drivers_1_1JointLimit}{Joint\+Limit}}$>$ monopod\+\_\+drivers\+::\+Monopod\+::get\+\_\+joint\+\_\+velocity\+\_\+limit (\begin{DoxyParamCaption}\item[{const int \&}]{joint\+\_\+index }\end{DoxyParamCaption}) const}
+
+Get the velocity limits of the joint.
+
+\begin{DoxyReturn}{Returns}
+The velocity limits of the joint. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a66cab6f73563ec92ceab4f3528e90632}\label{classmonopod__drivers_1_1Monopod_a66cab6f73563ec92ceab4f3528e90632}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!get\_max\_torque\_target@{get\_max\_torque\_target}}
+\index{get\_max\_torque\_target@{get\_max\_torque\_target}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{get\_max\_torque\_target()}{get\_max\_torque\_target()}}
+{\footnotesize\ttfamily std\+::optional$<$double$>$ monopod\+\_\+drivers\+::\+Monopod\+::get\+\_\+max\+\_\+torque\+\_\+target (\begin{DoxyParamCaption}\item[{const int \&}]{joint\+\_\+index }\end{DoxyParamCaption}) const}
+
+
+
+Get the max torque. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::optional$<$double$>$ containing the max torque if success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a922ef7e908264a38d0681b6fa2025525}\label{classmonopod__drivers_1_1Monopod_a922ef7e908264a38d0681b6fa2025525}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!get\_model\_name@{get\_model\_name}}
+\index{get\_model\_name@{get\_model\_name}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{get\_model\_name()}{get\_model\_name()}}
+{\footnotesize\ttfamily std\+::string monopod\+\_\+drivers\+::\+Monopod\+::get\+\_\+model\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get model name. 
+
+\begin{DoxyReturn}{Returns}
+String of model name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a36f3a1db7e02912c423170d874ef79b4}\label{classmonopod__drivers_1_1Monopod_a36f3a1db7e02912c423170d874ef79b4}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!get\_pid@{get\_pid}}
+\index{get\_pid@{get\_pid}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{get\_pid()}{get\_pid()}}
+{\footnotesize\ttfamily std\+::optional$<$\mbox{\hyperlink{structmonopod__drivers_1_1PID}{P\+ID}}$>$ monopod\+\_\+drivers\+::\+Monopod\+::get\+\_\+pid (\begin{DoxyParamCaption}\item[{const int \&}]{joint\+\_\+index }\end{DoxyParamCaption}) const}
+
+Get the \mbox{\hyperlink{structmonopod__drivers_1_1PID}{P\+ID}} parameters of the joint.
+
+If no \mbox{\hyperlink{structmonopod__drivers_1_1PID}{P\+ID}} parameters have been set, the default parameters are returned.
+
+\begin{DoxyReturn}{Returns}
+The joint \mbox{\hyperlink{structmonopod__drivers_1_1PID}{P\+ID}} parameters. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a1e3c4daa4f44ce649e683b058416f77f}\label{classmonopod__drivers_1_1Monopod_a1e3c4daa4f44ce649e683b058416f77f}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily std\+::optional$<$double$>$ monopod\+\_\+drivers\+::\+Monopod\+::get\+\_\+position (\begin{DoxyParamCaption}\item[{const int \&}]{joint\+\_\+index }\end{DoxyParamCaption}) const}
+
+
+
+Get the position of joint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+index} & name of the joint we want to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::optional$<$double$>$ containing the position if success value of the position (N\+U\+LL if not valid) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_aacb2c707f5b93a26ae66437fccb10b42}\label{classmonopod__drivers_1_1Monopod_aacb2c707f5b93a26ae66437fccb10b42}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!get\_positions@{get\_positions}}
+\index{get\_positions@{get\_positions}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{get\_positions()}{get\_positions()}}
+{\footnotesize\ttfamily std\+::optional$<$\mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$double$>$ $>$ monopod\+\_\+drivers\+::\+Monopod\+::get\+\_\+positions (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$ int $>$ \&}]{joint\+\_\+indexes = {\ttfamily \{\}} }\end{DoxyParamCaption}) const}
+
+
+
+Get the position of the joint indexes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+indexes} & names of the joints we want to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::optional$<$vector$<$double$>$$>$ containing vector of positions if success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a1e4716dc5eb9eeffa4cf5f8b979eff16}\label{classmonopod__drivers_1_1Monopod_a1e4716dc5eb9eeffa4cf5f8b979eff16}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!get\_torque\_target@{get\_torque\_target}}
+\index{get\_torque\_target@{get\_torque\_target}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{get\_torque\_target()}{get\_torque\_target()}}
+{\footnotesize\ttfamily std\+::optional$<$double$>$ monopod\+\_\+drivers\+::\+Monopod\+::get\+\_\+torque\+\_\+target (\begin{DoxyParamCaption}\item[{const int \&}]{joint\+\_\+index }\end{DoxyParamCaption}) const}
+
+
+
+Get the torque. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::optional$<$double$>$ containing the torque if success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a8da9a204e6c5ee6b399f0a7e629ae34f}\label{classmonopod__drivers_1_1Monopod_a8da9a204e6c5ee6b399f0a7e629ae34f}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!get\_torque\_targets@{get\_torque\_targets}}
+\index{get\_torque\_targets@{get\_torque\_targets}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{get\_torque\_targets()}{get\_torque\_targets()}}
+{\footnotesize\ttfamily std\+::optional$<$\mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$double$>$ $>$ monopod\+\_\+drivers\+::\+Monopod\+::get\+\_\+torque\+\_\+targets (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$ int $>$ \&}]{joint\+\_\+indexes = {\ttfamily \{\}} }\end{DoxyParamCaption}) const}
+
+
+
+Get the torques of indexed joints. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::optional$<$double$>$ containing the torque if success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_aba6130103537e4690d5e0a160586b70e}\label{classmonopod__drivers_1_1Monopod_aba6130103537e4690d5e0a160586b70e}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!get\_velocities@{get\_velocities}}
+\index{get\_velocities@{get\_velocities}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{get\_velocities()}{get\_velocities()}}
+{\footnotesize\ttfamily std\+::optional$<$\mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$double$>$ $>$ monopod\+\_\+drivers\+::\+Monopod\+::get\+\_\+velocities (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$ int $>$ \&}]{joint\+\_\+indexes = {\ttfamily \{\}} }\end{DoxyParamCaption}) const}
+
+
+
+Get the velocity of the joint indexes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+indexes} & names of the joints we want to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::optional$<$Vector$<$double$>$$>$ containing vector of velocities if success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_ad90fc6401d0a2cc13612172129c1496c}\label{classmonopod__drivers_1_1Monopod_ad90fc6401d0a2cc13612172129c1496c}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!get\_velocity@{get\_velocity}}
+\index{get\_velocity@{get\_velocity}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{get\_velocity()}{get\_velocity()}}
+{\footnotesize\ttfamily std\+::optional$<$double$>$ monopod\+\_\+drivers\+::\+Monopod\+::get\+\_\+velocity (\begin{DoxyParamCaption}\item[{const int \&}]{joint\+\_\+index }\end{DoxyParamCaption}) const}
+
+
+
+Get the velocity of the joint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+index} & name of the joint we want to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::optional$<$double$>$ containing the velocity if success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_aa2cedd7155944822adc9e67dfbe5923a}\label{classmonopod__drivers_1_1Monopod_aa2cedd7155944822adc9e67dfbe5923a}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!initialize@{initialize}}
+\index{initialize@{initialize}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily bool monopod\+\_\+drivers\+::\+Monopod\+::initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacemonopod__drivers_a6252798d64d8c41a638ddf9ec67d318f}{Mode}}}]{monopod\+\_\+mode,  }\item[{bool}]{dummy\+\_\+mode = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Initialize can\+\_\+bus connections to encoder board and motor board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em monopod\+\_\+mode} & defines the task mode of the monopod. Can also specify individual boards. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a17c88e9356b121343809992ccb9c7e92}\label{classmonopod__drivers_1_1Monopod_a17c88e9356b121343809992ccb9c7e92}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!is\_joint\_controllable@{is\_joint\_controllable}}
+\index{is\_joint\_controllable@{is\_joint\_controllable}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{is\_joint\_controllable()}{is\_joint\_controllable()}}
+{\footnotesize\ttfamily bool monopod\+\_\+drivers\+::\+Monopod\+::is\+\_\+joint\+\_\+controllable (\begin{DoxyParamCaption}\item[{const int}]{joint\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+check if the joint is a controllable joint (has a motor) or only a observation joint (encoder only). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+index} & name of the joint we want to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool whether joint is controllable 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_ac4566615f9ce91d7ef9b08624f1f0c6b}\label{classmonopod__drivers_1_1Monopod_ac4566615f9ce91d7ef9b08624f1f0c6b}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!reset@{reset}}
+\index{reset@{reset}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void monopod\+\_\+drivers\+::\+Monopod\+::reset (\begin{DoxyParamCaption}\item[{const bool \&}]{move\+\_\+to\+\_\+zero = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+If the joint module is not valid (safemode after limit reached) the joint will be reset into a valid state (The joint must be set back into the valid state first otherwise it will trigger the limits again). Additionally by default the reset function will attempt to control the robot leg to ther zero pose. Regardless of status of the zero pose movement the robot reset will pause the motors to avoid a timeout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move\+\_\+to\+\_\+zero} & True if you want the monopod to move into zero position, otherwise false. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_ada84a2393fb17dd2cfa108abca457f8c}\label{classmonopod__drivers_1_1Monopod_ada84a2393fb17dd2cfa108abca457f8c}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!set\_joint\_acceleration\_limit@{set\_joint\_acceleration\_limit}}
+\index{set\_joint\_acceleration\_limit@{set\_joint\_acceleration\_limit}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{set\_joint\_acceleration\_limit()}{set\_joint\_acceleration\_limit()}}
+{\footnotesize\ttfamily bool monopod\+\_\+drivers\+::\+Monopod\+::set\+\_\+joint\+\_\+acceleration\+\_\+limit (\begin{DoxyParamCaption}\item[{const double \&}]{max,  }\item[{const double \&}]{min,  }\item[{const int \&}]{joint\+\_\+index }\end{DoxyParamCaption})}
+
+Set the maximum acceleration of the joint.
+
+This limit when reached will kill the robot for safety
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & A double with the maximum acceleration of the joint. \\
+\hline
+{\em min} & A double with the minimum acceleration of the joint. \\
+\hline
+{\em joint\+\_\+index} & name of the joint we want to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True for success, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a08c44b34232d34bdf46bf5c322ddc12f}\label{classmonopod__drivers_1_1Monopod_a08c44b34232d34bdf46bf5c322ddc12f}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!set\_joint\_position\_limit@{set\_joint\_position\_limit}}
+\index{set\_joint\_position\_limit@{set\_joint\_position\_limit}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{set\_joint\_position\_limit()}{set\_joint\_position\_limit()}}
+{\footnotesize\ttfamily bool monopod\+\_\+drivers\+::\+Monopod\+::set\+\_\+joint\+\_\+position\+\_\+limit (\begin{DoxyParamCaption}\item[{const double \&}]{max,  }\item[{const double \&}]{min,  }\item[{const int \&}]{joint\+\_\+index }\end{DoxyParamCaption})}
+
+Set the maximum Position of the joint.
+
+This limit when reached will kill the robot for safety
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & A double with the maximum position of the joint. \\
+\hline
+{\em min} & A double with the minimum position of the joint. \\
+\hline
+{\em joint\+\_\+index} & name of the joint we want to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True for success, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a0251e350f4819530e7e56c8659c3eae9}\label{classmonopod__drivers_1_1Monopod_a0251e350f4819530e7e56c8659c3eae9}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!set\_joint\_velocity\_limit@{set\_joint\_velocity\_limit}}
+\index{set\_joint\_velocity\_limit@{set\_joint\_velocity\_limit}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{set\_joint\_velocity\_limit()}{set\_joint\_velocity\_limit()}}
+{\footnotesize\ttfamily bool monopod\+\_\+drivers\+::\+Monopod\+::set\+\_\+joint\+\_\+velocity\+\_\+limit (\begin{DoxyParamCaption}\item[{const double \&}]{max,  }\item[{const double \&}]{min,  }\item[{const int \&}]{joint\+\_\+index }\end{DoxyParamCaption})}
+
+Set the maximum velocity of the joint.
+
+This limit when reached will kill the robot for safety
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & A double with the maximum velocity of the joint. \\
+\hline
+{\em min} & A double with the minimum velocity of the joint. \\
+\hline
+{\em joint\+\_\+index} & name of the joint we want to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True for success, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_ab9dadd3075bfe2bcd88ac4834883d1bc}\label{classmonopod__drivers_1_1Monopod_ab9dadd3075bfe2bcd88ac4834883d1bc}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!set\_max\_torque\_target@{set\_max\_torque\_target}}
+\index{set\_max\_torque\_target@{set\_max\_torque\_target}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{set\_max\_torque\_target()}{set\_max\_torque\_target()}}
+{\footnotesize\ttfamily bool monopod\+\_\+drivers\+::\+Monopod\+::set\+\_\+max\+\_\+torque\+\_\+target (\begin{DoxyParamCaption}\item[{const double \&}]{max\+\_\+torque\+\_\+target,  }\item[{const int \&}]{joint\+\_\+index }\end{DoxyParamCaption})}
+
+Set the maximum torque target of the joint.
+
+This limit when reached will kill the robot for safety
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+torque\+\_\+target} & A double with the maximum torque of the joint. \\
+\hline
+{\em joint\+\_\+index} & name of the joint we want to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True for success, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a02da22787b60c7be31f9469df8858a14}\label{classmonopod__drivers_1_1Monopod_a02da22787b60c7be31f9469df8858a14}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!set\_pid@{set\_pid}}
+\index{set\_pid@{set\_pid}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{set\_pid()}{set\_pid()}}
+{\footnotesize\ttfamily bool monopod\+\_\+drivers\+::\+Monopod\+::set\+\_\+pid (\begin{DoxyParamCaption}\item[{const int \&}]{p,  }\item[{const int \&}]{i,  }\item[{const int \&}]{d,  }\item[{const int \&}]{joint\+\_\+index }\end{DoxyParamCaption})}
+
+Set the \mbox{\hyperlink{structmonopod__drivers_1_1PID}{P\+ID}} parameters of the joint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The desired \mbox{\hyperlink{structmonopod__drivers_1_1PID}{P\+ID}} parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True for success, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a0635083d9ddab66a3fdb038a9970203d}\label{classmonopod__drivers_1_1Monopod_a0635083d9ddab66a3fdb038a9970203d}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!set\_torque\_target@{set\_torque\_target}}
+\index{set\_torque\_target@{set\_torque\_target}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{set\_torque\_target()}{set\_torque\_target()}}
+{\footnotesize\ttfamily bool monopod\+\_\+drivers\+::\+Monopod\+::set\+\_\+torque\+\_\+target (\begin{DoxyParamCaption}\item[{const double \&}]{torque\+\_\+target,  }\item[{const int}]{joint\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Set the torque target for some joint index. Return a bool whether successful. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em torque\+\_\+target} & is the desired torque target for indexed joint \\
+\hline
+{\em joint\+\_\+index} & name of the joint we want to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool whether setting the value was successfull 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_ad29fa8555ee25529f5658ad1a8b8c3ab}\label{classmonopod__drivers_1_1Monopod_ad29fa8555ee25529f5658ad1a8b8c3ab}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!set\_torque\_targets@{set\_torque\_targets}}
+\index{set\_torque\_targets@{set\_torque\_targets}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{set\_torque\_targets()}{set\_torque\_targets()}}
+{\footnotesize\ttfamily bool monopod\+\_\+drivers\+::\+Monopod\+::set\+\_\+torque\+\_\+targets (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$ double $>$ \&}]{torque\+\_\+targets,  }\item[{const \mbox{\hyperlink{namespacemonopod__drivers_af0ef806c0cea122777fcf2dfc4facd79}{Vector}}$<$ int $>$ \&}]{joint\+\_\+indexes = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Set the torque targets for all joint indexes. Return a bool whether successful. 
+
+\begin{DoxyWarning}{Warning}
+Note\+: if it fails the behaviour is undefined. For example if first 3 joints are right but one bad index it will updatethe good ones the fail on the bad one.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em torque\+\_\+targets} & vector of desired torque targets for indexed joints \\
+\hline
+{\em joint\+\_\+indexes} & names of the joints we want to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool whether setting the value was successfull 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_ae002f5a1870bdf056484bec3d7603729}\label{classmonopod__drivers_1_1Monopod_ae002f5a1870bdf056484bec3d7603729}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!valid@{valid}}
+\index{valid@{valid}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily bool monopod\+\_\+drivers\+::\+Monopod\+::valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Is the robot in a valid state? H\+O\+L\+D\+I\+NG state and safemode is considered invalid. 
+
+\begin{DoxyReturn}{Returns}
+bool, true if valid otherwise false. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Monopod_a16549890996092c7649389d643a68eab}\label{classmonopod__drivers_1_1Monopod_a16549890996092c7649389d643a68eab}} 
+\index{monopod\_drivers::Monopod@{monopod\_drivers::Monopod}!joint\_names@{joint\_names}}
+\index{joint\_names@{joint\_names}!monopod\_drivers::Monopod@{monopod\_drivers::Monopod}}
+\doxysubsubsection{\texorpdfstring{joint\_names}{joint\_names}}
+{\footnotesize\ttfamily const std\+::unordered\+\_\+map$<$std\+::string, int$>$ monopod\+\_\+drivers\+::\+Monopod\+::joint\+\_\+names}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{      \{\textcolor{stringliteral}{"hip\_joint"}, hip\_joint\},}
+\DoxyCodeLine{      \{\textcolor{stringliteral}{"knee\_joint"}, knee\_joint\},}
+\DoxyCodeLine{      \{\textcolor{stringliteral}{"boom\_connector\_joint"}, boom\_connector\_joint\},}
+\DoxyCodeLine{      \{\textcolor{stringliteral}{"planarizer\_yaw\_joint"}, planarizer\_yaw\_joint\},}
+\DoxyCodeLine{      \{\textcolor{stringliteral}{"planarizer\_pitch\_joint"}, planarizer\_pitch\_joint\}\}}
+
+\end{DoxyCode}
+
+
+Joint names indexed same as enumerator. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/dawson/\+Documents/\+Repos/os2r-\/superbuild/src/monopod\+\_\+sdk/include/monopod\+\_\+sdk/monopod.\+hpp\end{DoxyCompactItemize}

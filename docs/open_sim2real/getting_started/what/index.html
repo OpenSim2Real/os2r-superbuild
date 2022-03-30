@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
     
   <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
@@ -243,6 +244,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../physical_monopod/superbuild/support_policy.html">
      Support Policy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../physical_monopod/superbuild/superbuild_structure.html">
+     Superbuild Structure
     </a>
    </li>
    <li class="toctree-l2">
@@ -528,8 +534,8 @@
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../../gym-os2r_docs/python/gym-os2r/gym_os2r.runtime.html">
-       gym_os2r.runtime
+      <a class="reference internal" href="../../../gym-os2r_docs/python/gym-os2r/gym_os2r.runtimes.html">
+       gym_os2r.runtimes
       </a>
      </li>
      <li class="toctree-l3">
@@ -629,6 +635,18 @@
                 
   <div class="section" id="what-s-open-sim2real">
 <span id="what"></span><h1>What’s Open Sim2Real<a class="headerlink" href="#what-s-open-sim2real" title="Permalink to this headline">¶</a></h1>
+<p>Open Sim2Real is a open source project striving to develop a simple inexpensive
+platform for <a class="reference internal" href="what_sim2real.html#what-is-sim2real"><span class="std std-ref">Sim2Real</span></a> research.</p>
+<p>The platform consists of a inexpensive <a class="reference internal" href="what_real.html#what-is-our-real"><span class="std std-ref">single leg robot</span></a> constrained
+to an approximate plane, and the corresponding simulation. Both the sim and real
+components support training within the gym framework (limited by real-time constraints
+on physical robot). In other words this project provides an open source, simple foundation
+for future Sim2Real platforms to build on top of.</p>
+<p>There are well documented <a class="reference internal" href="../../physical_monopod/monopod/index.html#building-the-robot"><span class="std std-ref">build instructions</span></a> for
+the physical monopod, additionally instructions on how to install the software stack, set up
+<a class="reference internal" href="../../simulated_monopod/training_on_cloud.html#training-on-cloud"><span class="std std-ref">training on cloud</span></a> (with container or source), basic tasks and
+reward functions, and much more. The project builds on top of many tools researchers are already
+familiar with making the transition into real natural (those dang simulations need to touch grass).</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>

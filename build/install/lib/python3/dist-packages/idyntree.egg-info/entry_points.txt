@@ -1,0 +1,3 @@
+[console_scripts]
+idyntree-model-info = idyntree.bin.__main__:main
+

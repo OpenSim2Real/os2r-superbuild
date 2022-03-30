@@ -1,0 +1,320 @@
+\hypertarget{classmonopod__drivers_1_1EncoderJointModule}{}\doxysection{monopod\+\_\+drivers\+::Encoder\+Joint\+Module Class Reference}
+\label{classmonopod__drivers_1_1EncoderJointModule}\index{monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}}
+
+
+The \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule}{Encoder\+Joint\+Module}} class is containing the joint information. It is here to help converting the data from the encoder side to the joint side. It also allows the calibration of the joint position during initialization.  
+
+
+
+
+{\ttfamily \#include $<$encoder\+\_\+joint\+\_\+module.\+hpp$>$}
+
+
+
+Inheritance diagram for monopod\+\_\+drivers\+::Encoder\+Joint\+Module\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classmonopod__drivers_1_1EncoderJointModule__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for monopod\+\_\+drivers\+::Encoder\+Joint\+Module\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmonopod__drivers_1_1EncoderJointModule__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_a5349d1cba67f3d062f5585e8f6bc2b3a}{Encoder\+Joint\+Module}} (\mbox{\hyperlink{namespacemonopod__drivers_a292411dcb88919df4d05216355c248d0}{Joint\+Names\+Index}} joint\+\_\+id, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmonopod__drivers_1_1EncoderInterface}{monopod\+\_\+drivers\+::\+Encoder\+Interface}} $>$ encoder, const double \&gear\+\_\+ratio, const double \&zero\+\_\+angle, const bool \&reverse\+\_\+polarity=false)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule}{Encoder\+Joint\+Module}} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_a68edc32a90f23edfcae83260c06880a5}{set\+\_\+zero\+\_\+angle}} (const double \&zero\+\_\+angle)
+\begin{DoxyCompactList}\small\item\em Set the zero\+\_\+angle. The zero\+\_\+angle is the angle between the closest positive encoder index and the zero configuration. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_a013bca03bd087e75791b7ccf69a9ff84}{set\+\_\+joint\+\_\+polarity}} (const bool \&reverse\+\_\+polarity)
+\begin{DoxyCompactList}\small\item\em Define if the encoder should turn clock-\/wize or counter clock-\/wize. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_af6b39a82b2e177a654bb0f06ce1938fb}{get\+\_\+measured\+\_\+angle}} () const
+\begin{DoxyCompactList}\small\item\em Get the measured angle of the joint. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_a9be5f1694b10faa29db6f3144872b263}{get\+\_\+measured\+\_\+velocity}} () const
+\begin{DoxyCompactList}\small\item\em Get the measured velocity of the joint. This data is computed on board of the control card. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_aa497545b9e020e435244e60691c97242}{get\+\_\+measured\+\_\+acceleration}} () const
+\begin{DoxyCompactList}\small\item\em Get the measured acceleration of the joint. This data is computed on board of the control card. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_abcf5604397b8836698834e8a1dae97c5}{get\+\_\+measured\+\_\+index\+\_\+angle}} () const
+\begin{DoxyCompactList}\small\item\em Get the measured index angle. There is one index per encoder rotation so there are gear\+\_\+ratio indexes per joint rotation. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_a6e1fb1e0810cc9ae99c159ada36fde11}{get\+\_\+zero\+\_\+angle}} () const
+\begin{DoxyCompactList}\small\item\em Get the zero\+\_\+angle\+\_\+. These are the angle between the starting pose and the theoretical zero pose. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_abe22400fcb35b8d222c4dc620024d01d}{set\+\_\+limit}} (const \mbox{\hyperlink{namespacemonopod__drivers_a85eecf8d086233e0a317729c3763f15e}{Measurements}} \&index, const \mbox{\hyperlink{structmonopod__drivers_1_1JointLimit}{Joint\+Limit}} \&limit)
+\begin{DoxyCompactList}\small\item\em Set the limit of the provided meassurement index. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structmonopod__drivers_1_1JointLimit}{Joint\+Limit}} \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_a73ad92b3a750a22d28d4727ecd41176a}{get\+\_\+limit}} (const \mbox{\hyperlink{namespacemonopod__drivers_a85eecf8d086233e0a317729c3763f15e}{Measurements}} \&index) const
+\begin{DoxyCompactList}\small\item\em Get the limit of the provided meassurement index. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_acda3a0ef4e078e61ad9c6da31e461c76}{check\+\_\+limits}} () const
+\begin{DoxyCompactList}\small\item\em Check all of the joint limits. True if in range otherwise false. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_ab557730fb87a25e3de9dde0f07470969}\label{classmonopod__drivers_1_1EncoderJointModule_ab557730fb87a25e3de9dde0f07470969}} 
+virtual void \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_ab557730fb87a25e3de9dde0f07470969}{print}} () const
+\begin{DoxyCompactList}\small\item\em Print the motor status and state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_af05a36fbc7c66935c0998c0b7ddc5868}{get\+\_\+joint\+\_\+measurement}} (const \mbox{\hyperlink{namespacemonopod__drivers_a85eecf8d086233e0a317729c3763f15e}{Measurements}} \&measurement\+\_\+id) const
+\begin{DoxyCompactList}\small\item\em Get encoder measurements and check if there are data or not. \end{DoxyCompactList}\item 
+virtual long int \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_a26d5264f5fd6e121131789edad3acd86}{get\+\_\+joint\+\_\+measurement\+\_\+index}} (const \mbox{\hyperlink{namespacemonopod__drivers_a85eecf8d086233e0a317729c3763f15e}{Measurements}} \&measurement\+\_\+id) const
+\begin{DoxyCompactList}\small\item\em Get the last encoder measurement index for a specific data. If there was no data yet, return NaN. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_ad5e10c6191d69ef40bacba9d9ec37c6a}\label{classmonopod__drivers_1_1EncoderJointModule_ad5e10c6191d69ef40bacba9d9ec37c6a}} 
+{\footnotesize template$<$typename T $>$ }\\static bool \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_ad5e10c6191d69ef40bacba9d9ec37c6a}{in\+\_\+range}} (T value, T min, T max)
+\begin{DoxyCompactList}\small\item\em Template helper checking if vector contains an element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_a73e555042dfb4d8ea732dee96ce88a49}\label{classmonopod__drivers_1_1EncoderJointModule_a73e555042dfb4d8ea732dee96ce88a49}} 
+\mbox{\hyperlink{namespacemonopod__drivers_a292411dcb88919df4d05216355c248d0}{Joint\+Names\+Index}} \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_a73e555042dfb4d8ea732dee96ce88a49}{joint\+\_\+id\+\_\+}}
+\begin{DoxyCompactList}\small\item\em This is the joint ID used when initializing the joint. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_a3c2c35ba79b90c3b5872225d04c6b214}\label{classmonopod__drivers_1_1EncoderJointModule_a3c2c35ba79b90c3b5872225d04c6b214}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmonopod__drivers_1_1EncoderInterface}{monopod\+\_\+drivers\+::\+Encoder\+Interface}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_a3c2c35ba79b90c3b5872225d04c6b214}{encoder\+\_\+}}
+\begin{DoxyCompactList}\small\item\em This is the pointer to the encoder interface. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespacemonopod__drivers_a85eecf8d086233e0a317729c3763f15e}{Measurements}}, \mbox{\hyperlink{structmonopod__drivers_1_1JointLimit}{Joint\+Limit}} $>$ \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_a43ddebe1d2fb19433650ab1fdf1112f8}{limits\+\_\+}}
+\begin{DoxyCompactList}\small\item\em This is the map of the limits for each meassurement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_a6158652b766a3d6215672f9ac44272ea}\label{classmonopod__drivers_1_1EncoderJointModule_a6158652b766a3d6215672f9ac44272ea}} 
+double \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_a6158652b766a3d6215672f9ac44272ea}{gear\+\_\+ratio\+\_\+}}
+\begin{DoxyCompactList}\small\item\em This correspond to the reduction ( $ \beta $) between the encoder rotation and the joint. $ \theta_{joint} = \theta_{encoder} / \beta $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_ad40c8219c24c7cc24027dd63ce7f385a}\label{classmonopod__drivers_1_1EncoderJointModule_ad40c8219c24c7cc24027dd63ce7f385a}} 
+double \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_ad40c8219c24c7cc24027dd63ce7f385a}{zero\+\_\+angle\+\_\+}}
+\begin{DoxyCompactList}\small\item\em This is the distance between the closest positive index and the zero configuration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_a19e0b551472109b8819dd46e936ce3a1}\label{classmonopod__drivers_1_1EncoderJointModule_a19e0b551472109b8819dd46e936ce3a1}} 
+double \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_a19e0b551472109b8819dd46e936ce3a1}{polarity\+\_\+}}
+\begin{DoxyCompactList}\small\item\em This change the encoder rotation direction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_af2047faf9143a56913fe05925a7e8ab1}\label{classmonopod__drivers_1_1EncoderJointModule_af2047faf9143a56913fe05925a7e8ab1}} 
+std\+::mutex \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule_af2047faf9143a56913fe05925a7e8ab1}{limit\+\_\+door\+\_\+}}
+\begin{DoxyCompactList}\small\item\em This is the mutex door for the limits\+\_\+ varible. Allows threadsafe limit checking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule}{Encoder\+Joint\+Module}} class is containing the joint information. It is here to help converting the data from the encoder side to the joint side. It also allows the calibration of the joint position during initialization. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_a5349d1cba67f3d062f5585e8f6bc2b3a}\label{classmonopod__drivers_1_1EncoderJointModule_a5349d1cba67f3d062f5585e8f6bc2b3a}} 
+\index{monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}!EncoderJointModule@{EncoderJointModule}}
+\index{EncoderJointModule@{EncoderJointModule}!monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}}
+\doxysubsubsection{\texorpdfstring{EncoderJointModule()}{EncoderJointModule()}}
+{\footnotesize\ttfamily monopod\+\_\+drivers\+::\+Encoder\+Joint\+Module\+::\+Encoder\+Joint\+Module (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacemonopod__drivers_a292411dcb88919df4d05216355c248d0}{Joint\+Names\+Index}}}]{joint\+\_\+id,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmonopod__drivers_1_1EncoderInterface}{monopod\+\_\+drivers\+::\+Encoder\+Interface}} $>$}]{encoder,  }\item[{const double \&}]{gear\+\_\+ratio,  }\item[{const double \&}]{zero\+\_\+angle,  }\item[{const bool \&}]{reverse\+\_\+polarity = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classmonopod__drivers_1_1EncoderJointModule}{Encoder\+Joint\+Module}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoder} & is the C++ object allowing us to receive sensor data. \\
+\hline
+{\em gear\+\_\+ratio} & is the gear ratio between the encoder and the joint. \\
+\hline
+{\em zero\+\_\+angle} & is the angle between the closest positive encoder index and the zero configuration. \\
+\hline
+{\em reverse\+\_\+polarity} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_acda3a0ef4e078e61ad9c6da31e461c76}\label{classmonopod__drivers_1_1EncoderJointModule_acda3a0ef4e078e61ad9c6da31e461c76}} 
+\index{monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}!check\_limits@{check\_limits}}
+\index{check\_limits@{check\_limits}!monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}}
+\doxysubsubsection{\texorpdfstring{check\_limits()}{check\_limits()}}
+{\footnotesize\ttfamily virtual bool monopod\+\_\+drivers\+::\+Encoder\+Joint\+Module\+::check\+\_\+limits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check all of the joint limits. True if in range otherwise false. 
+
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_af05a36fbc7c66935c0998c0b7ddc5868}\label{classmonopod__drivers_1_1EncoderJointModule_af05a36fbc7c66935c0998c0b7ddc5868}} 
+\index{monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}!get\_joint\_measurement@{get\_joint\_measurement}}
+\index{get\_joint\_measurement@{get\_joint\_measurement}!monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}}
+\doxysubsubsection{\texorpdfstring{get\_joint\_measurement()}{get\_joint\_measurement()}}
+{\footnotesize\ttfamily virtual double monopod\+\_\+drivers\+::\+Encoder\+Joint\+Module\+::get\+\_\+joint\+\_\+measurement (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemonopod__drivers_a85eecf8d086233e0a317729c3763f15e}{Measurements}} \&}]{measurement\+\_\+id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Get encoder measurements and check if there are data or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em measurement\+\_\+id} & is the id of the measurement you want to get. check\+: \mbox{\hyperlink{namespacemonopod__drivers_a85eecf8d086233e0a317729c3763f15e}{monopod\+\_\+drivers\+::\+Measurements}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double the measurement. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_a26d5264f5fd6e121131789edad3acd86}\label{classmonopod__drivers_1_1EncoderJointModule_a26d5264f5fd6e121131789edad3acd86}} 
+\index{monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}!get\_joint\_measurement\_index@{get\_joint\_measurement\_index}}
+\index{get\_joint\_measurement\_index@{get\_joint\_measurement\_index}!monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}}
+\doxysubsubsection{\texorpdfstring{get\_joint\_measurement\_index()}{get\_joint\_measurement\_index()}}
+{\footnotesize\ttfamily virtual long int monopod\+\_\+drivers\+::\+Encoder\+Joint\+Module\+::get\+\_\+joint\+\_\+measurement\+\_\+index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemonopod__drivers_a85eecf8d086233e0a317729c3763f15e}{Measurements}} \&}]{measurement\+\_\+id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Get the last encoder measurement index for a specific data. If there was no data yet, return NaN. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em measurement\+\_\+id} & is the id of the measurement you want to get. check\+: \mbox{\hyperlink{namespacemonopod__drivers_a85eecf8d086233e0a317729c3763f15e}{monopod\+\_\+drivers\+::\+Measurements}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double the measurement. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_a73ad92b3a750a22d28d4727ecd41176a}\label{classmonopod__drivers_1_1EncoderJointModule_a73ad92b3a750a22d28d4727ecd41176a}} 
+\index{monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}!get\_limit@{get\_limit}}
+\index{get\_limit@{get\_limit}!monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}}
+\doxysubsubsection{\texorpdfstring{get\_limit()}{get\_limit()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structmonopod__drivers_1_1JointLimit}{Joint\+Limit}} monopod\+\_\+drivers\+::\+Encoder\+Joint\+Module\+::get\+\_\+limit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemonopod__drivers_a85eecf8d086233e0a317729c3763f15e}{Measurements}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the limit of the provided meassurement index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & of the position type to set limit of \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_aa497545b9e020e435244e60691c97242}\label{classmonopod__drivers_1_1EncoderJointModule_aa497545b9e020e435244e60691c97242}} 
+\index{monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}!get\_measured\_acceleration@{get\_measured\_acceleration}}
+\index{get\_measured\_acceleration@{get\_measured\_acceleration}!monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}}
+\doxysubsubsection{\texorpdfstring{get\_measured\_acceleration()}{get\_measured\_acceleration()}}
+{\footnotesize\ttfamily virtual double monopod\+\_\+drivers\+::\+Encoder\+Joint\+Module\+::get\+\_\+measured\+\_\+acceleration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the measured acceleration of the joint. This data is computed on board of the control card. 
+
+\begin{DoxyReturn}{Returns}
+double (rad/s$^\wedge$2). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_af6b39a82b2e177a654bb0f06ce1938fb}\label{classmonopod__drivers_1_1EncoderJointModule_af6b39a82b2e177a654bb0f06ce1938fb}} 
+\index{monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}!get\_measured\_angle@{get\_measured\_angle}}
+\index{get\_measured\_angle@{get\_measured\_angle}!monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}}
+\doxysubsubsection{\texorpdfstring{get\_measured\_angle()}{get\_measured\_angle()}}
+{\footnotesize\ttfamily virtual double monopod\+\_\+drivers\+::\+Encoder\+Joint\+Module\+::get\+\_\+measured\+\_\+angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the measured angle of the joint. 
+
+\begin{DoxyReturn}{Returns}
+double (rad). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_abcf5604397b8836698834e8a1dae97c5}\label{classmonopod__drivers_1_1EncoderJointModule_abcf5604397b8836698834e8a1dae97c5}} 
+\index{monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}!get\_measured\_index\_angle@{get\_measured\_index\_angle}}
+\index{get\_measured\_index\_angle@{get\_measured\_index\_angle}!monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}}
+\doxysubsubsection{\texorpdfstring{get\_measured\_index\_angle()}{get\_measured\_index\_angle()}}
+{\footnotesize\ttfamily virtual double monopod\+\_\+drivers\+::\+Encoder\+Joint\+Module\+::get\+\_\+measured\+\_\+index\+\_\+angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the measured index angle. There is one index per encoder rotation so there are gear\+\_\+ratio indexes per joint rotation. 
+
+\begin{DoxyReturn}{Returns}
+double (rad). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_a9be5f1694b10faa29db6f3144872b263}\label{classmonopod__drivers_1_1EncoderJointModule_a9be5f1694b10faa29db6f3144872b263}} 
+\index{monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}!get\_measured\_velocity@{get\_measured\_velocity}}
+\index{get\_measured\_velocity@{get\_measured\_velocity}!monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}}
+\doxysubsubsection{\texorpdfstring{get\_measured\_velocity()}{get\_measured\_velocity()}}
+{\footnotesize\ttfamily virtual double monopod\+\_\+drivers\+::\+Encoder\+Joint\+Module\+::get\+\_\+measured\+\_\+velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the measured velocity of the joint. This data is computed on board of the control card. 
+
+\begin{DoxyReturn}{Returns}
+double (rad/s). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_a6e1fb1e0810cc9ae99c159ada36fde11}\label{classmonopod__drivers_1_1EncoderJointModule_a6e1fb1e0810cc9ae99c159ada36fde11}} 
+\index{monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}!get\_zero\_angle@{get\_zero\_angle}}
+\index{get\_zero\_angle@{get\_zero\_angle}!monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}}
+\doxysubsubsection{\texorpdfstring{get\_zero\_angle()}{get\_zero\_angle()}}
+{\footnotesize\ttfamily virtual double monopod\+\_\+drivers\+::\+Encoder\+Joint\+Module\+::get\+\_\+zero\+\_\+angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the zero\+\_\+angle\+\_\+. These are the angle between the starting pose and the theoretical zero pose. 
+
+\begin{DoxyReturn}{Returns}
+double (rad). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_a013bca03bd087e75791b7ccf69a9ff84}\label{classmonopod__drivers_1_1EncoderJointModule_a013bca03bd087e75791b7ccf69a9ff84}} 
+\index{monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}!set\_joint\_polarity@{set\_joint\_polarity}}
+\index{set\_joint\_polarity@{set\_joint\_polarity}!monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}}
+\doxysubsubsection{\texorpdfstring{set\_joint\_polarity()}{set\_joint\_polarity()}}
+{\footnotesize\ttfamily virtual void monopod\+\_\+drivers\+::\+Encoder\+Joint\+Module\+::set\+\_\+joint\+\_\+polarity (\begin{DoxyParamCaption}\item[{const bool \&}]{reverse\+\_\+polarity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Define if the encoder should turn clock-\/wize or counter clock-\/wize. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reverse\+\_\+polarity} & true\+:reverse rotation axis, false\+:do nothing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_abe22400fcb35b8d222c4dc620024d01d}\label{classmonopod__drivers_1_1EncoderJointModule_abe22400fcb35b8d222c4dc620024d01d}} 
+\index{monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}!set\_limit@{set\_limit}}
+\index{set\_limit@{set\_limit}!monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}}
+\doxysubsubsection{\texorpdfstring{set\_limit()}{set\_limit()}}
+{\footnotesize\ttfamily virtual void monopod\+\_\+drivers\+::\+Encoder\+Joint\+Module\+::set\+\_\+limit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemonopod__drivers_a85eecf8d086233e0a317729c3763f15e}{Measurements}} \&}]{index,  }\item[{const \mbox{\hyperlink{structmonopod__drivers_1_1JointLimit}{Joint\+Limit}} \&}]{limit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the limit of the provided meassurement index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & of the position type to set limit of \\
+\hline
+{\em limit} & is a struct holding the limit for the specified meassurement. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_a68edc32a90f23edfcae83260c06880a5}\label{classmonopod__drivers_1_1EncoderJointModule_a68edc32a90f23edfcae83260c06880a5}} 
+\index{monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}!set\_zero\_angle@{set\_zero\_angle}}
+\index{set\_zero\_angle@{set\_zero\_angle}!monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}}
+\doxysubsubsection{\texorpdfstring{set\_zero\_angle()}{set\_zero\_angle()}}
+{\footnotesize\ttfamily virtual void monopod\+\_\+drivers\+::\+Encoder\+Joint\+Module\+::set\+\_\+zero\+\_\+angle (\begin{DoxyParamCaption}\item[{const double \&}]{zero\+\_\+angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the zero\+\_\+angle. The zero\+\_\+angle is the angle between the closest positive encoder index and the zero configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zero\+\_\+angle} & (rad) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmonopod__drivers_1_1EncoderJointModule_a43ddebe1d2fb19433650ab1fdf1112f8}\label{classmonopod__drivers_1_1EncoderJointModule_a43ddebe1d2fb19433650ab1fdf1112f8}} 
+\index{monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}!limits\_@{limits\_}}
+\index{limits\_@{limits\_}!monopod\_drivers::EncoderJointModule@{monopod\_drivers::EncoderJointModule}}
+\doxysubsubsection{\texorpdfstring{limits\_}{limits\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespacemonopod__drivers_a85eecf8d086233e0a317729c3763f15e}{Measurements}}, \mbox{\hyperlink{structmonopod__drivers_1_1JointLimit}{Joint\+Limit}}$>$ monopod\+\_\+drivers\+::\+Encoder\+Joint\+Module\+::limits\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{      \{position, \{\}\}, \{velocity, \{\}\}, \{acceleration, \{\}\}\}}
+
+\end{DoxyCode}
+
+
+This is the map of the limits for each meassurement. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/dawson/\+Documents/\+Repos/os2r-\/superbuild/src/monopod\+\_\+sdk/include/monopod\+\_\+sdk/monopod\+\_\+drivers/encoder\+\_\+joint\+\_\+module.\+hpp\end{DoxyCompactItemize}
