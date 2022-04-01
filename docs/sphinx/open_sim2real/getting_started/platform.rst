@@ -24,10 +24,10 @@ Additional we expect an end-to-end sim2real platform to provide the following it
 What's our Real
 ---------------
 
- The physical robot was adapted from the open source robotic leg from the
- `Open Dynamic Robot Initiative (ORDI) <https://open-dynamic-robot-initiative.github.io/>`_\ .
+The physical robot was adapted from the open source robotic leg from the
+`Open Dynamic Robot Initiative (ORDI) <https://open-dynamic-robot-initiative.github.io/>`_\ .
 
- .. image:: media/monopod.png
+.. image:: media/monopod.png
 
 
 
