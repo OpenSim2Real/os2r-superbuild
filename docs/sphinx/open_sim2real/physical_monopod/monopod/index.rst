@@ -8,7 +8,6 @@ The hardware platform has been completely based around the work done by the
 The packages we provide that are built around ORDI are: :ref:`monopod_sdk`, and all the hardware.
 
 .. toctree::
-  :hidden:
   :caption: Building The Monopod
 
   build_requirements

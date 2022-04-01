@@ -2,7 +2,6 @@ Installation
 ============
 
 .. toctree::
-  :hidden:
   :caption: Installation
 
   support_policy
