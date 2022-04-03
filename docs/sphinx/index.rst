@@ -43,3 +43,4 @@
   monopod_sdk_index
   scenario_monopod_index
   gym-os2r_index
+  gym-os2r-real_index
