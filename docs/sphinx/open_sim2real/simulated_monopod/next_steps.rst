@@ -53,6 +53,9 @@ reward functions making development of new control algorithms for the monopod ea
   make_env = functools.partial(make_env_from_id, env_id=env_id, **kwargs)
   env = randomizers.monopod.MonopodEnvRandomizer(env=make_env)
 
+
+.. _custom_reset:
+
 Custom Reset Position
 ---------------------
 
@@ -117,10 +120,13 @@ The model configuration handles the following items:
 If you still want to update the model config here is a short explanation on
 what to expect. Firstly It is recommended to be have ``gym-os2r`` installed as a
 developer. The config implementation can be found :py:mod:`here <gym_os2r.models.config>`.
-The default configuration file is found in "gym_os2r/models/config/default/settings.yaml".
-The example showing how to update reset positions above shows how the configuration can be
-updated externally (be very careful because there are minimal safe guards). Alternatively
-you can update the "settings.yaml" file directly. This is the recommended method for larger
+
+
+The default configuration file is found in ``gym_os2r/models/config/default/settings.yaml``.
+The example showing how to update or add reset positions :ref:`here <custom_reset>`, shows how the configuration can be
+updated externally (be careful, there aren't many safe guards for bad modifications).
+
+Alternatively you can update the ``settings.yaml`` file directly. This is the recommended method for larger
 changes. The settings file has a little bit of documentation describing what changing each
 variable represents.
 
