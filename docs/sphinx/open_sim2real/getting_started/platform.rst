@@ -30,8 +30,7 @@ The physical robot was adapted from the open source robotic leg from the
 .. image:: media/monopod.png
 
 
-
- .. _what_is_our_sim:
+ .. _why_our_sim:
 
  What's our Sim
  --------------

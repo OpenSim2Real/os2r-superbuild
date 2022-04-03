@@ -108,7 +108,7 @@ The model configuration handles the following items:
 4. Allows observation masking (Omit specified observation from observation space)
 5. Defines robot dimensions. Used to calculate leg angles to match specific reset height
 
-.. warn::
+.. warning::
 
   I do not recommend changing the model config file without a complete understanding
   of the projects software stack. Configuration files might be fragile and will be
