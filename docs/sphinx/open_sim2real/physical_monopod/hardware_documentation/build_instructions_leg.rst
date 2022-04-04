@@ -44,7 +44,7 @@ The Robotic Leg requires the following STL parts to be printed:
 +-----------+-------------------------------------------------------------------------------------------------------------------------------------------+
 | 1         | `Upper Leg Cover Shell <https://github.com/OpenSim2Real/hardware_repository/blob/main/cad/upper-leg/upper_leg_200mm_cover.stl>`_          |
 +-----------+-------------------------------------------------------------------------------------------------------------------------------------------+
-| 1 |  `Lower Leg <https://github.com/OpenSim2Real/hardware_repository/blob/main/cad/lower-leg/lower-leg.stl>`_                                 |
+| 1         |  `Lower Leg <https://github.com/OpenSim2Real/hardware_repository/blob/main/cad/lower-leg/lower-leg.stl>`_                                 |
 +-----------+-------------------------------------------------------------------------------------------------------------------------------------------+
 | 2         | `Codewheel Mount <https://github.com/OpenSim2Real/hardware_repository/blob/main/cad/static-hip/encoder_codewheel_kit_mount.stl>`_         |
 +-----------+-------------------------------------------------------------------------------------------------------------------------------------------+
