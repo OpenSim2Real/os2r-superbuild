@@ -45,6 +45,12 @@ add_custom_target(superbuild_dot_file ALL
     COMMAND ${CMAKE_COMMAND} -E copy "${SUB_PROJECTS_BUILD_DIR}/os2r-superbuild.dot" "${SPHINX_SOURCE}/open_sim2real/physical_monopod/superbuild/os2r-superbuild.dot"
     COMMENT "Copying os2r-superbuild dot file"
   )
+
+add_custom_target(hardware-documentation_sphinx ALL
+    COMMAND ${CMAKE_COMMAND} -E copy_directory "${SUB_PROJECTS_BUILD_DIR}/src/hardware-documentation/docs" "${SPHINX_SOURCE}/open_sim2real/physical_monopod/hardware_documentation"
+    COMMENT "Copying hardware-documentation sphinx build"
+  )
+
 # Extend the Python path including before generating the website
 # set(SPHINX_CMD export PYTHONPATH="${PYTHONPATHS}:$ENV{PYTHONPATH}" &&)
 set(SPHINX_CMD ${CMAKE_COMMAND} -E env PYTHONPATH="${PYTHONPATHS}:$ENV{PYTHONPATH}")

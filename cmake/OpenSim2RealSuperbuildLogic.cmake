@@ -183,3 +183,7 @@ if(OPENSIM2REAL_ENABLE_SCENARIO OR OPENSIM2REAL_ENABLE_ALL OR OPENSIM2REAL_ENABL
     endif()
   endif()
 endif()
+
+IF(OPENSIM2REAL_ENABLE_BUILDDOCS)
+    find_or_build_package(hardware-documentation)
+ENDIF()
