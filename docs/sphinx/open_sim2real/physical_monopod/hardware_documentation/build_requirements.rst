@@ -13,79 +13,79 @@ As far as possible, the tools required for successful construction are chosen to
 readily available.
 
 The following mechanical tools are required:
-* Arbor Press
-* Complete set of imperial and metric hex screwdrivers
-* Complete set of imperial and metric cross screwdrivers
-* Complete set of imperial and metric hole taps
-* Complete set of drills
-* Needlenose tweezers of various sizes
-* Assorted Files & Sandpaper
-* Mini-drill press
-* M2.5 and M3 helicoil taps
-* M2.5 and M3 helicoil insertion tools.
-* M2.5 and M3 helicoil tang breakoff tools
-* Handsaw
-* Calipers
-* Epoxy
-* Loctite
-* Masking Tape
-* Kapton Tape, as thin as possible
-* Tabletop Vise
-* 3D printer (recommended)
-* Waterjet cutter (recommended)
+- Arbor Press
+- Complete set of imperial and metric hex screwdrivers
+- Complete set of imperial and metric cross screwdrivers
+- Complete set of imperial and metric hole taps
+- Complete set of drills
+- Needlenose tweezers of various sizes
+- Assorted Files & Sandpaper
+- Mini-drill press
+- M2.5 and M3 helicoil taps
+- M2.5 and M3 helicoil insertion tools.
+- M2.5 and M3 helicoil tang breakoff tools
+- Handsaw
+- Calipers
+- Epoxy
+- Loctite
+- Masking Tape
+- Kapton Tape, as thin as possible
+- Tabletop Vise
+- 3D printer (recommended)
+- Waterjet cutter (recommended)
 
-..figure:: tools_images/drill.jpg
-..figure:: tools_images/drillbits.jpg
-..figure:: tools_images/ducttape.jpg
-..figure:: tools_images/electrical_tape.jpg
-..figure:: tools_images/epoxy.jpg
-..figure:: tools_images/files.jpg
-..figure:: tools_images/gluegun.jpg
-..figure:: tools_images/handdrill.jpg
-..figure:: tools_images/heatgun.jpg
-..figure:: tools_images/helicoilinsertion.jpg
-..figure:: tools_images/hex.jpg
-..figure:: tools_images/jumper.jpg
-..figure:: tools_images/maskingtape.jpg
-..figure:: tools_images/ruler.jpg
-..figure:: tools_images/scissors.jpg
-..figure:: tools_images/screwdriver.jpg
-..figure:: tools_images/sheath.jpg
-..figure:: tools_images/solderhand.jpg
-..figure:: tools_images/solderstation.jpg
-..figure:: tools_images/tabletopvise.jpg
-..figure:: tools_images/taps.jpg
-..figure:: tools_images/tweezers.jpg
-..figure:: tools_images/tweezers_2.jpg
-..figure:: tools_images/vise.jpg
-..figure:: tools_images/wrench_1.jpg
-..figure:: tools_images/wrench_2.jpg
-..figure:: tools_images/wrench_3.jpg
-..figure:: tools_images/3dprinter_2.jpg
-..figure:: tools_images/3dprinter_3.jpg
-..figure:: tools_images/arborpress.jpg
-..figure:: tools_images/blackwire.jpg
-..figure:: tools_images/caliper.jpg
+.. figure:: tools_images/drill.jpg
+.. figure:: tools_images/drillbits.jpg
+.. figure:: tools_images/ducttape.jpg
+.. figure:: tools_images/electrical_tape.jpg
+.. figure:: tools_images/epoxy.jpg
+.. figure:: tools_images/files.jpg
+.. figure:: tools_images/gluegun.jpg
+.. figure:: tools_images/handdrill.jpg
+.. figure:: tools_images/heatgun.jpg
+.. figure:: tools_images/helicoilinsertion.jpg
+.. figure:: tools_images/hex.jpg
+.. figure:: tools_images/jumper.jpg
+.. figure:: tools_images/maskingtape.jpg
+.. figure:: tools_images/ruler.jpg
+.. figure:: tools_images/scissors.jpg
+.. figure:: tools_images/screwdriver.jpg
+.. figure:: tools_images/sheath.jpg
+.. figure:: tools_images/solderhand.jpg
+.. figure:: tools_images/solderstation.jpg
+.. figure:: tools_images/tabletopvise.jpg
+.. figure:: tools_images/taps.jpg
+.. figure:: tools_images/tweezers.jpg
+.. figure:: tools_images/tweezers_2.jpg
+.. figure:: tools_images/vise.jpg
+.. figure:: tools_images/wrench_1.jpg
+.. figure:: tools_images/wrench_2.jpg
+.. figure:: tools_images/wrench_3.jpg
+.. figure:: tools_images/3dprinter_2.jpg
+.. figure:: tools_images/3dprinter_3.jpg
+.. figure:: tools_images/arborpress.jpg
+.. figure:: tools_images/blackwire.jpg
+.. figure:: tools_images/caliper.jpg
 
 If the encoder code wheels require rework(see :ref`Robotic Leg Build Instructions <build_instructions_leg>`), 
 then access to a well-equipped machine shop is required. This will be explained in greater detail in a later section, 
 but avoiding rework of encoder code wheels by purchasing ready-made code wheels is recommended. Otherwise, access to the
 following equipment is required:
-* Lathe
-* Milling machine
+- Lathe
+- Milling machine
 
 The following electrical tools are required:
-* Soldering Station
-* Thin solder wire
-* Assorted Heat Shrink
-* Wire Stripper
-* Wire Cutter
-* JST Crimper
+- Soldering Station
+- Thin solder wire
+- Assorted Heat Shrink
+- Wire Stripper
+- Wire Cutter
+- JST Crimper
 
-..figure:: tools_images/solder.jpg
-..figure:: tools_images/stripper.jpg
-..figure:: tools_images/heatshrink.jpg
-..figure:: tools_images/wire_snips.jpg
+.. figure:: tools_images/solder.jpg
+.. figure:: tools_images/stripper.jpg
+.. figure:: tools_images/heatshrink.jpg
+.. figure:: tools_images/wire_snips.jpg
 
 Skill Requirements
 ------------------
