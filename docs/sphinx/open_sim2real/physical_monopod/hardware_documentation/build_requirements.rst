@@ -9,7 +9,7 @@ The following tools and skills are required for successful construction of the M
 Shop & Tool Requirements
 ------------------------
 
-As far as possible, the tools required for successful construction are chosen to be 
+As far as possible, the tools required for successful construction are chosen to be
 readily available.
 
 The following mechanical tools are required:
@@ -67,8 +67,8 @@ The following mechanical tools are required:
 .. figure:: tools_images/blackwire.jpg
 .. figure:: tools_images/caliper.jpg
 
-If the encoder code wheels require rework(see :ref`Robotic Leg Build Instructions <build_instructions_leg>`), 
-then access to a well-equipped machine shop is required. This will be explained in greater detail in a later section, 
+If the encoder code wheels require rework(see :ref`Robotic Leg Build Instructions <build_instructions_leg>`),
+then access to a well-equipped machine shop is required. This will be explained in greater detail in a later section,
 but avoiding rework of encoder code wheels by purchasing ready-made code wheels is recommended. Otherwise, access to the
 following equipment is required:
 - Lathe
@@ -105,12 +105,11 @@ The following electrical skills are required to assemble the physical robot:
 
 The following software skills are required to setup the code infrastructure for the physical robot:
 - Python, C, C++ programming languages
-- Familiarity with Windows and Linux operating systems. A dual-booted laptop with Windows 10/11 and Ubuntu 18.04/20.04 
-  or PopOS, a decent processor and at least 8GB of RAM is recommended. 
+- Familiarity with Windows and Linux operating systems. A dual-booted laptop with Windows 10/11 and Ubuntu 18.04/20.04 or PopOS, a decent processor and at least 8GB of RAM is recommended. 
 - Git version control
 - Embedded software development
 - Familiarity with Field Oriented Control for motors.
 
-This build assumes the availability of computers running Ubuntu 20.04 and Windows 10 operating systems. 
-Learning resources to gain familiarity with the necessary toolchains and techniques are in 
+This build assumes the availability of computers running Ubuntu 20.04 and Windows 10 operating systems.
+Learning resources to gain familiarity with the necessary toolchains and techniques are in
 :ref`Further Reading & Resources <monopod_resources>`.
