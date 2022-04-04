@@ -17,9 +17,9 @@
 # -- Project information -----------------------------------------------------
 from datetime import datetime
 
-project = "overlord_docs"
+project = "OpenSim2Real"
 copyright = f"{datetime.now().year}, University of British Columbia"
-author = "Dawson Horvath"
+author = "D. Horvath, N. Ioannidis, K. Gordon, D. Widjaja"
 
 # -- General configuration ---------------------------------------------------
 
@@ -80,6 +80,8 @@ html_theme_options = {
     "single_page": False,
 }
 
+html_favicon = 'favicon.ico'
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
@@ -98,7 +100,7 @@ todo_include_todos = True
 
 # -- Options for breathe extension ----------------------------------------------
 
-breathe_default_project = "overlord_docs"
+breathe_default_project = "OpenSim2Real"
 
 # -- Options for sphinx_multiversion extension ----------------------------------
 
