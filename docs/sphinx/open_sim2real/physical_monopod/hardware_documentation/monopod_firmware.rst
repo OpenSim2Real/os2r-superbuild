@@ -7,12 +7,14 @@ Introduction
 This page explains how to flash the prerequisite firmware onto the TI Launchpad boards.
 
 There are 2 different firmware packages which need to be flashed onto 2 TI Launchpad boards.
+
 - The first firmware controls the motors and reads the encoders on the Robotic Leg.
 - The second firmware reads the encoders on the Central Pivot.
   Communication to and from both TI Launchpads to a computer is done via CAN protocol.
 
 The following instructions require the use of a Windows 10 operating system. The instructions are structured as
 follows:
+
 - Setting up TI CCS and Motorware
 - Firmware Build Instructions
 - Firmware Flash Instructions
@@ -35,12 +37,12 @@ Motorware here `TI Motorware <https://www.ti.com/tool/MOTORWARE>`_, and follow t
 Motorware is only available for Windows operating systems.
 
 Several repositories from ODRI need to be downloaded:
-- `ODRI Motor User Configurations <https://github.com/open-dynamic-robot-initiative/user_config_f28069m_drv8305>`_:
-  This repository contains motor configuration information for the specific type of BLDC motor used.
-- `ODRI Motorware Patch <https://github.com/open-dynamic-robot-initiative/amd_motorware_ext>`_: This repository
-  contains a patch to the Motorware firmware.
+
+- `ODRI Motor User Configurations <https://github.com/open-dynamic-robot-initiative/user_config_f28069m_drv8305>`_: This repository contains motor configuration information for the specific type of BLDC motor used.
+- `ODRI Motorware Patch <https://github.com/open-dynamic-robot-initiative/amd_motorware_ext>`_: This repository contains a patch to the Motorware firmware.
 
 Finally, the customized firmware repositories used must also be downloaded or cloned:
+
 - `Dual Motor Control Firwmare <https://github.com/OpenSim2Real/mw_dual_motor_torque_ctrl>`_
 - `Encoder Measurement Firmware <https://github.com/OpenSim2Real/encoder_measurement>`_
 
@@ -87,6 +89,7 @@ TI Code Composer Studio is used to build the firmware for both motor control on 
 on the Central Pivot.
 
 To import a project into your workspace,
+
 - Open TI CCS.
 - On the top bar, select the "Projects" icon, and in the drop down menu, select the option to "Import Project".
 - A new window will open, and there is an option to browse your filesystem. Navigate to the location of the projects,
@@ -102,11 +105,13 @@ It is also possible to write the program to the flash memory, in which case the 
 after depowering.
 
 To set the build setting such that the firmware is written to either RAM or flash, follow the following instructions:
+
 - Right-click the project of interest on the CCS project explorer.
 - On the drop-down menu, select "Build Settings".
 - It is now possible to set up the build settings to either to a RAM build or a flash build.
 
 To build a project from scratch:
+
 - First, ensure that there are no residual build artifacts from a previous attempt at building the project. On the
   Project Explorer side bar, right click the current project for a drop-down menu and select the "Clean Project" option.
 - To build the project, right click the current project in the Project Explorer side bar again and select the "Build
@@ -127,6 +132,7 @@ TODO: instructions on how to test connection
 
 The TI LAUNCHXL microcontroller board has several jumper pins and switches, which must be set correctly for the board
 to be programmed:
+
 - JP1 and JP2 connects the power domain of the microcontroller to the power supplied by USB cable. When flashing, keep JP1 and JP2 on.
 - JP6 and JP7 changes which pins the USB/UART peripherals of the microcontroller are connected to. We kept JP6 and JP7
   both on, disabling the USB/UART peripheral. This is because the firmware we will be running do not need this peripheral.
@@ -134,6 +140,7 @@ to be programmed:
 
 Additionally, there are 3 up-down switches which determine where the microcontroller will boot a program from upon
 power-on.
+
 - To allow TI CCS to program the microcontroller, set the switches to S1 = High, S2 = High, S3 = High. This puts the
   boot sequence of the microcontroller under the control of the XDS100v2 debug probe integrated into the microcontroller
   board, allowing for program flashing and debug capabilities.
@@ -155,6 +162,7 @@ Instructions for Robotic Leg Firmware
 -------------------------------------
 
 To flash the firmware for the Robotic Leg,
+
 1. Open the -mw_dual_motor_torque_ctrl- firmware on TI CCS.
 2. Clean the project, and do a build, with the build settings set to "Release" mode.
 3. Debug the project, as shown above. The debugger can be terminated right after the debugger has finished loading.
@@ -164,6 +172,7 @@ Instructions for Central Pivot Firmware
 ---------------------------------------
 
 To flash the firmware for the Central Pivot,
+
 1. Open the -encoder_measurement- firmware on TI CCS.
 2. Clean the project, and do a build, with the build settings set to "Release" mode.
 3. Debug the project, as shown above. The debugger can be terminated right after the debugger has finished loading.
