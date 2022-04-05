@@ -160,8 +160,7 @@ Suggestions:
 Center Pulley Preparation
 -------------------------
 
-ODRI has the following instructions to prepare the center pulley:
-- `Center Pulley <https://github.com/open-dynamic-robot-initiative/open_robot_actuator_hardware/blob/master/mechanics/actuator_module_v1/details/details_center_pulley_preparation.md#details-center-pulley-preparation>`_
+`ODRI has the following instructions to prepare the center pulley <https://github.com/open-dynamic-robot-initiative/open_robot_actuator_hardware/blob/master/mechanics/actuator_module_v1/details/details_center_pulley_preparation.md#details-center-pulley-preparation>`_
 
 Suggestions:
 
