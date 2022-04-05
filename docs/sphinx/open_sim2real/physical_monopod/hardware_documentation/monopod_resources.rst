@@ -1,3 +1,5 @@
+.. _monopod_resources:
+
 Further Readings & Resources
 ============================
 
@@ -47,7 +49,7 @@ relevant to Field Oriented Control, but the whole series is worth watching.
 - `Teaching Old Motors New Tricks, Part 2 <https://www.youtube.com/watch?v=VI7pdKrchM0>`_
 - `Teaching Old Motors New Tricks, Part 3 <https://www.youtube.com/watch?v=5eQyoVMz1dY>`_
 - `Teaching Old Motors New Tricks, Part 4 <https://www.youtube.com/watch?v=bZwLFpXhFbI>`_
-- `Teaching Old Motors New Tricks, Part 2 <https://www.youtube.com/watch?v=qWkaJu6o7lI>`_
+- `Teaching Old Motors New Tricks, Part 5 <https://www.youtube.com/watch?v=qWkaJu6o7lI>`_
 
 The Controller Area Network(CAN) Protocol is a widely used communications protocol in the automotive and
 marine industries. Vector is a major supplier of CAN signal analyzers, and they have a good introduction

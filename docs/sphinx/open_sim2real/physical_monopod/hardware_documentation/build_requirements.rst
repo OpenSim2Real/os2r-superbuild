@@ -1,3 +1,5 @@
+.. _build_requirements:
+
 Build Requirements
 ==================
 
@@ -105,7 +107,7 @@ The following electrical skills are required to assemble the physical robot:
 
 The following software skills are required to setup the code infrastructure for the physical robot:
 - Python, C, C++ programming languages
-- Familiarity with Windows and Linux operating systems. A dual-booted laptop with Windows 10/11 and Ubuntu 18.04/20.04 or PopOS, a decent processor and at least 8GB of RAM is recommended. 
+- Familiarity with Windows and Linux operating systems. A dual-booted laptop with Windows 10/11 and Ubuntu 18.04/20.04 or PopOS, a decent processor and at least 8GB of RAM is recommended.
 - Git version control
 - Embedded software development
 - Familiarity with Field Oriented Control for motors.

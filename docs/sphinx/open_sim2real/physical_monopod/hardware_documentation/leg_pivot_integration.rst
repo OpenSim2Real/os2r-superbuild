@@ -1,3 +1,5 @@
+.. _leg_pivot_integration:
+
 Central Pivot - Robotic Leg Integration
 =======================================
 

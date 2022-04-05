@@ -1,3 +1,5 @@
+.. _monopod_firmware:
+
 Monopod Firmware Setup & Flash
 ==============================
 

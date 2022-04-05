@@ -1,3 +1,5 @@
+.. _build_instructions_leg:
+
 Robotic Leg Build Instructions
 ==============================
 

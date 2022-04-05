@@ -1,3 +1,5 @@
+.. _basic_tests_pivot:
+
 Central Pivot Testing Procedure
 ===============================
 
