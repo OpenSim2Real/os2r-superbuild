@@ -58,16 +58,16 @@ to the protocol:
 The Texas Instruments LAUNCHXL-F28069M is the microcontroller evaluation board used for motor control on
 the Robotic Leg, and encoder measurement on the Central Pivot. Here are several useful links:
 
-- `Product Link <https://www.ti.com/tool/LAUNCHXL-F28069M>`_
-- `General User Guide <https://www.ti.com/lit/ug/sprui11b/sprui11b.pdf>`_
-- `Quick Start Guide <https://www.ti.com/lit/ml/sprui02/sprui02.pdf>`_
+- `LAUNCHXL Product Link <https://www.ti.com/tool/LAUNCHXL-F28069M>`_
+- `LAUNCHXL General User Guide <https://www.ti.com/lit/ug/sprui11b/sprui11b.pdf>`_
+- `LAUNCHXL Quick Start Guide <https://www.ti.com/lit/ml/sprui02/sprui02.pdf>`_
 
 The Texas Instruments BOOSTXL-DRV8305EVM is an evaluation board for the DRV8305 motor gate driver. It drives
 3-phase motors, such as the two BLDC motors used on the Robotic Leg. 2 of these motor driver evaluation boards
 can be connected to the TI LAUNCHXL evaluation board. Here are several useful links:
 
-- `Product Link <https://www.ti.com/tool/BOOSTXL-DRV8305EVM>`_
-- `General User Guide <https://www.ti.com/lit/ug/slvuai8a/slvuai8a.pdf>`_
+- `BOOSTXL Product Link <https://www.ti.com/tool/BOOSTXL-DRV8305EVM>`_
+- `BOOSTXL General User Guide <https://www.ti.com/lit/ug/slvuai8a/slvuai8a.pdf>`_
 
 An Onshape document is a repository for all CAD models for a single project. OnShape has a learning portal with
 several courses to get familiar with the software platform:

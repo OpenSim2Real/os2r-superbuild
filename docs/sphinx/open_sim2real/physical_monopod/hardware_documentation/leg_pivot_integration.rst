@@ -109,7 +109,7 @@ Instructions to connect motor phase wires:
 2. Solder on female gold-tinned connectors onto the motor phase wires coming out of the Robotic Leg. Cover the exposed
    connectors with heat shrink tubing for insulation, and also cover the motor phase wires coming out of the robotic Leg
    with expandable plastic sleeving for additional protection.
-2. Connect the Robotic Leg motor phase wires with the long motor phase cables.
+3. Connect the Robotic Leg motor phase wires with the long motor phase cables.
 
 .. figure:: in_images/wiring_1.jpg
 .. figure:: in_images/wiring_2.jpg
