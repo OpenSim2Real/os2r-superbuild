@@ -46,18 +46,18 @@ This guide comprises of the following sections in order:
 - :ref:`Build Requirements <build_requirements>`: A list of mechanical, electrical and software skills
   to construct and run basic tests on the Monopod, with a list of required tools.
 - :ref:`Bill of Materials <bom>`: Bill of materials for the entire Monopod hardware platform.
-- :ref:`Firmware Setup <monopod_firmware>`: Instructions on how to flash and run the motor control 
+- :ref:`Firmware Setup <monopod_firmware>`: Instructions on how to flash and run the motor control
   microcontroller firmware.
 - :ref:`Robotic Leg Build Instructions <build_instructions_leg>`: Comprehensive assembly instructions for
   the Robotic Leg.
 - :ref:`Robotic Leg Testing Procedure <basic_tests_leg>`: Basic testing procedures for the Robotic Leg
-- :ref:`Central Pivot Build Instructions <build_instructions_pivot>`: Comprehensive assembly instructions 
+- :ref:`Central Pivot Build Instructions <build_instructions_pivot>`: Comprehensive assembly instructions
   for the Central Pivot.
 - :ref:`Central Pivot Testing Procedure <basic_tests_pivot>`: Basic testing procedures for the Central Pivot
-- :ref:`Central Pivot - Robotic Leg Integration <leg_pivot_integration`: Instructions on integrating the 
+- :ref:`Central Pivot - Robotic Leg Integration <leg_pivot_integration>`: Instructions on integrating the 
   Central Pivot and Robotic Leg builds.
 - :ref:`Hardware Integration Testing<leg_pivot_integration_testing>`: Basic tests to run on the completed Monopod.
-- :ref:`Further Reading & Resources <monopod_resources>`: Further readings and relevant resources to aid 
+- :ref:`Further Reading & Resources <monopod_resources>`: Further readings and relevant resources to aid
   the assembly procedure.
 
 .. toctree::
