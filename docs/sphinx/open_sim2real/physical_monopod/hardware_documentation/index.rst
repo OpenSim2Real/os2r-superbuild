@@ -12,6 +12,10 @@ A major component of the OpenSim2Real project is the development of a physical, 
 models running in simulation can be applied to the physical world. The hardware platform, called the Monopod,
 has been completely based around prior work by the `Open Dynamic Robot Initiative (ODRI) <https://open-dynamic-robot-initiative.github.io/>`_.
 
+The basic flow of information for the monopod is shown by he system diagram below.
+
+.. figure:: fulldiagram.png
+
 Introduction to Assembly/Testing Process
 ----------------------------------------
 
@@ -21,18 +25,18 @@ The Robotic Leg is based on a design provided by ORDI. It is a single leg with 2
 allowing jointed motion within a 2D plane. Actuation of the robotic leg is done with 2 BLDC motors with a large
 gear reduction, and measurement is done with 2 encoders.
 
-.. figure:: leg_images/leg.png
+.. figure:: physical/leg_images/leg.png
 
 The Central Pivot is a structure to constrain the motion of the Robotic Leg to be approximately planar.
 This allows the Robotic Leg to move freely within a 2-dimensional plane without falling on its side
 without requiring bulky supports, gantry cranes or treadmills.
 
-.. figure:: cp_images/cp.png
+.. figure:: physical/cp_images/cp.png
 
 The Robotic Leg and the Central Pivot can then be tested separately, before being combined into the completed
 Monopod. The completed Monopod can then be tested as a whole before models are run on it.
 
-.. figure:: in_images/in.png
+.. figure:: physical/in_images/in.png
 
 Assembly/Testing Instructions
 -----------------------------
@@ -54,7 +58,7 @@ This guide comprises of the following sections in order:
 - :ref:`Central Pivot Build Instructions <build_instructions_pivot>`: Comprehensive assembly instructions
   for the Central Pivot.
 - :ref:`Central Pivot Testing Procedure <basic_tests_pivot>`: Basic testing procedures for the Central Pivot
-- :ref:`Central Pivot - Robotic Leg Integration <leg_pivot_integration>`: Instructions on integrating the 
+- :ref:`Central Pivot - Robotic Leg Integration <leg_pivot_integration>`: Instructions on integrating the
   Central Pivot and Robotic Leg builds.
 - :ref:`Hardware Integration Testing<leg_pivot_integration_testing>`: Basic tests to run on the completed Monopod.
 - :ref:`Further Reading & Resources <monopod_resources>`: Further readings and relevant resources to aid
@@ -64,13 +68,13 @@ This guide comprises of the following sections in order:
   :hidden:
   :caption: Building The Monopod
 
-  build_requirements
-  bom
-  monopod_firmware
-  build_instructions_leg
-  basic_tests_leg
-  build_instructions_pivot
-  basic_tests_pivot
-  leg_pivot_integration
-  leg_pivot_integration_testing
+  physical/build_requirements
+  physical/bom
+  physical/build_instructions_leg
+  physical/basic_tests_leg
+  physical/build_instructions_pivot
+  physical/basic_tests_pivot
+  firmware/monopod_firmware
+  firmware/leg_pivot_integration
+  firmware/leg_pivot_integration_testing
   monopod_resources

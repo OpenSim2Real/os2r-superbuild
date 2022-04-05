@@ -53,23 +53,24 @@ Create a workspace folder. This is where all firmware development will take plac
 Structure the workspace directory as follows:
 
 ::
-    workspace
-    ├── amd_motorware_ext
-    ├── motorware
-    │   ├── docs
-    │   ├── eclipse
-    │   ├── mw_explorer
-    │   └── sw
-    ├── mw_dual_motor_torque_ctrl
-    ├── encoder_measurement
-    ├── user_config_f28069m_drv8305
-    └── ...
+
+  workspace
+  ├── amd_motorware_ext
+  ├── motorware
+  │   ├── docs
+  │   ├── eclipse
+  │   ├── mw_explorer
+  │   └── sw
+  ├── mw_dual_motor_torque_ctrl
+  ├── encoder_measurement
+  ├── user_config_f28069m_drv8305
+  └── ...
 
 Finally, apply the motorware patch. Go into the motorware directory, and run the following command.
 
-..code: bash
+.. code: bash
 
-    patch -p1 < ../amd_motorware_ext/motorware_patch/motorware_1_01_00_18_patch1
+  patch -p1 < ../amd_motorware_ext/motorware_patch/motorware_1_01_00_18_patch1
 
 The computer is now set up for firmware development, compilation and flashing.
 
