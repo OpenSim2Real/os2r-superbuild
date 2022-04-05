@@ -1,4 +1,0 @@
-.. _what_is_our_sim:
-
-What's our Sim
-==============

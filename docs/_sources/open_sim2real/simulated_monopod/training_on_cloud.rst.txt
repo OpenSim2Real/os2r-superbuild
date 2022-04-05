@@ -8,9 +8,9 @@ Instance Details
 ----------------
 Training on cloud requires access to an instance. During the development of this
 project we used the Google Cloud Computing (GCP) free trial. The instance was
-setup with `Ubuntu 20.04 LTS` and 20GB memory. Training using :ref:`gym-os2r` is
+setup with ``Ubuntu 20.04 LTS`` and 20GB memory. Training using :ref:`gym-os2r` is
 designed to run on CPU. Therefore it is highly recommend to setup your instance
-without gpu and instead more than eight cores.
+without gpu and instead more than eight cores of CPU.
 
 
 Setting up Instance

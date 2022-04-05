@@ -1,4 +1,4 @@
-.. _sim_quick_start: 
+.. _sim_quick_start:
 
 Quick Start
 ===========
@@ -193,3 +193,16 @@ Default Randomizer Features
 +----------------------+-----------+---------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ``link inertia``     | --        | --                                    | Link inertia needs to satisfy the triangle inequality. This means the the link inertia can only have scaling trivially. Will add better randomization in future. Track feature `here <https://github.com/robotology/gym-ignition/issues/218>`_\ .  |
 +----------------------+-----------+---------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+To use domain randomization while training only one line of code is required to change. The following code block illustrate this.
+
+.. code-block:: python
+
+  from gym_os2r import randomizers
+  from gym_os2r.common import make_env_from_id
+  from gym_os2r.rewards import BalancingV1
+
+  env_id = "Monopod-stand-v1"
+  make_env = functools.partial(make_env_from_id, env_id=env_id, **kwargs)
+
+  env = randomizers.monopod.MonopodEnvRandomizer(env=make_env)
