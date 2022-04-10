@@ -1,0 +1,371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classmonopod__drivers_1_1Motor" kind="class" language="C++" prot="public">
+    <compoundname>monopod_drivers::Motor</compoundname>
+    <basecompoundref refid="classmonopod__drivers_1_1MotorInterface" prot="public" virt="non-virtual">monopod_drivers::MotorInterface</basecompoundref>
+    <basecompoundref refid="classmonopod__drivers_1_1Encoder" prot="public" virt="non-virtual">monopod_drivers::Encoder</basecompoundref>
+    <includes refid="motor_8hpp" local="no">motor.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Motor_1af1d3f1517c36958cd5e174db1f5bc2a6" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; <ref refid="classmonopod__drivers_1_1ControlBoardsInterface" kindref="compound">ControlBoardsInterface</ref> &gt;</type>
+        <definition>Ptr&lt;ControlBoardsInterface&gt; monopod_drivers::Motor::board_</definition>
+        <argsstring></argsstring>
+        <name>board_</name>
+        <briefdescription>
+<para>The ControlBoards to be used for the communication. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" line="164" column="7" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Motor_1a53333ff2acd00b6c3a5be7f662c0ff26" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacemonopod__drivers_1a292411dcb88919df4d05216355c248d0" kindref="member">JointNamesIndex</ref></type>
+        <definition>JointNamesIndex monopod_drivers::Motor::motor_id_</definition>
+        <argsstring></argsstring>
+        <name>motor_id_</name>
+        <briefdescription>
+<para>The id of the motor on the ControlBoards. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" line="169" column="19" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1Motor_1af18869d8e25353c3a6c77dc48b4cd55e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>monopod_drivers::Motor::Motor</definition>
+        <argsstring>(Ptr&lt; ControlBoardsInterface &gt; board, JointNamesIndex motor_id)</argsstring>
+        <name>Motor</name>
+        <param>
+          <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; <ref refid="classmonopod__drivers_1_1ControlBoardsInterface" kindref="compound">ControlBoardsInterface</ref> &gt;</type>
+          <declname>board</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacemonopod__drivers_1a292411dcb88919df4d05216355c248d0" kindref="member">JointNamesIndex</ref></type>
+          <declname>motor_id</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classmonopod__drivers_1_1Motor" kindref="compound">Motor</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the ControlBoards to be used. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>motor_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the id of the motor on the on-board card </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" line="84" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Motor_1aa62db7581b5050565c3c2e3f118e2cca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual monopod_drivers::Motor::~Motor</definition>
+        <argsstring>()</argsstring>
+        <name>~Motor</name>
+        <briefdescription>
+<para>Destroy the <ref refid="classmonopod__drivers_1_1Motor" kindref="compound">Motor</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" line="90" column="11" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Motor_1ac7f8cf5eeb056139c04348815e62bbd5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::Motor::send_if_input_changed</definition>
+        <argsstring>()</argsstring>
+        <name>send_if_input_changed</name>
+        <reimplements refid="classmonopod__drivers_1_1MotorInterface_1a50416b75fbe6cf874b5c6603e719eaea">send_if_input_changed</reimplements>
+        <briefdescription>
+<para>Actually send the command and controls via the network, See <ref refid="classmonopod__drivers_1_1MotorInterface" kindref="compound">MotorInterface</ref> for more information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" line="96" column="16" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Motor_1afdf4fe4db363f14155ed7658197ec570" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; const <ref refid="namespacemonopod__drivers_1adc25f08a0ddbc18d40994c90f10968c2" kindref="member">ScalarTimeseries</ref> &gt;</type>
+        <definition>virtual Ptr&lt;const ScalarTimeseries&gt; monopod_drivers::Motor::get_measurement</definition>
+        <argsstring>(const Measurements &amp;index) const</argsstring>
+        <name>get_measurement</name>
+        <reimplements refid="classmonopod__drivers_1_1Encoder_1a034a88d4008251384e54d742db9a1591">get_measurement</reimplements>
+        <param>
+          <type>const <ref refid="namespacemonopod__drivers_1a85eecf8d086233e0a317729c3763f15e" kindref="member">Measurements</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the measurements. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Getters <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ptr&lt;const ScalarTimeseries&gt; the pointer to the desired measurement history. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" line="110" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Motor_1a54c75132527b50a63bab81105e4abacc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; const <ref refid="classmonopod__drivers_1_1EncoderInterface_1a404dd1f941b4052b9c7a1c6096692f90" kindref="member">StatusTimeseries</ref> &gt;</type>
+        <definition>virtual Ptr&lt;const StatusTimeseries&gt; monopod_drivers::Motor::get_status</definition>
+        <argsstring>() const</argsstring>
+        <name>get_status</name>
+        <reimplements refid="classmonopod__drivers_1_1Encoder_1a32cb832956fc6dc69193fb5f281240a1">get_status</reimplements>
+        <briefdescription>
+<para>Get the status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ptr&lt;const StatusTimeseries&gt; the pointer to the desired status history. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" line="119" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Motor_1ae9934e36918ff83a20856fab042dc20e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; const <ref refid="namespacemonopod__drivers_1adc25f08a0ddbc18d40994c90f10968c2" kindref="member">ScalarTimeseries</ref> &gt;</type>
+        <definition>virtual Ptr&lt;const ScalarTimeseries&gt; monopod_drivers::Motor::get_current_target</definition>
+        <argsstring>() const</argsstring>
+        <name>get_current_target</name>
+        <reimplements refid="classmonopod__drivers_1_1MotorInterface_1aaa169ec233aa3f066f5e5cecded3e826">get_current_target</reimplements>
+        <briefdescription>
+<para>Get the current target to be sent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ptr&lt;const ScalarTimeseries&gt; the list of current values to be sent. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" line="127" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Motor_1a56c9e9339694064940c86ec3f22308a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref>&lt; const <ref refid="namespacemonopod__drivers_1adc25f08a0ddbc18d40994c90f10968c2" kindref="member">ScalarTimeseries</ref> &gt;</type>
+        <definition>virtual Ptr&lt;const ScalarTimeseries&gt; monopod_drivers::Motor::get_sent_current_target</definition>
+        <argsstring>() const</argsstring>
+        <name>get_sent_current_target</name>
+        <reimplements refid="classmonopod__drivers_1_1MotorInterface_1a4fd7fe60aff9c245db4a93a635611428">get_sent_current_target</reimplements>
+        <briefdescription>
+<para>Get the already sent current target values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ptr&lt;const ScalarTimeseries&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" line="134" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Motor_1a20250219198d46287850cb1482efbd38" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::Motor::set_current_target</definition>
+        <argsstring>(const double &amp;current_target)</argsstring>
+        <name>set_current_target</name>
+        <reimplements refid="classmonopod__drivers_1_1MotorInterface_1ab1bf48c3e77d597f5567a0395fe5f7db">set_current_target</reimplements>
+        <param>
+          <type>const double &amp;</type>
+          <declname>current_target</declname>
+        </param>
+        <briefdescription>
+<para>Set the current (Ampere) target. See <ref refid="classmonopod__drivers_1_1MotorInterface" kindref="compound">MotorInterface</ref> for more information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Setters <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>current_target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in Ampere </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" line="146" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Motor_1a5629dbffe76253909ffa0421716d25e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::Motor::set_command</definition>
+        <argsstring>(const ControlBoardsCommand &amp;command)</argsstring>
+        <name>set_command</name>
+        <reimplements refid="classmonopod__drivers_1_1MotorInterface_1afa381208c1878fc948da545705d19196">set_command</reimplements>
+        <param>
+          <type>const <ref refid="classmonopod__drivers_1_1ControlBoardsCommand" kindref="compound">ControlBoardsCommand</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Set the command. See <ref refid="classmonopod__drivers_1_1MotorInterface" kindref="compound">MotorInterface</ref> for more information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" line="153" column="16" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" bodystart="153" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Motor_1acef9e9b485eb80071104995a0499bfd3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::Motor::print</definition>
+        <argsstring>() const</argsstring>
+        <name>print</name>
+        <reimplements refid="classmonopod__drivers_1_1Encoder_1ac1962689c4db7a3977544d3130610638">print</reimplements>
+        <briefdescription>
+<para>Print the motor status and state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" line="158" column="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class implements the <ref refid="classmonopod__drivers_1_1MotorInterface" kindref="compound">MotorInterface</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>monopod_drivers::MotorInterface</label>
+        <link refid="classmonopod__drivers_1_1MotorInterface"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>monopod_drivers::EncoderInterface</label>
+        <link refid="classmonopod__drivers_1_1EncoderInterface"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>monopod_drivers::Motor</label>
+        <link refid="classmonopod__drivers_1_1Motor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>monopod_drivers::Encoder</label>
+        <link refid="classmonopod__drivers_1_1Encoder"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>monopod_drivers::DeviceInterface</label>
+        <link refid="classmonopod__drivers_1_1DeviceInterface"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>monopod_drivers::MotorInterface</label>
+        <link refid="classmonopod__drivers_1_1MotorInterface"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>monopod_drivers::EncoderInterface</label>
+        <link refid="classmonopod__drivers_1_1EncoderInterface"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>monopod_drivers::Motor</label>
+        <link refid="classmonopod__drivers_1_1Motor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>monopod_drivers::Encoder</label>
+        <link refid="classmonopod__drivers_1_1Encoder"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>monopod_drivers::DeviceInterface</label>
+        <link refid="classmonopod__drivers_1_1DeviceInterface"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" line="76" column="50" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp" bodystart="76" bodyend="170"/>
+    <listofallmembers>
+      <member refid="classmonopod__drivers_1_1Motor_1af1d3f1517c36958cd5e174db1f5bc2a6" prot="protected" virt="non-virtual"><scope>monopod_drivers::Motor</scope><name>board_</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderInterface_1ac8281893945921407ee619a0ff5934b9" prot="public" virt="non-virtual" ambiguityscope="monopod_drivers::"><scope>monopod_drivers::Motor</scope><name>BoardIndex</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderInterface_1ac8281893945921407ee619a0ff5934b9" prot="public" virt="non-virtual" ambiguityscope="monopod_drivers::Encoder::"><scope>monopod_drivers::Motor</scope><name>BoardIndex</name></member>
+      <member refid="classmonopod__drivers_1_1Encoder_1a77a02c33177087e7e61064f61f6a3c88" prot="public" virt="non-virtual"><scope>monopod_drivers::Motor</scope><name>Encoder</name></member>
+      <member refid="classmonopod__drivers_1_1Encoder_1a9963131ae03165fc35737b97c49adfac" prot="protected" virt="non-virtual"><scope>monopod_drivers::Motor</scope><name>encoder_id_</name></member>
+      <member refid="classmonopod__drivers_1_1Motor_1ae9934e36918ff83a20856fab042dc20e" prot="public" virt="virtual"><scope>monopod_drivers::Motor</scope><name>get_current_target</name></member>
+      <member refid="classmonopod__drivers_1_1Motor_1afdf4fe4db363f14155ed7658197ec570" prot="public" virt="virtual"><scope>monopod_drivers::Motor</scope><name>get_measurement</name></member>
+      <member refid="classmonopod__drivers_1_1Motor_1a56c9e9339694064940c86ec3f22308a8" prot="public" virt="virtual"><scope>monopod_drivers::Motor</scope><name>get_sent_current_target</name></member>
+      <member refid="classmonopod__drivers_1_1Motor_1a54c75132527b50a63bab81105e4abacc" prot="public" virt="virtual"><scope>monopod_drivers::Motor</scope><name>get_status</name></member>
+      <member refid="classmonopod__drivers_1_1Motor_1af18869d8e25353c3a6c77dc48b4cd55e" prot="public" virt="non-virtual"><scope>monopod_drivers::Motor</scope><name>Motor</name></member>
+      <member refid="classmonopod__drivers_1_1Motor_1a53333ff2acd00b6c3a5be7f662c0ff26" prot="protected" virt="non-virtual"><scope>monopod_drivers::Motor</scope><name>motor_id_</name></member>
+      <member refid="classmonopod__drivers_1_1Motor_1acef9e9b485eb80071104995a0499bfd3" prot="public" virt="virtual"><scope>monopod_drivers::Motor</scope><name>print</name></member>
+      <member refid="classmonopod__drivers_1_1Motor_1ac7f8cf5eeb056139c04348815e62bbd5" prot="public" virt="virtual"><scope>monopod_drivers::Motor</scope><name>send_if_input_changed</name></member>
+      <member refid="classmonopod__drivers_1_1Encoder_1a051479d3056e1f55b26436054186c67c" prot="protected" virt="non-virtual"><scope>monopod_drivers::Motor</scope><name>set_board_active</name></member>
+      <member refid="classmonopod__drivers_1_1Motor_1a5629dbffe76253909ffa0421716d25e1" prot="public" virt="virtual"><scope>monopod_drivers::Motor</scope><name>set_command</name></member>
+      <member refid="classmonopod__drivers_1_1Motor_1a20250219198d46287850cb1482efbd38" prot="public" virt="virtual"><scope>monopod_drivers::Motor</scope><name>set_current_target</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderInterface_1a404dd1f941b4052b9c7a1c6096692f90" prot="public" virt="non-virtual" ambiguityscope="monopod_drivers::"><scope>monopod_drivers::Motor</scope><name>StatusTimeseries</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderInterface_1a404dd1f941b4052b9c7a1c6096692f90" prot="public" virt="non-virtual" ambiguityscope="monopod_drivers::Encoder::"><scope>monopod_drivers::Motor</scope><name>StatusTimeseries</name></member>
+      <member refid="classmonopod__drivers_1_1Encoder_1ad96f381abf6c705e10d05c855b6f4087" prot="public" virt="virtual"><scope>monopod_drivers::Motor</scope><name>~Encoder</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderInterface_1a17e64972b030e597d92f2a8163ec50cf" prot="public" virt="virtual"><scope>monopod_drivers::Motor</scope><name>~EncoderInterface</name></member>
+      <member refid="classmonopod__drivers_1_1Motor_1aa62db7581b5050565c3c2e3f118e2cca" prot="public" virt="virtual"><scope>monopod_drivers::Motor</scope><name>~Motor</name></member>
+      <member refid="classmonopod__drivers_1_1MotorInterface_1a7cf6177c41638432dea308bd3a0af056" prot="public" virt="virtual"><scope>monopod_drivers::Motor</scope><name>~MotorInterface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="polynome_8hpp" kind="file" language="C++">
+    <compoundname>polynome.hpp</compoundname>
+    <includes local="no">array</includes>
+    <includes local="yes">monopod_sdk/monopod_drivers/utils/polynome.hxx</includes>
+    <includedby refid="leg_8hpp" local="yes">/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp</includedby>
+    <includedby refid="motor__joint__module_8hpp" local="yes">/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>monopod_sdk/monopod_drivers/utils/polynome.hxx</label>
+      </node>
+      <node id="2">
+        <label>array</label>
+      </node>
+      <node id="1">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp</label>
+        <link refid="polynome_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp</label>
+        <link refid="motor__joint__module_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp</label>
+        <link refid="leg_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp</label>
+        <link refid="monopod_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp</label>
+        <link refid="polynome_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classmonopod__drivers_1_1Polynome" prot="public">monopod_drivers::Polynome</innerclass>
+    <innerclass refid="classmonopod__drivers_1_1TimePolynome" prot="public">monopod_drivers::TimePolynome</innerclass>
+    <innernamespace refid="namespacemonopod__drivers">monopod_drivers</innernamespace>
+    <briefdescription>
+<para>Polynomes object for trajectories. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Maximilien Naveau (<ulink url="mailto:maximilien.naveau@gmail.com">maximilien.naveau@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2019-11-06</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2019 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemonopod__drivers" kindref="compound">monopod_drivers</ref><sp/>{</highlight></codeline>
+<codeline lineno="23" refid="classmonopod__drivers_1_1Polynome" refkind="compound"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ORDER&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmonopod__drivers_1_1Polynome" kindref="compound">Polynome</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::array&lt;double,<sp/>ORDER&gt;<sp/>Coefficients;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><ref refid="classmonopod__drivers_1_1Polynome_1ac25129bbcfd913a299d255df37cc5785" kindref="member">Polynome</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="classmonopod__drivers_1_1Polynome_1aa7345c16df263bc3111086d6623a0bb2" kindref="member">~Polynome</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1Polynome_1ae9b63379887e242edd679515b1c33a4b" kindref="member">compute</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1Polynome_1a1893883112123be92639bfd58adf8177" kindref="member">compute_derivative</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1Polynome_1a7912663244b4b857df78955ed9f66820" kindref="member">compute_sec_derivative</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1Polynome_1a22f6f43cdfeba8c02ae612fee6c2cb02" kindref="member">get_coefficients</ref>(Coefficients<sp/>&amp;coefficients)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1Polynome_1ab2237099f2bd1381fac5ae2df28e997f" kindref="member">set_coefficients</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Coefficients<sp/>&amp;coefficients);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>degree()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ORDER;<sp/>};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1Polynome_1a0baa203ffd3776df53c9873e74b56aca" kindref="member">print</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56" refid="classmonopod__drivers_1_1Polynome_1ad452876a630d5ba0276720fbc7b6cf18" refkind="member"><highlight class="normal"><sp/><sp/>std::array&lt;double,<sp/>ORDER<sp/>+<sp/>1&gt;<sp/><ref refid="classmonopod__drivers_1_1Polynome_1ad452876a630d5ba0276720fbc7b6cf18" kindref="member">coefficients_</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classmonopod__drivers_1_1TimePolynome" refkind="compound"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ORDER&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmonopod__drivers_1_1TimePolynome" kindref="compound">TimePolynome</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1Polynome" kindref="compound">Polynome</ref>&lt;ORDER&gt;<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="70" refid="classmonopod__drivers_1_1TimePolynome_1a72894342cfab9af615f67bafe8759aab" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1a72894342cfab9af615f67bafe8759aab" kindref="member">TimePolynome</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1ab05c3ce782a577ce573d25a181f69b9f" kindref="member">final_time_</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1a36104b0843f2bd3b065863aadb463961" kindref="member">init_pose_</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1a4228aad0753af2906567187383634109" kindref="member">init_speed_</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1a61651414a425775127258a09b8ebfbc0" kindref="member">init_acc_</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1aa082e41cd03ffb10851be124a4681806" kindref="member">final_pose_</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1adac14287d2ba939ae93a41fba5fc00d2" kindref="member">final_speed_</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1acb8f41fb299015c171ca179ab61231b7" kindref="member">final_acc_</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="classmonopod__drivers_1_1TimePolynome_1af28f6ab6b13d4ad94e340ac242ce39d8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1af28f6ab6b13d4ad94e340ac242ce39d8" kindref="member">~TimePolynome</ref>(){};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1aacde2d271c73e1ae426e6a2421f63930" kindref="member">compute</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1a8f3495cf6986ca5b457597c33cf64a46" kindref="member">compute_derivative</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1a2adfedb0a8222e9a3be7651feb9e3e3a" kindref="member">compute_sec_derivative</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_final_time()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1ab05c3ce782a577ce573d25a181f69b9f" kindref="member">final_time_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_init_pose()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1a36104b0843f2bd3b065863aadb463961" kindref="member">init_pose_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_init_speed()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1a4228aad0753af2906567187383634109" kindref="member">init_speed_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_init_acc()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1a61651414a425775127258a09b8ebfbc0" kindref="member">init_acc_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_final_pose()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1aa082e41cd03ffb10851be124a4681806" kindref="member">final_pose_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_final_speed()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1adac14287d2ba939ae93a41fba5fc00d2" kindref="member">final_speed_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_final_acc()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1acb8f41fb299015c171ca179ab61231b7" kindref="member">final_acc_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1a4e8290c6692b5e71ca861699fdeb6f7a" kindref="member">set_parameters</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>final_time,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>init_pose,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>init_speed,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>final_pose);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="121" refid="classmonopod__drivers_1_1TimePolynome_1ab05c3ce782a577ce573d25a181f69b9f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1ab05c3ce782a577ce573d25a181f69b9f" kindref="member">final_time_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="122" refid="classmonopod__drivers_1_1TimePolynome_1a36104b0843f2bd3b065863aadb463961" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1a36104b0843f2bd3b065863aadb463961" kindref="member">init_pose_</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123" refid="classmonopod__drivers_1_1TimePolynome_1a4228aad0753af2906567187383634109" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1a4228aad0753af2906567187383634109" kindref="member">init_speed_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="124" refid="classmonopod__drivers_1_1TimePolynome_1a61651414a425775127258a09b8ebfbc0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1a61651414a425775127258a09b8ebfbc0" kindref="member">init_acc_</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="125" refid="classmonopod__drivers_1_1TimePolynome_1aa082e41cd03ffb10851be124a4681806" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1aa082e41cd03ffb10851be124a4681806" kindref="member">final_pose_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="126" refid="classmonopod__drivers_1_1TimePolynome_1adac14287d2ba939ae93a41fba5fc00d2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1adac14287d2ba939ae93a41fba5fc00d2" kindref="member">final_speed_</ref>;<sp/></highlight></codeline>
+<codeline lineno="127" refid="classmonopod__drivers_1_1TimePolynome_1acb8f41fb299015c171ca179ab61231b7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1TimePolynome_1acb8f41fb299015c171ca179ab61231b7" kindref="member">final_acc_</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>monopod_drivers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;monopod_sdk/monopod_drivers/utils/polynome.hxx&quot;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/utils/polynome.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,599 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classmonopod__drivers_1_1EncoderJointModule" kind="class" language="C++" prot="public">
+    <compoundname>monopod_drivers::EncoderJointModule</compoundname>
+    <derivedcompoundref refid="classmonopod__drivers_1_1MotorJointModule" prot="public" virt="non-virtual">monopod_drivers::MotorJointModule</derivedcompoundref>
+    <includes refid="encoder__joint__module_8hpp" local="no">encoder_joint_module.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classmonopod__drivers_1_1EncoderJointModule_1a73e555042dfb4d8ea732dee96ce88a49" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacemonopod__drivers_1a292411dcb88919df4d05216355c248d0" kindref="member">JointNamesIndex</ref></type>
+        <definition>JointNamesIndex monopod_drivers::EncoderJointModule::joint_id_</definition>
+        <argsstring></argsstring>
+        <name>joint_id_</name>
+        <briefdescription>
+<para>This is the joint ID used when initializing the joint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="153" column="19" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1EncoderJointModule_1a3c2c35ba79b90c3b5872225d04c6b214" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classmonopod__drivers_1_1EncoderInterface" kindref="compound">monopod_drivers::EncoderInterface</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;monopod_drivers::EncoderInterface&gt; monopod_drivers::EncoderJointModule::encoder_</definition>
+        <argsstring></argsstring>
+        <name>encoder_</name>
+        <briefdescription>
+<para>This is the pointer to the encoder interface. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="158" column="19" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1EncoderJointModule_1a43ddebe1d2fb19433650ab1fdf1112f8" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; <ref refid="namespacemonopod__drivers_1a85eecf8d086233e0a317729c3763f15e" kindref="member">Measurements</ref>, <ref refid="structmonopod__drivers_1_1JointLimit" kindref="compound">JointLimit</ref> &gt;</type>
+        <definition>std::unordered_map&lt;Measurements, JointLimit&gt; monopod_drivers::EncoderJointModule::limits_</definition>
+        <argsstring></argsstring>
+        <name>limits_</name>
+        <initializer>= {
+      {position, {}}, {velocity, {}}, {acceleration, {}}}</initializer>
+        <briefdescription>
+<para>This is the map of the limits for each meassurement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="163" column="22" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1EncoderJointModule_1a6158652b766a3d6215672f9ac44272ea" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double monopod_drivers::EncoderJointModule::gear_ratio_</definition>
+        <argsstring></argsstring>
+        <name>gear_ratio_</name>
+        <briefdescription>
+<para>This correspond to the reduction ( <formula id="0">$ \beta $</formula>) between the encoder rotation and the joint. <formula id="1">$ \theta_{joint} = \theta_{encoder} / \beta $</formula>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="170" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1EncoderJointModule_1ad40c8219c24c7cc24027dd63ce7f385a" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double monopod_drivers::EncoderJointModule::zero_angle_</definition>
+        <argsstring></argsstring>
+        <name>zero_angle_</name>
+        <briefdescription>
+<para>This is the distance between the closest positive index and the zero configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="176" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1EncoderJointModule_1a19e0b551472109b8819dd46e936ce3a1" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double monopod_drivers::EncoderJointModule::polarity_</definition>
+        <argsstring></argsstring>
+        <name>polarity_</name>
+        <briefdescription>
+<para>This change the encoder rotation direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="181" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1EncoderJointModule_1af2047faf9143a56913fe05925a7e8ab1" prot="protected" static="no" mutable="yes">
+        <type>std::mutex</type>
+        <definition>std::mutex monopod_drivers::EncoderJointModule::limit_door_</definition>
+        <argsstring></argsstring>
+        <name>limit_door_</name>
+        <briefdescription>
+<para>This is the mutex door for the limits_ varible. Allows threadsafe limit checking. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="187" column="22" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1EncoderJointModule_1a5349d1cba67f3d062f5585e8f6bc2b3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>monopod_drivers::EncoderJointModule::EncoderJointModule</definition>
+        <argsstring>(JointNamesIndex joint_id, std::shared_ptr&lt; monopod_drivers::EncoderInterface &gt; encoder, const double &amp;gear_ratio, const double &amp;zero_angle, const bool &amp;reverse_polarity=false)</argsstring>
+        <name>EncoderJointModule</name>
+        <param>
+          <type><ref refid="namespacemonopod__drivers_1a292411dcb88919df4d05216355c248d0" kindref="member">JointNamesIndex</ref></type>
+          <declname>joint_id</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classmonopod__drivers_1_1EncoderInterface" kindref="compound">monopod_drivers::EncoderInterface</ref> &gt;</type>
+          <declname>encoder</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>gear_ratio</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>zero_angle</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>reverse_polarity</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classmonopod__drivers_1_1EncoderJointModule" kindref="compound">EncoderJointModule</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>encoder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the C++ object allowing us to receive sensor data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gear_ratio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the gear ratio between the encoder and the joint. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zero_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the angle between the closest positive encoder index and the zero configuration. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reverse_polarity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="33" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1EncoderJointModule_1a68edc32a90f23edfcae83260c06880a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::EncoderJointModule::set_zero_angle</definition>
+        <argsstring>(const double &amp;zero_angle)</argsstring>
+        <name>set_zero_angle</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>zero_angle</declname>
+        </param>
+        <briefdescription>
+<para>Set the zero_angle. The zero_angle is the angle between the closest positive encoder index and the zero configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>zero_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(rad) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="44" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1EncoderJointModule_1a013bca03bd087e75791b7ccf69a9ff84" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::EncoderJointModule::set_joint_polarity</definition>
+        <argsstring>(const bool &amp;reverse_polarity)</argsstring>
+        <name>set_joint_polarity</name>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>reverse_polarity</declname>
+        </param>
+        <briefdescription>
+<para>Define if the encoder should turn clock-wize or counter clock-wize. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reverse_polarity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true:reverse rotation axis, false:do nothing. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="51" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1EncoderJointModule_1af6b39a82b2e177a654bb0f06ce1938fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>virtual double monopod_drivers::EncoderJointModule::get_measured_angle</definition>
+        <argsstring>() const</argsstring>
+        <name>get_measured_angle</name>
+        <briefdescription>
+<para>Get the measured angle of the joint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>double (rad). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="58" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1EncoderJointModule_1a9be5f1694b10faa29db6f3144872b263" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>virtual double monopod_drivers::EncoderJointModule::get_measured_velocity</definition>
+        <argsstring>() const</argsstring>
+        <name>get_measured_velocity</name>
+        <briefdescription>
+<para>Get the measured velocity of the joint. This data is computed on board of the control card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>double (rad/s). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="66" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1EncoderJointModule_1aa497545b9e020e435244e60691c97242" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>virtual double monopod_drivers::EncoderJointModule::get_measured_acceleration</definition>
+        <argsstring>() const</argsstring>
+        <name>get_measured_acceleration</name>
+        <briefdescription>
+<para>Get the measured acceleration of the joint. This data is computed on board of the control card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>double (rad/s^2). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="74" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1EncoderJointModule_1abcf5604397b8836698834e8a1dae97c5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>virtual double monopod_drivers::EncoderJointModule::get_measured_index_angle</definition>
+        <argsstring>() const</argsstring>
+        <name>get_measured_index_angle</name>
+        <briefdescription>
+<para>Get the measured index angle. There is one index per encoder rotation so there are gear_ratio indexes per joint rotation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>double (rad). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="82" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1EncoderJointModule_1a6e1fb1e0810cc9ae99c159ada36fde11" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>virtual double monopod_drivers::EncoderJointModule::get_zero_angle</definition>
+        <argsstring>() const</argsstring>
+        <name>get_zero_angle</name>
+        <briefdescription>
+<para>Get the zero_angle_. These are the angle between the starting pose and the theoretical zero pose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>double (rad). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="90" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1EncoderJointModule_1abe22400fcb35b8d222c4dc620024d01d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::EncoderJointModule::set_limit</definition>
+        <argsstring>(const Measurements &amp;index, const JointLimit &amp;limit)</argsstring>
+        <name>set_limit</name>
+        <param>
+          <type>const <ref refid="namespacemonopod__drivers_1a85eecf8d086233e0a317729c3763f15e" kindref="member">Measurements</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmonopod__drivers_1_1JointLimit" kindref="compound">JointLimit</ref> &amp;</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+<para>Set the limit of the provided meassurement index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of the position type to set limit of </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a struct holding the limit for the specified meassurement. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="98" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1EncoderJointModule_1a73ad92b3a750a22d28d4727ecd41176a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="structmonopod__drivers_1_1JointLimit" kindref="compound">JointLimit</ref></type>
+        <definition>virtual JointLimit monopod_drivers::EncoderJointModule::get_limit</definition>
+        <argsstring>(const Measurements &amp;index) const</argsstring>
+        <name>get_limit</name>
+        <param>
+          <type>const <ref refid="namespacemonopod__drivers_1a85eecf8d086233e0a317729c3763f15e" kindref="member">Measurements</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the limit of the provided meassurement index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of the position type to set limit of </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="105" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1EncoderJointModule_1acda3a0ef4e078e61ad9c6da31e461c76" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool monopod_drivers::EncoderJointModule::check_limits</definition>
+        <argsstring>() const</argsstring>
+        <name>check_limits</name>
+        <briefdescription>
+<para>Check all of the joint limits. True if in range otherwise false. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="111" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1EncoderJointModule_1ab557730fb87a25e3de9dde0f07470969" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void monopod_drivers::EncoderJointModule::print</definition>
+        <argsstring>() const</argsstring>
+        <name>print</name>
+        <briefdescription>
+<para>Print the motor status and state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="116" column="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1EncoderJointModule_1af05a36fbc7c66935c0998c0b7ddc5868" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>virtual double monopod_drivers::EncoderJointModule::get_joint_measurement</definition>
+        <argsstring>(const Measurements &amp;measurement_id) const</argsstring>
+        <name>get_joint_measurement</name>
+        <param>
+          <type>const <ref refid="namespacemonopod__drivers_1a85eecf8d086233e0a317729c3763f15e" kindref="member">Measurements</ref> &amp;</type>
+          <declname>measurement_id</declname>
+        </param>
+        <briefdescription>
+<para>Get encoder measurements and check if there are data or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>measurement_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the id of the measurement you want to get. check: <ref refid="namespacemonopod__drivers_1a85eecf8d086233e0a317729c3763f15e" kindref="member">monopod_drivers::Measurements</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double the measurement. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="127" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1EncoderJointModule_1a26d5264f5fd6e121131789edad3acd86" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>long int</type>
+        <definition>virtual long int monopod_drivers::EncoderJointModule::get_joint_measurement_index</definition>
+        <argsstring>(const Measurements &amp;measurement_id) const</argsstring>
+        <name>get_joint_measurement_index</name>
+        <param>
+          <type>const <ref refid="namespacemonopod__drivers_1a85eecf8d086233e0a317729c3763f15e" kindref="member">Measurements</ref> &amp;</type>
+          <declname>measurement_id</declname>
+        </param>
+        <briefdescription>
+<para>Get the last encoder measurement index for a specific data. If there was no data yet, return NaN. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>measurement_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the id of the measurement you want to get. check: <ref refid="namespacemonopod__drivers_1a85eecf8d086233e0a317729c3763f15e" kindref="member">monopod_drivers::Measurements</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double the measurement. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="138" column="3"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1EncoderJointModule_1ad5e10c6191d69ef40bacba9d9ec37c6a" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>static bool monopod_drivers::EncoderJointModule::in_range</definition>
+        <argsstring>(T value, T min, T max)</argsstring>
+        <name>in_range</name>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+<para>Template helper checking if vector contains an element. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="143" column="27" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" bodystart="143" bodyend="148"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classmonopod__drivers_1_1EncoderJointModule" kindref="compound">EncoderJointModule</ref> class is containing the joint information. It is here to help converting the data from the encoder side to the joint side. It also allows the calibration of the joint position during initialization. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>monopod_drivers::EncoderJointModule</label>
+        <link refid="classmonopod__drivers_1_1EncoderJointModule"/>
+      </node>
+      <node id="2">
+        <label>monopod_drivers::MotorJointModule</label>
+        <link refid="classmonopod__drivers_1_1MotorJointModule"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>std::shared_ptr&lt; monopod_drivers::EncoderInterface &gt;</label>
+        <childnode refid="6" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>monopod_drivers::EncoderInterface</label>
+        <link refid="classmonopod__drivers_1_1EncoderInterface"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::mutex</label>
+      </node>
+      <node id="1">
+        <label>monopod_drivers::EncoderJointModule</label>
+        <link refid="classmonopod__drivers_1_1EncoderJointModule"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>limits_</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>limit_door_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>encoder_</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>monopod_drivers::DeviceInterface</label>
+        <link refid="classmonopod__drivers_1_1DeviceInterface"/>
+      </node>
+      <node id="2">
+        <label>std::unordered_map&lt; Measurements, monopod_drivers::JointLimit &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>monopod_drivers::JointLimit</label>
+        <link refid="structmonopod__drivers_1_1JointLimit"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" line="21" column="25" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp" bodystart="21" bodyend="188"/>
+    <listofallmembers>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1acda3a0ef4e078e61ad9c6da31e461c76" prot="public" virt="virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>check_limits</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a3c2c35ba79b90c3b5872225d04c6b214" prot="protected" virt="non-virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>encoder_</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a5349d1cba67f3d062f5585e8f6bc2b3a" prot="public" virt="non-virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>EncoderJointModule</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a6158652b766a3d6215672f9ac44272ea" prot="protected" virt="non-virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>gear_ratio_</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1af05a36fbc7c66935c0998c0b7ddc5868" prot="protected" virt="virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>get_joint_measurement</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a26d5264f5fd6e121131789edad3acd86" prot="protected" virt="virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>get_joint_measurement_index</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a73ad92b3a750a22d28d4727ecd41176a" prot="public" virt="virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>get_limit</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1aa497545b9e020e435244e60691c97242" prot="public" virt="virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>get_measured_acceleration</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1af6b39a82b2e177a654bb0f06ce1938fb" prot="public" virt="virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>get_measured_angle</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1abcf5604397b8836698834e8a1dae97c5" prot="public" virt="virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>get_measured_index_angle</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a9be5f1694b10faa29db6f3144872b263" prot="public" virt="virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>get_measured_velocity</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a6e1fb1e0810cc9ae99c159ada36fde11" prot="public" virt="virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>get_zero_angle</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1ad5e10c6191d69ef40bacba9d9ec37c6a" prot="protected" virt="non-virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>in_range</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a73e555042dfb4d8ea732dee96ce88a49" prot="protected" virt="non-virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>joint_id_</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1af2047faf9143a56913fe05925a7e8ab1" prot="protected" virt="non-virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>limit_door_</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a43ddebe1d2fb19433650ab1fdf1112f8" prot="protected" virt="non-virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>limits_</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a19e0b551472109b8819dd46e936ce3a1" prot="protected" virt="non-virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>polarity_</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1ab557730fb87a25e3de9dde0f07470969" prot="public" virt="virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>print</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a013bca03bd087e75791b7ccf69a9ff84" prot="public" virt="virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>set_joint_polarity</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1abe22400fcb35b8d222c4dc620024d01d" prot="public" virt="virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>set_limit</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1a68edc32a90f23edfcae83260c06880a5" prot="public" virt="virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>set_zero_angle</name></member>
+      <member refid="classmonopod__drivers_1_1EncoderJointModule_1ad40c8219c24c7cc24027dd63ce7f385a" prot="protected" virt="non-virtual"><scope>monopod_drivers::EncoderJointModule</scope><name>zero_angle_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

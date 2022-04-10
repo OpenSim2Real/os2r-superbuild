@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="common__header_8hpp" kind="file" language="C++">
+    <compoundname>common_header.hpp</compoundname>
+    <includes refid="mode_8hpp" local="yes">monopod_sdk/mode.hpp</includes>
+    <includes local="no">time_series/time_series.hpp</includes>
+    <includedby refid="monopod_8hpp" local="yes">/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp</includedby>
+    <includedby refid="boards_8hpp" local="yes">/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp</includedby>
+    <includedby refid="encoder_8hpp" local="yes">/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/encoder.hpp</includedby>
+    <includedby refid="motor_8hpp" local="yes">/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp</includedby>
+    <includedby refid="encoder__joint__module_8hpp" local="yes">/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp</includedby>
+    <includedby refid="leg_8hpp" local="yes">/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp</includedby>
+    <includedby refid="motor__joint__module_8hpp" local="yes">/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>monopod_sdk/mode.hpp</label>
+        <link refid="mode_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>time_series/time_series.hpp</label>
+      </node>
+      <node id="1">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp</label>
+        <link refid="common__header_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp</label>
+        <link refid="common__header_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/motor.hpp</label>
+        <link refid="motor_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp</label>
+        <link refid="motor__joint__module_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp</label>
+        <link refid="leg_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/encoder.hpp</label>
+        <link refid="encoder_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp</label>
+        <link refid="monopod_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/devices/boards.hpp</label>
+        <link refid="boards_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/encoder_joint_module.hpp</label>
+        <link refid="encoder__joint__module_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmonopod__drivers_1_1PID" prot="public">monopod_drivers::PID</innerclass>
+    <innerclass refid="structmonopod__drivers_1_1JointLimit" prot="public">monopod_drivers::JointLimit</innerclass>
+    <innernamespace refid="namespacemonopod__drivers">monopod_drivers</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="common__header_8hpp_1a2989837a37d6d63b59c6dd541b785435" prot="public" static="no">
+        <name>MAX_CURRENT</name>
+        <initializer>12.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+ </para>
+<sect1 id="common__header_8hpp_1autotoc_md1">
+<title>Definitions of constants for robot</title>
+<para>Max current before the robot gets kill in amps (A). </para>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" line="16" column="9" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common__header_8hpp_1a04c94dfe660b2c0041cdfcf3b0e06b50" prot="public" static="no">
+        <name>NUMBER_LEG_JOINTS</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of joints in a <ref refid="classmonopod__drivers_1_1Leg" kindref="compound">monopod_drivers::Leg</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" line="23" column="9" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;monopod_sdk/mode.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time_series/time_series.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="namespacemonopod__drivers" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemonopod__drivers" kindref="compound">monopod_drivers</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor">#define<sp/>MAX_CURRENT<sp/>12.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#define<sp/>VERBOSE<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor">#define<sp/>NUMBER_LEG_JOINTS<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="namespacemonopod__drivers_1adc25f08a0ddbc18d40994c90f10968c2" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>time_series::TimeSeries&lt;double&gt;<sp/><ref refid="namespacemonopod__drivers_1adc25f08a0ddbc18d40994c90f10968c2" kindref="member">ScalarTimeseries</ref>;</highlight></codeline>
+<codeline lineno="38" refid="namespacemonopod__drivers_1a026a11156aef59ccbe51bd89e5ac56d3" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>time_series::Index<sp/><ref refid="namespacemonopod__drivers_1a026a11156aef59ccbe51bd89e5ac56d3" kindref="member">Index</ref>;</highlight></codeline>
+<codeline lineno="42" refid="namespacemonopod__drivers_1ad3e60fc2f981b7adf3a750c5ea695671" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>time_series::TimeSeries&lt;Index&gt;<sp/><ref refid="namespacemonopod__drivers_1ad3e60fc2f981b7adf3a750c5ea695671" kindref="member">IndexTimeseries</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" refkind="member"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespacemonopod__drivers_1a1fab20a01a473c9509de822b39d6f216" kindref="member">Ptr</ref><sp/>=<sp/>std::shared_ptr&lt;Type&gt;;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" refkind="member"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespacemonopod__drivers_1af0ef806c0cea122777fcf2dfc4facd79" kindref="member">Vector</ref><sp/>=<sp/>std::vector&lt;Type&gt;;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//<sp/>====================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="namespacemonopod__drivers_1a292411dcb88919df4d05216355c248d0" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespacemonopod__drivers_1a292411dcb88919df4d05216355c248d0" kindref="member">JointNamesIndex</ref><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>hip_joint,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>knee_joint,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>boom_connector_joint,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>planarizer_yaw_joint,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>planarizer_pitch_joint</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="namespacemonopod__drivers_1a85eecf8d086233e0a317729c3763f15e" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespacemonopod__drivers_1a85eecf8d086233e0a317729c3763f15e" kindref="member">Measurements</ref><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>position,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>velocity,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>acceleration,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>current,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>encoder_index,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>measurement_count,<sp/></highlight><highlight class="comment">//<sp/>Meassurement<sp/>count<sp/>is<sp/>the<sp/>&apos;length&apos;<sp/>of<sp/>the<sp/>meassurement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>vector<sp/>in<sp/>motor<sp/>board.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="structmonopod__drivers_1_1PID" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmonopod__drivers_1_1PID" kindref="compound">PID</ref><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><ref refid="structmonopod__drivers_1_1PID" kindref="compound">PID</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><ref refid="structmonopod__drivers_1_1PID" kindref="compound">PID</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_i,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_d)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>p(_p),<sp/>i(_i),<sp/>d(_d)<sp/>{}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="99" refid="structmonopod__drivers_1_1JointLimit" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmonopod__drivers_1_1JointLimit" kindref="compound">JointLimit</ref><sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m<sp/>=<sp/>std::numeric_limits&lt;double&gt;::lowest();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>M<sp/>=<sp/>std::numeric_limits&lt;double&gt;::max();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><ref refid="structmonopod__drivers_1_1JointLimit" kindref="compound">JointLimit</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>min<sp/>=<sp/>m;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>max<sp/>=<sp/>M;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><ref refid="structmonopod__drivers_1_1JointLimit" kindref="compound">JointLimit</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_min,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_max)<sp/>:<sp/>min(_min),<sp/>max(_max)<sp/>{}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>min;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>max;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>monopod_drivers</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp"/>
+  </compounddef>
+</doxygen>

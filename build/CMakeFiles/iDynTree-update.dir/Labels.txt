@@ -1,0 +1,8 @@
+# Target labels
+ iDynTree
+# Source files and their labels
+/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/iDynTree-update
+/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/iDynTree-update.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/iDynTree/CMakeFiles/YCMStamp/iDynTree-update.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/iDynTree/CMakeFiles/YCMStamp/iDynTree-download.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/iDynTree/CMakeFiles/YCMStamp/iDynTree-mkdir.rule

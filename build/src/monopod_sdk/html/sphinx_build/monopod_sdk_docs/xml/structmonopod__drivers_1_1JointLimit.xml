@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmonopod__drivers_1_1JointLimit" kind="struct" language="C++" prot="public">
+    <compoundname>monopod_drivers::JointLimit</compoundname>
+    <includes refid="common__header_8hpp" local="no">common_header.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structmonopod__drivers_1_1JointLimit_1a71fc55fe5593815fe156622ac03c37db" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr double</type>
+        <definition>constexpr double monopod_drivers::JointLimit::m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <initializer>= std::numeric_limits&lt;double&gt;::lowest()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" line="100" column="27" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1JointLimit_1af4984abf237989ea46518a438407e4a2" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr double</type>
+        <definition>constexpr double monopod_drivers::JointLimit::M</definition>
+        <argsstring></argsstring>
+        <name>M</name>
+        <initializer>= std::numeric_limits&lt;double&gt;::max()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" line="101" column="27" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmonopod__drivers_1_1JointLimit_1a45bd86a23e870955f9698f66d0072c36" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double monopod_drivers::JointLimit::min</definition>
+        <argsstring></argsstring>
+        <name>min</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" line="110" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1JointLimit_1a6b13d93fb3bff2683090d6ff1e888fa9" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double monopod_drivers::JointLimit::max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" line="111" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structmonopod__drivers_1_1JointLimit_1a1acd115e9dfd0bfac2cdaef925f74965" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>monopod_drivers::JointLimit::JointLimit</definition>
+        <argsstring>()</argsstring>
+        <name>JointLimit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" line="103" column="3" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="structmonopod__drivers_1_1JointLimit_1a10c99947e061cf74fc8c76824206c1b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>monopod_drivers::JointLimit::JointLimit</definition>
+        <argsstring>(const double _min, const double _max)</argsstring>
+        <name>JointLimit</name>
+        <param>
+          <type>const double</type>
+          <declname>_min</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>_max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" line="108" column="3" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" bodystart="108" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure holding joint limits. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" line="99" column="17" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/common_header.hpp" bodystart="99" bodyend="112"/>
+    <listofallmembers>
+      <member refid="structmonopod__drivers_1_1JointLimit_1a1acd115e9dfd0bfac2cdaef925f74965" prot="public" virt="non-virtual"><scope>monopod_drivers::JointLimit</scope><name>JointLimit</name></member>
+      <member refid="structmonopod__drivers_1_1JointLimit_1a10c99947e061cf74fc8c76824206c1b8" prot="public" virt="non-virtual"><scope>monopod_drivers::JointLimit</scope><name>JointLimit</name></member>
+      <member refid="structmonopod__drivers_1_1JointLimit_1af4984abf237989ea46518a438407e4a2" prot="public" virt="non-virtual"><scope>monopod_drivers::JointLimit</scope><name>M</name></member>
+      <member refid="structmonopod__drivers_1_1JointLimit_1a71fc55fe5593815fe156622ac03c37db" prot="public" virt="non-virtual"><scope>monopod_drivers::JointLimit</scope><name>m</name></member>
+      <member refid="structmonopod__drivers_1_1JointLimit_1a6b13d93fb3bff2683090d6ff1e888fa9" prot="public" virt="non-virtual"><scope>monopod_drivers::JointLimit</scope><name>max</name></member>
+      <member refid="structmonopod__drivers_1_1JointLimit_1a45bd86a23e870955f9698f66d0072c36" prot="public" virt="non-virtual"><scope>monopod_drivers::JointLimit</scope><name>min</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

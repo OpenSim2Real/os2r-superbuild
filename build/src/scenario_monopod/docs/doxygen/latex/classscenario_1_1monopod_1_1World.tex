@@ -1,0 +1,125 @@
+\hypertarget{classscenario_1_1monopod_1_1World}{}\doxysection{scenario\+::monopod\+::World Class Reference}
+\label{classscenario_1_1monopod_1_1World}\index{scenario::monopod::World@{scenario::monopod::World}}
+
+
+Inheritance diagram for scenario\+::monopod\+::World\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classscenario_1_1monopod_1_1World__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for scenario\+::monopod\+::World\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classscenario_1_1monopod_1_1World__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classscenario_1_1monopod_1_1World_a295c55e3a66a650d8f34e6b7e47e1874}{initialize}} (const monopod\+\_\+drivers\+::\+Mode \&mode, const bool \&dummy\+\_\+mode=false) const
+\begin{DoxyCompactList}\small\item\em Initialize can\+\_\+bus connections to encoder board and motor board. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classscenario_1_1monopod_1_1World_ae1891d84bcbb6e61518593d373348282}{valid}} () const override
+\item 
+std\+::string \mbox{\hyperlink{classscenario_1_1monopod_1_1World_adf92116664d9f7b61a3c00cf6b601160}{name}} () const override
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classscenario_1_1monopod_1_1World_a04d7ef45bd6ef6a5beac062842b3d766}{model\+Names}} () const override
+\item 
+scenario\+::core\+::\+Model\+Ptr \mbox{\hyperlink{classscenario_1_1monopod_1_1World_ae5ae9757ac965d035e9183d7bcd48250}{get\+Model}} (const std\+::string \&model\+Name) const override
+\item 
+std\+::vector$<$ scenario\+::core\+::\+Model\+Ptr $>$ \mbox{\hyperlink{classscenario_1_1monopod_1_1World_a6067f0f6cdb1048ee876bb67b977461b}{models}} (const std\+::vector$<$ std\+::string $>$ \&\mbox{\hyperlink{classscenario_1_1monopod_1_1World_a04d7ef45bd6ef6a5beac062842b3d766}{model\+Names}}=\{\}) const override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1World_ae5ae9757ac965d035e9183d7bcd48250}\label{classscenario_1_1monopod_1_1World_ae5ae9757ac965d035e9183d7bcd48250}} 
+\index{scenario::monopod::World@{scenario::monopod::World}!getModel@{getModel}}
+\index{getModel@{getModel}!scenario::monopod::World@{scenario::monopod::World}}
+\doxysubsubsection{\texorpdfstring{getModel()}{getModel()}}
+{\footnotesize\ttfamily scenario\+::core\+::\+Model\+Ptr scenario\+::monopod\+::\+World\+::get\+Model (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{model\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get a model part of the world.
+
+
+\begin{DoxyParams}{Parameters}
+{\em model\+Name} & The name of the model to get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The model if it is part of the world, {\ttfamily nullptr} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1World_a295c55e3a66a650d8f34e6b7e47e1874}\label{classscenario_1_1monopod_1_1World_a295c55e3a66a650d8f34e6b7e47e1874}} 
+\index{scenario::monopod::World@{scenario::monopod::World}!initialize@{initialize}}
+\index{initialize@{initialize}!scenario::monopod::World@{scenario::monopod::World}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily bool scenario\+::monopod\+::\+World\+::initialize (\begin{DoxyParamCaption}\item[{const monopod\+\_\+drivers\+::\+Mode \&}]{mode,  }\item[{const bool \&}]{dummy\+\_\+mode = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+
+
+Initialize can\+\_\+bus connections to encoder board and motor board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em monopod\+\_\+mode} & defines the task mode of the monopod. Can also specify individual boards. \\
+\hline
+{\em dummy\+\_\+mode} & if false the sdk will try to connect to the canbus connection otherwise it will just create a dummy board class which fakes the real robot. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1World_a04d7ef45bd6ef6a5beac062842b3d766}\label{classscenario_1_1monopod_1_1World_a04d7ef45bd6ef6a5beac062842b3d766}} 
+\index{scenario::monopod::World@{scenario::monopod::World}!modelNames@{modelNames}}
+\index{modelNames@{modelNames}!scenario::monopod::World@{scenario::monopod::World}}
+\doxysubsubsection{\texorpdfstring{modelNames()}{modelNames()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ scenario\+::monopod\+::\+World\+::model\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get the name of the models that are part of the world.
+
+\begin{DoxyReturn}{Returns}
+The list of model names. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1World_a6067f0f6cdb1048ee876bb67b977461b}\label{classscenario_1_1monopod_1_1World_a6067f0f6cdb1048ee876bb67b977461b}} 
+\index{scenario::monopod::World@{scenario::monopod::World}!models@{models}}
+\index{models@{models}!scenario::monopod::World@{scenario::monopod::World}}
+\doxysubsubsection{\texorpdfstring{models()}{models()}}
+{\footnotesize\ttfamily std\+::vector$<$scenario\+::core\+::\+Model\+Ptr$>$ scenario\+::monopod\+::\+World\+::models (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{model\+Names = {\ttfamily \{\}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get the models of the world.
+
+
+\begin{DoxyParams}{Parameters}
+{\em model\+Names} & Optional vector of considered models. By default, {\ttfamily \mbox{\hyperlink{classscenario_1_1monopod_1_1World_a04d7ef45bd6ef6a5beac062842b3d766}{World\+::model\+Names}}} is used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of pointers to the model objects. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1World_adf92116664d9f7b61a3c00cf6b601160}\label{classscenario_1_1monopod_1_1World_adf92116664d9f7b61a3c00cf6b601160}} 
+\index{scenario::monopod::World@{scenario::monopod::World}!name@{name}}
+\index{name@{name}!scenario::monopod::World@{scenario::monopod::World}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string scenario\+::monopod\+::\+World\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get the name of the world.
+
+\begin{DoxyReturn}{Returns}
+The name of the world. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classscenario_1_1monopod_1_1World_ae1891d84bcbb6e61518593d373348282}\label{classscenario_1_1monopod_1_1World_ae1891d84bcbb6e61518593d373348282}} 
+\index{scenario::monopod::World@{scenario::monopod::World}!valid@{valid}}
+\index{valid@{valid}!scenario::monopod::World@{scenario::monopod::World}}
+\doxysubsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily bool scenario\+::monopod\+::\+World\+::valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Check if the world is valid.
+
+\begin{DoxyReturn}{Returns}
+True if the world is valid, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/dawson/\+Documents/\+Repos/os2r-\/superbuild/src/scenario\+\_\+monopod/src/monopod/include/scenario/monopod/World.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/scenario_monopod"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/scenario_monopod.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/scenario_monopod-complete.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/CMakeFiles/YCMStamp/scenario_monopod-build.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/CMakeFiles/YCMStamp/scenario_monopod-configure.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/CMakeFiles/YCMStamp/scenario_monopod-download.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/CMakeFiles/YCMStamp/scenario_monopod-install.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/CMakeFiles/YCMStamp/scenario_monopod-mkdir.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/CMakeFiles/YCMStamp/scenario_monopod-patch.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/CMakeFiles/YCMStamp/scenario_monopod-skip-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"scenario_monopod"
+		],
+		"name" : "scenario_monopod"
+	}
+}

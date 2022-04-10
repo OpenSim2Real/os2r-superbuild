@@ -1,0 +1,8 @@
+# Target labels
+ scenario_monopod
+# Source files and their labels
+/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/scenario_monopod-update
+/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/scenario_monopod-update.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/CMakeFiles/YCMStamp/scenario_monopod-update.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/CMakeFiles/YCMStamp/scenario_monopod-download.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/scenario_monopod/CMakeFiles/YCMStamp/scenario_monopod-mkdir.rule

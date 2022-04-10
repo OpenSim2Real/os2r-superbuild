@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classmonopod__drivers_1_1Leg" kind="class" language="C++" prot="public">
+    <compoundname>monopod_drivers::Leg</compoundname>
+    <includes refid="leg_8hpp" local="no">leg.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classmonopod__drivers_1_1Leg_1a62ada503fac9bed2ceb888c044a18c21" prot="private" static="no">
+        <type>Eigen::Matrix&lt; double, 2, 1 &gt;</type>
+        <definition>typedef Eigen::Matrix&lt;double, 2, 1&gt; monopod_drivers::Leg::LVector</definition>
+        <argsstring></argsstring>
+        <name>LVector</name>
+        <briefdescription>
+<para>Defines a static sized Eigen vector type to store data for the leg. Data is one of pos, vel, torque. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" line="62" column="25" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Leg_1a5d3675db48b28ab49a68e1df6b844d10" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; <ref refid="namespacemonopod__drivers_1a292411dcb88919df4d05216355c248d0" kindref="member">JointNamesIndex</ref>, std::shared_ptr&lt; <ref refid="classmonopod__drivers_1_1MotorJointModule" kindref="compound">MotorJointModule</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt;JointNamesIndex, std::shared_ptr&lt;MotorJointModule&gt; &gt; monopod_drivers::Leg::joints_</definition>
+        <argsstring></argsstring>
+        <name>joints_</name>
+        <briefdescription>
+<para>Hip and knee joint modules for the leg. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" line="130" column="7" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Leg_1a93fdea68037dfa41242a294487b5bbdf" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Leg::initialized</definition>
+        <argsstring></argsstring>
+        <name>initialized</name>
+        <briefdescription>
+<para>is Initialized. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" line="135" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Leg_1a8c1e092b1b9705938d2fabed11d1107e" prot="private" static="no" mutable="no">
+        <type>real_time_tools::RealTimeThread</type>
+        <definition>real_time_tools::RealTimeThread monopod_drivers::Leg::rt_thread_hold_</definition>
+        <argsstring></argsstring>
+        <name>rt_thread_hold_</name>
+        <briefdescription>
+<para>the realt time thread object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" line="140" column="35" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmonopod__drivers_1_1Leg_1a53a54686e1765cc12617fe20989cadee" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Leg::is_holding</definition>
+        <argsstring></argsstring>
+        <name>is_holding</name>
+        <briefdescription>
+<para>is <ref refid="classmonopod__drivers_1_1Leg" kindref="compound">Leg</ref> holding position?. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" line="144" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1aa56473aa0d163279676afd47b2fe75a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>monopod_drivers::Leg::Leg</definition>
+        <argsstring>(const std::shared_ptr&lt; MotorJointModule &gt; &amp;hip_joint_module, const std::shared_ptr&lt; MotorJointModule &gt; &amp;knee_joint_module)</argsstring>
+        <name>Leg</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classmonopod__drivers_1_1MotorJointModule" kindref="compound">MotorJointModule</ref> &gt; &amp;</type>
+          <declname>hip_joint_module</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classmonopod__drivers_1_1MotorJointModule" kindref="compound">MotorJointModule</ref> &gt; &amp;</type>
+          <declname>knee_joint_module</declname>
+        </param>
+        <briefdescription>
+<para>Enumerate the num_joints For readability. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct the LegInterface object </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" line="34" column="3" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="34" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1a8c1896b07c622e479d5de8fec4ec2cb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>monopod_drivers::Leg::~Leg</definition>
+        <argsstring>()</argsstring>
+        <name>~Leg</name>
+        <briefdescription>
+<para>Destroy the LegInterface object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" line="55" column="3" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1a7521a51f2ea6fa7260c4d2574aa3e5f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Leg::calibrate</definition>
+        <argsstring>(const double &amp;hip_home_offset_rad, const double &amp;knee_home_offset_rad)</argsstring>
+        <name>calibrate</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>hip_home_offset_rad</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>knee_home_offset_rad</declname>
+        </param>
+        <briefdescription>
+<para>Calibrate the leg. See <ref refid="motor__joint__module_8hpp_source" kindref="compound">motor_joint_module.hpp</ref> for explanation of parameters and logic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" line="69" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="69" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1a5567233ab4b49746a57eb83becdfdd3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Leg::goto_position</definition>
+        <argsstring>(const double &amp;hip_home_position=0, const double &amp;knee_home_position=0)</argsstring>
+        <name>goto_position</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>hip_home_position</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>knee_home_position</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Allow the robot to go to a desired pose. Once the control done 0 torques is sent. By default this function will home. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hip_home_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(rad) Final desired hip position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>knee_home_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(rad) Final desired knee position</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successfully went to location otherwise false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" line="93" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="93" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1a94326adb2374c3c35bbaa72e1108c93e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::Leg::start_holding_loop</definition>
+        <argsstring>()</argsstring>
+        <name>start_holding_loop</name>
+        <briefdescription>
+<para>Start loop to hold robot at current leg position. Current position is defined as the position meassured when the function was called. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" line="103" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="103" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1a7fb1f52badc09122c326a4be9035ae65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool monopod_drivers::Leg::is_hold_current_pos</definition>
+        <argsstring>()</argsstring>
+        <name>is_hold_current_pos</name>
+        <briefdescription>
+<para>True if currrently holding at some position, otherwise false. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" line="115" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="115" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1a7fdd1f9e579eb551e7adb85da41f3f24" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::Leg::stop_hold_current_pos</definition>
+        <argsstring>()</argsstring>
+        <name>stop_hold_current_pos</name>
+        <briefdescription>
+<para>Stops any hold loop currently running. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" line="120" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="120" bodyend="123"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1aace5b7c7609a01e8325b2d7faffd9758" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>THREAD_FUNCTION_RETURN_TYPE</type>
+        <definition>static THREAD_FUNCTION_RETURN_TYPE monopod_drivers::Leg::hold_current_pos_loop</definition>
+        <argsstring>(void *instance_pointer)</argsstring>
+        <name>hold_current_pos_loop</name>
+        <param>
+          <type>void *</type>
+          <declname>instance_pointer</declname>
+        </param>
+        <briefdescription>
+<para>this function is just a wrapper around the actual hold current position function, such that it can be spawned as a posix thread. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" line="152" column="3" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="152" bodyend="155"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1a3c023cfe269916780ef3ed68a8deaf67" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void monopod_drivers::Leg::hold_current_pos_loop</definition>
+        <argsstring>()</argsstring>
+        <name>hold_current_pos_loop</name>
+        <briefdescription>
+<para>This loop runs at 1khz and attempts to hold the leg at the position set when called. This will run as a thread in the background until killed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" line="160" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="160" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1a73c4c114a7abf183a73572d389778e4e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacemonopod__drivers_1a4542e42cd32958f48d461a77bbc2e812" kindref="member">HomingReturnCode</ref></type>
+        <definition>HomingReturnCode monopod_drivers::Leg::execute_homing</definition>
+        <argsstring>(double search_distance_limit_rad, LVector home_offset_rad, double profile_step_size_rad=0.001)</argsstring>
+        <name>execute_homing</name>
+        <param>
+          <type>double</type>
+          <declname>search_distance_limit_rad</declname>
+        </param>
+        <param>
+          <type>LVector</type>
+          <declname>home_offset_rad</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>profile_step_size_rad</declname>
+          <defval>0.001</defval>
+        </param>
+        <briefdescription>
+<para>Perform homing for all joints. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If one of the joints fails, the complete homing fails. Otherwise it loops until all joints finished. If a joint is finished while others are still running, it is held at the home position.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>search_distance_limit_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum distance the motor moves while searching for the encoder index. Unit: radian. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hip_home_offset_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset from home position to zero position. Unit: radian. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>knee_home_offset_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset from home position to zero position. Unit: radian. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>profile_step_size_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Distance by which the target position of the position profile is changed in each step. Set to a negative value to search for the next encoder index in negative direction. Unit: radian.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Final status of the homing procedure (either SUCCESS if all joints succeeded or the return code of the first joint that failed). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" line="203" column="20" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="203" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classmonopod__drivers_1_1Leg_1ab675f182a6c95e6e01ef6f44db181c86" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacemonopod__drivers_1ad05e9492ac5787e6cbbe004a48056280" kindref="member">GoToReturnCode</ref></type>
+        <definition>GoToReturnCode monopod_drivers::Leg::go_to</definition>
+        <argsstring>(LVector angle_to_reach_rad, double average_speed_rad_per_sec=1.0)</argsstring>
+        <name>go_to</name>
+        <param>
+          <type>LVector</type>
+          <declname>angle_to_reach_rad</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>average_speed_rad_per_sec</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Allow the robot to go to a desired pose. Once the control done 0 torques is sent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle_to_reach_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(rad) in the order [hip_joint, knee_joint] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>average_speed_rad_per_sec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(rad/sec) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>GoToReturnCode </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" line="256" column="18" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="256" bodyend="321"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The leg class is the implementation of the LegInterface. This is the decalartion and the definition of the class as it is very simple. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" line="24" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp" bodystart="24" bodyend="322"/>
+    <listofallmembers>
+      <member refid="classmonopod__drivers_1_1Leg_1a7521a51f2ea6fa7260c4d2574aa3e5f4" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>calibrate</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1a73c4c114a7abf183a73572d389778e4e" prot="private" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>execute_homing</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1ab675f182a6c95e6e01ef6f44db181c86" prot="private" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>go_to</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1a5567233ab4b49746a57eb83becdfdd3f" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>goto_position</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1aace5b7c7609a01e8325b2d7faffd9758" prot="private" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>hold_current_pos_loop</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1a3c023cfe269916780ef3ed68a8deaf67" prot="private" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>hold_current_pos_loop</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1a93fdea68037dfa41242a294487b5bbdf" prot="private" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>initialized</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1a7fb1f52badc09122c326a4be9035ae65" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>is_hold_current_pos</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1a53a54686e1765cc12617fe20989cadee" prot="private" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>is_holding</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1a5d3675db48b28ab49a68e1df6b844d10" prot="private" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>joints_</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1aa56473aa0d163279676afd47b2fe75a4" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>Leg</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1a62ada503fac9bed2ceb888c044a18c21" prot="private" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>LVector</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1a8c1e092b1b9705938d2fabed11d1107e" prot="private" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>rt_thread_hold_</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1a94326adb2374c3c35bbaa72e1108c93e" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>start_holding_loop</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1a7fdd1f9e579eb551e7adb85da41f3f24" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>stop_hold_current_pos</name></member>
+      <member refid="classmonopod__drivers_1_1Leg_1a8c1896b07c622e479d5de8fec4ec2cb4" prot="public" virt="non-virtual"><scope>monopod_drivers::Leg</scope><name>~Leg</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

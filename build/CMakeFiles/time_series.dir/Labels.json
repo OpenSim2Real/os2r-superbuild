@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/time_series"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/time_series.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/time_series-complete.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/YCMStamp/time_series-build.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/YCMStamp/time_series-configure.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/YCMStamp/time_series-download.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/YCMStamp/time_series-install.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/YCMStamp/time_series-mkdir.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/YCMStamp/time_series-patch.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/time_series/CMakeFiles/YCMStamp/time_series-skip-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"time_series"
+		],
+		"name" : "time_series"
+	}
+}

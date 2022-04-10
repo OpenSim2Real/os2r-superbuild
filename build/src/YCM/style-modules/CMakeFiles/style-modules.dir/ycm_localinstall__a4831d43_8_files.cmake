@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.1)
+set(_DESTDIR $ENV{DESTDIR})
+set(ENV{DESTDIR} )
+file(INSTALL;TYPE;FILE;FILES;StyleBITBUCKET.cmake;StyleGITHUB.cmake;StyleGITLAB_ROBOTOLOGY.cmake;StyleGNOME.cmake;StyleKDE.cmake;StyleLOCAL.cmake;StyleNONE.cmake;StyleSOURCEFORGE.cmake;DESTINATION;/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/share/YCM/style-modules;MESSAGE_NEVER)
+set(ENV{DESTDIR} ${_DESTDIR})

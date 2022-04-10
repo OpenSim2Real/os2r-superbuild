@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/monopod_sdk"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/monopod_sdk.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/monopod_sdk-complete.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/monopod_sdk/CMakeFiles/YCMStamp/monopod_sdk-build.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/monopod_sdk/CMakeFiles/YCMStamp/monopod_sdk-configure.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/monopod_sdk/CMakeFiles/YCMStamp/monopod_sdk-download.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/monopod_sdk/CMakeFiles/YCMStamp/monopod_sdk-install.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/monopod_sdk/CMakeFiles/YCMStamp/monopod_sdk-mkdir.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/monopod_sdk/CMakeFiles/YCMStamp/monopod_sdk-patch.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/monopod_sdk/CMakeFiles/YCMStamp/monopod_sdk-skip-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"monopod_sdk"
+		],
+		"name" : "monopod_sdk"
+	}
+}

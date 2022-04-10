@@ -1,0 +1,28 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/YCM-update"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/YCM-update.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/CMakeFiles/YCMStamp/YCM-update.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/CMakeFiles/YCMStamp/YCM-download.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/CMakeFiles/YCMStamp/YCM-mkdir.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"YCM"
+		],
+		"name" : "YCM-update"
+	}
+}

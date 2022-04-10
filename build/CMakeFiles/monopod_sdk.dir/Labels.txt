@@ -1,0 +1,13 @@
+# Target labels
+ monopod_sdk
+# Source files and their labels
+/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/monopod_sdk
+/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/monopod_sdk.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/monopod_sdk-complete.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/monopod_sdk/CMakeFiles/YCMStamp/monopod_sdk-build.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/monopod_sdk/CMakeFiles/YCMStamp/monopod_sdk-configure.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/monopod_sdk/CMakeFiles/YCMStamp/monopod_sdk-download.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/monopod_sdk/CMakeFiles/YCMStamp/monopod_sdk-install.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/monopod_sdk/CMakeFiles/YCMStamp/monopod_sdk-mkdir.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/monopod_sdk/CMakeFiles/YCMStamp/monopod_sdk-patch.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/monopod_sdk/CMakeFiles/YCMStamp/monopod_sdk-skip-update.rule

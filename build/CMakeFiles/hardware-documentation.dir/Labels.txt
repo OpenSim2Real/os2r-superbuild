@@ -1,0 +1,13 @@
+# Target labels
+ hardware-documentation
+# Source files and their labels
+/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/hardware-documentation
+/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/hardware-documentation.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/hardware-documentation-complete.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/hardware-documentation/CMakeFiles/YCMStamp/hardware-documentation-build.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/hardware-documentation/CMakeFiles/YCMStamp/hardware-documentation-configure.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/hardware-documentation/CMakeFiles/YCMStamp/hardware-documentation-download.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/hardware-documentation/CMakeFiles/YCMStamp/hardware-documentation-install.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/hardware-documentation/CMakeFiles/YCMStamp/hardware-documentation-mkdir.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/hardware-documentation/CMakeFiles/YCMStamp/hardware-documentation-patch.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/hardware-documentation/CMakeFiles/YCMStamp/hardware-documentation-skip-update.rule

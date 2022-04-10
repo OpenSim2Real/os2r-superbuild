@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/signal_handler"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/signal_handler.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/signal_handler-complete.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/signal_handler/CMakeFiles/YCMStamp/signal_handler-build.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/signal_handler/CMakeFiles/YCMStamp/signal_handler-configure.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/signal_handler/CMakeFiles/YCMStamp/signal_handler-download.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/signal_handler/CMakeFiles/YCMStamp/signal_handler-install.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/signal_handler/CMakeFiles/YCMStamp/signal_handler-mkdir.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/signal_handler/CMakeFiles/YCMStamp/signal_handler-patch.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/signal_handler/CMakeFiles/YCMStamp/signal_handler-skip-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"signal_handler"
+		],
+		"name" : "signal_handler"
+	}
+}

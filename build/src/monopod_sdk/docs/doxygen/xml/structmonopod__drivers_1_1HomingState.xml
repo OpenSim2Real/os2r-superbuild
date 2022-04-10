@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmonopod__drivers_1_1HomingState" kind="struct" language="C++" prot="public">
+    <compoundname>monopod_drivers::HomingState</compoundname>
+    <includes refid="motor__joint__module_8hpp" local="no">motor_joint_module.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmonopod__drivers_1_1HomingState_1ac8c320d7f544d99a04886d466ac497d8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int monopod_drivers::HomingState::joint_id</definition>
+        <argsstring></argsstring>
+        <name>joint_id</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Id of the joint. Just used for debug prints. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="50" column="7" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1HomingState_1aad9fc1899229fde4503b011d1a1e7c13" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double monopod_drivers::HomingState::search_distance_limit_rad</definition>
+        <argsstring></argsstring>
+        <name>search_distance_limit_rad</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Max. distance to move while searching the encoder index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="52" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1HomingState_1a76924701324bf9b33f3e4ff8b9c3f95c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double monopod_drivers::HomingState::home_offset_rad</definition>
+        <argsstring></argsstring>
+        <name>home_offset_rad</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Offset from home position to zero position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="54" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1HomingState_1ae3d22d7258ae3b09cd398ea8e2197251" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double monopod_drivers::HomingState::profile_step_size_rad</definition>
+        <argsstring></argsstring>
+        <name>profile_step_size_rad</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Step size for the position profile. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="56" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1HomingState_1ad2a13d2114acfe3e82a1e41d2f5f60c4" prot="public" static="no" mutable="no">
+        <type>long int</type>
+        <definition>long int monopod_drivers::HomingState::last_encoder_index_time_index</definition>
+        <argsstring></argsstring>
+        <name>last_encoder_index_time_index</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Timestamp from when the encoder index was seen the last time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="58" column="12" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1HomingState_1aa507a8c249f650bb02a99e074f7c24fa" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t monopod_drivers::HomingState::step_count</definition>
+        <argsstring></argsstring>
+        <name>step_count</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Number of profile steps already taken. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="60" column="12" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1HomingState_1a6ed16ff846914597ab4926eb26d5f834" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double monopod_drivers::HomingState::target_position_rad</definition>
+        <argsstring></argsstring>
+        <name>target_position_rad</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Current target position of the position profile. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="62" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1HomingState_1a21a749a23991771a66336228b28cbb7e" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacemonopod__drivers_1a4542e42cd32958f48d461a77bbc2e812" kindref="member">HomingReturnCode</ref></type>
+        <definition>HomingReturnCode monopod_drivers::HomingState::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <initializer>= <ref refid="namespacemonopod__drivers_1a4542e42cd32958f48d461a77bbc2e812a02de9649e258d1dd94056e676061e969" kindref="member">HomingReturnCode::NOT_INITIALIZED</ref></initializer>
+        <briefdescription>
+<para>Current status of the homing procedure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="64" column="20" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1HomingState_1a688fa93aec4d1442f66a93c42b4351be" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double monopod_drivers::HomingState::start_position</definition>
+        <argsstring></argsstring>
+        <name>start_position</name>
+        <briefdescription>
+<para>Position at which homing is started. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="67" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmonopod__drivers_1_1HomingState_1a3c4c888d0832ac732e6dc4b56108d499" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double monopod_drivers::HomingState::end_position</definition>
+        <argsstring></argsstring>
+        <name>end_position</name>
+        <briefdescription>
+<para>Position at which homing is ended (before resetting position). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is only set when status is SUCCEEDED. Together with start_position it can be used to determine the distance the joint travelled during the homing procedure (e.g. useful for home offset calibration). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="75" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>State variables required for the homing. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" line="48" column="18" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp" bodystart="48" bodyend="76"/>
+    <listofallmembers>
+      <member refid="structmonopod__drivers_1_1HomingState_1a3c4c888d0832ac732e6dc4b56108d499" prot="public" virt="non-virtual"><scope>monopod_drivers::HomingState</scope><name>end_position</name></member>
+      <member refid="structmonopod__drivers_1_1HomingState_1a76924701324bf9b33f3e4ff8b9c3f95c" prot="public" virt="non-virtual"><scope>monopod_drivers::HomingState</scope><name>home_offset_rad</name></member>
+      <member refid="structmonopod__drivers_1_1HomingState_1ac8c320d7f544d99a04886d466ac497d8" prot="public" virt="non-virtual"><scope>monopod_drivers::HomingState</scope><name>joint_id</name></member>
+      <member refid="structmonopod__drivers_1_1HomingState_1ad2a13d2114acfe3e82a1e41d2f5f60c4" prot="public" virt="non-virtual"><scope>monopod_drivers::HomingState</scope><name>last_encoder_index_time_index</name></member>
+      <member refid="structmonopod__drivers_1_1HomingState_1ae3d22d7258ae3b09cd398ea8e2197251" prot="public" virt="non-virtual"><scope>monopod_drivers::HomingState</scope><name>profile_step_size_rad</name></member>
+      <member refid="structmonopod__drivers_1_1HomingState_1aad9fc1899229fde4503b011d1a1e7c13" prot="public" virt="non-virtual"><scope>monopod_drivers::HomingState</scope><name>search_distance_limit_rad</name></member>
+      <member refid="structmonopod__drivers_1_1HomingState_1a688fa93aec4d1442f66a93c42b4351be" prot="public" virt="non-virtual"><scope>monopod_drivers::HomingState</scope><name>start_position</name></member>
+      <member refid="structmonopod__drivers_1_1HomingState_1a21a749a23991771a66336228b28cbb7e" prot="public" virt="non-virtual"><scope>monopod_drivers::HomingState</scope><name>status</name></member>
+      <member refid="structmonopod__drivers_1_1HomingState_1aa507a8c249f650bb02a99e074f7c24fa" prot="public" virt="non-virtual"><scope>monopod_drivers::HomingState</scope><name>step_count</name></member>
+      <member refid="structmonopod__drivers_1_1HomingState_1a6ed16ff846914597ab4926eb26d5f834" prot="public" virt="non-virtual"><scope>monopod_drivers::HomingState</scope><name>target_position_rad</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_7b6c73e35c541c2db869af0428194660" kind="dir">
+    <compoundname>/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod</compoundname>
+    <innerfile refid="Joint_8h">Joint.h</innerfile>
+    <innerfile refid="Model_8h">Model.h</innerfile>
+    <innerfile refid="World_8h">World.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/"/>
+  </compounddef>
+</doxygen>

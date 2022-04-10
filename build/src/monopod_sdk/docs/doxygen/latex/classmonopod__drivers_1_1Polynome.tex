@@ -1,0 +1,146 @@
+\hypertarget{classmonopod__drivers_1_1Polynome}{}\doxysection{monopod\+\_\+drivers\+::Polynome$<$ O\+R\+D\+ER $>$ Class Template Reference}
+\label{classmonopod__drivers_1_1Polynome}\index{monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}}
+
+
+Simple class that defines $ P(x) $ a polynome of order O\+R\+D\+ER. It provide simple methods to compute $ P(x) $, $ \frac{dP}{dx}(x) $, and $ \frac{dP^2}{dx^2}(x) $.  
+
+
+
+
+{\ttfamily \#include $<$polynome.\+hpp$>$}
+
+
+
+Inheritance diagram for monopod\+\_\+drivers\+::Polynome$<$ O\+R\+D\+ER $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{classmonopod__drivers_1_1Polynome__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for monopod\+\_\+drivers\+::Polynome$<$ O\+R\+D\+ER $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classmonopod__drivers_1_1Polynome__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmonopod__drivers_1_1Polynome_ac25129bbcfd913a299d255df37cc5785}{Polynome}} ()
+\item 
+\mbox{\hyperlink{classmonopod__drivers_1_1Polynome_aa7345c16df263bc3111086d6623a0bb2}{$\sim$\+Polynome}} ()
+\item 
+double \mbox{\hyperlink{classmonopod__drivers_1_1Polynome_ae9b63379887e242edd679515b1c33a4b}{compute}} (double x)
+\item 
+double \mbox{\hyperlink{classmonopod__drivers_1_1Polynome_a1893883112123be92639bfd58adf8177}{compute\+\_\+derivative}} (double x)
+\item 
+double \mbox{\hyperlink{classmonopod__drivers_1_1Polynome_a7912663244b4b857df78955ed9f66820}{compute\+\_\+sec\+\_\+derivative}} (double x)
+\item 
+void \mbox{\hyperlink{classmonopod__drivers_1_1Polynome_a22f6f43cdfeba8c02ae612fee6c2cb02}{get\+\_\+coefficients}} (Coefficients \&coefficients) const
+\item 
+void \mbox{\hyperlink{classmonopod__drivers_1_1Polynome_ab2237099f2bd1381fac5ae2df28e997f}{set\+\_\+coefficients}} (const Coefficients \&coefficients)
+\item 
+\mbox{\Hypertarget{classmonopod__drivers_1_1Polynome_a6336a156a1a9c39716dee53651eb25bc}\label{classmonopod__drivers_1_1Polynome_a6336a156a1a9c39716dee53651eb25bc}} 
+int {\bfseries degree} ()
+\item 
+void \mbox{\hyperlink{classmonopod__drivers_1_1Polynome_a0baa203ffd3776df53c9873e74b56aca}{print}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::array$<$ double, O\+R\+D\+ER+1 $>$ \mbox{\hyperlink{classmonopod__drivers_1_1Polynome_ad452876a630d5ba0276720fbc7b6cf18}{coefficients\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$int O\+R\+D\+ER$>$\newline
+class monopod\+\_\+drivers\+::\+Polynome$<$ O\+R\+D\+E\+R $>$}
+
+Simple class that defines $ P(x) $ a polynome of order O\+R\+D\+ER. It provide simple methods to compute $ P(x) $, $ \frac{dP}{dx}(x) $, and $ \frac{dP^2}{dx^2}(x) $. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em O\+R\+D\+ER} & is the order of the polynome \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Polynome_ac25129bbcfd913a299d255df37cc5785}\label{classmonopod__drivers_1_1Polynome_ac25129bbcfd913a299d255df37cc5785}} 
+\index{monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}!Polynome@{Polynome}}
+\index{Polynome@{Polynome}!monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}}
+\doxysubsubsection{\texorpdfstring{Polynome()}{Polynome()}}
+{\footnotesize\ttfamily template$<$int O\+R\+D\+ER$>$ \\
+\mbox{\hyperlink{classmonopod__drivers_1_1Polynome}{monopod\+\_\+drivers\+::\+Polynome}}$<$ O\+R\+D\+ER $>$\+::\mbox{\hyperlink{classmonopod__drivers_1_1Polynome}{Polynome}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor \mbox{\Hypertarget{classmonopod__drivers_1_1Polynome_aa7345c16df263bc3111086d6623a0bb2}\label{classmonopod__drivers_1_1Polynome_aa7345c16df263bc3111086d6623a0bb2}} 
+\index{monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}!````~Polynome@{$\sim$Polynome}}
+\index{````~Polynome@{$\sim$Polynome}!monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Polynome()}{~Polynome()}}
+{\footnotesize\ttfamily template$<$int O\+R\+D\+ER$>$ \\
+\mbox{\hyperlink{classmonopod__drivers_1_1Polynome}{monopod\+\_\+drivers\+::\+Polynome}}$<$ O\+R\+D\+ER $>$\+::$\sim$\mbox{\hyperlink{classmonopod__drivers_1_1Polynome}{Polynome}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Polynome_ae9b63379887e242edd679515b1c33a4b}\label{classmonopod__drivers_1_1Polynome_ae9b63379887e242edd679515b1c33a4b}} 
+\index{monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}!compute@{compute}}
+\index{compute@{compute}!monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily template$<$int O\+R\+D\+ER$>$ \\
+double \mbox{\hyperlink{classmonopod__drivers_1_1Polynome}{monopod\+\_\+drivers\+::\+Polynome}}$<$ O\+R\+D\+ER $>$\+::compute (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+
+Compute the value. \mbox{\Hypertarget{classmonopod__drivers_1_1Polynome_a1893883112123be92639bfd58adf8177}\label{classmonopod__drivers_1_1Polynome_a1893883112123be92639bfd58adf8177}} 
+\index{monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}!compute\_derivative@{compute\_derivative}}
+\index{compute\_derivative@{compute\_derivative}!monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}}
+\doxysubsubsection{\texorpdfstring{compute\_derivative()}{compute\_derivative()}}
+{\footnotesize\ttfamily template$<$int O\+R\+D\+ER$>$ \\
+double \mbox{\hyperlink{classmonopod__drivers_1_1Polynome}{monopod\+\_\+drivers\+::\+Polynome}}$<$ O\+R\+D\+ER $>$\+::compute\+\_\+derivative (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+
+Compute the value of the derivative. \mbox{\Hypertarget{classmonopod__drivers_1_1Polynome_a7912663244b4b857df78955ed9f66820}\label{classmonopod__drivers_1_1Polynome_a7912663244b4b857df78955ed9f66820}} 
+\index{monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}!compute\_sec\_derivative@{compute\_sec\_derivative}}
+\index{compute\_sec\_derivative@{compute\_sec\_derivative}!monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}}
+\doxysubsubsection{\texorpdfstring{compute\_sec\_derivative()}{compute\_sec\_derivative()}}
+{\footnotesize\ttfamily template$<$int O\+R\+D\+ER$>$ \\
+double \mbox{\hyperlink{classmonopod__drivers_1_1Polynome}{monopod\+\_\+drivers\+::\+Polynome}}$<$ O\+R\+D\+ER $>$\+::compute\+\_\+sec\+\_\+derivative (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+
+Compute the value of the second derivative. \mbox{\Hypertarget{classmonopod__drivers_1_1Polynome_a22f6f43cdfeba8c02ae612fee6c2cb02}\label{classmonopod__drivers_1_1Polynome_a22f6f43cdfeba8c02ae612fee6c2cb02}} 
+\index{monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}!get\_coefficients@{get\_coefficients}}
+\index{get\_coefficients@{get\_coefficients}!monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}}
+\doxysubsubsection{\texorpdfstring{get\_coefficients()}{get\_coefficients()}}
+{\footnotesize\ttfamily template$<$int O\+R\+D\+ER$>$ \\
+void \mbox{\hyperlink{classmonopod__drivers_1_1Polynome}{monopod\+\_\+drivers\+::\+Polynome}}$<$ O\+R\+D\+ER $>$\+::get\+\_\+coefficients (\begin{DoxyParamCaption}\item[{Coefficients \&}]{coefficients }\end{DoxyParamCaption}) const}
+
+Get the coefficients. \mbox{\Hypertarget{classmonopod__drivers_1_1Polynome_a0baa203ffd3776df53c9873e74b56aca}\label{classmonopod__drivers_1_1Polynome_a0baa203ffd3776df53c9873e74b56aca}} 
+\index{monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}!print@{print}}
+\index{print@{print}!monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$int O\+R\+D\+ER$>$ \\
+void \mbox{\hyperlink{classmonopod__drivers_1_1Polynome}{monopod\+\_\+drivers\+::\+Polynome}}$<$ O\+R\+D\+ER $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Print the coefficient. \mbox{\Hypertarget{classmonopod__drivers_1_1Polynome_ab2237099f2bd1381fac5ae2df28e997f}\label{classmonopod__drivers_1_1Polynome_ab2237099f2bd1381fac5ae2df28e997f}} 
+\index{monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}!set\_coefficients@{set\_coefficients}}
+\index{set\_coefficients@{set\_coefficients}!monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}}
+\doxysubsubsection{\texorpdfstring{set\_coefficients()}{set\_coefficients()}}
+{\footnotesize\ttfamily template$<$int O\+R\+D\+ER$>$ \\
+void \mbox{\hyperlink{classmonopod__drivers_1_1Polynome}{monopod\+\_\+drivers\+::\+Polynome}}$<$ O\+R\+D\+ER $>$\+::set\+\_\+coefficients (\begin{DoxyParamCaption}\item[{const Coefficients \&}]{coefficients }\end{DoxyParamCaption})}
+
+Set the coefficients. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmonopod__drivers_1_1Polynome_ad452876a630d5ba0276720fbc7b6cf18}\label{classmonopod__drivers_1_1Polynome_ad452876a630d5ba0276720fbc7b6cf18}} 
+\index{monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}!coefficients\_@{coefficients\_}}
+\index{coefficients\_@{coefficients\_}!monopod\_drivers::Polynome$<$ ORDER $>$@{monopod\_drivers::Polynome$<$ ORDER $>$}}
+\doxysubsubsection{\texorpdfstring{coefficients\_}{coefficients\_}}
+{\footnotesize\ttfamily template$<$int O\+R\+D\+ER$>$ \\
+std\+::array$<$double, O\+R\+D\+ER + 1$>$ \mbox{\hyperlink{classmonopod__drivers_1_1Polynome}{monopod\+\_\+drivers\+::\+Polynome}}$<$ O\+R\+D\+ER $>$\+::coefficients\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Vector of coefficients. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/dawson/\+Documents/\+Repos/os2r-\/superbuild/src/monopod\+\_\+sdk/include/monopod\+\_\+sdk/monopod\+\_\+drivers/utils/\mbox{\hyperlink{polynome_8hpp}{polynome.\+hpp}}\end{DoxyCompactItemize}

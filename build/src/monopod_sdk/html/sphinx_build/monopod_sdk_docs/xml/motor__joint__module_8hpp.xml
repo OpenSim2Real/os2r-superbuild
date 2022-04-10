@@ -1,0 +1,446 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="motor__joint__module_8hpp" kind="file" language="C++">
+    <compoundname>motor_joint_module.hpp</compoundname>
+    <includes local="no">array</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">math.h</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">Eigen/Eigen</includes>
+    <includes refid="common__header_8hpp" local="yes">monopod_sdk/common_header.hpp</includes>
+    <includes refid="motor_8hpp" local="yes">monopod_sdk/monopod_drivers/devices/motor.hpp</includes>
+    <includes refid="encoder__joint__module_8hpp" local="yes">monopod_sdk/monopod_drivers/encoder_joint_module.hpp</includes>
+    <includes refid="polynome_8hpp" local="yes">monopod_sdk/monopod_drivers/utils/polynome.hpp</includes>
+    <includedby refid="leg_8hpp" local="yes">/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp</includedby>
+    <incdepgraph>
+      <node id="20">
+        <label>monopod_sdk/monopod_drivers/devices/device_interface.hpp</label>
+        <link refid="device__interface_8hpp_source"/>
+      </node>
+      <node id="8">
+        <label>monopod_sdk/mode.hpp</label>
+        <link refid="mode_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>time_series/time_series.hpp</label>
+      </node>
+      <node id="27">
+        <label>net/if.h</label>
+      </node>
+      <node id="7">
+        <label>monopod_sdk/common_header.hpp</label>
+        <link refid="common__header_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>monopod_sdk/monopod_drivers/devices/motor.hpp</label>
+        <link refid="motor_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>real_time_tools/timer.hpp</label>
+      </node>
+      <node id="22">
+        <label>stdint.h</label>
+      </node>
+      <node id="37">
+        <label>sys/mman.h</label>
+      </node>
+      <node id="24">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp</label>
+        <link refid="motor__joint__module_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>real_time_tools/thread.hpp</label>
+      </node>
+      <node id="5">
+        <label>stdexcept</label>
+      </node>
+      <node id="6">
+        <label>Eigen/Eigen</label>
+      </node>
+      <node id="12">
+        <label>string</label>
+      </node>
+      <node id="32">
+        <label>linux/can/raw.h</label>
+      </node>
+      <node id="28">
+        <label>sys/ioctl.h</label>
+      </node>
+      <node id="38">
+        <label>monopod_sdk/monopod_drivers/devices/encoder.hpp</label>
+        <link refid="encoder_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>linux/can.h</label>
+      </node>
+      <node id="19">
+        <label>real_time_tools/threadsafe/threadsafe_object.hpp</label>
+      </node>
+      <node id="33">
+        <label>limits.h</label>
+      </node>
+      <node id="18">
+        <label>real_time_tools/spinner.hpp</label>
+      </node>
+      <node id="21">
+        <label>monopod_sdk/monopod_drivers/utils/os_interface.hpp</label>
+        <link refid="os__interface_8hpp"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>real_time_tools/iostream.hpp</label>
+      </node>
+      <node id="34">
+        <label>condition_variable</label>
+      </node>
+      <node id="30">
+        <label>sys/types.h</label>
+      </node>
+      <node id="25">
+        <label>string.h</label>
+      </node>
+      <node id="14">
+        <label>monopod_sdk/monopod_drivers/devices/boards.hpp</label>
+        <link refid="boards_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>unistd.h</label>
+      </node>
+      <node id="41">
+        <label>monopod_sdk/monopod_drivers/utils/polynome.hxx</label>
+      </node>
+      <node id="2">
+        <label>array</label>
+      </node>
+      <node id="36">
+        <label>sstream</label>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="16">
+        <label>monopod_sdk/monopod_drivers/devices/can_bus.hpp</label>
+        <link refid="can__bus_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>mutex</label>
+      </node>
+      <node id="29">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="39">
+        <label>monopod_sdk/monopod_drivers/encoder_joint_module.hpp</label>
+        <link refid="encoder__joint__module_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>monopod_sdk/monopod_drivers/utils/polynome.hpp</label>
+        <link refid="polynome_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>stdio.h</label>
+      </node>
+      <node id="11">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp</label>
+        <link refid="motor__joint__module_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/leg.hpp</label>
+        <link refid="leg_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod.hpp</label>
+        <link refid="monopod_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmonopod__drivers_1_1HomingState" prot="public">monopod_drivers::HomingState</innerclass>
+    <innerclass refid="classmonopod__drivers_1_1MotorJointModule" prot="public">monopod_drivers::MotorJointModule</innerclass>
+    <innernamespace refid="namespacemonopod__drivers">monopod_drivers</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Eigen&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;monopod_sdk/common_header.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;monopod_sdk/monopod_drivers/devices/motor.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;monopod_sdk/monopod_drivers/encoder_joint_module.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="polynome_8hpp" kindref="compound">monopod_sdk/monopod_drivers/utils/polynome.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemonopod__drivers" kindref="compound">monopod_drivers</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>what<sp/>is<sp/>the<sp/>best<sp/>scope<sp/>for<sp/>those<sp/>homing-related<sp/>types?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="namespacemonopod__drivers_1a4542e42cd32958f48d461a77bbc2e812" refkind="member"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacemonopod__drivers_1a4542e42cd32958f48d461a77bbc2e812" kindref="member">HomingReturnCode</ref><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><ref refid="namespacemonopod__drivers_1a4542e42cd32958f48d461a77bbc2e812a02de9649e258d1dd94056e676061e969" kindref="member">NOT_INITIALIZED</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><ref refid="namespacemonopod__drivers_1a4542e42cd32958f48d461a77bbc2e812a43491564ebcfd38568918efbd6e840fd" kindref="member">RUNNING</ref>,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><ref refid="namespacemonopod__drivers_1a4542e42cd32958f48d461a77bbc2e812afd9f6519d3f45276829fe74eb2c4bb85" kindref="member">SUCCEEDED</ref>,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><ref refid="namespacemonopod__drivers_1a4542e42cd32958f48d461a77bbc2e812ab9e14d9b2886bcff408b85aefa780419" kindref="member">FAILED</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="namespacemonopod__drivers_1ad05e9492ac5787e6cbbe004a48056280" refkind="member"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacemonopod__drivers_1ad05e9492ac5787e6cbbe004a48056280" kindref="member">GoToReturnCode</ref><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="namespacemonopod__drivers_1ad05e9492ac5787e6cbbe004a48056280a43491564ebcfd38568918efbd6e840fd" kindref="member">RUNNING</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="namespacemonopod__drivers_1ad05e9492ac5787e6cbbe004a48056280afd9f6519d3f45276829fe74eb2c4bb85" kindref="member">SUCCEEDED</ref>,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="namespacemonopod__drivers_1ad05e9492ac5787e6cbbe004a48056280ab9e14d9b2886bcff408b85aefa780419" kindref="member">FAILED</ref></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="structmonopod__drivers_1_1HomingState" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmonopod__drivers_1_1HomingState" kindref="compound">HomingState</ref><sp/>{</highlight></codeline>
+<codeline lineno="50" refid="structmonopod__drivers_1_1HomingState_1ac8c320d7f544d99a04886d466ac497d8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmonopod__drivers_1_1HomingState_1ac8c320d7f544d99a04886d466ac497d8" kindref="member">joint_id</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="52" refid="structmonopod__drivers_1_1HomingState_1aad9fc1899229fde4503b011d1a1e7c13" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structmonopod__drivers_1_1HomingState_1aad9fc1899229fde4503b011d1a1e7c13" kindref="member">search_distance_limit_rad</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="54" refid="structmonopod__drivers_1_1HomingState_1a76924701324bf9b33f3e4ff8b9c3f95c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structmonopod__drivers_1_1HomingState_1a76924701324bf9b33f3e4ff8b9c3f95c" kindref="member">home_offset_rad</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="56" refid="structmonopod__drivers_1_1HomingState_1ae3d22d7258ae3b09cd398ea8e2197251" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structmonopod__drivers_1_1HomingState_1ae3d22d7258ae3b09cd398ea8e2197251" kindref="member">profile_step_size_rad</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="58" refid="structmonopod__drivers_1_1HomingState_1ad2a13d2114acfe3e82a1e41d2f5f60c4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmonopod__drivers_1_1HomingState_1ad2a13d2114acfe3e82a1e41d2f5f60c4" kindref="member">last_encoder_index_time_index</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="60" refid="structmonopod__drivers_1_1HomingState_1aa507a8c249f650bb02a99e074f7c24fa" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="structmonopod__drivers_1_1HomingState_1aa507a8c249f650bb02a99e074f7c24fa" kindref="member">step_count</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="62" refid="structmonopod__drivers_1_1HomingState_1a6ed16ff846914597ab4926eb26d5f834" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structmonopod__drivers_1_1HomingState_1a6ed16ff846914597ab4926eb26d5f834" kindref="member">target_position_rad</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="64" refid="structmonopod__drivers_1_1HomingState_1a21a749a23991771a66336228b28cbb7e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacemonopod__drivers_1a4542e42cd32958f48d461a77bbc2e812" kindref="member">HomingReturnCode</ref><sp/><ref refid="structmonopod__drivers_1_1HomingState_1a21a749a23991771a66336228b28cbb7e" kindref="member">status</ref><sp/>=<sp/><ref refid="namespacemonopod__drivers_1a4542e42cd32958f48d461a77bbc2e812a02de9649e258d1dd94056e676061e969" kindref="member">HomingReturnCode::NOT_INITIALIZED</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="structmonopod__drivers_1_1HomingState_1a688fa93aec4d1442f66a93c42b4351be" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structmonopod__drivers_1_1HomingState_1a688fa93aec4d1442f66a93c42b4351be" kindref="member">start_position</ref>;</highlight></codeline>
+<codeline lineno="75" refid="structmonopod__drivers_1_1HomingState_1a3c4c888d0832ac732e6dc4b56108d499" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structmonopod__drivers_1_1HomingState_1a3c4c888d0832ac732e6dc4b56108d499" kindref="member">end_position</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classmonopod__drivers_1_1MotorJointModule" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmonopod__drivers_1_1MotorJointModule" kindref="compound">MotorJointModule</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1EncoderJointModule" kindref="compound">EncoderJointModule</ref><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1aa492a6baebdcc7cb19ca06fd835f2984" kindref="member">MotorJointModule</ref>(<ref refid="namespacemonopod__drivers_1a292411dcb88919df4d05216355c248d0" kindref="member">JointNamesIndex</ref><sp/>joint_id,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;monopod_drivers::MotorInterface&gt;<sp/>motor,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;motor_constant,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;gear_ratio,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;zero_angle,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;reverse_polarity<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1a3768ec9ff86188a7af68fae701fc4482" kindref="member">set_torque</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;desired_torque);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1aee76c240d03018425ca94082243faf83" kindref="member">send_torque</ref>();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1a5d49568b01f717be33c94a684f8aa310" kindref="member">set_max_torque</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;max_torque);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1a8468668a37d5434a922768917760acad" kindref="member">get_max_torque</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1a28b17ad27d3b323d6dc352d0e3e3f2aa" kindref="member">get_sent_torque</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1ac02e66976615c405451a47be99ec9844" kindref="member">get_measured_torque</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1ac8a4ce0e2ff88ad9be24b9441b10daca" kindref="member">set_position_control_gains</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>kp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>kd);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1a26b804df8e041e3e99ab0c58febea24a" kindref="member">execute_position_controller</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>target_position_rad)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1a5d9d138117e5a7e81c799b0a4f4ad51e" kindref="member">homing_at_current_position</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>home_offset_rad);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1a909f516ba90dc939ba5c9c50358a4186" kindref="member">init_homing</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>search_distance_limit_rad,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>home_offset_rad,</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>profile_step_size_rad<sp/>=<sp/>0.001);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><ref refid="namespacemonopod__drivers_1a4542e42cd32958f48d461a77bbc2e812" kindref="member">HomingReturnCode</ref><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1aec64d1a853e6f70c02c50e342f9994a4" kindref="member">update_homing</ref>();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1ac9dff77691ba3a236ac37f18aa547d9c" kindref="member">get_distance_travelled_during_homing</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1a9a0b1babacb7370705c6c32e7c70a5a5" kindref="member">joint_torque_to_motor_current</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>torque)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1a6bd65ba517bf011a644b33d19243dc25" kindref="member">motor_current_to_joint_torque</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>current)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>/**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>@brief<sp/>Get<sp/>motor<sp/>measurements<sp/>and<sp/>check<sp/>if<sp/>there<sp/>are<sp/>data<sp/>or<sp/>not.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>@param<sp/>measurement_id<sp/>is<sp/>the<sp/>id<sp/>of<sp/>the<sp/>measurement<sp/>you<sp/>want<sp/>to<sp/>get.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>check:<sp/>monopod_drivers::Measurements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>@return<sp/>double<sp/>the<sp/>measurement.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>double<sp/>get_joint_measurement(const<sp/>Measurements<sp/>&amp;measurement_id)<sp/>const;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>/**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>@brief<sp/>Get<sp/>the<sp/>last<sp/>motor<sp/>measurement<sp/>index<sp/>for<sp/>a<sp/>specific<sp/>data.<sp/>If</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>there</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>was<sp/>no<sp/>data<sp/>yet,<sp/>return<sp/>NaN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>@param<sp/>measurement_id<sp/>is<sp/>the<sp/>id<sp/>of<sp/>the<sp/>measurement<sp/>you<sp/>want<sp/>to<sp/>get.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>check:<sp/>monopod_drivers::Measurements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>@return<sp/>double<sp/>the<sp/>measurement.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>long<sp/>int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>get_joint_measurement_index(const<sp/>Measurements<sp/>&amp;measurement_id)<sp/>const;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266" refid="classmonopod__drivers_1_1MotorJointModule_1ad3db6e45d58ceea068f74eeb11ad4361" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;monopod_drivers::MotorInterface&gt;<sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1ad3db6e45d58ceea068f74eeb11ad4361" kindref="member">motor_</ref>;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272" refid="classmonopod__drivers_1_1MotorJointModule_1a9ac1d31d9039e04b4643f310b8b0fa56" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1a9ac1d31d9039e04b4643f310b8b0fa56" kindref="member">motor_constant_</ref>;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278" refid="classmonopod__drivers_1_1MotorJointModule_1a118a2c3f2d6fd3fc2f14195ac9a2f223" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1a118a2c3f2d6fd3fc2f14195ac9a2f223" kindref="member">max_current_</ref><sp/>=<sp/>MAX_CURRENT<sp/>*<sp/>0.9;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283" refid="classmonopod__drivers_1_1MotorJointModule_1a001f0cf005e9a3c08ac180b0a8317a24" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1a001f0cf005e9a3c08ac180b0a8317a24" kindref="member">position_control_gain_p_</ref>;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288" refid="classmonopod__drivers_1_1MotorJointModule_1a410df7c30b3feb47ae58fe0693ea2795" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1a410df7c30b3feb47ae58fe0693ea2795" kindref="member">position_control_gain_d_</ref>;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293" refid="classmonopod__drivers_1_1MotorJointModule_1a78e580700bdad2f316741ec28eb12e34" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmonopod__drivers_1_1HomingState" kindref="compound">HomingState</ref><sp/><ref refid="classmonopod__drivers_1_1MotorJointModule_1a78e580700bdad2f316741ec28eb12e34" kindref="member">homing_state_</ref>;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>monopod_drivers</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/monopod_sdk/include/monopod_sdk/monopod_drivers/motor_joint_module.hpp"/>
+  </compounddef>
+</doxygen>

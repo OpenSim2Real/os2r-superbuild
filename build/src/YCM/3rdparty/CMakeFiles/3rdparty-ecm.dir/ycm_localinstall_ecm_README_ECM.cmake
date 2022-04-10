@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.1)
+set(_DESTDIR $ENV{DESTDIR})
+set(ENV{DESTDIR} )
+file(INSTALL;TYPE;FILE;FILES;/home/dawson/Documents/Repos/os2r-superbuild/src/YCM/3rdparty/ecm/README.ECM;DESTINATION;/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/share/YCM/3rdparty;MESSAGE_NEVER)
+set(ENV{DESTDIR} ${_DESTDIR})

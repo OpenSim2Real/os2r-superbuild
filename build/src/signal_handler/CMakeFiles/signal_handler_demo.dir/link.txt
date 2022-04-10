@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wfatal-errors -Wl,--no-as-needed -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/signal_handler_demo.dir/demos/demo.cpp.o -o signal_handler_demo  -Wl,-rpath,/home/dawson/Documents/Repos/os2r-superbuild/build/src/signal_handler:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: libsignal_handler.so 

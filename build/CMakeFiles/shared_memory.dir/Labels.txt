@@ -1,0 +1,13 @@
+# Target labels
+ shared_memory
+# Source files and their labels
+/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/shared_memory
+/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/shared_memory.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/shared_memory-complete.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/shared_memory/CMakeFiles/YCMStamp/shared_memory-build.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/shared_memory/CMakeFiles/YCMStamp/shared_memory-configure.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/shared_memory/CMakeFiles/YCMStamp/shared_memory-download.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/shared_memory/CMakeFiles/YCMStamp/shared_memory-install.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/shared_memory/CMakeFiles/YCMStamp/shared_memory-mkdir.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/shared_memory/CMakeFiles/YCMStamp/shared_memory-patch.rule
+/home/dawson/Documents/Repos/os2r-superbuild/build/src/shared_memory/CMakeFiles/YCMStamp/shared_memory-skip-update.rule

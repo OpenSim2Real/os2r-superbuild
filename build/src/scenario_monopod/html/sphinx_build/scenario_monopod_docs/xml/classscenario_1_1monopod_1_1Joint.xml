@@ -1,0 +1,1211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classscenario_1_1monopod_1_1Joint" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>scenario::monopod::Joint</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Joint</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; scenario::monopod::Joint &gt;</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classscenario_1_1monopod_1_1Joint_1aaeb7460a6546ac880c9d47a30d519223" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; Impl &gt;</type>
+        <definition>std::unique_ptr&lt;Impl&gt; scenario::monopod::Joint::pImpl</definition>
+        <argsstring></argsstring>
+        <name>pImpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="228" column="19" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a1a00b62a9e96af537e569ad384e982c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>scenario::monopod::Joint::Joint</definition>
+        <argsstring>()</argsstring>
+        <name>Joint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="22" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a40830740c0d0066b0b4158cb3fcc78d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual scenario::monopod::Joint::~Joint</definition>
+        <argsstring>()</argsstring>
+        <name>~Joint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="23" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a8eb5b1692bfd841b06a9868a1e004f35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::initialize</definition>
+        <argsstring>(const std::pair&lt; std::string, int &gt; nameIndexPair, const std::shared_ptr&lt; monopod_drivers::Monopod &gt; &amp;monopod_sdk)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>const std::pair&lt; std::string, int &gt;</type>
+          <declname>nameIndexPair</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; monopod_drivers::Monopod &gt; &amp;</type>
+          <declname>monopod_sdk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="25" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a1e17751be3fbd3c18cc37dba97c5b857" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::valid</definition>
+        <argsstring>() const override</argsstring>
+        <name>valid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if the joint is valid.</para>
+<para><simplesect kind="return"><para>True if the model is valid, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="33" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a489c67a5543f2583b3c4876ebfcffff7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t scenario::monopod::Joint::dofs</definition>
+        <argsstring>() const override</argsstring>
+        <name>dofs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the number of degrees of freedom of the joint.</para>
+<para><simplesect kind="return"><para>The number of DOFs of the joint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="40" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a01c5277914855e6c0195f6ec8cf0934e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string scenario::monopod::Joint::name</definition>
+        <argsstring>(const bool scoped=false) const override</argsstring>
+        <name>name</name>
+        <param>
+          <type>const bool</type>
+          <declname>scoped</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the name of the joint.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scoped</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, the scoped name of the joint is returned. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The name of the joint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="48" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a1728e8f4c797c1636fd4e5ffb2d4582a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>core::JointType</type>
+        <definition>core::JointType scenario::monopod::Joint::type</definition>
+        <argsstring>() const override</argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the type of the joint.</para>
+<para><simplesect kind="return"><para>The type of the joint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="55" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a7183ad36924aa58523aa8129d07639ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::setControlMode</definition>
+        <argsstring>(const core::JointControlMode mode) override</argsstring>
+        <name>setControlMode</name>
+        <param>
+          <type>const core::JointControlMode</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the joint control mode.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired control mode. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True for success, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="63" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a5dee6108c6f6695a5893c8d754cc3601" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>core::JointControlMode</type>
+        <definition>core::JointControlMode scenario::monopod::Joint::controlMode</definition>
+        <argsstring>() const override</argsstring>
+        <name>controlMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the joint control mode.</para>
+<para><simplesect kind="return"><para>the joint control mode </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="71" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1abc50ad0c63902883faedd047461c5e19" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>core::PID</type>
+        <definition>core::PID scenario::monopod::Joint::pid</definition>
+        <argsstring>() const override</argsstring>
+        <name>pid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the PID parameters of the joint.</para>
+<para>If no PID parameters have been set, the default parameters are returned.</para>
+<para><simplesect kind="return"><para>The joint PID parameters. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="82" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a8c419123353c60e67c464de5faa55a3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::setPID</definition>
+        <argsstring>(const core::PID &amp;pid) override</argsstring>
+        <name>setPID</name>
+        <param>
+          <type>const core::PID &amp;</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the PID parameters of the joint.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired PID parameters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True for success, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="90" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a9efa13be15a49e2e5f79545633a12458" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; scenario::monopod::Joint::jointMaxGeneralizedForce</definition>
+        <argsstring>() const override</argsstring>
+        <name>jointMaxGeneralizedForce</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the maximum generalized force that could be applied to the joint.</para>
+<para><simplesect kind="return"><para>The maximum generalized force of the joint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="97" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a59aa00e25269e63edd267d57d3277289" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::setJointMaxGeneralizedForce</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;maxForce) override</argsstring>
+        <name>setJointMaxGeneralizedForce</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>maxForce</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the maximum generalized force that can be applied to the joint.</para>
+<para>This limit can be used to clip the force applied by joint controllers.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>maxForce</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector with the maximum generalized forces of the joint DOFs. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True for success, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="110" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a616f285026a9f3975855b82df0bd4245" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; scenario::monopod::Joint::jointPosition</definition>
+        <argsstring>() const override</argsstring>
+        <name>jointPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the position of the joint.</para>
+<para><simplesect kind="return"><para>The position of the joint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="117" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a48b54cec295bab5b94532a436893e05d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; scenario::monopod::Joint::jointVelocity</definition>
+        <argsstring>() const override</argsstring>
+        <name>jointVelocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the velocity of the joint.</para>
+<para><simplesect kind="return"><para>The velocity of the joint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="124" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a69af712a47be815e3b887e65c7bb3f12" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; scenario::monopod::Joint::jointAcceleration</definition>
+        <argsstring>() const override</argsstring>
+        <name>jointAcceleration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the acceleration of the joint.</para>
+<para><simplesect kind="return"><para>The acceleration of the joint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="131" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a54afcbab26f505d63c732a9249c2b04b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::setJointGeneralizedForceTarget</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;force) override</argsstring>
+        <name>setJointGeneralizedForceTarget</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>force</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the generalized force target of the joint.</para>
+<para>Note that if there&apos;s friction or other loss components, the real joint force will differ.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>force</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector with the generalized force targets of the joint DOFs. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True for success, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="144" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a83008ca629758c5516fe74b7573d2cf5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; scenario::monopod::Joint::jointGeneralizedForceTarget</definition>
+        <argsstring>() const override</argsstring>
+        <name>jointGeneralizedForceTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the active generalized force target.</para>
+<para><simplesect kind="return"><para>The generalized force target of the joint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="151" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1adbbe8c79447c5ee37b7a04c4e169e10e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>core::JointLimit</type>
+        <definition>core::JointLimit scenario::monopod::Joint::jointPositionLimit</definition>
+        <argsstring>() const override</argsstring>
+        <name>jointPositionLimit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the position limits of the joint.</para>
+<para><simplesect kind="return"><para>The position limits of the joint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="158" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a36ceb75b26518d27eeabd4269622f18c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>core::JointLimit</type>
+        <definition>core::JointLimit scenario::monopod::Joint::jointVelocityLimit</definition>
+        <argsstring>() const override</argsstring>
+        <name>jointVelocityLimit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the velocity limits of the joint.</para>
+<para><simplesect kind="return"><para>The velocity limits of the joint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="165" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a2e1d3788a57aeced7f6671d91067605e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>core::JointLimit</type>
+        <definition>core::JointLimit scenario::monopod::Joint::jointAccelerationLimit</definition>
+        <argsstring>() const</argsstring>
+        <name>jointAccelerationLimit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the acceleration limits of the joint.</para>
+<para><simplesect kind="return"><para>The acceleration limits of the joint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="172" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a0eda9d60fe02b6c9db9e905bd7edbc8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::setJointPositionLimit</definition>
+        <argsstring>(const double &amp;maxPosition, const double &amp;minPosition)</argsstring>
+        <name>setJointPositionLimit</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>maxPosition</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>minPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the maximum position of the joint.</para>
+<para>This limit can be used to set safety limits on the joint position. when violated the Robot will enter into a safe mode. disabling the robot until it is reset or restart.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>maxPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum position of the joint DOFs. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum position of the joint DOFs. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True for success, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="185" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a54d56287d3078d69119538de62e8fcac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::setJointVelocityLimit</definition>
+        <argsstring>(const double &amp;maxVelocity, const double &amp;minVelocity)</argsstring>
+        <name>setJointVelocityLimit</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>maxVelocity</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>minVelocity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the maximum velocity of the joint.</para>
+<para>This limit can be used to set safety limits on the joint velocity. when violated the Robot will enter into a safe mode. disabling the robot until it is reset or restart.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>maxVelocity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum velocity of the joint DOFs. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minVelocity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum position of the joint DOFs. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True for success, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="199" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1aba9dc560c71629eb73436742f494eca0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::setJointAccelerationLimit</definition>
+        <argsstring>(const double &amp;maxAcceleration, const double &amp;minAcceleration)</argsstring>
+        <name>setJointAccelerationLimit</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>maxAcceleration</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>minAcceleration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the maximum acceleration of the joint.</para>
+<para>This limit can be used to set safety limits on the joint acceleration. when violated the Robot will enter into a safe mode. disabling the robot until it is reset or restart.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>maxAcceleration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum acceleration of the joint DOFs. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minAcceleration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum acceleration of the joint DOFs. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True for success, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="213" column="8"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a538b7239ab2e38b4f949f8d5d3c1dd99" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double scenario::monopod::Joint::controllerPeriod</definition>
+        <argsstring>() const override</argsstring>
+        <name>controllerPeriod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="234" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="285" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a8b5c2c86549dc1ed5f90e50f26580c01" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::historyOfAppliedJointForcesEnabled</definition>
+        <argsstring>() const override</argsstring>
+        <name>historyOfAppliedJointForcesEnabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="235" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="287" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a9f3b97fd2e57179d8068cb7eaf9d0b5d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::enableHistoryOfAppliedJointForces</definition>
+        <argsstring>(const bool enable=true, const size_t maxHistorySize=100) override</argsstring>
+        <name>enableHistoryOfAppliedJointForces</name>
+        <param>
+          <type>const bool</type>
+          <declname>enable</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>maxHistorySize</declname>
+          <defval>100</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="237" column="3" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="290" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1ad11d30718c23675f497b1af96f312b3f" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; scenario::monopod::Joint::historyOfAppliedJointForces</definition>
+        <argsstring>() const override</argsstring>
+        <name>historyOfAppliedJointForces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="239" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="295" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a2a2990ed0aad352abe0c807d5fe71ef6" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double scenario::monopod::Joint::coulombFriction</definition>
+        <argsstring>() const override</argsstring>
+        <name>coulombFriction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="240" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="298" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a1e004a62dfdce0b8c0079a7e09dbc7f5" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double scenario::monopod::Joint::viscousFriction</definition>
+        <argsstring>() const override</argsstring>
+        <name>viscousFriction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="241" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="299" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a0af27d5380881fb03e685df9cafb570f" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>core::Limit</type>
+        <definition>scenario::core::Limit scenario::monopod::Joint::positionLimit</definition>
+        <argsstring>(const size_t dof=0) const override</argsstring>
+        <name>positionLimit</name>
+        <param>
+          <type>const size_t</type>
+          <declname>dof</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="245" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="304" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a94e966cfc0b07e53c528874cc757069c" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>core::Limit</type>
+        <definition>scenario::core::Limit scenario::monopod::Joint::velocityLimit</definition>
+        <argsstring>(const size_t dof=0) const override</argsstring>
+        <name>velocityLimit</name>
+        <param>
+          <type>const size_t</type>
+          <declname>dof</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="246" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="308" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1ac1cfae71ad1a89c0cda6789d8b89a202" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::setVelocityLimit</definition>
+        <argsstring>(const double maxVelocity, const size_t dof=0) override</argsstring>
+        <name>setVelocityLimit</name>
+        <param>
+          <type>const double</type>
+          <declname>maxVelocity</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>dof</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="247" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="311" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a227640c845f876229307fbc79f071fae" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double scenario::monopod::Joint::maxGeneralizedForce</definition>
+        <argsstring>(const size_t dof=0) const override</argsstring>
+        <name>maxGeneralizedForce</name>
+        <param>
+          <type>const size_t</type>
+          <declname>dof</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="249" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="316" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a164b0e90ed0b3d73b1f21963aad0c587" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::setMaxGeneralizedForce</definition>
+        <argsstring>(const double maxForce, const size_t dof=0) override</argsstring>
+        <name>setMaxGeneralizedForce</name>
+        <param>
+          <type>const double</type>
+          <declname>maxForce</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>dof</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="250" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="320" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1afb954e1fac697554070c86e767948bc4" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double scenario::monopod::Joint::position</definition>
+        <argsstring>(const size_t dof=0) const override</argsstring>
+        <name>position</name>
+        <param>
+          <type>const size_t</type>
+          <declname>dof</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="252" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="324" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1ab2a5b98dc8434cbce1b76308d6c62d32" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double scenario::monopod::Joint::velocity</definition>
+        <argsstring>(const size_t dof=0) const override</argsstring>
+        <name>velocity</name>
+        <param>
+          <type>const size_t</type>
+          <declname>dof</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="253" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="327" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a8569e4080344940918188edd4cb02d3a" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double scenario::monopod::Joint::acceleration</definition>
+        <argsstring>(const size_t dof=0) const override</argsstring>
+        <name>acceleration</name>
+        <param>
+          <type>const size_t</type>
+          <declname>dof</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="254" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="330" bodyend="332"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1ac78f05e7dff8948eac3f7ba8bf6940e5" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double scenario::monopod::Joint::generalizedForce</definition>
+        <argsstring>(const size_t dof=0) const override</argsstring>
+        <name>generalizedForce</name>
+        <param>
+          <type>const size_t</type>
+          <declname>dof</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="255" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="334" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a06344032ea03b4254c920c6acfdc9930" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::setPositionTarget</definition>
+        <argsstring>(const double position, const size_t dof=0) override</argsstring>
+        <name>setPositionTarget</name>
+        <param>
+          <type>const double</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>dof</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="256" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="337" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1aea7477bde009e574f76117fcf2f22bcd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::setVelocityTarget</definition>
+        <argsstring>(const double velocity, const size_t dof=0) override</argsstring>
+        <name>setVelocityTarget</name>
+        <param>
+          <type>const double</type>
+          <declname>velocity</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>dof</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="257" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="341" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a76b7e5dead26631d7d94a06530a68563" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::setAccelerationTarget</definition>
+        <argsstring>(const double acceleration, const size_t dof=0) override</argsstring>
+        <name>setAccelerationTarget</name>
+        <param>
+          <type>const double</type>
+          <declname>acceleration</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>dof</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="258" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="346" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a296a6e1d77221d1c63e1b2a3786c4334" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::setGeneralizedForceTarget</definition>
+        <argsstring>(const double force, const size_t dof=0) override</argsstring>
+        <name>setGeneralizedForceTarget</name>
+        <param>
+          <type>const double</type>
+          <declname>force</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>dof</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="260" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="351" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a7d7372f120c92a74ba845ef7472cb73a" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double scenario::monopod::Joint::positionTarget</definition>
+        <argsstring>(const size_t dof=0) const override</argsstring>
+        <name>positionTarget</name>
+        <param>
+          <type>const size_t</type>
+          <declname>dof</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="262" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="355" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1ad44b59ab5dbd4becf70c9369b973e3f3" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double scenario::monopod::Joint::velocityTarget</definition>
+        <argsstring>(const size_t dof=0) const override</argsstring>
+        <name>velocityTarget</name>
+        <param>
+          <type>const size_t</type>
+          <declname>dof</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="263" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="358" bodyend="360"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a3d88341fa484cdc00ecc8624088a01e8" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double scenario::monopod::Joint::accelerationTarget</definition>
+        <argsstring>(const size_t dof=0) const override</argsstring>
+        <name>accelerationTarget</name>
+        <param>
+          <type>const size_t</type>
+          <declname>dof</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="264" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="362" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a6678ff3b27b791bdb0af39ed3668d35d" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double scenario::monopod::Joint::generalizedForceTarget</definition>
+        <argsstring>(const size_t dof=0) const override</argsstring>
+        <name>generalizedForceTarget</name>
+        <param>
+          <type>const size_t</type>
+          <declname>dof</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="265" column="10" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="366" bodyend="368"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a67c109d6bf4fd193ba26e1019859ff88" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::setJointVelocityLimit</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;maxVelocity) override</argsstring>
+        <name>setJointVelocityLimit</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>maxVelocity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="271" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="376" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1afa9f7f40bcb03fbd868795ba3dcd04e6" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; scenario::monopod::Joint::jointGeneralizedForce</definition>
+        <argsstring>() const override</argsstring>
+        <name>jointGeneralizedForce</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="272" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="381" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a9a5a2c37b9249f19b89da91c23dfe034" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::setJointPositionTarget</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;position) override</argsstring>
+        <name>setJointPositionTarget</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="273" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="388" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a2c974a868f4342b9493367f63444086f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::setJointVelocityTarget</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;velocity) override</argsstring>
+        <name>setJointVelocityTarget</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>velocity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="274" column="8" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="384" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a6a0df6f6267aef98a1a5e377a1467dea" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scenario::monopod::Joint::setJointAccelerationTarget</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;acceleration) override</argsstring>
+        <name>setJointAccelerationTarget</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>acceleration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="276" column="3" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="392" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a3700dd097d02d42b7488e948f2b75aae" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; scenario::monopod::Joint::jointPositionTarget</definition>
+        <argsstring>() const override</argsstring>
+        <name>jointPositionTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="277" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="397" bodyend="399"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a403ca5ec86789234210ae49007c0abf9" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; scenario::monopod::Joint::jointVelocityTarget</definition>
+        <argsstring>() const override</argsstring>
+        <name>jointVelocityTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="278" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="401" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="classscenario_1_1monopod_1_1Joint_1a16c8f8f52b6e7fdd3ab37a5aee76fcd3" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; scenario::monopod::Joint::jointAccelerationTarget</definition>
+        <argsstring>() const override</argsstring>
+        <name>jointAccelerationTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="279" column="15" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="405" bodyend="407"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>std::enable_shared_from_this&lt; scenario::monopod::Joint &gt;</label>
+      </node>
+      <node id="1">
+        <label>scenario::monopod::Joint</label>
+        <link refid="classscenario_1_1monopod_1_1Joint"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>scenario::core::Joint</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>std::enable_shared_from_this&lt; scenario::monopod::Joint &gt;</label>
+      </node>
+      <node id="1">
+        <label>scenario::monopod::Joint</label>
+        <link refid="classscenario_1_1monopod_1_1Joint"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>scenario::core::Joint</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" line="20" column="43" bodyfile="/home/dawson/Documents/Repos/os2r-superbuild/src/scenario_monopod/src/monopod/include/scenario/monopod/Joint.h" bodystart="18" bodyend="280"/>
+    <listofallmembers>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a8569e4080344940918188edd4cb02d3a" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>acceleration</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a3d88341fa484cdc00ecc8624088a01e8" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>accelerationTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a538b7239ab2e38b4f949f8d5d3c1dd99" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>controllerPeriod</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a5dee6108c6f6695a5893c8d754cc3601" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>controlMode</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a2a2990ed0aad352abe0c807d5fe71ef6" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>coulombFriction</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a489c67a5543f2583b3c4876ebfcffff7" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>dofs</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a9f3b97fd2e57179d8068cb7eaf9d0b5d" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>enableHistoryOfAppliedJointForces</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1ac78f05e7dff8948eac3f7ba8bf6940e5" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>generalizedForce</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a6678ff3b27b791bdb0af39ed3668d35d" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>generalizedForceTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1ad11d30718c23675f497b1af96f312b3f" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>historyOfAppliedJointForces</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a8b5c2c86549dc1ed5f90e50f26580c01" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>historyOfAppliedJointForcesEnabled</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a8eb5b1692bfd841b06a9868a1e004f35" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>initialize</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a1a00b62a9e96af537e569ad384e982c8" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>Joint</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a69af712a47be815e3b887e65c7bb3f12" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>jointAcceleration</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a2e1d3788a57aeced7f6671d91067605e" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>jointAccelerationLimit</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a16c8f8f52b6e7fdd3ab37a5aee76fcd3" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>jointAccelerationTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1afa9f7f40bcb03fbd868795ba3dcd04e6" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>jointGeneralizedForce</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a83008ca629758c5516fe74b7573d2cf5" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>jointGeneralizedForceTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a9efa13be15a49e2e5f79545633a12458" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>jointMaxGeneralizedForce</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a616f285026a9f3975855b82df0bd4245" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>jointPosition</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1adbbe8c79447c5ee37b7a04c4e169e10e" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>jointPositionLimit</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a3700dd097d02d42b7488e948f2b75aae" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>jointPositionTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a48b54cec295bab5b94532a436893e05d" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>jointVelocity</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a36ceb75b26518d27eeabd4269622f18c" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>jointVelocityLimit</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a403ca5ec86789234210ae49007c0abf9" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>jointVelocityTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a227640c845f876229307fbc79f071fae" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>maxGeneralizedForce</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a01c5277914855e6c0195f6ec8cf0934e" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>name</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1abc50ad0c63902883faedd047461c5e19" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>pid</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1aaeb7460a6546ac880c9d47a30d519223" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>pImpl</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1afb954e1fac697554070c86e767948bc4" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>position</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a0af27d5380881fb03e685df9cafb570f" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>positionLimit</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a7d7372f120c92a74ba845ef7472cb73a" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>positionTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a76b7e5dead26631d7d94a06530a68563" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>setAccelerationTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a7183ad36924aa58523aa8129d07639ff" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>setControlMode</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a296a6e1d77221d1c63e1b2a3786c4334" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>setGeneralizedForceTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1aba9dc560c71629eb73436742f494eca0" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>setJointAccelerationLimit</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a6a0df6f6267aef98a1a5e377a1467dea" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>setJointAccelerationTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a54afcbab26f505d63c732a9249c2b04b" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>setJointGeneralizedForceTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a59aa00e25269e63edd267d57d3277289" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>setJointMaxGeneralizedForce</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a0eda9d60fe02b6c9db9e905bd7edbc8b" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>setJointPositionLimit</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a9a5a2c37b9249f19b89da91c23dfe034" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>setJointPositionTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a54d56287d3078d69119538de62e8fcac" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>setJointVelocityLimit</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a67c109d6bf4fd193ba26e1019859ff88" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>setJointVelocityLimit</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a2c974a868f4342b9493367f63444086f" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>setJointVelocityTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a164b0e90ed0b3d73b1f21963aad0c587" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>setMaxGeneralizedForce</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a8c419123353c60e67c464de5faa55a3d" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>setPID</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a06344032ea03b4254c920c6acfdc9930" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>setPositionTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1ac1cfae71ad1a89c0cda6789d8b89a202" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>setVelocityLimit</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1aea7477bde009e574f76117fcf2f22bcd" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>setVelocityTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a1728e8f4c797c1636fd4e5ffb2d4582a" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>type</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a1e17751be3fbd3c18cc37dba97c5b857" prot="public" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>valid</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1ab2a5b98dc8434cbce1b76308d6c62d32" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>velocity</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a94e966cfc0b07e53c528874cc757069c" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>velocityLimit</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1ad44b59ab5dbd4becf70c9369b973e3f3" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>velocityTarget</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a1e004a62dfdce0b8c0079a7e09dbc7f5" prot="private" virt="non-virtual"><scope>scenario::monopod::Joint</scope><name>viscousFriction</name></member>
+      <member refid="classscenario_1_1monopod_1_1Joint_1a40830740c0d0066b0b4158cb3fcc78d1" prot="public" virt="virtual"><scope>scenario::monopod::Joint</scope><name>~Joint</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

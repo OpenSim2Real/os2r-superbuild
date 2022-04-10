@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/shared_memory"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/shared_memory.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/shared_memory-complete.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/shared_memory/CMakeFiles/YCMStamp/shared_memory-build.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/shared_memory/CMakeFiles/YCMStamp/shared_memory-configure.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/shared_memory/CMakeFiles/YCMStamp/shared_memory-download.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/shared_memory/CMakeFiles/YCMStamp/shared_memory-install.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/shared_memory/CMakeFiles/YCMStamp/shared_memory-mkdir.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/shared_memory/CMakeFiles/YCMStamp/shared_memory-patch.rule"
+		},
+		{
+			"file" : "/home/dawson/Documents/Repos/os2r-superbuild/build/src/shared_memory/CMakeFiles/YCMStamp/shared_memory-skip-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"shared_memory"
+		],
+		"name" : "shared_memory"
+	}
+}
