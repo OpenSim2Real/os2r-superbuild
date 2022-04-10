@@ -1,5 +1,0 @@
-cmake_minimum_required(VERSION 3.22.1)
-set(_DESTDIR $ENV{DESTDIR})
-set(ENV{DESTDIR} )
-file(INSTALL;TYPE;FILE;FILES;AddInstallRPATHSupport.cmake;AddUninstallTarget.cmake;ExtractVersion.cmake;FindOrBuildPackage.cmake;GetAllCMakeProperties.cmake;GitInfo.cmake;IncludeUrl.cmake;InstallBasicPackageFiles.cmake;ReplaceImportedTargets.cmake;StandardFindModule.cmake;YCMEPHelper.cmake;DESTINATION;/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/share/YCM/modules;MESSAGE_NEVER)
-set(ENV{DESTDIR} ${_DESTDIR})

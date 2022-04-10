@@ -1,3 +1,0 @@
-repository='https://github.com/oxfordcontrol/osqp.git'
-module=''
-tag='origin'

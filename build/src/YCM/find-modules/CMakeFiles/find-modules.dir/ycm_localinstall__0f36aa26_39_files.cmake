@@ -1,5 +1,0 @@
-cmake_minimum_required(VERSION 3.22.1)
-set(_DESTDIR $ENV{DESTDIR})
-set(ENV{DESTDIR} )
-file(INSTALL;TYPE;FILE;FILES;FindACE.cmake;Findassimp.cmake;FindAtlas.cmake;FindCFW2CANAPI.cmake;FindDRAGONFLYAPI.cmake;FindESDCANAPI.cmake;FindFreenect.cmake;FindFTDI.cmake;FindFuse.cmake;FindGLFW3.cmake;FindGLM.cmake;FindGooCanvas.cmake;FindGooCanvasMM.cmake;FindGtkDatabox.cmake;FindGtkDataboxMM.cmake;FindI2C.cmake;FindIPOPT.cmake;FindIPP.cmake;FindLibdc1394.cmake;FindLibedit.cmake;FindLibOVR.cmake;FindLibusb1.cmake;FindLibv4l2.cmake;FindLibv4lconvert.cmake;FindNVIDIACg.cmake;FindODE.cmake;FindOpenCV.cmake;FindOpenNI.cmake;FindOpenNI2.cmake;FindPLXCANAPI.cmake;FindPortAudio.cmake;FindqpOASES.cmake;FindReadline.cmake;FindSOXR.cmake;FindSQLite.cmake;FindStage.cmake;FindTinyXML.cmake;FindYamlCpp.cmake;FindZFP.cmake;DESTINATION;/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/share/YCM/find-modules;MESSAGE_NEVER)
-set(ENV{DESTDIR} ${_DESTDIR})

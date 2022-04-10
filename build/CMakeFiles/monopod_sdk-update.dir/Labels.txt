@@ -1,8 +1,0 @@
-# Target labels
- monopod_sdk
-# Source files and their labels
-/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/monopod_sdk-update
-/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/monopod_sdk-update.rule
-/home/dawson/Documents/Repos/os2r-superbuild/build/src/monopod_sdk/CMakeFiles/YCMStamp/monopod_sdk-update.rule
-/home/dawson/Documents/Repos/os2r-superbuild/build/src/monopod_sdk/CMakeFiles/YCMStamp/monopod_sdk-download.rule
-/home/dawson/Documents/Repos/os2r-superbuild/build/src/monopod_sdk/CMakeFiles/YCMStamp/monopod_sdk-mkdir.rule

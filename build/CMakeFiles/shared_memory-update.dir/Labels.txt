@@ -1,8 +1,0 @@
-# Target labels
- shared_memory
-# Source files and their labels
-/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/shared_memory-update
-/home/dawson/Documents/Repos/os2r-superbuild/build/CMakeFiles/shared_memory-update.rule
-/home/dawson/Documents/Repos/os2r-superbuild/build/src/shared_memory/CMakeFiles/YCMStamp/shared_memory-update.rule
-/home/dawson/Documents/Repos/os2r-superbuild/build/src/shared_memory/CMakeFiles/YCMStamp/shared_memory-download.rule
-/home/dawson/Documents/Repos/os2r-superbuild/build/src/shared_memory/CMakeFiles/YCMStamp/shared_memory-mkdir.rule

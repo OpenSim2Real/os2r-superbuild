@@ -1,3 +1,0 @@
-repository='https://github.com/machines-in-motion/time_series.git'
-module=''
-tag='origin'

@@ -1,3 +1,0 @@
-repository='https://github.com/OpenSim2Real/hardware_repository'
-module=''
-tag='origin'

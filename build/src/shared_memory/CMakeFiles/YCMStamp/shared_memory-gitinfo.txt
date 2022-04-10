@@ -1,3 +1,0 @@
-repository='https://github.com/machines-in-motion/shared_memory.git'
-module=''
-tag='origin'

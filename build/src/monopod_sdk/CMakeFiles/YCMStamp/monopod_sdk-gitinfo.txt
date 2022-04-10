@@ -1,3 +1,0 @@
-repository='https://github.com/OpenSim2Real/monopod_sdk'
-module=''
-tag='origin'

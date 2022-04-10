@@ -1,3 +1,0 @@
-repository='https://github.com/machines-in-motion/real_time_tools.git'
-module=''
-tag='origin'

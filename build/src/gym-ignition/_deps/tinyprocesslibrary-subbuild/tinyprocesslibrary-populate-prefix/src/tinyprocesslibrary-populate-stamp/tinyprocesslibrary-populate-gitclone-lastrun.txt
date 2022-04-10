@@ -1,3 +1,0 @@
-repository='https://gitlab.com/eidheim/tiny-process-library.git'
-module=''
-tag='origin'

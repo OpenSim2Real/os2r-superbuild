@@ -1,5 +1,0 @@
-cmake_minimum_required(VERSION 3.22.1)
-set(_DESTDIR $ENV{DESTDIR})
-set(ENV{DESTDIR} )
-file(INSTALL;TYPE;FILE;FILES;/home/dawson/Documents/Repos/os2r-superbuild/src/YCM/3rdparty/qt-gstreamer/cmake/modules/COPYING-CMAKE-SCRIPTS;DESTINATION;/home/dawson/Documents/Repos/os2r-superbuild/build/src/YCM/share/YCM/3rdparty;RENAME;COPYING.qt-gstreamer;MESSAGE_NEVER)
-set(ENV{DESTDIR} ${_DESTDIR})
