@@ -106,11 +106,28 @@ Suggestions:
   procedure on the real parts. This is important because an incorrectly inserted helicoil could cause an
   actuator shell to not close properly.
 
+- The bearings now might be a bit too loose for their bearing seats. If that is the case, then apply some thin tape
+  around the rim of the bearings until it is a snug fit.
+
 .. figure:: leg_images/leg_1.jpg
+
+   Upper Leg Base Shell, after helicoil insertion and threading. Do the same thing for the Static Hip Base Shell.
+
 .. figure:: leg_images/leg_5.jpg
 
+   Upper Leg Cover Shell, after helicoil insertion and threading. Do the same thing for the Static Hip Cover Shell.
+
+.. figure:: leg_images/leg_2.jpg
+  
+   Upper Leg Base Shell, with bearings inserted.
+
+.. figure:: leg_images/leg_7.jpg
+
+   Upper Leg Cover Shell, with bearings inserted.
+
 .. figure:: leg_images/outputpulley.jpg
-.. figure:: leg_images/outputpulley_2.jpg
+
+   Output Pulley, after helicoil insertion. Make 2 of these.
 
 Motor Shaft Preparation
 -----------------------
@@ -135,20 +152,22 @@ Suggestions:
 Encoder Preparation
 -------------------
 
-ODRI has the following instructions to prepare the encoders.
+ODRI has the following instructions to prepare the encoders. Follow these, but disregard the instructions to crimp the Hirose connectors, as we will 
+be using different connectors.
 
-- `Encoder Preparation <https://github.com/open-dynamic-robot-initiative/open_robot_actuator_hardware/blob/master/mechanics/actuator_module_v1/details/details_encoder_preparation.md#details-encoder-preparation>`_
+- `Encoder Preparation <https://github.com/open-dynamic-robot-initiative/open_robot_actuator_hardware/blob/master/mechanics/actuator_module_v1/details/details_encoder_preparation.md>`_
 
 Suggestions:
 
-- Make the wires longer than specified in the ODRI instructions, to allow for more room for wire twisting.
+- Measure out 30-50cm for each encoder wire. 
+- Again, do not follow the instructions given for the Hirose connectors.
 
 Motor Preparation
 -----------------
 
-ODRI has the following instructions to prepare the motors.
+ODRI has the following instructions to prepare the motors:
 
-- `Motor Preparation <https://github.com/open-dynamic-robot-initiative/open_robot_actuator_hardware/blob/master/mechanics/actuator_module_v1/details/details_motor_preparation.md#details-motor-preparation>`_
+- `Motor Preparation <https://github.com/open-dynamic-robot-initiative/open_robot_actuator_hardware/blob/master/mechanics/actuator_module_v1/details/details_motor_preparation.md>`_
 
 Suggestions:
 
@@ -157,7 +176,7 @@ Suggestions:
   otherwise you risk shearing parts of the threaded insert, or the motor shaft.
 
 - Remember that when the BLDC motors were bought from the store, they came with a brass spacer.
-  Make sure to keep these spacers safely, they are needed in the leg actuator assembly process!
+  Make sure to keep these spacers safely, they are needed in the leg actuator assembly process.
 
 Center Pulley Preparation
 -------------------------
@@ -168,13 +187,16 @@ Suggestions:
 
 - It is important to ensure that the machined timing belt pulley is centered on the 3D-printed part and is vertical.
   Otherwise, the timing belt will not mesh properly with it. We recommend filing down the side of the machined pulley
-  that will be pushed into the 3D-printed part, to reduce the amount of force needed to push the two parts together
+  that will be pushed into the 3D-printed part to reduce the amount of force needed to push the two parts together
   using an arbor press.
 
-.. figure:: leg_images/roller_1.jpg
 .. figure:: leg_images/roller_2.jpg
-.. figure:: leg_images/roller_3.jpg
+
+   3D-printed roller with bearing inserted, with spacer and screw
+
 .. figure:: leg_images/roller_4.jpg
+
+   Completed rollers. 
 
 Final assembly
 --------------
@@ -185,17 +207,27 @@ ODRI has the following instructions for the final assembly process.
 
 - `Final Assembly Process <https://github.com/open-dynamic-robot-initiative/open_robot_actuator_hardware/blob/master/mechanics/actuator_module_v1/details/details_actuator_module_assembly.md#details-actuator-module-assembly>`_
 
-.. figure:: leg_images/leg_2.jpg
-.. figure:: leg_images/leg_7.jpg
-
 .. figure:: leg_images/leg_3.jpg
+
+   Upper Leg Base Cover with encoder inserted
 
 The assembly process is similar for both the "hip" and "leg" actuator.
 
+.. figure:: leg_images/hip_4.jpg 
+
+   Hip base and cover shell, with encoder inserted.
+
 .. figure:: leg_images/hip_1.jpg
+
+   Encoder disc inserted into the motor shaft, on the Hip base shell
+
 .. figure:: leg_images/hip_2.jpg
+
+   Partially assembled hip actuator.
+
 .. figure:: leg_images/hip_3.jpg
-.. figure:: leg_images/hip_4.jpg
+
+   Another view of a partially assembled hip actuator.
 
 Suggestions:
 
@@ -204,9 +236,6 @@ Suggestions:
   If they are interfering, you must disassemble the encoder assembly again and correct for any misalignments which
   may have caused the encoder disc to not spin freely. The tolerance is very tight; the encoder wheel must spin
   within a ~3mm air space, so be very careful.
-
-- The bearings now might be a bit too loose for their bearing seats. If that is the case, then apply some thin tape
-  around the rim of the bearings until it is a snug fit.
 
 - Before attaching the motors to the shell, make sure that the motor stator, rotor and shaft, as well as the shell,
   are free of any magnetic and non-magnetic debris. Magnetic debris can be removed with strong tape.

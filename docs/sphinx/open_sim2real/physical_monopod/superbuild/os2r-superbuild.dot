@@ -11,17 +11,7 @@ digraph os2r__superbuild {
     node [shape="pentagon", color="dimgray", fontsize="10"];
 
     PythonInterp
-    cereal
-    rt
     PythonLibsNew
-    Eigen3
-    boost_filesystem
-    boost_system
-    boost_atomic
-    boost_headers
-    boost_thread
-    Boost
-    Threads
     Python3
     SWIG
     Git
@@ -36,13 +26,7 @@ digraph os2r__superbuild {
     bgcolor="oldlace";
     node [shape="note", color="orangered3"];
 
-    GTest [shape="note"]
-    shared_memory [shape="note"]
-    real_time_tools [shape="note"]
-    mpi_cmake_modules [shape="note"]
     pybind11 [shape="note"]
-    signal_handler [shape="note"]
-    time_series [shape="note"]
   }
 
   subgraph cluster_core {
@@ -55,8 +39,8 @@ digraph os2r__superbuild {
 
     YCM [label="YCM"]
     mpi_cmake_modules [label="mpi_cmake_modules"]
-    real_time_tools [label="real_time_tools"]
     GTest [label="GTest"]
+    real_time_tools [label="real_time_tools"]
     signal_handler [label="signal_handler"]
     shared_memory [label="shared_memory"]
     time_series [label="time_series"]

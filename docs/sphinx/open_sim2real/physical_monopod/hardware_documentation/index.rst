@@ -12,7 +12,7 @@ A major component of the OpenSim2Real project is the development of a physical, 
 models running in simulation can be applied to the physical world. The hardware platform, called the Monopod,
 has been completely based around prior work by the `Open Dynamic Robot Initiative (ODRI) <https://open-dynamic-robot-initiative.github.io/>`_.
 
-The basic flow of information for the monopod is shown by he system diagram below.
+The basic flow of information for the monopod is shown by the system diagram below.
 
 .. figure:: fulldiagram.png
 
@@ -74,7 +74,9 @@ This guide comprises of the following sections in order:
   physical/basic_tests_leg
   physical/build_instructions_pivot
   physical/basic_tests_pivot
+  physical/leg_pivot_integration
+  physical/leg_pivot_integration_testing
+  
   firmware/monopod_firmware
-  firmware/leg_pivot_integration
-  firmware/leg_pivot_integration_testing
+
   monopod_resources
