@@ -111,12 +111,11 @@ Finally, secure the 3D printed shaft holders to the Axle Holder aluminum plates 
    3D printed Axle Mounts mounted to the aluminum Axle Holders.
 
 .. list-table:: Parts from this step
-
    :header-rows: 1
 
    * - Quantity
      - Part
-     
+
    * - 2pc
      - Completed Axle Mounts
 
