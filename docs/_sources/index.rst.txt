@@ -31,7 +31,9 @@
 
   open_sim2real/physical_monopod/introduction
   open_sim2real/physical_monopod/superbuild/index
+  open_sim2real/physical_monopod/hardware_documentation/index3
   open_sim2real/physical_monopod/hardware_documentation/index
+  open_sim2real/physical_monopod/hardware_documentation/index2
   open_sim2real/physical_monopod/quick_start
   open_sim2real/physical_monopod/next_steps
 
