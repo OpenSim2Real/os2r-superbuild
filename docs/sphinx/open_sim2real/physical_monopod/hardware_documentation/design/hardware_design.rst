@@ -135,8 +135,10 @@ into a 2D robotic leg.
 
 .. figure:: design_images/roboticleg.PNG
 
-   The robotic leg design, adapted from the Open Dynamic Robotic Initiative actuator parts. The public OnShape document can be viewed `here <https://cad.onshape.com/documents/13d38c57dee40a129dc0750d/w/a2c92239a21f174507c126a9/e/a6707425b494d93b37562f98?renderMode=0&uiState=62541c5b16304c4d15701151>`_.
+   The robotic leg design, adapted from the Open Dynamic Robotic Initiative actuator parts. The public OnShape document can be viewed
+   `here <https://cad.onshape.com/documents/13d38c57dee40a129dc0750d/w/a2c92239a21f174507c126a9/e/a6707425b494d93b37562f98?renderMode=0&uiState=62541c5b16304c4d15701151>`_.
    The "Robotic Leg" folder within the OnShape document holds all OnShape design files related to the Central Pivot.
+
 
 Conclusion
 ----------
