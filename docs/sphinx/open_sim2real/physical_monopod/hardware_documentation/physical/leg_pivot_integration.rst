@@ -220,6 +220,10 @@ Instructions:
     * - 1pc
       - Monopod assembly without power connections or CAN connection
 
+.. figure:: in_images/controlelectronics.PNG
+
+   A diagram showing how the encoder and motor cables are wired.
+
 Power Connections
 -----------------
 
@@ -274,6 +278,10 @@ together, and the Ground pins of both TI LAUNCHXL boards together, with individu
     * - 1pc
       - Monopod assembly without CAN connection
 
+.. figure:: design_images/powerelectronics.PNG
+
+   A diagram showing how the power electronics are wired.
+
 CAN Connections
 ---------------
 
@@ -302,6 +310,10 @@ Instructions to connect TI LAUNCXL boards to CAN:
       - Part
     * - 1pc
       - Complete Monopod Assembly
+
+.. figure:: in_images/canelectronics.PNG
+
+   A diagram showing how the CAN communication buses are wired.
 
 Conclusion
 ----------

@@ -55,32 +55,22 @@ To test that the encoders on the Central Pivot are functional:
 - Connect the 5V Power and Ground of each encoder to a power supply, and connect the A and B Phase of the encoders to
   an oscilloscope. Rotating the Central Pivot should now show encoder pulses on the oscilloscope.
 
-Basic Software Tests
---------------------
+Reading Encoder Measurements
+----------------------------
+
+Once it is verified that the Central Pivot is mechanically sound, the encoders can be tested to ensure that they are
+providing correct position, velocity and accelerations.
+
+First, set up a CAN connection to the Central Pivot microcontroller board as instructed in :ref:`CAN Connection <can_connection>`.
+This requires temporarily connecting the encoder wires on the Central Pivot to a microcontroller board, and connecting 
+the microcontroller board to a computer via CAN.
+
+.. figure:: leg_images/can_interface_2.PNG
+
+   Illustration on how to set up temporary encoder and CAN connections
 
 To test that the encoder measurement firmware is running, and that a CAN connection between the TI LAUNCHXL board has
-been established
-
-Connect the encoders to the TI LAUNCHXL, and connect the TI LAUNCHXL to a power supply. Connect the TI LAUNCHXL CAN
-port to your computer's USB port via a CAN-to-USB interface card. The following steps are recommended to be done on
-a Linux operating system.
-
-Run the following command to check which port the TI LAUNCHXL is connected to:
-
-.. code:: bash
-
-    cd /dev
-    ls
-
-Search for the **ttyACMX** pattern, such as **ttyACM0**. Run the following commands to set up the CAN connection.
-
-.. code:: bash
-
-    sudo slcand -o -c -s8 /dev/ttyACM0 can0
-    sudo ifconfig can0 up
-    sudo ifconfig can0 txqueuelen 1000
-
-Run the following to check the encoder position messages sent by the TI LAUNCHXL board.
+been established, Run the following to check the encoder position messages sent by the TI LAUNCHXL board.
 
 .. code:: bash
 
@@ -88,7 +78,7 @@ Run the following to check the encoder position messages sent by the TI LAUNCHXL
 
 Moving the horizontal boom on the Central Pivot should now produce a change in the position values being sent. These
 values are in bytes and are not decoded yet. To decode them into actual position values, the following script has been
-provided: `Desktop-Interactive-Can-Controller <https://github.com/OpenSim2Real/desktop-interactive-can-controller>`_
+provided: `Desktop Interactive Can Controller <https://github.com/OpenSim2Real/desktop-interactive-can-controller>`_
 
 After configuring the appropriate port numbers in the script, the code should read out the encoder positions of the
 Central Pivot. A good check here is to check that the encoder code wheels are firmly attached to their shafts, and

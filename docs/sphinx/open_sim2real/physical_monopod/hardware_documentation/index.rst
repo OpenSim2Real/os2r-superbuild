@@ -10,7 +10,7 @@ This section describes the process of assembling and testing our hardware platfo
 
 A major component of the OpenSim2Real project is the development of a physical, hardware platform so that
 models running in simulation can be applied to the physical world. The hardware platform, called the Monopod,
-has been completely based around prior work by the `Open Dynamic Robot Initiative (ODRI) <https://open-dynamic-robot-initiative.github.io/>`_.
+has been completely based around prior work by the `Open Dynamic Robot Initiative <https://open-dynamic-robot-initiative.github.io/>`_(ODRI).
 
 The basic flow of information for the monopod is shown by the system diagram below.
 
@@ -49,20 +49,30 @@ This guide comprises of the following sections in order:
 
 - :ref:`Build Requirements <build_requirements>`: A list of mechanical, electrical and software skills
   to construct and run basic tests on the Monopod, with a list of required tools.
+
 - :ref:`Bill of Materials <bom>`: Bill of materials for the entire Monopod hardware platform.
+
 - :ref:`Firmware Setup <monopod_firmware>`: Instructions on how to flash and run the motor control
   microcontroller firmware.
+
 - :ref:`Robotic Leg Build Instructions <build_instructions_leg>`: Comprehensive assembly instructions for
   the Robotic Leg.
+
 - :ref:`Robotic Leg Testing Procedure <basic_tests_leg>`: Basic testing procedures for the Robotic Leg
+
 - :ref:`Central Pivot Build Instructions <build_instructions_pivot>`: Comprehensive assembly instructions
   for the Central Pivot.
+
 - :ref:`Central Pivot Testing Procedure <basic_tests_pivot>`: Basic testing procedures for the Central Pivot
+
 - :ref:`Central Pivot - Robotic Leg Integration <leg_pivot_integration>`: Instructions on integrating the
   Central Pivot and Robotic Leg builds.
+
 - :ref:`Hardware Integration Testing<leg_pivot_integration_testing>`: Basic tests to run on the completed Monopod.
+
 - :ref:`Further Reading & Resources <monopod_resources>`: Further readings and relevant resources to aid
   the assembly procedure.
+
 
 .. toctree::
   :hidden:
@@ -76,7 +86,4 @@ This guide comprises of the following sections in order:
   physical/basic_tests_pivot
   physical/leg_pivot_integration
   physical/leg_pivot_integration_testing
-  
-  firmware/monopod_firmware
-
   monopod_resources

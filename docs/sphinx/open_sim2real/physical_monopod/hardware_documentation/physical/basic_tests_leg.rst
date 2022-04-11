@@ -29,6 +29,59 @@ There are several checks to confirm that each modular actuator has been assemble
 
 - All bolts between the actuator shells should be tightened.
 
+Running the Motors
+------------------
+
+Once it is verified that each actuator is mechanically sound, the actuators can be individually tested by freely running 
+the motors. This tests that the BLDC motors and the encoders have been correctly installed, and are not damaged. 
+
+First, set up a CAN connection to the Robotic Leg microcontroller board as instructed in :ref:`CAN Connection <can_connection>`.
+This requires temporarily connecting the encoder wires and motor cables from the Robotic Leg to the microcontroller board.
+
+.. figure:: leg_images/can_interface_1.PNG
+
+   Illustration on how to connect motor and encoder cables, as well as how to set up the CAN connection
+
+.. important::
+
+   Ensure that the Robotic Leg actuators are not connected to each other mechanically or electrically, so that both actuators can
+   spin freely without hardware collision or wire entanglement.
+
+After a CAN connection has been set up between the microcontroller board and a computer, run the following command to verify that
+a CAN connection has been established:
+
+.. code:: bash
+
+   candump can0
+
+If 0x010 messages are being received every second, the CAN connection has been successfully established. Run the following commands 
+in another terminal window, while keeping the CAN dump in the first window running, to enable both motors on the Robotic Leg.
+
+.. code:: bash
+
+   cansend can0 005#0000000000000000  # set target current to zero
+   cansend can0 000#000000000000001E  # disable CAN receive timeout
+   cansend can0 000#0000000100000001  # enable the system
+   cansend can0 000#0000000100000014  # enable sending measurements
+   cansend can0 000#0000000100000002  # enable motor 1
+   cansend can0 000#0000000100000003  # enable motor 2
+
+If this step is successful, both motors should jitter slightly, and CAN messages with ID 0x20, 0x30, 0x40, and 0x70 should appear 
+in the CAN dump.
+
+To apply torque to both motors, run the following:
+
+.. code:: bash
+
+   cansend can0 005#0000000100000001  # set target current for both motors to a small value
+
+Applying increasingly larger torques should cause both motors to spin slowly. To stop the motors from spinning, simply set the 
+target currents to zero.
+
+.. code:: bash
+
+   cansend can0 005#0000000000000000  # set target current to zero
+
 Troubleshooting
 ---------------
 
@@ -104,3 +157,11 @@ actuator shell might crack, damaging the shell.
 
 This problem can be avoided by limiting the torque applied to the actuators, and using better 3D printed materials. 
 We found Nylon 12 material printed on an SLS printer to be better for this application.
+
+Conclusion
+----------
+
+After the tests on each individual actuator module have passed, connect the actuator modules together to the full 
+Robotic Leg.
+
+.. figure:: in_images/full_leg.jpg

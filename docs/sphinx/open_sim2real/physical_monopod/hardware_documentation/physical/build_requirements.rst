@@ -115,10 +115,12 @@ readily available.
    * - .. figure:: tools_images/kapton.jpg
 
           Kapton Tape, as thin as possible
-
-       .. figure:: tools_images/masking.jpg
-
+    
+     - .. figure:: tools_images/masking.jpg
+    
           Masking Tape
+
+     - 
 
    * - Waterjet Cutter (recommended)
 
