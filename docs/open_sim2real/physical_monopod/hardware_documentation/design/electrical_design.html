@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; OpenSim2Real  documentation</title>
+    <title>Monopod Electrical Design &#8212; OpenSim2Real  documentation</title>
     
   <link href="../../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -249,11 +249,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../physical/leg_pivot_integration_testing.html">
      Monopod Integration Testing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../firmware/monopod_firmware.html">
-     Monopod Firmware Setup &amp; Flash
     </a>
    </li>
    <li class="toctree-l2">
@@ -663,7 +658,27 @@
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control-electronics">
+   Control Electronics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#can-communications-electronics">
+   CAN Communications Electronics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#power-electronics">
+   Power Electronics
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -675,7 +690,40 @@
         
               <div>
                 
-  
+  <div class="section" id="monopod-electrical-design">
+<span id="electrical-design"></span><h1>Monopod Electrical Design<a class="headerlink" href="#monopod-electrical-design" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This page illustrates the electrical design of the Robotic Leg. The electrical design for this robotic leg is completely
+driven by the mechanical design, so the only major design problem is ensuring neat wiring.</p>
+<div class="figure align-default" id="id1">
+<img alt="../../../../_images/fulldiagram.png" src="../../../../_images/fulldiagram.png" />
+<p class="caption"><span class="caption-text">A brief diagram of how the various components of the system are wired together.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="control-electronics">
+<h2>Control Electronics<a class="headerlink" href="#control-electronics" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="id2">
+<img alt="../../../../_images/controlelectronics.PNG" src="../../../../_images/controlelectronics.PNG" />
+<p class="caption"><span class="caption-text">A diagram showing how the encoder and motor cables are wired.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="can-communications-electronics">
+<h2>CAN Communications Electronics<a class="headerlink" href="#can-communications-electronics" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="id3">
+<img alt="../../../../_images/canelectronics.PNG" src="../../../../_images/canelectronics.PNG" />
+<p class="caption"><span class="caption-text">A diagram showing how the CAN communication buses are wired.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="power-electronics">
+<h2>Power Electronics<a class="headerlink" href="#power-electronics" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="id4">
+<img alt="../../../../_images/powerelectronics.PNG" src="../../../../_images/powerelectronics.PNG" />
+<p class="caption"><span class="caption-text">A diagram showing how the power electronics are wired.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
 
               </div>
               

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; OpenSim2Real  documentation</title>
+    <title>Robotic Leg Firmware &#8212; OpenSim2Real  documentation</title>
     
   <link href="../../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -249,11 +249,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../physical/leg_pivot_integration_testing.html">
      Monopod Integration Testing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="monopod_firmware.html">
-     Monopod Firmware Setup &amp; Flash
     </a>
    </li>
    <li class="toctree-l2">
@@ -663,7 +658,17 @@
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#firmware-description">
+   Firmware Description
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -675,7 +680,54 @@
         
               <div>
                 
-  
+  <div class="section" id="robotic-leg-firmware">
+<span id="dual-motor-control"></span><h1>Robotic Leg Firmware<a class="headerlink" href="#robotic-leg-firmware" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This page describes the Robotic Leg Firmware, which controls the BLDC motors on the Robotic Leg. The information here is
+mostly derived from the ODRI-provided firmware, of which the description of the program structure can be found here:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://open-dynamic-robot-initiative.github.io/mw_dual_motor_torque_ctrl/program_structure_and_frequencies.html">ODRI Program Structure and Frequencies</a></p></li>
+</ul>
+<p>However, our team made several changes to this firmware which must be discussed. Further documentation of how this
+firmware works is also warrented.</p>
+</div>
+<div class="section" id="firmware-description">
+<h2>Firmware Description<a class="headerlink" href="#firmware-description" title="Permalink to this headline">¶</a></h2>
+<p>The basic function of this firmware is as follows:</p>
+<ul class="simple">
+<li><p>Upon startup, the firmware initializes several peripherals such as the Controller Area Network(CAN), General Purpose
+Input-Output(GPIO) and Encoders(ENC and QEP). The firmware reads user-defined constants that describe the motors and
+encoders used on our physical platform, and uses this information to set up the data structures and peripherals to run
+motor control. The firmware then sets up several Interrupt Service Routines(ISRs), which are functions which execute
+periodically on a timer interrupt, or on other event-driven interrupts.</p></li>
+<li><p>The firmware idles until it receives a CAN message to enable the system and CAN messages to enable each of the motors.
+After receiving said CAN messages, it runs through an infinite loop which updates an internal state estimator, checks
+for errors, toggles LEDs, and writes motor control commands to the motor driver boards based on the current state of
+the system. The ISRs run independently from the main loop on their own frequency, and they can update the state of
+the system.</p></li>
+<li><p>The firmware goes back to idling when CAN messages are sent that disables the motors and the system.</p></li>
+</ul>
+<p>Most of the work in this firmware is done by Interrupt Service Routines(ISRs). The following ISRs are used:</p>
+<ul class="simple">
+<li><p>QEP Index ISRs: There are 2 QEP Index ISRs, each corresponding to 1 encoder on the Robotic Leg. The encoders used in the
+Robotic Leg can detect when an encoder has executed a full revolution, and the microcontroller can use this as an
+interrupt. When this ISR is called, the microcontroller can compare the number of encoder counts it took to go a full
+revolution, compared to the number of encoder counts it took to do the last revolution. If number of encoder counts
+are different, then it means that the encoders are missing counts, and an error flag is set which stops the motor and
+sends an error flag in a CAN message.</p></li>
+<li><p>Timer ISR: This executes at a fixed rate of 1000Hz. Every time this ISR executes, CAN messages indicating the position,
+velocity, acceleration and current of each motor is sent.</p></li>
+<li><p>CAN ISR: This executes whenever a CAN message is received. This ISR checks the ID and contents of the CAN message, and
+uses it to update the desired state of the system. This ISR is used to enable or disable the system, or to set target
+currents.</p></li>
+<li><p>Motor ISRs: There are 2 Motor ISRs, each corresponding to 1 motor on the Robotic Leg. Each of these ISRs executes on a
+fixed rate of 10kHz. Every time this ISR executes, a Field Oriented Control algorithm is run that compares the current
+state of the motors and the desired state of the motors, and uses this to command a torque to each motor.</p></li>
+</ul>
+</div>
+</div>
+
 
               </div>
               

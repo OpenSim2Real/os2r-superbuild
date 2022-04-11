@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; OpenSim2Real  documentation</title>
+    <title>Connecting By CAN &#8212; OpenSim2Real  documentation</title>
     
   <link href="../../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -249,11 +249,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../physical/leg_pivot_integration_testing.html">
      Monopod Integration Testing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="monopod_firmware.html">
-     Monopod Firmware Setup &amp; Flash
     </a>
    </li>
    <li class="toctree-l2">
@@ -663,7 +658,32 @@
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hardware">
+   Hardware
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connection-setup-canable">
+   Connection Setup(CANable)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connection-setup-peak-systems-devices">
+   Connection Setup(PEAK Systems Devices)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connection-setup-python">
+   Connection Setup(Python)
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -675,7 +695,119 @@
         
               <div>
                 
-  
+  <div class="section" id="connecting-by-can">
+<span id="can-connection"></span><h1>Connecting By CAN<a class="headerlink" href="#connecting-by-can" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Both TI LAUNCHXL microcontroller boards communicate with a computer via CAN protocol. This page provides instructions
+on how to establish CAN communications between the microcontrollers and a computer.</p>
+<p>These instructions are derived from ODRI’s instructions for establishing CAN communications, which are still worth
+reading.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://open-dynamic-robot-initiative.github.io/mw_dual_motor_torque_ctrl/can_connection.html">ODRI Connecting via CAN</a></p></li>
+</ul>
+<p>A comprehensive guide to the CAN protocol can be found here.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://elearning.vector.com/mod/page/view.php?id=333">Vector Learning Module for CAN</a></p></li>
+</ul>
+</div>
+<div class="section" id="hardware">
+<h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
+<p>ODRI recommends using the <a class="reference external" href="https://www.peak-system.com/PCAN-PCI-Express.206.0.html?&amp;L=1">PEAK Systems PCAN PCI Express Card</a>
+as a CAN network-to-computer interface. This PCI Express Card allows multiple CAN channels to be handled at the same time,
+allowing for future extension. PEAK Systems device drivers are also natively integrated into the Linux operating systems,
+so no additional installation steps are required.</p>
+<p>However, the PCAN PCI Express Card has a number of disadvantages. It is quite expensive when compared to other CAN
+interfaces. It also requires access to the computer’s PCI Express slots, which is difficult or impossible to do on a
+compact laptop.</p>
+<p>Our team recommends using the <a class="reference external" href="https://www.peak-system.com/PCAN-USB.199.0.html?&amp;L=1">PEAK Systems CAN to USB</a>
+as a CAN network-to-computer interface. This allows an easy connection to a laptop computer through a USB port, while
+offering good software support for the Linux operating system. Our team also recommends using the open-source
+<a class="reference external" href="https://canable.io/">CANable</a> CAN interface device, which is cheaper than the PEAK Systems device, but is more
+difficult to source.</p>
+<p>Our team does not recommend using cheap CAN interfaces without proper documentation or support, such as this one
+<a class="reference external" href="https://www.amazon.ca/USB-CAN-Bus-Converter-Adapter-Cable/dp/B0719LXGYR">CAN to USB adapter</a>, for a number of reasons.
+These adapters often use ad-hoc text-based protocols which are not supported by standard CAN libraries such as SocketCAN.
+A good indicator of whether a CAN interface can be used is found <a class="reference external" href="https://python-can.readthedocs.io/en/master/interfaces.html">here</a></p>
+<p>Before establishing a network connection, ensure that a physical CAN connection is set up as follows.</p>
+<div class="figure align-default" id="id1">
+<img alt="../../../../_images/can.PNG" src="../../../../_images/can.PNG" />
+<p class="caption"><span class="caption-text">Illustration of CAN connection</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="connection-setup-canable">
+<h2>Connection Setup(CANable)<a class="headerlink" href="#connection-setup-canable" title="Permalink to this headline">¶</a></h2>
+<p>If you are using the CANable interface device. Run the following in a Linux terminal to install utilities for SocketCAN,
+which is a collection of CAN drivers for Linux.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install can-utils
+</pre></div>
+</div>
+<p>If the phyiscal CAN connection has already been set up, check to see where the CAN interface is mounted on your Linux
+filesystem:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls /dev
+</pre></div>
+</div>
+<p>Search for the pattern <strong>ttyACMX</strong> or <strong>ttyUSBX</strong> (for example, <strong>ttyACM0</strong>). This is where the CAN interface will be
+mounted. Then, run the following to initialize the CAN connection.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo slcand -o -c -s8 /dev/ttyACM0 can0
+sudo ifconfig can0 up
+sudo ifconfig can0 txqueuelen <span class="m">1000</span>
+</pre></div>
+</div>
+<p>After that, run the following to check that CAN messages are being sent.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>candump can0
+</pre></div>
+</div>
+<p>If all mechanical, electrical, firmware and software elements have been set up correctly, a dump of all CAN messages
+being sent will be displayed. CTRL-C exits this command.</p>
+<p>To terminate a CAN connection, run the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo ifconfig can0 down
+</pre></div>
+</div>
+<p>More information about using the CANable device can be found here:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://canable.io/getting-started.html">CANable Getting Started</a>: The CANable interface documentation</p></li>
+<li><p><a class="reference external" href="https://cantact.io/introduction.html">CANtact Documentation</a>: The CANtact interface documentation. The CANtact
+device is a precursor to the CANable device.</p></li>
+</ul>
+</div>
+<div class="section" id="connection-setup-peak-systems-devices">
+<h2>Connection Setup(PEAK Systems Devices)<a class="headerlink" href="#connection-setup-peak-systems-devices" title="Permalink to this headline">¶</a></h2>
+<p>If you are using a PEAK Systems interface device, run the following to install SocketCAN utilities:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install can-utils
+</pre></div>
+</div>
+<p>Then, run the following to configure the CAN connection speed to 1Mbit/s, and to initialize the CAN connection:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo ip link <span class="nb">set</span> can0 <span class="nb">type</span> can bitrate <span class="m">1000000</span> sample-point <span class="m">0</span>.867
+sudo ip link <span class="nb">set</span> up can0
+</pre></div>
+</div>
+<p>After that, run the following to check that CAN messages are being sent.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>candump can0
+</pre></div>
+</div>
+<p>More information about using a PEAK Systems device can be found here:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://open-dynamic-robot-initiative.github.io/mw_dual_motor_torque_ctrl/can_connection.html#connection-setup">ODRI CAN Connection Setup</a></p></li>
+</ul>
+</div>
+<div class="section" id="connection-setup-python">
+<h2>Connection Setup(Python)<a class="headerlink" href="#connection-setup-python" title="Permalink to this headline">¶</a></h2>
+<p>It is also possible to interface with the CAN interface in Python. To do this, first install the python-can library:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install python-can
+</pre></div>
+</div>
+<p>Instructions and example scripts can be found on the python-can documentation:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://python-can.readthedocs.io/en/master/index.html">Python CAN Documentation</a></p></li>
+</ul>
+<p>An example script to display encoder positions, velocities and acceleration is found here:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/OpenSim2Real/desktop-interactive-can-controller">Desktop Interactive CAN Controller</a></p></li>
+</ul>
+</div>
+</div>
+
 
               </div>
               

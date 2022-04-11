@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; OpenSim2Real  documentation</title>
+    <title>Central Pivot Firmware &#8212; OpenSim2Real  documentation</title>
     
   <link href="../../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -249,11 +249,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../physical/leg_pivot_integration_testing.html">
      Monopod Integration Testing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="monopod_firmware.html">
-     Monopod Firmware Setup &amp; Flash
     </a>
    </li>
    <li class="toctree-l2">
@@ -663,7 +658,17 @@
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#firmware-description">
+   Firmware Description
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -675,7 +680,33 @@
         
               <div>
                 
-  
+  <div class="section" id="central-pivot-firmware">
+<span id="encoder-measurement"></span><h1>Central Pivot Firmware<a class="headerlink" href="#central-pivot-firmware" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This page describes the Central Pivot Firmware, which measures the encoder position, velocity and accelerations on the
+Central Pivot. This firmware is developed by the OpenSim2Real group, and a brief description of how it works is
+warranted.</p>
+</div>
+<div class="section" id="firmware-description">
+<h2>Firmware Description<a class="headerlink" href="#firmware-description" title="Permalink to this headline">¶</a></h2>
+<p>The basic function of this firmware is as follows:</p>
+<ul class="simple">
+<li><p>Upon startup, the firmware initializes several peripherals such as the Controller Area Network(CAN), General Purpose
+Input-Output(GPIOs) and Encoders(QEP). The firmware then sets up several Interrupt Service Routines(ISRs) which execute
+either periodically on a timer interrupt, or on other event-driven interrupts.</p></li>
+<li><p>The main loop of this firmware does almost nothing. Everything is done on the Interrupt Service Routines(ISRs).</p></li>
+</ul>
+<p>The following ISRs are used:</p>
+<ul class="simple">
+<li><p>Timer ISR: This executes at a fixed rate of 100Hz. Every time this ISR executes, the encoder positions are read. Using
+a finite difference method, the encoder velocity and acceleration are obtained from current and previous encoder
+positions, and smoothed to get rid of spurious jumps in value. CAN messages indicating the position,
+velocity and acceleration of each encoder are then sent.</p></li>
+</ul>
+</div>
+</div>
+
 
               </div>
               

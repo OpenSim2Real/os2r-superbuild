@@ -254,11 +254,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../firmware/monopod_firmware.html">
-     Monopod Firmware Setup &amp; Flash
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../monopod_resources.html">
      Further Readings &amp; Resources
     </a>
@@ -682,8 +677,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basic-software-tests">
-   Basic Software Tests
+  <a class="reference internal nav-link" href="#reading-encoder-measurements">
+   Reading Encoder Measurements
   </a>
  </li>
 </ul>
@@ -741,31 +736,25 @@ pieces are secured tightly, the Central Pivot should not twist.</p></li>
 an oscilloscope. Rotating the Central Pivot should now show encoder pulses on the oscilloscope.</p></li>
 </ul>
 </div>
-<div class="section" id="basic-software-tests">
-<h2>Basic Software Tests<a class="headerlink" href="#basic-software-tests" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="reading-encoder-measurements">
+<h2>Reading Encoder Measurements<a class="headerlink" href="#reading-encoder-measurements" title="Permalink to this headline">¶</a></h2>
+<p>Once it is verified that the Central Pivot is mechanically sound, the encoders can be tested to ensure that they are
+providing correct position, velocity and accelerations.</p>
+<p>First, set up a CAN connection to the Central Pivot microcontroller board as instructed in <a class="reference internal" href="../firmware/can_connection.html#can-connection"><span class="std std-ref">CAN Connection</span></a>.
+This requires temporarily connecting the encoder wires on the Central Pivot to a microcontroller board, and connecting
+the microcontroller board to a computer via CAN.</p>
+<div class="figure align-default" id="id1">
+<img alt="../../../../_images/can_interface_2.PNG" src="../../../../_images/can_interface_2.PNG" />
+<p class="caption"><span class="caption-text">Illustration on how to set up temporary encoder and CAN connections</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
 <p>To test that the encoder measurement firmware is running, and that a CAN connection between the TI LAUNCHXL board has
-been established</p>
-<p>Connect the encoders to the TI LAUNCHXL, and connect the TI LAUNCHXL to a power supply. Connect the TI LAUNCHXL CAN
-port to your computer’s USB port via a CAN-to-USB interface card. The following steps are recommended to be done on
-a Linux operating system.</p>
-<p>Run the following command to check which port the TI LAUNCHXL is connected to:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /dev
-ls
-</pre></div>
-</div>
-<p>Search for the <strong>ttyACMX</strong> pattern, such as <strong>ttyACM0</strong>. Run the following commands to set up the CAN connection.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo slcand -o -c -s8 /dev/ttyACM0 can0
-sudo ifconfig can0 up
-sudo ifconfig can0 txqueuelen <span class="m">1000</span>
-</pre></div>
-</div>
-<p>Run the following to check the encoder position messages sent by the TI LAUNCHXL board.</p>
+been established, Run the following to check the encoder position messages sent by the TI LAUNCHXL board.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>candump -t d can0,041:FFF
 </pre></div>
 </div>
 <p>Moving the horizontal boom on the Central Pivot should now produce a change in the position values being sent. These
 values are in bytes and are not decoded yet. To decode them into actual position values, the following script has been
-provided: <a class="reference external" href="https://github.com/OpenSim2Real/desktop-interactive-can-controller">Desktop-Interactive-Can-Controller</a></p>
+provided: <a class="reference external" href="https://github.com/OpenSim2Real/desktop-interactive-can-controller">Desktop Interactive Can Controller</a></p>
 <p>After configuring the appropriate port numbers in the script, the code should read out the encoder positions of the
 Central Pivot. A good check here is to check that the encoder code wheels are firmly attached to their shafts, and
 are not slipping:</p>

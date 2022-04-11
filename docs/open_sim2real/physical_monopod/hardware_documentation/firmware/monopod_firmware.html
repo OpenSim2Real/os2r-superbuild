@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Monopod Firmware Setup &amp; Flash &#8212; OpenSim2Real  documentation</title>
+    <title>Monopod Firmware Setup &#8212; OpenSim2Real  documentation</title>
     
   <link href="../../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -40,8 +40,6 @@
     <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Further Readings &amp; Resources" href="../monopod_resources.html" />
-    <link rel="prev" title="Monopod Integration Testing" href="../physical/leg_pivot_integration_testing.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -170,7 +168,7 @@
   Physical Monopod
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../introduction.html">
    Introduction
@@ -203,16 +201,16 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../index.html">
    Building The Monopod
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../physical/build_requirements.html">
      Build Requirements
@@ -251,11 +249,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../physical/leg_pivot_integration_testing.html">
      Monopod Integration Testing
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Monopod Firmware Setup &amp; Flash
     </a>
    </li>
    <li class="toctree-l2">
@@ -712,17 +705,17 @@
         
               <div>
                 
-  <div class="section" id="monopod-firmware-setup-flash">
-<span id="monopod-firmware"></span><h1>Monopod Firmware Setup &amp; Flash<a class="headerlink" href="#monopod-firmware-setup-flash" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="monopod-firmware-setup">
+<span id="monopod-firmware"></span><h1>Monopod Firmware Setup<a class="headerlink" href="#monopod-firmware-setup" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This page explains how to flash the prerequisite firmware onto the TI Launchpad boards.</p>
 <p>There are 2 different firmware packages which need to be flashed onto 2 TI Launchpad boards.</p>
 <ul class="simple">
-<li><p>The first firmware controls the motors and reads the encoders on the Robotic Leg.</p></li>
-<li><p>The second firmware reads the encoders on the Central Pivot.
-Communication to and from both TI Launchpads to a computer is done via CAN protocol.</p></li>
+<li><p>The Robotic Leg Firmware controls the motors and reads the encoders on the Robotic Leg.</p></li>
+<li><p>The Central Pivot firmware reads the encoders on the Central Pivot.</p></li>
 </ul>
+<p>Communication to and from both TI Launchpads to a computer is done via CAN protocol.</p>
 <p>The following instructions require the use of a Windows 10 operating system. The instructions are structured as
 follows:</p>
 <ul class="simple">
@@ -918,21 +911,7 @@ firmware for the Central Pivot. Selecting here loads the program onto the microc
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../physical/leg_pivot_integration_testing.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Monopod Integration Testing</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../monopod_resources.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Further Readings &amp; Resources</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
         
         </div>

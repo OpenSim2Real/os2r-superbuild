@@ -254,11 +254,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../firmware/monopod_firmware.html">
-     Monopod Firmware Setup &amp; Flash
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../monopod_resources.html">
      Further Readings &amp; Resources
     </a>
@@ -677,6 +672,11 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-the-motors">
+   Running the Motors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#troubleshooting">
    Troubleshooting
   </a>
@@ -689,6 +689,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#known-failure-modes">
    Known failure modes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
   </a>
  </li>
 </ul>
@@ -724,6 +729,48 @@ there is any contact with the stator due to metallic debris. See the Troubleshoo
 <li><p>All bolts between the actuator shells should be tightened.</p></li>
 </ul>
 </div>
+<div class="section" id="running-the-motors">
+<h2>Running the Motors<a class="headerlink" href="#running-the-motors" title="Permalink to this headline">¶</a></h2>
+<p>Once it is verified that each actuator is mechanically sound, the actuators can be individually tested by freely running
+the motors. This tests that the BLDC motors and the encoders have been correctly installed, and are not damaged.</p>
+<p>First, set up a CAN connection to the Robotic Leg microcontroller board as instructed in <a class="reference internal" href="../firmware/can_connection.html#can-connection"><span class="std std-ref">CAN Connection</span></a>.
+This requires temporarily connecting the encoder wires and motor cables from the Robotic Leg to the microcontroller board.</p>
+<div class="figure align-default" id="id1">
+<img alt="../../../../_images/can_interface_1.PNG" src="../../../../_images/can_interface_1.PNG" />
+<p class="caption"><span class="caption-text">Illustration on how to connect motor and encoder cables, as well as how to set up the CAN connection</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Ensure that the Robotic Leg actuators are not connected to each other mechanically or electrically, so that both actuators can
+spin freely without hardware collision or wire entanglement.</p>
+</div>
+<p>After a CAN connection has been set up between the microcontroller board and a computer, run the following command to verify that
+a CAN connection has been established:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>candump can0
+</pre></div>
+</div>
+<p>If 0x010 messages are being received every second, the CAN connection has been successfully established. Run the following commands
+in another terminal window, while keeping the CAN dump in the first window running, to enable both motors on the Robotic Leg.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cansend can0 <span class="m">005</span><span class="c1">#0000000000000000  # set target current to zero</span>
+cansend can0 <span class="m">000</span><span class="c1">#000000000000001E  # disable CAN receive timeout</span>
+cansend can0 <span class="m">000</span><span class="c1">#0000000100000001  # enable the system</span>
+cansend can0 <span class="m">000</span><span class="c1">#0000000100000014  # enable sending measurements</span>
+cansend can0 <span class="m">000</span><span class="c1">#0000000100000002  # enable motor 1</span>
+cansend can0 <span class="m">000</span><span class="c1">#0000000100000003  # enable motor 2</span>
+</pre></div>
+</div>
+<p>If this step is successful, both motors should jitter slightly, and CAN messages with ID 0x20, 0x30, 0x40, and 0x70 should appear
+in the CAN dump.</p>
+<p>To apply torque to both motors, run the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cansend can0 <span class="m">005</span><span class="c1">#0000000100000001  # set target current for both motors to a small value</span>
+</pre></div>
+</div>
+<p>Applying increasingly larger torques should cause both motors to spin slowly. To stop the motors from spinning, simply set the
+target currents to zero.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cansend can0 <span class="m">005</span><span class="c1">#0000000000000000  # set target current to zero</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
 <p>If unusual noises are observed when spinning an actuator, there are several possible causes:</p>
@@ -739,9 +786,9 @@ horizontal on the encoder disc holder. Careful reassembly of this subcomponent i
 <li><p>Check if there is any plastic or metal debris within the actuator shells. These can be removed with adhesive
 tape, or with a small vacuum.</p></li>
 </ul>
-<div class="figure align-default" id="id1">
+<div class="figure align-default" id="id2">
 <img alt="../../../../_images/motor_spacing.jpg" src="../../../../_images/motor_spacing.jpg" />
-<p class="caption"><span class="caption-text">There should be no debris between the motor stator and rotor.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">There should be no debris between the motor stator and rotor.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>If the friction felt at the output pulley is anomalously high, there are several possible causes:</p>
 <ul class="simple">
@@ -764,31 +811,39 @@ Special precautions must be taken to reduce the risk of this happening:</p>
 <li><p>Clean the encoder disk with adhesive tape, or a fine brush.</p></li>
 <li><p>Relay all handling precautions taken to the relevant machine shop technicians.</p></li>
 </ul>
-<div class="figure align-default" id="id2">
-<img alt="../../../../_images/encoder_care_2.jpg" src="../../../../_images/encoder_care_2.jpg" />
-<p class="caption"><span class="caption-text">Before handling the encoder disk for any purpose, wrap the encoder disk in tape.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
 <div class="figure align-default" id="id3">
+<img alt="../../../../_images/encoder_care_2.jpg" src="../../../../_images/encoder_care_2.jpg" />
+<p class="caption"><span class="caption-text">Before handling the encoder disk for any purpose, wrap the encoder disk in tape.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id4">
 <img alt="../../../../_images/damage_3.jpg" src="../../../../_images/damage_3.jpg" />
 <p class="caption"><span class="caption-text">Incorrect handling of the encoder disk may result in the encoder disk being scratched, which may cause control
-problems later on.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+problems later on.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="known-failure-modes">
 <h2>Known failure modes<a class="headerlink" href="#known-failure-modes" title="Permalink to this headline">¶</a></h2>
 <p>Under high torques, and if the 3D printed shell is printed with inferior materials, some of the bearing holders in the
 actuator shell might crack, damaging the shell.</p>
-<div class="figure align-default" id="id4">
+<div class="figure align-default" id="id5">
 <img alt="../../../../_images/damage_1.jpg" src="../../../../_images/damage_1.jpg" />
 <p class="caption"><span class="caption-text">Bearing holder for one of the timing belt pulleys is sheared off. The material used here was PLA plastic with an
-FDM printer, which is unsuited for this application.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+FDM printer, which is unsuited for this application.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id5">
+<div class="figure align-default" id="id6">
 <img alt="../../../../_images/damage_2.jpg" src="../../../../_images/damage_2.jpg" />
-<p class="caption"><span class="caption-text">Another view of the bearing holders for a timing belt pulley being sheared off.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Another view of the bearing holders for a timing belt pulley being sheared off.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <p>This problem can be avoided by limiting the torque applied to the actuators, and using better 3D printed materials.
 We found Nylon 12 material printed on an SLS printer to be better for this application.</p>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>After the tests on each individual actuator module have passed, connect the actuator modules together to the full
+Robotic Leg.</p>
+<div class="figure align-default">
+<img alt="../../../../_images/full_leg.jpg" src="../../../../_images/full_leg.jpg" />
+</div>
 </div>
 </div>
 

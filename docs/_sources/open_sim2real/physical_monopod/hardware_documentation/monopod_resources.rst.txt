@@ -45,17 +45,17 @@ The following video links provide a good introduction into Field Oriented Contro
 microcontroller board uses to do current control for the actuators on the Robotic Leg. Part 2 is the most
 relevant to Field Oriented Control, but the whole series is worth watching.
 
-- `Teaching Old Motors New Tricks, Part 1 <https://www.youtube.com/watch?v=fpTvZlnrsP0>`_
-- `Teaching Old Motors New Tricks, Part 2 <https://www.youtube.com/watch?v=VI7pdKrchM0>`_
-- `Teaching Old Motors New Tricks, Part 3 <https://www.youtube.com/watch?v=5eQyoVMz1dY>`_
-- `Teaching Old Motors New Tricks, Part 4 <https://www.youtube.com/watch?v=bZwLFpXhFbI>`_
-- `Teaching Old Motors New Tricks, Part 5 <https://www.youtube.com/watch?v=qWkaJu6o7lI>`_
+- `Teaching Old Motors New Tricks Part 1 <https://www.youtube.com/watch?v=fpTvZlnrsP0>`_
+- `Teaching Old Motors New Tricks Part 2 <https://www.youtube.com/watch?v=VI7pdKrchM0>`_
+- `Teaching Old Motors New Tricks Part 3 <https://www.youtube.com/watch?v=5eQyoVMz1dY>`_
+- `Teaching Old Motors New Tricks Part 4 <https://www.youtube.com/watch?v=bZwLFpXhFbI>`_
+- `Teaching Old Motors New Tricks Part 5 <https://www.youtube.com/watch?v=qWkaJu6o7lI>`_
 
 The Controller Area Network(CAN) Protocol is a widely used communications protocol in the automotive and
 marine industries. Vector is a major supplier of CAN signal analyzers, and they have a good introduction
 to the protocol:
 
-- `Vector Learning Module: CAN <https://elearning.vector.com/mod/page/view.php?id=333>`_
+- `Vector Learning Module for CAN <https://elearning.vector.com/mod/page/view.php?id=333>`_
 
 The Texas Instruments LAUNCHXL-F28069M is the microcontroller evaluation board used for motor control on
 the Robotic Leg, and encoder measurement on the Central Pivot. Here are several useful links:

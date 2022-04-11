@@ -1,7 +1,7 @@
 .. _monopod_firmware:
 
-Monopod Firmware Setup & Flash
-==============================
+Monopod Firmware Setup
+======================
 
 Introduction
 ------------
@@ -10,9 +10,10 @@ This page explains how to flash the prerequisite firmware onto the TI Launchpad 
 
 There are 2 different firmware packages which need to be flashed onto 2 TI Launchpad boards.
 
-- The first firmware controls the motors and reads the encoders on the Robotic Leg.
-- The second firmware reads the encoders on the Central Pivot.
-  Communication to and from both TI Launchpads to a computer is done via CAN protocol.
+- The Robotic Leg Firmware controls the motors and reads the encoders on the Robotic Leg.
+- The Central Pivot firmware reads the encoders on the Central Pivot.
+  
+Communication to and from both TI Launchpads to a computer is done via CAN protocol.
 
 The following instructions require the use of a Windows 10 operating system. The instructions are structured as
 follows:
