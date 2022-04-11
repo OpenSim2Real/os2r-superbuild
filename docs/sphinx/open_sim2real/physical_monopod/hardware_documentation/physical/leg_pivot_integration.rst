@@ -18,7 +18,7 @@ Motor Cable Preparation
 
     * - Quantity
       - Part
-    * - 1pc 
+    * - 1pc
       - spool of flexible black wire
     * - 6pc
       - male gold-tinned 2mm connectors
@@ -46,7 +46,7 @@ Instructions:
    Black wire twisted together in bundles of 3
 
 .. figure:: in_images/3phase_5.jpg
-   
+
    Expandable plastic sheathing around wire bundles, with heat shrink at the end
 
 .. figure:: in_images/3phase_3.jpg
@@ -57,7 +57,7 @@ Instructions:
 
    Motor 3-phase cable with male gold-tinned connectors.
 
-There should now be 2 cables to transmit 3-phase motor current from the TI BOOSTXL boards on the Central Pivot to the 
+There should now be 2 cables to transmit 3-phase motor current from the TI BOOSTXL boards on the Central Pivot to the
 Robotic Leg, through the long aluminum tube.
 
 .. list-table:: Parts from this step
@@ -99,7 +99,7 @@ Instructions:
    split the 2 groups of wires.
 
 .. figure:: in_images/mm.jpg
-   
+
    Male-male 10-pin calbe, uncut
 
 .. figure:: in_images/mm_cut.jpg
@@ -118,7 +118,7 @@ Instructions:
 
    Male-male 10-pin cable, with male 5-pin JST connectors attached.
 
-There should now be a long cable with 2 JST connectors on one side, and exposed wires on the other side. This cable 
+There should now be a long cable with 2 JST connectors on one side, and exposed wires on the other side. This cable
 transmits encoder signals from the Robotic Leg to the TI LAUNCHXL board at the Central Pivot
 
 .. list-table:: Parts from this step
@@ -169,7 +169,7 @@ Instructions to connect motor phase wires:
 3. Connect the Robotic Leg motor phase wires with the long motor phase cables.
 
 .. figure:: in_images/3phase_7.jpg
-   
+
    Motor cables from the Robotic Leg are connected to the Motor cables assembled above.
 
 .. figure:: in_images/3phase_8.jpg
@@ -209,7 +209,7 @@ Instructions:
 
 .. figure:: in_images/conn3.jpg
 
-   3-phase motor cables connected to the TI boards. Encoder cables should also be connected to the TI boards, using the 
+   3-phase motor cables connected to the TI boards. Encoder cables should also be connected to the TI boards, using the
    JST connectors.
 
 .. list-table:: Parts from this step
@@ -235,8 +235,8 @@ Power Connections
     * - 1pc
       - Monopod assembly without power connections or CAN connection
 
-The TI LAUNCHXL board with the BOOSTXL boards connected to the Robotic Leg can be powered by applying 24V across 
-the power terminals on the BOOSTXL boards, using a power supply. There are many ways to set up this power 
+The TI LAUNCHXL board with the BOOSTXL boards connected to the Robotic Leg can be powered by applying 24V across
+the power terminals on the BOOSTXL boards, using a power supply. There are many ways to set up this power
 connection, but we used the following setup:
 
 .. figure:: in_images/power_2.jpg
@@ -266,8 +266,8 @@ connection, but we used the following setup:
 
 Connect the male and female 2-pin connectors to complete the power connection for the Robotic Leg
 
-The TI LAUNCHXL board with the Central Pivot encoders attached can be powered by applying 3.3V across the 3.3V and 
-Ground pins on the TI LAUNCHXL board. This can be done by connecting the 3.3V pins of both TI LAUNCHXL boards 
+The TI LAUNCHXL board with the Central Pivot encoders attached can be powered by applying 3.3V across the 3.3V and
+Ground pins on the TI LAUNCHXL board. This can be done by connecting the 3.3V pins of both TI LAUNCHXL boards
 together, and the Ground pins of both TI LAUNCHXL boards together, with individual wires.
 
 .. list-table:: Parts from this step
@@ -278,7 +278,7 @@ together, and the Ground pins of both TI LAUNCHXL boards together, with individu
     * - 1pc
       - Monopod assembly without CAN connection
 
-.. figure:: design_images/powerelectronics.PNG
+.. figure:: in_images/powerelectronics.PNG
 
    A diagram showing how the power electronics are wired.
 
@@ -300,7 +300,7 @@ Instructions to connect TI LAUNCXL boards to CAN:
 2. The CAN-to-USB device is then connected to a computer, completing the setup of the Monopod.
 
 .. figure:: in_images/can1.jpg
-   
+
    A Y-shaped connector between the TI LAUNCHXL boards and the CAN-to-USB device.
 
 .. list-table:: Parts from this step
@@ -319,5 +319,5 @@ Conclusion
 ----------
 
 Now, the Central Pivot and the Robotic Leg are connected together, and both are connected to a power supply and to a computer
-via CAN. Integration between the Central Pivot and the Robotic Leg is complete, and so the Monopod is complete and can be 
+via CAN. Integration between the Central Pivot and the Robotic Leg is complete, and so the Monopod is complete and can be
 tested.

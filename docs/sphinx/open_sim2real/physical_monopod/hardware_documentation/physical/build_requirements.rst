@@ -50,7 +50,7 @@ readily available.
 
      - .. figure:: tools_images/handdrill.jpg
 
-     	  Handdrill
+     	    Handdrill
 
    * - .. figure:: tools_images/heatgun.jpg
 
@@ -62,7 +62,7 @@ readily available.
 
 	 - .. figure:: tools_images/hex.jpg
 
-	      Hex Screwdrivers
+          Hex Screwdrivers
 
    * - .. figure:: tools_images/maskingtape.jpg
 
@@ -115,12 +115,12 @@ readily available.
    * - .. figure:: tools_images/kapton.jpg
 
           Kapton Tape, as thin as possible
-    
+
      - .. figure:: tools_images/masking.jpg
-    
+
           Masking Tape
 
-     - 
+     -
 
    * - Waterjet Cutter (recommended)
 
@@ -131,32 +131,32 @@ readily available.
 .. list-table:: Electrical Tools Required
 
    * - .. figure:: tools_images/solder.jpg
-        
+
           Solder, as thin as possible
 
      - .. figure:: tools_images/stripper.jpg
-   
+
           Wire stripper
 
      - .. figure:: tools_images/heatshrink.jpg
-   
+
           Assorted Heatshrink
 
    * - .. figure:: tools_images/wire_snips.jpg
-   
+
           Wire Snips
 
      - .. figure:: tools_images/solderhand.jpg
-   
+
           Soldering Hand
 
-     - .. figure:: tools_images/solderstation.jpg 
+     - .. figure:: tools_images/solderstation.jpg
 
           Soldering Station
 
    * - JST Crimper
 
-     - 
+     -
 
      -
 
@@ -189,7 +189,7 @@ The following electrical skills are required to assemble the physical robot:
 The following software skills are required to setup the code infrastructure for the physical robot:
 
 - Python, C, C++ programming languages
-- Familiarity with Windows and Linux operating systems. A dual-booted laptop with Windows 10/11 and Ubuntu 18.04/20.04 or PopOS, 
+- Familiarity with Windows and Linux operating systems. A dual-booted laptop with Windows 10/11 and Ubuntu 18.04/20.04 or PopOS,
   a decent processor and at least 8GB of RAM is recommended.
 - Git version control
 - Embedded software development
