@@ -10,11 +10,13 @@ This section describes the process of assembling and testing our hardware platfo
 
 A major component of the OpenSim2Real project is the development of a physical, hardware platform so that
 models running in simulation can be applied to the physical world. The hardware platform, called the Monopod,
-has been completely based around prior work by the `Open Dynamic Robot Initiative <https://open-dynamic-robot-initiative.github.io/>`_(ODRI).
+has been completely based around prior work by the `Open Dynamic Robot Initiative <https://open-dynamic-robot-initiative.github.io>`_ (ODRI).
 
 The basic flow of information for the monopod is shown by the system diagram below.
 
 .. figure:: fulldiagram.png
+
+  ..
 
 Introduction to Assembly/Testing Process
 ----------------------------------------
@@ -27,11 +29,15 @@ gear reduction, and measurement is done with 2 encoders.
 
 .. figure:: physical/leg_images/leg.png
 
+  ..
+
 The Central Pivot is a structure to constrain the motion of the Robotic Leg to be approximately planar.
 This allows the Robotic Leg to move freely within a 2-dimensional plane without falling on its side
 without requiring bulky supports, gantry cranes or treadmills.
 
 .. figure:: physical/cp_images/cp.png
+
+  ..
 
 The Robotic Leg and the Central Pivot can then be tested separately, before being combined into the completed
 Monopod. The completed Monopod can then be tested as a whole before models are run on it.
