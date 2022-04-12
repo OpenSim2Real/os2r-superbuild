@@ -290,4 +290,4 @@ commands,
 
 .. _ignition_installation_superbuild:
 
-.. include:: ../../shared/ignition_gazebo.rst
+.. include:: ../../../shared/ignition_gazebo.rst

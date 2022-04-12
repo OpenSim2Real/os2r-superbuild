@@ -4,7 +4,7 @@ Sim2Real
 ========
 
 What's Sim2Real
-===============
+---------------
 
 The interest and appeal of simulation to reality transfer stems from the risks and costs associated with poor performance during training.
 Crashing in real will break physical hardware, while inefficient control can overheat motors and strain other electrical components.
@@ -24,9 +24,8 @@ of these techniques are described below.
 
   .. footbibliography::
 
-
  Why Sim2Real
- ================
+ ------------
 
  Sim2Real draws its appeal from the fact that it is cheaper, safer and more informative to perform experiments in simulation than in the real world.
 
