@@ -18,3 +18,5 @@ framework described by Mysore et al.:cite:`a-mysore2021regularizing`, which aids
 of these techniques are described below.
 
  .. footbibliography::
+   :keyprefix: a-
+   :labelprefix: A
