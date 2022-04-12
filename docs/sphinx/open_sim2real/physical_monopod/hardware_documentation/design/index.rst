@@ -55,7 +55,7 @@ given hardware.
 A 3D Hopper is best characterized by the MIT Hopper, which has 2 actuators to tilt a pogo-stick, and a single actuator
 to compress the pogo-stick.
 
-.. figure:: design/design_images/mithopper.PNG
+.. figure:: design_images/mithopper.PNG
 
    An image of the MIT hopper. More information about this hopper can be found on their website `here <http://www.ai.mit.edu/projects/leglab/robots/3D_hopper/3D_hopper.html>`_
 
