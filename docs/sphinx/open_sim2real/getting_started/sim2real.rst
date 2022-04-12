@@ -22,17 +22,11 @@ to generalize among a distribution of values of physical parameters; exploration
 framework described by Mysore et al. :footcite:`mysore2021regularizing`, which aids in producing a smoother and more efficient control. Further explanation
 of these techniques are described below.
 
-  .. footbibliography::
-
  Why Sim2Real
  ------------
 
  Sim2Real draws its appeal from the fact that it is cheaper, safer and more informative to perform experiments in simulation than in the real world.
 
 
-
-..
-  bibliography::
-  :style: plain
-  :keyprefix: a-
-  :labelprefix: A
+  .. footbibliography::
+  
