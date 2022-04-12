@@ -257,7 +257,7 @@ are required alongside the additional dependencies below.
 
 .. code-block:: bash
 
-   pip install sphinx-multiversion sphinx_autodoc_typehints sphinx_fontawesome sphinx_book_theme sphinx_tabs lxml sphinx-copybutton pydot
+   pip install sphinx-multiversion sphinx_autodoc_typehints sphinx_fontawesome sphinx_book_theme sphinx_tabs lxml sphinx-copybutton pydot sphinxcontrib-bibtex 
    pip install -U breathe
    sudo apt install -y graphviz
 
