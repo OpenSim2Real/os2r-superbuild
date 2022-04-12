@@ -1,7 +1,7 @@
 .. _electrical_design:
 
-Monopod Electrical Design
-=========================
+Electrical
+==========
 
 Introduction
 ------------
@@ -33,7 +33,3 @@ Power Electronics
 .. figure:: design_images/powerelectronics.PNG
 
    A diagram showing how the power electronics are wired.
-
-
-
-

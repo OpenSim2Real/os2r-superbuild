@@ -22,6 +22,18 @@ customizing the build via CMake options.
 .. _catkin: http://wiki.ros.org/catkin/workspaces
 .. _colcon workspace: https://colcon.readthedocs.io/en/released/user/quick-start.html
 
+.. _support_policy_super_build:
+
+Support Policy
+==============
+
++-----------------+--------+----------------------+----------+------------+---------+
+|       C++       | Python |      Ignition        |  Ubuntu  |    macOS   | Windows |
++=================+========+======================+==========+============+=========+
+| >= gcc8, clang6 | >= 3.8 | `Fortress`_ (binary) | >= 20.04 |     No     |    No   |
++-----------------+--------+----------------------+----------+------------+---------+
+
+.. _`Fortress`: https://ignitionrobotics.org/docs/fortress/install
 
 .. _superbuild_options:
 
@@ -257,7 +269,7 @@ are required alongside the additional dependencies below.
 
 .. code-block:: bash
 
-   pip install sphinx-multiversion sphinx_autodoc_typehints sphinx_fontawesome sphinx_book_theme sphinx_tabs lxml sphinx-copybutton pydot sphinxcontrib-bibtex 
+   pip install sphinx-multiversion sphinx_autodoc_typehints sphinx_fontawesome sphinx_book_theme sphinx_tabs lxml sphinx-copybutton pydot sphinxcontrib-bibtex
    pip install -U breathe
    sudo apt install -y graphviz
 

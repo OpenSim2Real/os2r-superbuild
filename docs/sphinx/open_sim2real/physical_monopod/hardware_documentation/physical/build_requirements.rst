@@ -8,8 +8,8 @@ Introduction
 
 The following tools and skills are required for successful construction of the Monopod.
 
-Shop & Tool Requirements
-------------------------
+Shop and Tool
+-------------
 
 As far as possible, the tools required for successful construction are chosen to be
 readily available.
@@ -168,8 +168,8 @@ following equipment is required:
 - Lathe
 - Milling machine
 
-Skill Requirements
-------------------
+Technical
+---------
 
 The following mechanical assembly & design skills are required to assemble the physical robot:
 

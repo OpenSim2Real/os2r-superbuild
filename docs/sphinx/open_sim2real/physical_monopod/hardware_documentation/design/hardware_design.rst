@@ -1,7 +1,7 @@
 .. _hardware_design:
 
-Monopod Hardware Design
-=======================
+Hardware
+========
 
 Introduction
 ------------
@@ -10,11 +10,14 @@ Having established that a 2D robotic leg constrained by a planarizer device, or 
 research interests, and that we intend to adapt the open-source Open Dynamic Robot Initiative (ODRI) components for
 our robotic leg design, we now describe the design of both the Robotic Leg and the planarizer, or Central Pivot.
 
-Central Pivot Design Choices
-----------------------------
 
-As per the original design requirements, the Central Pivot must be inexpensive and easy to manufacture. Other design
-requirements unique to the Central Pivot are as follows:
+
+Design Requirements
+-------------------
+
+As per the original design requirements, the method of constraining the robot
+must be inexpensive and easy to manufacture. Other design
+requirements unique to the task are as follows:
 
 - It must be able to constrain a 2D robotic leg within a 2D plane.
 
@@ -23,8 +26,11 @@ requirements unique to the Central Pivot are as follows:
 Based on these requirements, there are several possible design patterns which may be suitable for this project: A
 treadmill with gantry crane, vertical test stand, or a central pivot.
 
-Design Choices: Treadmill with Gantry Crane
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Possible Design
+---------------
+
+Treadmill and Crane
++++++++++++++++++++
 
 A rectangular gantry crane holds up the robotic leg, while a treadmill allows the leg to seemingly move on a moving
 surface. While compact, this setup is problematic for several reasons:
@@ -37,24 +43,24 @@ surface. While compact, this setup is problematic for several reasons:
 
 .. figure:: design_images/treadmill.PNG
 
-   ARL-Monopod II standing on a treadmill. [1]_
+   ARL-Monopod II standing on a treadmill. :footcite:`ARLMonopodII`
 
-Design Choices: Vertical Test Stand
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Vertical Test Stand
++++++++++++++++++++
 
 A vertical test stand effectively constrains a 2D Robotic Leg to a single dimension, allowing it to move upwards. A
 design for a vertical test stand is already provided by ODRI, as shown here
 
 .. figure:: design_images/teststand.PNG
 
-   2D robotic leg standing on a teststand. [2]_
+   2D robotic leg standing on a teststand. :footcite:`grimminger2020open`
 
 However, a vertical test stand overly constrains the robotic leg, and prevents it from exhibiting interesting behavior.
 The test stand is only good for measuring the torque applied by the robotic leg actuators, and to attempt simple
 jumping behaviors.
 
-Design Choices: Central Pivot
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Central Pivot
++++++++++++++
 
 A circular planarizer, or Central Pivot, constrains a 2D robotic leg to move along the boundary of a large, horizontal
 circle on the ground. To the robotic leg, moving along this large circle approximates being constrained in a straight
@@ -65,11 +71,11 @@ decided to design an open-source Central Pivot.
 
 .. figure:: design_images/planarizer.PNG
 
-   An example of a planarizer used to constrain a small robotic leg. [3]_
+   An example of a planarizer used to constrain a small robotic leg. :footcite:`uyanikLegged`
 
 .. figure:: design_images/planarizer_2.PNG
 
-   Another example of a planarizer used to constrain a robotic leg. [4]_
+   Another example of a planarizer used to constrain a robotic leg. :footcite:`BuehlerPlanar`
 
 3 major factors complicate the design of the Central Pivot:
 
@@ -100,7 +106,7 @@ decided to design an open-source Central Pivot.
    horizontal forces on the planarizer, as well as a torque. This torque is minimized by reducing the height of the planarizer.
 
 Central Pivot Design
---------------------
+++++++++++++++++++++
 
 Our open-source design for a Central Pivot can be viewed in a public OnShape document:
 
@@ -112,10 +118,10 @@ Our open-source design for a Central Pivot can be viewed in a public OnShape doc
 This design meets the design requirements:
 
 - This Central Pivot design can be constructed completely out of off-shelf electronics, 3D-printed parts, and waterjet-cut
-   aluminum plates at a cost of less than CAD$1000.
+  aluminum plates at a cost of less than CAD$1000.
 
 - It was designed to reduce radial srubbing to a minimum by maximising the radial distance of the
-   robotic leg from the center of the central pivot, and by minimising the height of the central pivot.
+  robotic leg from the center of the central pivot, and by minimising the height of the central pivot.
 
 - It was also verified to be resistant to pushing and twisting loads applied to it. The encoders were measured to have
   a high enough resolution to measure subtle movements of the robotic leg.
@@ -126,8 +132,8 @@ This design meets the design requirements:
    vertical turning motion unimpeded.
 
 
-Robotic Leg Design Choices
---------------------------
+Leg Design
+----------
 
 As stated earlier, a 2D robotic leg which can be extended to include additional degrees of freedom is most suitable for
 our research interests. The Open Dynamic Robot Initiative provides an open-source robotic actuator which can be adapted
@@ -147,10 +153,4 @@ Therefore, we have designed an open-source Central Pivot planarizer, and adapted
 Robotic Leg, into a Monopod hardware platform which is suitable for our research interests.
 
 
-.. [1] Ahmadi, M and Buehler, M, "Controlled passive dynamic running experiments with the ARL-monopod II", IEEE transactions on robotics, 10/2006, Volume 22, Issue 5
-
-.. [2] Felix Grimminger and Meduri, A and Khadiv, M and Viereck, J and Wuthrich, M and Naveau, M and Berenz, V and Heim, S and Widmaier, F and Flayols, T and Fiene, J and Badri-Sprowitz, A and Righetti, L, "An Open Torque-Controlled Modular Robot Architecture for Legged Locomotion Research", IEEE robotics and automation letters, 04/2020, Volume 5, Issue 2
-
-.. [3] Ismail Uyanik, "Identification of Legged Locomotion via Model-Based and Data-Driven Approaches", ARXIV
-
-.. [4] A. Sato and M. Buehler, "A Planar Hopping Robot with One Actuator: Design, Simulation, and Experimental Results," IEEE/RSJ 17th Int. Conf. on Intelligent Robots and Systems (IROS 2004), pp. 3540-3545, 2004.
+  .. footbibliography::
