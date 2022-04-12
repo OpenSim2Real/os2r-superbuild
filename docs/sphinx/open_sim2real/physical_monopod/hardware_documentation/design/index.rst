@@ -72,8 +72,8 @@ can also be easily modified to include additional degrees of freedom.
 
 Therefore, the OpenSim2Real group decided to use a 2D Hopper as a design pattern for our hardware platform.
 
-The Open Dynamic Robot Initiative
----------------------------------
+ODRI
+----
 
 The Open Dynamic Robot Initiative provides open-source actuator designs which can be used to build a 2D Hopper. Due to the
 adequate quality of the documentation provided, as well as the significant technical support provided by ODRI to potential
