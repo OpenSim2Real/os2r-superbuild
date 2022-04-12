@@ -9,6 +9,7 @@ Software Architecture
 
 
 .. _os2r-superbuild-structure:
+
 Dependency Structure
 --------------------
 
@@ -17,7 +18,7 @@ Dependency Structure
   https://www.sphinx-doc.org/en/master/usage/extensions/graphviz.html
   https://pypi.org/project/btd.sphinx.graphviz/
 
-.. graphviz:: os2r-superbuild.dot
+.. graphviz:: superbuild/os2r-superbuild.dot
 
 
 Superbuild
@@ -29,7 +30,7 @@ Superbuild
   Comment. Index exists below this point
 
 .. toctree::
-  :caption: Superbuild
+  :caption: Software
 
-   superbuild/superbuild_installation
-   future_development
+  superbuild/superbuild_installation
+  future_development
