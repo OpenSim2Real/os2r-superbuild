@@ -1,5 +1,6 @@
 .. _leg_pivot_integration:
 
+===========
 Integration
 ===========
 

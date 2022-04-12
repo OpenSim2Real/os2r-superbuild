@@ -1,5 +1,6 @@
 .. _electrical_design:
 
+==========
 Electrical
 ==========
 

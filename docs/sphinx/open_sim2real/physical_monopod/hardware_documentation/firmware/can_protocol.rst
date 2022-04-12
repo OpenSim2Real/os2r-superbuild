@@ -1,5 +1,6 @@
 .. _can_protocol:
 
+============
 CAN Protocol
 ============
 

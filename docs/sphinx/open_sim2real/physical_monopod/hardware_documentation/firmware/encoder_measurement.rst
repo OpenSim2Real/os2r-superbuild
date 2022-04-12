@@ -1,5 +1,6 @@
 .. _encoder_measurement:
 
+======================
 Central Pivot Firmware
 ======================
 

@@ -1,7 +1,8 @@
 .. _build_instructions_pivot:
 
+==========================
 Central Pivot Instructions
-================================
+==========================
 
 Introduction
 ============

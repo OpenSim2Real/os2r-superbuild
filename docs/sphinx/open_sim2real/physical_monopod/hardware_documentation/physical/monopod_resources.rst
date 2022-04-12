@@ -1,7 +1,8 @@
 .. _monopod_resources:
 
+=================
 Further Resources
-============================
+=================
 
 Introduction
 ============
