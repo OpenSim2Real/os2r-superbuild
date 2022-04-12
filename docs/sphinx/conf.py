@@ -40,7 +40,8 @@ extensions = [
     "sphinx_tabs.tabs",
     'sphinx_copybutton',
     "sphinx.ext.graphviz",
-    'sphinxcontrib.bibtex'
+    'sphinxcontrib.bibtex',
+    'sphinxcontrib.youtube'
 ]
 
 bibtex_bibfiles = ['bibtex/refs.bib']

@@ -94,7 +94,7 @@ as we don't have any temperature sensing. As this might be added in the future,
 I already reserve an error code for this, though.
 
 Messages sent to the Robotic Leg Board
----------------------------------------
+======================================
 
 +-------+-------------------+---------------------------------+--------------------------------------------+
 | ID    | Name              | Meaning [Unit]                  | Structure of the data                      |
@@ -175,7 +175,7 @@ following nomenclature is used: ``NAME=value``. Example: ``ENABLE_SYS=1`` to
 enable the system.
 
 Messages sent from the Central Pivot Board
--------------------------------------------
+==========================================
 
 +-------+---------------------------------------------------+--------------+---------------------------------------------------+
 | ID    | Meaning                                           | Size [Bytes] | Structure of the data                             |
