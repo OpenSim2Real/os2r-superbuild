@@ -45,23 +45,23 @@ The following video links provide a good introduction into Field Oriented Contro
 microcontroller board uses to do current control for the actuators on the Robotic Leg. Part 2 is the most
 relevant to Field Oriented Control, but the whole series is worth watching.
 
-- `Teaching Old Motors New Tricks Part 1
+- Teaching Old Motors New Tricks Part 1
 
   ..  youtube:: fpTvZlnrsP0
 
-- `Teaching Old Motors New Tricks Part 2
+- Teaching Old Motors New Tricks Part 2
 
   ..  youtube:: VI7pdKrchM0
 
-- `Teaching Old Motors New Tricks Part 3
+- Teaching Old Motors New Tricks Part 3
 
   ..  youtube:: 5eQyoVMz1dY
 
-- `Teaching Old Motors New Tricks Part 4
+- Teaching Old Motors New Tricks Part 4
 
   ..  youtube:: bZwLFpXhFbI
 
-- `Teaching Old Motors New Tricks Part 5
+- Teaching Old Motors New Tricks Part 5
 
   ..  youtube:: qWkaJu6o7lI
 
