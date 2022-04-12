@@ -4,14 +4,14 @@ Integration
 ===========
 
 Introduction
-------------
+============
 
 After the Central Pivot and Robotic Leg subassemblies have been assembled and tested, integration of the
 Central Pivot with the Robotic Leg to become the full Monopod. This section provides
 instructions on how this may be done.
 
 Motor Cable Preparation
------------------------
+========================
 
 .. list-table:: Parts needed for this step
     :header-rows: 1
@@ -69,7 +69,7 @@ Robotic Leg, through the long aluminum tube.
       - 2m lengths of 3-wire bundles of black cable
 
 Encoder Cable Preparation
--------------------------
+==========================
 
 .. list-table:: Parts needed for this step
     :header-rows: 1
@@ -130,7 +130,7 @@ transmits encoder signals from the Robotic Leg to the TI LAUNCHXL board at the C
       - long cable with 10 wires
 
 Connections to the Robotic Leg
-------------------------------
+==============================
 
 .. list-table:: Parts needed for this step
     :header-rows: 1
@@ -185,7 +185,7 @@ Instructions to connect motor phase wires:
       - Robotic Leg with extended motor phase and encoder cables.
 
 Connecting the Robotic Leg and Central Pivot
---------------------------------------------
+============================================
 
 .. list-table:: Parts needed for this step
     :header-rows: 1
@@ -225,7 +225,7 @@ Instructions:
    A diagram showing how the encoder and motor cables are wired.
 
 Power Connections
------------------
+=================
 
 .. list-table:: Parts for this step
     :header-rows: 1
@@ -283,7 +283,7 @@ together, and the Ground pins of both TI LAUNCHXL boards together, with individu
    A diagram showing how the power electronics are wired.
 
 CAN Connections
----------------
+===============
 
 .. list-table:: Parts for this step
     :header-rows: 1
@@ -316,7 +316,7 @@ Instructions to connect TI LAUNCXL boards to CAN:
    A diagram showing how the CAN communication buses are wired.
 
 Conclusion
-----------
+==========
 
 Now, the Central Pivot and the Robotic Leg are connected together, and both are connected to a power supply and to a computer
 via CAN. Integration between the Central Pivot and the Robotic Leg is complete, and so the Monopod is complete and can be

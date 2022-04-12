@@ -4,12 +4,12 @@ Further Resources
 ============================
 
 Introduction
-------------
+============
 
 This is a list of useful resources for assembling and operating the Monopod.
 
 Core Resources
---------------
+==============
 
 The Open Dynamic Hardware Initiative(ODRI) is a project by the Max Planck Institute for Intelligent Systems, New York
 University's Tandon School of Engineering, and the LAAS/CNRS. Its goal is to develop an inexpensive, open-source
@@ -39,7 +39,7 @@ to the OnShape document is found here:
 - This OnShape document can be copied to a private OnShape account, if further modifications are warranted.
 
 Learning Materials
-------------------
+==================
 
 The following video links provide a good introduction into Field Oriented Control, which the TI Launchpad
 microcontroller board uses to do current control for the actuators on the Robotic Leg. Part 2 is the most

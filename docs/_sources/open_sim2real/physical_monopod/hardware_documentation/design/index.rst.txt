@@ -4,12 +4,12 @@ Design Decisions
 ================
 
 Introduction
-------------
+==============
 
 This page describes the overarching design of the Monopod hardware platform.
 
 Design Requirements
--------------------
+===================
 
 The following requirements drive the design of the Monopod hardware platform:
 
@@ -30,10 +30,10 @@ The following requirements drive the design of the Monopod hardware platform:
   describing the dynamics of the system.
 
 Considered Designs
-------------------
+==================
 
 Inverted Pendulum
-+++++++++++++++++
+-----------------
 
 We considered basing our system out of an inverted pendulum configuration. An inverted pendulum essentially tries to
 maintain a mass at a high position without it falling, by actuating several joints. An inverted pendulum has some
@@ -50,7 +50,7 @@ pendulum must move to swing the second pendulum to an upright position, potentia
 given hardware.
 
 3D Hopper
-+++++++++
+---------
 
 A 3D Hopper is best characterized by the MIT Hopper, which has 2 actuators to tilt a pogo-stick, and a single actuator
 to compress the pogo-stick.
@@ -64,7 +64,7 @@ constant adjustment, the 3D hopper does not provide an easier control problem wh
 software stack. Therefore, there is signficant risk in building a 3D hopper, only to possibly have it be uncontrollable.
 
 2D Hopper
-+++++++++
+---------
 
 A 2D Hopper is a robotic leg which can hop in 2 dimensions, while the 3rd dimension must be constrained externally. Many
 robotics research groups start with the 2D Hopper, before progressing over systems with higher dimensionality. A 2D hopper
@@ -73,14 +73,14 @@ can also be easily modified to include additional degrees of freedom.
 Therefore, the OpenSim2Real group decided to use a 2D Hopper as a design pattern for our hardware platform.
 
 ODRI
-----
+====
 
 The Open Dynamic Robot Initiative provides open-source actuator designs which can be used to build a 2D Hopper. Due to the
 adequate quality of the documentation provided, as well as the significant technical support provided by ODRI to potential
 users, we have decided to adapt an ODRI design to build our 2D Hopper.
 
 Conclusion
-----------
+==========
 
 Our team has decided to build a 2D Hopper and a corresponding constraining device for the 2D Hopper.
 

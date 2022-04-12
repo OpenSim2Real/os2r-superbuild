@@ -4,26 +4,26 @@ CAN Protocol
 ============
 
 Introduction
-------------
+=============
 
-The CAN protocol describes hardware nodes communicating with each other through CAN messages. This page documents 
-the different CAN messages being sent throughout our system. 
+The CAN protocol describes hardware nodes communicating with each other through CAN messages. This page documents
+the different CAN messages being sent throughout our system.
 
-This page is adapted from ODRI's page on CAN protocol. Many of the messages remain unchanged, but we added several 
+This page is adapted from ODRI's page on CAN protocol. Many of the messages remain unchanged, but we added several
 additional messages. The original page is as follows:
 
 - `ODRI CAN Protocol <https://open-dynamic-robot-initiative.github.io/mw_dual_motor_torque_ctrl/can_interface.html>`_
 
 Our CAN network consists of 3 nodes: The TI LAUNCHXL board that controls the motors of the Robotic Leg, the TI LAUNCHXL
-board that reads the encoders on the Central Pivot, and a computer which interfaces with the CAN network through a 
-CAN interface. 
+board that reads the encoders on the Central Pivot, and a computer which interfaces with the CAN network through a
+CAN interface.
 
 .. figure:: fm_images/can.PNG
 
    Illustration of the CAN network
 
 Messages sent from the Robotic Leg Board
-----------------------------------------
+=========================================
 
 +-------+---------------------------------------------------+--------------+---------------------------------------------------+
 | ID    | Meaning                                           | Size [Bytes] | Structure of the data                             |
@@ -54,7 +54,7 @@ Messages sent from the Robotic Leg Board
     by 2\ :sup:`24` to get the float representation.
 
 Status Message
-~~~~~~~~~~~~~~
+--------------
 
 The status message contains one byte of data which is structured as follows:
 
@@ -67,7 +67,7 @@ The status message contains one byte of data which is structured as follows:
 A motor is "ready" when the alignment process is finished.
 
 Error Codes
-^^^^^^^^^^^
+-----------
 
 +------------+---------------------------------------------------------------------------------------------------+
 | Error Code | Meaning                                                                                           |
@@ -91,10 +91,10 @@ Error Codes
 
 Note that the error code for critical motor temperature won't be used for now,
 as we don't have any temperature sensing. As this might be added in the future,
-I already reserve an error code for this, though. 
+I already reserve an error code for this, though.
 
 Messages sent to the Robotic Leg Board
---------------------------------------
+---------------------------------------
 
 +-------+-------------------+---------------------------------+--------------------------------------------+
 | ID    | Name              | Meaning [Unit]                  | Structure of the data                      |
@@ -126,7 +126,7 @@ Messages sent to the Robotic Leg Board
     convert float to Q24 multiply by 2\ :sup:`24` and round to an integer.
 
 Command Codes
-~~~~~~~~~~~~~
+--------------
 
 A command message (ID = 0) consists of two parts. The high bytes (MDH) contain a
 code that is associated with a specific parameter (see table below) while the
@@ -175,7 +175,7 @@ following nomenclature is used: ``NAME=value``. Example: ``ENABLE_SYS=1`` to
 enable the system.
 
 Messages sent from the Central Pivot Board
-------------------------------------------
+-------------------------------------------
 
 +-------+---------------------------------------------------+--------------+---------------------------------------------------+
 | ID    | Meaning                                           | Size [Bytes] | Structure of the data                             |
@@ -198,7 +198,7 @@ Messages sent from the Central Pivot Board
     by 2\ :sup:`24` to get the float representation.
 
 CAN Receive Timeout
--------------------
+--------------------
 
 The embedded software on the board provides a security feature that disables the
 motors in case the CAN connection is interrupted or the controller on the PC
@@ -225,8 +225,3 @@ immediately.
 When the timeout is triggered, an error is set and the system is disabled. You
 can simply reenable it by sending (in this order) enable system command, a
 current=0 command and enable motor commands.
-
-
-
-
-

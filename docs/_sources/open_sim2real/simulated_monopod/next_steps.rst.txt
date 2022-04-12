@@ -16,5 +16,6 @@ for our training scripts can be found `here <https://github.com/OpenSim2Real/rl-
   are a few creative work arounds that may be interesting avenues for future research.
 
 
+|
 
   .. footbibliography::
