@@ -1,4 +1,4 @@
-.. building_the_monopod:
+.. building_the_robot:
 
 Build The Monopod
 =================
