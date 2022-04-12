@@ -1,5 +1,6 @@
 .. _robot_hardware:
 
+========
 Hardware
 ========
 

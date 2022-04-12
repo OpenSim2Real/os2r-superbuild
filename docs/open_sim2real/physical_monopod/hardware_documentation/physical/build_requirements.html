@@ -144,37 +144,138 @@
    Introduction
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../design/index.html">
    Design Decisions
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../design/hardware_design.html">
+     Hardware
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../design/electrical_design.html">
+     Electrical
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../../building_monopod.html">
    Building The Monopod
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2">
+   <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="index.html">
      Hardware
     </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Build Requirements
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="bom.html">
+       Bill of Materials
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="build_instructions_leg.html">
+       Leg Instructions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="basic_tests_leg.html">
+       Leg Testing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="build_instructions_pivot.html">
+       Central Pivot Instructions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="basic_tests_pivot.html">
+       Central Pivot Testing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="leg_pivot_integration.html">
+       Integration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="leg_pivot_integration_testing.html">
+       Integration Testing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="monopod_resources.html">
+       Further Resources
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../firmware/index.html">
      Firmware
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../firmware/monopod_firmware.html">
+       Monopod Firmware Setup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../firmware/can_connection.html">
+       Connecting By CAN
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../firmware/can_protocol.html">
+       CAN Protocol
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../firmware/encoder_measurement.html">
+       Central Pivot Firmware
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../firmware/dual_motor_control.html">
+       Robotic Leg Firmware
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../software_documentation/index.html">
      Software
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -214,8 +315,8 @@
   <a class="reference internal" href="../../../../monopod_sdk_index.html">
    monopod_sdk
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -224,8 +325,8 @@
     <a class="reference internal" href="../../../../monopod_sdk_docs/getting_started/index.html">
      Getting Started
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-    <label for="toctree-checkbox-4">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -244,8 +345,8 @@
       <a class="reference internal" href="../../../../monopod_sdk_docs/getting_started/monopod_drivers/index.html">
        Monopod Drivers
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-      <label for="toctree-checkbox-5">
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -285,8 +386,8 @@
   <a class="reference internal" href="../../../../scenario_monopod_index.html">
    scenario_monopod
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -295,8 +396,8 @@
     <a class="reference internal" href="../../../../scenario_monopod_docs/getting_started/index.html">
      Getting Started
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -339,8 +440,8 @@
   <a class="reference internal" href="../../../../gym-os2r_index.html">
    gym-os2r
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -349,8 +450,8 @@
     <a class="reference internal" href="../../../../gym-os2r_docs/getting_started/index.html">
      Getting Started
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -381,8 +482,8 @@
     <a class="reference internal" href="../../../../gym-os2r_docs/python/gym-os2r/gym_os2r.html">
      gym_os2r
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -391,8 +492,8 @@
       <a class="reference internal" href="../../../../gym-os2r_docs/python/gym-os2r/gym_os2r.common.html">
        gym_os2r.common
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-      <label for="toctree-checkbox-11">
+      <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+      <label for="toctree-checkbox-14">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -408,8 +509,8 @@
       <a class="reference internal" href="../../../../gym-os2r_docs/python/gym-os2r/gym_os2r.models.html">
        gym_os2r.models
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-      <label for="toctree-checkbox-12">
+      <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+      <label for="toctree-checkbox-15">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -454,8 +555,8 @@
   <a class="reference internal" href="../../../../gym-os2r-real_index.html">
    gym-os2r-real
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -464,8 +565,8 @@
     <a class="reference internal" href="../../../../gym-os2r-real_docs/getting_started/index.html">
      Getting Started
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -496,8 +597,8 @@
     <a class="reference internal" href="../../../../gym-os2r-real_docs/python/gym-os2r-real/gym_os2r_real.html">
      gym_os2r_real
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-    <label for="toctree-checkbox-15">
+    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+    <label for="toctree-checkbox-18">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -594,22 +695,17 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Build Requirements
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#shop-and-tool">
    Shop and Tool
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#technical">
    Technical
   </a>
@@ -627,13 +723,12 @@
                 
   <div class="section" id="build-requirements">
 <span id="id1"></span><h1>Build Requirements<a class="headerlink" href="#build-requirements" title="Permalink to this headline">¶</a></h1>
-</div>
 <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>The following tools and skills are required for successful construction of the Monopod.</p>
 </div>
 <div class="section" id="shop-and-tool">
-<h1>Shop and Tool<a class="headerlink" href="#shop-and-tool" title="Permalink to this headline">¶</a></h1>
+<h2>Shop and Tool<a class="headerlink" href="#shop-and-tool" title="Permalink to this headline">¶</a></h2>
 <p>As far as possible, the tools required for successful construction are chosen to be
 readily available.</p>
 <table class="table" id="id2">
@@ -846,7 +941,7 @@ following equipment is required:</p>
 </ul>
 </div>
 <div class="section" id="technical">
-<h1>Technical<a class="headerlink" href="#technical" title="Permalink to this headline">¶</a></h1>
+<h2>Technical<a class="headerlink" href="#technical" title="Permalink to this headline">¶</a></h2>
 <p>The following mechanical assembly &amp; design skills are required to assemble the physical robot:</p>
 <ul class="simple">
 <li><p>Familiarity with CAD software such as Onshape and SOLIDWORKS</p></li>
@@ -874,6 +969,7 @@ a decent processor and at least 8GB of RAM is recommended.</p></li>
 <p>This build assumes the availability of computers running Ubuntu 20.04 and Windows 10 operating systems.
 Learning resources to gain familiarity with the necessary toolchains and techniques are in
 <a class="reference internal" href="monopod_resources.html#monopod-resources"><span class="std std-ref">Further Reading &amp; Resources</span></a>.</p>
+</div>
 </div>
 
 

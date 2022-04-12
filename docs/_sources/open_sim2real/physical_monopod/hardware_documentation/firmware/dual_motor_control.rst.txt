@@ -1,5 +1,6 @@
 .. _dual_motor_control:
 
+====================
 Robotic Leg Firmware
 ====================
 

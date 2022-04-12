@@ -1,5 +1,6 @@
 .. _can_connection:
 
+=================
 Connecting By CAN
 =================
 

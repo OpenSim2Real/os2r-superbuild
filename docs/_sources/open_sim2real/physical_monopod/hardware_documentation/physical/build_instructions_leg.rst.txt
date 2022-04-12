@@ -1,5 +1,6 @@
 .. _build_instructions_leg:
 
+================
 Leg Instructions
 ================
 
