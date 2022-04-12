@@ -12,6 +12,7 @@ satisfy the following design requirements. A ideal platform must
 
 For a more extensive explanation of the design decision chosen during the creation
 of this project view the details :ref:`here <monopod_design>`.
+
 .. _system_level_diagram:
 
 System Level Diagram

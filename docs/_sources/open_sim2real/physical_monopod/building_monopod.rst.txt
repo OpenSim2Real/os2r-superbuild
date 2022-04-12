@@ -1,7 +1,7 @@
 .. _building_the_robot:
 
-Build The Monopod
-=================
+Building The Monopod
+====================
 
 .. toctree::
   :hidden:

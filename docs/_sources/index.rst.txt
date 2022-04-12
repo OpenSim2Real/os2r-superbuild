@@ -21,7 +21,6 @@
   open_sim2real/simulated_monopod/installation/index
   open_sim2real/simulated_monopod/singularity_container
   open_sim2real/simulated_monopod/quick_start
-  open_sim2real/simulated_monopod/training_on_cloud
   open_sim2real/simulated_monopod/next_steps
 
 .. toctree::
