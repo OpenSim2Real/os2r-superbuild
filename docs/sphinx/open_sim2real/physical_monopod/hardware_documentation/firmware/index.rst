@@ -4,7 +4,7 @@ Firmware
 ========
 
 Introduction
-------------
+===============
 
 The Monopod hardware platform must run several processes such as encoder measurement and motor control rapidly and on a
 real-time basis. This is best done with microcontrollers running both novel firmware, as well as firmware adapted from
@@ -13,7 +13,7 @@ the Open Dynamic Robot Initiative's work.
 This section describes the firmware running on the Monopod hardware platform.
 
 System Description
-------------------
+==================
 
 The Monopod consists of a Robotic Leg, the object of control, and a Central Pivot, which keeps the Robotic Leg on a
 2D plane and measures its horizontal and vertical position with encoders. The Robotic Leg and the Central Pivot both
@@ -46,7 +46,7 @@ The firmware used is described comprehensively in the following sections:
 - :ref:`CAN Protocol <can_protocol>`:
 
 System Description Specifics
-----------------------------
+=============================
 
 The TI LAUNCHXL microcontroller board was chosen to run all of the firmware for the Monopod hardware platform, because it is
 the microcontroller board used by ODRI. A simple Arduino Uno board with an ATMEGA328 microcontroller is not sufficient

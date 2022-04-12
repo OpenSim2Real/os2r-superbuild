@@ -4,7 +4,7 @@ Hardware
 ========
 
 Introduction
-------------
+=============
 
 This section describes the process of assembling and testing our hardware platform, called the Monopod.
 
@@ -12,8 +12,8 @@ A major component of the OpenSim2Real project is the development of a physical, 
 models running in simulation can be applied to the physical world. The hardware platform, called the Monopod,
 has been completely based around prior work by the `Open Dynamic Robot Initiative <https://open-dynamic-robot-initiative.github.io>`_ (ODRI).
 
-Introduction to Assembly/Testing Process
-----------------------------------------
+Assembly/Testing Process
+------------------------
 
 Construction of the Monopod can be roughly split into 2 distinct parts: The Robotic Leg and the Central Pivot.
 

@@ -10,8 +10,8 @@ satisfy the following design requirements. A ideal platform must
 2. Poses a well-defined, but non-trivial control problem.
 3. have precedent in research (Raibert hopper :footcite:`RaibertHopper`, etc).
 
-For a more extensive explanation of the design decision chosen during the creation
-of this project view the details :ref:`here <monopod_design>`.
+For a more comprehensive description of the design decisions taken during the
+creation of this platform please visit :ref:`here <monopod_design>`.
 
 .. _system_level_diagram:
 

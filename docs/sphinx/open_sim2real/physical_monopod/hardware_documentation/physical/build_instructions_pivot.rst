@@ -4,7 +4,7 @@ Central Pivot Instructions
 ================================
 
 Introduction
-------------
+============
 
 The Central Pivot is part of the complete Monopod, and its purpose is to constrain the Robotic Leg in a 2D plane.
 Unlike the Robotic Leg, however, the Central Pivot is an original design from OpenSim2Real. The following steps
@@ -15,7 +15,7 @@ should be done in order, after all parts have arrived.
    Consumables for the Central Pivot.
 
 Waterjet Parts Preparation
---------------------------
+==========================
 
 If that has not been done already, waterjet the required parts in the BOM out of quarter-inch aluminum:
 
@@ -42,7 +42,7 @@ If that has not been done already, waterjet the required parts in the BOM out of
 Deburr all the edges of the waterjet cut pieces to avoid getting cut by sharp edges.
 
 3D Printed Parts Preparation
-----------------------------
+============================
 
 If not done already, 3D print the required parts in the BOM.
 
@@ -69,7 +69,7 @@ If not done already, 3D print the required parts in the BOM.
 Remove all support material at this stage of preparation.
 
 Axle Mount Preparation
-----------------------
+======================
 
 .. list-table:: Parts needed for this step
     :header-rows: 1
@@ -120,7 +120,7 @@ Finally, secure the 3D printed shaft holders to the Axle Holder aluminum plates 
      - Completed Axle Mounts
 
 Baseplate Preparation
----------------------
+=====================
 
 .. list-table:: Parts needed for this step
    :header-rows: 1
@@ -164,7 +164,7 @@ any shaft which enters the hole.
      - Central Pivot Assembly(Incomplete)
 
 Upwards Assembly: Part 1
-------------------------
+========================
 
 .. list-table:: Parts needed for this step
    :header-rows: 1
@@ -264,7 +264,7 @@ platform. Secure them at the base with locknuts.
      - Central Pivot Assembly(Incomplete)
 
 Shaft Preparation
------------------
+=================
 
 .. list-table:: Parts needed for this step
    :header-rows: 1
@@ -322,7 +322,7 @@ Shaft.
      - Aluminum "Upper Base"
 
 Upwards Assembly: Part 2
-------------------------
+========================
 
 .. list-table:: Parts needed for this step
    :header-rows: 1
@@ -382,7 +382,7 @@ On top of the topmost threaded standoffs, place the 2 Axle Mounts. Secure these 
      - Central Pivot Assembly(Incomplete)
 
 Horizontal Shaft Alignment
---------------------------
+==========================
 
 Parts needed for this step:
 
@@ -455,7 +455,7 @@ Following the instructions in the encoder manual, tighten the set-screw connecti
      - Central Pivot Assembly(Incomplete)
 
 Upwards Assembly: Part 3
-------------------------
+========================
 
 .. list-table:: Parts needed for this step
    :header-rows: 1
@@ -533,7 +533,7 @@ Secure the "Electronics Holder" aluminum plate on top of the 4 6-32 standoffs us
      - Central Pivot Assembly(Incomplete)
 
 Central Pivot to Robotic Leg Adapter
-------------------------------------
+====================================
 
 .. list-table:: Parts needed for this step
    :header-rows: 1
@@ -558,7 +558,7 @@ All mechanical assembly for the Central Pivot is now complete, but there remains
      - Central Pivot Assembly(Incomplete)
 
 Wiring the Central Pivot Encoders
----------------------------------
+=================================
 
 .. list-table:: Parts needed for this step
    :header-rows: 1
@@ -610,6 +610,6 @@ Connect the Central Pivot TI LAUNCHXL board to the Central Pivot encoders with t
      - Central Pivot Assembly(Complete)
 
 Conclusion
-----------
+==========
 
 The assembly of the Central Pivot is now complete, and can be tested.

@@ -4,13 +4,13 @@ Leg Testing
 ===========
 
 Introduction
-------------
+============
 
 Once the robotic leg has been assembled, there are several tests that can be run to ensure that the Robotic Leg
 was assembled correctly, and that no parts were damaged during assembly.
 
 Mechanical Checks
------------------
+=================
 
 There are several checks to confirm that each modular actuator has been assembled correctly:
 
@@ -30,7 +30,7 @@ There are several checks to confirm that each modular actuator has been assemble
 - All bolts between the actuator shells should be tightened.
 
 Running the Motors
-------------------
+===================
 
 Once it is verified that each actuator is mechanically sound, the actuators can be individually tested by freely running
 the motors. This tests that the BLDC motors and the encoders have been correctly installed, and are not damaged.
@@ -83,7 +83,7 @@ target currents to zero.
    cansend can0 005#0000000000000000  # set target current to zero
 
 Troubleshooting
----------------
+===============
 
 If unusual noises are observed when spinning an actuator, there are several possible causes:
 
@@ -117,7 +117,7 @@ If the friction felt at the output pulley is anomalously high, there are several
   touch the encoder electronics.
 
 Encoder disk safety
--------------------
+===================
 
 Handling the encoder disk is a delicate process which might permanently scratch the disk if not done properly. A
 scratched encoder disk will cause an incorrect position to be read, resulting in control problems.
@@ -141,7 +141,7 @@ Special precautions must be taken to reduce the risk of this happening:
    problems later on.
 
 Known failure modes
--------------------
+===================
 
 Under high torques, and if the 3D printed shell is printed with inferior materials, some of the bearing holders in the
 actuator shell might crack, damaging the shell.
@@ -159,7 +159,7 @@ This problem can be avoided by limiting the torque applied to the actuators, and
 We found Nylon 12 material printed on an SLS printer to be better for this application.
 
 Conclusion
-----------
+==========
 
 After the tests on each individual actuator module have passed, connect the actuator modules together to the full
 Robotic Leg.

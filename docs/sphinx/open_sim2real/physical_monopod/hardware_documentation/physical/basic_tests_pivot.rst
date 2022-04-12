@@ -4,7 +4,7 @@ Central Pivot Testing
 =====================
 
 Introduction
-------------
+============
 
 Once the Central Pivot has been assembled, several basic tests can be run to ensure that the mechanical and
 electrical assembly, as well as the flashing of the firmware onto the microcontroller boards, have been done
@@ -19,7 +19,7 @@ that the LAUNCHXL board is connected to a power supply. Ensure that the header p
 touching each other, or an external metal surface.
 
 Mechanical Tests
-----------------
+================
 
 There are several mechanical checks to test that the Central Pivot has been assembled correctly:
 
@@ -48,7 +48,7 @@ There are several mechanical checks to test that the Central Pivot has been asse
 If these tests produce adequate results, then the mechanical assembly of the Central Pivot is likely to be correct.
 
 Electrical Tests
------------------
+================
 
 To test that the encoders on the Central Pivot are functional:
 
@@ -56,7 +56,7 @@ To test that the encoders on the Central Pivot are functional:
   an oscilloscope. Rotating the Central Pivot should now show encoder pulses on the oscilloscope.
 
 Reading Encoders
-----------------
+================
 
 Once it is verified that the Central Pivot is mechanically sound, the encoders can be tested to ensure that they are
 providing correct position, velocity and accelerations.

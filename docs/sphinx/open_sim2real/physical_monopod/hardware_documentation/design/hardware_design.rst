@@ -4,7 +4,7 @@ Hardware
 ========
 
 Introduction
-------------
+============
 
 Having established that a 2D robotic leg constrained by a planarizer device, or a Monopod is the best fit for our
 research interests, and that we intend to adapt the open-source Open Dynamic Robot Initiative (ODRI) components for
@@ -13,7 +13,7 @@ our robotic leg design, we now describe the design of both the Robotic Leg and t
 
 
 Design Requirements
--------------------
+===================
 
 As per the original design requirements, the method of constraining the robot
 must be inexpensive and easy to manufacture. Other design
@@ -26,11 +26,11 @@ requirements unique to the task are as follows:
 Based on these requirements, there are several possible design patterns which may be suitable for this project: A
 treadmill with gantry crane, vertical test stand, or a central pivot.
 
-Possible Design
----------------
+Possible Designs
+================
 
 Treadmill and Crane
-+++++++++++++++++++
+-------------------
 
 A rectangular gantry crane holds up the robotic leg, while a treadmill allows the leg to seemingly move on a moving
 surface. While compact, this setup is problematic for several reasons:
@@ -46,7 +46,7 @@ surface. While compact, this setup is problematic for several reasons:
    ARL-Monopod II standing on a treadmill. :footcite:`ARLMonopodII`
 
 Vertical Test Stand
-+++++++++++++++++++
+-------------------
 
 A vertical test stand effectively constrains a 2D Robotic Leg to a single dimension, allowing it to move upwards. A
 design for a vertical test stand is already provided by ODRI, as shown here
@@ -60,7 +60,7 @@ The test stand is only good for measuring the torque applied by the robotic leg 
 jumping behaviors.
 
 Central Pivot
-+++++++++++++
+-------------
 
 A circular planarizer, or Central Pivot, constrains a 2D robotic leg to move along the boundary of a large, horizontal
 circle on the ground. To the robotic leg, moving along this large circle approximates being constrained in a straight
@@ -106,7 +106,7 @@ decided to design an open-source Central Pivot.
    horizontal forces on the planarizer, as well as a torque. This torque is minimized by reducing the height of the planarizer.
 
 Central Pivot Design
-++++++++++++++++++++
+--------------------
 
 Our open-source design for a Central Pivot can be viewed in a public OnShape document:
 
@@ -133,7 +133,7 @@ This design meets the design requirements:
 
 
 Leg Design
-----------
+==========
 
 As stated earlier, a 2D robotic leg which can be extended to include additional degrees of freedom is most suitable for
 our research interests. The Open Dynamic Robot Initiative provides an open-source robotic actuator which can be adapted
@@ -147,7 +147,7 @@ The "Robotic Leg" folder within the OnShape document holds all OnShape design fi
 
 
 Conclusion
-----------
+==========
 
 Therefore, we have designed an open-source Central Pivot planarizer, and adapted an open-source robotic actuator into a
 Robotic Leg, into a Monopod hardware platform which is suitable for our research interests.

@@ -4,7 +4,7 @@ Monopod Firmware Setup
 ======================
 
 Introduction
-------------
+=============
 
 This page explains how to flash the prerequisite firmware onto the TI Launchpad boards.
 
@@ -12,7 +12,7 @@ There are 2 different firmware packages which need to be flashed onto 2 TI Launc
 
 - The Robotic Leg Firmware controls the motors and reads the encoders on the Robotic Leg.
 - The Central Pivot firmware reads the encoders on the Central Pivot.
-  
+
 Communication to and from both TI Launchpads to a computer is done via CAN protocol.
 
 The following instructions require the use of a Windows 10 operating system. The instructions are structured as
@@ -26,7 +26,7 @@ follows:
 - Further Information
 
 Setting up TI CCS and Motorware
--------------------------------
+================================
 
 The following instructions were successful on a computer running the Windows 10 operating system.
 
@@ -88,7 +88,7 @@ For building and flashing firmware, it is recommended to use the OpenSim2Real pr
 ODRI project as a secondary resource.
 
 Firmware Build Instructions
----------------------------
+============================
 
 TI Code Composer Studio is used to build the firmware for both motor control on the Robotic Leg, and encoder measurement
 on the Central Pivot.
@@ -128,7 +128,7 @@ To set the build setting such that the firmware is written to either RAM or Flas
 
 .. figure:: fm_images/build_config.PNG
 
-   Go between RAM builds and Flash builds of the same project. Build configurations can be adjusted by going to the 
+   Go between RAM builds and Flash builds of the same project. Build configurations can be adjusted by going to the
    "Build Settings" menu.
 
 To build a project from scratch:
@@ -147,33 +147,33 @@ Further instructions about the use of TI CCS can be found here by selecting the 
 TI CCS user interface.
 
 Firmware Programming Instructions
----------------------------------
+=================================
 
 To program the microcontroller board, first ensure that the microcontroller board is connected to your computer by a
 suitable USB cable. If the board is connected, it should show up in the Windows device manager as "XDS100v2", which is
-the name of the debug probe integrated directly into the microcontroller board. 
+the name of the debug probe integrated directly into the microcontroller board.
 
 TI CCS may require a user to first set up a target configuration, or the settings to connect to a microcontroller board.
 To do this, follow these instructions:
 
 .. figure:: fm_images/target_config.PNG
 
-   Navigate to the "View" menu then select Target Configurations". 
+   Navigate to the "View" menu then select Target Configurations".
 
 .. figure:: fm_images/target_config_2.PNG
 
-   Set the target configuration by selecting the appropriate microcontroller. In our case, it is the **TMS320F28069** 
-   microcontroller. Selecting the "Test Connection" button will open a new window to test the connection to a 
+   Set the target configuration by selecting the appropriate microcontroller. In our case, it is the **TMS320F28069**
+   microcontroller. Selecting the "Test Connection" button will open a new window to test the connection to a
    connected microcontroller.
 
 The TI LAUNCHXL microcontroller board has several jumper pins and switches, which must be set correctly for the board
 to connect to a computer and to be programmed:
 
-- **JP1** and **JP2** connects the power domain of the microcontroller to the power supplied by USB cable. 
+- **JP1** and **JP2** connects the power domain of the microcontroller to the power supplied by USB cable.
   When flashing, keep JP1 and JP2 on.
 - **JP6** and **JP7** changes which pins the USB/UART peripherals of the microcontroller are connected to. We kept JP6 and JP7
   both on, disabling the USB/UART peripheral. This is because the firmware we will be running do not need this peripheral.
-- **JP3**, **JP4**, **JP5** all do miscellaneous things with the power domain of the microcontroller. 
+- **JP3**, **JP4**, **JP5** all do miscellaneous things with the power domain of the microcontroller.
   We kept JP3, JP4 and JP5 all off.
 
 Additionally, there are 3 up-down switches which determine where the microcontroller will boot a program from upon
@@ -200,7 +200,7 @@ firmware of choice, whether it be the mw_dual_motor_torque_ctrl firmware for the
 firmware for the Central Pivot. Selecting here loads the program onto the microcontroller.
 
 Instructions for Robotic Leg Firmware
--------------------------------------
+======================================
 
 To flash the firmware for the Robotic Leg,
 
@@ -210,7 +210,7 @@ To flash the firmware for the Robotic Leg,
 4. Flash the project onto the microcontroller, as shown above.
 
 Instructions for Central Pivot Firmware
----------------------------------------
+=======================================
 
 To flash the firmware for the Central Pivot,
 
@@ -220,7 +220,7 @@ To flash the firmware for the Central Pivot,
 4. Flash the project onto the microcontroller, as shown above.
 
 Further information
--------------------
+====================
 
 Further resources about the microcontrollers and the build system can be found in the
 :ref:`Further Reading & Resources <monopod_resources>` page.
