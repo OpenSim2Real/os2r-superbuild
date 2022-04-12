@@ -17,7 +17,4 @@ to generalize among a distribution of values of physical parameters; exploration
 framework described by Mysore et al.:cite:`a-mysore2021regularizing`, which aids in producing a smoother and more efficient control. Further explanation
 of these techniques are described below.
 
-.. bibliography::
-  :style: plain
-  :keyprefix: a-
-  :labelprefix: A
+ .. footbibliography::
