@@ -14,10 +14,9 @@ function of the algorithm to promote smooth control around neighbouring and sequ
 
 
 .. bibliography::
-
+   :list: bullet
 
 ..
-
   bibliography::
   :labelprefix: A
   :keyprefix: a-
