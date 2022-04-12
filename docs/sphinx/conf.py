@@ -40,7 +40,10 @@ extensions = [
     "sphinx_tabs.tabs",
     'sphinx_copybutton',
     "sphinx.ext.graphviz",
+    'sphinxcontrib.bibtex'
 ]
+
+bibtex_bibfiles = ['bibtex/refs.bib']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
