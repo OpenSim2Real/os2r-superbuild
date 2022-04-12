@@ -1,6 +1,6 @@
 .. _build_instructions_pivot:
 
-Central Pivot Build Instructions
+Central Pivot Instructions
 ================================
 
 Introduction
@@ -594,7 +594,9 @@ Measure out 2 20cm lengths of the 5-wire cable and cut them there. At both ends,
 At both ends of each cable, connect JST 5-pin housings such that the encoder pins on the TI LAUNCHXL boards align to the
 encoder pins on the Central Pivot Encoders. Refer to the documentation for the TI LAUNCHXL and the documentation for
 the encoders for clarification:
+
 - `Encoder Documentation <https://www.mouser.ca/datasheet/2/678/avgo_s_a0001422768_1-2290945.pdf>`_
+
 - `TI LAUNCHXL User Guide <https://www.ti.com/lit/ug/sprui11b/sprui11b.pdf>`_
 
 Connect the Central Pivot TI LAUNCHXL board to the Central Pivot encoders with these new cables.

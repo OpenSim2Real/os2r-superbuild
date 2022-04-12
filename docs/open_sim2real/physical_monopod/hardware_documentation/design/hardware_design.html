@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Monopod Hardware Design &#8212; OpenSim2Real  documentation</title>
+    <title>Hardware &#8212; OpenSim2Real  documentation</title>
     
   <link href="../../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -40,8 +40,8 @@
     <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Monopod Firmware Design" href="firmware_design.html" />
-    <link rel="prev" title="Monopod Design" href="../index3.html" />
+    <link rel="next" title="Electrical" href="electrical_design.html" />
+    <link rel="prev" title="Design Decisions" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -88,11 +88,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../../getting_started/platform.html">
    The Platform
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../getting_started/sld.html">
-   System Level Diagram
   </a>
  </li>
  <li class="toctree-l1">
@@ -176,151 +171,153 @@
    Introduction
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../superbuild/index.html">
-   Superbuild
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../superbuild/support_policy.html">
-     Support Policy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../superbuild/superbuild_structure.html">
-     Superbuild Structure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../superbuild/superbuild_installation.html">
-     Superbuild Installation
-    </a>
-   </li>
-  </ul>
- </li>
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../index3.html">
-   Monopod Design
+  <a class="reference internal" href="index.html">
+   Design Decisions
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Monopod Hardware Design
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="firmware_design.html">
-     Monopod Firmware Design
+     Hardware
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="electrical_design.html">
-     Monopod Electrical Design
+     Electrical
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../index.html">
-   Building The Monopod
+  <a class="reference internal" href="../../building_monopod.html">
+   Build The Monopod
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../physical/build_requirements.html">
-     Build Requirements
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../physical/index.html">
+     Hardware
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../physical/build_requirements.html">
+       Build Requirements
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../physical/bom.html">
+       Bill of Materials
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../physical/build_instructions_leg.html">
+       Leg Instructions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../physical/basic_tests_leg.html">
+       Leg Testing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../physical/build_instructions_pivot.html">
+       Central Pivot Instructions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../physical/basic_tests_pivot.html">
+       Central Pivot Testing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../physical/leg_pivot_integration.html">
+       Integration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../physical/leg_pivot_integration_testing.html">
+       Integration Testing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../physical/monopod_resources.html">
+       Further Resources
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../physical/bom.html">
-     Bill of Materials
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../firmware/index.html">
+     Firmware
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../firmware/monopod_firmware.html">
+       Monopod Firmware Setup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../firmware/can_connection.html">
+       Connecting By CAN
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../firmware/can_protocol.html">
+       CAN Protocol
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../firmware/encoder_measurement.html">
+       Central Pivot Firmware
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../firmware/dual_motor_control.html">
+       Robotic Leg Firmware
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../physical/build_instructions_leg.html">
-     Robotic Leg Build Instructions
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../software_documentation/index.html">
+     Software
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../physical/basic_tests_leg.html">
-     Robotic Leg Testing Procedure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../physical/build_instructions_pivot.html">
-     Central Pivot Build Instructions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../physical/basic_tests_pivot.html">
-     Central Pivot Testing Procedure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../physical/leg_pivot_integration.html">
-     Monopod Integration
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../physical/leg_pivot_integration_testing.html">
-     Monopod Integration Testing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../monopod_resources.html">
-     Further Readings &amp; Resources
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../index2.html">
-   Monopod Firmware
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../firmware/monopod_firmware.html">
-     Monopod Firmware Setup
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../firmware/can_connection.html">
-     Connecting By CAN
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../firmware/can_protocol.html">
-     CAN Protocol
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../firmware/encoder_measurement.html">
-     Central Pivot Firmware
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../firmware/dual_motor_control.html">
-     Robotic Leg Firmware
-    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software_documentation/superbuild/superbuild_installation.html">
+       Superbuild Installation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software_documentation/future_development.html">
+       Future Development
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -345,8 +342,8 @@
   <a class="reference internal" href="../../../../monopod_sdk_index.html">
    monopod_sdk
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -355,8 +352,8 @@
     <a class="reference internal" href="../../../../monopod_sdk_docs/getting_started/index.html">
      Getting Started
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -375,8 +372,8 @@
       <a class="reference internal" href="../../../../monopod_sdk_docs/getting_started/monopod_drivers/index.html">
        Monopod Drivers
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-      <label for="toctree-checkbox-8">
+      <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+      <label for="toctree-checkbox-9">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -416,8 +413,8 @@
   <a class="reference internal" href="../../../../scenario_monopod_index.html">
    scenario_monopod
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -426,8 +423,8 @@
     <a class="reference internal" href="../../../../scenario_monopod_docs/getting_started/index.html">
      Getting Started
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -470,8 +467,8 @@
   <a class="reference internal" href="../../../../gym-os2r_index.html">
    gym-os2r
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -480,8 +477,8 @@
     <a class="reference internal" href="../../../../gym-os2r_docs/getting_started/index.html">
      Getting Started
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -512,8 +509,8 @@
     <a class="reference internal" href="../../../../gym-os2r_docs/python/gym-os2r/gym_os2r.html">
      gym_os2r
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -522,8 +519,8 @@
       <a class="reference internal" href="../../../../gym-os2r_docs/python/gym-os2r/gym_os2r.common.html">
        gym_os2r.common
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-      <label for="toctree-checkbox-14">
+      <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+      <label for="toctree-checkbox-15">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -539,8 +536,8 @@
       <a class="reference internal" href="../../../../gym-os2r_docs/python/gym-os2r/gym_os2r.models.html">
        gym_os2r.models
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-      <label for="toctree-checkbox-15">
+      <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+      <label for="toctree-checkbox-16">
        <i class="fas fa-chevron-down">
        </i>
       </label>
@@ -585,8 +582,8 @@
   <a class="reference internal" href="../../../../gym-os2r-real_index.html">
    gym-os2r-real
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-  <label for="toctree-checkbox-16">
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -595,8 +592,8 @@
     <a class="reference internal" href="../../../../gym-os2r-real_docs/getting_started/index.html">
      Getting Started
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
-    <label for="toctree-checkbox-17">
+    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+    <label for="toctree-checkbox-18">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -627,8 +624,8 @@
     <a class="reference internal" href="../../../../gym-os2r-real_docs/python/gym-os2r-real/gym_os2r_real.html">
      gym_os2r_real
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
-    <label for="toctree-checkbox-18">
+    <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+    <label for="toctree-checkbox-19">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -731,35 +728,40 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#central-pivot-design-choices">
-   Central Pivot Design Choices
+  <a class="reference internal nav-link" href="#design-requirements">
+   Design Requirements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#possible-design">
+   Possible Design
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#design-choices-treadmill-with-gantry-crane">
-     Design Choices: Treadmill with Gantry Crane
+    <a class="reference internal nav-link" href="#treadmill-and-crane">
+     Treadmill and Crane
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#design-choices-vertical-test-stand">
-     Design Choices: Vertical Test Stand
+    <a class="reference internal nav-link" href="#vertical-test-stand">
+     Vertical Test Stand
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#design-choices-central-pivot">
-     Design Choices: Central Pivot
+    <a class="reference internal nav-link" href="#central-pivot">
+     Central Pivot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#central-pivot-design">
+     Central Pivot Design
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#central-pivot-design">
-   Central Pivot Design
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#robotic-leg-design-choices">
-   Robotic Leg Design Choices
+  <a class="reference internal nav-link" href="#leg-design">
+   Leg Design
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -778,26 +780,30 @@
         
               <div>
                 
-  <div class="section" id="monopod-hardware-design">
-<span id="hardware-design"></span><h1>Monopod Hardware Design<a class="headerlink" href="#monopod-hardware-design" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="hardware">
+<span id="hardware-design"></span><h1>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>Having established that a 2D robotic leg constrained by a planarizer device, or a Monopod is the best fit for our
 research interests, and that we intend to adapt the open-source Open Dynamic Robot Initiative (ODRI) components for
 our robotic leg design, we now describe the design of both the Robotic Leg and the planarizer, or Central Pivot.</p>
 </div>
-<div class="section" id="central-pivot-design-choices">
-<h2>Central Pivot Design Choices<a class="headerlink" href="#central-pivot-design-choices" title="Permalink to this headline">¶</a></h2>
-<p>As per the original design requirements, the Central Pivot must be inexpensive and easy to manufacture. Other design
-requirements unique to the Central Pivot are as follows:</p>
+<div class="section" id="design-requirements">
+<h2>Design Requirements<a class="headerlink" href="#design-requirements" title="Permalink to this headline">¶</a></h2>
+<p>As per the original design requirements, the method of constraining the robot
+must be inexpensive and easy to manufacture. Other design
+requirements unique to the task are as follows:</p>
 <ul class="simple">
 <li><p>It must be able to constrain a 2D robotic leg within a 2D plane.</p></li>
 <li><p>It must be able to measure the position of the robotic leg at all positions.</p></li>
 </ul>
 <p>Based on these requirements, there are several possible design patterns which may be suitable for this project: A
 treadmill with gantry crane, vertical test stand, or a central pivot.</p>
-<div class="section" id="design-choices-treadmill-with-gantry-crane">
-<h3>Design Choices: Treadmill with Gantry Crane<a class="headerlink" href="#design-choices-treadmill-with-gantry-crane" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="possible-design">
+<h2>Possible Design<a class="headerlink" href="#possible-design" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="treadmill-and-crane">
+<h3>Treadmill and Crane<a class="headerlink" href="#treadmill-and-crane" title="Permalink to this headline">¶</a></h3>
 <p>A rectangular gantry crane holds up the robotic leg, while a treadmill allows the leg to seemingly move on a moving
 surface. While compact, this setup is problematic for several reasons:</p>
 <ul class="simple">
@@ -806,37 +812,37 @@ the same speed that the robotic leg is moving.</p></li>
 <li><p>A treadmill design is not that common in research, when compared to a circular planarizer, or a Central Pivot. This
 makes it more difficult to gauge precedents in research.</p></li>
 </ul>
-<div class="figure align-default" id="id10">
+<div class="figure align-default" id="id7">
 <img alt="../../../../_images/treadmill.PNG" src="../../../../_images/treadmill.PNG" />
-<p class="caption"><span class="caption-text">ARL-Monopod II standing on a treadmill. <a class="footnote-reference brackets" href="#id6" id="id1">1</a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">ARL-Monopod II standing on a treadmill. <a class="footnote-reference brackets" href="#footcite-arlmonopodii" id="id1">1</a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-<div class="section" id="design-choices-vertical-test-stand">
-<h3>Design Choices: Vertical Test Stand<a class="headerlink" href="#design-choices-vertical-test-stand" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="vertical-test-stand">
+<h3>Vertical Test Stand<a class="headerlink" href="#vertical-test-stand" title="Permalink to this headline">¶</a></h3>
 <p>A vertical test stand effectively constrains a 2D Robotic Leg to a single dimension, allowing it to move upwards. A
 design for a vertical test stand is already provided by ODRI, as shown here</p>
-<div class="figure align-default" id="id11">
+<div class="figure align-default" id="id8">
 <img alt="../../../../_images/teststand.PNG" src="../../../../_images/teststand.PNG" />
-<p class="caption"><span class="caption-text">2D robotic leg standing on a teststand. <a class="footnote-reference brackets" href="#id7" id="id2">2</a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">2D robotic leg standing on a teststand. <a class="footnote-reference brackets" href="#footcite-grimminger2020open" id="id2">2</a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 <p>However, a vertical test stand overly constrains the robotic leg, and prevents it from exhibiting interesting behavior.
 The test stand is only good for measuring the torque applied by the robotic leg actuators, and to attempt simple
 jumping behaviors.</p>
 </div>
-<div class="section" id="design-choices-central-pivot">
-<h3>Design Choices: Central Pivot<a class="headerlink" href="#design-choices-central-pivot" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="central-pivot">
+<h3>Central Pivot<a class="headerlink" href="#central-pivot" title="Permalink to this headline">¶</a></h3>
 <p>A circular planarizer, or Central Pivot, constrains a 2D robotic leg to move along the boundary of a large, horizontal
 circle on the ground. To the robotic leg, moving along this large circle approximates being constrained in a straight
 line.</p>
 <p>This design pattern has a lot of precedent in research, and it is simple and inexpensive to implement. Therefore, we
 decided to design an open-source Central Pivot.</p>
-<div class="figure align-default" id="id12">
+<div class="figure align-default" id="id9">
 <img alt="../../../../_images/planarizer.PNG" src="../../../../_images/planarizer.PNG" />
-<p class="caption"><span class="caption-text">An example of a planarizer used to constrain a small robotic leg. <a class="footnote-reference brackets" href="#id8" id="id3">3</a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">An example of a planarizer used to constrain a small robotic leg. <a class="footnote-reference brackets" href="#footcite-uyaniklegged" id="id3">3</a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id13">
+<div class="figure align-default" id="id10">
 <img alt="../../../../_images/planarizer_2.PNG" src="../../../../_images/planarizer_2.PNG" />
-<p class="caption"><span class="caption-text">Another example of a planarizer used to constrain a robotic leg. <a class="footnote-reference brackets" href="#id9" id="id4">4</a></span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Another example of a planarizer used to constrain a robotic leg. <a class="footnote-reference brackets" href="#footcite-buehlerplanar" id="id4">4</a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 <p>3 major factors complicate the design of the Central Pivot:</p>
 <ul class="simple">
@@ -850,53 +856,47 @@ of the robotic leg. This restriction rules out simply using a 3D gimbal as the c
 without deformation. Any deformation in the central pivot may result in the encoders losing count of the robotic leg
 position, affecting the observability of the system.</p></li>
 </ul>
-<div class="figure align-default" id="id14">
+<div class="figure align-default" id="id11">
 <img alt="../../../../_images/angles.PNG" src="../../../../_images/angles.PNG" />
-<p class="caption"><span class="caption-text">There must be encoders to measure both vertical and horizontal motion of the Robotic Leg mounted on the planarizer boom.</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">There must be encoders to measure both vertical and horizontal motion of the Robotic Leg mounted on the planarizer boom.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id15">
+<div class="figure align-default" id="id12">
 <img alt="../../../../_images/radialscrubbing.PNG" src="../../../../_images/radialscrubbing.PNG" />
 <p class="caption"><span class="caption-text">“Radial scrubbing” is caused when the robotic leg extends and contracts at the end of a circular planarizer. As shown,
-increasing the length of the planarizer boom reduces the amount of radial scrubbing experienced.</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+increasing the length of the planarizer boom reduces the amount of radial scrubbing experienced.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id16">
+<div class="figure align-default" id="id13">
 <img alt="../../../../_images/forces.PNG" src="../../../../_images/forces.PNG" />
 <p class="caption"><span class="caption-text">“Radial scrubbing” and the motion of the robotic leg transfers forces down the planarizer boom, causing both vertical and
-horizontal forces on the planarizer, as well as a torque. This torque is minimized by reducing the height of the planarizer.</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
-</div>
+horizontal forces on the planarizer, as well as a torque. This torque is minimized by reducing the height of the planarizer.</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="central-pivot-design">
-<h2>Central Pivot Design<a class="headerlink" href="#central-pivot-design" title="Permalink to this headline">¶</a></h2>
+<h3>Central Pivot Design<a class="headerlink" href="#central-pivot-design" title="Permalink to this headline">¶</a></h3>
 <p>Our open-source design for a Central Pivot can be viewed in a public OnShape document:</p>
-<div class="figure align-default" id="id17">
+<div class="figure align-default" id="id14">
 <img alt="../../../../_images/centralpivot.PNG" src="../../../../_images/centralpivot.PNG" />
 <p class="caption"><span class="caption-text">The public OnShape document can be viewed <a class="reference external" href="https://cad.onshape.com/documents/13d38c57dee40a129dc0750d/w/a2c92239a21f174507c126a9/e/a6707425b494d93b37562f98?renderMode=0&amp;uiState=62541c5b16304c4d15701151">here</a>. The “Central Pivot” folder within the OnShape
-document holds all OnShape design files related to the Central Pivot</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+document holds all OnShape design files related to the Central Pivot</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
 </div>
 <p>This design meets the design requirements:</p>
 <ul class="simple">
-<li><dl class="simple">
-<dt>This Central Pivot design can be constructed completely out of off-shelf electronics, 3D-printed parts, and waterjet-cut</dt><dd><p>aluminum plates at a cost of less than CAD$1000.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>It was designed to reduce radial srubbing to a minimum by maximising the radial distance of the</dt><dd><p>robotic leg from the center of the central pivot, and by minimising the height of the central pivot.</p>
-</dd>
-</dl>
-</li>
+<li><p>This Central Pivot design can be constructed completely out of off-shelf electronics, 3D-printed parts, and waterjet-cut
+aluminum plates at a cost of less than CAD$1000.</p></li>
+<li><p>It was designed to reduce radial srubbing to a minimum by maximising the radial distance of the
+robotic leg from the center of the central pivot, and by minimising the height of the central pivot.</p></li>
 <li><p>It was also verified to be resistant to pushing and twisting loads applied to it. The encoders were measured to have
 a high enough resolution to measure subtle movements of the robotic leg.</p></li>
 </ul>
-<div class="figure align-default" id="id18">
+<div class="figure align-default" id="id15">
 <img alt="../../../../_images/planarizerforces.PNG" src="../../../../_images/planarizerforces.PNG" />
 <p class="caption"><span class="caption-text">As illustrated, this planarizer design easily accomodates all forces which can be applied on it, while leaving horizontal and
-vertical turning motion unimpeded.</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+vertical turning motion unimpeded.</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-<div class="section" id="robotic-leg-design-choices">
-<h2>Robotic Leg Design Choices<a class="headerlink" href="#robotic-leg-design-choices" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="leg-design">
+<h2>Leg Design<a class="headerlink" href="#leg-design" title="Permalink to this headline">¶</a></h2>
 <p>As stated earlier, a 2D robotic leg which can be extended to include additional degrees of freedom is most suitable for
 our research interests. The Open Dynamic Robot Initiative provides an open-source robotic actuator which can be adapted
 into a 2D robotic leg.</p>
@@ -911,22 +911,24 @@ The “Robotic Leg” folder within the OnShape document holds all OnShape desig
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p>Therefore, we have designed an open-source Central Pivot planarizer, and adapted an open-source robotic actuator into a
 Robotic Leg, into a Monopod hardware platform which is suitable for our research interests.</p>
+<blockquote>
+<div><div class="docutils container" id="id6">
 <dl class="footnote brackets">
-<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Ahmadi, M and Buehler, M, “Controlled passive dynamic running experiments with the ARL-monopod II”, IEEE transactions on robotics, 10/2006, Volume 22, Issue 5</p>
+<dt class="label" id="footcite-arlmonopodii"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Mojtaba Ahmadi and Martin Buehler. Controlled passive dynamic running experiments with the arl-monopod ii. <em>Robotics, IEEE Transactions on</em>, 22:974 – 986, 11 2006. <a class="reference external" href="https://doi.org/10.1109/TRO.2006.878935">doi:10.1109/TRO.2006.878935</a>.</p>
 </dd>
-<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>Felix Grimminger and Meduri, A and Khadiv, M and Viereck, J and Wuthrich, M and Naveau, M and Berenz, V and Heim, S and Widmaier, F and Flayols, T and Fiene, J and Badri-Sprowitz, A and Righetti, L, “An Open Torque-Controlled Modular Robot Architecture for Legged Locomotion Research”, IEEE robotics and automation letters, 04/2020, Volume 5, Issue 2</p>
+<dt class="label" id="footcite-grimminger2020open"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>F. Grimminger, A. Meduri, M. Khadiv, J. Viereck, M. Wüthrich, M. Naveau, V. Berenz, S. Heim, F. Widmaier, T. Flayols, J. Fiene, A. Badri-Spröwitz, and L. Righetti. An open torque-controlled modular robot architecture for legged locomotion research. <em>IEEE Robotics and Automation Letters</em>, 5(2):3650–3657, 2020. <a class="reference external" href="https://doi.org/10.1109/LRA.2020.2976639">doi:10.1109/LRA.2020.2976639</a>.</p>
 </dd>
-<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>Ismail Uyanik, “Identification of Legged Locomotion via Model-Based and Data-Driven Approaches”, ARXIV</p>
+<dt class="label" id="footcite-uyaniklegged"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Ismail Uyanik. Identification of legged locomotion via model-based and data-driven approaches. 2017. URL: <a class="reference external" href="https://arxiv.org/abs/1710.04275">https://arxiv.org/abs/1710.04275</a>, <a class="reference external" href="https://doi.org/10.48550/ARXIV.1710.04275">doi:10.48550/ARXIV.1710.04275</a>.</p>
 </dd>
-<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
-<dd><ol class="upperalpha simple">
-<li><p>Sato and M. Buehler, “A Planar Hopping Robot with One Actuator: Design, Simulation, and Experimental Results,” IEEE/RSJ 17th Int. Conf. on Intelligent Robots and Systems (IROS 2004), pp. 3540-3545, 2004.</p></li>
-</ol>
+<dt class="label" id="footcite-buehlerplanar"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>A. Sato and M. Buehler. A planar hopping robot with one actuator: design, simulation, and experimental results. In <em>2004 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (IEEE Cat. No.04CH37566)</em>, volume 4, 3540–3545 vol.4. 2004. <a class="reference external" href="https://doi.org/10.1109/IROS.2004.1389964">doi:10.1109/IROS.2004.1389964</a>.</p>
 </dd>
 </dl>
+</div>
+</div></blockquote>
 </div>
 </div>
 
@@ -936,17 +938,17 @@ Robotic Leg, into a Monopod hardware platform which is suitable for our research
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../index3.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Monopod Design</p>
+            <p class="prev-next-title">Design Decisions</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="firmware_design.html" title="next page">
+    <a class='right-next' id="next-link" href="electrical_design.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Monopod Firmware Design</p>
+        <p class="prev-next-title">Electrical</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

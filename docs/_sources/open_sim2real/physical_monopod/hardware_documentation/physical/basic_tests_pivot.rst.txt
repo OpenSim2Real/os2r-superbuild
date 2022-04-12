@@ -1,7 +1,7 @@
 .. _basic_tests_pivot:
 
-Central Pivot Testing Procedure
-===============================
+Central Pivot Testing
+=====================
 
 Introduction
 ------------
@@ -18,8 +18,8 @@ In addition, ensure that the encoders on the Central Pivot are connected to a TI
 that the LAUNCHXL board is connected to a power supply. Ensure that the header pins on the LAUNCHXL boards are not
 touching each other, or an external metal surface.
 
-Basic Mechanical Tests
-----------------------
+Mechanical Tests
+----------------
 
 There are several mechanical checks to test that the Central Pivot has been assembled correctly:
 
@@ -43,26 +43,26 @@ There are several mechanical checks to test that the Central Pivot has been asse
 - Attempt to twist the horizontal aluminum plates relative to each other. If the standoffs connecting the aluminum
   pieces are secured tightly, the Central Pivot should not twist.
 
-- Pull on the encoder connectors to ensure that the connectors were done correctly. 
+- Pull on the encoder connectors to ensure that the connectors were done correctly.
 
 If these tests produce adequate results, then the mechanical assembly of the Central Pivot is likely to be correct.
 
-Basic Electrical Tests
-----------------------
+Electrical Tests
+-----------------
 
 To test that the encoders on the Central Pivot are functional:
 
 - Connect the 5V Power and Ground of each encoder to a power supply, and connect the A and B Phase of the encoders to
   an oscilloscope. Rotating the Central Pivot should now show encoder pulses on the oscilloscope.
 
-Reading Encoder Measurements
-----------------------------
+Reading Encoders
+----------------
 
 Once it is verified that the Central Pivot is mechanically sound, the encoders can be tested to ensure that they are
 providing correct position, velocity and accelerations.
 
 First, set up a CAN connection to the Central Pivot microcontroller board as instructed in :ref:`CAN Connection <can_connection>`.
-This requires temporarily connecting the encoder wires on the Central Pivot to a microcontroller board, and connecting 
+This requires temporarily connecting the encoder wires on the Central Pivot to a microcontroller board, and connecting
 the microcontroller board to a computer via CAN.
 
 .. figure:: leg_images/can_interface_2.PNG

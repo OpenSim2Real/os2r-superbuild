@@ -1,7 +1,7 @@
 .. _leg_pivot_integration:
 
-Monopod Integration
-===================
+Integration
+===========
 
 Introduction
 ------------

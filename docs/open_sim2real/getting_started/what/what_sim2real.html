@@ -728,6 +728,36 @@
                 
   <div class="section" id="what-s-sim2real">
 <h1>What’s Sim2Real<a class="headerlink" href="#what-s-sim2real" title="Permalink to this headline">¶</a></h1>
+<p>The interest and appeal of simulation to reality transfer stems from the risks and costs associated with poor performance during training.
+Crashing in real will break physical hardware, while inefficient control can overheat motors and strain other electrical components.
+Due to the current era of compute, the safe, low-cost, and fast training that simulation provides has made the topic popular in research.</p>
+<p>Some examples of successful sim2real transfer include the <a class="footnote-reference brackets" href="#footcite-sadeghi2016cad2rl" id="id1">1</a> system of Sadeghi and Levine, deployed
+to a collision avoiding drone; the paper by Muller et al. <a class="footnote-reference brackets" href="#footcite-muller2018driving" id="id2">2</a>, with their remote-controlled cars that leveraged modularity
+and abstraction in the control policy; the results of Tan et al. <a class="footnote-reference brackets" href="#footcite-tan2018sim" id="id3">3</a>, who trained a quadruped to have robust locomotion in real
+by leveraging domain randomization; and finally, Mysore et al. <a class="footnote-reference brackets" href="#footcite-mysore2021regularizing" id="id4">4</a>, with a framework that regularizes the objective
+function of the algorithm to promote smooth control around neighbouring and sequential observation states.</p>
+<p>Our work follows from the above by focusing on robustness, generality, and promoting smooth control. This is achieved through the use of a randomizer,
+to generalize among a distribution of values of physical parameters; exploration methods, to provide robustness over the state space; and the latest
+framework described by Mysore et al. <a class="footnote-reference brackets" href="#footcite-mysore2021regularizing" id="id5">4</a>, which aids in producing a smoother and more efficient control. Further explanation
+of these techniques are described below.</p>
+<blockquote>
+<div><div class="docutils container" id="id6">
+<dl class="footnote brackets">
+<dt class="label" id="footcite-sadeghi2016cad2rl"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Fereshteh Sadeghi and Sergey Levine. Cad2rl: real single-image flight without a single real image. <em>arXiv preprint arXiv:1611.04201</em>, 2016.</p>
+</dd>
+<dt class="label" id="footcite-muller2018driving"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Matthias Müller, Alexey Dosovitskiy, Bernard Ghanem, and Vladlen Koltun. Driving policy transfer via modularity and abstraction. <em>arXiv preprint arXiv:1804.09364</em>, 2018.</p>
+</dd>
+<dt class="label" id="footcite-tan2018sim"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Jie Tan, Tingnan Zhang, Erwin Coumans, Atil Iscen, Yunfei Bai, Danijar Hafner, Steven Bohez, and Vincent Vanhoucke. Sim-to-real: learning agile locomotion for quadruped robots. <em>arXiv preprint arXiv:1804.10332</em>, 2018.</p>
+</dd>
+<dt class="label" id="footcite-mysore2021regularizing"><span class="brackets">4</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>)</span></dt>
+<dd><p>Siddharth Mysore, Bassel Mabsout, Renato Mancuso, and Kate Saenko. Regularizing action policies for smooth control with reinforcement learning. In <em>2021 IEEE International Conference on Robotics and Automation (ICRA)</em>, 1810–1816. IEEE, 2021.</p>
+</dd>
+</dl>
+</div>
+</div></blockquote>
 </div>
 
 

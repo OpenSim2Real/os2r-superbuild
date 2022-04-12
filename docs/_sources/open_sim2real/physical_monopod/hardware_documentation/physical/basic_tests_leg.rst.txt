@@ -1,7 +1,7 @@
 .. _basic_tests_leg:
 
-Robotic Leg Testing Procedure
-=============================
+Leg Testing
+===========
 
 Introduction
 ------------
@@ -9,8 +9,8 @@ Introduction
 Once the robotic leg has been assembled, there are several tests that can be run to ensure that the Robotic Leg
 was assembled correctly, and that no parts were damaged during assembly.
 
-Basic Mechanical Checks
------------------------
+Mechanical Checks
+-----------------
 
 There are several checks to confirm that each modular actuator has been assembled correctly:
 
@@ -32,8 +32,8 @@ There are several checks to confirm that each modular actuator has been assemble
 Running the Motors
 ------------------
 
-Once it is verified that each actuator is mechanically sound, the actuators can be individually tested by freely running 
-the motors. This tests that the BLDC motors and the encoders have been correctly installed, and are not damaged. 
+Once it is verified that each actuator is mechanically sound, the actuators can be individually tested by freely running
+the motors. This tests that the BLDC motors and the encoders have been correctly installed, and are not damaged.
 
 First, set up a CAN connection to the Robotic Leg microcontroller board as instructed in :ref:`CAN Connection <can_connection>`.
 This requires temporarily connecting the encoder wires and motor cables from the Robotic Leg to the microcontroller board.
@@ -54,7 +54,7 @@ a CAN connection has been established:
 
    candump can0
 
-If 0x010 messages are being received every second, the CAN connection has been successfully established. Run the following commands 
+If 0x010 messages are being received every second, the CAN connection has been successfully established. Run the following commands
 in another terminal window, while keeping the CAN dump in the first window running, to enable both motors on the Robotic Leg.
 
 .. code:: bash
@@ -66,7 +66,7 @@ in another terminal window, while keeping the CAN dump in the first window runni
    cansend can0 000#0000000100000002  # enable motor 1
    cansend can0 000#0000000100000003  # enable motor 2
 
-If this step is successful, both motors should jitter slightly, and CAN messages with ID 0x20, 0x30, 0x40, and 0x70 should appear 
+If this step is successful, both motors should jitter slightly, and CAN messages with ID 0x20, 0x30, 0x40, and 0x70 should appear
 in the CAN dump.
 
 To apply torque to both motors, run the following:
@@ -75,7 +75,7 @@ To apply torque to both motors, run the following:
 
    cansend can0 005#0000000100000001  # set target current for both motors to a small value
 
-Applying increasingly larger torques should cause both motors to spin slowly. To stop the motors from spinning, simply set the 
+Applying increasingly larger torques should cause both motors to spin slowly. To stop the motors from spinning, simply set the
 target currents to zero.
 
 .. code:: bash
@@ -107,17 +107,17 @@ If unusual noises are observed when spinning an actuator, there are several poss
 
 If the friction felt at the output pulley is anomalously high, there are several possible causes:
 
-- The timing belts might be on too tight. The tension in the timing belts may be increased or decreased by using 
-  different diameters of timing belt rollers. 
+- The timing belts might be on too tight. The tension in the timing belts may be increased or decreased by using
+  different diameters of timing belt rollers.
 
-- Damage to the bearings from excessive force, or debris in the bearings, may add friction to the output pulley. 
+- Damage to the bearings from excessive force, or debris in the bearings, may add friction to the output pulley.
   This can be checked by turning each bearing individually to inspect for anomalous friction.
 
-- The encoder codewheel might be scraping agianst the encoder electronics. Check that the encoder disc does not 
+- The encoder codewheel might be scraping agianst the encoder electronics. Check that the encoder disc does not
   touch the encoder electronics.
 
-Handling the encoder disk
--------------------------
+Encoder disk safety
+-------------------
 
 Handling the encoder disk is a delicate process which might permanently scratch the disk if not done properly. A
 scratched encoder disk will cause an incorrect position to be read, resulting in control problems.
@@ -137,31 +137,31 @@ Special precautions must be taken to reduce the risk of this happening:
 
 .. figure:: in_images/damage_3.jpg
 
-   Incorrect handling of the encoder disk may result in the encoder disk being scratched, which may cause control 
+   Incorrect handling of the encoder disk may result in the encoder disk being scratched, which may cause control
    problems later on.
 
 Known failure modes
 -------------------
 
 Under high torques, and if the 3D printed shell is printed with inferior materials, some of the bearing holders in the
-actuator shell might crack, damaging the shell. 
+actuator shell might crack, damaging the shell.
 
 .. figure:: in_images/damage_1.jpg
 
-   Bearing holder for one of the timing belt pulleys is sheared off. The material used here was PLA plastic with an 
+   Bearing holder for one of the timing belt pulleys is sheared off. The material used here was PLA plastic with an
    FDM printer, which is unsuited for this application.
 
 .. figure:: in_images/damage_2.jpg
 
    Another view of the bearing holders for a timing belt pulley being sheared off.
 
-This problem can be avoided by limiting the torque applied to the actuators, and using better 3D printed materials. 
+This problem can be avoided by limiting the torque applied to the actuators, and using better 3D printed materials.
 We found Nylon 12 material printed on an SLS printer to be better for this application.
 
 Conclusion
 ----------
 
-After the tests on each individual actuator module have passed, connect the actuator modules together to the full 
+After the tests on each individual actuator module have passed, connect the actuator modules together to the full
 Robotic Leg.
 
 .. figure:: in_images/full_leg.jpg

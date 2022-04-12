@@ -1,7 +1,7 @@
 .. _build_instructions_leg:
 
-Robotic Leg Build Instructions
-==============================
+Leg Instructions
+================
 
 Introduction
 ------------
@@ -12,10 +12,10 @@ instructions have been added here to aid construction.
 
 Before starting assembly, ensure that all parts in the Bill of Materials for the Robotic Leg have arrived.
 
-About the Open Dynamic Robot Initiative
----------------------------------------
+About ODRI
+----------
 
-The Open Dynamic Robot Initiative is a project by the Max Planck Institute for Intelligent Systems to
+The Open Dynamic Robot Initiative :footcite:`grimminger2020open` is a project by the Max Planck Institute for Intelligent Systems to
 create a low cost, open source, robotics platform for researchers to experiment with legged actuation.
 ODRI's robotic platform consists of modular actuators which can be assembled in various configurations
 to serve different purposes.
@@ -30,8 +30,11 @@ The ODRI-provided instructions are found here:
 
 This section provides additional commentary and troubleshooting advice.
 
-3D Printing Instructions
-------------------------
+3D Printing
+-----------
+
+Instructions
+++++++++++++
 
 The Robotic Leg requires the following STL parts to be printed:
 
@@ -86,8 +89,8 @@ that all bearings and 3D printed parts will fit into each other with minimal app
 printers of inferior quality often overfill or underfill these features, therefore this modification to
 the STL files is necessary. STEP files without this feature modification are also provided in the BOM.
 
-3D Printed Parts Preparation
-----------------------------
+Preparation
++++++++++++
 
 ODRI has the following instructions for 3D printed parts preparation. Adapt them as necessary for the parts we have.
 
@@ -118,7 +121,7 @@ Suggestions:
    Upper Leg Cover Shell, after helicoil insertion and threading. Do the same thing for the Static Hip Cover Shell.
 
 .. figure:: leg_images/leg_2.jpg
-  
+
    Upper Leg Base Shell, with bearings inserted.
 
 .. figure:: leg_images/leg_7.jpg
@@ -129,8 +132,8 @@ Suggestions:
 
    Output Pulley, after helicoil insertion. Make 2 of these.
 
-Motor Shaft Preparation
------------------------
+Motor Shaft
+-----------
 
 ODRI has the following instructions for the motor shaft preparation.
 
@@ -149,21 +152,21 @@ Suggestions:
 - Instead, our team and ODRI, recommends buying a pre-built motor shaft here:
   `PWB Encoders ODRI Kit <https://www.pwb-encoders.com/news/produkte/-/detail/news/plugplay-loesung-fuer-ein-open-source-roboter-projekt--12014>`_. Our team recommends buying this early, and getting extras, because the lead time for this product can get quite long for North American users.
 
-Encoder Preparation
--------------------
+Encoder
+-------
 
-ODRI has the following instructions to prepare the encoders. Follow these, but disregard the instructions to crimp the Hirose connectors, as we will 
+ODRI has the following instructions to prepare the encoders. Follow these, but disregard the instructions to crimp the Hirose connectors, as we will
 be using different connectors.
 
 - `Encoder Preparation <https://github.com/open-dynamic-robot-initiative/open_robot_actuator_hardware/blob/master/mechanics/actuator_module_v1/details/details_encoder_preparation.md>`_
 
 Suggestions:
 
-- Measure out 30-50cm for each encoder wire. 
+- Measure out 30-50cm for each encoder wire.
 - Again, do not follow the instructions given for the Hirose connectors.
 
-Motor Preparation
------------------
+Motor
+-----
 
 ODRI has the following instructions to prepare the motors:
 
@@ -178,8 +181,8 @@ Suggestions:
 - Remember that when the BLDC motors were bought from the store, they came with a brass spacer.
   Make sure to keep these spacers safely, they are needed in the leg actuator assembly process.
 
-Center Pulley Preparation
--------------------------
+Center Pulley
+-------------
 
 `ODRI has the following instructions to prepare the center pulley <https://github.com/open-dynamic-robot-initiative/open_robot_actuator_hardware/blob/master/mechanics/actuator_module_v1/details/details_center_pulley_preparation.md#details-center-pulley-preparation>`_
 
@@ -196,9 +199,9 @@ Suggestions:
 
 .. figure:: leg_images/roller_4.jpg
 
-   Completed rollers. 
+   Completed rollers.
 
-Final assembly
+Final Assembly
 --------------
 
 At this point, the subcomponents have all been assembled and it is possible to put together the actuator.
@@ -213,7 +216,7 @@ ODRI has the following instructions for the final assembly process.
 
 The assembly process is similar for both the "hip" and "leg" actuator.
 
-.. figure:: leg_images/hip_4.jpg 
+.. figure:: leg_images/hip_4.jpg
 
    Hip base and cover shell, with encoder inserted.
 
@@ -249,3 +252,6 @@ Conclusion
 
 At the end of this section, there should be a single "hip" actuator, and a single "leg" actuator assembled. Do not
 attach them together yet, as testing requires both actuators to be seperated first.
+
+
+  .. footbibliography::
