@@ -10,7 +10,6 @@
   open_sim2real/getting_started/sim2real
   open_sim2real/getting_started/opensim2real
   open_sim2real/getting_started/platform
-  open_sim2real/getting_started/sld
   open_sim2real/getting_started/copyright_and_license
   open_sim2real/getting_started/how_to_cite
 

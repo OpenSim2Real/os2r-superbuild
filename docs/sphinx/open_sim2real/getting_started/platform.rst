@@ -12,7 +12,16 @@ satisfy the following design requirements. A ideal platform must
 
 For a more extensive explanation of the design decision chosen during the creation
 of this project view the details :ref:`here <monopod_design>`.
+.. _system_level_diagram:
 
+System Level Diagram
+====================
+
+.. image:: media/system_level_diagram.png
+
+The system level diagram illustrates the flow of information between environment
+(Real or Simulated) and model. All the packages built by our team are highlighted
+in blue.
 Additional we expect an end-to-end sim2real platform to provide the following items:
 
 1. Physical and Simulated robot.
