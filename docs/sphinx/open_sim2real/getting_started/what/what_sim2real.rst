@@ -14,7 +14,8 @@ function of the algorithm to promote smooth control around neighbouring and sequ
 
 
 .. bibliography::
-   :list: bullet
+   :list: enumerated
+   :enumtype: upperroman
 
 ..
   bibliography::
