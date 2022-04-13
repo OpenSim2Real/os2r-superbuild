@@ -30,7 +30,6 @@ feature status please view the :ref:`physical platform future development <futur
      - Size
      - Owner
      - Expected Completion
-     - More info
 
    * - Rewrite :ref:`gym os2r <gym_os2r` and :ref:`gym os2r real <gym_os2r_real` for real-time
      - High-level Software
