@@ -42,7 +42,7 @@ add_custom_target(gym-os2r-real_sphinx ALL
 
 add_custom_target(superbuild_dot_file ALL
     DEPENDS gym-os2r_sphinx
-    COMMAND ${CMAKE_COMMAND} -E copy "${SUB_PROJECTS_BUILD_DIR}/os2r-superbuild.dot" "${SPHINX_SOURCE}/open_sim2real/physical_monopod/superbuild/os2r-superbuild.dot"
+    COMMAND ${CMAKE_COMMAND} -E copy "${SUB_PROJECTS_BUILD_DIR}/os2r-superbuild.dot" "${SPHINX_SOURCE}/open_sim2real/physical_monopod/software_documentation/superbuild/os2r-superbuild.dot"
     COMMENT "Copying os2r-superbuild dot file"
   )
 
