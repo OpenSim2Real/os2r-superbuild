@@ -82,6 +82,7 @@ html_theme_options = {
     "use_download_button": False,
     "use_fullscreen_button": True,
     "single_page": False,
+    'nav_fixed_top': True,
 }
 
 html_favicon = 'favicon.ico'

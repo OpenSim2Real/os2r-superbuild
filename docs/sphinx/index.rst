@@ -23,9 +23,9 @@
   open_sim2real/simulated_monopod/installation/index
   open_sim2real/simulated_monopod/singularity_container
   open_sim2real/simulated_monopod/quick_start
-  open_sim2real/simulated_monopod/next_steps
   open_sim2real/simulated_monopod/how-to-guides/index
   open_sim2real/simulated_monopod/tutorials/index
+  open_sim2real/simulated_monopod/next_steps
   open_sim2real/simulated_monopod/future_development
 
 .. toctree::
@@ -36,9 +36,9 @@
   open_sim2real/physical_monopod/hardware_documentation/design/index
   open_sim2real/physical_monopod/building_monopod
   open_sim2real/physical_monopod/quick_start
-  open_sim2real/physical_monopod/next_steps
   open_sim2real/physical_monopod/how-to-guides/index
   open_sim2real/physical_monopod/tutorials/index
+  open_sim2real/physical_monopod/next_steps
   open_sim2real/physical_monopod/future_development
 
 .. toctree::

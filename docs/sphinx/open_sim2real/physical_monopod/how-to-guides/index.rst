@@ -3,3 +3,10 @@
 =============
 How To Guides
 =============
+
+
+.. toctree::
+  :hidden:
+  :caption: How To Guides
+
+  establish_connection

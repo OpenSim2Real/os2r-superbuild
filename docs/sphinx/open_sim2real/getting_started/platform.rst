@@ -131,4 +131,4 @@ To summarize, these are the features that motivated us to choose Ignition Gazebo
    Have a look to their simulation results to understand what you can expect from using Ignition Gazebo.
 
 
-  .. footbibliography::
+.. footbibliography::
