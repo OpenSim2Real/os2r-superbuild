@@ -1,10 +1,11 @@
 .. _sim2real:
 
+========
 Sim2Real
 ========
 
 What's Sim2Real
----------------
+===============
 
 The interest and appeal of simulation to reality transfer stems from the risks and costs associated with poor performance during training.
 Crashing in real will break physical hardware, while inefficient control can overheat motors and strain other electrical components.
@@ -17,13 +18,8 @@ and abstraction in the control policy; the results of Tan et al. :footcite:`tan2
 by leveraging domain randomization; and finally, Mysore et al. :footcite:`mysore2021regularizing`, with a framework that regularizes the objective
 function of the algorithm to promote smooth control around neighbouring and sequential observation states.
 
-Our work follows from the above by focusing on robustness, generality, and promoting smooth control. This is achieved through the use of a randomizer,
-to generalize among a distribution of values of physical parameters; exploration methods, to provide robustness over the state space; and the latest
-framework described by Mysore et al. :footcite:`mysore2021regularizing`, which aids in producing a smoother and more efficient control. Further explanation
-of these techniques are described below.
-
 Why Sim2Real
-------------
+============
 
 Sim2Real draws its appeal from the fact that it is cheaper, safer and more informative to perform experiments in simulation than in the real world.
 

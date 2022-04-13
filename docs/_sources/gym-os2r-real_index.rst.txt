@@ -6,5 +6,4 @@ gym-os2r-real
 .. toctree::
   :caption: Gym OpenSim2Real Real Package
 
-  gym-os2r-real_docs/getting_started/index
   gym-os2r-real_docs/python/gym-os2r-real/gym_os2r_real

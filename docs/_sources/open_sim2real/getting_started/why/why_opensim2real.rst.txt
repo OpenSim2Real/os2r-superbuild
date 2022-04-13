@@ -12,11 +12,11 @@ it will open doors for research groups otherwise limited to simulation.
 
 This project provides three main features:
 
-1. :ref:`Physical Robot <physical_monopod_introduction>` with corresponding :ref:`monopod_sdk`
+1. :ref:`Physical Robot <physical_monopod_introduction>` with corresponding :ref:`low-level drivers <monopod_sdk>`
 
 2. Simulation of the robot using ignition gazebo with corresponding openAI gym environment, :ref:`gym-os2r`.
 
-3. Real-time link, :ref:`scenario_monopod`, between simulation and real components with the ability to train in real.
+3. Real-time backend, :ref:`scenario_monopod`, that links between simulation and real components with the ability to train in real.
 
 Check the sections :ref:`What is open Sim2Real <what>`, and
 :ref:`high level architecture <system_level_diagram>` for a more detailed look into the
