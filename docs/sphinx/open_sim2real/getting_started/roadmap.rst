@@ -22,7 +22,7 @@ The roadmap is responsible for the high-level direction of the project. For more
 feature status please view the :ref:`physical platform future development <future_development_physical>` and
  :ref:`simulation platform future development <future_development_simulation>`
 
-.. list-table:: Bill of Material
+.. list-table:: Roadmap
    :header-rows: 1
 
    * - Task
@@ -68,4 +68,4 @@ feature status please view the :ref:`physical platform future development <futur
      - N/A
      - Q4 2022
 
-  .. footbibliography::
+.. footbibliography::
