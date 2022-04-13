@@ -28,7 +28,7 @@ the following features:
 System Level Diagram
 ====================
 
-.. figure:: ../../getting_started/media/system_level_diagram.png
+.. figure:: media/system_level_diagram.png
 
    System-level diagram, illustrates the flow of information through different
    software components and  between environment (Real or Simulated) and model.

@@ -20,7 +20,7 @@ Medium means person-weeks to complete, and Large means person-months to complete
 
 The roadmap is responsible for the high-level direction of the project. For more detail
 feature status please view the :ref:`physical platform future development <future_development_physical>` and
- :ref:`simulation platform future development <future_development_simulation>`
+:ref:`simulation platform future development <future_development_simulation>`
 
 .. list-table:: Roadmap
    :header-rows: 1
@@ -31,7 +31,7 @@ feature status please view the :ref:`physical platform future development <futur
      - Owner
      - Expected Completion
 
-   * - Rewrite :ref:`gym os2r <gym_os2r` and :ref:`gym os2r real <gym_os2r_real` for real-time
+   * - Rewrite :ref:`gym os2r <gym_os2r>` and :ref:`gym os2r real <gym_os2r_real` for real-time
      - High-level Software
      - Medium
      - Dawson
