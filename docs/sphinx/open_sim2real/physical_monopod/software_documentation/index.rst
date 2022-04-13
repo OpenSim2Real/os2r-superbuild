@@ -41,7 +41,7 @@ The following design requirements drove the design of the software platform:
 5. Provide simple method to install and setup workspace.
 
 A basic root introduction on how to use the software stack to control the robot can be
-found in the :ref:'quick_start_physical', :ref:`how_to_physical`, or :ref:`tutorial_physical` sections.
+found in the :ref:`quick_start_physical`, :ref:`how_to_physical`, or :ref:`tutorials_physical` sections.
 
 .. _os2r-superbuild-structure:
 

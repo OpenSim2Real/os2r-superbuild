@@ -12,6 +12,7 @@
   open_sim2real/getting_started/platform
   open_sim2real/getting_started/roadmap
   open_sim2real/getting_started/copyright_and_license
+  open_sim2real/getting_started/the_team
   open_sim2real/getting_started/how_to_cite
 
 .. toctree::
