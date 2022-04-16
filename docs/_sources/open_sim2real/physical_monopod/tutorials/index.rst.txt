@@ -3,3 +3,10 @@
 =========
 Tutorials
 =========
+
+
+.. toctree::
+  :hidden:
+  :caption: Tutorials
+
+  minimal_example
