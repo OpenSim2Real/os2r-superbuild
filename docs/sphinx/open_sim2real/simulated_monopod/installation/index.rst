@@ -15,6 +15,10 @@ Support Policy
 
 .. _`Fortress`: https://ignitionrobotics.org/docs/fortress/install
 
+Installation Guide
+==================
+For complete guides on how to install packages required for simulation please follow the table to contents below.
+
 .. toctree::
   :caption: Installation
 

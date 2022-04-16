@@ -18,4 +18,4 @@ for our training scripts can be found `here <https://github.com/OpenSim2Real/rl-
 
 |
 
-  .. footbibliography::
+.. footbibliography::

@@ -9,4 +9,4 @@ How To Guides
   :hidden:
   :caption: How To Guides
 
-  establish_connection
+  setup_rt_kernel
