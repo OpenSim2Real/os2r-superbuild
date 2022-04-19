@@ -1,3 +1,5 @@
+.. _tutorial_scenario_monopod:
+
 ======================
 Using Scenario Monopod
 ======================
