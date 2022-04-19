@@ -101,7 +101,7 @@ build, test and package software.
   :caption: Software
 
   superbuild/superbuild_installation
-  monopod_sdk
-  scenario_monopod
-  gym_os2r
-  gym_os2r_real
+  monopod_sdk/monopod_sdk
+  scenario_monopod/scenario_monopod
+  gym_os2r/gym_os2r
+  gym_os2r_real/gym_os2r_real

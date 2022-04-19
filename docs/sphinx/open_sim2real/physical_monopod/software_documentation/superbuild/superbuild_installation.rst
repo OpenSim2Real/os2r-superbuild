@@ -1,7 +1,8 @@
 .. _os2r-superbuild:
 
+=======================
 Superbuild Installation
-===========================
+=======================
 
 This is a meta repository (so-called "superbuild") that uses `CMake`_
 and `YCM`_ to automatically download and compile software developed in
@@ -38,7 +39,7 @@ Support Policy
 .. _superbuild_options:
 
 Superbuild Options
-------------------
+==================
 
 All optional builds that are supported by the superbuild are listed in the table below.
 
@@ -67,7 +68,7 @@ All optional builds that are supported by the superbuild are listed in the table
 +-------------------------------------------+------------+---------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Building and Installation
--------------------------
+=========================
 
 After selecting the desired :ref:`build option <superbuild_options>` and
 installing the corresponding dependencies you can build the superbuild. To configure
@@ -124,7 +125,7 @@ directory of the os2r-superbuild and run:
 .. _superbuild_sourcing:
 
 Sourcing Environment
---------------------
+====================
 
 To use the installed superbuild there are two ways to source the environment with
 the ``setup.sh``. Either source the script each time you open a new terminal that
@@ -148,7 +149,7 @@ For both options make sure to replace ``<Install Dir>`` with the corresponding a
 
 
 Options Dependencies
---------------------
+====================
 
 Each build option has different required dependencies. Please refer to the
 dependencies that match your build configuration. Alternatively you can install all dependencies
@@ -157,7 +158,7 @@ following the :ref:`enable_all`.
 .. _enable_all:
 
 All Dependencies
-^^^^^^^^^^^^^^^^
+----------------
 
 Dependencies required to build the superbuild options: ``OPENSIM2REAL_ENABLE_ALL``,
 ``OPENSIM2REAL_ENABLE_SCENARIO``, ``OPENSIM2REAL_ENABLE_SCENARIO_MONOPOD``,
@@ -200,7 +201,7 @@ Dependencies required to build the superbuild options: ``OPENSIM2REAL_ENABLE_ALL
 .. _enable_monopod_sdk:
 
 Monopod Sdk
-^^^^^^^^^^^
+-----------
 
 Dependencies required to build the superbuild options: ``OPENSIM2REAL_ENABLE_MONOPODSDK``,
 ``Default``.
@@ -226,7 +227,7 @@ Dependencies required to build the superbuild options: ``OPENSIM2REAL_ENABLE_MON
 .. _enable_simulation_only:
 
 Simulation Only
-^^^^^^^^^^^^^^^
+---------------
 
 Dependencies required to build the superbuild options: ``OPENSIM2REAL_ENABLE_SIMULATION_ONLY``.
 
@@ -260,7 +261,7 @@ Dependencies required to build the superbuild options: ``OPENSIM2REAL_ENABLE_SIM
 .. _enable_builddocs:
 
 Documentation Compilation
-^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------
 
 Dependencies required to build the superbuild options:
 ``OPENSIM2REAL_ENABLE_BUILDDOCS`` Requires ``OPENSIM2REAL_ENABLE_ALL``

@@ -25,3 +25,4 @@ For complete guides on how to install packages required for simulation please fo
   standard_installation
   developer_installation
   training_on_cloud
+  singularity_container

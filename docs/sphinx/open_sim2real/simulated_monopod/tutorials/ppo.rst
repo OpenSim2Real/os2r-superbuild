@@ -1,3 +1,3 @@
 ===============
-Minimal Example
+PPO Spinning up
 ===============
