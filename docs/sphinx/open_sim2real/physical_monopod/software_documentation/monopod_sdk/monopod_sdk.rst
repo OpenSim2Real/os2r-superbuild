@@ -172,3 +172,16 @@ sourced create the following files.
 
 
 Place both files in the same folder. Then run the the following commands to compile and run the executable.
+
+.. code-block:: bash
+
+  # Build executable from source in current directory into ./build location
+  cmake -S . -B build
+  cmake --build build
+
+  # Run the executable
+  ./build/ExampleWithMonopod
+
+The expected behaviour of the executable will be outputting only zero for each measurement. This
+is because the dummy back-end only outputs zero for all measurements and only returns success (true) for
+each command sent. 
