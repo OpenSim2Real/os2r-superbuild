@@ -1,12 +1,8 @@
-# Copyright (C) 2021 iCub Facility, Istituto Italiano di Tecnologia
-# Authors: Diego Ferigo <diego.ferigo@iit.it>
-# CopyPolicy: Released under the terms of the LGPLv2.1 or later, see LGPL.TXT
-
 include(YCMEPHelper)
 include(FindOrBuildPackage)
 
-
 find_or_build_package(iDynTree QUIET)
+
 ycm_ep_helper(gym-ignition TYPE GIT
               STYLE GITHUB
               REPOSITORY robotology/gym-ignition.git

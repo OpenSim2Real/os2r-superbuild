@@ -4,26 +4,50 @@ set(YCM_USE_CMAKE_PROPOSED TRUE CACHE BOOL "Use files including unmerged cmake p
 option(YCM_DISABLE_SYSTEM_PACKAGES "Disable use of all the system installed packages" ON)
 
 # Enable/disable different profiles
-option(OPENSIM2REAL_ENABLE_MONOPODSDK "Enable compilation of monopod_sdk." FALSE)
+# option(OPENSIM2REAL_ENABLE_MONOPODSDK "Enable compilation of monopod_sdk." FALSE)
+# option(OPENSIM2REAL_ENABLE_SCENARIO "Enable compilation of scenario." FALSE)
+# option(OPENSIM2REAL_ENABLE_SCENARIO_MONOPOD "Enable compilation of scenario_monopod. True by default unless only simulation compilation is enabled." TRUE)
+# option(OPENSIM2REAL_ENABLE_GYMIGNITION "Install gym_ignition python module if scenario is enabled. Requires python to be enabled." TRUE)
+# option(OPENSIM2REAL_ENABLE_GYMOS2R "Install gym_os2r python module if scenario/gym-ignition options are enabled. Requires python to be enabled." FALSE)
+# option(OPENSIM2REAL_ENABLE_ALL "Enable compilation of scenario." FALSE)
+#
+# option(OPENSIM2REAL_ENABLE_SIMULATION_ONLY "Enable compilation of the components necessary for simulation only. Will only read OPENSIM2REAL_ENABLE_GYMOS2R option when enabled" FALSE)
+# option(OPENSIM2REAL_ENABLE_SIMULATION "Enable compilation of the components necessary for simulation. If false ignition gazebo is not a required dependency." TRUE)
+#
+# option(OPENSIM2REAL_USES_PYTHON "Enable compilation of software that depend on Python" TRUE)
+# option(OPENSIM2REAL_ENABLE_BUILDDOCS "Compile entire projects docs. Requires `OPENSIM2REAL_ENABLE_ALL=TRUE`." FALSE)
+#
+# IF(OPENSIM2REAL_ENABLE_SIMULATION_ONLY AND NOT OPENSIM2REAL_USES_PYTHON)
+#   message(FATAL_ERROR "In simulation only mode requires `OPENSIM2REAL_USES_PYTHON=TRUE`.")
+# ENDIF()
+#
+# IF(OPENSIM2REAL_ENABLE_SIMULATION_ONLY AND NOT OPENSIM2REAL_ENABLE_SIMULATION)
+#   message(FATAL_ERROR "In simulation only mode requires `OPENSIM2REAL_ENABLE_SIMULATION=TRUE`.")
+# ENDIF()
+
+
+# Always install core... 
+option(OPENSIM2REAL_ENABLE_CORE "Enable compilation of core dependencies. There are core dependencies for the simulator and for the real robot." TRUE)
+option(OPENSIM2REAL_ENABLE_ALL "Enable compilation of every package." FALSE)
+
+# Options
+option(OPENSIM2REAL_ENABLE_GYMOS2R_REAL "Install gym_os2r_real python package. Requires python to be enabled and `OPENSIM2REAL_ENABLE_GYMOS2R:BOOL=TRUE`." FALSE)
+option(OPENSIM2REAL_ENABLE_GYMOS2R "Install gym_os2r python package. Requires python to be enabled." FALSE)
+option(OPENSIM2REAL_ENABLE_SCENARIO_MONOPOD "Enable compilation of scenario_monopod." FALSE)
+option(OPENSIM2REAL_ENABLE_GYMIGNITION "Install gym_ignition python package. Requires python to be enabled." FALSE)
 option(OPENSIM2REAL_ENABLE_SCENARIO "Enable compilation of scenario." FALSE)
-option(OPENSIM2REAL_ENABLE_SCENARIO_MONOPOD "Enable compilation of scenario_monopod. True by default unless only simulation compilation is enabled." TRUE)
-option(OPENSIM2REAL_ENABLE_GYMIGNITION "Install gym_ignition python module if scenario is enabled. Requires python to be enabled." TRUE)
-option(OPENSIM2REAL_ENABLE_GYMOS2R "Install gym_os2r python module if scenario/gym-ignition options are enabled. Requires python to be enabled." FALSE)
-option(OPENSIM2REAL_ENABLE_ALL "Enable compilation of scenario." FALSE)
+option(OPENSIM2REAL_ENABLE_MONOPODSDK "Enable compilation of monopod_sdk." FALSE)
 
-option(OPENSIM2REAL_ENABLE_SIMULATION_ONLY "Enable compilation of the components necessary for simulation only. Will only read OPENSIM2REAL_ENABLE_GYMOS2R option when enabled" FALSE)
-option(OPENSIM2REAL_ENABLE_SIMULATION "Enable compilation of the components necessary for simulation. If false ignition gazebo is not a required dependency." TRUE)
-
-option(OPENSIM2REAL_USES_PYTHON "Enable compilation of software that depend on Python" TRUE)
+# Misc
+option(OPENSIM2REAL_USES_PYTHON "Enable compilation of software that depend on Python." TRUE)
 option(OPENSIM2REAL_ENABLE_BUILDDOCS "Compile entire projects docs. Requires `OPENSIM2REAL_ENABLE_ALL=TRUE`." FALSE)
+option(OPENSIM2REAL_ENABLE_SIMULATION "Enable compilation of the components that require the ignition gazebo simulator. If FALSE ignition gazebo is not a required dependency." FALSE)
 
-IF(OPENSIM2REAL_ENABLE_SIMULATION_ONLY AND NOT OPENSIM2REAL_USES_PYTHON)
-  message(FATAL_ERROR "In simulation only mode requires `OPENSIM2REAL_USES_PYTHON=TRUE`.")
-ENDIF()
 
-IF(OPENSIM2REAL_ENABLE_SIMULATION_ONLY AND NOT OPENSIM2REAL_ENABLE_SIMULATION)
-  message(FATAL_ERROR "In simulation only mode requires `OPENSIM2REAL_ENABLE_SIMULATION=TRUE`.")
-ENDIF()
+
+
+
+
 
 #set default build type to "Release" in single-config generators
 if(NOT CMAKE_CONFIGURATION_TYPES)
@@ -31,7 +55,7 @@ if(NOT CMAKE_CONFIGURATION_TYPES)
     set(CMAKE_BUILD_TYPE "Release" CACHE STRING
     "Choose the type of build, recommended options are: Debug or Release" FORCE)
   endif()
-  set(OPENSIM2REAL_BUILD_TYPES "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
+  set(OPENSIM2REAL_BUILD_TYPES "Debug" "Release")
   set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS ${OPENSIM2REAL_BUILD_TYPES})
 endif()
 
