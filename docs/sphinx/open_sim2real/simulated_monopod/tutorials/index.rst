@@ -10,3 +10,4 @@ Tutorials
   :caption: Tutorials
 
   minimal_example
+  ppo

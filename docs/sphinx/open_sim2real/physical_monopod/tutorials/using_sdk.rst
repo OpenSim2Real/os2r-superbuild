@@ -1,4 +1,4 @@
-.. _tutorial_using_sdk::
+.. _tutorial_using_sdk:
 
 =====================
 Using the SDK

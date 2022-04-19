@@ -10,23 +10,9 @@ digraph os2r__superbuild {
     bgcolor="gray94";
     node [shape="pentagon", color="dimgray", fontsize="10"];
 
-    PythonInterp
-    PythonLibsNew
     Python3
     SWIG
     Git
-  }
-
-  subgraph cluster_found_on_system {
-    label="found";
-    labelloc="b";
-    fontname="monospace:bold";
-    style="dashed";
-    color="orangered1";
-    bgcolor="oldlace";
-    node [shape="note", color="orangered3"];
-
-    pybind11 [shape="note"]
   }
 
   subgraph cluster_core {
