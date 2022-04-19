@@ -147,12 +147,12 @@
      Training on Cloud
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../simulated_monopod/installation/singularity_container.html">
+     Singularity Container
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../simulated_monopod/singularity_container.html">
-   Singularity Container
-  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../simulated_monopod/quick_start.html">
@@ -192,8 +192,13 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../simulated_monopod/tutorials/minimal_example.html">
-     Minimal Example
+    <a class="reference internal" href="../simulated_monopod/tutorials/random_actions.html">
+     Random Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../simulated_monopod/tutorials/ppo.html">
+     PPO Spinning up
     </a>
    </li>
   </ul>
@@ -362,22 +367,22 @@
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="software_documentation/monopod_sdk.html">
-       Monopod Sdk
+      <a class="reference internal" href="software_documentation/monopod_sdk/monopod_sdk.html">
+       monopod sdk
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="software_documentation/scenario_monopod.html">
-       scenarIO Monopod
+      <a class="reference internal" href="software_documentation/scenario_monopod/scenario_monopod.html">
+       scenario monopod
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="software_documentation/gym_os2r.html">
+      <a class="reference internal" href="software_documentation/gym_os2r/gym_os2r.html">
        gym os2r
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="software_documentation/gym_os2r_real.html">
+      <a class="reference internal" href="software_documentation/gym_os2r_real/gym_os2r_real.html">
        gym os2r real
       </a>
      </li>
@@ -418,8 +423,28 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="tutorials/minimal_example.html">
-     Minimal Example
+    <a class="reference internal" href="tutorials/print_and_move.html">
+     Print and Move
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tutorials/using_sdk.html">
+     Using the SDK
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tutorials/using_scenario_monopod.html">
+     Using Scenario Monopod
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tutorials/minimal_gym.html">
+     Gym Random Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tutorials/ppo_inference.html">
+     PPO Inference
     </a>
    </li>
   </ul>
@@ -683,9 +708,15 @@
 <p>This section hosts all the information required to completely reproduce our
 physical platform. This includes; hardware and electrical build instructions and
 testing instructions, software installation and setup, and further reading.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>It is highly recommended to read the entirety of this section prior to building
 the platform. In addition to instructions on replication this section
 focuses on the skills and tools and other technical requirements.</p>
+</div>
+<p>If you are interested in reproducing our platform after reading through the documentation
+but have any questions or doubts about the platform. Feel free to contact <a class="reference internal" href="../getting_started/the_team.html#the-team"><span class="std std-ref">the team</span></a>.
+We are invested in seeing this project succeed and appreciate any support, advice or recommendations.</p>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Building The Monopod</span></p>
 <ul>
@@ -706,8 +737,8 @@ focuses on the skills and tools and other technical requirements.</p>
 <li class="toctree-l1"><a class="reference internal" href="software_documentation/index.html">Software</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="software_documentation/index.html#dependency-structure">Dependency Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="software_documentation/index.html#superbuild">Superbuild</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="software_documentation/superbuild/superbuild_installation.html">Superbuild Installation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="software_documentation/superbuild/superbuild_installation.html#support-policy">Support Policy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="software_documentation/superbuild/superbuild_installation.html">Superbuild Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="software_documentation/superbuild/superbuild_installation.html#support-policy">Support Policy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="software_documentation/superbuild/superbuild_installation.html#superbuild-options">Superbuild Options</a></li>
 <li class="toctree-l4"><a class="reference internal" href="software_documentation/superbuild/superbuild_installation.html#building-and-installation">Building and Installation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="software_documentation/superbuild/superbuild_installation.html#sourcing-environment">Sourcing Environment</a></li>
@@ -716,27 +747,27 @@ focuses on the skills and tools and other technical requirements.</p>
 <li class="toctree-l5"><a class="reference internal" href="software_documentation/superbuild/superbuild_installation.html#monopod-sdk">Monopod Sdk</a></li>
 <li class="toctree-l5"><a class="reference internal" href="software_documentation/superbuild/superbuild_installation.html#simulation-only">Simulation Only</a></li>
 <li class="toctree-l5"><a class="reference internal" href="software_documentation/superbuild/superbuild_installation.html#documentation-compilation">Documentation Compilation</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="software_documentation/superbuild/superbuild_installation.html#ignition-gazebo-installation">Ignition Gazebo Installation</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="software_documentation/monopod_sdk.html">Monopod Sdk</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="software_documentation/monopod_sdk.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="software_documentation/monopod_sdk.html#homing-implementation">Homing Implementation</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="software_documentation/monopod_sdk.html#what-is-homing-and-why-is-it-needed">What is “Homing” and Why is it Needed?</a></li>
-<li class="toctree-l5"><a class="reference internal" href="software_documentation/monopod_sdk.html#how-is-the-homing-implemented-for-the-blmc-robots">How is the Homing Implemented for the BLMC Robots?</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="software_documentation/monopod_sdk.html#home-position-vs-zero-position-meaning-of-the-home-offset">Home Position vs Zero Position – Meaning of the Home Offset</a></li>
-</ul>
-</li>
-<li class="toctree-l5"><a class="reference internal" href="software_documentation/monopod_sdk.html#how-to-determine-the-home-offset">How to Determine the Home Offset</a></li>
+<li class="toctree-l5"><a class="reference internal" href="software_documentation/superbuild/superbuild_installation.html#ignition-gazebo-installation">Ignition Gazebo Installation</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="software_documentation/scenario_monopod.html">scenarIO Monopod</a></li>
-<li class="toctree-l3"><a class="reference internal" href="software_documentation/gym_os2r.html">gym os2r</a></li>
-<li class="toctree-l3"><a class="reference internal" href="software_documentation/gym_os2r_real.html">gym os2r real</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software_documentation/monopod_sdk/monopod_sdk.html">monopod sdk</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="software_documentation/monopod_sdk/monopod_sdk.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="software_documentation/monopod_sdk/monopod_sdk.html#device-interface">Device Interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="software_documentation/monopod_sdk/monopod_sdk.html#package-architecture">Package Architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="software_documentation/monopod_sdk/monopod_sdk.html#using-monopod-sdk">Using Monopod SDK</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="software_documentation/scenario_monopod/scenario_monopod.html">scenario monopod</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="software_documentation/scenario_monopod/scenario_monopod.html#package-architecture">Package Architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="software_documentation/scenario_monopod/scenario_monopod.html#using-scenario-monopod">Using scenario_monopod</a></li>
+<li class="toctree-l4"><a class="reference internal" href="software_documentation/scenario_monopod/scenario_monopod.html#c">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="software_documentation/scenario_monopod/scenario_monopod.html#python">Python</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="software_documentation/gym_os2r/gym_os2r.html">gym os2r</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software_documentation/gym_os2r_real/gym_os2r_real.html">gym os2r real</a></li>
 </ul>
 </li>
 </ul>

@@ -21,7 +21,6 @@
 
   open_sim2real/simulated_monopod/introduction
   open_sim2real/simulated_monopod/installation/index
-  open_sim2real/simulated_monopod/singularity_container
   open_sim2real/simulated_monopod/quick_start
   open_sim2real/simulated_monopod/how-to-guides/index
   open_sim2real/simulated_monopod/tutorials/index

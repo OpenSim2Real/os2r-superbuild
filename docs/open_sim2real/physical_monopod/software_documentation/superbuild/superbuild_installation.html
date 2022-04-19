@@ -40,7 +40,7 @@
     <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Monopod Sdk" href="../monopod_sdk.html" />
+    <link rel="next" title="monopod sdk" href="../monopod_sdk/monopod_sdk.html" />
     <link rel="prev" title="Software" href="../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -147,12 +147,12 @@
      Training on Cloud
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../simulated_monopod/installation/singularity_container.html">
+     Singularity Container
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../simulated_monopod/singularity_container.html">
-   Singularity Container
-  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../../simulated_monopod/quick_start.html">
@@ -192,8 +192,13 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../simulated_monopod/tutorials/minimal_example.html">
-     Minimal Example
+    <a class="reference internal" href="../../../simulated_monopod/tutorials/random_actions.html">
+     Random Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../simulated_monopod/tutorials/ppo.html">
+     PPO Spinning up
     </a>
    </li>
   </ul>
@@ -362,22 +367,22 @@
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../monopod_sdk.html">
-       Monopod Sdk
+      <a class="reference internal" href="../monopod_sdk/monopod_sdk.html">
+       monopod sdk
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../scenario_monopod.html">
-       scenarIO Monopod
+      <a class="reference internal" href="../scenario_monopod/scenario_monopod.html">
+       scenario monopod
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../gym_os2r.html">
+      <a class="reference internal" href="../gym_os2r/gym_os2r.html">
        gym os2r
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../gym_os2r_real.html">
+      <a class="reference internal" href="../gym_os2r_real/gym_os2r_real.html">
        gym os2r real
       </a>
      </li>
@@ -418,8 +423,28 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/minimal_example.html">
-     Minimal Example
+    <a class="reference internal" href="../../tutorials/print_and_move.html">
+     Print and Move
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/using_sdk.html">
+     Using the SDK
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/using_scenario_monopod.html">
+     Using Scenario Monopod
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/minimal_gym.html">
+     Gym Random Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/ppo_inference.html">
+     PPO Inference
     </a>
    </li>
   </ul>
@@ -675,59 +700,52 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Superbuild Installation
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#support-policy">
    Support Policy
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#superbuild-options">
-     Superbuild Options
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#superbuild-options">
+   Superbuild Options
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#building-and-installation">
+   Building and Installation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sourcing-environment">
+   Sourcing Environment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#options-dependencies">
+   Options Dependencies
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#all-dependencies">
+     All Dependencies
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#building-and-installation">
-     Building and Installation
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monopod-sdk">
+     Monopod Sdk
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sourcing-environment">
-     Sourcing Environment
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simulation-only">
+     Simulation Only
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#options-dependencies">
-     Options Dependencies
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documentation-compilation">
+     Documentation Compilation
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#all-dependencies">
-       All Dependencies
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#monopod-sdk">
-       Monopod Sdk
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#simulation-only">
-       Simulation Only
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#documentation-compilation">
-       Documentation Compilation
-      </a>
-     </li>
-    </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ignition-gazebo-installation">
      Ignition Gazebo Installation
     </a>
@@ -757,9 +775,8 @@ whose only goal is to download and build several other projects. If you
 are familiar with ROS, it is something similar to <a class="reference external" href="http://wiki.ros.org/catkin/workspaces">catkin</a> or <a class="reference external" href="https://colcon.readthedocs.io/en/released/user/quick-start.html">colcon
 workspace</a>, but using pure CMake for portability reasons and for
 customizing the build via CMake options.</p>
-</div>
 <div class="section" id="support-policy">
-<span id="support-policy-super-build"></span><h1>Support Policy<a class="headerlink" href="#support-policy" title="Permalink to this headline">¶</a></h1>
+<span id="support-policy-super-build"></span><h2>Support Policy<a class="headerlink" href="#support-policy" title="Permalink to this headline">¶</a></h2>
 <table class="table">
 <colgroup>
 <col style="width: 22%" />
@@ -788,6 +805,7 @@ customizing the build via CMake options.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <div class="section" id="superbuild-options">
 <span id="id1"></span><h2>Superbuild Options<a class="headerlink" href="#superbuild-options" title="Permalink to this headline">¶</a></h2>
 <p>All optional builds that are supported by the superbuild are listed in the table below.</p>
@@ -1051,9 +1069,8 @@ git push
 </pre></div>
 </div>
 </div>
-</div>
 <div class="section" id="ignition-gazebo-installation">
-<span id="ignition-installation-superbuild"></span><h2>Ignition Gazebo Installation<a class="headerlink" href="#ignition-gazebo-installation" title="Permalink to this headline">¶</a></h2>
+<span id="ignition-installation-superbuild"></span><h3>Ignition Gazebo Installation<a class="headerlink" href="#ignition-gazebo-installation" title="Permalink to this headline">¶</a></h3>
 <p>Required ignition gazebo version can be found in the <a class="reference internal" href="../../../simulated_monopod/installation/index.html#support-policy-sim-only"><span class="std std-ref">Support Policy</span></a>.
 Please install ignition gazebo following binary installation instructions on the
 <a class="reference external" href="https://ignitionrobotics.org/docs/fortress/install">ignition</a> website (Installing from source also works but is unnecessary).</p>
@@ -1083,6 +1100,7 @@ time it starts.</p>
 </div>
 </div>
 </div>
+</div>
 
 
               </div>
@@ -1097,10 +1115,10 @@ time it starts.</p>
             <p class="prev-next-title">Software</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../monopod_sdk.html" title="next page">
+    <a class='right-next' id="next-link" href="../monopod_sdk/monopod_sdk.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Monopod Sdk</p>
+        <p class="prev-next-title">monopod sdk</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

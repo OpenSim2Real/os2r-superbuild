@@ -9,7 +9,7 @@ not be set up on the same system (the superbuild is able to build the simulation
 
 The simulator used for our simulation is `ignition gazebo <https://ignitionrobotics.org/>`_. For
 a explanation on some of the advantages of this simulator please read further
-`here <https://robotology.github.io/gym-ignition/master/why/why_ignition_gazebo.html>`_.
+`here <why_ignition_gazebo>`_.
 
 The simulation platform has been completely based around the work done on
 `gym-ignition <https://robotology.github.io/gym-ignition>`_. Using the framework

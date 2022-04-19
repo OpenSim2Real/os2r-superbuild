@@ -147,12 +147,12 @@
      Training on Cloud
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../simulated_monopod/installation/singularity_container.html">
+     Singularity Container
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../simulated_monopod/singularity_container.html">
-   Singularity Container
-  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../simulated_monopod/quick_start.html">
@@ -192,8 +192,13 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../simulated_monopod/tutorials/minimal_example.html">
-     Minimal Example
+    <a class="reference internal" href="../../simulated_monopod/tutorials/random_actions.html">
+     Random Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../simulated_monopod/tutorials/ppo.html">
+     PPO Spinning up
     </a>
    </li>
   </ul>
@@ -362,22 +367,22 @@
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="monopod_sdk.html">
-       Monopod Sdk
+      <a class="reference internal" href="monopod_sdk/monopod_sdk.html">
+       monopod sdk
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="scenario_monopod.html">
-       scenarIO Monopod
+      <a class="reference internal" href="scenario_monopod/scenario_monopod.html">
+       scenario monopod
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="gym_os2r.html">
+      <a class="reference internal" href="gym_os2r/gym_os2r.html">
        gym os2r
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="gym_os2r_real.html">
+      <a class="reference internal" href="gym_os2r_real/gym_os2r_real.html">
        gym os2r real
       </a>
      </li>
@@ -418,8 +423,28 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../tutorials/minimal_example.html">
-     Minimal Example
+    <a class="reference internal" href="../tutorials/print_and_move.html">
+     Print and Move
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tutorials/using_sdk.html">
+     Using the SDK
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tutorials/using_scenario_monopod.html">
+     Using Scenario Monopod
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tutorials/minimal_gym.html">
+     Gym Random Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tutorials/ppo_inference.html">
+     PPO Inference
     </a>
    </li>
   </ul>
@@ -735,7 +760,7 @@ found in the <a class="reference internal" href="../quick_start.html#quick-start
 <span id="os2r-superbuild-structure"></span><h2>Dependency Structure<a class="headerlink" href="#dependency-structure" title="Permalink to this headline">¶</a></h2>
 <p>Illustrating the project dependencies in a directed graph we see the complexity of
 the directed dependency graph.</p>
-<div class="graphviz"><img src="../../../_images/graphviz-e6f01b5e3efe851cee8de350f6f17cd5ccc7d9e0.png" alt="digraph os2r__superbuild {
+<div class="graphviz"><img src="../../../_images/graphviz-8ab243a75c02d8c33c09bc65805ee37dad7872c1.png" alt="digraph os2r__superbuild {
   graph [ranksep=&quot;1.5&quot;, nodesep=&quot;0.1&quot; rankdir=&quot;BT&quot;];
 
   subgraph cluster_system {
@@ -747,23 +772,9 @@ the directed dependency graph.</p>
     bgcolor=&quot;gray94&quot;;
     node [shape=&quot;pentagon&quot;, color=&quot;dimgray&quot;, fontsize=&quot;10&quot;];
 
-    PythonInterp
-    PythonLibsNew
     Python3
     SWIG
     Git
-  }
-
-  subgraph cluster_found_on_system {
-    label=&quot;found&quot;;
-    labelloc=&quot;b&quot;;
-    fontname=&quot;monospace:bold&quot;;
-    style=&quot;dashed&quot;;
-    color=&quot;orangered1&quot;;
-    bgcolor=&quot;oldlace&quot;;
-    node [shape=&quot;note&quot;, color=&quot;orangered3&quot;];
-
-    pybind11 [shape=&quot;note&quot;]
   }
 
   subgraph cluster_core {
@@ -859,8 +870,8 @@ build, test and package software.</p>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Software</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="superbuild/superbuild_installation.html">Superbuild Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="superbuild/superbuild_installation.html#support-policy">Support Policy</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="superbuild/superbuild_installation.html">Superbuild Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="superbuild/superbuild_installation.html#support-policy">Support Policy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="superbuild/superbuild_installation.html#superbuild-options">Superbuild Options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="superbuild/superbuild_installation.html#building-and-installation">Building and Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="superbuild/superbuild_installation.html#sourcing-environment">Sourcing Environment</a></li>
@@ -869,27 +880,27 @@ build, test and package software.</p>
 <li class="toctree-l3"><a class="reference internal" href="superbuild/superbuild_installation.html#monopod-sdk">Monopod Sdk</a></li>
 <li class="toctree-l3"><a class="reference internal" href="superbuild/superbuild_installation.html#simulation-only">Simulation Only</a></li>
 <li class="toctree-l3"><a class="reference internal" href="superbuild/superbuild_installation.html#documentation-compilation">Documentation Compilation</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="superbuild/superbuild_installation.html#ignition-gazebo-installation">Ignition Gazebo Installation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="monopod_sdk.html">Monopod Sdk</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="monopod_sdk.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="monopod_sdk.html#homing-implementation">Homing Implementation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="monopod_sdk.html#what-is-homing-and-why-is-it-needed">What is “Homing” and Why is it Needed?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="monopod_sdk.html#how-is-the-homing-implemented-for-the-blmc-robots">How is the Homing Implemented for the BLMC Robots?</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="monopod_sdk.html#home-position-vs-zero-position-meaning-of-the-home-offset">Home Position vs Zero Position – Meaning of the Home Offset</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="monopod_sdk.html#how-to-determine-the-home-offset">How to Determine the Home Offset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="superbuild/superbuild_installation.html#ignition-gazebo-installation">Ignition Gazebo Installation</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="scenario_monopod.html">scenarIO Monopod</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gym_os2r.html">gym os2r</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gym_os2r_real.html">gym os2r real</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monopod_sdk/monopod_sdk.html">monopod sdk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="monopod_sdk/monopod_sdk.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monopod_sdk/monopod_sdk.html#device-interface">Device Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monopod_sdk/monopod_sdk.html#package-architecture">Package Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monopod_sdk/monopod_sdk.html#using-monopod-sdk">Using Monopod SDK</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scenario_monopod/scenario_monopod.html">scenario monopod</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scenario_monopod/scenario_monopod.html#package-architecture">Package Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenario_monopod/scenario_monopod.html#using-scenario-monopod">Using scenario_monopod</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenario_monopod/scenario_monopod.html#c">C++</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenario_monopod/scenario_monopod.html#python">Python</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gym_os2r/gym_os2r.html">gym os2r</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gym_os2r_real/gym_os2r_real.html">gym os2r real</a></li>
 </ul>
 </div>
 </div>

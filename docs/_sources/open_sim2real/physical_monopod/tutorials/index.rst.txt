@@ -9,4 +9,8 @@ Tutorials
   :hidden:
   :caption: Tutorials
 
-  minimal_example
+  print_and_move
+  using_sdk
+  using_scenario_monopod
+  minimal_gym
+  ppo_inference

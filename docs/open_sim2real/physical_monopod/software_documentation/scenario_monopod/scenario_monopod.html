@@ -1,0 +1,970 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scenario monopod &#8212; OpenSim2Real  documentation</title>
+    
+  <link href="../../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css" />
+    
+  <link rel="preload" as="script" href="../../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/tabs.js"></script>
+    <script src="../../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="gym os2r" href="../gym_os2r/gym_os2r.html" />
+    <link rel="prev" title="monopod sdk" href="../monopod_sdk/monopod_sdk.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../../index.html">
+   What’s Open Sim2Real
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Getting Started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../getting_started/sim2real.html">
+   Sim2Real
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../getting_started/opensim2real.html">
+   Open Sim2Real
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../getting_started/platform.html">
+   The Platform
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../getting_started/roadmap.html">
+   Project Roadmap
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../getting_started/copyright_and_license.html">
+   Copyright &amp; License
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../getting_started/the_team.html">
+   The Team
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../getting_started/how_to_cite.html">
+   How to Cite
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Simulated Monopod
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../simulated_monopod/introduction.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../simulated_monopod/installation/index.html">
+   Installation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../simulated_monopod/installation/standard_installation.html">
+     Standard Installation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../simulated_monopod/installation/developer_installation.html">
+     Developer Installation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../simulated_monopod/installation/training_on_cloud.html">
+     Training on Cloud
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../simulated_monopod/installation/singularity_container.html">
+     Singularity Container
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../simulated_monopod/quick_start.html">
+   Quick Start
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../simulated_monopod/how-to-guides/index.html">
+   How To Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../simulated_monopod/how-to-guides/custom_reward.html">
+     Custom Reward Class
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../simulated_monopod/how-to-guides/custom_config.html">
+     Custom Model Configs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../simulated_monopod/tutorials/index.html">
+   Tutorials
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../simulated_monopod/tutorials/random_actions.html">
+     Random Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../simulated_monopod/tutorials/ppo.html">
+     PPO Spinning up
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../simulated_monopod/next_steps.html">
+   Next Steps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../simulated_monopod/future_development.html">
+   Future Development
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Physical Monopod
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../introduction.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../hardware_documentation/design/index.html">
+   Design Decisions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../hardware_documentation/design/hardware_design.html">
+     Hardware
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../hardware_documentation/design/electrical_design.html">
+     Electrical
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../building_monopod.html">
+   Building The Monopod
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../hardware_documentation/physical/index.html">
+     Hardware
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../hardware_documentation/physical/build_requirements.html">
+       Build Requirements
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../hardware_documentation/physical/bom.html">
+       Bill of Materials
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../hardware_documentation/physical/build_instructions_leg.html">
+       Leg Instructions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../hardware_documentation/physical/basic_tests_leg.html">
+       Leg Testing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../hardware_documentation/physical/build_instructions_pivot.html">
+       Central Pivot Instructions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../hardware_documentation/physical/basic_tests_pivot.html">
+       Central Pivot Testing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../hardware_documentation/physical/leg_pivot_integration.html">
+       Integration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../hardware_documentation/physical/leg_pivot_integration_testing.html">
+       Integration Testing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../hardware_documentation/physical/monopod_resources.html">
+       Further Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../hardware_documentation/firmware/index.html">
+     Firmware
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../hardware_documentation/firmware/monopod_firmware.html">
+       Monopod Firmware Setup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../hardware_documentation/firmware/can_connection.html">
+       Connecting By CAN
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../hardware_documentation/firmware/can_protocol.html">
+       CAN Protocol
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../hardware_documentation/firmware/encoder_measurement.html">
+       Central Pivot Firmware
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../hardware_documentation/firmware/dual_motor_control.html">
+       Robotic Leg Firmware
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="../index.html">
+     Software
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../superbuild/superbuild_installation.html">
+       Superbuild Installation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../monopod_sdk/monopod_sdk.html">
+       monopod sdk
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       scenario monopod
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../gym_os2r/gym_os2r.html">
+       gym os2r
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../gym_os2r_real/gym_os2r_real.html">
+       gym os2r real
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../quick_start.html">
+   Quick Start
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../how-to-guides/index.html">
+   How To Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../how-to-guides/setup_rt_kernel.html">
+     Setup RT Kernel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../tutorials/index.html">
+   Tutorials
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/print_and_move.html">
+     Print and Move
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/using_sdk.html">
+     Using the SDK
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/using_scenario_monopod.html">
+     Using Scenario Monopod
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/minimal_gym.html">
+     Gym Random Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/ppo_inference.html">
+     PPO Inference
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../next_steps.html">
+   Next Steps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../future_development.html">
+   Future Development
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Open Sim2Real Apidocs
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../../monopod_sdk_index.html">
+   monopod_sdk
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../../monopod_sdk_docs/monopod_drivers.html">
+     monopod_drivers C++ API
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../../scenario_monopod_index.html">
+   scenario_monopod
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../../scenario_monopod_docs/cpp/scenario_monopod_cpp.html">
+     scenario::monopod C++ API
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../../scenario_monopod_docs/python/scenario.bindings.html">
+     scenario.bindings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../../gym-os2r_index.html">
+   gym-os2r
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../../gym-os2r_docs/python/gym-os2r/gym_os2r.html">
+     gym_os2r
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../../gym-os2r_docs/python/gym-os2r/gym_os2r.common.html">
+       gym_os2r.common
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+      <label for="toctree-checkbox-15">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../../gym-os2r_docs/python/gym-os2r/gym_os2r.common.vec_env.html">
+         gym_os2r.common.vec_env
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../../gym-os2r_docs/python/gym-os2r/gym_os2r.models.html">
+       gym_os2r.models
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+      <label for="toctree-checkbox-16">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../../gym-os2r_docs/python/gym-os2r/gym_os2r.models.config.html">
+         gym_os2r.models.config
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../../gym-os2r_docs/python/gym-os2r/gym_os2r.models.models.html">
+         gym_os2r.models.models
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../../gym-os2r_docs/python/gym-os2r/gym_os2r.randomizers.html">
+       gym_os2r.randomizers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../../gym-os2r_docs/python/gym-os2r/gym_os2r.rewards.html">
+       gym_os2r.rewards
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../../gym-os2r_docs/python/gym-os2r/gym_os2r.runtimes.html">
+       gym_os2r.runtimes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../../gym-os2r_docs/python/gym-os2r/gym_os2r.tasks.html">
+       gym_os2r.tasks
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../../gym-os2r-real_index.html">
+   gym-os2r-real
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../../gym-os2r-real_docs/python/gym-os2r-real/gym_os2r_real.html">
+     gym_os2r_real
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+    <label for="toctree-checkbox-18">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../../gym-os2r-real_docs/python/gym-os2r-real/gym_os2r_real.runtimes.html">
+       gym_os2r_real.runtimes
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav>
+<nav id="bd-docs-nav" class="bd-links" aria-label="Versions navigation">
+  <div class="bd-toc-item active">
+    <p class="caption">
+      <span class="caption-text">Doc Versions</span>
+    </p>
+    <ul class="nav bd-sidenav">
+      <li class="toctree-l1"><a class="reference internal" href="scenario_monopod.html">docs</a></li>
+    </ul>
+  </div>
+</nav>
+<form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/OpenSim2Real"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        <a class="edit-button" href="https://github.com/github.com/OpenSim2Real/edit/master/docs/sphinx/open_sim2real/physical_monopod/software_documentation/scenario_monopod/scenario_monopod.rst"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#package-architecture">
+   Package Architecture
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-scenario-monopod">
+   Using scenario_monopod
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#c">
+   C++
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   Python
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="scenario-monopod">
+<span id="scenario-monopod-software-docs"></span><h1>scenario monopod<a class="headerlink" href="#scenario-monopod" title="Permalink to this headline">¶</a></h1>
+<p>Scenario is an abstract layer that is used to interface with robots <a class="footnote-reference brackets" href="#footcite-gym-ignition" id="id1">1</a>
+by exposing APIs to interact with a scene. The scene is defined as a World object that can
+return Model objects. This allows the simulated or physical robot to be implemented as a
+separate scenarIO back-end, which can be switched between.</p>
+<p>The vanilla scenario package comes with everything required to interface into the
+<a class="reference internal" href="../../../getting_started/platform.html#why-ignition-gazebo"><span class="std std-ref">ignition gazebo</span></a> simulator. Then the <cite>scenario_monopod</cite> package
+extends this API with the monopod real-time backend.</p>
+<p>This allows the physical robot and the simulated robot to be easily switched between
+without requiring many changes to the upstream code (most changes are dependency related).</p>
+<div class="section" id="package-architecture">
+<h2>Package Architecture<a class="headerlink" href="#package-architecture" title="Permalink to this headline">¶</a></h2>
+<p>The architecture can be easily represented as a diagram. This diagram shows how <cite>scenario_monopod</cite>
+simply implements the <cite>monopod_sdk</cite> API with the scenario interface. This means that we have both the
+simulation and real-time backends in place. Which allow us to write code to control your robot just once,
+it will interact either with the simulated or the real robot depending on the ScenarIO backend you enabled.</p>
+<div class="figure align-default" id="id4">
+<img alt="../../../../_images/website-scenario_monopod.drawio.png" src="../../../../_images/website-scenario_monopod.drawio.png" />
+<p class="caption"><span class="caption-text">Scenario monopod implements the scenario base class using the <cite>monopod_sdk</cite> API
+as the real-time backend for the physical robot. THis allows the <cite>scenario_monopod</cite> package to
+behave as a extension or plugin for the vanilla <cite>scenario</cite> <a class="footnote-reference brackets" href="#footcite-gym-ignition" id="id2">1</a>.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The interface / implementation pattern is implemented using classic inheritance and
+polymorphism design patterns. Having such unified interface simplifies the process to expose it to
+other languages. Thanks to SWIG, we officially provide Python bindings of <cite>scenario_monopod</cite>,
+this way you can prototype your applications even faster! In both simulation and real!</p>
+</div>
+</div>
+<div class="section" id="using-scenario-monopod">
+<h2>Using scenario_monopod<a class="headerlink" href="#using-scenario-monopod" title="Permalink to this headline">¶</a></h2>
+<p>For a comprehensive tutorial on using <cite>scenario_monopod</cite> please visit <a class="reference internal" href="../../tutorials/using_scenario_monopod.html#tutorial-scenario-monopod"><span class="std std-ref">Using Scenario Monopod</span></a>. Using
+the dummy control board backend of <cite>monopod_sdk</cite> we can create a simple script that uses <cite>scenario_monopod</cite>
+without requiring the physical hardware.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>dummy control board is a backend that fakes the real robot control boards class. This is useful for developing
+without requiring a connection to the physical robot. Eventually this dummy class may be improved
+to act as a simple physics engine that will maintain rough positions, etc.</p>
+</div>
+<p>Now to create a simple executable that uses <cite>scenario_monopod</cite> with the dummy backend you must first
+install <cite>scenario_monopod</cite> using the <a class="reference internal" href="../superbuild/superbuild_installation.html#enable-all"><span class="std std-ref">superbuild</span></a> and
+<a class="reference internal" href="../superbuild/superbuild_installation.html#superbuild-sourcing"><span class="std std-ref">source your workspace</span></a>. Once your workspace has all dependencies
+sourced create the following files in their own folder anywhere on your computer.</p>
+</div>
+<div class="section" id="c">
+<h2>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-ZXhhbXBsZS5jcHA=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-ZXhhbXBsZS5jcHA=" name="ZXhhbXBsZS5jcHA=" role="tab" tabindex="0">example.cpp</button><button aria-controls="panel-0-Q01ha2VMaXN0cy50eHQ=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-Q01ha2VMaXN0cy50eHQ=" name="Q01ha2VMaXN0cy50eHQ=" role="tab" tabindex="-1">CMakeLists.txt</button></div><div aria-labelledby="tab-0-ZXhhbXBsZS5jcHA=" class="sphinx-tabs-panel group-tab" id="panel-0-ZXhhbXBsZS5jcHA=" name="ZXhhbXBsZS5jcHA=" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;scenario/monopod/Joint.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;scenario/monopod/Model.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;scenario/monopod/World.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;thread&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+
+  <span class="c1">// Set up the world</span>
+  <span class="n">scenario</span><span class="o">::</span><span class="n">monopod</span><span class="o">::</span><span class="n">World</span> <span class="n">world</span><span class="p">;</span>
+  <span class="n">world</span><span class="p">.</span><span class="n">initialize</span><span class="p">(</span><span class="cm">/*monopod_drivers::Mode=*/</span><span class="n">monopod_drivers</span><span class="o">::</span><span class="n">Mode</span><span class="o">::</span><span class="n">MOTOR_BOARD</span><span class="p">,</span>
+                   <span class="cm">/*dummy_mode=*/</span><span class="nb">true</span><span class="p">);</span>
+
+  <span class="c1">// Print world name</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;World Name: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">world</span><span class="p">.</span><span class="n">name</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+  <span class="c1">// model names from world and model</span>
+  <span class="k">auto</span> <span class="n">modelNames</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="n">modelNames</span><span class="p">();</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Model Name in world Index 0: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">modelNames</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="k">auto</span> <span class="n">monopod</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="n">getModel</span><span class="p">(</span><span class="n">modelNames</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Model Name: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">monopod</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+  <span class="c1">// Print joint names from model</span>
+  <span class="k">auto</span> <span class="n">jointNames</span> <span class="o">=</span> <span class="n">monopod</span><span class="o">-&gt;</span><span class="n">jointNames</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;joint names: &quot;</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">jointNames</span><span class="p">)</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">forces</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">};</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">jNames</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;knee_joint&quot;</span><span class="p">,</span> <span class="s">&quot;hip_joint&quot;</span><span class="p">};</span>
+
+  <span class="c1">// Set hip and knee joint to be controllable.</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Setting all joints force controlMode successful? &quot;</span>
+            <span class="o">&lt;&lt;</span> <span class="n">monopod</span><span class="o">-&gt;</span><span class="n">setJointControlMode</span><span class="p">(</span>
+                   <span class="n">scenario</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">JointControlMode</span><span class="o">::</span><span class="n">Force</span><span class="p">,</span> <span class="n">jNames</span><span class="p">)</span>
+            <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+            <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+  <span class="c1">// Set force target for hip and knee joint</span>
+  <span class="kt">bool</span> <span class="n">ok</span> <span class="o">=</span> <span class="n">monopod</span><span class="o">-&gt;</span><span class="n">setJointGeneralizedForceTargets</span><span class="p">(</span><span class="n">forces</span><span class="p">,</span> <span class="n">jNames</span><span class="p">);</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Setting force successful? &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">ok</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+  <span class="c1">// Get meassurements</span>
+  <span class="k">auto</span> <span class="n">pos</span> <span class="o">=</span> <span class="n">monopod</span><span class="o">-&gt;</span><span class="n">jointPositions</span><span class="p">(</span><span class="n">jNames</span><span class="p">);</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Joints position: &quot;</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">pos</span><span class="p">)</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+  <span class="k">auto</span> <span class="n">vel</span> <span class="o">=</span> <span class="n">monopod</span><span class="o">-&gt;</span><span class="n">jointVelocities</span><span class="p">(</span><span class="n">jNames</span><span class="p">);</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Joints Velocity &quot;</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">vel</span><span class="p">)</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+  <span class="k">auto</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">monopod</span><span class="o">-&gt;</span><span class="n">jointAccelerations</span><span class="p">(</span><span class="n">jNames</span><span class="p">);</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Joints Acceleration &quot;</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">acc</span><span class="p">)</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Q01ha2VMaXN0cy50eHQ=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-Q01ha2VMaXN0cy50eHQ=" name="Q01ha2VMaXN0cy50eHQ=" role="tabpanel" tabindex="0"><div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span> <span class="s">3.16</span><span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span><span class="s">ExampleWithScenario</span> <span class="s">VERSION</span> <span class="s">1.0</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD</span> <span class="s">17</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD_REQUIRED</span> <span class="s">ON</span><span class="p">)</span>
+
+<span class="nb">find_package</span><span class="p">(</span><span class="s">Scenario</span> <span class="s">COMPONENTS</span> <span class="s">Monopod</span> <span class="s">REQUIRED</span><span class="p">)</span>
+
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">ExampleWithScenario</span> <span class="s">example.cpp</span><span class="p">)</span>
+
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">ExampleWithScenario</span> <span class="s">PRIVATE</span> <span class="s">ScenarioMonopod::ScenarioMonopod</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></div>
+</div>
+<div class="section" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>Implementing the same code using python bindings instead. This assumes the same
+installation instructions were followed as the CPP example.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scenario</span> <span class="kn">import</span> <span class="n">monopod</span> <span class="k">as</span> <span class="n">scenario</span>
+<span class="kn">from</span> <span class="nn">scenario</span> <span class="kn">import</span> <span class="n">core</span> <span class="k">as</span> <span class="n">scenario_core</span>
+
+<span class="c1"># Create the world</span>
+<span class="n">world</span> <span class="o">=</span> <span class="n">scenario</span><span class="o">.</span><span class="n">World</span><span class="p">()</span>
+<span class="n">modes</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;free_hip&quot;</span> <span class="p">:</span> <span class="n">scenario</span><span class="o">.</span><span class="n">Mode_free</span><span class="p">,</span>
+  <span class="s2">&quot;fixed_hip&quot;</span> <span class="p">:</span> <span class="n">scenario</span><span class="o">.</span><span class="n">Mode_fixed_connector</span><span class="p">,</span>
+  <span class="s2">&quot;fixed&quot;</span> <span class="p">:</span> <span class="n">scenario</span><span class="o">.</span><span class="n">Mode_fixed</span><span class="p">,</span>
+  <span class="s2">&quot;simple&quot;</span> <span class="p">:</span> <span class="n">scenario</span><span class="o">.</span><span class="n">Mode_motor_board</span>
+<span class="p">}</span>
+
+<span class="n">world</span><span class="o">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">modes</span><span class="p">[</span><span class="s1">&#39;simple&#39;</span><span class="p">],</span> <span class="n">dummy_mode</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;World Name: {world.name()}&quot;</span><span class="p">)</span>
+
+<span class="n">model_name</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">model_names</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Model Name in world Index 0: {model_name}&quot;</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">get_model</span><span class="p">(</span><span class="n">model_name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Model Name: {model.name()}&quot;</span><span class="p">)</span>
+
+<span class="n">Jnames</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">joint_names</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;joint names: {Jnames}&quot;</span><span class="p">)</span>
+
+<span class="n">ok</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">set_joint_control_mode</span><span class="p">(</span><span class="n">scenario_core</span><span class="o">.</span><span class="n">JointControlMode_force</span><span class="p">,</span> <span class="n">Jnames</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Setting all joints force controlMode successful? {ok}&quot;</span><span class="p">)</span>
+
+<span class="n">forces</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">Jnames</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;knee_joint&quot;</span><span class="p">,</span> <span class="s2">&quot;hip_joint&quot;</span><span class="p">]</span>
+
+<span class="n">ok</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">set_joint_generalized_force_targets</span><span class="p">(</span><span class="n">forces</span><span class="p">,</span> <span class="n">Jnames</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Setting force successful? {ok}&quot;</span><span class="p">)</span>
+
+<span class="n">pos</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">joint_positions</span><span class="p">(</span><span class="n">Jnames</span><span class="p">)</span>
+<span class="n">vel</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">joint_velocities</span><span class="p">(</span><span class="n">Jnames</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;joints: {Jnames}, Pos: {pos}, Vel: {vel}&quot;</span><span class="p">)</span>
+
+<span class="c1"># To set joint limits you need to convert to derived class. for example,</span>
+<span class="n">model_monopod</span> <span class="o">=</span> <span class="n">scenario</span><span class="o">.</span><span class="n">ToMonopodModel</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+<span class="n">joint_monopod</span> <span class="o">=</span> <span class="n">scenario</span><span class="o">.</span><span class="n">ToMonopodJoint</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">get_joint</span><span class="p">(</span><span class="n">Jnames</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">min_lim</span><span class="p">,</span> <span class="n">max_lim</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span>
+<span class="n">joint_monopod</span><span class="o">.</span><span class="n">set_joint_position_limit</span><span class="p">(</span><span class="n">max_lim</span><span class="p">,</span> <span class="n">min_lim</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="docutils container" id="id3">
+<dl class="footnote brackets">
+<dt class="label" id="footcite-gym-ignition"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>)</span></dt>
+<dd><p>Diego Ferigo, Silvio Traversaro, Giorgio Metta, and Daniele Pucci. Gym-ignition: reproducible robotic simulations for reinforcement learning. In <em>2020 IEEE/SICE International Symposium on System Integration (SII)</em>, volume, 885–890. 2020. <a class="reference external" href="https://doi.org/10.1109/SII46433.2020.9025951">doi:10.1109/SII46433.2020.9025951</a>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../monopod_sdk/monopod_sdk.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">monopod sdk</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../gym_os2r/gym_os2r.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">gym os2r</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By D. Horvath, N. Ioannidis, K. Gordon, D. Widjaja<br/>
+        
+            &copy; Copyright 2022, University of British Columbia.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
