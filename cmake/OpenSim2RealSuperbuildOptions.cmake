@@ -3,7 +3,7 @@ set(YCM_USE_CMAKE_PROPOSED TRUE CACHE BOOL "Use files including unmerged cmake p
 # YCM options
 option(YCM_DISABLE_SYSTEM_PACKAGES "Disable use of all the system installed packages" ON)
 
-# Always install core...
+# Always install core depends of monopod_sdk by default...
 option(OPENSIM2REAL_ENABLE_CORE "Enable compilation of core dependencies. There are core dependencies for the simulator and for the real robot." TRUE)
 option(OPENSIM2REAL_ENABLE_ALL "Enable compilation of every package." FALSE)
 
@@ -12,16 +12,16 @@ option(OPENSIM2REAL_ENABLE_GYMOS2R_REAL "Install gym_os2r_real python package. R
 option(OPENSIM2REAL_ENABLE_GYMOS2R "Install gym_os2r python package. Requires python to be enabled." FALSE)
 option(OPENSIM2REAL_ENABLE_SCENARIO_MONOPOD "Enable compilation of scenario_monopod." FALSE)
 option(OPENSIM2REAL_ENABLE_GYMIGNITION "Install gym_ignition python package. Requires python to be enabled." FALSE)
-# This is set to cache the option globall for whether to install gym ignition or not
-set(INSTALL_GYMIGNITION ${OPENSIM2REAL_ENABLE_GYMIGNITION} CACHE INTERNAL "installing_gym_ignition")
-
 option(OPENSIM2REAL_ENABLE_SCENARIO "Enable compilation of scenario." FALSE)
 option(OPENSIM2REAL_ENABLE_MONOPODSDK "Enable compilation of monopod_sdk." FALSE)
+
+# This is set to cache the option globall for whether to install gym ignition or not
+set(INSTALL_GYMIGNITION (${OPENSIM2REAL_ENABLE_GYMIGNITION} OR ${OPENSIM2REAL_ENABLE_GYMOS2R} OR ${OPENSIM2REAL_ENABLE_GYMOS2R_REAL} OR ${OPENSIM2REAL_ENABLE_ALL}) CACHE INTERNAL "installing_gym_ignition")
 
 # Misc
 option(OPENSIM2REAL_USES_PYTHON "Enable compilation of software that depend on Python." TRUE)
 option(OPENSIM2REAL_ENABLE_BUILDDOCS "Compile entire projects docs. Requires `OPENSIM2REAL_ENABLE_ALL=TRUE`." FALSE)
-option(OPENSIM2REAL_ENABLE_SIMULATION "Enable compilation of the components that require the ignition gazebo simulator. If FALSE ignition gazebo is not a required dependency." FALSE)
+option(OPENSIM2REAL_ENABLE_SIMULATION "Enable compilation of the components that require the ignition gazebo simulator. If FALSE ignition gazebo is not a required dependency. By default this will be the same value as the OPENSIM2REAL_ENABLE_ALL option." ${OPENSIM2REAL_ENABLE_ALL})
 
 
 #set default build type to "Release" in single-config generators

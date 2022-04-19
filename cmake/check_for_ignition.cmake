@@ -29,4 +29,4 @@ endforeach()
 
 if(NOT IGNITION_DISTRIBUTION OR "${IGNITION_DISTRIBUTION}" STREQUAL "")
     message(FATAL_ERROR "Simulator is enabled without any ignition distribution installed. Please install ignition distribution or change installation type to not include simulator.")
-else()
+endif()
