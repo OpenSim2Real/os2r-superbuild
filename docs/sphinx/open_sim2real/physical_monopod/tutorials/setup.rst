@@ -1,8 +1,14 @@
-Pre Requirements
-================
+Setup
+=====
 
-Calibrating Robot
-=================
+Software Installation
+---------------------
+
+CanBus Connection
+-----------------
+
+Calibration
+-----------
 
 When to Reset
-=============
+-------------

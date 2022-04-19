@@ -9,5 +9,5 @@ Tutorials
   :hidden:
   :caption: Tutorials
 
-  minimal_example
+  random_actions
   ppo

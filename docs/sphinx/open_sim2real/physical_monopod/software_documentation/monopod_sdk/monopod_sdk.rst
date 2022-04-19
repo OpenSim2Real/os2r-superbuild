@@ -4,6 +4,11 @@
 monopod sdk
 ===========
 
+Implements drivers for the physical robot, accompanied by an API to control the
+monopod and/or receive measurements from the robot. Additionally, Monopod SDK implements safety
+limits that run independently in a separate thread.
+
+
 Introduction
 ============
 
@@ -14,12 +19,12 @@ real-time kernel enabled and will enable it inside the communication thread.
 
 This package is directly derived from the drivers for the brushless
 motors developed in the Max Planck Institute for Intelligent System. The original
-source code can be found `here <https://github.com/open-dynamic-robot-initiative/blmc_drivers>`_\ .
+source code can be found `here <https://github.com/open-dynamic-robot-initiative/blmc_drivers>`_\ . :footcite:`grimminger2020open`
 
 This package provides a very simple API in order to acquire the sensor data and send
 the controls to the actuators.
 Example of use of this package can be seen in the different demos
-(PROJECT_SOURCE_DIR/demos) or in different unittests (PROJECT_SOURCE_DIR/tests).
+(`PROJECT_SOURCE_DIR/demos`) or in different unittests (`PROJECT_SOURCE_DIR/tests`).
 The demos contains the documentation inside the code. The unittests should be
 simple enough to understand without additional documentation.
 
@@ -29,13 +34,13 @@ Device Interface
 The BLMC stands for **B**\ rush\ **L**\ ess **M**\ otor **C**\ ontrol.
 
 This package provides guidelines on how a device should
-be implemented (see also the monopod_drivers::DeviceInterface class).
+be implemented (see also the :class:`monopod_drivers::DeviceInterface` class).
 
 generally, we expect the following functions to be implemented:
 
 1.  a set function for each input (several inputs may share a set function
     which takes an index argument).
-2.  a send_if_input_changed() function which will send the inputs to the
+2.  a `send_if_input_changed()` function which will send the inputs to the
     device if any of them have changed.
 3.  functions to access the current inputs and outputs, as well as the
     inputs which have been sent to the device. Rather than just returning
@@ -184,4 +189,7 @@ Place both files in the same folder. Then run the the following commands to comp
 
 The expected behaviour of the executable will be outputting only zero for each measurement. This
 is because the dummy back-end only outputs zero for all measurements and only returns success (true) for
-each command sent. 
+each command sent.
+
+
+.. footbibliography::
