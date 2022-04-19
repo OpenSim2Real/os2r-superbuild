@@ -23,3 +23,5 @@ set_tag(gym-ignition_TAG master) #v1.3.1
 set_tag(scenario_monopod_TAG devel)
 set_tag(monopod_sdk_TAG devel)
 set_tag(gym-os2r_TAG devel)
+set_tag(gym-os2r-real_TAG devel)
+set_tag(hardware-documentation_TAG main)

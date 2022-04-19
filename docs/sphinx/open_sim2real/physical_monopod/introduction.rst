@@ -3,6 +3,7 @@
 Introduction
 ============
 
-This section contains all the information required to reproduce our platform.
-There are two main components to this platform: the simulation gym environments,
-and the real robot with its own gym environments.
+What makes this project unique is the ability to perform sim2real transfer and
+training on the real robot without modifying anything upstream of the project.
+This means our organization provides all the non sexy robotics and code for
+your sexy machine learning algorithms.

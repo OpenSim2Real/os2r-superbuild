@@ -13,6 +13,7 @@ set(SPHINX_SOURCE ${CMAKE_CURRENT_SOURCE_DIR})
 set(SCENARIO_MONOPOD_SPHINX "${SPHINX_SOURCE}/scenario_monopod_docs")
 set(MONOPOD_SDK_SPHINX "${SPHINX_SOURCE}/monopod_sdk_docs")
 set(GYM-OS2R_SPHINX "${SPHINX_SOURCE}/gym-os2r_docs")
+set(GYM-OS2R-REAL_SPHINX "${SPHINX_SOURCE}/gym-os2r-real_docs")
 
 # Copy over each projects doc source
 add_custom_target(monopod_sdk_sphinx ALL
@@ -33,11 +34,23 @@ add_custom_target(gym-os2r_sphinx ALL
     COMMENT "Copying gym_os2r sphinx build"
   )
 
+add_custom_target(gym-os2r-real_sphinx ALL
+    DEPENDS gym-os2r-real
+    COMMAND ${CMAKE_COMMAND} -E copy_directory "${SUB_PROJECTS_BUILD_DIR}/src/gym-os2r-real/html/sphinx_build" ${SPHINX_SOURCE}
+    COMMENT "Copying gym_os2r-real sphinx build"
+  )
+
 add_custom_target(superbuild_dot_file ALL
     DEPENDS gym-os2r_sphinx
-    COMMAND ${CMAKE_COMMAND} -E copy "${SUB_PROJECTS_BUILD_DIR}/os2r-superbuild.dot" "${SPHINX_SOURCE}/open_sim2real/physical_monopod/superbuild/os2r-superbuild.dot"
+    COMMAND ${CMAKE_COMMAND} -E copy "${SUB_PROJECTS_BUILD_DIR}/os2r-superbuild.dot" "${SPHINX_SOURCE}/open_sim2real/physical_monopod/software_documentation/superbuild/os2r-superbuild.dot"
     COMMENT "Copying os2r-superbuild dot file"
   )
+
+add_custom_target(hardware-documentation_sphinx ALL
+    COMMAND ${CMAKE_COMMAND} -E copy_directory "${SUB_PROJECTS_BUILD_DIR}/src/hardware-documentation/docs" "${SPHINX_SOURCE}/open_sim2real/physical_monopod/hardware_documentation"
+    COMMENT "Copying hardware-documentation sphinx build"
+  )
+
 # Extend the Python path including before generating the website
 # set(SPHINX_CMD export PYTHONPATH="${PYTHONPATHS}:$ENV{PYTHONPATH}" &&)
 set(SPHINX_CMD ${CMAKE_COMMAND} -E env PYTHONPATH="${PYTHONPATHS}:$ENV{PYTHONPATH}")
@@ -51,7 +64,7 @@ list(APPEND SPHINX_CMD
 
 # Generate the website
 add_custom_target(sphinx ALL
-    DEPENDS gym-os2r_sphinx monopod_sdk_sphinx scenario_monopod_sphinx
+    DEPENDS gym-os2r_sphinx gym-os2r-real_sphinx monopod_sdk_sphinx scenario_monopod_sphinx
     COMMAND ${SPHINX_CMD}
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     COMMENT "Generating documentation with Sphinx"

@@ -12,6 +12,6 @@ for future Sim2Real platforms to build on top of.
 
 There are well documented :ref:`build instructions <building_the_robot>` for
 the physical monopod, additionally instructions on how to install the software stack, set up
-:ref:`training on cloud <training_on_cloud>` (with container or source), basic tasks and
+:ref:`training on cloud <training_on_cloud>`, basic gym tasks and
 reward functions, and much more. The project builds on top of many tools researchers are already
 familiar with making the transition into real natural (those dang simulations need to touch grass).

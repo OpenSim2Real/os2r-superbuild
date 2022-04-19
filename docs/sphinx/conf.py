@@ -17,9 +17,9 @@
 # -- Project information -----------------------------------------------------
 from datetime import datetime
 
-project = "overlord_docs"
+project = "OpenSim2Real"
 copyright = f"{datetime.now().year}, University of British Columbia"
-author = "Dawson Horvath"
+author = "D. Horvath, N. Ioannidis, K. Gordon, D. Widjaja"
 
 # -- General configuration ---------------------------------------------------
 
@@ -40,7 +40,11 @@ extensions = [
     "sphinx_tabs.tabs",
     'sphinx_copybutton',
     "sphinx.ext.graphviz",
+    'sphinxcontrib.bibtex',
+    'sphinxcontrib.youtube'
 ]
+
+bibtex_bibfiles = ['bibtex/refs.bib']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -78,7 +82,10 @@ html_theme_options = {
     "use_download_button": False,
     "use_fullscreen_button": True,
     "single_page": False,
+    'nav_fixed_top': False,
 }
+
+html_favicon = 'favicon.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -98,7 +105,7 @@ todo_include_todos = True
 
 # -- Options for breathe extension ----------------------------------------------
 
-breathe_default_project = "overlord_docs"
+breathe_default_project = "OpenSim2Real"
 
 # -- Options for sphinx_multiversion extension ----------------------------------
 

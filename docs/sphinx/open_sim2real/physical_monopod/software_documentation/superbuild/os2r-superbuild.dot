@@ -1,0 +1,157 @@
+digraph os2r__superbuild {
+  graph [ranksep="1.5", nodesep="0.1" rankdir="BT"];
+
+  subgraph cluster_system {
+    label="system";
+    labelloc="b";
+    fontname="monospace:bold";
+    style="dashed";
+    color="dimgray";
+    bgcolor="gray94";
+    node [shape="pentagon", color="dimgray", fontsize="10"];
+
+    SWIG
+    ZeroMQ
+    CPPZMQ
+    ignition__utils1__cli
+    ignition__transport11__log
+    ignition__common4__profiler
+    SWSCALE
+    AVDEVICE
+    AVFORMAT
+    AVCODEC
+    AVUTIL
+    ignition__common4__av
+    CURL
+    IgnCURL
+    jsoncpp
+    JSONCPP
+    YAML
+    ZIP
+    ignition__fuel_tools7
+    TINYXML2
+    ignition__math6__eigen3
+    DL
+    PkgConfig
+    UUID
+    ignition__common4__graphics
+    ignition__common4__events
+    ignition__plugin1__loader
+    ignition__plugin1__register
+    ignition__plugin1__all
+    Qt5Network
+    Qt5Qml
+    Qt5Gui
+    Qt5Widgets
+    ignition__gui6
+    Qt5Core
+    Qt5Quick
+    Qt5QuickControls2
+    Qt5
+    ignition__plugin1
+    Eigen3
+    EIGEN3
+    ignition__physics5__heightmap
+    ignition__physics5__mesh
+    ignition__physics5__sdf
+    ignition__physics5
+    ignition__common4
+    ignition__transport11
+    ignition__msgs8
+    sdformat12
+    ignition__sensors6__air_pressure
+    ignition__sensors6__altimeter
+    ignition__sensors6__imu
+    ignition__sensors6__force_torque
+    ignition__sensors6__logical_camera
+    ignition__sensors6__magnetometer
+    ignition__sensors6__navsat
+    ignition__sensors6__rendering
+    ignition__sensors6__lidar
+    ignition__sensors6__gpu_lidar
+    ignition__sensors6__camera
+    ignition__sensors6__segmentation_camera
+    ignition__sensors6__depth_camera
+    ignition__sensors6__rgbd_camera
+    ignition__cmake2
+    ignition__sensors6__thermal_camera
+    ignition__sensors6
+    ignition__rendering6
+    ignition__math6
+    ignition__tools
+    ignition__utils1
+    Threads
+    Protobuf
+    IgnProtobuf
+    ignition__gazebo6
+    Python3
+    Git
+  }
+
+  subgraph cluster_core {
+    label="core";
+    labelloc="b";
+    fontname="monospace:bold";
+    color="dodgerblue1";
+    bgcolor = "aliceblue";
+    node [style="bold", shape="note", color="dodgerblue3"];
+
+    YCM [label="YCM"]
+    mpi_cmake_modules [label="mpi_cmake_modules"]
+    GTest [label="GTest"]
+    real_time_tools [label="real_time_tools"]
+    signal_handler [label="signal_handler"]
+    shared_memory [label="shared_memory"]
+    time_series [label="time_series"]
+    osqp [label="osqp"]
+    OsqpEigen [label="OsqpEigen"]
+    iDynTree [label="iDynTree"]
+  }
+
+  subgraph cluster_scenario {
+    label="scenario";
+    labelloc="b";
+    fontname="monospace:bold";
+    color="dodgerblue1";
+    bgcolor = "aliceblue";
+    node [style="bold", shape="note", color="dodgerblue3"];
+
+    gym__ignition [label="gym-ignition"]
+    gym__os2r [label="gym-os2r"]
+  }
+
+  subgraph cluster_real {
+    label="real";
+    labelloc="b";
+    fontname="monospace:bold";
+    color="dodgerblue1";
+    bgcolor = "aliceblue";
+    node [style="bold", shape="note", color="dodgerblue3"];
+
+    monopod_sdk [label="monopod_sdk"]
+    scenario_monopod [label="scenario_monopod"]
+    gym__os2r__real [label="gym-os2r-real"]
+  }
+
+
+  real_time_tools -> mpi_cmake_modules;
+  real_time_tools -> GTest;
+  signal_handler -> mpi_cmake_modules;
+  shared_memory -> mpi_cmake_modules;
+  shared_memory -> GTest;
+  time_series -> shared_memory;
+  time_series -> mpi_cmake_modules;
+  time_series -> signal_handler;
+  time_series -> real_time_tools;
+  time_series -> GTest;
+  OsqpEigen -> osqp;
+  iDynTree -> OsqpEigen;
+  gym__ignition -> iDynTree;
+  gym__os2r -> gym__ignition;
+  monopod_sdk -> real_time_tools;
+  monopod_sdk -> time_series;
+  scenario_monopod -> gym__ignition;
+  scenario_monopod -> monopod_sdk;
+  gym__os2r__real -> gym__os2r;
+  gym__os2r__real -> scenario_monopod;
+}
