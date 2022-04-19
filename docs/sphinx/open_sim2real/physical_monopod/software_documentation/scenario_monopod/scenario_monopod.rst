@@ -55,7 +55,7 @@ without requiring the physical hardware.
   to act as a simple physics engine that will maintain rough positions, etc.
 
 Now to create a simple executable that uses `scenario_monopod` with the dummy backend you must first
-install `scenario_monopod` using the :ref:`superbuild <enable_all_enable_all>` and
+install `scenario_monopod` using the :ref:`superbuild <enable_all>` and
 :ref:`source your workspace <superbuild_sourcing>`. Once your workspace has all dependencies
 sourced create the following files in their own folder anywhere on your computer.
 
