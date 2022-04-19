@@ -732,17 +732,17 @@ All the packages built by our team are highlighted in blue.</span><a class="head
 <p>The system level diagram does a good job at summarizing the different packages of this project.
 Summary of purpose of each package:</p>
 <ol class="arabic simple">
-<li><p><cite>Monopod SDK</cite>: Implements drivers for the physical robot, accompanied by an API to control the
+<li><p><code class="docutils literal notranslate"><span class="pre">Monopod</span> <span class="pre">SDK</span></code>: Implements drivers for the physical robot, accompanied by an API to control the
 monopod and/or receive measurements from the robot. Additionally, Monopod SDK implements safety
 limits that run independently in a separate thread.</p></li>
-<li><p><cite>ScenarI/O</cite>: Abstract layer that is used to interface with robots <a class="footnote-reference brackets" href="#footcite-gym-ignition" id="id2">1</a>
+<li><p><code class="docutils literal notranslate"><span class="pre">ScenarI/O</span></code>: Abstract layer that is used to interface with robots <a class="footnote-reference brackets" href="#footcite-gym-ignition" id="id2">1</a>
 by exposing APIs to interact with a scene. The scene is defined as a World object that can
 return Model objects. This allows the simulated or physical robot to be implemented as a
 separate scenarIO back-end, which can be switched between.</p></li>
-<li><p><cite>gym-os2r</cite>: Implements the monopod gym environments using the <cite>gym_ignition</cite> environment structure
-(separates simulator interface from task logic). It is shipped alongside <cite>gym_os2r_real</cite>
+<li><p><code class="docutils literal notranslate"><span class="pre">gym-os2r</span></code>: Implements the monopod gym environments using the <code class="docutils literal notranslate"><span class="pre">gym_ignition</span></code> environment structure
+(separates simulator interface from task logic). It is shipped alongside <code class="docutils literal notranslate"><span class="pre">gym_os2r_real</span></code>
 which all features that require additional dependencies required to run
-<cite>gym_os2r</cite> on the physical robot.</p></li>
+<code class="docutils literal notranslate"><span class="pre">gym_os2r</span></code> on the physical robot.</p></li>
 </ol>
 <p>The following design requirements drove the design of the software platform:</p>
 <ol class="arabic simple">

@@ -740,7 +740,7 @@ limits that run independently in a separate thread.</p>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This package contains the drivers for the planarized monopod sim2real platform
-designed by <cite>OpenSim2Real</cite>. These drivers provide an interface to send commands and
+designed by <code class="docutils literal notranslate"><span class="pre">OpenSim2Real</span></code>. These drivers provide an interface to send commands and
 receive observations. The drivers will automatically detect if your system has the
 real-time kernel enabled and will enable it inside the communication thread.</p>
 <p>This package is directly derived from the drivers for the brushless
@@ -749,7 +749,7 @@ source code can be found <a class="reference external" href="https://github.com/
 <p>This package provides a very simple API in order to acquire the sensor data and send
 the controls to the actuators.
 Example of use of this package can be seen in the different demos
-(<cite>PROJECT_SOURCE_DIR/demos</cite>) or in different unittests (<cite>PROJECT_SOURCE_DIR/tests</cite>).
+(<code class="docutils literal notranslate"><span class="pre">PROJECT_SOURCE_DIR/demos</span></code>) or in different unittests (<code class="docutils literal notranslate"><span class="pre">PROJECT_SOURCE_DIR/tests</span></code>).
 The demos contains the documentation inside the code. The unittests should be
 simple enough to understand without additional documentation.</p>
 </div>
@@ -762,7 +762,7 @@ be implemented (see also the <code class="xref py py-class docutils literal notr
 <ol class="arabic simple">
 <li><p>a set function for each input (several inputs may share a set function
 which takes an index argument).</p></li>
-<li><p>a <cite>send_if_input_changed()</cite> function which will send the inputs to the
+<li><p>a <code class="docutils literal notranslate"><span class="pre">send_if_input_changed()</span></code> function which will send the inputs to the
 device if any of them have changed.</p></li>
 <li><p>functions to access the current inputs and outputs, as well as the
 inputs which have been sent to the device. Rather than just returning
@@ -781,8 +781,8 @@ the <code class="xref py py-class docutils literal notranslate"><span class="pre
 the future without having to modify everything upstream.</p>
 <div class="figure align-default" id="id3">
 <img alt="../../../../_images/website-monopod_sdk.drawio.png" src="../../../../_images/website-monopod_sdk.drawio.png" />
-<p class="caption"><span class="caption-text"><cite>monopod_sdk</cite> architecture. Illustrates how inheritence and the flow of information
-is handled between each major component of <cite>monopod_sdk</cite>. Not all classes have been included
+<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">monopod_sdk</span></code> architecture. Illustrates how inheritence and the flow of information
+is handled between each major component of <code class="docutils literal notranslate"><span class="pre">monopod_sdk</span></code>. Not all classes have been included
 for clarity. For example, <code class="xref py py-class docutils literal notranslate"><span class="pre">monopod_drivers::EncoderInterface</span></code> was shown without including
 <code class="xref py py-class docutils literal notranslate"><span class="pre">monopod_drivers::Encoder</span></code>.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
@@ -790,17 +790,17 @@ for clarity. For example, <code class="xref py py-class docutils literal notrans
 </div>
 <div class="section" id="using-monopod-sdk">
 <h2>Using Monopod SDK<a class="headerlink" href="#using-monopod-sdk" title="Permalink to this headline">¶</a></h2>
-<p>For a comprehensive tutorial on using <cite>monopod_sdk</cite> please visit <a class="reference internal" href="../../tutorials/using_sdk.html#tutorial-using-sdk"><span class="std std-ref">Using the SDK</span></a>. Using
+<p>For a comprehensive tutorial on using <code class="docutils literal notranslate"><span class="pre">monopod_sdk</span></code> please visit <a class="reference internal" href="../../tutorials/using_sdk.html#tutorial-using-sdk"><span class="std std-ref">Using the SDK</span></a>. Using
 the dummy control board backend we can create a simple script that runs monopod_sdk.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>dummy control board is a backend that fakes the real robot control boards class. In the
-figure above it would replace the <cite>CanBusControlBoards</cite> class. This is useful for developing
+figure above it would replace the <code class="docutils literal notranslate"><span class="pre">CanBusControlBoards</span></code> class. This is useful for developing
 without requiring a connection to the physical robot. Eventually this dummy class may be improved
 to act as a simple physics engine that will maintain rough positions, etc.</p>
 </div>
-<p>Now to create a simple executable that uses <cite>monopod_sdk</cite> with the dummy backend you must first
-install <cite>monopod_sdk</cite> using the <a class="reference internal" href="../superbuild/superbuild_installation.html#enable-monopod-sdk"><span class="std std-ref">superbuild</span></a> and
+<p>Now to create a simple executable that uses <code class="docutils literal notranslate"><span class="pre">monopod_sdk</span></code> with the dummy backend you must first
+install <code class="docutils literal notranslate"><span class="pre">monopod_sdk</span></code> using the <a class="reference internal" href="../superbuild/superbuild_installation.html#enable-monopod-sdk"><span class="std std-ref">superbuild</span></a> and
 <a class="reference internal" href="../superbuild/superbuild_installation.html#superbuild-sourcing"><span class="std std-ref">source your workspace</span></a>. Once your workspace has all dependencies
 sourced create the following files.</p>
 <div class="sphinx-tabs docutils container">
