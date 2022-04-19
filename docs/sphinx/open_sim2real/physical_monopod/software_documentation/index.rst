@@ -12,19 +12,19 @@ Software
 The system level diagram does a good job at summarizing the different packages of this project.
 Summary of purpose of each package:
 
-1. `Monopod SDK`: Implements drivers for the physical robot, accompanied by an API to control the
+1. ``Monopod SDK``: Implements drivers for the physical robot, accompanied by an API to control the
    monopod and/or receive measurements from the robot. Additionally, Monopod SDK implements safety
    limits that run independently in a separate thread.
 
-2. `ScenarI/O`: Abstract layer that is used to interface with robots :footcite:`gym_ignition`
+2. ``ScenarI/O``: Abstract layer that is used to interface with robots :footcite:`gym_ignition`
    by exposing APIs to interact with a scene. The scene is defined as a World object that can
    return Model objects. This allows the simulated or physical robot to be implemented as a
    separate scenarIO back-end, which can be switched between.
 
-3. `gym-os2r`: Implements the monopod gym environments using the `gym_ignition` environment structure
-   (separates simulator interface from task logic). It is shipped alongside `gym_os2r_real`
+3. ``gym-os2r``: Implements the monopod gym environments using the ``gym_ignition`` environment structure
+   (separates simulator interface from task logic). It is shipped alongside ``gym_os2r_real``
    which all features that require additional dependencies required to run
-   `gym_os2r` on the physical robot.
+   ``gym_os2r`` on the physical robot.
 
 The following design requirements drove the design of the software platform:
 

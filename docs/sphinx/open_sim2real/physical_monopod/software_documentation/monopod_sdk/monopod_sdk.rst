@@ -13,7 +13,7 @@ Introduction
 ============
 
 This package contains the drivers for the planarized monopod sim2real platform
-designed by `OpenSim2Real`. These drivers provide an interface to send commands and
+designed by ``OpenSim2Real``. These drivers provide an interface to send commands and
 receive observations. The drivers will automatically detect if your system has the
 real-time kernel enabled and will enable it inside the communication thread.
 
@@ -24,7 +24,7 @@ source code can be found `here <https://github.com/open-dynamic-robot-initiative
 This package provides a very simple API in order to acquire the sensor data and send
 the controls to the actuators.
 Example of use of this package can be seen in the different demos
-(`PROJECT_SOURCE_DIR/demos`) or in different unittests (`PROJECT_SOURCE_DIR/tests`).
+(``PROJECT_SOURCE_DIR/demos``) or in different unittests (``PROJECT_SOURCE_DIR/tests``).
 The demos contains the documentation inside the code. The unittests should be
 simple enough to understand without additional documentation.
 
@@ -40,7 +40,7 @@ generally, we expect the following functions to be implemented:
 
 1.  a set function for each input (several inputs may share a set function
     which takes an index argument).
-2.  a `send_if_input_changed()` function which will send the inputs to the
+2.  a ``send_if_input_changed()`` function which will send the inputs to the
     device if any of them have changed.
 3.  functions to access the current inputs and outputs, as well as the
     inputs which have been sent to the device. Rather than just returning
@@ -60,8 +60,8 @@ the future without having to modify everything upstream.
 
 .. figure:: media/website-monopod_sdk.drawio.png
 
-  `monopod_sdk` architecture. Illustrates how inheritence and the flow of information
-  is handled between each major component of `monopod_sdk`. Not all classes have been included
+  ``monopod_sdk`` architecture. Illustrates how inheritence and the flow of information
+  is handled between each major component of ``monopod_sdk``. Not all classes have been included
   for clarity. For example, :class:`monopod_drivers::EncoderInterface` was shown without including
   :class:`monopod_drivers::Encoder`.
 
@@ -70,19 +70,19 @@ The top level class which exposes the robot API to the user is :class:`monopod_d
 Using Monopod SDK
 =================
 
-For a comprehensive tutorial on using `monopod_sdk` please visit :ref:`tutorial_using_sdk`. Using
+For a comprehensive tutorial on using ``monopod_sdk`` please visit :ref:`tutorial_using_sdk`. Using
 the dummy control board backend we can create a simple script that runs monopod_sdk.
 
 .. note::
 
   dummy control board is a backend that fakes the real robot control boards class. In the
-  figure above it would replace the `CanBusControlBoards` class. This is useful for developing
+  figure above it would replace the ``CanBusControlBoards`` class. This is useful for developing
   without requiring a connection to the physical robot. Eventually this dummy class may be improved
   to act as a simple physics engine that will maintain rough positions, etc.
 
 
-Now to create a simple executable that uses `monopod_sdk` with the dummy backend you must first
-install `monopod_sdk` using the :ref:`superbuild <enable_monopod_sdk>` and
+Now to create a simple executable that uses ``monopod_sdk`` with the dummy backend you must first
+install ``monopod_sdk`` using the :ref:`superbuild <enable_monopod_sdk>` and
 :ref:`source your workspace <superbuild_sourcing>`. Once your workspace has all dependencies
 sourced create the following files.
 
