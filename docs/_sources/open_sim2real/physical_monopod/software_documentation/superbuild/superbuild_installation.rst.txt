@@ -43,29 +43,98 @@ Superbuild Options
 
 All optional builds that are supported by the superbuild are listed in the table below.
 
-+-------------------------------------------+------------+---------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``<CMAKE_ARG>``                           | Default    | Depends                               | Feature Description                                                                                                                                                                                                                                                                                                                                                 |
-+===========================================+============+=======================================+=====================================================================================================================================================================================================================================================================================================================================================================+
-| None                                      | --         | :ref:`deps <enable_monopod_sdk>`      | All the dependencies required to build :ref:`monopod_sdk` externally. Requires same dependencies as monopod sdk option.                                                                                                                                                                                                                                             |
-+-------------------------------------------+------------+---------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``OPENSIM2REAL_ENABLE_ALL``               | ``FALSE``  | :ref:`deps <enable_all>`              | Entire Open Sim2Real software stack. Contains components for both simulation and real.  :ref:`gym-os2r` can be used to train on real and simultion monopod.                                                                                                                                                                                                         |
-+-------------------------------------------+------------+---------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``OPENSIM2REAL_ENABLE_MONOPODSDK``        | ``FALSE``  | :ref:`deps <enable_monopod_sdk>`      | :ref:`monopod_sdk` is a realtime SDK for monopod platform. Allows user to control the monopod hardware.                                                                                                                                                                                                                                                             |
-+-------------------------------------------+------------+---------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``OPENSIM2REAL_ENABLE_SCENARIO``          | ``FALSE``  | :ref:`deps <enable_all>`              | `ScenarIO <https://robotology.github.io/gym-ignition/master/what/what_is_scenario.html>`_ interface. This option has another sub option ``OPENSIM2REAL_ENABLE_SCENARIO_MONOPOD`` which will determine whether to install the :ref:`scenario_monopod` plugin on top of `ScenarIO <https://robotology.github.io/gym-ignition/master/what/what_is_scenario.html>`_\ .  |
-+-------------------------------------------+------------+---------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``OPENSIM2REAL_ENABLE_SCENARIO_MONOPOD``  | ``TRUE``   | :ref:`deps <enable_all>`              | :ref:`scenario_monopod` real-time backend plugin for scenario. this plugin provides a real-time backend for the monopod platform. Enabled unless the user specifies :ref:`simulation only <enable_simulation_only>` compilation. This option should never be manually specified unless developing :ref:`scenario_monopod`. :ref:`monopod_sdk` is a dependencies.    |
-+-------------------------------------------+------------+---------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``OPENSIM2REAL_ENABLE_GYMIGNITION``       | ``TRUE``   | :ref:`deps <enable_all>`              | `gym-ignition <https://robotology.github.io/gym-ignition/master/what/what_is_gym_ignition.html>`_ python package.                                                                                                                                                                                                                                                   |
-+-------------------------------------------+------------+---------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``OPENSIM2REAL_ENABLE_GYMOS2R``           | ``FALSE``  | :ref:`deps <enable_all>`              | :ref:`gym-os2r` python package provides the gym environments for the monopod platform. Both real and sim is supported for training and inference.                                                                                                                                                                                                                   |
-+-------------------------------------------+------------+---------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``OPENSIM2REAL_ENABLE_SIMULATION_ONLY``   | ``FALSE``  | :ref:`deps <enable_simulation_only>`  | Compiles only the components necessary to use the gym environments in simulation. Will only read ``OPENSIM2REAL_ENABLE_GYMOS2R`` option when enabled, all other options will be ignored.                                                                                                                                                                            |
-+-------------------------------------------+------------+---------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``OPENSIM2REAL_ENABLE_BUILDDOCS``         | ``FALSE``  | :ref:`deps <enable_builddocs>`        | Allows developers to rebuild the projects documentation webpage.                                                                                                                                                                                                                                                                                                    |
-+-------------------------------------------+------------+---------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``OPENSIM2REAL_USES_PYTHON``              | ``TRUE``   | --                                    | Must be enabled to compile python bindings and modules.                                                                                                                                                                                                                                                                                                             |
-+-------------------------------------------+------------+---------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+.. list-table:: CMake Options
+   :header-rows: 1
+
+   * - ``<CMAKE_ARG>``
+     - Default
+     - Dependencies
+     - Feature Description
+
+   * - ``OPENSIM2REAL_ENABLE_CORE``
+     - ``FALSE``
+     - :ref:`deps <enable_monopod_sdk>`
+     - Enable compilation of core dependencies for the real robot.   All the dependencies required to build :ref:`monopod_sdk` externally. Requires same dependencies as monopod sdk option.
+
+   * - ``OPENSIM2REAL_ENABLE_ALL``
+     - ``FALSE``
+     - :ref:`deps <enable_all>`
+     - Enable compilation of every package. Entire Open Sim2Real software stack. Contains components for both simulation and real.  :ref:`gym-os2r` can be used to train on real and simultion monopod.
+
+   * - ``OPENSIM2REAL_ENABLE_MONOPODSDK``
+     - ``FALSE``
+     - :ref:`deps <enable_monopod_sdk>`
+     - Enable compilation of monopod_sdk. :ref:`monopod_sdk` is a realtime SDK for monopod platform. Allows user to control the monopod hardware.
+
+   * - ``OPENSIM2REAL_ENABLE_SCENARIO``
+     - ``FALSE``
+     - :ref:`deps <enable_all>`
+     - Enable compilation of scenario. `ScenarIO <https://robotology.github.io/gym-ignition/master/what/what_is_scenario.html>`_ interface. This option has another sub option ``OPENSIM2REAL_ENABLE_SCENARIO_MONOPOD`` which will determine whether to install the :ref:`scenario_monopod` plugin on top of `ScenarIO <https://robotology.github.io/gym-ignition/master/what/what_is_scenario.html>`_\ .
+
+   * - ``OPENSIM2REAL_ENABLE_SCENARIO_MONOPOD``
+     - ``FALSE``
+     - :ref:`deps <enable_all>`
+     - Enable compilation of scenario_monopod. :ref:`scenario_monopod` real-time backend plugin for scenario. this plugin provides a real-time backend for the monopod platform.
+
+   * - ``OPENSIM2REAL_ENABLE_GYMIGNITION``
+     - ``FALSE``
+     - :ref:`deps <enable_all>`
+     - Install gym_ignition python package. Requires python to be enabled. `gym-ignition <https://robotology.github.io/gym-ignition/master/what/what_is_gym_ignition.html>`_ python package.
+
+   * - ``OPENSIM2REAL_ENABLE_GYMOS2R``
+     - ``FALSE``
+     - :ref:`deps <enable_all>`
+     - Install gym_os2r python package. Requires python to be enabled.
+
+   * - ``OPENSIM2REAL_ENABLE_GYMOS2R_REAL``
+     - ``FALSE``
+     - :ref:`deps <enable_all>`
+     - Install gym_os2r_real python package. Requires python to be enabled.
+
+   * - ``OPENSIM2REAL_USES_PYTHON``
+     - ``TRUE``
+     - --
+     - Enable compilation of software that depend on Python.
+
+   * - ``OPENSIM2REAL_ENABLE_BUILDDOCS``
+     - ``FALSE``
+     - :ref:`deps <enable_builddocs>`
+     - Compile entire projects docs. Requires `OPENSIM2REAL_ENABLE_ALL=TRUE`. Allows developers to rebuild the projects documentation webpage.
+
+   * - ``OPENSIM2REAL_ENABLE_SIMULATION``
+     - same value as the OPENSIM2REAL_ENABLE_ALL
+     - --
+     - Enable compilation of the components that require the ignition gazebo simulator. If FALSE ignition gazebo is not a required dependency. By default this will be the same value as the OPENSIM2REAL_ENABLE_ALL option. Must be enabled to compile python bindings and modules.
+
+When installing components using the superbuild options you only have to set the desired
+option to ``True``. All other dependencies required to install that option will be adjusted
+accordingly. The only exception to this is ``OPENSIM2REAL_ENABLE_BUILDDOCS`` or if the
+user changes the ``OPENSIM2REAL_USES_PYTHON`` option.
+
+
+.. list-table:: Additional CMake Options
+   :header-rows: 1
+
+   * - ``<CMAKE_ARG>``
+     - Default
+     - Feature Description
+
+   * - ``CMAKE_BUILD_TYPE``
+     - ``Release``
+     - Choose the type of build, recommended options are: Debug or Release
+
+   * - ``DOPENSIM2REAL_PROJECT_TAGS``
+     - ``Stable``
+     - The tags to be used for the OPENSIM2REAL projects: Stable, Unstable, LatestRelease or Custom. This can be changed only before the first configuration.
+
+   * - ``OPENSIM2REAL_PROJECT_TAGS_CUSTOM_FILE``
+     - --
+     - If OPENSIM2REAL_PROJECT_TAGS is custom, this file will be loaded to specify the tags of the projects to use.
+
+   * - ``YCM_DISABLE_SYSTEM_PACKAGES``
+     - ``TRUE``
+     - Disable use of all the system installed packages
+
 
 Building and Installation
 =========================
@@ -92,6 +161,7 @@ For example to install all components and compile the documentation the command 
 .. code-block:: bash
 
   cmake -S . -B build -DOPENSIM2REAL_ENABLE_ALL:BOOL=TRUE -DOPENSIM2REAL_ENABLE_BUILDDOCS:BOOL=TRUE
+  cmake --build build
 
 To update the repos in the superbuild make sure you are in the build
 directory of the os2r-superbuild and run:
@@ -105,7 +175,7 @@ directory of the os2r-superbuild and run:
 
   To update the superbuild (change the build option or update the repos) it
   might be necessary to remove the ``os2r-superbuild/build`` and ``os2r-superbuild/src``
-  folders then reconfigure and build the project. Sometimes update is not sufficient.
+  folders then reconfigure and build the project. Sometimes update-all is not sufficient.
 
 .. warning::
 
@@ -117,7 +187,7 @@ directory of the os2r-superbuild and run:
   **You might need to restart your computer after installing the dependencies
   before building the superbuild.**
 
-.. attention::
+.. tip::
 
   **If you are having issues with dependencies and building try installing ignition
   even if you are only using hardware build options.**
@@ -161,10 +231,11 @@ All Dependencies
 ----------------
 
 Dependencies required to build the superbuild options: ``OPENSIM2REAL_ENABLE_ALL``,
-``OPENSIM2REAL_ENABLE_SCENARIO``, ``OPENSIM2REAL_ENABLE_SCENARIO_MONOPOD``,
-``OPENSIM2REAL_ENABLE_GYMIGNITION``, ``OPENSIM2REAL_ENABLE_GYMOS2R``.
+``OPENSIM2REAL_ENABLE_SCENARIO_MONOPOD``, ``OPENSIM2REAL_ENABLE_GYMOS2R``,
+``OPENSIM2REAL_ENABLE_GYMOS2R_REAL``.
 
-1. :ref:`Install Ignition Gazebo <ignition_installation_superbuild>`
+1. If you want to install the ignition gazebo components of the project then :ref:`Install Ignition Gazebo <ignition_installation_superbuild>`.
+   This is not necessary to install any option by default except ``OPENSIM2REAL_ENABLE_ALL`` which sets the default value for ``OPENSIM2REAL_ENABLE_SIMULATION`` to True.
 
 2. Apt dependencies
 
@@ -203,8 +274,7 @@ Dependencies required to build the superbuild options: ``OPENSIM2REAL_ENABLE_ALL
 Monopod Sdk
 -----------
 
-Dependencies required to build the superbuild options: ``OPENSIM2REAL_ENABLE_MONOPODSDK``,
-``Default``.
+Dependencies required to build the superbuild options: ``OPENSIM2REAL_ENABLE_MONOPODSDK``, or ``OPENSIM2REAL_ENABLE_CORE``.
 
 ::
 
@@ -229,7 +299,13 @@ Dependencies required to build the superbuild options: ``OPENSIM2REAL_ENABLE_MON
 Simulation Only
 ---------------
 
-Dependencies required to build the superbuild options: ``OPENSIM2REAL_ENABLE_SIMULATION_ONLY``.
+Dependencies required to build the superbuild options: ``OPENSIM2REAL_ENABLE_GYMIGNITION``,
+``OPENSIM2REAL_ENABLE_GYMOS2R``, ``OPENSIM2REAL_ENABLE_SCENARIO`` when the ``OPENSIM2REAL_ENABLE_SIMULATION``
+option is set to be True. By default ``OPENSIM2REAL_ENABLE_SIMULATION`` is False, therefore, these installation
+dependencies is only needed when ``OPENSIM2REAL_ENABLE_SIMULATION`` option is changed from default.
+
+When you set the option ``OPENSIM2REAL_ENABLE_GYMOS2R:BOOL=TRUE`` and ``OPENSIM2REAL_ENABLE_SIMULATION:BOOL=TRUE`` you
+will install all of the code required to use ``gym_os2r`` package in simulation only.
 
 1. :ref:`Install Ignition Gazebo <ignition_installation_superbuild>`
 
@@ -265,8 +341,9 @@ Documentation Compilation
 
 Dependencies required to build the superbuild options:
 ``OPENSIM2REAL_ENABLE_BUILDDOCS`` Requires ``OPENSIM2REAL_ENABLE_ALL``
-to also be enabled. To compile the docs all dependencies of ``OPENSIM2REAL_ENABLE_ALL``
-are required alongside the additional dependencies below.
+to also be enabled. To compile the docs it is necessary to install all
+dependencies of ``OPENSIM2REAL_ENABLE_ALL`` alongside the additional
+dependencies below.
 
 .. code-block:: bash
 
@@ -274,8 +351,10 @@ are required alongside the additional dependencies below.
    pip install -U breathe
    sudo apt install -y graphviz
 
-To update the published docs to the new built docs use the below
-commands,
+To update the published docs to the new built docs you can use the below
+commands. This is for developers of the project only and require permissions
+to publish. This is not the easiest way to do it however it is only using the
+command line.
 
 .. code-block:: bash
 

@@ -760,7 +760,7 @@ found in the <a class="reference internal" href="../quick_start.html#quick-start
 <span id="os2r-superbuild-structure"></span><h2>Dependency Structure<a class="headerlink" href="#dependency-structure" title="Permalink to this headline">¶</a></h2>
 <p>Illustrating the project dependencies in a directed graph we see the complexity of
 the directed dependency graph.</p>
-<div class="graphviz"><img src="../../../_images/graphviz-8ab243a75c02d8c33c09bc65805ee37dad7872c1.png" alt="digraph os2r__superbuild {
+<div class="graphviz"><img src="../../../_images/graphviz-8e5e49446deccc0baaa2c7a45acd460e750fae0d.png" alt="digraph os2r__superbuild {
   graph [ranksep=&quot;1.5&quot;, nodesep=&quot;0.1&quot; rankdir=&quot;BT&quot;];
 
   subgraph cluster_system {
@@ -772,8 +772,81 @@ the directed dependency graph.</p>
     bgcolor=&quot;gray94&quot;;
     node [shape=&quot;pentagon&quot;, color=&quot;dimgray&quot;, fontsize=&quot;10&quot;];
 
-    Python3
     SWIG
+    ZeroMQ
+    CPPZMQ
+    ignition__utils1__cli
+    ignition__transport11__log
+    ignition__common4__profiler
+    SWSCALE
+    AVDEVICE
+    AVFORMAT
+    AVCODEC
+    AVUTIL
+    ignition__common4__av
+    CURL
+    IgnCURL
+    jsoncpp
+    JSONCPP
+    YAML
+    ZIP
+    ignition__fuel_tools7
+    TINYXML2
+    ignition__math6__eigen3
+    DL
+    PkgConfig
+    UUID
+    ignition__common4__graphics
+    ignition__common4__events
+    ignition__plugin1__loader
+    ignition__plugin1__register
+    ignition__plugin1__all
+    Qt5Network
+    Qt5Qml
+    Qt5Gui
+    Qt5Widgets
+    ignition__gui6
+    Qt5Core
+    Qt5Quick
+    Qt5QuickControls2
+    Qt5
+    ignition__plugin1
+    Eigen3
+    EIGEN3
+    ignition__physics5__heightmap
+    ignition__physics5__mesh
+    ignition__physics5__sdf
+    ignition__physics5
+    ignition__common4
+    ignition__transport11
+    ignition__msgs8
+    sdformat12
+    ignition__sensors6__air_pressure
+    ignition__sensors6__altimeter
+    ignition__sensors6__imu
+    ignition__sensors6__force_torque
+    ignition__sensors6__logical_camera
+    ignition__sensors6__magnetometer
+    ignition__sensors6__navsat
+    ignition__sensors6__rendering
+    ignition__sensors6__lidar
+    ignition__sensors6__gpu_lidar
+    ignition__sensors6__camera
+    ignition__sensors6__segmentation_camera
+    ignition__sensors6__depth_camera
+    ignition__sensors6__rgbd_camera
+    ignition__cmake2
+    ignition__sensors6__thermal_camera
+    ignition__sensors6
+    ignition__rendering6
+    ignition__math6
+    ignition__tools
+    ignition__utils1
+    Threads
+    Protobuf
+    IgnProtobuf
+    ignition__gazebo6
+    Python3
     Git
   }
 
@@ -797,6 +870,18 @@ the directed dependency graph.</p>
     iDynTree [label=&quot;iDynTree&quot;]
   }
 
+  subgraph cluster_scenario {
+    label=&quot;scenario&quot;;
+    labelloc=&quot;b&quot;;
+    fontname=&quot;monospace:bold&quot;;
+    color=&quot;dodgerblue1&quot;;
+    bgcolor = &quot;aliceblue&quot;;
+    node [style=&quot;bold&quot;, shape=&quot;note&quot;, color=&quot;dodgerblue3&quot;];
+
+    gym__ignition [label=&quot;gym-ignition&quot;]
+    gym__os2r [label=&quot;gym-os2r&quot;]
+  }
+
   subgraph cluster_real {
     label=&quot;real&quot;;
     labelloc=&quot;b&quot;;
@@ -810,18 +895,6 @@ the directed dependency graph.</p>
     gym__os2r__real [label=&quot;gym-os2r-real&quot;]
   }
 
-  subgraph cluster_scenario {
-    label=&quot;scenario&quot;;
-    labelloc=&quot;b&quot;;
-    fontname=&quot;monospace:bold&quot;;
-    color=&quot;dodgerblue1&quot;;
-    bgcolor = &quot;aliceblue&quot;;
-    node [style=&quot;bold&quot;, shape=&quot;note&quot;, color=&quot;dodgerblue3&quot;];
-
-    gym__ignition [label=&quot;gym-ignition&quot;]
-    gym__os2r [label=&quot;gym-os2r&quot;]
-  }
-
 
   real_time_tools -&gt; mpi_cmake_modules;
   real_time_tools -&gt; GTest;
@@ -833,14 +906,14 @@ the directed dependency graph.</p>
   time_series -&gt; signal_handler;
   time_series -&gt; real_time_tools;
   time_series -&gt; GTest;
-  monopod_sdk -&gt; real_time_tools;
-  monopod_sdk -&gt; time_series;
   OsqpEigen -&gt; osqp;
   iDynTree -&gt; OsqpEigen;
   gym__ignition -&gt; iDynTree;
+  gym__os2r -&gt; gym__ignition;
+  monopod_sdk -&gt; real_time_tools;
+  monopod_sdk -&gt; time_series;
   scenario_monopod -&gt; gym__ignition;
   scenario_monopod -&gt; monopod_sdk;
-  gym__os2r -&gt; gym__ignition;
   gym__os2r__real -&gt; gym__os2r;
   gym__os2r__real -&gt; scenario_monopod;
 }" class="graphviz" /></div>
